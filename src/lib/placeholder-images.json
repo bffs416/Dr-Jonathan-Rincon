@@ -1,3 +1,58 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "A serene and modern clinic interior, suggesting professionalism and calm.",
+      "imageUrl": "https://picsum.photos/seed/hero42/1920/1080",
+      "imageHint": "clinic interior"
+    },
+    {
+      "id": "doctor-rincon",
+      "description": "Professional portrait of Dr. Jhonathan Rincón.",
+      "imageUrl": "https://picsum.photos/seed/docjhon/400/500",
+      "imageHint": "doctor portrait"
+    },
+    {
+      "id": "before-after-1",
+      "description": "Before and after results of a thread lift procedure.",
+      "imageUrl": "https://picsum.photos/seed/ba1/600/400",
+      "imageHint": "before after"
+    },
+    {
+      "id": "before-after-2",
+      "description": "Before and after results of a non-surgical rhinoplasty.",
+      "imageUrl": "https://picsum.photos/seed/ba2/600/400",
+      "imageHint": "face profile"
+    },
+    {
+      "id": "before-after-3",
+      "description": "Before and after results of lip harmonization.",
+      "imageUrl": "https://picsum.photos/seed/ba3/600/400",
+      "imageHint": "lips closeup"
+    },
+    {
+      "id": "blog-1",
+      "description": "Abstract image related to facial structure and threads.",
+      "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+      "imageHint": "abstract lines"
+    },
+    {
+      "id": "blog-2",
+      "description": "Image related to botox and rejuvenation.",
+      "imageUrl": "https://picsum.photos/seed/blog2/600/400",
+      "imageHint": "serum bottle"
+    },
+    {
+      "id": "blog-3",
+      "description": "Image representing aftercare and wellness.",
+      "imageUrl": "https://picsum.photos/seed/blog3/600/400",
+      "imageHint": "skincare cream"
+    },
+    {
+      "id": "map",
+      "description": "A map showing the location of Edificio Azor in Medellín.",
+      "imageUrl": "https://picsum.photos/seed/map42/800/600",
+      "imageHint": "city map"
+    }
+  ]
 }
