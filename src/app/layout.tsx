@@ -6,9 +6,9 @@ import Footer from '@/components/footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Rincón Estética | Dr. Jhonathan Rincón',
+  title: 'Dr. Jhonathan Rincón',
   description:
-    'Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita en Rincón Estética.',
+    'Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita con el Dr. Jhonathan Rincón.',
 };
 
 export default function RootLayout({
