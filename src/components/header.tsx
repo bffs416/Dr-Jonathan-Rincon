@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Facebook, Instagram, Menu, X } from 'lucide-react';
+import { Facebook, Instagram, Menu, X, Award } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -95,8 +95,11 @@ export default function Header() {
         <Logo />
 
         <nav className="hidden lg:flex items-center space-x-6">
-            <Button asChild variant="ghost" className={cn("text-sm font-bold hover:text-primary px-3", pathname === '/hilos-tensores' ? "text-primary" : "text-foreground")}>
-                <Link href="/hilos-tensores">Hilos Tensores</Link>
+            <Button asChild variant="ghost" className="text-primary font-bold hover:text-primary px-3">
+                <Link href="/hilos-tensores">
+                    <Award className="mr-2 h-4 w-4" />
+                    Hilos Tensores
+                </Link>
             </Button>
             {navLinks.map(link => link.dropdown 
                 ? <NavDropdown key={link.name} name={link.name} items={link.dropdown} />
@@ -141,7 +144,9 @@ export default function Header() {
             <nav className="flex-1 p-6">
               <ul className="space-y-4">
                   <li>
-                    <Link href="/hilos-tensores" className="text-lg font-bold text-primary transition-colors block">Hilos Tensores</Link>
+                    <Link href="/hilos-tensores" className="text-lg font-bold text-primary transition-colors block flex items-center">
+                        <Award className="mr-2 h-5 w-5"/> Hilos Tensores
+                    </Link>
                   </li>
                 {navLinks.map(link => (
                   <li key={link.name}>
