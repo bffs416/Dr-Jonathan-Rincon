@@ -332,11 +332,11 @@ export default function HilosTensoresPage() {
               >
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
-                    <Card className="w-full h-full p-6 flex flex-col items-start justify-center gap-4 text-left shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
+                    <Card className="w-full h-full p-6 flex flex-col items-center justify-center gap-4 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
+                      <p className="font-semibold text-lg">{benefit.title}</p>
                       <div className="bg-primary/10 text-primary p-2 rounded-full">
                         <CheckCircle className="w-6 h-6" />
                       </div>
-                      <p className="font-semibold text-lg">{benefit.title}</p>
                       <span className="text-xs text-muted-foreground absolute bottom-3 right-4 flex items-center gap-1">
                         Ver más <RefreshCw className="w-3 h-3" />
                       </span>
