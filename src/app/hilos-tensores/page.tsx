@@ -134,10 +134,10 @@ export default function HilosTensoresPage() {
               Recupera la Firmeza y Juventud de tu Piel
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              ¿Sientes que tu rostro ha perdido firmeza y luce más cansado? ¿La flacidez en tu abdomen, brazos o glúteos te impide sentirte con total confianza? Imagina poder retroceder el tiempo, recuperar la firmeza y redefinir tus contornos de una manera natural, segura y sin pasar por el quirófano. Hoy, gracias a los hilos tensores de última generación, ese deseo es una realidad.
+             <strong>¿Sientes que tu rostro ha perdido firmeza y luce más cansado? ¿La flacidez en tu abdomen, brazos o glúteos te impide sentirte con total confianza?</strong> Imagina poder retroceder el tiempo, recuperar la firmeza y redefinir tus contornos de una manera natural, segura y sin pasar por el quirófano. Hoy, gracias a los <strong>hilos tensores de última generación MINT</strong>, ese deseo es una realidad.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              El Dr. Jhonathan Rincón, reconocido como el experto #1 en hilos tensores de Medellín, te ofrece una solución innovadora y mínimamente invasiva para revitalizar tu apariencia facial y corporal, con resultados que te encantarán.
+              <strong>El Dr. Jhonathan Rincón, reconocido como el experto #1 en hilos tensores de Medellín</strong>, te ofrece una solución innovadora y mínimamente invasiva para revitalizar tu apariencia facial y corporal, con resultados que te encantarán.
             </p>
              <Button asChild size="lg" className="mt-8">
                 <Link href="#citas">
