@@ -32,7 +32,6 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/hilos-tensores" className="text-muted-foreground hover:text-primary">Hilos Tensores</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog Médico</Link></li>
-              <li><Link href="/blog-topic-generator" className="text-muted-foreground hover:text-primary">Generador de Temas</Link></li>
             </ul>
           </div>
           <div>
