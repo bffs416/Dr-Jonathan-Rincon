@@ -109,9 +109,9 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {[
-              { image: beforeAfter1, title: 'Hilos Tensores Faciales', icon: Sparkles },
-              { image: beforeAfter2, title: 'Rinomodelación sin Cirugía', icon: HeartPulse },
-              { image: beforeAfter3, title: 'Armonización de Labios', icon: Sparkles },
+              { image: beforeAfter1, title: 'Hilos Tensores Faciales', icon: Sparkles, href: "/hilos-tensores" },
+              { image: beforeAfter2, title: 'Rinomodelación sin Cirugía', icon: HeartPulse, href: "#" },
+              { image: beforeAfter3, title: 'Armonización de Labios', icon: Sparkles, href: "#" },
             ].map((item, index) => (
               <Card key={index} className="group overflow-hidden text-left transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                 <CardHeader className="p-0">
@@ -136,8 +136,10 @@ export default function Home() {
                   <p className="mt-4 text-muted-foreground">Resultados que combinan arte y ciencia para un look fresco y rejuvenecido. Vea la transformación.</p>
                 </CardContent>
                 <CardFooter>
-                   <Button variant="link" className="p-0 text-primary">
-                    Ver más <ArrowRight className="w-4 h-4 ml-2" />
+                   <Button variant="link" asChild className="p-0 text-primary">
+                    <Link href={item.href}>
+                      Ver más <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>

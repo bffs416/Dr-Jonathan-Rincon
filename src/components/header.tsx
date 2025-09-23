@@ -12,11 +12,12 @@ import { Logo } from './logo';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
 
 const navLinks = [
-  { href: '#procedimientos', label: 'Procedimientos' },
-  { href: '#sobre-el-doctor', label: 'Sobre el Doctor' },
-  { href: '#testimonios', label: 'Testimonios' },
-  { href: '#blog', label: 'Blog' },
-  { href: '#contacto', label: 'Contacto' },
+  { href: '/hilos-tensores', label: 'Hilos Tensores' },
+  { href: '/#procedimientos', label: 'Procedimientos' },
+  { href: '/#sobre-el-doctor', label: 'Sobre el Doctor' },
+  { href: '/#testimonios', label: 'Testimonios' },
+  { href: '/#blog', label: 'Blog' },
+  { href: '/#contacto', label: 'Contacto' },
 ];
 
 export default function Header() {
@@ -36,13 +37,33 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('/#')) {
+      if (pathname !== '/') {
+        // If we are not on the homepage, we can't do smooth scroll.
+        // Let's navigate to the homepage with the hash.
+        // The browser will handle scrolling to the element.
+        return;
+      }
+      e.preventDefault();
+      const targetId = href.substring(2);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+
   return (
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         isScrolled
           ? 'bg-background/80 shadow-md backdrop-blur-lg'
-          : 'bg-transparent'
+          : 'bg-transparent',
+        pathname.startsWith('/hilos-tensores') && 'bg-background/80 shadow-md backdrop-blur-lg'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
@@ -53,6 +74,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
               className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
             >
               {link.label}
@@ -100,7 +122,7 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={(e) => handleLinkClick(e, link.href)}
                   >
                     {link.label}
                   </Link>

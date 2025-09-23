@@ -3,56 +3,86 @@
     {
       "id": "hero",
       "description": "A serene and modern clinic interior, suggesting professionalism and calm.",
-      "imageUrl": "https://picsum.photos/seed/hero42/1920/1080",
+      "imageUrl": "https://images.unsplash.com/photo-1754294437684-7898b3701ac7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbGluaWMlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTg1OTE5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "clinic interior"
     },
     {
       "id": "doctor-rincon",
       "description": "Professional portrait of Dr. Jhonathan Rincón.",
-      "imageUrl": "https://picsum.photos/seed/docjhon/400/500",
+      "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg1OTE5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "doctor portrait"
     },
     {
       "id": "before-after-1",
       "description": "Before and after results of a thread lift procedure.",
-      "imageUrl": "https://picsum.photos/seed/ba1/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1598213301069-3e56babe0672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxiZWZvcmUlMjBhZnRlcnxlbnwwfHx8fDE3NTg1OTE5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "before after"
     },
     {
       "id": "before-after-2",
       "description": "Before and after results of a non-surgical rhinoplasty.",
-      "imageUrl": "https://picsum.photos/seed/ba2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYWNlJTIwcHJvZmlsZXxlbnwwfHx8fDE3NTg1OTE5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "face profile"
     },
     {
       "id": "before-after-3",
       "description": "Before and after results of lip harmonization.",
-      "imageUrl": "https://picsum.photos/seed/ba3/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1666594171486-858f82f5b191?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaXBzJTIwY2xvc2V1cHxlbnwwfHx8fDE3NTg1OTE5Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lips closeup"
     },
     {
       "id": "blog-1",
       "description": "Abstract image related to facial structure and threads.",
-      "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1585854467604-cf2080ccef31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMGxpbmVzfGVufDB8fHx8MTc1ODU5MTk3OHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract lines"
     },
     {
       "id": "blog-2",
       "description": "Image related to botox and rejuvenation.",
-      "imageUrl": "https://picsum.photos/seed/blog2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1699293679149-82215bb7501b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2VydW0lMjBib3R0bGV8ZW58MHx8fHwxNzU4NTg4MzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "serum bottle"
     },
     {
       "id": "blog-3",
       "description": "Image representing aftercare and wellness.",
-      "imageUrl": "https://picsum.photos/seed/blog3/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1608068811588-3a67006b7489?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxza2luY2FyZSUyMGNyZWFtfGVufDB8fHx8MTc1ODU4ODMwOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "skincare cream"
     },
     {
       "id": "map",
       "description": "A map showing the location of Edificio Azor in Medellín.",
-      "imageUrl": "https://picsum.photos/seed/map42/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1717700299581-c2fc3fad4ee8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc1ODU4MzIxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "city map"
+    },
+    {
+      "id": "hilos-hero",
+      "description": "Abstract visualization of threads under the skin.",
+      "imageUrl": "https://images.unsplash.com/photo-1706309760299-e62a2093c0e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRocmVhZHN8ZW58MHx8fHwxNzU4NTkxOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract threads"
+    },
+    {
+      "id": "hilos-benefits",
+      "description": "Close up of a woman's smiling face, showing healthy skin.",
+      "imageUrl": "https://images.unsplash.com/photo-1580491934306-acf5f6886d90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aGVhbHRoeSUyMHNraW58ZW58MHx8fHwxNzU4NTkxOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "healthy skin"
+    },
+    {
+      "id": "hilos-ba-1",
+      "description": "Before and after of a thread lift on the jawline.",
+      "imageUrl": "https://images.unsplash.com/photo-1732123803826-8f7430176890?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiZWZvcmUlMjBhZnRlciUyMGphd2xpbmV8ZW58MHx8fHwxNzU4NTkxOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "before after jawline"
+    },
+    {
+      "id": "hilos-ba-2",
+      "description": "Before and after of a fox eye thread lift.",
+      "imageUrl": "https://images.unsplash.com/photo-1744077064282-aea13699da38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmVmb3JlJTIwYWZ0ZXIlMjBleWVzfGVufDB8fHx8MTc1ODU5MTk3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "before after eyes"
+    },
+    {
+      "id": "hilos-ba-3",
+      "description": "Before and after of neck rejuvenation with threads.",
+      "imageUrl": "https://images.unsplash.com/photo-1659531412263-bf2b9e1abf6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWZvcmUlMjBhZnRlciUyMG5lY2t8ZW58MHx8fHwxNzU4NTkxOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "before after neck"
     }
   ]
 }
