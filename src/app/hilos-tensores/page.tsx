@@ -1,8 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, ChevronRight, Plus } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -19,21 +17,36 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { cn } from '@/lib/utils';
 
-const getPlaceholderImage = (id: string) => {
-  return PlaceHolderImages.find((img) => img.id === id);
-};
+
+const Placeholder = ({
+  className,
+  width,
+  height,
+  text = 'Pon tu imagen aquí',
+}: {
+  className?: string;
+  width?: number | string;
+  height?: number | string;
+  text?: string;
+}) => (
+  <div
+    className={cn(
+      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm',
+      className
+    )}
+    style={{
+      width: width ? `${width}px` : '100%',
+      height: height ? `${height}px` : '100%',
+    }}
+  >
+    {text}
+  </div>
+);
+
 
 export default function HilosTensoresPage() {
-  const heroImage = getPlaceholderImage('hilos-hero');
-  const benefitsImage = getPlaceholderImage('hilos-benefits');
-  const beforeAfterImages = [
-    getPlaceholderImage('hilos-ba-1'),
-    getPlaceholderImage('hilos-ba-2'),
-    getPlaceholderImage('hilos-ba-3'),
-  ];
-  const ctaImage = getPlaceholderImage('doctor-rincon');
-
   const benefits = [
     'Efecto lifting inmediato y sin cirugía.',
     'Estimula la producción natural de colágeno.',
@@ -75,16 +88,7 @@ export default function HilosTensoresPage() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        )}
+        <Placeholder className="absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
@@ -131,16 +135,7 @@ export default function HilosTensoresPage() {
             </Button>
           </div>
           <div>
-            {benefitsImage && (
-              <Image
-                src={benefitsImage.imageUrl}
-                alt={benefitsImage.description}
-                data-ai-hint={benefitsImage.imageHint}
-                width={600}
-                height={600}
-                className="rounded-xl shadow-2xl object-cover w-full aspect-square"
-              />
-            )}
+            <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" />
           </div>
         </section>
 
@@ -184,20 +179,13 @@ export default function HilosTensoresPage() {
             }}
           >
             <CarouselContent>
-              {beforeAfterImages.map(
-                (image, index) =>
-                  image && (
+              {[1, 2, 3].map(
+                (item, index) =>
+                  (
                     <CarouselItem key={index}>
                       <Card className="overflow-hidden">
                         <CardContent className="p-0">
-                          <Image
-                            src={image.imageUrl}
-                            alt={image.description}
-                            data-ai-hint={image.imageHint}
-                            width={1200}
-                            height={800}
-                            className="w-full h-auto object-cover"
-                          />
+                          <Placeholder className="w-full h-auto aspect-[3/2]" />
                         </CardContent>
                       </Card>
                     </CarouselItem>
@@ -249,16 +237,8 @@ export default function HilosTensoresPage() {
               </a>
             </Button>
             </div>
-            <div className="h-64 md:h-full w-full">
-              {ctaImage && (
-                <Image
-                  src={ctaImage.imageUrl}
-                  alt={ctaImage.description}
-                  data-ai-hint={ctaImage.imageHint}
-                  fill
-                  className="object-cover object-top"
-                />
-              )}
+            <div className="relative h-64 md:h-full w-full">
+              <Placeholder className="absolute inset-0" />
             </div>
           </Card>
         </section>

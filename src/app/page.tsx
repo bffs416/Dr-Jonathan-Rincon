@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -10,7 +9,6 @@ import {
   Sparkles,
   Star,
 } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -18,35 +16,37 @@ import { Badge } from '@/components/ui/badge';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { Separator } from '@/components/ui/separator';
 
-const getPlaceholderImage = (id: string) => {
-  return PlaceHolderImages.find((img) => img.id === id);
-};
+const Placeholder = ({
+  className,
+  width,
+  height,
+  text = 'Pon tu imagen aquí',
+}: {
+  className?: string;
+  width?: number | string;
+  height?: number | string;
+  text?: string;
+}) => (
+  <div
+    className={cn(
+      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm',
+      className
+    )}
+    style={{
+      width: width ? `${width}px` : '100%',
+      height: height ? `${height}px` : '100%',
+    }}
+  >
+    {text}
+  </div>
+);
 
 export default function Home() {
-  const heroImage = getPlaceholderImage('hero');
-  const doctorImage = getPlaceholderImage('doctor-rincon');
-  const beforeAfter1 = getPlaceholderImage('before-after-1');
-  const beforeAfter2 = getPlaceholderImage('before-after-2');
-  const beforeAfter3 = getPlaceholderImage('before-after-3');
-  const blog1 = getPlaceholderImage('blog-1');
-  const blog2 = getPlaceholderImage('blog-2');
-  const blog3 = getPlaceholderImage('blog-3');
-  const mapImage = getPlaceholderImage('map');
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[70vh] md:h-[90vh] w-full">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        )}
+        <Placeholder className="absolute inset-0" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="absolute inset-0 flex items-end justify-start pb-16 md:pb-24">
           <div className="container mx-auto px-4 text-white">
@@ -72,16 +72,7 @@ export default function Home() {
         <section id="sobre-el-doctor" className="scroll-mt-20">
           <Card className="overflow-hidden shadow-xl md:grid md:grid-cols-3 md:gap-8">
             <div className="md:col-span-1">
-              {doctorImage && (
-                <Image
-                  src={doctorImage.imageUrl}
-                  alt={doctorImage.description}
-                  data-ai-hint={doctorImage.imageHint}
-                  width={400}
-                  height={500}
-                  className="w-full h-full object-cover object-top"
-                />
-              )}
+               <Placeholder className="w-full h-full min-h-[300px] md:min-h-0" />
             </div>
             <div className="md:col-span-2 p-8">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Dr. Jhonathan Rincón</h2>
@@ -111,22 +102,13 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {[
-              { image: beforeAfter1, title: 'Hilos Tensores Faciales', icon: Sparkles, href: "/hilos-tensores" },
-              { image: beforeAfter2, title: 'Rinomodelación sin Cirugía', icon: HeartPulse, href: "#" },
-              { image: beforeAfter3, title: 'Armonización de Labios', icon: Sparkles, href: "#" },
+              { title: 'Hilos Tensores Faciales', icon: Sparkles, href: "/hilos-tensores" },
+              { title: 'Rinomodelación sin Cirugía', icon: HeartPulse, href: "#" },
+              { title: 'Armonización de Labios', icon: Sparkles, href: "#" },
             ].map((item, index) => (
               <Card key={index} className="group overflow-hidden text-left transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                 <CardHeader className="p-0">
-                  {item.image && (
-                    <Image
-                      src={item.image.imageUrl}
-                      alt={item.image.description}
-                      data-ai-hint={item.image.imageHint}
-                      width={600}
-                      height={400}
-                      className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  )}
+                  <Placeholder className="w-full h-56" />
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3">
@@ -209,22 +191,13 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {[
-              { image: blog1, title: 'Todo sobre Hilos Tensores', category: 'Facial' },
-              { image: blog2, title: 'Mitos y Verdades del Bótox', category: 'Rejuvenecimiento' },
-              { image: blog3, title: 'Cuidado Post-Tratamiento', category: 'Consejos' },
+              { title: 'Todo sobre Hilos Tensores', category: 'Facial' },
+              { title: 'Mitos y Verdades del Bótox', category: 'Rejuvenecimiento' },
+              { title: 'Cuidado Post-Tratamiento', category: 'Consejos' },
             ].map((post, index) => (
               <Card key={index} className="group overflow-hidden text-left transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                 <CardHeader className="p-0 relative">
-                  {post.image && (
-                    <Image
-                      src={post.image.imageUrl}
-                      alt={post.image.description}
-                      data-ai-hint={post.image.imageHint}
-                      width={600}
-                      height={400}
-                      className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  )}
+                  <Placeholder className="w-full h-56" />
                   <Badge className="absolute top-4 right-4">{post.category}</Badge>
                 </CardHeader>
                 <CardContent className="p-6">
@@ -293,18 +266,9 @@ export default function Home() {
               </div>
             </div>
              <div className="rounded-lg overflow-hidden h-64 md:h-full w-full">
-               {mapImage && (
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src={mapImage.imageUrl}
-                    alt={mapImage.description}
-                    data-ai-hint={mapImage.imageHint}
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </a>
-               )}
+               <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                 <Placeholder className="w-full h-full" />
+               </a>
             </div>
           </div>
         </section>
@@ -312,3 +276,5 @@ export default function Home() {
     </div>
   );
 }
+
+import { cn } from '@/lib/utils';
