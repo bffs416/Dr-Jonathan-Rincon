@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground">
-              Medicina estética de vanguardia para realzar tu belleza natural.
+              Especialista #1 en hilos tensores faciales y corporales en Medellín. Tratamientos estéticos avanzados con tecnología de vanguardia y resultados garantizados.
             </p>
             <div className="flex space-x-2 mt-4">
                <Button variant="ghost" size="icon" asChild>
