@@ -17,34 +17,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { cn } from '@/lib/utils';
-
-
-const Placeholder = ({
-  className,
-  width,
-  height,
-  text = 'Pon tu imagen aquí',
-}: {
-  className?: string;
-  width?: number | string;
-  height?: number | string;
-  text?: string;
-}) => (
-  <div
-    className={cn(
-      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm',
-      className
-    )}
-    style={{
-      width: width ? `${width}px` : '100%',
-      height: height ? `${height}px` : '100%',
-    }}
-  >
-    {text}
-  </div>
-);
-
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HilosTensoresPage() {
   const benefits = [
@@ -83,12 +57,27 @@ export default function HilosTensoresPage() {
         'Los hilos tensores son ideales para personas que presentan flacidez leve a moderada y desean un rejuvenecimiento facial sin pasar por el quirófano. La mejor manera de saberlo es agendando una cita de valoración.',
     },
   ];
+  
+  const heroImage = PlaceHolderImages.find(img => img.id === 'hilos-hero');
+  const whatAreTheyImage = PlaceHolderImages.find(img => img.id === 'hilos-what-are');
+  const beforeAfterImages = PlaceHolderImages.filter(img => img.id.startsWith('hilos-results-'));
+  const ctaImage = PlaceHolderImages.find(img => img.id === 'hilos-cta');
+
 
   return (
     <div>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
-        <Placeholder className="absolute inset-0 opacity-30" />
+        {heroImage && (
+            <Image
+                src={heroImage.imageUrl}
+                alt={heroImage.description}
+                fill
+                className="object-cover opacity-30"
+                data-ai-hint={heroImage.imageHint}
+                priority
+            />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
@@ -135,7 +124,16 @@ export default function HilosTensoresPage() {
             </Button>
           </div>
           <div>
-            <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" />
+            {whatAreTheyImage && (
+                <Image
+                    src={whatAreTheyImage.imageUrl}
+                    alt={whatAreTheyImage.description}
+                    width={600}
+                    height={600}
+                    className="rounded-xl shadow-2xl w-full aspect-square object-cover"
+                    data-ai-hint={whatAreTheyImage.imageHint}
+                />
+            )}
           </div>
         </section>
 
@@ -179,13 +177,20 @@ export default function HilosTensoresPage() {
             }}
           >
             <CarouselContent>
-              {[1, 2, 3].map(
-                (item, index) =>
+              {beforeAfterImages.map(
+                (image, index) =>
                   (
                     <CarouselItem key={index}>
                       <Card className="overflow-hidden">
                         <CardContent className="p-0">
-                          <Placeholder className="w-full h-auto aspect-[3/2]" />
+                          <Image
+                            src={image.imageUrl}
+                            alt={image.description}
+                            width={1200}
+                            height={800}
+                            className="w-full h-auto aspect-[3/2] object-cover"
+                            data-ai-hint={image.imageHint}
+                          />
                         </CardContent>
                       </Card>
                     </CarouselItem>
@@ -238,7 +243,15 @@ export default function HilosTensoresPage() {
             </Button>
             </div>
             <div className="relative h-64 md:h-full w-full">
-              <Placeholder className="absolute inset-0" />
+              {ctaImage && (
+                <Image
+                    src={ctaImage.imageUrl}
+                    alt={ctaImage.description}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={ctaImage.imageHint}
+                />
+              )}
             </div>
           </Card>
         </section>
