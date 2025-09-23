@@ -131,13 +131,13 @@ export default function HilosTensoresPage() {
         >
           <div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
-              El Secreto de una Piel Firme y Joven
+              Recupera la Firmeza y Juventud de tu Piel
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Los hilos tensores son suturas biocompatibles que, una vez insertadas bajo la piel, actúan en dos niveles: un <strong className='text-primary'>efecto lifting mecánico inmediato</strong> al reposicionar los tejidos, y un <strong className='text-primary'>efecto biológico a largo plazo</strong>.
+              ¿Sientes que tu rostro ha perdido firmeza y luce más cansado? ¿La flacidez en tu abdomen, brazos o glúteos te impide sentirte con total confianza? Imagina poder retroceder el tiempo, recuperar la firmeza y redefinir tus contornos de una manera natural, segura y sin pasar por el quirófano. Hoy, gracias a los hilos tensores de última generación, ese deseo es una realidad.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Este segundo efecto es la verdadera magia: los hilos estimulan de forma natural a tus células para que produzcan nuevo colágeno y elastina. El resultado es una piel visiblemente más firme, elástica y rejuvenecida de adentro hacia afuera.
+              El Dr. Jhonathan Rincón, reconocido como el experto #1 en hilos tensores de Medellín, te ofrece una solución innovadora y mínimamente invasiva para revitalizar tu apariencia facial y corporal, con resultados que te encantarán.
             </p>
              <Button asChild size="lg" className="mt-8">
                 <Link href="#citas">
