@@ -83,6 +83,12 @@
       "description": "Before and after of neck rejuvenation with threads.",
       "imageUrl": "https://images.unsplash.com/photo-1659531412263-bf2b9e1abf6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxiZWZvcmUlMjBhZnRlciUyMG5lY2t8ZW58MHx8fHwxNzU4NTkxOTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "before after neck"
+    },
+    {
+      "id": "logo",
+      "description": "Logo for Dr. Jhonathan Rincón",
+      "imageUrl": "https://images.unsplash.com/photo-1612810806563-4cb8265db55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsb2dvfGVufDB8fHx8MTc1ODU5NDE5MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo"
     }
   ]
 }
