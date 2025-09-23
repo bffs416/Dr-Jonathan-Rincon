@@ -46,11 +46,11 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-1 shrink-0 text-muted-foreground" />
-                <span className="text-muted-foreground">
+                <a href="https://maps.app.goo.gl/Um7JKhc2Nhewzhm67" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                   Edificio Azor, Cra. 84 #37b - 195 <br />
                   Primer piso, La América <br/>
                   Medellín, Antioquia
-                </span>
+                </a>
               </li>
               <li className="flex items-start">
                 <WhatsAppIcon className="w-4 h-4 mr-2 mt-1 shrink-0 text-muted-foreground" />
