@@ -6,6 +6,7 @@ import {
   HeartPulse,
   Instagram,
   MapPin,
+  Quote,
   Sparkles,
   Star,
 } from 'lucide-react';
@@ -42,6 +43,37 @@ const Placeholder = ({
 );
 
 export default function Home() {
+  const testimonials = [
+    {
+      name: 'María González',
+      age: 35,
+      treatment: 'Hilos Tensores Faciales',
+      text: '¡Increíble resultado con los hilos tensores! El Dr. Rincón es muy profesional y los resultados fueron inmediatos. Me siento 10 años más joven.',
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
+    },
+    {
+      name: 'Ana Rodríguez',
+      age: 42,
+      treatment: 'Bioestimuladores + Botox',
+      text: 'Excelente atención y resultados naturales. El tratamiento con Sculptra me devolvió la firmeza que había perdido. Totalmente recomendado.',
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026703d',
+    },
+    {
+      name: 'Carmen López',
+      age: 38,
+      treatment: 'Contorno Corporal',
+      text: 'El Dr. Rincón transformó mi figura con hidrolipoclasia. Proceso cómodo, resultados espectaculares. El mejor especialista de Medellín.',
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026705d',
+    },
+    {
+      name: 'Sofía Martínez',
+      age: 29,
+      treatment: 'NCTF + Esperma de Salmón',
+      text: 'Mi piel nunca había lucido tan radiante. El tratamiento facial me dio una luminosidad increíble. Definitivamente volveré.',
+      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026706d',
+    },
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -132,37 +164,38 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonios" className="scroll-mt-20">
-          <div className="grid lg:grid-cols-5 gap-8 items-center">
-            <div className="lg:col-span-2">
-              <Badge variant="secondary" className="text-sm">Opiniones</Badge>
-              <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">Lo que dicen nuestros pacientes</h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                La confianza y satisfacción de nuestros pacientes es nuestro mayor orgullo. Sus resultados hablan por sí mismos.
-              </p>
-            </div>
-            <div className="lg:col-span-3 grid md:grid-cols-2 gap-6">
-              {[
-                { name: 'Valentina G.', text: '¡Increíble! Los hilos tensores me devolvieron la frescura que había perdido. El Dr. Rincón es un verdadero artista.', avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d' },
-                { name: 'Andrés M.', text: 'El profesionalismo y la atención al detalle son inmejorables. Me sentí seguro durante todo el proceso. ¡Totalmente recomendado!', avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026703d' },
-              ].map((testimonial) => (
-                <Card key={testimonial.name} className="bg-card shadow-lg">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />)}
+        <section id="testimonios" className="scroll-mt-20 text-center">
+          <h2 className="font-headline text-4xl md:text-5xl font-bold">
+            Testimonios de <span className="text-primary">Pacientes</span>
+          </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+            Conoce las experiencias reales de nuestros pacientes y sus transformaciones
+          </p>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {testimonials.map((testimonial) => (
+              <Card key={testimonial.name} className="flex flex-col text-left shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <CardContent className="p-6 flex-1 flex flex-col">
+                  <Quote className="w-8 h-8 text-primary/50 -ml-2 mb-4" fill="hsl(var(--primary) / 0.1)" />
+                  <div className="flex items-center mb-2">
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+                  </div>
+                  <p className="text-muted-foreground text-sm flex-1">"{testimonial.text}"</p>
+                </CardContent>
+                <CardFooter className="flex flex-col items-start p-6 pt-4 bg-muted/30">
+                  <div className="flex items-center w-full">
+                    <Avatar className="h-12 w-12 border-2 border-primary">
+                      <Placeholder className="rounded-full w-full h-full" text="" />
+                    </Avatar>
+                    <div className="ml-4">
+                      <p className="font-bold text-base">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.age} años</p>
                     </div>
-                    <p className="text-muted-foreground italic">"{testimonial.text}"</p>
-                    <div className="flex items-center mt-4">
-                      <Avatar className="h-10 w-10">
-                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                      </Avatar>
-                      <p className="ml-4 font-bold">{testimonial.name}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  </div>
+                  <Separator className="my-4" />
+                  <p className="text-xs text-primary font-semibold uppercase tracking-wider">{testimonial.treatment}</p>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
         </section>
 
