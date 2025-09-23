@@ -171,16 +171,11 @@ export default function Home() {
                   {specializations.map((spec, index) => {
                     const isFirst = index === 0;
                     return (
-                      <li
-                        key={spec.name}
-                        className={cn('flex items-center', {
-                          'bg-primary/10 p-3 rounded-lg -m-3': isFirst,
-                        })}
-                      >
+                      <li key={spec.name} className="flex items-center">
                         {isFirst ? (
                           <Award className="w-6 h-6 mr-3 text-primary" />
                         ) : (
-                          <div className="w-2 h-2 bg-primary rounded-full mr-3 ml-2" />
+                          <div className="w-2 h-2 bg-primary rounded-full mr-4 ml-2" />
                         )}
                         <Link
                           href={spec.href}
