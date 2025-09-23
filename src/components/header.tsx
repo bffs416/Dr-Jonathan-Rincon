@@ -61,9 +61,9 @@ export default function Header() {
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         isScrolled
-          ? 'bg-background/80 shadow-md backdrop-blur-lg'
+          ? 'bg-header-background/80 shadow-md backdrop-blur-lg'
           : 'bg-transparent',
-        pathname.startsWith('/hilos-tensores') && 'bg-background/80 shadow-md backdrop-blur-lg'
+        pathname.startsWith('/hilos-tensores') && 'bg-header-background/80 shadow-md backdrop-blur-lg'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
@@ -75,7 +75,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+              className="text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
@@ -84,16 +84,16 @@ export default function Header() {
 
         <div className="hidden md:flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white hover:text-white">
               <Instagram className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white hover:text-white">
               <Facebook className="h-5 w-5" />
             </a>
           </Button>
-          <Button asChild className="bg-accent hover:bg-accent/90">
+          <Button asChild className="bg-white/90 hover:bg-white text-slate-800">
              <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
              </a>
@@ -102,7 +102,7 @@ export default function Header() {
 
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
+            <Button variant="ghost" size="icon" className="text-white hover:text-white">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Abrir menú</span>
             </Button>

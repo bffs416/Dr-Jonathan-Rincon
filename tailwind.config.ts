@@ -23,6 +23,7 @@ export default {
       },
       colors: {
         background: 'hsl(var(--background))',
+        'header-background': 'hsl(var(--header-background))',
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
