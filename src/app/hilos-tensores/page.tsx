@@ -106,7 +106,7 @@ export default function HilosTensoresPage() {
 
   const advancedApplications = [
     {
-      title: 'Rinomodelación',
+      title: 'Rinomodelación con Hilos',
       description:
         'Alternativa no quirúrgica para elevar la punta y rectificar el dorso nasal.',
     },
@@ -129,9 +129,9 @@ export default function HilosTensoresPage() {
       description: 'Mejora la ptosis leve a moderada y redefine el contorno.',
     },
     {
-      title: 'Tratamiento de Cicatrices',
+      title: 'Tratamiento de Cicatrices Atróficas',
       description:
-        'Estimula colágeno para rellenar y mejorar la textura de cicatrices atróficas.',
+        'Estimula colágeno para rellenar y mejorar la textura de cicatrices.',
     },
   ];
 
@@ -321,38 +321,78 @@ export default function HilosTensoresPage() {
             Descubre los múltiples beneficios de este tratamiento innovador para
             devolverle la juventud a tu rostro y cuerpo.
           </p>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className={cn('flip-card h-48', {
-                  flipped: flippedCard === index,
-                })}
-                onClick={() => handleCardFlip(index)}
-              >
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <Card className="w-full h-full p-6 flex flex-col items-center justify-center gap-4 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
-                      <p className="font-semibold text-lg">{benefit.title}</p>
-                      <div className="bg-primary/10 text-primary p-2 rounded-full">
-                        <CheckCircle className="w-6 h-6" />
-                      </div>
-                      <span className="text-xs text-muted-foreground absolute bottom-3 right-4 flex items-center gap-1">
-                        Ver más <RefreshCw className="w-3 h-3" />
-                      </span>
-                    </Card>
-                  </div>
-                  <div className="flip-card-back">
-                    <Card className="w-full h-full p-6 flex flex-col items-start justify-center text-left bg-primary text-primary-foreground shadow-xl cursor-pointer">
-                      <p className="text-sm">{benefit.description}</p>
-                       <span className="text-xs text-primary-foreground/70 absolute bottom-3 right-4 flex items-center gap-1">
-                        Volver <RefreshCw className="w-3 h-3" />
-                      </span>
-                    </Card>
+          <div className="mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.slice(0, 6).map((benefit, index) => (
+                <div
+                  key={index}
+                  className={cn('flip-card h-48', {
+                    flipped: flippedCard === index,
+                  })}
+                  onClick={() => handleCardFlip(index)}
+                >
+                  <div className="flip-card-inner">
+                    <div className="flip-card-front">
+                      <Card className="w-full h-full p-6 flex flex-col items-center justify-center gap-4 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
+                        <p className="font-semibold text-lg">{benefit.title}</p>
+                        <div className="bg-primary/10 text-primary p-2 rounded-full">
+                          <CheckCircle className="w-6 h-6" />
+                        </div>
+                        <span className="text-xs text-muted-foreground absolute bottom-3 right-4 flex items-center gap-1">
+                          Ver más <RefreshCw className="w-3 h-3" />
+                        </span>
+                      </Card>
+                    </div>
+                    <div className="flip-card-back">
+                      <Card className="w-full h-full p-6 flex flex-col items-start justify-center text-left bg-primary text-primary-foreground shadow-xl cursor-pointer">
+                        <p className="text-sm">{benefit.description}</p>
+                        <span className="text-xs text-primary-foreground/70 absolute bottom-3 right-4 flex items-center gap-1">
+                          Volver <RefreshCw className="w-3 h-3" />
+                        </span>
+                      </Card>
+                    </div>
                   </div>
                 </div>
+              ))}
+            </div>
+            <div className="mt-8 flex justify-center lg:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:w-2/3 lg:grid-cols-2">
+                 {benefits.slice(6).map((benefit, index) => {
+                    const originalIndex = index + 6;
+                    return (
+                        <div
+                        key={originalIndex}
+                        className={cn('flip-card h-48', {
+                            flipped: flippedCard === originalIndex,
+                        })}
+                        onClick={() => handleCardFlip(originalIndex)}
+                        >
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
+                            <Card className="w-full h-full p-6 flex flex-col items-center justify-center gap-4 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
+                                <p className="font-semibold text-lg">{benefit.title}</p>
+                                <div className="bg-primary/10 text-primary p-2 rounded-full">
+                                <CheckCircle className="w-6 h-6" />
+                                </div>
+                                <span className="text-xs text-muted-foreground absolute bottom-3 right-4 flex items-center gap-1">
+                                Ver más <RefreshCw className="w-3 h-3" />
+                                </span>
+                            </Card>
+                            </div>
+                            <div className="flip-card-back">
+                            <Card className="w-full h-full p-6 flex flex-col items-start justify-center text-left bg-primary text-primary-foreground shadow-xl cursor-pointer">
+                                <p className="text-sm">{benefit.description}</p>
+                                <span className="text-xs text-primary-foreground/70 absolute bottom-3 right-4 flex items-center gap-1">
+                                Volver <RefreshCw className="w-3 h-3" />
+                                </span>
+                            </Card>
+                            </div>
+                        </div>
+                        </div>
+                    )
+                })}
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
@@ -364,8 +404,8 @@ export default function HilosTensoresPage() {
               Cada Hilo tiene su Propósito
             </h2>
             <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Utilizo diferentes tipos de hilos para personalizar tu tratamiento
-              y lograr los mejores resultados según tus necesidades.
+              Utilizo diferentes tipos de hilos (lisos, de tornillo, espiculados) para personalizar tu tratamiento
+              y lograr los mejores resultados según tus necesidades de tracción o redensificación.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
