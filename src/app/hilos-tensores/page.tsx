@@ -81,12 +81,6 @@ export default function HilosTensoresPage() {
       icon: '/icons/hilo-liso.svg',
     },
     {
-      name: 'Hilos de Tornillo (Screw)',
-      description:
-        'Diseñados para aportar un ligero volumen y tratar arrugas más profundas. Su forma en espiral permite un mayor estímulo de colágeno en áreas localizadas.',
-      icon: '/icons/hilo-tornillo.svg',
-    },
-    {
       name: 'Hilos Espiculados (COG)',
       description:
         'Son los protagonistas del efecto lifting. Cuentan con pequeñas espículas (dientes) que se anclan al tejido, permitiendo traccionar y reposicionar la piel de forma inmediata.',
@@ -356,11 +350,11 @@ export default function HilosTensoresPage() {
               Cada Hilo tiene su Propósito
             </h2>
             <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Utilizo diferentes tipos de hilos (lisos, de tornillo, espiculados) para personalizar tu tratamiento
+              Utilizo diferentes tipos de hilos (lisos, espiculados) para personalizar tu tratamiento
               y lograr los mejores resultados según tus necesidades de tracción o redensificación.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {threadTypes.map((type) => (
               <Card key={type.name} className="text-center p-8">
                 <CardHeader className="p-0 items-center">
