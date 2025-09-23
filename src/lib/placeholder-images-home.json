@@ -1,0 +1,40 @@
+{
+  "placeholderImagesHome": [
+    {
+      "id": "home-before-1",
+      "description": "Paciente antes de tratamiento de contorno corporal.",
+      "imageUrl": "https://picsum.photos/seed/home-before-1/600/400",
+      "imageHint": "body contouring before"
+    },
+    {
+      "id": "home-after-1",
+      "description": "Paciente después de tratamiento de contorno corporal.",
+      "imageUrl": "https://picsum.photos/seed/home-after-1/600/400",
+      "imageHint": "body contouring after"
+    },
+    {
+      "id": "home-before-2",
+      "description": "Paciente antes de rejuvenecimiento facial.",
+      "imageUrl": "https://picsum.photos/seed/home-before-2/600/400",
+      "imageHint": "facial rejuvenation before"
+    },
+    {
+      "id": "home-after-2",
+      "description": "Paciente después de rejuvenecimiento facial.",
+      "imageUrl": "https://picsum.photos/seed/home-after-2/600/400",
+      "imageHint": "facial rejuvenation after"
+    },
+    {
+      "id": "home-before-3",
+      "description": "Paciente antes de marcación abdominal.",
+      "imageUrl": "https://picsum.photos/seed/home-before-3/600/400",
+      "imageHint": "abdominal etching before"
+    },
+    {
+      "id": "home-after-3",
+      "description": "Paciente después de marcación abdominal.",
+      "imageUrl": "https://picsum.photos/seed/home-after-3/600/400",
+      "imageHint": "abdominal etching after"
+    }
+  ]
+}

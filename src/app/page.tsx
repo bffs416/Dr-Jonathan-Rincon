@@ -22,6 +22,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { PlaceHolderImagesHome } from '@/lib/placeholder-images-home';
 
 const Placeholder = ({
   className,
@@ -96,19 +97,25 @@ export default function Home() {
   ];
   const beforeAfterCases = [
     {
-      title: 'Levantamiento de Glúteos',
-      description: 'Tensamax para glúteos firmes y levantados',
-      sessions: '2 sesiones',
+      title: 'Contorno Corporal',
+      description: 'Hidrolipoclasia para reducción de grasa localizada',
+      sessions: '4 sesiones',
+      beforeImage: PlaceHolderImagesHome.find(img => img.id === 'home-before-1'),
+      afterImage: PlaceHolderImagesHome.find(img => img.id === 'home-after-1'),
     },
     {
       title: 'Rejuvenecimiento Facial',
       description: 'Combinación de hilos y bioestimuladores',
       sessions: '1 sesión',
+      beforeImage: PlaceHolderImagesHome.find(img => img.id === 'home-before-2'),
+      afterImage: PlaceHolderImagesHome.find(img => img.id === 'home-after-2'),
     },
     {
       title: 'Marcación Abdominal',
       description: 'Técnica avanzada para definición muscular',
       sessions: '3 sesiones',
+      beforeImage: PlaceHolderImagesHome.find(img => img.id === 'home-before-3'),
+      afterImage: PlaceHolderImagesHome.find(img => img.id === 'home-after-3'),
     },
   ];
 
@@ -233,7 +240,18 @@ export default function Home() {
                           <h3 className="font-semibold text-center md:text-left">
                             Antes
                           </h3>
-                          <Placeholder className="rounded-lg aspect-[4/3]" />
+                          {caseItem.beforeImage ? (
+                            <Image
+                              src={caseItem.beforeImage.imageUrl}
+                              alt={`Antes - ${caseItem.title}`}
+                              width={600}
+                              height={400}
+                              className="rounded-lg aspect-[4/3] object-cover"
+                              data-ai-hint={caseItem.beforeImage.imageHint}
+                            />
+                          ) : (
+                            <Placeholder className="rounded-lg aspect-[4/3]" />
+                          )}
                         </div>
 
                         {/* Details */}
@@ -258,7 +276,18 @@ export default function Home() {
                             Después
                           </h3>
                           <div className="relative">
-                            <Placeholder className="rounded-lg aspect-[4/3]" />
+                            {caseItem.afterImage ? (
+                              <Image
+                                src={caseItem.afterImage.imageUrl}
+                                alt={`Después - ${caseItem.title}`}
+                                width={600}
+                                height={400}
+                                className="rounded-lg aspect-[4/3] object-cover"
+                                data-ai-hint={caseItem.afterImage.imageHint}
+                              />
+                            ) : (
+                               <Placeholder className="rounded-lg aspect-[4/3]" />
+                            )}
                             <Badge className="absolute top-2 right-2 bg-green-500 text-white">
                               Resultado
                             </Badge>
