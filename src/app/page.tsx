@@ -3,18 +3,14 @@ import {
   ArrowRight,
   Award,
   HeartHandshake,
-  Quote,
   Star,
   Clock,
   Briefcase,
-  ChevronLeft,
-  ChevronRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
-import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
@@ -39,7 +35,7 @@ const Placeholder = ({
 }) => (
   <div
     className={cn(
-      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm relative',
+      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm',
       className
     )}
     style={{
@@ -47,14 +43,7 @@ const Placeholder = ({
       height: height ? `${height}px` : '100%',
     }}
   >
-    <Image
-      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3C/svg%3E"
-      layout="fill"
-      objectFit="cover"
-      alt={text}
-      className="opacity-0"
-    />
-    <span className="absolute">{text}</span>
+    {text}
   </div>
 );
 
@@ -132,7 +121,7 @@ export default function Home() {
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-            <Image
+              <Image
                 src="/images/Experto-hilos-tensores-faciales.png"
                 alt="Dr. Jhonathan Rincón, experto en hilos tensores faciales"
                 width={500}
@@ -147,6 +136,12 @@ export default function Home() {
                     Medicina Estética
                   </p>
                 </div>
+              </div>
+               <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-sm rounded-lg p-3 text-center shadow-md">
+                  <p className="text-2xl font-bold text-primary">500+</p>
+                  <p className="text-sm text-muted-foreground">
+                    Pacientes Satisfechos
+                  </p>
               </div>
             </div>
             <div>
@@ -301,13 +296,10 @@ export default function Home() {
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-center mb-4">
                       <Avatar className="h-16 w-16 border-2 border-primary">
-                        <AvatarImage
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
+                        <Placeholder
+                          className="w-full h-full"
+                          text="foto"
                         />
-                        <AvatarFallback>
-                          {testimonial.name.charAt(0)}
-                        </AvatarFallback>
                       </Avatar>
                       <div className="ml-4">
                         <p className="font-bold text-lg">{testimonial.name}</p>
