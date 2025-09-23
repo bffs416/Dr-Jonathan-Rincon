@@ -167,18 +167,35 @@ export default function Home() {
                 <h3 className="font-headline text-xl font-semibold mb-4">
                   Especializaciones
                 </h3>
-                <ul className="grid grid-cols-2 gap-x-8 gap-y-2">
-                  {specializations.map((spec) => (
-                    <li key={spec.name} className="flex items-center">
-                      <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                      <Link
-                        href={spec.href}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                <ul className="space-y-3">
+                  {specializations.map((spec, index) => {
+                    const isFirst = index === 0;
+                    return (
+                      <li
+                        key={spec.name}
+                        className={cn('flex items-center', {
+                          'bg-primary/10 p-3 rounded-lg -m-3': isFirst,
+                        })}
                       >
-                        {spec.name}
-                      </Link>
-                    </li>
-                  ))}
+                        {isFirst ? (
+                          <Award className="w-6 h-6 mr-3 text-primary" />
+                        ) : (
+                          <div className="w-2 h-2 bg-primary rounded-full mr-3 ml-2" />
+                        )}
+                        <Link
+                          href={spec.href}
+                          className={cn(
+                            'transition-colors',
+                            isFirst
+                              ? 'text-primary font-bold text-lg'
+                              : 'text-muted-foreground hover:text-primary'
+                          )}
+                        >
+                          {spec.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <Button asChild size="lg" className="mt-8">
