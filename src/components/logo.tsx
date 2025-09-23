@@ -19,14 +19,34 @@ export function Logo() {
   }, []);
 
   return (
-    <Link href="/" className="flex items-center space-x-2">
+    <Link href="/" className="flex items-center space-x-3">
       <Image
         src="/images/Logo Dr Jhonathan.png"
         alt="Logo Dr. Jhonathan Rincón"
-        width={40}
-        height={40}
+        width={50}
+        height={50}
         className="rounded-full"
       />
+      <div className="flex flex-col">
+        <span
+          className={cn(
+            'font-headline font-bold text-xl leading-tight',
+            isScrolled || pathname !== '/' ? 'text-foreground' : 'text-foreground'
+          )}
+        >
+          Dr. Jhonathan Rincón
+        </span>
+        <span
+          className={cn(
+            'text-sm leading-tight',
+            isScrolled || pathname !== '/'
+              ? 'text-muted-foreground'
+              : 'text-slate-300'
+          )}
+        >
+          Medicina Estética
+        </span>
+      </div>
     </Link>
   );
 }
