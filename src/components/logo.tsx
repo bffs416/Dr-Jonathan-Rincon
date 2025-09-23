@@ -20,15 +20,15 @@ export function Logo() {
 
   return (
     <Link href="/" className="flex items-center space-x-3">
-      <div className="relative">
+      <div className="relative flex items-center justify-center w-[50px] h-[50px]">
+        <div className="absolute inset-0 bg-primary rounded-full" />
         <Image
           src="/images/Logo Dr Jhonathan.png"
           alt="Logo Dr. Jhonathan Rincón"
           width={50}
           height={50}
-          className="rounded-full"
+          className="rounded-full relative z-10"
         />
-        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full" />
       </div>
       <div className="flex flex-col">
         <span
