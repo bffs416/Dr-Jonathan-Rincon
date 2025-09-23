@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { useEffect, useRef } from 'react';
+import { useFormStatus } from 'react-dom';
+import { useActionState, useEffect, useRef } from 'react';
 import { Copy, Sparkles, Wand2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { getBlogTopics, type FormState } from './actions';
@@ -31,7 +31,7 @@ function SubmitButton() {
 
 export default function TopicForm() {
   const initialState: FormState = { message: '', errors: {} };
-  const [state, dispatch] = useFormState(getBlogTopics, initialState);
+  const [state, dispatch] = useActionState(getBlogTopics, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
