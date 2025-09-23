@@ -63,7 +63,7 @@ export default function Header() {
         isScrolled
           ? 'bg-background/80 shadow-md backdrop-blur-lg'
           : 'bg-transparent',
-        pathname.startsWith('/hilos-tensores') && !isScrolled && 'bg-transparent'
+        pathname === '/' && !isScrolled ? 'bg-transparent text-white' : ''
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
@@ -77,7 +77,7 @@ export default function Header() {
               onClick={(e) => handleLinkClick(e, link.href)}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                isScrolled || pathname.startsWith('/hilos-tensores') ? 'text-foreground/80 hover:text-foreground' : 'text-white/80 hover:text-white'
+                 pathname === '/' && !isScrolled ? 'text-white/80 hover:text-white' : 'text-foreground/80 hover:text-foreground'
               )}
             >
               {link.label}
@@ -87,17 +87,17 @@ export default function Header() {
 
         <div className="hidden md:flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", isScrolled || pathname.startsWith('/hilos-tensores') ? 'text-foreground' : 'text-white')}>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", pathname === '/' && !isScrolled ? 'text-white' : 'text-foreground')}>
               <Instagram className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", isScrolled || pathname.startsWith('/hilos-tensores') ? 'text-foreground' : 'text-white')}>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", pathname === '/' && !isScrolled ? 'text-white' : 'text-foreground')}>
               <Facebook className="h-5 w-5" />
             </a>
           </Button>
           <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-             <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">
+             <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
              </a>
           </Button>
@@ -105,12 +105,12 @@ export default function Header() {
 
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className={cn("hover:text-primary", isScrolled || pathname.startsWith('/hilos-tensores') ? 'text-foreground' : 'text-white')}>
+            <Button variant="ghost" size="icon" className={cn("hover:text-primary", pathname === '/' && !isScrolled ? 'text-white' : 'text-foreground')}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Abrir menú</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background p-0">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center p-4 border-b">
                  <Logo />
@@ -134,7 +134,7 @@ export default function Header() {
 
               <div className="p-4 border-t">
                  <Button asChild className="w-full bg-accent hover:bg-accent/90 text-lg py-6">
-                    <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                         <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
                     </a>
                 </Button>

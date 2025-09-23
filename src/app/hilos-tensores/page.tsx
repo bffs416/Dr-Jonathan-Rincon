@@ -87,8 +87,8 @@ export default function HilosTensoresPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[50vh] md:h-[60vh] w-full">
-        <Placeholder className="absolute inset-0" />
+      <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
+        <Placeholder className="absolute inset-0 opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
@@ -232,7 +232,7 @@ export default function HilosTensoresPage() {
                 ¿Sientes que los hilos tensores son para ti? El Dr. Rincón evaluará tu caso de forma personalizada para diseñar un tratamiento a tu medida que cumpla tus expectativas.
               </p>
               <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-              <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
               </a>
             </Button>

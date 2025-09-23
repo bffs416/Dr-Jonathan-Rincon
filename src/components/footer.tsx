@@ -1,4 +1,4 @@
-import { Facebook, Instagram, MapPin } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Clock, Phone } from 'lucide-react';
 import { Logo } from './logo';
 import { Button } from './ui/button';
 import Link from 'next/link';
@@ -49,11 +49,22 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-1 shrink-0 text-muted-foreground" />
-                <span className="text-muted-foreground">Edificio Azor, Medellín, Antioquia</span>
+                <span className="text-muted-foreground">
+                  Edificio Azor, Cra. 84 #37b - 195 <br />
+                  Primer piso, La América <br/>
+                  Medellín, Antioquia
+                </span>
               </li>
               <li className="flex items-start">
                 <WhatsAppIcon className="w-4 h-4 mr-2 mt-1 shrink-0 text-muted-foreground" />
-                <a href="https://wa.me/573001234567" className="text-muted-foreground hover:text-primary">+57 300 123 4567</a>
+                <a href="https://wa.me/573122784757" className="text-muted-foreground hover:text-primary" target="_blank" rel="noopener noreferrer">+57 312 278 4757</a>
+              </li>
+              <li className="flex items-start">
+                <Clock className="w-4 h-4 mr-2 mt-1 shrink-0 text-muted-foreground" />
+                <span className="text-muted-foreground">
+                  Lun - Vie: 8:00 AM - 6:00 PM <br/>
+                  Sáb: 8:00 AM - 2:00 PM
+                </span>
               </li>
             </ul>
           </div>
