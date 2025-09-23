@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -40,7 +39,7 @@ import { cn } from '@/lib/utils';
 export default function HilosTensoresPage() {
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
 
-    const benefits = [
+  const benefits = [
     {
       title: 'Efecto Lifting Instantáneo',
       description:
@@ -162,7 +161,6 @@ export default function HilosTensoresPage() {
     }
   };
 
-
   return (
     <div>
       {/* Hero Section */}
@@ -206,10 +204,25 @@ export default function HilosTensoresPage() {
               Recupera la Firmeza y Juventud de tu Piel con Hilos Tensores PDO
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              ¿Sientes que tu rostro ha perdido firmeza y luce más cansado? ¿La flacidez en tu abdomen, brazos o glúteos te impide sentirte con total confianza? Imagina poder retroceder el tiempo, recuperar la firmeza y redefinir tus contornos de una manera natural, segura y sin pasar por el quirófano. Hoy, gracias a los <strong className="text-primary font-bold">hilos tensores de última generación MINT</strong>, ese deseo es una realidad en Medellín.
+              ¿Sientes que tu rostro ha perdido firmeza y luce más cansado? ¿La
+              flacidez en tu abdomen, brazos o glúteos te impide sentirte con
+              total confianza? Imagina poder retroceder el tiempo, recuperar la
+              firmeza y redefinir tus contornos de una manera natural, segura y
+              sin pasar por el quirófano. Hoy, gracias a los{' '}
+              <strong className="text-primary font-bold">
+                hilos tensores de última generación MINT
+              </strong>
+              , ese deseo es una realidad en Medellín.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              El <strong className="text-primary font-bold">Dr. Jhonathan Rincón, reconocido como el experto #1 en hilos tensores PDO en Medellín</strong>, te ofrece una solución innovadora y mínimamente invasiva para revitalizar tu apariencia facial y corporal, con resultados que te encantarán.
+              El{' '}
+              <strong className="text-primary font-bold">
+                Dr. Jhonathan Rincón, reconocido como el experto #1 en hilos
+                tensores PDO en Medellín
+              </strong>
+              , te ofrece una solución innovadora y mínimamente invasiva para
+              revitalizar tu apariencia facial y corporal, con resultados que te
+              encantarán.
             </p>
             <Dialog>
               <DialogTrigger asChild>
@@ -226,15 +239,39 @@ export default function HilosTensoresPage() {
                 </DialogHeader>
                 <div className="prose prose-lg dark:prose-invert mx-auto text-muted-foreground">
                   <p>
-                    Piensa en los hilos tensores como un "andamio" inteligente y reabsorbible para tu piel. Son suturas finísimas hechas de Polidioxanona (PDO), un material 100% biocompatible y seguro que se ha utilizado por décadas en cirugías complejas, incluso en el corazón. Esto garantiza que tu cuerpo los aceptará sin problemas y los reabsorberá de forma natural con el tiempo.
+                    Piensa en los hilos tensores como un "andamio" inteligente y
+                    reabsorbible para tu piel. Son suturas finísimas hechas de
+                    Polidioxanona (PDO), un material 100% biocompatible y seguro
+                    que se ha utilizado por décadas en cirugías complejas,
+                    incluso en el corazón. Esto garantiza que tu cuerpo los
+                    aceptará sin problemas y los reabsorberá de forma natural
+                    con el tiempo.
                   </p>
                   <p>El tratamiento tiene una doble acción revolucionaria:</p>
                   <ol>
                     <li>
-                      <strong className="text-primary font-bold">Efecto Lifting Inmediato:</strong> Desde el momento en que el Dr. Rincón coloca los hilos espiculados (con pequeñas anclas), estos se fijan en el tejido subcutáneo para tensar y reposicionar la piel al instante. Verás un levantamiento visible en zonas como las mejillas, la línea mandibular o las cejas desde el primer día.
+                      <strong className="text-primary font-bold">
+                        Efecto Lifting Inmediato:
+                      </strong>{' '}
+                      Desde el momento en que el Dr. Rincón coloca los hilos
+                      espiculados (con pequeñas anclas), estos se fijan en el
+                      tejido subcutáneo para tensar y reposicionar la piel al
+                      instante. Verás un levantamiento visible en zonas como las
+                      mejillas, la línea mandibular o las cejas desde el primer
+                      día.
                     </li>
                     <li>
-                      <strong className="text-primary font-bold">Bioestimulación Regenerativa a Largo Plazo:</strong> ¡Aquí ocurre la verdadera magia! La presencia de los hilos activa los fibroblastos, las células "fábrica" de tu piel, para que produzcan colágeno y elastina nuevos y de alta calidad. Este nuevo colágeno crea una red de soporte interna que mantiene tu piel firme, densa y elástica, incluso meses después de que los hilos se hayan reabsorbido por completo. El resultado es una mejora progresiva y duradera en la calidad de tu piel.
+                      <strong className="text-primary font-bold">
+                        Bioestimulación Regenerativa a Largo Plazo:
+                      </strong>{' '}
+                      ¡Aquí ocurre la verdadera magia! La presencia de los hilos
+                      activa los fibroblastos, las células "fábrica" de tu piel,
+                      para que produzcan colágeno y elastina nuevos y de alta
+                      calidad. Este nuevo colágeno crea una red de soporte
+                      interna que mantiene tu piel firme, densa y elástica,
+                      incluso meses después de que los hilos se hayan
+                      reabsorbido por completo. El resultado es una mejora
+                      progresiva y duradera en la calidad de tu piel.
                     </li>
                   </ol>
                 </div>
@@ -266,8 +303,8 @@ export default function HilosTensoresPage() {
             devolverle la juventud a tu rostro y cuerpo.
           </p>
           <div className="mt-12">
-             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.slice(0, 6).map((benefit, index) => (
                 <div
                   key={index}
                   className={cn('flip-card h-48', {
@@ -307,11 +344,13 @@ export default function HilosTensoresPage() {
           <div className="text-center">
             <Badge variant="secondary">Herramientas de Precisión</Badge>
             <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-              Tipos de Hilos Tensores y su Propósito
+              Cada Hilo tiene su Propósito
             </h2>
             <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Utilizo diferentes tipos de hilos (lisos, espiculados) para personalizar tu tratamiento de lifting facial
-              y lograr los mejores resultados según tus necesidades de tracción o redensificación en Medellín.
+              Utilizo diferentes tipos de hilos (lisos, espiculados) para
+              personalizar tu tratamiento de lifting facial y lograr los mejores
+              resultados según tus necesidades de tracción o redensificación en
+              Medellín.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -340,11 +379,12 @@ export default function HilosTensoresPage() {
             Resultados que Inspiran Confianza: Antes y Después
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Imágenes reales de pacientes de Medellín que han transformado su apariencia
-            gracias a la maestría del Dr. Rincón con los hilos tensores.
+            Imágenes reales de pacientes de Medellín que han transformado su
+            apariencia gracias a la maestría del Dr. Rincón con los hilos
+            tensores.
           </p>
           <Carousel
-            className="w-full max-w-4xl mx-auto mt-12"
+            className="w-full max-w-5xl mx-auto mt-12"
             opts={{
               loop: true,
             }}
@@ -352,24 +392,72 @@ export default function HilosTensoresPage() {
             <CarouselContent>
               {beforeAfterImages.map((image, index) => (
                 <CarouselItem key={index}>
-                  <Card className="overflow-hidden">
-                    <CardContent className="p-0">
-                      <Image
-                        src={image.imageUrl}
-                        alt={`${image.description} - Caso ${index + 1}`}
-                        width={1200}
-                        height={800}
-                        className="w-full h-auto aspect-[3/2] object-cover"
-                        data-ai-hint={image.imageHint}
-                      />
+                  <Card className="shadow-xl overflow-hidden">
+                    <CardContent className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6">
+                      {/* Before */}
+                      <div className="space-y-2">
+                        <h3 className="font-semibold text-center md:text-left">
+                          Antes
+                        </h3>
+                        <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                           <Image
+                              src={image.imageUrl}
+                              alt={`Antes - ${image.description}`}
+                              fill
+                              className="object-cover"
+                              data-ai-hint={image.imageHint}
+                            />
+                        </div>
+                      </div>
+
+                      {/* Details */}
+                      <div className="text-center order-first md:order-none">
+                        <h4 className="text-xl font-headline font-bold">
+                          {image.description}
+                        </h4>
+                        <p className="text-muted-foreground text-sm mt-1">
+                          Caso de éxito con Hilos Tensores
+                        </p>
+                        <Badge
+                          variant="secondary"
+                          className="mt-3 font-normal"
+                        >
+                          1 Sesión
+                        </Badge>
+                      </div>
+
+                      {/* After */}
+                      <div className="space-y-2">
+                        <h3 className="font-semibold text-center md:text-left">
+                          Después
+                        </h3>
+                        <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+                           <Image
+                              src={image.imageUrl}
+                              alt={`Después - ${image.description}`}
+                              fill
+                              className="object-cover"
+                              data-ai-hint={image.imageHint}
+                            />
+                          <Badge className="absolute top-2 right-2 bg-green-500 text-white">
+                            Resultado
+                          </Badge>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-4 md:-left-12" />
-            <CarouselNext className="-right-4 md:-right-12" />
+            <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 md:-left-10" />
+            <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 md:-right-10" />
           </Carousel>
+           <div className="text-center mt-8">
+              <p className="text-xs text-muted-foreground">
+                *Los resultados pueden variar según cada paciente. Consulta
+                personalizada requerida.
+              </p>
+            </div>
         </section>
 
         {/* Advanced Applications Section */}
@@ -433,7 +521,8 @@ export default function HilosTensoresPage() {
               <p className="mt-4 text-lg text-muted-foreground">
                 ¿Sientes que los hilos tensores son para ti? El Dr. Rincón
                 evaluará tu caso de forma personalizada para diseñar un
-                tratamiento a tu medida que cumpla tus expectativas de rejuvenecimiento.
+                tratamiento a tu medida que cumpla tus expectativas de
+                rejuvenecimiento.
               </p>
               <Button
                 asChild
