@@ -164,7 +164,7 @@ export default function Home() {
               </p>
 
               <div className="mt-10 bg-muted/50 rounded-lg p-6">
-                <h3 className="font-headline text-xl font-semibold mb-4 text-center">
+                <h3 className="font-headline text-xl font-semibold mb-4 text-left">
                   Especializaciones
                 </h3>
                 <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
@@ -193,7 +193,7 @@ export default function Home() {
                   })}
                 </ul>
               </div>
-              <Button asChild size="lg" className="mt-8">
+              <Button asChild size="lg" className="mt-8 w-full">
                 <Link href="/hilos-tensores">
                   Conocer Más <ArrowRight className="ml-2" />
                 </Link>
