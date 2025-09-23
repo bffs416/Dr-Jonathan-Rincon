@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[80vh] w-full">
+      <section className="relative h-[70vh] md:h-[90vh] w-full">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
@@ -47,20 +47,22 @@ export default function Home() {
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        <div className="absolute inset-0 flex items-center justify-center text-center">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 flex items-end justify-start pb-16 md:pb-24">
           <div className="container mx-auto px-4 text-white">
-            <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg">
-              Redefine tu Belleza Natural
-            </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
-              Descubre tratamientos de medicina estética de vanguardia con el Dr. Jhonathan Rincón, tu experto en hilos tensores en Medellín.
-            </p>
-            <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
-              <Link href="#citas">
-                Agenda tu Cita <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
+             <div className="max-w-2xl text-left">
+              <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg">
+                Redefine tu Belleza Natural
+              </h1>
+              <p className="mt-4 text-lg md:text-xl text-slate-100 drop-shadow-md">
+                Descubre tratamientos de medicina estética de vanguardia con el Dr. Jhonathan Rincón, tu experto en hilos tensores en Medellín.
+              </p>
+              <Button asChild size="lg" className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
+                <Link href="#citas">
+                  Agenda tu Cita <ArrowRight className="ml-2" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
