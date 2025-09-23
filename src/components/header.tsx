@@ -42,12 +42,12 @@ export default function Header() {
 
         <div className="flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white')}>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-foreground')}>
               <Instagram className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white')}>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-foreground')}>
               <Facebook className="h-5 w-5" />
             </a>
           </Button>
@@ -60,7 +60,7 @@ export default function Header() {
 
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white')}>
+            <Button variant="ghost" size="icon" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-foreground')}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Abrir menú</span>
             </Button>

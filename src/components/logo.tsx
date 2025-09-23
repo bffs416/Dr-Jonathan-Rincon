@@ -29,8 +29,7 @@ export function Logo() {
       />
       <span
         className={cn(
-          'font-headline text-xl font-bold transition-colors',
-          isScrolled || pathname.startsWith('/hilos-tensores') ? 'text-foreground' : 'text-white'
+          'font-headline text-xl font-bold transition-colors text-foreground'
         )}
       >
         Dr. Jhonathan Rincón
