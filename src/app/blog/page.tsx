@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -73,6 +77,17 @@ const blogPosts = [
 ];
 
 export default function BlogPage() {
+  const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const term = event.target.value;
+    setSearchTerm(term);
+    if (term.toLowerCase() === 'nyvara') {
+      router.push('/blog-topic-generator');
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-16 sm:py-24">
       <div className="text-center max-w-3xl mx-auto">
@@ -93,6 +108,8 @@ export default function BlogPage() {
               <Input
                 placeholder="Buscar artículos..."
                 className="pl-10 w-full"
+                value={searchTerm}
+                onChange={handleSearchChange}
               />
             </div>
             <div className="flex items-center gap-2 w-full md:w-auto">
