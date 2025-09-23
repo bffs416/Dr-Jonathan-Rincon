@@ -83,7 +83,7 @@ export default function HilosTensoresPage() {
           <div className="container mx-auto px-4 text-white">
             <Badge>La especialidad de la casa</Badge>
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-2">
-              Hilos Tensores
+              Rejuvenecimiento Facial y Corporal con Hilos Tensores
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
               Rejuvenecimiento facial sin cirugía para un lifting natural y
