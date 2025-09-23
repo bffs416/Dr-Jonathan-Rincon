@@ -16,12 +16,12 @@ export default function Footer() {
             </p>
             <div className="flex space-x-2 mt-4">
                <Button variant="ghost" size="icon" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <Facebook className="h-5 w-5" />
                 </a>
               </Button>
@@ -31,6 +31,7 @@ export default function Footer() {
             <h3 className="font-headline font-semibold">Navegación</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/hilos-tensores" className="text-muted-foreground hover:text-primary">Hilos Tensores</Link></li>
+              <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog Médico</Link></li>
               <li><Link href="/blog-topic-generator" className="text-muted-foreground hover:text-primary">Generador de Temas</Link></li>
             </ul>
           </div>

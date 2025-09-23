@@ -10,6 +10,31 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './logo';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { ChevronDown } from 'lucide-react';
+
+const navLinks = [
+    { name: 'Inicio', href: '/' },
+    { name: 'Hilos Tensores', href: '/hilos-tensores' },
+    { 
+        name: 'Tratamientos', 
+        dropdown: [
+            { name: 'Bioestimuladores', href: '/bioestimuladores' },
+            { name: 'Botox Terapéutico', href: '/botox-terapeutico' },
+            { name: 'Rejuvenecimiento Facial', href: '/rejuvenecimiento-facial' },
+            { name: 'Contorno Corporal', href: '/contorno-corporal' },
+            { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
+        ]
+    },
+    { name: 'Blog Médico', href: '/blog' },
+    { name: 'Sobre el Doctor', href: '/#sobre-el-doctor' },
+];
+
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,12 +46,43 @@ export default function Header() {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial state
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
+  
+  const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+    const isActive = pathname === href;
+    return (
+      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-primary" : "text-foreground")}>
+        {children}
+      </Link>
+    );
+  };
+  
+  const NavDropdown = ({ name, items }: { name: string; items: { name: string; href: string }[] }) => {
+     const isActive = items.some(item => pathname.startsWith(item.href));
+    return (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className={cn("text-sm font-medium hover:text-primary px-3", isActive ? "text-primary" : "text-foreground")}>
+            {name} <ChevronDown className="ml-1 h-4 w-4" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="start">
+          {items.map(item => (
+            <DropdownMenuItem key={item.href} asChild>
+              <Link href={item.href}>{item.name}</Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    );
+  };
+
 
   return (
     <header
@@ -37,17 +93,24 @@ export default function Header() {
           : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto flex h-24 items-center justify-between px-4">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Logo />
 
-        <div className="hidden md:flex items-center space-x-2">
+        <nav className="hidden lg:flex items-center space-x-6">
+            {navLinks.map(link => link.dropdown 
+                ? <NavDropdown key={link.name} name={link.name} items={link.dropdown} />
+                : <NavLink key={link.href} href={link.href}>{link.name}</NavLink>
+            )}
+        </nav>
+
+        <div className="hidden lg:flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", 'text-foreground')}>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", 'text-foreground')}>
               <Instagram className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", 'text-foreground')}>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", 'text-foreground')}>
               <Facebook className="h-5 w-5" />
             </a>
           </Button>
@@ -59,41 +122,63 @@ export default function Header() {
         </div>
 
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-          <SheetTrigger asChild className="md:hidden">
+          <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="icon" className={cn("hover:text-primary", 'text-foreground')}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Abrir menú</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background p-0">
-            <div className="flex flex-col h-full">
+          <SheetContent side="right" className="w-full max-w-sm bg-background p-0 flex flex-col">
               <div className="flex justify-between items-center p-4 border-b">
                  <Logo />
                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                     <X className="h-6 w-6" />
+                    <span className="sr-only">Cerrar menú</span>
                  </Button>
               </div>
 
-              <div className="p-4 border-t mt-auto">
-                 <Button asChild className="w-full bg-accent hover:bg-accent/90 text-lg py-6">
+            <nav className="flex-1 p-6">
+              <ul className="space-y-4">
+                {navLinks.map(link => (
+                  <li key={link.name}>
+                    {link.dropdown ? (
+                       <div>
+                        <h3 className="text-muted-foreground font-semibold mb-2">{link.name}</h3>
+                        <ul className="pl-4 space-y-3 border-l">
+                          {link.dropdown.map(item => (
+                            <li key={item.href}>
+                              <Link href={item.href} className="hover:text-primary transition-colors block">{item.name}</Link>
+                            </li>
+                          ))}
+                        </ul>
+                       </div>
+                    ) : (
+                      <Link href={link.href} className="text-lg hover:text-primary transition-colors block">{link.name}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+              <div className="p-6 border-t mt-auto">
+                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-lg py-6">
                     <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                         <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
                     </a>
                 </Button>
                 <div className="flex justify-center items-center space-x-4 mt-4">
                   <Button variant="ghost" size="icon" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                       <Instagram className="h-6 w-6" />
                     </a>
                   </Button>
                   <Button variant="ghost" size="icon" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                       <Facebook className="h-6 w-6" />
                     </a>
                   </Button>
                 </div>
               </div>
-            </div>
           </SheetContent>
         </Sheet>
       </div>
