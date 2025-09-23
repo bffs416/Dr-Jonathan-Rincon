@@ -151,9 +151,10 @@ export default function Home() {
               </h1>
               <p className="mt-6 text-lg text-muted-foreground">
                 Especialista en medicina estética con más de 5 años de
-                experiencia. Reconocido como el #1 en hilos tensores en
-                Medellín, combinando técnicas avanzadas con un enfoque
-                personalizado para cada paciente.
+                experiencia. Reconocido como el{' '}
+                <strong className="text-primary font-bold">#1 en hilos tensores en Medellín</strong>,
+                combinando técnicas avanzadas con un enfoque personalizado para
+                cada paciente.
               </p>
               <p className="mt-4 text-lg text-muted-foreground">
                 Mi pasión es ayudar a las personas a sentirse seguras y
