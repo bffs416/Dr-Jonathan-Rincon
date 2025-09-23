@@ -17,13 +17,6 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
@@ -168,7 +161,7 @@ export default function HilosTensoresPage() {
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
-            alt="Hilos tensores en Medellín para rejuvenecimiento facial en clínica estética"
+            alt={heroImage.description}
             fill
             className="object-cover opacity-30"
             data-ai-hint={heroImage.imageHint}
@@ -282,7 +275,7 @@ export default function HilosTensoresPage() {
             {whatAreTheyImage && (
               <Image
                 src={whatAreTheyImage.imageUrl}
-                alt="Doctor aplicando tratamiento de hilos tensores a una paciente en Medellín"
+                alt={whatAreTheyImage.description}
                 width={600}
                 height={600}
                 className="rounded-xl shadow-2xl w-full aspect-square object-cover"
@@ -373,93 +366,6 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
-        {/* Before and After Section */}
-        <section id="resultados" className="scroll-mt-20 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Resultados que Inspiran Confianza: Antes y Después
-          </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Imágenes reales de pacientes de Medellín que han transformado su
-            apariencia gracias a la maestría del Dr. Rincón con los hilos
-            tensores.
-          </p>
-          <Carousel
-            className="w-full max-w-5xl mx-auto mt-12"
-            opts={{
-              loop: true,
-            }}
-          >
-            <CarouselContent>
-              {beforeAfterImages.map((image, index) => (
-                <CarouselItem key={index}>
-                  <Card className="shadow-xl overflow-hidden">
-                    <CardContent className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6">
-                      {/* Before */}
-                      <div className="space-y-2">
-                        <h3 className="font-semibold text-center md:text-left">
-                          Antes
-                        </h3>
-                        <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                           <Image
-                              src={image.imageUrl}
-                              alt={`Antes - ${image.description}`}
-                              fill
-                              className="object-cover"
-                              data-ai-hint={image.imageHint}
-                            />
-                        </div>
-                      </div>
-
-                      {/* Details */}
-                      <div className="text-center order-first md:order-none">
-                        <h4 className="text-xl font-headline font-bold">
-                          {image.description}
-                        </h4>
-                        <p className="text-muted-foreground text-sm mt-1">
-                          Caso de éxito con Hilos Tensores
-                        </p>
-                        <Badge
-                          variant="secondary"
-                          className="mt-3 font-normal"
-                        >
-                          1 Sesión
-                        </Badge>
-                      </div>
-
-                      {/* After */}
-                      <div className="space-y-2">
-                        <h3 className="font-semibold text-center md:text-left">
-                          Después
-                        </h3>
-                        <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                           <Image
-                              src={image.imageUrl}
-                              alt={`Después - ${image.description}`}
-                              fill
-                              className="object-cover"
-                              data-ai-hint={image.imageHint}
-                            />
-                          <Badge className="absolute top-2 right-2 bg-green-500 text-white">
-                            Resultado
-                          </Badge>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 md:-left-10" />
-            <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 md:-right-10" />
-          </Carousel>
-           <div className="text-center mt-8">
-              <p className="text-xs text-muted-foreground">
-                *Los resultados pueden variar según cada paciente. Consulta
-                personalizada requerida.
-              </p>
-            </div>
-        </section>
-
         {/* Advanced Applications Section */}
         <section id="aplicaciones" className="scroll-mt-20 text-center">
           <Badge variant="secondary">Más Allá del Rostro</Badge>
@@ -542,7 +448,7 @@ export default function HilosTensoresPage() {
               {ctaImage && (
                 <Image
                   src={ctaImage.imageUrl}
-                  alt="Doctor Jhonathan Rincón realizando consulta de hilos tensores en Medellín"
+                  alt={ctaImage.description}
                   fill
                   className="object-cover"
                   data-ai-hint={ctaImage.imageHint}
