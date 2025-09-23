@@ -31,7 +31,7 @@ export function Logo() {
         <span
           className={cn(
             'font-headline font-bold text-xl leading-tight',
-            isScrolled || pathname !== '/' ? 'text-foreground' : 'text-foreground'
+            'text-foreground'
           )}
         >
           Dr. Jhonathan Rincón
@@ -39,9 +39,7 @@ export function Logo() {
         <span
           className={cn(
             'text-sm leading-tight',
-            isScrolled || pathname !== '/'
-              ? 'text-muted-foreground'
-              : 'text-slate-300'
+            'text-muted-foreground'
           )}
         >
           Medicina Estética
