@@ -47,19 +47,9 @@ export default function HilosTensoresPage() {
         'Reposiciona y eleva tus facciones al instante, logrando un rejuvenecimiento visible desde el primer día.',
     },
     {
-      title: 'Bioestimulación Natural de Colágeno',
-      description:
-        'Tu propia piel genera colágeno nuevo alrededor de los hilos, mejorando la firmeza y calidad de la piel de forma progresiva y duradera.',
-    },
-    {
       title: 'Resultados Naturales y Armoniosos',
       description:
         'Realza tu belleza original y rejuvenece tu apariencia de manera sutil, sin alterar tu expresión ni lucir artificial.',
-    },
-    {
-      title: 'Lifting de mejillas y pómulos',
-      description:
-        'Levanta los tejidos caídos para devolver el volumen y la definición juvenil al centro de tu rostro.',
     },
     {
       title: 'Definición del contorno mandibular (adiós al "jowl")',
@@ -323,7 +313,7 @@ export default function HilosTensoresPage() {
           </p>
           <div className="mt-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.slice(0, 6).map((benefit, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className={cn('flip-card h-48', {
@@ -354,44 +344,6 @@ export default function HilosTensoresPage() {
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="mt-8 flex justify-center lg:gap-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:w-2/3 lg:grid-cols-2">
-                 {benefits.slice(6).map((benefit, index) => {
-                    const originalIndex = index + 6;
-                    return (
-                        <div
-                        key={originalIndex}
-                        className={cn('flip-card h-48', {
-                            flipped: flippedCard === originalIndex,
-                        })}
-                        onClick={() => handleCardFlip(originalIndex)}
-                        >
-                        <div className="flip-card-inner">
-                            <div className="flip-card-front">
-                            <Card className="w-full h-full p-6 flex flex-col items-center justify-center gap-4 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
-                                <p className="font-semibold text-lg">{benefit.title}</p>
-                                <div className="bg-primary/10 text-primary p-2 rounded-full">
-                                <CheckCircle className="w-6 h-6" />
-                                </div>
-                                <span className="text-xs text-muted-foreground absolute bottom-3 right-4 flex items-center gap-1">
-                                Ver más <RefreshCw className="w-3 h-3" />
-                                </span>
-                            </Card>
-                            </div>
-                            <div className="flip-card-back">
-                            <Card className="w-full h-full p-6 flex flex-col items-start justify-center text-left bg-primary text-primary-foreground shadow-xl cursor-pointer">
-                                <p className="text-sm">{benefit.description}</p>
-                                <span className="text-xs text-primary-foreground/70 absolute bottom-3 right-4 flex items-center gap-1">
-                                Volver <RefreshCw className="w-3 h-3" />
-                                </span>
-                            </Card>
-                            </div>
-                        </div>
-                        </div>
-                    )
-                })}
-              </div>
             </div>
           </div>
         </section>
