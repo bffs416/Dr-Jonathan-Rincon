@@ -1,3 +1,6 @@
+
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle, PlusCircle } from 'lucide-react';
@@ -19,6 +22,14 @@ import {
 } from '@/components/ui/carousel';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogDescription,
+} from '@/components/ui/dialog';
 
 export default function HilosTensoresPage() {
   const benefits = [
@@ -139,11 +150,26 @@ export default function HilosTensoresPage() {
             <p className="mt-4 text-lg text-muted-foreground">
              <strong className="text-primary font-bold">El Dr. Jhonathan Rincón, reconocido como el experto #1 en hilos tensores de Medellín</strong>, te ofrece una solución innovadora y mínimamente invasiva para revitalizar tu apariencia facial y corporal, con resultados que te encantarán.
             </p>
-             <Button asChild size="lg" className="mt-8">
-                <Link href="#citas">
-                  Agenda tu Valoración <ArrowRight className="ml-2" />
-                </Link>
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="lg" className="mt-8">
+                  ¿Cómo funcionan los Hilos Tensores? <ArrowRight className="ml-2" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[600px]">
+                <DialogHeader>
+                  <DialogTitle className='font-headline text-2xl text-primary'>¿Qué Son Exactamente los Hilos Tensores y Cómo Funcionan?</DialogTitle>
+                </DialogHeader>
+                <div className="prose prose-lg dark:prose-invert mx-auto text-muted-foreground">
+                    <p>Piensa en los hilos tensores como un "andamio" inteligente y reabsorbible para tu piel. Son suturas finísimas hechas de Polidioxanona (PDO), un material 100% biocompatible y seguro que se ha utilizado por décadas en cirugías complejas, incluso en el corazón. Esto garantiza que tu cuerpo los aceptará sin problemas y los reabsorberá de forma natural con el tiempo.</p>
+                    <p>El tratamiento tiene una doble acción revolucionaria:</p>
+                    <ol>
+                      <li><strong className="text-primary">Efecto Lifting Inmediato:</strong> Desde el momento en que el Dr. Rincón coloca los hilos espiculados (con pequeñas anclas microscópicas), estos se fijan en el tejido subcutáneo para tensar y reposicionar la piel al instante. Verás un levantamiento visible en zonas como las mejillas, la línea mandibular o las cejas desde el primer día.</li>
+                      <li><strong className="text-primary">Bioestimulación Regenerativa a Largo Plazo:</strong> ¡Aquí ocurre la verdadera magia! La presencia de los hilos activa los fibroblastos, las células "fábrica" de tu piel, para que produzcan colágeno y elastina nuevos y de alta calidad. Este nuevo colágeno crea una red de soporte interna que mantiene tu piel firme, densa y elástica, incluso meses después de que los hilos se hayan reabsorbido por completo. El resultado es una mejora progresiva y duradera en la calidad de tu piel.</li>
+                    </ol>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
           <div>
             {whatAreTheyImage && (
@@ -159,22 +185,8 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
-        {/* What are they Section */}
-        <section id="que-son" className="scroll-mt-20">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">
-              ¿Qué Son Exactamente los Hilos Tensores y Cómo Funcionan?
-            </h2>
-            <div className="prose prose-lg lg:prose-xl dark:prose-invert mx-auto mt-6 text-muted-foreground">
-              <p>Piensa en los hilos tensores como un "andamio" inteligente y reabsorbible para tu piel. Son suturas finísimas hechas de Polidioxanona (PDO), un material 100% biocompatible y seguro que se ha utilizado por décadas en cirugías complejas, incluso en el corazón. Esto garantiza que tu cuerpo los aceptará sin problemas y los reabsorberá de forma natural con el tiempo.</p>
-              <p>El tratamiento tiene una doble acción revolucionaria:</p>
-              <ol>
-                <li><strong className="text-primary">Efecto Lifting Inmediato:</strong> Desde el momento en que el Dr. Rincón coloca los hilos espiculados (con pequeñas anclas microscópicas), estos se fijan en el tejido subcutáneo para tensar y reposicionar la piel al instante. Verás un levantamiento visible en zonas como las mejillas, la línea mandibular o las cejas desde el primer día.</li>
-                <li><strong className="text-primary">Bioestimulación Regenerativa a Largo Plazo:</strong> ¡Aquí ocurre la verdadera magia! La presencia de los hilos activa los fibroblastos, las células "fábrica" de tu piel, para que produzcan colágeno y elastina nuevos y de alta calidad. Este nuevo colágeno crea una red de soporte interna que mantiene tu piel firme, densa y elástica, incluso meses después de que los hilos se hayan reabsorbido por completo. El resultado es una mejora progresiva y duradera en la calidad de tu piel.</li>
-              </ol>
-            </div>
-          </div>
-        </section>
+        {/* What are they Section - This content is now in the dialog */}
+        
 
         {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
@@ -351,3 +363,5 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
+
+    
