@@ -7,17 +7,24 @@ import {
   Star,
   Clock,
   Briefcase,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import { Badge } from '@/components/ui/badge';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 const Placeholder = ({
   className,
@@ -26,13 +33,13 @@ const Placeholder = ({
   text = 'Pon tu imagen aquí',
 }: {
   className?: string;
-  width?: number | string;
-  height?: number | string;
+  width?: number;
+  height?: number;
   text?: string;
 }) => (
   <div
     className={cn(
-      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm',
+      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm relative',
       className
     )}
     style={{
@@ -40,7 +47,14 @@ const Placeholder = ({
       height: height ? `${height}px` : '100%',
     }}
   >
-    {text}
+    <Image
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3C/svg%3E"
+      layout="fill"
+      objectFit="cover"
+      alt={text}
+      className="opacity-0"
+    />
+    <span className="absolute">{text}</span>
   </div>
 );
 
@@ -51,28 +65,28 @@ export default function Home() {
       age: 35,
       treatment: 'Hilos Tensores Faciales',
       text: '¡Increíble resultado con los hilos tensores! El Dr. Rincón es muy profesional y los resultados fueron inmediatos. Me siento 10 años más joven.',
-      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
+      avatar: '/images/placeholder-woman-1.jpg',
     },
     {
       name: 'Ana Rodríguez',
       age: 42,
       treatment: 'Bioestimuladores + Botox',
       text: 'Excelente atención y resultados naturales. El tratamiento con Sculptra me devolvió la firmeza que había perdido. Totalmente recomendado.',
-      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026703d',
+      avatar: '/images/placeholder-woman-2.jpg',
     },
     {
       name: 'Carmen López',
       age: 38,
       treatment: 'Contorno Corporal',
       text: 'El Dr. Rincón transformó mi figura con hidrolipoclasia. Proceso cómodo, resultados espectaculares. El mejor especialista de Medellín.',
-      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026705d',
+      avatar: '/images/placeholder-woman-3.jpg',
     },
     {
       name: 'Sofía Martínez',
       age: 29,
       treatment: 'NCTF + Esperma de Salmón',
       text: 'Mi piel nunca había lucido tan radiante. El tratamiento facial me dio una luminosidad increíble. Definitivamente volveré.',
-      avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026706d',
+      avatar: '/images/placeholder-woman-4.jpg',
     },
   ];
 
@@ -89,6 +103,23 @@ export default function Home() {
     { name: 'Bioestimuladores', href: '/bioestimuladores' },
     { name: 'Contorno Corporal', href: '/contorno-corporal' },
     { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
+  ];
+  const beforeAfterCases = [
+    {
+      title: 'Levantamiento de Glúteos',
+      description: 'Tensamax para glúteos firmes y levantados',
+      sessions: '2 sesiones',
+    },
+    {
+      title: 'Rejuvenecimiento Facial',
+      description: 'Combinación de hilos y bioestimuladores',
+      sessions: '1 sesión',
+    },
+    {
+      title: 'Marcación Abdominal',
+      description: 'Técnica avanzada para definición muscular',
+      sessions: '3 sesiones',
+    },
   ];
 
   return (
@@ -137,7 +168,12 @@ export default function Home() {
                   {specializations.map((spec) => (
                     <li key={spec.name} className="flex items-center">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                      <Link href={spec.href} className="text-muted-foreground hover:text-primary transition-colors">{spec.name}</Link>
+                      <Link
+                        href={spec.href}
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {spec.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -146,6 +182,88 @@ export default function Home() {
                 <Link href="/hilos-tensores">
                   Conocer Más <ArrowRight className="ml-2" />
                 </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Before and After Section */}
+        <section
+          id="antes-y-despues"
+          className="scroll-mt-20 py-16 sm:py-24"
+        >
+          <div className="container mx-auto px-4">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                Antes y <span className="text-primary">Después</span>
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Resultados reales de nuestros tratamientos. Transformaciones que
+                hablan por sí solas.
+              </p>
+            </div>
+            <Carousel
+              className="w-full max-w-5xl mx-auto mt-12"
+              opts={{
+                loop: true,
+              }}
+            >
+              <CarouselContent>
+                {beforeAfterCases.map((caseItem, index) => (
+                  <CarouselItem key={index}>
+                    <Card className="shadow-xl overflow-hidden">
+                      <CardContent className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6">
+                        {/* Before */}
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-center md:text-left">
+                            Antes
+                          </h3>
+                          <Placeholder className="rounded-lg aspect-[4/3]" />
+                        </div>
+
+                        {/* Details */}
+                        <div className="text-center order-first md:order-none">
+                          <h4 className="text-xl font-headline font-bold">
+                            {caseItem.title}
+                          </h4>
+                          <p className="text-muted-foreground text-sm mt-1">
+                            {caseItem.description}
+                          </p>
+                          <Badge
+                            variant="secondary"
+                            className="mt-3 font-normal"
+                          >
+                            {caseItem.sessions}
+                          </Badge>
+                        </div>
+
+                        {/* After */}
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-center md:text-left">
+                            Después
+                          </h3>
+                          <div className="relative">
+                            <Placeholder className="rounded-lg aspect-[4/3]" />
+                            <Badge className="absolute top-2 right-2 bg-green-500 text-white">
+                              Resultado
+                            </Badge>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 md:-left-10" />
+              <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 md:-right-10" />
+            </Carousel>
+            <div className="text-center mt-8">
+              <p className="text-xs text-muted-foreground">
+                *Los resultados pueden variar según cada paciente. Consulta
+                personalizada requerida.
+              </p>
+              <Button asChild size="lg" className="mt-4">
+                <Link href="#">Ver Más Casos de Éxito</Link>
               </Button>
             </div>
           </div>
@@ -168,17 +286,30 @@ export default function Home() {
                 recompensa.
               </p>
             </div>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {testimonials.map((testimonial) => (
                 <Card
                   key={testimonial.name}
                   className="flex flex-col text-left shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
                 >
                   <CardContent className="p-6 flex-1 flex flex-col">
-                    <Quote
-                      className="w-8 h-8 text-primary/50 -ml-2 mb-4"
-                      fill="hsl(var(--primary) / 0.1)"
-                    />
+                    <div className="flex items-center mb-4">
+                      <Avatar className="h-16 w-16 border-2 border-primary">
+                        <AvatarImage
+                          src={testimonial.avatar}
+                          alt={testimonial.name}
+                        />
+                        <AvatarFallback>
+                          {testimonial.name.charAt(0)}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className="ml-4">
+                        <p className="font-bold text-lg">{testimonial.name}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {testimonial.age} años
+                        </p>
+                      </div>
+                    </div>
                     <div className="flex items-center mb-2">
                       {[...Array(5)].map((_, i) => (
                         <Star
@@ -187,28 +318,11 @@ export default function Home() {
                         />
                       ))}
                     </div>
-                    <p className="text-muted-foreground text-sm flex-1">
+                    <p className="text-muted-foreground text-base flex-1">
                       "{testimonial.text}"
                     </p>
                   </CardContent>
-                  <CardFooter className="flex flex-col items-start p-6 pt-4 bg-muted/50">
-                    <div className="flex items-center w-full">
-                      <Avatar className="h-12 w-12 border-2 border-primary">
-                        <Placeholder
-                          className="rounded-full w-full h-full"
-                          text=""
-                        />
-                      </Avatar>
-                      <div className="ml-4">
-                        <p className="font-bold text-base">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {testimonial.age} años
-                        </p>
-                      </div>
-                    </div>
-                    <Separator className="my-4" />
+                  <CardFooter className="p-4 bg-muted/50 border-t">
                     <p className="text-xs text-primary font-semibold uppercase tracking-wider">
                       {testimonial.treatment}
                     </p>
