@@ -27,13 +27,6 @@ export function Logo() {
         height={40}
         className="rounded-full"
       />
-      <span
-        className={cn(
-          'font-headline text-xl font-bold transition-colors text-foreground'
-        )}
-      >
-        Dr. Jhonathan Rincón
-      </span>
     </Link>
   );
 }
