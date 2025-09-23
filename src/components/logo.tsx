@@ -20,13 +20,16 @@ export function Logo() {
 
   return (
     <Link href="/" className="flex items-center space-x-3">
-      <Image
-        src="/images/Logo Dr Jhonathan.png"
-        alt="Logo Dr. Jhonathan Rincón"
-        width={50}
-        height={50}
-        className="rounded-full"
-      />
+      <div className="relative">
+        <Image
+          src="/images/Logo Dr Jhonathan.png"
+          alt="Logo Dr. Jhonathan Rincón"
+          width={50}
+          height={50}
+          className="rounded-full"
+        />
+        <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full" />
+      </div>
       <div className="flex flex-col">
         <span
           className={cn(
