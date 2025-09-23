@@ -2,7 +2,6 @@ import Link from 'next/link';
 import {
   ArrowRight,
   Award,
-  Calendar,
   HeartHandshake,
   Quote,
   Star,
@@ -13,13 +12,9 @@ import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
-  CardHeader,
-  CardTitle,
 } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
+import { Avatar } from '@/components/ui/avatar';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
@@ -88,12 +83,12 @@ export default function Home() {
   ];
 
   const specializations = [
-    'Hilos Tensores PDO',
-    'Botox Terapéutico',
-    'Rejuvenecimiento Facial',
-    'Bioestimuladores',
-    'Contorno Corporal',
-    'Medicina Preventiva',
+    { name: 'Hilos Tensores PDO', href: '/hilos-tensores' },
+    { name: 'Botox Terapéutico', href: '/botox-terapeutico' },
+    { name: 'Rejuvenecimiento Facial', href: '/rejuvenecimiento-facial' },
+    { name: 'Bioestimuladores', href: '/bioestimuladores' },
+    { name: 'Contorno Corporal', href: '/contorno-corporal' },
+    { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
   ];
 
   return (
@@ -139,10 +134,10 @@ export default function Home() {
                   Especializaciones
                 </h3>
                 <ul className="grid grid-cols-2 gap-x-8 gap-y-2">
-                  {specializations.map((spec, index) => (
-                    <li key={index} className="flex items-center">
+                  {specializations.map((spec) => (
+                    <li key={spec.name} className="flex items-center">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3" />
-                      <span className="text-muted-foreground">{spec}</span>
+                      <Link href={spec.href} className="text-muted-foreground hover:text-primary transition-colors">{spec.name}</Link>
                     </li>
                   ))}
                 </ul>

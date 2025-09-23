@@ -11,15 +11,6 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './logo';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
 
-const navLinks = [
-  { href: '/hilos-tensores', label: 'Hilos Tensores' },
-  { href: '/#procedimientos', label: 'Procedimientos' },
-  { href: '/#sobre-el-doctor', label: 'Sobre el Doctor' },
-  { href: '/#testimonios', label: 'Testimonios' },
-  { href: '/#blog', label: 'Blog' },
-  { href: '/#contacto', label: 'Contacto' },
-];
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,62 +28,26 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('/#')) {
-      if (pathname !== '/') {
-        // If we are not on the homepage, we can't do smooth scroll.
-        // Let's navigate to the homepage with the hash.
-        // The browser will handle scrolling to the element.
-        return;
-      }
-      e.preventDefault();
-      const targetId = href.substring(2);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-    setIsMobileMenuOpen(false);
-  };
-
-
   return (
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
         isScrolled
           ? 'bg-background/80 shadow-md backdrop-blur-lg'
-          : 'bg-transparent',
-        pathname === '/' && !isScrolled ? 'bg-transparent text-white' : ''
+          : 'bg-transparent'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Logo />
 
-        <nav className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={(e) => handleLinkClick(e, link.href)}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                 pathname === '/' && !isScrolled ? 'text-white/80 hover:text-white' : 'text-foreground/80 hover:text-foreground'
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden md:flex items-center space-x-2">
+        <div className="flex items-center space-x-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", pathname === '/' && !isScrolled ? 'text-white' : 'text-foreground')}>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white')}>
               <Instagram className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", pathname === '/' && !isScrolled ? 'text-white' : 'text-foreground')}>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white')}>
               <Facebook className="h-5 w-5" />
             </a>
           </Button>
@@ -105,7 +60,7 @@ export default function Header() {
 
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className={cn("hover:text-primary", pathname === '/' && !isScrolled ? 'text-white' : 'text-foreground')}>
+            <Button variant="ghost" size="icon" className={cn("hover:text-primary", isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white')}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Abrir menú</span>
             </Button>
@@ -119,20 +74,7 @@ export default function Header() {
                  </Button>
               </div>
 
-              <nav className="flex-1 flex flex-col items-start space-y-4 p-4 mt-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="text-lg font-medium text-foreground/80 transition-colors hover:text-primary"
-                    onClick={(e) => handleLinkClick(e, link.href)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-
-              <div className="p-4 border-t">
+              <div className="p-4 border-t mt-auto">
                  <Button asChild className="w-full bg-accent hover:bg-accent/90 text-lg py-6">
                     <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                         <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita

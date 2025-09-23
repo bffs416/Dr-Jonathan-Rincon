@@ -31,9 +31,6 @@ export default function Footer() {
             <h3 className="font-headline font-semibold">Navegación</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/hilos-tensores" className="text-muted-foreground hover:text-primary">Hilos Tensores</Link></li>
-              <li><Link href="/#procedimientos" className="text-muted-foreground hover:text-primary">Procedimientos</Link></li>
-              <li><Link href="/#sobre-el-doctor" className="text-muted-foreground hover:text-primary">Sobre el Doctor</Link></li>
-              <li><Link href="/#blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
               <li><Link href="/blog-topic-generator" className="text-muted-foreground hover:text-primary">Generador de Temas</Link></li>
             </ul>
           </div>
