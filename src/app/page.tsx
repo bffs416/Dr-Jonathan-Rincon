@@ -163,7 +163,7 @@ export default function Home() {
                 del mercado.
               </p>
 
-              <div className="mt-10 bg-muted/50 rounded-lg p-6">
+              <div className="mt-10">
                 <h3 className="font-headline text-xl font-semibold mb-4 text-left">
                   Especializaciones
                 </h3>

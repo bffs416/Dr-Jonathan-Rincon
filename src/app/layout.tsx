@@ -5,7 +5,6 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import './globals.css';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
-import { MessageCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Dr. Jhonathan Rincón',
@@ -49,7 +48,7 @@ export default function RootLayout({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Agendar por WhatsApp"
-          className="fixed bottom-6 right-6 bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-all duration-300 z-50 transform hover:scale-110"
+          className="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50 transform hover:scale-110"
         >
           <WhatsAppIcon className="w-8 h-8" />
         </a>
