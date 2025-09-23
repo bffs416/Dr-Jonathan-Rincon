@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, PlusCircle } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import {
@@ -22,12 +22,39 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HilosTensoresPage() {
   const benefits = [
-    'Efecto lifting inmediato y sin cirugía.',
-    'Estimula la producción natural de colágeno.',
-    'Redefine el óvalo facial y mejora la flacidez.',
-    'Resultados naturales y progresivos.',
-    'Procedimiento rápido y con mínima incapacidad.',
-    'Mejora la textura y calidad de la piel.',
+    'Lifting de mejillas y pómulos.',
+    'Definición del contorno mandibular (adiós al "jowl").',
+    'Atenuación de surcos nasogenianos.',
+    'Disminución de líneas de marioneta.',
+    'Mejora general de la firmeza y calidad de la piel.',
+    'Resultados naturales y progresivos sin cirugía.',
+  ];
+
+  const threadTypes = [
+    {
+      name: 'Hilos Lisos (Monofilamento)',
+      description: 'Ideales para crear una malla de soporte que redensifica la piel. Estimulan el colágeno para mejorar la textura y dar un aspecto más turgente.',
+      icon: '/icons/hilo-liso.svg', 
+    },
+    {
+      name: 'Hilos de Tornillo (Screw)',
+      description: 'Diseñados para aportar un ligero volumen y tratar arrugas más profundas. Su forma en espiral permite un mayor estímulo de colágeno en áreas localizadas.',
+       icon: '/icons/hilo-tornillo.svg',
+    },
+    {
+      name: 'Hilos Espiculados (COG)',
+      description: 'Son los protagonistas del efecto lifting. Cuentan con pequeñas espículas (dientes) que se anclan al tejido, permitiendo traccionar y reposicionar la piel de forma inmediata.',
+       icon: '/icons/hilo-espiculado.svg',
+    },
+  ];
+
+  const advancedApplications = [
+    { title: "Rinomodelación", description: "Alternativa no quirúrgica para elevar la punta y rectificar el dorso nasal." },
+    { title: "Lifting de Cejas (Fox Eyes)", description: "Eleva la cola de la ceja para una mirada más abierta y juvenil." },
+    { title: "Marcación Abdominal", description: "Define los rectos abdominales y combate la flacidez." },
+    { title: "Lifting de Brazos y Piernas", description: "Solución eficaz para la flacidez en cara interna de brazos y muslos." },
+    { title: "Levantamiento de Glúteos", description: "Mejora la ptosis leve a moderada y redefine el contorno." },
+    { title: "Tratamiento de Cicatrices", description: "Estimula colágeno para rellenar y mejorar la textura de cicatrices atróficas." },
   ];
 
   const faqs = [
@@ -104,18 +131,10 @@ export default function HilosTensoresPage() {
               El Secreto de una Piel Firme y Joven
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Los hilos tensores, también conocidos como hilos mágicos, son una
-              técnica revolucionaria en medicina estética. Consisten en la
-              inserción de finos hilos biocompatibles en el tejido subcutáneo
-              para reposicionar los tejidos y combatir la flacidez.
+              Los hilos tensores son suturas biocompatibles que, una vez insertadas bajo la piel, actúan en dos niveles: un <strong className='text-primary'>efecto lifting mecánico inmediato</strong> al reposicionar los tejidos, y un <strong className='text-primary'>efecto biológico a largo plazo</strong>.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Este tratamiento no solo proporciona un efecto lifting inmediato,
-              sino que también estimula al cuerpo a producir colágeno de forma
-              natural, mejorando la calidad y elasticidad de la piel a largo
-              plazo. Es la opción perfecta para quienes buscan resultados
-              visibles sin los riesgos y el tiempo de recuperación de una
-              cirugía.
+              Este segundo efecto es la verdadera magia: los hilos estimulan de forma natural a tus células para que produzcan nuevo colágeno y elastina. El resultado es una piel visiblemente más firme, elástica y rejuvenecida de adentro hacia afuera.
             </p>
              <Button asChild size="lg" className="mt-8">
                 <Link href="#citas">
@@ -139,17 +158,16 @@ export default function HilosTensoresPage() {
 
         {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
-          <Badge variant="secondary">Beneficios</Badge>
+          <Badge variant="secondary">Beneficios Clave</Badge>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-            ¿Por qué elegir Hilos Tensores?
+            Resultados que Transforman
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Descubre las múltiples ventajas de este tratamiento innovador para
-            devolverle la juventud a tu rostro.
+            Descubre los múltiples beneficios de este tratamiento innovador para devolverle la juventud a tu rostro y cuerpo.
           </p>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="p-6 flex items-start gap-4">
+              <Card key={index} className="p-6 flex items-start gap-4 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
                   <CheckCircle className="w-6 h-6" />
                 </div>
@@ -160,6 +178,36 @@ export default function HilosTensoresPage() {
             ))}
           </div>
         </section>
+
+        {/* Thread Types Section */}
+        <section id="tipos-hilos" className="scroll-mt-20">
+          <div className='text-center'>
+            <Badge variant="secondary">Herramientas de Precisión</Badge>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+              Cada Hilo tiene su Propósito
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+              Utilizo diferentes tipos de hilos para personalizar tu tratamiento y lograr los mejores resultados según tus necesidades.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {threadTypes.map((type) => (
+              <Card key={type.name} className="text-center p-8">
+                <CardHeader className="p-0 items-center">
+                   {/* Placeholder for actual icons */}
+                   <div className='w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4'>
+                    <span className='text-3xl text-primary'>✧</span>
+                   </div>
+                  <CardTitle className="font-headline text-xl">{type.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 mt-4">
+                  <p className="text-muted-foreground">{type.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
 
         {/* Before and After Section */}
         <section id="resultados" className="scroll-mt-20 text-center">
@@ -200,6 +248,30 @@ export default function HilosTensoresPage() {
             <CarouselPrevious className="-left-4 md:-left-12" />
             <CarouselNext className="-right-4 md:-right-12" />
           </Carousel>
+        </section>
+        
+        {/* Advanced Applications Section */}
+        <section id="aplicaciones" className="scroll-mt-20 text-center">
+          <Badge variant="secondary">Más Allá del Rostro</Badge>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+            Aplicaciones Corporales y Específicas
+          </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+            La versatilidad de los hilos tensores permite tratar diversas áreas del cuerpo con resultados espectaculares.
+          </p>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {advancedApplications.map((app, index) => (
+              <Card key={index} className="p-6 flex items-start gap-4">
+                <div className="text-primary mt-1">
+                  <PlusCircle className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="font-semibold text-lg">{app.title}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{app.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
         </section>
 
         {/* FAQ Section */}
