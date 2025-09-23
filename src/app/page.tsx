@@ -74,6 +74,12 @@ export default function Home() {
     },
   ];
 
+  const stats = [
+    { value: '4.9/5', label: 'Calificación Promedio' },
+    { value: '98%', label: 'Pacientes Satisfechos' },
+    { value: '500+', label: 'Testimonios Positivos' },
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -171,7 +177,7 @@ export default function Home() {
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Conoce las experiencias reales de nuestros pacientes y sus transformaciones
           </p>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((testimonial) => (
               <Card key={testimonial.name} className="flex flex-col text-left shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                 <CardContent className="p-6 flex-1 flex flex-col">
@@ -196,6 +202,24 @@ export default function Home() {
                 </CardFooter>
               </Card>
             ))}
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section>
+          <div className="max-w-4xl mx-auto">
+            <Card className="shadow-lg">
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                  {stats.map((stat, index) => (
+                    <div key={index}>
+                      <p className="text-4xl font-bold text-primary">{stat.value}</p>
+                      <p className="mt-2 text-muted-foreground">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
