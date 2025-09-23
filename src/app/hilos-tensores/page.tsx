@@ -257,20 +257,20 @@ export default function HilosTensoresPage() {
                         Efecto Lifting Inmediato:
                       </strong>{' '}
                       Desde el momento en que el Dr. Rincón coloca los hilos
-                      espiculados (con pequeñas anclas microscópicas), estos se
-                      fijan en el tejido subcutáneo para tensar y reposicionar
-                      la piel al instante. Verás un levantamiento visible en
-                      zonas como las mejillas, la línea mandibular o las cejas
-                      desde el primer día.
+                      espiculados (con pequeñas anclas), estos se fijan en el
+                      tejido subcutáneo para tensar y reposicionar la piel al
+                      instante. Verás un levantamiento visible en zonas como
+                      las mejillas, la línea mandibular o las cejas desde el
+                      primer día.
                     </li>
                     <li>
                       <strong className="text-primary font-bold">
                         Bioestimulación Regenerativa a Largo Plazo:
                       </strong>{' '}
                       ¡Aquí ocurre la verdadera magia! La presencia de los hilos
-                      activa los fibroblastos, las células "fábrica" de tu piel,
-                      para que produzcan colágeno y elastina nuevos y de alta
-                      calidad. Este nuevo colágeno crea una red de soporte
+                      activa los fibroblastos, las células "fábrica" de tu
+                      piel, para que produzcan colágeno y elastina nuevos y de
+                      alta calidad. Este nuevo colágeno crea una red de soporte
                       interna que mantiene tu piel firme, densa y elástica,
                       incluso meses después de que los hilos se hayan
                       reabsorbido por completo. El resultado es una mejora
