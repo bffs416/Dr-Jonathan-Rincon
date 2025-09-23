@@ -42,7 +42,7 @@ export function Logo() {
         <span
           className={cn(
             'text-sm leading-tight',
-            'text-muted-foreground'
+            'text-primary'
           )}
         >
           Medicina Estética
