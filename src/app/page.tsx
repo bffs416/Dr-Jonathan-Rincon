@@ -132,7 +132,13 @@ export default function Home() {
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <Placeholder className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover" />
+            <Image
+                src="/images/Experto-hilos-tensores-faciales.png"
+                alt="Dr. Jhonathan Rincón, experto en hilos tensores faciales"
+                width={500}
+                height={625}
+                className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover object-top"
+              />
               <div className="absolute bottom-4 right-4 bg-background/80 backdrop-blur-sm rounded-lg p-3 flex items-center gap-3 shadow-md">
                 <Award className="w-8 h-8 text-primary" />
                 <div>
