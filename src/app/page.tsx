@@ -164,25 +164,25 @@ export default function Home() {
               </p>
 
               <div className="mt-10 bg-muted/50 rounded-lg p-6">
-                <h3 className="font-headline text-xl font-semibold mb-4">
+                <h3 className="font-headline text-xl font-semibold mb-4 text-center">
                   Especializaciones
                 </h3>
-                <ul className="space-y-3">
+                <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
                   {specializations.map((spec, index) => {
                     const isFirst = index === 0;
                     return (
                       <li key={spec.name} className="flex items-center">
                         {isFirst ? (
-                          <Award className="w-6 h-6 mr-3 text-primary" />
+                          <Award className="w-5 h-5 mr-2 text-primary" />
                         ) : (
-                          <div className="w-2 h-2 bg-primary rounded-full mr-4 ml-2" />
+                          <div className="w-2 h-2 bg-primary rounded-full mr-3" />
                         )}
                         <Link
                           href={spec.href}
                           className={cn(
                             'transition-colors',
                             isFirst
-                              ? 'text-primary font-bold text-lg'
+                              ? 'text-primary font-bold'
                               : 'text-muted-foreground hover:text-primary'
                           )}
                         >
