@@ -43,34 +43,32 @@ export default function HilosTensoresPage() {
 
   const benefits = [
     {
-      title: 'Efecto Lifting Instantáneo',
+      title: 'Rinomodelación con Hilos',
       description:
-        'Reposiciona y eleva tus facciones al instante, logrando un rejuvenecimiento visible desde el primer día.',
+        'Alternativa no quirúrgica para elevar la punta y rectificar el dorso nasal.',
     },
     {
-      title: 'Resultados Naturales y Armoniosos',
+      title: 'Lifting de Cejas (Fox Eyes)',
       description:
-        'Realza tu belleza original y rejuvenece tu apariencia de manera sutil, sin alterar tu expresión ni lucir artificial.',
+        'Eleva la cola de la ceja para una mirada más abierta y juvenil.',
     },
     {
-      title: 'Definición del contorno mandibular (adiós al "jowl")',
-      description:
-        'Tensa la piel flácida de la mandíbula para redefinir el óvalo facial y lograr un contorno más firme y estilizado.',
+      title: 'Marcación Abdominal',
+      description: 'Define los rectos abdominales y combate la flacidez.',
     },
     {
-      title: 'Atenuación de surcos nasogenianos',
+      title: 'Lifting de Brazos y Piernas',
       description:
-        'Suaviza las líneas de la sonrisa al levantar las mejillas, tratando la causa de la flacidez de forma natural.',
+        'Solución eficaz para la flacidez en cara interna de brazos y muslos.',
     },
     {
-      title: 'Mejora general de la firmeza y calidad de la piel',
-      description:
-        'Más allá de levantar, el tratamiento regenera tu piel desde adentro, dejándola visiblemente más densa, elástica y luminosa.',
+      title: 'Levantamiento de Glúteos',
+      description: 'Mejora la ptosis leve a moderada y redefine el contorno.',
     },
     {
-      title: 'Resultados naturales y progresivos sin cirugía',
+      title: 'Tratamiento de Cicatrices Atróficas',
       description:
-        'Obtén un rejuvenecimiento notable con un procedimiento rápido, seguro y de mínima incapacidad, evitando el bisturí.',
+        'Estimula colágeno para rellenar y mejorar la textura de cicatrices.',
     },
   ];
 
