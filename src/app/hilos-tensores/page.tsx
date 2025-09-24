@@ -192,38 +192,77 @@ export default function HilosTensoresPage() {
     (img) => img.id === 'hilos-what-are'
   );
    const beforeAfterCases = [
+    // Faciales
     {
-      title: 'Lifting de Cuello',
-      description: 'Hilos espiculados para tensado de papada.',
+      title: 'Lifting de Cuello (Papada)',
+      description: 'Hilos espiculados para tensado submentoniano.',
       sessions: '1 sesión',
-      beforeImage: PlaceHolderImages.find(
-        (img) => img.id === 'hilos-results-1'
-      ),
-      afterImage: PlaceHolderImages.find(
-        (img) => img.id === 'hilos-results-2'
-      ),
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/cuello-antes/600/400', imageHint: 'neck lift before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/cuello-despues/600/400', imageHint: 'neck lift after' },
     },
     {
-      title: 'Rejuvenecimiento Facial',
-      description: 'Combinación de hilos lisos y espiculados.',
-      sessions: '1 sesión',
-      beforeImage: PlaceHolderImages.find(
-        (img) => img.id === 'hilos-results-2'
-      ),
-      afterImage: PlaceHolderImages.find(
-        (img) => img.id === 'hilos-results-3'
-      ),
+      title: 'Rejuvenecimiento Periorbital',
+      description: 'Hilos lisos para patas de gallo y ojeras.',
+      sessions: '2 sesiones',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/ojos-antes/600/400', imageHint: 'eye rejuvenation before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/ojos-despues/600/400', imageHint: 'eye rejuvenation after' },
     },
     {
       title: 'Definición Mandibular',
-      description: 'Técnica para un óvalo facial definido.',
+      description: 'Técnica para un óvalo facial más definido y joven.',
       sessions: '1 sesión',
-      beforeImage: PlaceHolderImages.find(
-        (img) => img.id === 'hilos-results-3'
-      ),
-      afterImage: PlaceHolderImages.find(
-        (img) => img.id === 'hilos-results-1'
-      ),
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/mandibula-antes/600/400', imageHint: 'jawline before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/mandibula-despues/600/400', imageHint: 'jawline after' },
+    },
+    {
+      title: 'Foxy Eyes (Lifting de Cejas)',
+      description: 'Elevación de la cola de la ceja con hilos espiculados.',
+      sessions: '1 sesión',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/foxy-antes/600/400', imageHint: 'fox eyes before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/foxy-despues/600/400', imageHint: 'fox eyes after' },
+    },
+    {
+      title: 'Rinomodelación no quirúrgica',
+      description: 'Elevación de punta y rectificación de dorso nasal.',
+      sessions: '1 sesión',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/rino-antes/600/400', imageHint: 'rhino before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/rino-despues/600/400', imageHint: 'rhino after' },
+    },
+    // Corporales
+    {
+      title: 'Levantamiento de Glúteos',
+      description: 'Hilos espiculados para mejorar la ptosis glútea leve.',
+      sessions: '2 sesiones',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/gluteos-antes/600/400', imageHint: 'butt lift before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/gluteos-despues/600/400', imageHint: 'butt lift after' },
+    },
+    {
+      title: 'Marcación Abdominal',
+      description: 'Red de hilos para estimular colágeno y definir.',
+      sessions: '3 sesiones',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/abs-antes/600/400', imageHint: 'abs definition before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/abs-despues/600/400', imageHint: 'abs definition after' },
+    },
+    {
+      title: 'Lifting de Brazos',
+      description: 'Tratamiento de la flacidez en cara interna de brazos.',
+      sessions: '2 sesiones',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/brazos-antes/600/400', imageHint: 'arm lift before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/brazos-despues/600/400', imageHint: 'arm lift after' },
+    },
+    {
+      title: 'Lifting de Muslos',
+      description: 'Reducción de flacidez en cara interna de muslos.',
+      sessions: '2 sesiones',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/muslos-antes/600/400', imageHint: 'thigh lift before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/muslos-despues/600/400', imageHint: 'thigh lift after' },
+    },
+    {
+      title: 'Rejuvenecimiento de Rodillas',
+      description: 'Hilos lisos para tratar la piel laxa sobre las rodillas.',
+      sessions: '2 sesiones',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/rodillas-antes/600/400', imageHint: 'knee rejuvenation before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/rodillas-despues/600/400', imageHint: 'knee rejuvenation after' },
     },
   ];
   const ctaImage = PlaceHolderImages.find((img) => img.id === 'hilos-cta');
