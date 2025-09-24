@@ -24,7 +24,6 @@ const navLinks = [
         dropdown: [
             { name: 'Bioestimuladores', href: '/bioestimuladores' },
             { name: 'Botox Terapéutico', href: '/botox-terapeutico' },
-            { name: 'Rejuvenecimiento Facial', href: '/rejuvenecimiento-facial' },
             { name: 'Contorno Corporal', href: '/contorno-corporal' },
             { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
         ]

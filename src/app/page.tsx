@@ -90,7 +90,6 @@ export default function Home() {
   const specializations = [
     { name: 'Hilos Tensores PDO', href: '/hilos-tensores' },
     { name: 'Botox Terapéutico', href: '/botox-terapeutico' },
-    { name: 'Rejuvenecimiento Facial', href: '/rejuvenecimiento-facial' },
     { name: 'Bioestimuladores', href: '/bioestimuladores' },
     { name: 'Contorno Corporal', href: '/contorno-corporal' },
     { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
