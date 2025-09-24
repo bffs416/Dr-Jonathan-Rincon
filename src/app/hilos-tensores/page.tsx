@@ -200,7 +200,7 @@ export default function HilosTensoresPage() {
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
-            alt={heroImage.description}
+            alt="Mujer con piel radiante tras tratamiento con hilos tensores en Medellín."
             fill
             className="object-cover opacity-30"
             data-ai-hint={heroImage.imageHint}
@@ -314,7 +314,7 @@ export default function HilosTensoresPage() {
             {whatAreTheyImage && (
               <Image
                 src={whatAreTheyImage.imageUrl}
-                alt={whatAreTheyImage.description}
+                alt="Diagrama explicativo del funcionamiento de los hilos tensores en la piel."
                 width={600}
                 height={600}
                 className="rounded-xl shadow-2xl w-full aspect-square object-cover"
@@ -324,13 +324,40 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
+        {/* Advanced Applications Section */}
+        <section id="aplicaciones" className="scroll-mt-20 text-center">
+          <Badge variant="secondary">Más Allá del Rostro</Badge>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+            Aplicaciones Corporales y Faciales Específicas
+          </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+            La versatilidad de los hilos tensores permite tratar diversas áreas
+            del cuerpo y rostro con resultados espectaculares.
+          </p>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+            {advancedApplications.map((app, index) => (
+              <Card key={index} className="p-6 flex items-start gap-4">
+                <div className="text-primary mt-1">
+                  <PlusCircle className="w-6 h-6" />
+                </div>
+                <div>
+                  <p className="font-semibold text-lg">{app.title}</p>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {app.description}
+                  </p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         {/* Before and After Section */}
         <section id="resultados" className="scroll-mt-20 text-center">
             <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Antes y <span className="text-primary">Después</span>
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Resultados reales de nuestros tratamientos. Transformaciones que hablan por sí solas.
+                Resultados reales de nuestros tratamientos con hilos tensores. Transformaciones que hablan por sí solas.
             </p>
           <Carousel
             className="w-full max-w-5xl mx-auto mt-12"
@@ -406,7 +433,6 @@ export default function HilosTensoresPage() {
             <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 md:-right-10" />
           </Carousel>
         </section>
-
 
         {/* Thread Types Section */}
         <section id="tipos-hilos" className="scroll-mt-20">
@@ -490,33 +516,6 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
-        {/* Advanced Applications Section */}
-        <section id="aplicaciones" className="scroll-mt-20 text-center">
-          <Badge variant="secondary">Más Allá del Rostro</Badge>
-          <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-            Aplicaciones Corporales y Faciales Específicas
-          </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            La versatilidad de los hilos tensores permite tratar diversas áreas
-            del cuerpo y rostro con resultados espectaculares.
-          </p>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            {advancedApplications.map((app, index) => (
-              <Card key={index} className="p-6 flex items-start gap-4">
-                <div className="text-primary mt-1">
-                  <PlusCircle className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg">{app.title}</p>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {app.description}
-                  </p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">
@@ -572,7 +571,7 @@ export default function HilosTensoresPage() {
               {ctaImage && (
                 <Image
                   src={ctaImage.imageUrl}
-                  alt={ctaImage.description}
+                  alt="Dr. Jhonathan Rincón realizando un procedimiento de hilos tensores en su clínica."
                   fill
                   className="object-cover"
                   data-ai-hint={ctaImage.imageHint}
