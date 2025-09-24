@@ -40,49 +40,63 @@ const Placeholder = ({
 );
 
 export default function ContornoCorporalPage() {
-  const benefits = [
-    {
-      title: 'Resultados visibles desde la primera sesión',
-      description: 'Aunque los beneficios son progresivos, muchos notan una mejora desde el primer día.',
-    },
-    {
-      title: 'Procedimiento sin dolor y sin incapacidad',
-      description: 'Es un tratamiento cómodo, descrito por muchos como un masaje cálido y relajante. No requiere anestesia y puedes volver a tus actividades diarias inmediatamente.',
-    },
-    {
-      title: 'Tratamiento completo (facial y corporal)',
-      description: 'Ideal para tratar la flacidez en rostro, cuello y papada, así como para modelar abdomen, levantar glúteos, y tonificar brazos y piernas.',
-    },
-    {
-      title: 'Combate la celulitis y la grasa localizada',
-      description: 'Mejora la textura de la piel, reduce la apariencia de "piel de naranja" y ayuda a disminuir esos depósitos de grasa difíciles de eliminar.',
-    },
-     {
-      title: 'Ideal para recuperación postquirúrgica',
-      description: 'Tensamax es un gran aliado después de una cirugía, ya que acelera la regeneración de los tejidos, favorece el drenaje y previene la fibrosis.',
-    },
+  const hidrolipoclasiaBenefits = [
+    'Resultados similares a una liposucción tradicional, pero de manera menos invasiva.',
+    'Procedimiento rápido y ambulatorio, realizado en el consultorio.',
+    'Resultados efectivos y visibles, especialmente cuando se combina con un estilo de vida saludable.',
   ];
 
-  const faqs = [
+  const tensamaxBenefits = [
+    'Resultados visibles desde la primera sesión.',
+    'Procedimiento sin dolor, cómodo y relajante, a menudo descrito como un "masaje cálido".',
+    'No requiere tiempo de recuperación, puedes volver a tu rutina de inmediato.',
+    'Tratamiento versátil: Perfecto para levantar glúteos, tonificar abdomen, brazos y piernas, y reducir flacidez en rostro y cuello.',
+    'Excelente para combatir la celulitis y mejorar la textura de la piel.',
+  ];
+
+  const hidrolipoclasiaFaqs = [
     {
-      question: '¿Para quién es este tratamiento?',
+      question: '¿Este tratamiento duele?',
       answer:
-        'Es perfecto para personas que buscan mejorar la firmeza de su piel, reducir grasa localizada o celulitis, y desean hacerlo sin recurrir a un procedimiento quirúrgico. Es una excelente opción tanto para quienes notan los primeros signos de flacidez como para quienes desean modelar áreas específicas de su cuerpo.',
+        'El procedimiento puede generar una molestia por las inyecciones, pero es un dolor totalmente soportable. Para mayor comodidad, se puede aplicar un anestésico local.',
     },
     {
-      question: '¿Cómo es una sesión de Tensamax?',
+      question: '¿Cuántas sesiones se necesitan?',
       answer:
-        'Es un proceso sencillo y relajante. Después de una evaluación para definir tus objetivos, te recostarás cómodamente mientras el especialista desliza el cabezal del equipo sobre la zona a tratar. Sentirás un calor agradable y controlado. Cada sesión dura entre 30 y 60 minutos, dependiendo del área.',
+        'El número de sesiones varía según cada persona y la cantidad de grasa a tratar. En muchos casos, los cambios son notorios desde las primeras semanas. Tu médico especialista diseñará un plan personalizado para ti.',
+    },
+    {
+      question: '¿Cómo es la recuperación? ¿Necesitaré incapacidad?',
+      answer:
+        'La recuperación es rápida y no requiere incapacidad prolongada. Sin embargo, es crucial seguir algunos cuidados: descansar y evitar actividad física intensa durante los primeros dos días, utilizar prendas de compresión (fajas), mantenerse bien hidratado, evitar la exposición al sol y asistir a las citas de seguimiento.',
+    },
+    {
+      question: '¿Pueden aparecer moretones o hinchazón?',
+      answer:
+        'Sí, es común que aparezcan hinchazón y hematomas leves en la zona tratada. Estos efectos son temporales y se pueden controlar con compresas frías.',
+    },
+  ];
+  
+  const tensamaxFaqs = [
+      {
+      question: '¿Para quién es este tratamiento?',
+      answer:
+        'Es ideal para personas que notan flacidez en la piel, desean modelar su contorno corporal, reducir celulitis o buscan una recuperación más rápida después de una cirugía, como una liposucción.',
+    },
+    {
+      question: '¿Cómo es una sesión?',
+      answer:
+        'Es muy sencilla y agradable. Te recostarás cómodamente mientras el especialista desliza un cabezal sobre la zona a tratar, aplicando un gel conductor. Sentirás un calor controlado y confortable. La sesión dura entre 30 y 60 minutos.',
     },
     {
       question: '¿Cuántas sesiones necesitaré?',
       answer:
-        'El número de sesiones varía según tus necesidades y objetivos. Generalmente, se recomienda un plan de 5 a 10 sesiones para lograr resultados óptimos y duraderos.',
+        'Para obtener resultados óptimos, generalmente se recomiendan entre 5 y 10 sesiones. El plan de tratamiento será definido por el especialista en tu cita de valoración.',
     },
      {
-      question: '¿Existen contraindicaciones?',
+      question: '¿Es un tratamiento seguro?',
       answer:
-        'Sí. Aunque es muy seguro, no se recomienda en mujeres embarazadas o en periodo de lactancia. Tampoco es adecuado para personas con marcapasos, prótesis metálicas en la zona a tratar, infecciones activas en la piel o ciertas enfermedades autoinmunes. Por eso es fundamental una valoración profesional previa.',
+        'Sí, es muy seguro cuando lo realiza un profesional cualificado. Sin embargo, tiene algunas contraindicaciones que deben ser evaluadas por un médico, como el embarazo, la lactancia, o la presencia de marcapasos o implantes metálicos en la zona a tratar.',
     },
   ];
 
@@ -95,10 +109,10 @@ export default function ContornoCorporalPage() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-2">
-              Descubre Tensamax: La Tecnología que Transforma y Reafirma tu Piel Sin Cirugía
+              Moldea tu Figura Sin Cirugía: Descubre el Poder de la Hidrolipoclasia y Tensamax
             </h1>
             <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
-              Moldea tu cuerpo, combate la flacidez y luce una piel más firme y joven de manera segura y sin dolor.
+              Dos tecnologías avanzadas para eliminar la grasa localizada, combatir la flacidez y conseguir el cuerpo que deseas de forma segura.
             </p>
           </div>
         </div>
@@ -112,13 +126,13 @@ export default function ContornoCorporalPage() {
         >
           <div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
-             ¿Sientes que tu piel ha perdido firmeza o luchas contra grasa localizada?
+             ¿Sientes que la dieta y el ejercicio no son suficientes?
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-             Con el tiempo, es normal que la piel del rostro y del cuerpo pierda tonicidad, aparezca la flacidez o se acumule grasa en zonas difíciles de eliminar con ejercicio. Si buscas una solución efectiva que te ayude a recuperar un contorno definido y una piel más firme sin tener que pasar por el quirófano, Tensamax es la respuesta que estabas esperando.
+             Te esfuerzas por mantener un estilo de vida saludable, pero esa grasa rebelde en el abdomen, las caderas o los muslos parece no desaparecer. O quizás notas que la piel ha perdido firmeza con el tiempo. Si buscas una solución efectiva que no implique pasar por el quirófano, estás en el lugar correcto.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Este tratamiento no invasivo ha revolucionado la estética corporal y facial, ofreciendo resultados visibles desde las primeras sesiones y sin interrumpir tu rutina diaria.
+              Hoy en día, existen tratamientos no invasivos y mínimamente invasivos que te ayudan a alcanzar tus objetivos corporales de manera segura y sin interrumpir tu rutina. Dos de las opciones más populares y efectivas son la Hidrolipoclasia Ultrasónica y la radiofrecuencia con Tensamax. Aunque son diferentes, ambos se enfocan en un mismo objetivo: ayudarte a sentirte increíble en tu propia piel.
             </p>
             <Button asChild size="lg" className="mt-8">
               <Link href="#citas">
@@ -129,82 +143,177 @@ export default function ContornoCorporalPage() {
           <div>
             <Placeholder
               className="rounded-xl shadow-2xl w-full aspect-square"
-              text="Imagen de Tensamax en acción"
+              text="Imagen de mujer con figura tonificada"
             />
           </div>
         </section>
 
-        {/* Section 2: What it is */}
-        <section id="que-es" className="scroll-mt-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <Placeholder
-                className="rounded-xl shadow-2xl w-full aspect-square"
-                text="Diagrama de funcionamiento de Tensamax"
-              />
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                ¿Qué es Tensamax y cómo funciona esta tecnología innovadora?
-              </h2>
-              <p className="mt-6 text-lg text-muted-foreground">
-                Tensamax es un tratamiento de vanguardia que utiliza tecnología de radiofrecuencia monopolar para transformar la piel desde sus capas más profundas. Funciona de una manera muy inteligente:
-              </p>
-              <ol className="mt-4 space-y-3 text-muted-foreground list-decimal pl-5">
-                <li><strong>Genera un calor controlado:</strong> El equipo eleva la temperatura de manera uniforme en los tejidos de la piel.</li>
-                <li><strong>Activa los procesos naturales del cuerpo:</strong> Este calor estimula a tus células para que produzcan nuevo colágeno y elastina, las proteínas responsables de la firmeza y elasticidad de la piel.</li>
-                <li><strong>Doble acción:</strong> No solo reafirma la piel, sino que también tiene un efecto vasodilatador que mejora la circulación sanguínea. Esto nutre las células, ayuda a eliminar toxinas y reduce la grasa localizada.</li>
-              </ol>
-               <p className="mt-4 text-lg text-muted-foreground">
-                El resultado es una piel visiblemente más tensa, un contorno corporal más definido y una apariencia más radiante y saludable.
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* Part A: Hidrolipoclasia */}
+        <div className='space-y-24'>
+            <SectionTitleWithLines>
+                <span className='text-foreground font-bold'>Parte A:</span>{' '}
+                <span className='text-primary font-bold'>Hidrolipoclasia – La "Liposucción sin Cirugía"</span>
+            </SectionTitleWithLines>
 
-        {/* Benefits Section */}
-        <section id="beneficios" className="scroll-mt-20 text-center">
-          <SectionTitleWithLines><span className='text-foreground'>Los Beneficios</span> <span className='text-primary'>que Más te Importarán</span></SectionTitleWithLines>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="p-6 flex items-start gap-4">
-                <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
-                  <CheckCircle className="w-6 h-6" />
+            <section id="hidrolipoclasia" className="scroll-mt-20">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                 <div className="order-2 md:order-1">
+                  <Placeholder
+                    className="rounded-xl shadow-2xl w-full aspect-square"
+                    text="Diagrama de Hidrolipoclasia"
+                  />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg">{benefit.title}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {benefit.description}
+                <div className="order-1 md:order-2">
+                  <h2 className="font-headline text-3xl md:text-4xl font-bold">
+                    ¿Qué es la Hidrolipoclasia y cómo elimina la grasa localizada?
+                  </h2>
+                  <p className="mt-6 text-lg text-muted-foreground">
+                   La hidrolipoclasia es un procedimiento estético mínimamente invasivo, conocido como la "liposucción sin cirugía" por sus excelentes resultados para eliminar depósitos de grasa localizada. Es ideal para tratar zonas específicas como el abdomen, las caderas, los muslos ("cartucheras") o brazos.
                   </p>
+                  <p className="mt-4 text-muted-foreground">Su funcionamiento es una combinación inteligente de dos pasos:</p>
+                  <ol className="mt-4 space-y-3 text-muted-foreground list-decimal pl-5">
+                    <li><strong>Infiltración de una solución:</strong> Primero, se inyecta una solución isotónica (suero fisiológico) en la zona donde se acumula la grasa. Esta solución ablanda y prepara las células grasas (adipocitos).</li>
+                    <li><strong>Aplicación de ultrasonido:</strong> Inmediatamente después, se aplica un ultrasonido de alta potencia sobre la zona. Las ondas ultrasónicas generan microburbujas que vibran y provocan que la membrana de las células grasas se rompa, liberando la grasa de su interior.</li>
+                  </ol>
+                  <p className="mt-4 text-muted-foreground">Una vez liberada, esa grasa es eliminada de forma natural por el cuerpo a través del sistema linfático.</p>
                 </div>
-              </Card>
-            ))}
-          </div>
-        </section>
+              </div>
 
-        {/* FAQ Section */}
-        <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto">
-           <div className="text-center">
-             <SectionTitleWithLines><span className='text-foreground'>Lo que Debes Saber</span> <span className='text-primary'>Sobre el Tratamiento</span></SectionTitleWithLines>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-              Lo que debes saber sobre el tratamiento Tensamax
-            </h2>
-            <p className='mt-4 max-w-2xl mx-auto text-lg text-muted-foreground'>
-                Queremos que te sientas seguro/a y bien informado/a. Aquí resolvemos las preguntas más comunes.
-            </p>
-          </div>
-          <Accordion type="single" collapsible className="w-full mt-12">
-            {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="text-left text-lg hover:no-underline">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+               <div className="mt-20 text-center">
+                    <h3 className="font-headline text-2xl md:text-3xl font-bold">Beneficios clave de la Hidrolipoclasia</h3>
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                        {hidrolipoclasiaBenefits.map((benefit, index) => (
+                        <Card key={index} className="p-6 flex items-start gap-4">
+                            <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
+                            <CheckCircle className="w-6 h-6" />
+                            </div>
+                            <div>
+                            <p className="text-base text-muted-foreground">
+                                {benefit}
+                            </p>
+                            </div>
+                        </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+             <section id="faq-hidrolipoclasia" className="scroll-mt-20 max-w-4xl mx-auto">
+               <div className="text-center">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+                  Lo que a un paciente le importa sobre la Hidrolipoclasia
+                </h2>
+              </div>
+              <Accordion type="single" collapsible className="w-full mt-12">
+                {hidrolipoclasiaFaqs.map((faq, index) => (
+                  <AccordionItem value={`item-hidro-${index}`} key={index}>
+                    <AccordionTrigger className="text-left text-lg hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-base text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+        </div>
+
+
+        {/* Part B: Tensamax */}
+        <div className='space-y-24'>
+            <SectionTitleWithLines>
+                <span className='text-foreground font-bold'>Parte B:</span>{' '}
+                <span className='text-primary font-bold'>Tensamax – Reafirma tu Piel y Moldea tu Cuerpo</span>
+            </SectionTitleWithLines>
+            <section id="tensamax" className="scroll-mt-20">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="font-headline text-3xl md:text-4xl font-bold">
+                    ¿Qué es Tensamax y cómo combate la flacidez?
+                  </h2>
+                  <p className="mt-6 text-lg text-muted-foreground">
+                    Tensamax es una tecnología de vanguardia que utiliza radiofrecuencia monopolar para transformar la piel desde sus capas más profundas. Es un tratamiento no invasivo, ideal para quienes buscan reafirmar, tonificar y modelar tanto el rostro como el cuerpo.
+                  </p>
+                  <p className="mt-4 text-muted-foreground">Su mecanismo se basa en generar un calor controlado y profundo en los tejidos, lo que provoca dos efectos maravillosos:</p>
+                  <ol className="mt-4 space-y-3 text-muted-foreground list-decimal pl-5">
+                    <li><strong>Estimulación de colágeno y elastina:</strong> El calor activa las células de tu piel para que produzcan nuevo colágeno, la proteína que le da firmeza y elasticidad.</li>
+                    <li><strong>Mejora de la circulación:</strong> El calor tiene un efecto vasodilatador que aumenta el flujo sanguíneo, nutriendo las células, ayudando a eliminar toxinas y a reducir la grasa superficial.</li>
+                  </ol>
+                </div>
+                 <div>
+                  <Placeholder
+                    className="rounded-xl shadow-2xl w-full aspect-square"
+                    text="Diagrama de funcionamiento de Tensamax"
+                  />
+                </div>
+              </div>
+              <div className="mt-20 text-center">
+                    <h3 className="font-headline text-2xl md:text-3xl font-bold">Beneficios clave de Tensamax</h3>
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                        {tensamaxBenefits.map((benefit, index) => (
+                        <Card key={index} className="p-6 flex items-start gap-4">
+                            <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
+                            <CheckCircle className="w-6 h-6" />
+                            </div>
+                            <div>
+                                <p className="text-base text-muted-foreground">
+                                    {benefit}
+                                </p>
+                            </div>
+                        </Card>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            
+            <section id="faq-tensamax" className="scroll-mt-20 max-w-4xl mx-auto">
+               <div className="text-center">
+                <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+                  Lo que a un paciente le importa sobre Tensamax
+                </h2>
+              </div>
+              <Accordion type="single" collapsible className="w-full mt-12">
+                {tensamaxFaqs.map((faq, index) => (
+                  <AccordionItem value={`item-tensa-${index}`} key={index}>
+                    <AccordionTrigger className="text-left text-lg hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-base text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+        </div>
+
+
+        {/* Comparison Section */}
+        <section id="comparacion" className="scroll-mt-20">
+          <Card className="shadow-xl p-8 md:p-12">
+            <CardHeader className="text-center p-0 pb-8">
+              <CardTitle className="font-headline text-3xl md:text-4xl font-bold">¿Cuál es la mejor opción para ti: Hidrolipoclasia o Tensamax?</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-6 text-lg text-muted-foreground">
+                <p>Aunque ambos tratamientos ayudan a mejorar la figura, están diseñados para objetivos diferentes. La elección dependerá de tus necesidades específicas.</p>
+                <div className='grid md:grid-cols-2 gap-8 items-start'>
+                    <div className='bg-muted/50 p-6 rounded-lg'>
+                        <h4 className='font-bold text-xl text-foreground mb-2'>Elige Hidrolipoclasia si...</h4>
+                        <p>...tu principal problema es la <strong className='text-primary'>grasa localizada y acumulada</strong> que no logras eliminar con dieta o ejercicio.</p>
+                    </div>
+                     <div className='bg-muted/50 p-6 rounded-lg'>
+                        <h4 className='font-bold text-xl text-foreground mb-2'>Elige Tensamax si...</h4>
+                        <p>...tu preocupación es la <strong className='text-primary'>flacidez, la celulitis y la falta de tonicidad</strong> en la piel, o si buscas modelar el contorno de forma no invasiva.</p>
+                    </div>
+                </div>
+                <div className='text-center pt-6'>
+                    <h4 className='font-headline text-2xl font-bold text-primary'>La Combinación Perfecta</h4>
+                    <p className='mt-2 max-w-3xl mx-auto'>En muchos casos, la mejor estrategia es combinar ambos tratamientos. Un profesional puede diseñar un plan donde primero se reduce el volumen de grasa con hidrolipoclasia y luego se reafirma y tensa la piel con Tensamax para un resultado espectacular.</p>
+                    <p className='mt-4 font-semibold'>La consulta médica es clave para crear un plan de tratamiento individualizado y seguro para ti.</p>
+                </div>
+            </CardContent>
+          </Card>
         </section>
 
         {/* CTA Section */}
@@ -213,10 +322,10 @@ export default function ContornoCorporalPage() {
             <div className="p-8 md:p-12">
               <Badge>Consulta Personalizada</Badge>
               <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2 text-primary">
-                Transforma tu figura con seguridad y confianza
+                Da el Siguiente Paso Hacia la Figura que Sueñas
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Si buscas una alternativa real a la cirugía para reafirmar, tonificar y modelar tu piel, Tensamax es la solución que combina tecnología avanzada con resultados naturales y visibles.
+                No tienes que conformarte con esa grasa rebelde o la piel flácida. Con la tecnología adecuada y la guía de expertos, puedes lograr una transformación real y duradera.
               </p>
               <Button
                 asChild
@@ -233,7 +342,7 @@ export default function ContornoCorporalPage() {
               </Button>
             </div>
             <div className="relative h-64 md:h-full w-full">
-              <Placeholder className="absolute inset-0" />
+              <Placeholder className="absolute inset-0" text="Imagen de mujer feliz con su figura" />
             </div>
           </Card>
         </section>
