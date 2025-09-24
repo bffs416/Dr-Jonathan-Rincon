@@ -9,6 +9,7 @@ import {
   Wind,
   Sparkles,
   AlertTriangle,
+  CheckCircle,
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -97,9 +98,9 @@ export default function MedicinaPreventivaPage() {
                   </p>
                   <p className="mt-4 text-muted-foreground">
                     En esta guía, te explicamos de manera sencilla los
-                    tratamientos más efectivos y demandados, organizados en dos
-                    grandes grupos para que identifiques fácilmente cuál se
-                    adapta a lo que buscas:
+                    tratamientos más efectivos y demandados. Los hemos organizado en
+                    dos grandes grupos para que puedas identificar fácilmente
+                    cuál se adapta mejor a lo que buscas:
                   </p>
                    <ul className="mt-4 text-left space-y-2 inline-block">
                         <li className="flex items-start gap-2">
@@ -510,7 +511,7 @@ export default function MedicinaPreventivaPage() {
               <p className="mt-4 text-lg text-muted-foreground">
                 Agenda una cita para una valoración personalizada y descubre
                 cómo estos tratamientos pueden ayudarte a lograr una piel más
-                sana, hidratada y joven.
+                sana, hidratata y joven.
               </p>
               <Button
                 asChild
