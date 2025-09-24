@@ -18,6 +18,8 @@ import { cn } from '@/lib/utils';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import Image from 'next/image';
+import { SectionArch } from '@/components/section-arch';
 
 const Placeholder = ({
   className,
@@ -80,19 +82,19 @@ export default function MedicinaPreventivaPage() {
                 id="intro-facial"
                 className="grid md:grid-cols-2 gap-12 items-center"
               >
-                <div>
-                  <h2 className="font-headline text-4xl md:text-5xl font-bold text-left">
+                <div className="text-left">
+                  <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Guía Completa de Rejuvenecimiento:{' '}
                     <span className="text-primary">
                       Transforma tu Piel Sin Cirugía
                     </span>
                   </h2>
-                  <p className="mt-4 text-lg text-muted-foreground text-left">
+                  <p className="mt-4 text-lg text-muted-foreground">
                     Descubre los tratamientos más innovadores para hidratar,
                     revitalizar, dar volumen y regenerar tu piel. Encuentra la
                     solución perfecta para ti.
                   </p>
-                  <div className="mt-8 text-lg text-muted-foreground space-y-4 text-left">
+                  <div className="mt-8 text-lg text-muted-foreground space-y-4">
                     <p>
                       En el mundo de la medicina estética, existen muchas opciones
                       para lucir una piel más joven, saludable y radiante sin
@@ -141,7 +143,7 @@ export default function MedicinaPreventivaPage() {
 
               <section id="hidratacion-calidad" className="scroll-mt-20">
                 <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-3xl font-bold">Hidratación Profunda y{' '}
+                  <h2 className="text-foreground font-headline text-3xl font-bold text-center">Hidratación Profunda y{' '}
                   <span className="text-primary">Calidad de la Piel</span></h2>
                 </SectionTitleWithLines>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
@@ -149,118 +151,126 @@ export default function MedicinaPreventivaPage() {
                   para devolverle la vitalidad, el brillo y la suavidad que ha
                   perdido con el tiempo.
                 </p>
-                <div className="mt-12 space-y-8 max-w-4xl mx-auto">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3">
-                        <Syringe className="w-7 h-7 text-primary" /> Mesoterapia
-                        y Técnicas de Aplicación (Microneedling)
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-4">
-                      <p>
-                        La mesoterapia es una técnica que consiste en aplicar
-                        microinyecciones en la piel para administrar un cóctel de
-                        sustancias beneficiosas directamente donde se necesitan.
-                        Estos cócteles pueden incluir vitaminas, minerales,
-                        aminoácidos y ácido hialurónico, diseñados para
-                        revitalizar e hidratar.
-                      </p>
-                      <div>
-                        <strong className="text-foreground">
-                          Microneedling (o Micropunción):
-                        </strong>{' '}
-                        <p className="mt-1">
-                          Es una técnica que utiliza un dispositivo con microagujas
-                          muy finas para crear canales microscópicos en la piel.
-                          Esto no solo estimula la producción natural de colágeno,
-                          sino que también permite que los productos aplicados (como
-                          el PDRN o vitaminas) penetren mucho más profundo y sean más
-                          efectivos.
+                <div className="mt-12 space-y-16">
+                  {/* Mesoterapia */}
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="flex justify-center">
+                      <SectionArch imageUrl="https://picsum.photos/seed/mesoterapia/250/125" alt="Mesoterapia facial" data-ai-hint="facial mesotherapy" />
+                    </div>
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-3">
+                          <Syringe className="w-7 h-7 text-primary" /> Mesoterapia y Microneedling
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="text-muted-foreground space-y-4">
+                        <p>
+                          La mesoterapia es una técnica que consiste en aplicar
+                          microinyecciones en la piel para administrar un cóctel de
+                          sustancias beneficiosas directamente donde se necesitan.
+                          Estos cócteles pueden incluir vitaminas, minerales,
+                          aminoácidos y ácido hialurónico.
                         </p>
-                      </div>
-                      <p className="text-sm font-medium text-primary pt-2">
-                        Ideal para: Personas que buscan una mejora general en la
-                        luminosidad, hidratación y textura de la piel.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3">
-                        <Droplets className="w-7 h-7 text-primary" />{' '}
-                        Skinboosters (Hidratación Intensa con Ácido Hialurónico)
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-4">
-                      <p>
-                        Los Skinboosters son un tipo de tratamiento enfocado en la
-                        hidratación profunda. Se utilizan microinyecciones de un
-                        ácido hialurónico de baja densidad que no busca dar
-                        volumen, sino captar y retener agua en las capas internas
-                        de la piel.
-                      </p>
-                      <div>
-                        <strong className="text-foreground">
-                          ¿Qué puedes esperar?
-                        </strong>{' '}
-                        <p className="mt-1">
-                          Una piel visiblemente más hidratada, jugosa, elástica y con
-                          un brillo natural. Suaviza líneas finas y mejora la
-                          calidad general de la piel en rostro, cuello, escote y
-                          manos. Sus efectos suelen durar entre 6 y 12 meses.
+                        <div>
+                          <strong className="text-foreground">
+                            Microneedling (o Micropunción):
+                          </strong>{' '}
+                          <p className="mt-1">
+                            Es una técnica que utiliza un dispositivo con microagujas
+                            muy finas para crear canales microscópicos en la piel.
+                            Esto no solo estimula la producción natural de colágeno,
+                            sino que también permite que los productos aplicados penetren mucho más profundo.
+                          </p>
+                        </div>
+                        <p className="text-sm font-medium text-primary pt-2">
+                          Ideal para: Personas que buscan una mejora general en la
+                          luminosidad, hidratación y textura de la piel.
                         </p>
-                      </div>
-                      <p className="text-sm font-medium text-primary pt-2">
-                        Ideal para: Pieles deshidratadas, apagadas o que empiezan
-                        a mostrar los primeros signos de envejecimiento.
-                      </p>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3">
-                        <Dna className="w-7 h-7 text-primary" /> PDRN (Conocido
-                        como "Esperma de Salmón")
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-4">
-                      <p>
-                        El PDRN (polideoxirribonucleótido) es un potente
-                        regenerador celular extraído del tejido gonadal del salmón.
-                        Aunque su apodo popular es "esperma de salmón", el producto
-                        utilizado en medicina estética es un fragmento de ADN
-                        purificado y seguro.
-                      </p>
-                      <div>
-                        <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
-                        <p className="mt-1">
-                          Actúa a nivel celular estimulando la reparación de los
-                          tejidos, la producción de colágeno, mejorando la
-                          elasticidad y reduciendo la inflamación.
+                      </CardContent>
+                    </Card>
+                  </div>
+                  {/* Skinboosters */}
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <Card className="order-2 md:order-1">
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-3">
+                          <Droplets className="w-7 h-7 text-primary" />{' '}
+                          Skinboosters
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="text-muted-foreground space-y-4">
+                        <p>
+                          Los Skinboosters son un tipo de tratamiento enfocado en la
+                          hidratación profunda. Se utilizan microinyecciones de un
+                          ácido hialurónico de baja densidad que no busca dar
+                          volumen, sino captar y retener agua en las capas internas
+                          de la piel.
                         </p>
-                      </div>
-                      <div>
-                        <strong className="text-foreground">Beneficios:</strong>{' '}
-                        <p className="mt-1">
-                          Mejora la firmeza, reduce líneas finas, atenúa cicatrices
-                          de acné y devuelve la luminosidad a la piel. Se aplica
-                          mediante mesoterapia o microneedling para potenciar su
-                          efecto.
+                        <div>
+                          <strong className="text-foreground">
+                            ¿Qué puedes esperar?
+                          </strong>{' '}
+                          <p className="mt-1">
+                            Una piel visiblemente más hidratada, jugosa, elástica y con
+                            un brillo natural. Suaviza líneas finas y mejora la
+                            calidad general de la piel. Sus efectos suelen durar entre 6 y 12 meses.
+                          </p>
+                        </div>
+                        <p className="text-sm font-medium text-primary pt-2">
+                          Ideal para: Pieles deshidratadas, apagadas o que empiezan
+                          a mostrar los primeros signos de envejecimiento.
                         </p>
-                      </div>
-                      <p className="text-sm font-medium text-primary pt-2">
-                        Ideal para: Pieles que necesitan una reparación profunda,
-                        mejorar cicatrices o un extra de rejuvenecimiento.
-                      </p>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                     <div className="order-1 md:order-2 flex justify-center">
+                       <SectionArch imageUrl="https://picsum.photos/seed/skinbooster/250/125" alt="Tratamiento con skinboosters" data-ai-hint="skin hydration treatment" />
+                    </div>
+                  </div>
+                  {/* PDRN */}
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                     <div className="flex justify-center">
+                       <SectionArch imageUrl="https://picsum.photos/seed/pdrn/250/125" alt="Tratamiento PDRN (esperma de salmón)" data-ai-hint="collagen stimulation" />
+                     </div>
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-3">
+                          <Dna className="w-7 h-7 text-primary" /> PDRN (Esperma de Salmón)
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="text-muted-foreground space-y-4">
+                        <p>
+                          El PDRN (polideoxirribonucleótido) es un potente
+                          regenerador celular extraído del tejido gonadal del salmón.
+                          Es un fragmento de ADN purificado y seguro.
+                        </p>
+                        <div>
+                          <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
+                          <p className="mt-1">
+                            Actúa a nivel celular estimulando la reparación de los
+                            tejidos, la producción de colágeno, mejorando la
+                            elasticidad y reduciendo la inflamación.
+                          </p>
+                        </div>
+                        <div>
+                          <strong className="text-foreground">Beneficios:</strong>{' '}
+                          <p className="mt-1">
+                            Mejora la firmeza, reduce líneas finas, atenúa cicatrices
+                            de acné y devuelve la luminosidad a la piel.
+                          </p>
+                        </div>
+                        <p className="text-sm font-medium text-primary pt-2">
+                          Ideal para: Pieles que necesitan una reparación profunda,
+                          mejorar cicatrices o un extra de rejuvenecimiento.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
               </section>
 
               <section id="rellenos" className="scroll-mt-20">
                 <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-3xl font-bold">
+                  <h2 className="text-foreground font-headline text-3xl font-bold text-center">
                     Rellenos con Ácido Hialurónico –{' '}
                   <span className="text-primary">Volumen y Definición</span></h2>
                 </SectionTitleWithLines>
@@ -297,7 +307,7 @@ export default function MedicinaPreventivaPage() {
                               varios meses.
                             </p>
                           </div>
-                          <p className="text-sm font-medium text-primary pt-2">
+                           <p className="text-sm font-medium text-primary pt-2">
                             Ideal para: Quienes buscan corregir arrugas profundas,
                             restaurar volumen en mejillas o definir el contorno
                             facial.
@@ -324,7 +334,7 @@ export default function MedicinaPreventivaPage() {
                               objetivo es embellecer, no transformar.
                             </p>
                           </div>
-                          <p className="text-sm font-medium text-primary pt-2">
+                           <p className="text-sm font-medium text-primary pt-2">
                             Ideal para: Personas que desean labios más definidos,
                             voluminosos o simplemente revitalizados.
                           </p>
@@ -359,19 +369,19 @@ export default function MedicinaPreventivaPage() {
           <TabsContent value="corporal" className="mt-12">
             <div className="space-y-24">
               <section id="intro-corporal" className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="font-headline text-4xl md:text-5xl font-bold text-left">
+                <div className="text-left">
+                  <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Cuida y Previene: La Guía Esencial de{' '}
                     <span className="text-primary">
                       Tratamientos Corporales Sin Cirugía
                     </span>
                   </h2>
-                  <p className="mt-4 text-lg text-muted-foreground text-left">
+                  <p className="mt-4 text-lg text-muted-foreground">
                     Descubre cómo los masajes reductores, la carboxiterapia y la
                     vitamina C pueden ayudarte a mantener una figura armoniosa y
                     una piel saludable a largo plazo.
                   </p>
-                   <div className='mt-8 text-lg text-muted-foreground space-y-4 text-left'>
+                   <div className='mt-8 text-lg text-muted-foreground space-y-4'>
                     <p>
                         A menudo asociamos los tratamientos corporales con la idea de "corregir" algo que no nos gusta. Pero, ¿y si te dijéramos que la clave es la prevención? Adoptar un enfoque preventivo significa actuar antes de que los signos del tiempo, como la flacidez o la celulitis avanzada, se instalen.
                     </p>
@@ -386,11 +396,11 @@ export default function MedicinaPreventivaPage() {
                  <div className="order-2 md:order-1">
                   <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" text="Imagen de masaje reductor" />
                 </div>
-                <div className="order-1 md:order-2">
+                <div className="order-1 md:order-2 text-left">
                  <SectionTitleWithLines>
                   <h2 className="text-foreground font-headline text-3xl font-bold">
                     Masajes Reductores –{' '}
-                  <span className="text-primary">El Poder del Moldeado Manual</span></h2>
+                  <span className="text-primary">Moldeado Manual</span></h2>
                 </SectionTitleWithLines>
                   <Card className='mt-12'>
                     <CardHeader>
@@ -443,7 +453,7 @@ export default function MedicinaPreventivaPage() {
               </section>
 
               <section id="carboxiterapia" className="grid md:grid-cols-2 gap-12 items-center">
-                 <div>
+                 <div className="text-left">
                     <SectionTitleWithLines>
                         <h2 className="text-foreground font-headline text-3xl font-bold">
                             Carboxiterapia –{' '}
@@ -491,7 +501,7 @@ export default function MedicinaPreventivaPage() {
 
               <section id="vitamina-c">
                 <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-3xl font-bold">
+                  <h2 className="text-foreground font-headline text-3xl font-bold text-center">
                     Vitamina C en Glúteos – Firmeza y{' '}
                   <span className="text-primary">Calidad para tu Piel</span></h2>
                 </SectionTitleWithLines>
