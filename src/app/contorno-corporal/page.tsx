@@ -7,17 +7,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
+import { SectionTitleWithLines } from '@/components/section-title-with-lines';
+import Image from 'next/image';
 
 const Placeholder = ({
   className,
@@ -44,32 +39,50 @@ const Placeholder = ({
   </div>
 );
 
-
 export default function ContornoCorporalPage() {
   const benefits = [
-    'Beneficio 1',
-    'Beneficio 2',
-    'Beneficio 3',
-    'Beneficio 4',
-    'Beneficio 5',
-    'Beneficio 6',
+    {
+      title: 'Resultados visibles desde la primera sesión',
+      description: 'Aunque los beneficios son progresivos, muchos notan una mejora desde el primer día.',
+    },
+    {
+      title: 'Procedimiento sin dolor y sin incapacidad',
+      description: 'Es un tratamiento cómodo, descrito por muchos como un masaje cálido y relajante. No requiere anestesia y puedes volver a tus actividades diarias inmediatamente.',
+    },
+    {
+      title: 'Tratamiento completo (facial y corporal)',
+      description: 'Ideal para tratar la flacidez en rostro, cuello y papada, así como para modelar abdomen, levantar glúteos, y tonificar brazos y piernas.',
+    },
+    {
+      title: 'Combate la celulitis y la grasa localizada',
+      description: 'Mejora la textura de la piel, reduce la apariencia de "piel de naranja" y ayuda a disminuir esos depósitos de grasa difíciles de eliminar.',
+    },
+     {
+      title: 'Ideal para recuperación postquirúrgica',
+      description: 'Tensamax es un gran aliado después de una cirugía, ya que acelera la regeneración de los tejidos, favorece el drenaje y previene la fibrosis.',
+    },
   ];
 
   const faqs = [
     {
-      question: '¿Pregunta frecuente 1?',
+      question: '¿Para quién es este tratamiento?',
       answer:
-        'Respuesta a la pregunta frecuente 1.',
+        'Es perfecto para personas que buscan mejorar la firmeza de su piel, reducir grasa localizada o celulitis, y desean hacerlo sin recurrir a un procedimiento quirúrgico. Es una excelente opción tanto para quienes notan los primeros signos de flacidez como para quienes desean modelar áreas específicas de su cuerpo.',
     },
     {
-      question: '¿Pregunta frecuente 2?',
+      question: '¿Cómo es una sesión de Tensamax?',
       answer:
-        'Respuesta a la pregunta frecuente 2.',
+        'Es un proceso sencillo y relajante. Después de una evaluación para definir tus objetivos, te recostarás cómodamente mientras el especialista desliza el cabezal del equipo sobre la zona a tratar. Sentirás un calor agradable y controlado. Cada sesión dura entre 30 y 60 minutos, dependiendo del área.',
     },
     {
-      question: '¿Pregunta frecuente 3?',
+      question: '¿Cuántas sesiones necesitaré?',
       answer:
-        'Respuesta a la pregunta frecuente 3.',
+        'El número de sesiones varía según tus necesidades y objetivos. Generalmente, se recomienda un plan de 5 a 10 sesiones para lograr resultados óptimos y duraderos.',
+    },
+     {
+      question: '¿Existen contraindicaciones?',
+      answer:
+        'Sí. Aunque es muy seguro, no se recomienda en mujeres embarazadas o en periodo de lactancia. Tampoco es adecuado para personas con marcapasos, prótesis metálicas en la zona a tratar, infecciones activas en la piel o ciertas enfermedades autoinmunes. Por eso es fundamental una valoración profesional previa.',
     },
   ];
 
@@ -82,94 +95,104 @@ export default function ContornoCorporalPage() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-2">
-              Contorno Corporal
+              Descubre Tensamax: La Tecnología que Transforma y Reafirma tu Piel Sin Cirugía
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
-              Descripción corta sobre el Contorno Corporal.
+            <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
+              Moldea tu cuerpo, combate la flacidez y luce una piel más firme y joven de manera segura y sin dolor.
             </p>
           </div>
         </div>
       </section>
 
       <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24">
-        {/* What are they? Section */}
+        {/* Section 1: Intro */}
         <section
-          id="que-son"
+          id="intro"
           className="scroll-mt-20 grid md:grid-cols-2 gap-12 items-center"
         >
           <div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
-              Título Descriptivo sobre Contorno Corporal
+             ¿Sientes que tu piel ha perdido firmeza o luchas contra grasa localizada?
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Explicación detallada sobre qué es el Contorno Corporal, cómo funciona y para quién es recomendado.
+             Con el tiempo, es normal que la piel del rostro y del cuerpo pierda tonicidad, aparezca la flacidez o se acumule grasa en zonas difíciles de eliminar con ejercicio. Si buscas una solución efectiva que te ayude a recuperar un contorno definido y una piel más firme sin tener que pasar por el quirófano, Tensamax es la respuesta que estabas esperando.
             </p>
-             <Button asChild size="lg" className="mt-8">
-                <Link href="#citas">
-                  Agenda tu Valoración <ArrowRight className="ml-2" />
-                </Link>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Este tratamiento no invasivo ha revolucionado la estética corporal y facial, ofreciendo resultados visibles desde las primeras sesiones y sin interrumpir tu rutina diaria.
+            </p>
+            <Button asChild size="lg" className="mt-8">
+              <Link href="#citas">
+                Agenda tu Valoración <ArrowRight className="ml-2" />
+              </Link>
             </Button>
           </div>
           <div>
-            <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" />
+            <Placeholder
+              className="rounded-xl shadow-2xl w-full aspect-square"
+              text="Imagen de Tensamax en acción"
+            />
+          </div>
+        </section>
+
+        {/* Section 2: What it is */}
+        <section id="que-es" className="scroll-mt-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <Placeholder
+                className="rounded-xl shadow-2xl w-full aspect-square"
+                text="Diagrama de funcionamiento de Tensamax"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">
+                ¿Qué es Tensamax y cómo funciona esta tecnología innovadora?
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground">
+                Tensamax es un tratamiento de vanguardia que utiliza tecnología de radiofrecuencia monopolar para transformar la piel desde sus capas más profundas. Funciona de una manera muy inteligente:
+              </p>
+              <ol className="mt-4 space-y-3 text-muted-foreground list-decimal pl-5">
+                <li><strong>Genera un calor controlado:</strong> El equipo eleva la temperatura de manera uniforme en los tejidos de la piel.</li>
+                <li><strong>Activa los procesos naturales del cuerpo:</strong> Este calor estimula a tus células para que produzcan nuevo colágeno y elastina, las proteínas responsables de la firmeza y elasticidad de la piel.</li>
+                <li><strong>Doble acción:</strong> No solo reafirma la piel, sino que también tiene un efecto vasodilatador que mejora la circulación sanguínea. Esto nutre las células, ayuda a eliminar toxinas y reduce la grasa localizada.</li>
+              </ol>
+               <p className="mt-4 text-lg text-muted-foreground">
+                El resultado es una piel visiblemente más tensa, un contorno corporal más definido y una apariencia más radiante y saludable.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
-          <Badge variant="secondary">Beneficios</Badge>
-          <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-            ¿Por qué elegir Contorno Corporal?
-          </h2>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+          <SectionTitleWithLines><span className='text-foreground'>Los Beneficios</span> <span className='text-primary'>que Más te Importarán</span></SectionTitleWithLines>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             {benefits.map((benefit, index) => (
               <Card key={index} className="p-6 flex items-start gap-4">
                 <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
                   <CheckCircle className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="font-semibold text-lg">{benefit}</p>
+                  <h3 className="font-semibold text-lg">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {benefit.description}
+                  </p>
                 </div>
               </Card>
             ))}
           </div>
         </section>
 
-        {/* Before and After Section */}
-        <section id="resultados" className="scroll-mt-20 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Resultados que Inspiran Confianza
-          </h2>
-          <Carousel
-            className="w-full max-w-4xl mx-auto mt-12"
-            opts={{
-              loop: true,
-            }}
-          >
-            <CarouselContent>
-              {[1, 2, 3].map(
-                (item, index) =>
-                  (
-                    <CarouselItem key={index}>
-                      <Card className="overflow-hidden">
-                        <CardContent className="p-0">
-                          <Placeholder className="w-full h-auto aspect-[3/2]" />
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  )
-              )}
-            </CarouselContent>
-            <CarouselPrevious className="-left-4 md:-left-12" />
-            <CarouselNext className="-right-4 md:-right-12" />
-          </Carousel>
-        </section>
-
         {/* FAQ Section */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">
-            Preguntas Frecuentes
-          </h2>
+           <div className="text-center">
+             <SectionTitleWithLines><span className='text-foreground'>Lo que Debes Saber</span> <span className='text-primary'>Sobre el Tratamiento</span></SectionTitleWithLines>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+              Lo que debes saber sobre el tratamiento Tensamax
+            </h2>
+            <p className='mt-4 max-w-2xl mx-auto text-lg text-muted-foreground'>
+                Queremos que te sientas seguro/a y bien informado/a. Aquí resolvemos las preguntas más comunes.
+            </p>
+          </div>
           <Accordion type="single" collapsible className="w-full mt-12">
             {faqs.map((faq, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
@@ -187,19 +210,27 @@ export default function ContornoCorporalPage() {
         {/* CTA Section */}
         <section id="citas" className="scroll-mt-20">
           <Card className="relative overflow-hidden shadow-xl md:grid md:grid-cols-2 items-center">
-             <div className="p-8 md:p-12">
+            <div className="p-8 md:p-12">
               <Badge>Consulta Personalizada</Badge>
               <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2 text-primary">
-                Da el Primer Paso
+                Transforma tu figura con seguridad y confianza
               </h2>
-               <p className="mt-4 text-lg text-muted-foreground">
-                Agenda una cita para una valoración personalizada y descubre cómo el Contorno Corporal puede ayudarte.
+              <p className="mt-4 text-lg text-muted-foreground">
+                Si buscas una alternativa real a la cirugía para reafirmar, tonificar y modelar tu piel, Tensamax es la solución que combina tecnología avanzada con resultados naturales y visibles.
               </p>
-              <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
-              </a>
-            </Button>
+              <Button
+                asChild
+                size="lg"
+                className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <a
+                  href="https://wa.me/573122784757"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                </a>
+              </Button>
             </div>
             <div className="relative h-64 md:h-full w-full">
               <Placeholder className="absolute inset-0" />
