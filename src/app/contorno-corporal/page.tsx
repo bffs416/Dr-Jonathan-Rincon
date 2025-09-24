@@ -151,7 +151,6 @@ export default function ContornoCorporalPage() {
         {/* Part A: Hidrolipoclasia */}
         <div className='space-y-24'>
             <SectionTitleWithLines>
-                <span className='text-foreground font-bold'>Parte A:</span>{' '}
                 <span className='text-primary font-bold'>Hidrolipoclasia – La "Liposucción sin Cirugía"</span>
             </SectionTitleWithLines>
 
@@ -223,7 +222,6 @@ export default function ContornoCorporalPage() {
         {/* Part B: Tensamax */}
         <div className='space-y-24'>
             <SectionTitleWithLines>
-                <span className='text-foreground font-bold'>Parte B:</span>{' '}
                 <span className='text-primary font-bold'>Tensamax – Reafirma tu Piel y Moldea tu Cuerpo</span>
             </SectionTitleWithLines>
             <section id="tensamax" className="scroll-mt-20">
