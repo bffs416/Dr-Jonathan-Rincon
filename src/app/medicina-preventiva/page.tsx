@@ -81,18 +81,18 @@ export default function MedicinaPreventivaPage() {
                 className="grid md:grid-cols-2 gap-12 items-center"
               >
                 <div>
-                  <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                  <h2 className="font-headline text-4xl md:text-5xl font-bold text-left">
                     Guía Completa de Rejuvenecimiento:{' '}
                     <span className="text-primary">
                       Transforma tu Piel Sin Cirugía
                     </span>
                   </h2>
-                  <p className="mt-4 text-lg text-muted-foreground">
+                  <p className="mt-4 text-lg text-muted-foreground text-left">
                     Descubre los tratamientos más innovadores para hidratar,
                     revitalizar, dar volumen y regenerar tu piel. Encuentra la
                     solución perfecta para ti.
                   </p>
-                  <div className="mt-8 text-lg text-muted-foreground space-y-4">
+                  <div className="mt-8 text-lg text-muted-foreground space-y-4 text-left">
                     <p>
                       En el mundo de la medicina estética, existen muchas opciones
                       para lucir una piel más joven, saludable y radiante sin
@@ -141,10 +141,10 @@ export default function MedicinaPreventivaPage() {
 
               <section id="hidratacion-calidad" className="scroll-mt-20">
                 <SectionTitleWithLines>
-                  <span className="text-foreground">Hidratación Profunda y</span>{' '}
-                  <span className="text-primary">Calidad de la Piel</span>
+                  <h2 className="text-foreground font-headline text-3xl font-bold">Hidratación Profunda y{' '}
+                  <span className="text-primary">Calidad de la Piel</span></h2>
                 </SectionTitleWithLines>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-left">
+                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
                   Estos tratamientos se enfocan en nutrir tu piel desde adentro
                   para devolverle la vitalidad, el brillo y la suavidad que ha
                   perdido con el tiempo.
@@ -179,10 +179,10 @@ export default function MedicinaPreventivaPage() {
                           efectivos.
                         </p>
                       </div>
-                      <Badge variant="secondary" className="mt-4">
+                      <p className="text-sm font-medium text-primary pt-2">
                         Ideal para: Personas que buscan una mejora general en la
                         luminosidad, hidratación y textura de la piel.
-                      </Badge>
+                      </p>
                     </CardContent>
                   </Card>
                   <Card>
@@ -211,10 +211,10 @@ export default function MedicinaPreventivaPage() {
                           manos. Sus efectos suelen durar entre 6 y 12 meses.
                         </p>
                       </div>
-                      <Badge variant="secondary" className="mt-4">
+                      <p className="text-sm font-medium text-primary pt-2">
                         Ideal para: Pieles deshidratadas, apagadas o que empiezan
                         a mostrar los primeros signos de envejecimiento.
-                      </Badge>
+                      </p>
                     </CardContent>
                   </Card>
                   <Card>
@@ -249,10 +249,10 @@ export default function MedicinaPreventivaPage() {
                           efecto.
                         </p>
                       </div>
-                      <Badge variant="secondary" className="mt-4">
+                      <p className="text-sm font-medium text-primary pt-2">
                         Ideal para: Pieles que necesitan una reparación profunda,
                         mejorar cicatrices o un extra de rejuvenecimiento.
-                      </Badge>
+                      </p>
                     </CardContent>
                   </Card>
                 </div>
@@ -260,12 +260,11 @@ export default function MedicinaPreventivaPage() {
 
               <section id="rellenos" className="scroll-mt-20">
                 <SectionTitleWithLines>
-                  <span className="text-foreground">
-                    Rellenos con Ácido Hialurónico –
-                  </span>{' '}
-                  <span className="text-primary">Volumen y Definición</span>
+                  <h2 className="text-foreground font-headline text-3xl font-bold">
+                    Rellenos con Ácido Hialurónico –{' '}
+                  <span className="text-primary">Volumen y Definición</span></h2>
                 </SectionTitleWithLines>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-left">
+                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
                   El ácido hialurónico es una sustancia que nuestro cuerpo produce
                   de forma natural para mantener la piel hidratada y con volumen,
                   pero su producción disminuye con la edad. Los rellenos dérmicos
@@ -298,11 +297,11 @@ export default function MedicinaPreventivaPage() {
                               varios meses.
                             </p>
                           </div>
-                          <Badge variant="secondary" className="mt-4">
+                          <p className="text-sm font-medium text-primary pt-2">
                             Ideal para: Quienes buscan corregir arrugas profundas,
                             restaurar volumen en mejillas o definir el contorno
                             facial.
-                          </Badge>
+                          </p>
                         </CardContent>
                       </Card>
                       <Card>
@@ -325,10 +324,10 @@ export default function MedicinaPreventivaPage() {
                               objetivo es embellecer, no transformar.
                             </p>
                           </div>
-                          <Badge variant="secondary" className="mt-4">
+                          <p className="text-sm font-medium text-primary pt-2">
                             Ideal para: Personas que desean labios más definidos,
                             voluminosos o simplemente revitalizados.
-                          </Badge>
+                          </p>
                         </CardContent>
                       </Card>
                     </div>
@@ -361,13 +360,13 @@ export default function MedicinaPreventivaPage() {
             <div className="space-y-24">
               <section id="intro-corporal" className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                  <h2 className="font-headline text-4xl md:text-5xl font-bold text-left">
                     Cuida y Previene: La Guía Esencial de{' '}
                     <span className="text-primary">
                       Tratamientos Corporales Sin Cirugía
                     </span>
                   </h2>
-                  <p className="mt-4 text-lg text-muted-foreground">
+                  <p className="mt-4 text-lg text-muted-foreground text-left">
                     Descubre cómo los masajes reductores, la carboxiterapia y la
                     vitamina C pueden ayudarte a mantener una figura armoniosa y
                     una piel saludable a largo plazo.
@@ -389,10 +388,9 @@ export default function MedicinaPreventivaPage() {
                 </div>
                 <div className="order-1 md:order-2">
                  <SectionTitleWithLines>
-                  <span className="text-foreground">
-                    Masajes Reductores
-                  </span>{' '}
-                  <span className="text-primary">– El Poder del Moldeado Manual</span>
+                  <h2 className="text-foreground font-headline text-3xl font-bold">
+                    Masajes Reductores –{' '}
+                  <span className="text-primary">El Poder del Moldeado Manual</span></h2>
                 </SectionTitleWithLines>
                   <Card className='mt-12'>
                     <CardHeader>
@@ -447,10 +445,9 @@ export default function MedicinaPreventivaPage() {
               <section id="carboxiterapia" className="grid md:grid-cols-2 gap-12 items-center">
                  <div>
                     <SectionTitleWithLines>
-                        <span className="text-foreground">
-                            Carboxiterapia
-                        </span>{' '}
-                        <span className="text-primary">– Oxigena y Regenera</span>
+                        <h2 className="text-foreground font-headline text-3xl font-bold">
+                            Carboxiterapia –{' '}
+                        <span className="text-primary">Oxigena y Regenera</span></h2>
                     </SectionTitleWithLines>
                     <Card className='mt-12'>
                         <CardHeader>
@@ -494,10 +491,9 @@ export default function MedicinaPreventivaPage() {
 
               <section id="vitamina-c">
                 <SectionTitleWithLines>
-                  <span className="text-foreground">
-                    Vitamina C en Glúteos – Firmeza y
-                  </span>{' '}
-                  <span className="text-primary">Calidad para tu Piel</span>
+                  <h2 className="text-foreground font-headline text-3xl font-bold">
+                    Vitamina C en Glúteos – Firmeza y{' '}
+                  <span className="text-primary">Calidad para tu Piel</span></h2>
                 </SectionTitleWithLines>
                 <div className="mt-12 space-y-8 max-w-4xl mx-auto">
                   <Alert variant="destructive">
