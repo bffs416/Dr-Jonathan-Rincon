@@ -228,6 +228,13 @@ export default function HilosTensoresPage() {
       beforeImage: { imageUrl: 'https://picsum.photos/seed/rino-antes/600/400', imageHint: 'rhino before' },
       afterImage: { imageUrl: 'https://picsum.photos/seed/rino-despues/600/400', imageHint: 'rhino after' },
     },
+    {
+      title: 'Líneas de Marioneta',
+      description: 'Suavizado de los pliegues de las comisuras de los labios.',
+      sessions: '1 sesión',
+      beforeImage: { imageUrl: 'https://picsum.photos/seed/marioneta-antes/600/400', imageHint: 'marionette lines before' },
+      afterImage: { imageUrl: 'https://picsum.photos/seed/marioneta-despues/600/400', imageHint: 'marionette lines after' },
+    },
     // Corporales
     {
       title: 'Levantamiento de Glúteos',
