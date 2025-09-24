@@ -5,9 +5,6 @@ import {
   CheckCircle,
   ShieldCheck,
   AlertTriangle,
-  Droplets,
-  Dna,
-  Syringe,
 } from 'lucide-react';
 import {
   Accordion,
@@ -198,84 +195,6 @@ export default function BioestimuladoresPage() {
           </div>
         </section>
         
-        {/* Section: Hydration and Skin Quality */}
-        <section id="hidratacion-calidad" className="scroll-mt-20">
-          <SectionTitleWithLines>
-            <span className="text-foreground">Hidratación Profunda y</span>{' '}
-            <span className="text-primary">Calidad de la Piel</span>
-          </SectionTitleWithLines>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
-            Estos tratamientos se enfocan en nutrir tu piel desde adentro para devolverle la vitalidad, el brillo y la suavidad que ha perdido con el tiempo.
-          </p>
-          <div className="mt-12 space-y-8">
-            <Card>
-                <CardHeader>
-                    <CardTitle className="flex items-center gap-3"><Syringe className='w-7 h-7 text-primary'/> Mesoterapia y Microneedling</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">
-                    <p>La mesoterapia es una técnica que consiste en aplicar microinyecciones superficiales para administrar un cóctel de sustancias beneficiosas directamente en la piel. Estos cócteles pueden incluir vitaminas, aminoácidos, minerales y ácido hialurónico, diseñados para revitalizar e hidratar.</p>
-                    <p className='mt-2'><strong className='text-foreground'>Microneedling (o Micropunción):</strong> Es una técnica que utiliza un dispositivo con microagujas muy finas para crear canales microscópicos en la piel. Esto no solo estimula la producción natural de colágeno, sino que también permite que los productos aplicados (como el PDRN o vitaminas) penetren mucho más profundo y sean más efectivos.</p>
-                    <Badge variant="secondary" className='mt-4'>Ideal para: Personas que buscan una mejora general en la luminosidad, hidratación y textura de la piel.</Badge>
-                </CardContent>
-            </Card>
-             <Card>
-                <CardHeader>
-                    <CardTitle className="flex items-center gap-3"><Droplets className='w-7 h-7 text-primary'/> Skinboosters (Hidratación Intensa)</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">
-                    <p>Los Skinboosters son un tipo de mesoterapia enfocada en la hidratación profunda. Se utilizan microinyecciones de un ácido hialurónico de baja densidad que no busca dar volumen, sino captar y retener agua en las capas internas de la piel.</p>
-                    <p className='mt-2'><strong className='text-foreground'>¿Qué puedes esperar?</strong> Una piel visiblemente más hidratada, jugosa, elástica y con un brillo natural. Suaviza líneas finas y mejora la calidad general de la piel en rostro, cuello, escote y manos. Los efectos pueden durar entre 6 y 12 meses.</p>
-                     <Badge variant="secondary" className='mt-4'>Ideal para: Pieles deshidratadas, apagadas o que empiezan a mostrar los primeros signos de envejecimiento.</Badge>
-                </CardContent>
-            </Card>
-             <Card>
-                <CardHeader>
-                    <CardTitle className="flex items-center gap-3"><Dna className='w-7 h-7 text-primary'/> PDRN (Conocido como "Esperma de Salmón")</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">
-                    <p>El PDRN (polideoxirribonucleótido) es un potente regenerador celular extraído del tejido gonadal del salmón. Aunque su apodo popular es "esperma de salmón", el producto utilizado en medicina estética es un fragmento de ADN purificado y seguro.</p>
-                    <p className='mt-2'><strong className='text-foreground'>¿Cómo funciona?</strong> Actúa a nivel celular estimulando la reparación de los tejidos, la producción de colágeno y elastina, y reduciendo la inflamación.</p>
-                    <p className='mt-2'><strong className='text-foreground'>Beneficios:</strong> Mejora la firmeza, reduce líneas finas, atenúa cicatrices de acné y devuelve la luminosidad a la piel. Se aplica mediante mesoterapia o microneedling para potenciar su efecto.</p>
-                    <Badge variant="secondary" className='mt-4'>Ideal para: Pieles que necesitan una reparación profunda, mejorar cicatrices o un extra de rejuvenecimiento.</Badge>
-                </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Section: Fillers */}
-        <section id="rellenos" className="scroll-mt-20">
-          <SectionTitleWithLines>
-            <span className="text-foreground">Rellenos con Ácido Hialurónico –</span>{' '}
-            <span className="text-primary">Volumen y Definición</span>
-          </SectionTitleWithLines>
-           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
-            El ácido hialurónico es una sustancia que nuestro cuerpo produce de forma natural para mantener la piel hidratada y con volumen, pero su producción disminuye con la edad. Los rellenos dérmicos utilizan una versión en gel de esta molécula para restaurar o añadir volumen de forma segura y con resultados inmediatos.
-          </p>
-           <div className="mt-12 grid md:grid-cols-2 gap-8">
-            <Card>
-                <CardHeader>
-                    <CardTitle>Ácido Hialurónico para Rostro</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">
-                    <p>Se utiliza para corregir arrugas estáticas (las que se ven con el rostro en reposo), reponer el volumen perdido en zonas como los pómulos o el mentón, y suavizar surcos como los nasogenianos ("líneas de la sonrisa").</p>
-                    <p className='mt-2'><strong className='text-foreground'>Resultados:</strong> El efecto es inmediato, logrando un aspecto más descansado y juvenil. La duración varía entre 9 y 18 meses, dependiendo del producto y la zona.</p>
-                     <Badge variant="secondary" className='mt-4'>Ideal para: Quienes buscan corregir arrugas profundas, restaurar volumen en mejillas o definir el contorno facial.</Badge>
-                </CardContent>
-            </Card>
-            <Card>
-                <CardHeader>
-                    <CardTitle>Ácido Hialurónico en Labios</CardTitle>
-                </CardHeader>
-                <CardContent className="text-muted-foreground">
-                    <p>Es uno de los tratamientos más demandados. Permite no solo aumentar el volumen, sino también definir el contorno, corregir asimetrías e hidratar profundamente los labios para que luzcan más saludables y jóvenes.</p>
-                    <p className='mt-2'><strong className='text-foreground'>¿Qué puedes esperar?</strong> Un resultado natural y adaptado a tus facciones. El objetivo es embellecer, no transformar.</p>
-                     <Badge variant="secondary" className='mt-4'>Ideal para: Personas que desean labios más definidos, voluminosos o simplemente revitalizados.</Badge>
-                </CardContent>
-            </Card>
-           </div>
-        </section>
-
-
         {/* Section 3: FAQ */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto">
           <div className="text-center">
