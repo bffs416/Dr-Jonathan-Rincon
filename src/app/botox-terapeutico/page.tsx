@@ -1,23 +1,35 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle,
+  Stethoscope,
+  Eye,
+  Wind,
+  Droplets,
+  Brain,
+  Bone,
+  ShieldAlert,
+  Info,
+} from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Card, CardContent } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 
 const Placeholder = ({
   className,
@@ -44,33 +56,92 @@ const Placeholder = ({
   </div>
 );
 
-
 export default function BotoxTerapeuticoPage() {
-  const benefits = [
-    'Beneficio 1',
-    'Beneficio 2',
-    'Beneficio 3',
-    'Beneficio 4',
-    'Beneficio 5',
-    'Beneficio 6',
+  const safetyPoints = [
+    {
+      title: 'Acción local y precisa',
+      description:
+        'El efecto se concentra únicamente en el músculo tratado, sin afectar otras áreas del cuerpo.',
+    },
+    {
+      title: 'No es un daño permanente',
+      description:
+        'No causa ninguna lesión física a los nervios ni a los músculos. Su efecto es temporal y dura varios meses.',
+    },
+    {
+      title: 'Tratamiento seguro',
+      description:
+        'Cuando es administrado por un médico con experiencia, es un procedimiento con un comportamiento predecible y muy pocos efectos secundarios.',
+    },
+  ];
+
+  const conditions = [
+    {
+      icon: Eye,
+      title: 'Espasmos musculares involuntarios',
+      description:
+        'Como el blefaroespasmo (contracción de los párpados) o el espasmo hemifacial (movimientos en un lado del rostro).',
+    },
+    {
+      icon: Wind,
+      title: 'Distonía cervical (tortícolis)',
+      description:
+        'Ayuda a relajar los músculos del cuello que provocan posturas dolorosas y anormales.',
+    },
+    {
+      icon: Stethoscope,
+      title: 'Espasticidad',
+      description:
+        'Reduce la rigidez muscular severa en extremidades, a menudo como secuela de un ACV o en parálisis cerebral.',
+    },
+    {
+      icon: Droplets,
+      title: 'Hiperhidrosis (sudoración excesiva)',
+      description:
+        'Solución muy eficaz para la sudoración severa en axilas, manos y pies, al relajar la actividad de las glándulas sudoríparas.',
+    },
+    {
+      icon: Brain,
+      title: 'Migrañas crónicas',
+      description:
+        'Aplicación reconocida para prevenir y reducir la frecuencia e intensidad de los dolores de cabeza crónicos.',
+    },
+    {
+      icon: Bone,
+      title: 'Dolores musculares crónicos',
+      description:
+        'Se utiliza en dolores de espalda y cuello causados por contracturas que no responden a otros tratamientos.',
+    },
   ];
 
   const faqs = [
     {
-      question: '¿Pregunta frecuente 1?',
+      question: '¿Quién puede administrar el tratamiento?',
       answer:
-        'Respuesta a la pregunta frecuente 1.',
+        'Esto es fundamental: la toxina botulínica terapéutica debe ser administrada exclusivamente por médicos con experiencia y formación específica en su aplicación, como neurólogos, traumatólogos, oftalmólogos o especialistas en medicina física y rehabilitación.',
     },
     {
-      question: '¿Pregunta frecuente 2?',
+      question: '¿Cómo es una sesión?',
       answer:
-        'Respuesta a la pregunta frecuente 2.',
+        'El médico identificará mediante palpación los músculos que necesitan ser tratados. Se aplicarán pequeñas inyecciones directamente en los músculos seleccionados. El procedimiento es rápido y se realiza en el consultorio. En la mayoría de los casos no se necesita anestesia, aunque se puede usar frío local para minimizar la molestia.',
     },
     {
-      question: '¿Pregunta frecuente 3?',
+      question: '¿Cuándo veré los resultados y cuánto duran?',
       answer:
-        'Respuesta a la pregunta frecuente 3.',
+        'El beneficio clínico suele empezar a notarse durante la primera semana, alcanzando su efecto máximo entre los 7 y 10 días posteriores. Los efectos duran generalmente de 3 a 6 meses, dependiendo de la condición tratada y de cada paciente. Pasado este tiempo, el tratamiento puede repetirse para mantener los beneficios.',
     },
+    {
+      question: '¿Cuáles son los efectos secundarios?',
+      answer:
+        'Es un tratamiento muy seguro y bien tolerado. El efecto adverso más común es una debilidad excesiva pero temporal en el músculo inyectado o en músculos cercanos. Otros efectos leves pueden ser dolor en el punto de inyección o algún pequeño hematoma, que desaparecen en pocos días. Las complicaciones graves son extremadamente raras cuando el procedimiento es realizado por un experto.',
+    },
+  ];
+
+  const contraindications = [
+    'Embarazo o periodo de lactancia.',
+    'Personas con enfermedades neuromusculares como miastenia gravis o esclerosis lateral amiotrófica (ELA).',
+    'Alergia conocida a la albúmina (proteína del huevo) o a alguno de los componentes de la fórmula.',
+    'Infecciones activas en la zona a tratar.',
   ];
 
   return (
@@ -82,94 +153,146 @@ export default function BotoxTerapeuticoPage() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-2">
-              Botox Terapéutico
+              Más Allá de la Belleza: El Poder Terapéutico de la Toxina
+              Botulínica
             </h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
-              Descripción corta sobre el Botox Terapéutico.
+            <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
+              Descubre los usos de un tratamiento seguro y eficaz para aliviar
+              condiciones médicas que afectan tu día a día.
             </p>
           </div>
         </div>
       </section>
 
       <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24">
-        {/* What are they? Section */}
+        {/* Section 1: Intro */}
         <section
-          id="que-son"
+          id="intro"
           className="scroll-mt-20 grid md:grid-cols-2 gap-12 items-center"
         >
           <div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
-              Título Descriptivo sobre Botox Terapéutico
+              ¿Sabías que el "Botox" es también un medicamento?
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Explicación detallada sobre qué es el Botox Terapéutico, cómo funciona y para quién es recomendado.
+              Cuando escuchas "toxina botulínica", probablemente piensas en el
+              tratamiento de arrugas. Si bien es mundialmente famoso por sus
+              aplicaciones estéticas, su capacidad para relajar músculos de
+              forma controlada lo convierte en una poderosa herramienta médica
+              para tratar diversas condiciones de salud que pueden ser dolorosas
+              o limitantes.
             </p>
-             <Button asChild size="lg" className="mt-8">
-                <Link href="#citas">
-                  Agenda tu Valoración <ArrowRight className="ml-2" />
-                </Link>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Este tratamiento, administrado por médicos especialistas, va más
+              allá de la superficie, ofreciendo alivio y una mejora
+              significativa en la calidad de vida de miles de personas.
+            </p>
+            <Button asChild size="lg" className="mt-8">
+              <Link href="#condiciones">
+                Ver Condiciones Tratables <ArrowRight className="ml-2" />
+              </Link>
             </Button>
           </div>
           <div>
-            <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" />
+            <Placeholder
+              className="rounded-xl shadow-2xl w-full aspect-square"
+              text="Imagen de médico preparando tratamiento"
+            />
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section id="beneficios" className="scroll-mt-20 text-center">
-          <Badge variant="secondary">Beneficios</Badge>
+        {/* Section 2: How it works */}
+        <section id="como-funciona" className="scroll-mt-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <Placeholder
+                className="rounded-xl shadow-2xl w-full aspect-square"
+                text="Diagrama de acción de la toxina botulínica"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">
+                ¿Cómo funciona en tratamientos terapéuticos?
+              </h2>
+              <p className="mt-6 text-lg text-muted-foreground">
+                La toxina botulínica es una neurotoxina purificada que, aplicada
+                en dosis muy pequeñas, actúa en la unión entre nervios y
+                músculos, bloqueando de forma temporal la señal de contracción.
+                Al interrumpir esta orden, el músculo que está hiperactivo o
+                causando un problema se relaja de manera segura.
+              </p>
+            </div>
+          </div>
+          <div className="mt-20 text-center">
+            <SectionTitleWithLines>
+              <span className="text-foreground">Puntos clave</span>{' '}
+              <span className="text-primary">para tu tranquilidad</span>
+            </SectionTitleWithLines>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+              {safetyPoints.map((point, index) => (
+                <Card key={index} className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
+                      <CheckCircle className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg">{point.title}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {point.description}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Conditions */}
+        <section id="condiciones" className="scroll-mt-20 text-center">
+          <SectionTitleWithLines>
+            <span className="text-foreground">Aplicaciones</span>{' '}
+            <span className="text-primary">Terapéuticas</span>
+          </SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-            ¿Por qué elegir Botox Terapéutico?
+            ¿Qué condiciones médicas se pueden tratar?
           </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+            Gracias a su capacidad para relajar la musculatura, la toxina
+            botulínica se ha convertido en un tratamiento de primera línea para
+            diversas patologías.
+          </p>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="p-6 flex items-start gap-4">
-                <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
-                  <CheckCircle className="w-6 h-6" />
+            {conditions.map((condition, index) => (
+              <Card key={index} className="p-6 flex flex-col items-start">
+                <div className="bg-primary/10 text-primary p-3 rounded-full mb-4">
+                  <condition.icon className="w-7 h-7" />
                 </div>
-                <div>
-                  <p className="font-semibold text-lg">{benefit}</p>
-                </div>
+                <h3 className="font-semibold text-xl">{condition.title}</h3>
+                <p className="text-muted-foreground mt-2 flex-1">
+                  {condition.description}
+                </p>
               </Card>
             ))}
           </div>
         </section>
 
-        {/* Before and After Section */}
-        <section id="resultados" className="scroll-mt-20 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Resultados que Inspiran Confianza
-          </h2>
-          <Carousel
-            className="w-full max-w-4xl mx-auto mt-12"
-            opts={{
-              loop: true,
-            }}
-          >
-            <CarouselContent>
-              {[1, 2, 3].map(
-                (item, index) =>
-                  (
-                    <CarouselItem key={index}>
-                      <Card className="overflow-hidden">
-                        <CardContent className="p-0">
-                          <Placeholder className="w-full h-auto aspect-[3/2]" />
-                        </CardContent>
-                      </Card>
-                    </CarouselItem>
-                  )
-              )}
-            </CarouselContent>
-            <CarouselPrevious className="-left-4 md:-left-12" />
-            <CarouselNext className="-right-4 md:-right-12" />
-          </Carousel>
-        </section>
-
-        {/* FAQ Section */}
+        {/* Section 4: FAQ */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">
-            Preguntas Frecuentes
-          </h2>
+          <div className="text-center">
+            <SectionTitleWithLines>
+              <span className="text-foreground">Lo que debes</span>{' '}
+              <span className="text-primary">Saber</span>
+            </SectionTitleWithLines>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+              Sobre el Procedimiento
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+              Entendemos que someterse a un tratamiento médico puede generar
+              dudas. Aquí resolvemos lo que a nuestros pacientes más les
+              importa.
+            </p>
+          </div>
           <Accordion type="single" collapsible className="w-full mt-12">
             {faqs.map((faq, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
@@ -184,22 +307,73 @@ export default function BotoxTerapeuticoPage() {
           </Accordion>
         </section>
 
-        {/* CTA Section */}
+        {/* Section 5: Safety */}
+        <section id="seguridad" className="scroll-mt-20">
+          <Card className="shadow-xl">
+            <CardHeader className="text-center">
+              <div className="flex justify-center">
+                <ShieldAlert className="w-12 h-12 text-destructive" />
+              </div>
+              <CardTitle className="font-headline text-3xl mt-2">
+                ¿Eres Candidato? Consideraciones Importantes
+              </CardTitle>
+              <p className="text-muted-foreground pt-2">
+                Aunque es un procedimiento seguro, no es para todos. Tu médico
+                evaluará tu historial clínico para confirmar que eres un buen
+                candidato.
+              </p>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <h4 className="font-semibold text-lg">
+                El tratamiento está contraindicado en los siguientes casos:
+              </h4>
+              <ul className="space-y-2">
+                {contraindications.map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <X className="w-4 h-4 mr-2 mt-1 shrink-0 text-destructive" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Alert>
+                <Info className="h-4 w-4" />
+                <AlertTitle>¡Recuerda!</AlertTitle>
+                <AlertDescription>
+                  Siempre informa a tu médico sobre cualquier medicamento que
+                  estés tomando, especialmente antibióticos, relajantes
+                  musculares o anticoagulantes.
+                </AlertDescription>
+              </Alert>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Section 6: CTA */}
         <section id="citas" className="scroll-mt-20">
           <Card className="relative overflow-hidden shadow-xl md:grid md:grid-cols-2 items-center">
-             <div className="p-8 md:p-12">
-              <Badge>Consulta Personalizada</Badge>
+            <div className="p-8 md:p-12">
+              <Badge>Consulta Especializada</Badge>
               <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2 text-primary">
-                Da el Primer Paso
+                Da el Primer Paso Hacia tu Bienestar
               </h2>
-               <p className="mt-4 text-lg text-muted-foreground">
-                Agenda una cita para una valoración personalizada y descubre cómo el Botox Terapéutico puede ayudarte.
+              <p className="mt-4 text-lg text-muted-foreground">
+                Si sufres de alguna de estas condiciones, la toxina botulínica
+                terapéutica podría ser la solución. No tienes que resignarte a
+                vivir con dolor o limitaciones.
               </p>
-              <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
-              </a>
-            </Button>
+              <Button
+                asChild
+                size="lg"
+                className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                <a
+                  href="https://wa.me/573122784757"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                </a>
+              </Button>
             </div>
             <div className="relative h-64 md:h-full w-full">
               <Placeholder className="absolute inset-0" />
