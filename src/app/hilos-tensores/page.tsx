@@ -43,32 +43,46 @@ export default function HilosTensoresPage() {
 
   const benefits = [
     {
-      title: 'Rinomodelación con Hilos',
-      description:
-        'Alternativa no quirúrgica para elevar la punta y rectificar el dorso nasal.',
+      title: 'Lifting de mejillas y pómulos.',
+      image: {
+        url: 'https://picsum.photos/seed/cheeks/250/125',
+        hint: 'cheek lift',
+      },
     },
     {
-      title: 'Lifting de Cejas (Fox Eyes)',
-      description:
-        'Eleva la cola de la ceja para una mirada más abierta y juvenil.',
+      title: 'Redefinición del óvalo facial.',
+      image: {
+        url: 'https://picsum.photos/seed/jawline/250/125',
+        hint: 'jawline definition',
+      },
     },
     {
-      title: 'Marcación Abdominal',
-      description: 'Define los rectos abdominales y combate la flacidez.',
+      title: 'Elevación de cejas caídas.',
+      image: {
+        url: 'https://picsum.photos/seed/eyebrow/250/125',
+        hint: 'eyebrow lift',
+      },
     },
     {
-      title: 'Lifting de Brazos y Piernas',
-      description:
-        'Solución eficaz para la flacidez en cara interna de brazos y muslos.',
+      title: 'Corrección de surcos nasogenianos.',
+      image: {
+        url: 'https://picsum.photos/seed/nasolabial/250/125',
+        hint: 'nasolabial folds',
+      },
     },
     {
-      title: 'Levantamiento de Glúteos',
-      description: 'Mejora la ptosis leve a moderada y redefine el contorno.',
+      title: 'Rejuvenecimiento del cuello.',
+      image: {
+        url: 'https://picsum.photos/seed/neck/250/125',
+        hint: 'neck rejuvenation',
+      },
     },
     {
-      title: 'Tratamiento de Cicatrices Atróficas',
-      description:
-        'Estimula colágeno para rellenar y mejorar la textura de cicatrices.',
+      title: 'Mejora general de la piel.',
+      image: {
+        url: 'https://picsum.photos/seed/skin/250/125',
+        hint: 'skin improvement',
+      },
     },
   ];
 
@@ -81,7 +95,7 @@ export default function HilosTensoresPage() {
     {
       name: 'Hilos Espiculados (COG)',
       description:
-        'Son los protagonistas del efecto lifting. Cuentan con pequeñas espículas (dientes) que se anclan al tejido, permitiendo traccionar y reposicionar la piel de forma inmediata y efectiva.',
+        'Son los protagonistas del efecto lifting. Cuentan con pequeñas anclas que se anclan al tejido, permitiendo traccionar y reposicionar la piel de forma inmediata y efectiva.',
     },
   ];
 
@@ -350,9 +364,8 @@ export default function HilosTensoresPage() {
 
          {/* Advanced Applications Section */}
         <section id="aplicaciones" className="scroll-mt-20 text-center">
-          <Badge variant="secondary">Más Allá del Rostro</Badge>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-            Aplicaciones Corporales y Faciales Específicas
+            Más Allá del Rostro: Aplicaciones Corporales y Faciales
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
             La versatilidad de los hilos tensores permite tratar diversas áreas
@@ -361,12 +374,14 @@ export default function HilosTensoresPage() {
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {advancedApplications.map((app, index) => (
               <Card key={index} className="overflow-hidden shadow-lg text-center">
-                <SectionArch
-                    imageUrl={app.image.url}
-                    alt={app.title}
-                    data-ai-hint={app.image.hint}
-                    className="mx-auto shadow-none"
-                  />
+                <CardHeader className='p-0'>
+                  <SectionArch
+                      imageUrl={app.image.url}
+                      alt={app.title}
+                      data-ai-hint={app.image.hint}
+                      className="shadow-none"
+                    />
+                </CardHeader>
                 <CardContent className="p-6">
                   <p className="font-headline font-semibold text-xl">{app.title}</p>
                   <p className="text-sm text-muted-foreground mt-2">
@@ -461,7 +476,7 @@ export default function HilosTensoresPage() {
             <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 md:-right-10" />
           </Carousel>
         </section>
-        
+
         {/* Thread Types Section */}
         <section id="tipos-hilos" className="scroll-mt-20 text-center">
           <Badge variant="secondary">Herramientas de Precisión</Badge>
@@ -493,7 +508,7 @@ export default function HilosTensoresPage() {
             ))}
           </div>
         </section>
-
+        
          {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
           <Badge variant="secondary">Beneficios Clave</Badge>
@@ -504,41 +519,24 @@ export default function HilosTensoresPage() {
             Descubre los múltiples beneficios de este tratamiento innovador para
             devolverle la juventud a tu rostro y cuerpo.
           </p>
-          <div className="mt-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.slice(0, 6).map((benefit, index) => (
-                <div
-                  key={index}
-                  className={cn('flip-card h-48', {
-                    flipped: flippedCard === index,
-                  })}
-                  onClick={() => handleCardFlip(index)}
-                >
-                  <div className="flip-card-inner">
-                    <div className="flip-card-front">
-                      <Card className="w-full h-full p-6 flex flex-col items-center justify-center gap-4 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
-                        <p className="font-semibold text-lg">{benefit.title}</p>
-                        <div className="bg-primary/10 text-primary p-2 rounded-full mt-2">
-                          <CheckCircle className="w-6 h-6" />
-                        </div>
-                        <span className="text-xs text-muted-foreground absolute bottom-3 right-4 flex items-center gap-1">
-                          Ver más <RefreshCw className="w-3 h-3" />
-                        </span>
-                      </Card>
-                    </div>
-                    <div className="flip-card-back">
-                      <Card className="w-full h-full p-6 flex flex-col items-start justify-center text-left bg-primary text-primary-foreground shadow-xl cursor-pointer">
-                        <p className="text-sm">{benefit.description}</p>
-                        <span className="text-xs text-primary-foreground/70 absolute bottom-3 right-4 flex items-center gap-1">
-                          Volver <RefreshCw className="w-3 h-3" />
-                        </span>
-                      </Card>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <SectionArch
+                  imageUrl={benefit.image.url}
+                  alt={benefit.title}
+                  data-ai-hint={benefit.image.hint}
+                />
+                <Card className="w-full -mt-8 pt-12 pb-4 px-4 shadow-lg">
+                  <CardContent className="p-0 flex items-center justify-center gap-4">
+                     <div className="bg-primary/10 text-primary p-2 rounded-full">
+                        <CheckCircle className="w-6 h-6" />
+                      </div>
+                    <p className="font-semibold text-lg">{benefit.title}</p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
           </div>
         </section>
 
