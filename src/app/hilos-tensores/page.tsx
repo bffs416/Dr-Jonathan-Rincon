@@ -90,29 +90,53 @@ export default function HilosTensoresPage() {
       title: 'Rinomodelación con Hilos',
       description:
         'Alternativa no quirúrgica para elevar la punta y rectificar el dorso nasal.',
+      image: {
+        url: 'https://picsum.photos/seed/rhino/250/125',
+        hint: 'nose shaping',
+      }
     },
     {
       title: 'Lifting de Cejas (Fox Eyes)',
       description:
         'Eleva la cola de la ceja para una mirada más abierta y juvenil.',
+      image: {
+        url: 'https://picsum.photos/seed/foxeyes/250/125',
+        hint: 'eyebrow lift',
+      }
     },
     {
       title: 'Marcación Abdominal',
       description: 'Define los rectos abdominales y combate la flacidez.',
+       image: {
+        url: 'https://picsum.photos/seed/abs/250/125',
+        hint: 'abdominal definition',
+      }
     },
     {
       title: 'Lifting de Brazos y Piernas',
       description:
         'Solución eficaz para la flacidez en cara interna de brazos y muslos.',
+       image: {
+        url: 'https://picsum.photos/seed/arms/250/125',
+        hint: 'arm lift',
+      }
     },
     {
       title: 'Levantamiento de Glúteos',
       description: 'Mejora la ptosis leve a moderada y redefine el contorno.',
+       image: {
+        url: 'https://picsum.photos/seed/glutes/250/125',
+        hint: 'butt lift',
+      }
     },
     {
       title: 'Tratamiento de Cicatrices Atróficas',
       description:
         'Estimula colágeno para rellenar y mejorar la textura de cicatrices.',
+       image: {
+        url: 'https://picsum.photos/seed/scars/250/125',
+        hint: 'scar treatment',
+      }
     },
   ];
 
@@ -326,11 +350,6 @@ export default function HilosTensoresPage() {
 
          {/* Advanced Applications Section */}
         <section id="aplicaciones" className="scroll-mt-20 text-center">
-           <SectionArch
-            imageUrl="https://picsum.photos/seed/applications-arch/250/125"
-            alt="Aplicaciones de hilos tensores"
-            data-ai-hint="aesthetic procedure"
-          />
           <Badge variant="secondary">Más Allá del Rostro</Badge>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Aplicaciones Corporales y Faciales Específicas
@@ -339,18 +358,21 @@ export default function HilosTensoresPage() {
             La versatilidad de los hilos tensores permite tratar diversas áreas
             del cuerpo y rostro con resultados espectaculares.
           </p>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {advancedApplications.map((app, index) => (
-              <Card key={index} className="p-6 flex items-start gap-4">
-                <div className="text-primary mt-1">
-                  <PlusCircle className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="font-semibold text-lg">{app.title}</p>
-                  <p className="text-sm text-muted-foreground mt-1">
+              <Card key={index} className="overflow-hidden shadow-lg text-center">
+                <SectionArch
+                    imageUrl={app.image.url}
+                    alt={app.title}
+                    data-ai-hint={app.image.hint}
+                    className="mx-auto shadow-none"
+                  />
+                <CardContent className="p-6">
+                  <p className="font-headline font-semibold text-xl">{app.title}</p>
+                  <p className="text-sm text-muted-foreground mt-2">
                     {app.description}
                   </p>
-                </div>
+                </CardContent>
               </Card>
             ))}
           </div>
@@ -359,11 +381,6 @@ export default function HilosTensoresPage() {
 
         {/* Before and After Section */}
         <section id="resultados" className="scroll-mt-20 text-center">
-            <SectionArch
-              imageUrl="https://picsum.photos/seed/results-arch/250/125"
-              alt="Resultados de hilos tensores"
-              data-ai-hint="happy patient"
-            />
             <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Antes y <span className="text-primary">Después</span>
             </h2>
@@ -447,11 +464,6 @@ export default function HilosTensoresPage() {
         
         {/* Thread Types Section */}
         <section id="tipos-hilos" className="scroll-mt-20 text-center">
-           <SectionArch
-            imageUrl="https://picsum.photos/seed/threads-arch/250/125"
-            alt="Tipos de hilos"
-            data-ai-hint="medical equipment"
-          />
           <Badge variant="secondary">Herramientas de Precisión</Badge>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Cada Hilo tiene su Propósito
@@ -484,11 +496,6 @@ export default function HilosTensoresPage() {
 
          {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
-           <SectionArch
-            imageUrl="https://picsum.photos/seed/benefits-arch/250/125"
-            alt="Beneficios del tratamiento"
-            data-ai-hint="radiant skin"
-          />
           <Badge variant="secondary">Beneficios Clave</Badge>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Resultados que Transforman con el Lifting No Quirúrgico
@@ -537,11 +544,6 @@ export default function HilosTensoresPage() {
 
         {/* FAQ Section */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto text-center">
-          <SectionArch
-            imageUrl="https://picsum.photos/seed/faq-arch/250/125"
-            alt="Preguntas frecuentes"
-            data-ai-hint="question mark"
-          />
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">
             Preguntas Frecuentes sobre Hilos Tensores
           </h2>
