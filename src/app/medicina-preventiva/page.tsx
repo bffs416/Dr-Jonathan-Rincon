@@ -152,118 +152,127 @@ export default function MedicinaPreventivaPage() {
                   perdido con el tiempo.
                 </p>
                 <div className="mt-12 space-y-16">
+                  
                   {/* Mesoterapia */}
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div className="flex justify-center">
-                      <SectionArch imageUrl="https://picsum.photos/seed/mesoterapia/250/125" alt="Mesoterapia facial" data-ai-hint="facial mesotherapy" />
+                  <div className="relative flex items-center min-h-[320px]">
+                    <div className="hidden md:block absolute left-0 w-1/2 h-full">
+                       <div className="relative w-[320px] h-[320px] ml-auto mr-[-160px]">
+                         <Image src="https://picsum.photos/seed/mesoterapia/320/320" alt="Mesoterapia facial" layout="fill" className="rounded-full object-cover" data-ai-hint="facial mesotherapy" />
+                       </div>
                     </div>
-                    <Card>
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-3">
-                          <Syringe className="w-7 h-7 text-primary" /> Mesoterapia y Microneedling
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-muted-foreground space-y-4">
-                        <p>
-                          La mesoterapia es una técnica que consiste en aplicar
-                          microinyecciones en la piel para administrar un cóctel de
-                          sustancias beneficiosas directamente donde se necesitan.
-                          Estos cócteles pueden incluir vitaminas, minerales,
-                          aminoácidos y ácido hialurónico.
-                        </p>
-                        <div>
-                          <strong className="text-foreground">
-                            Microneedling (o Micropunción):
-                          </strong>{' '}
-                          <p className="mt-1">
-                            Es una técnica que utiliza un dispositivo con microagujas
-                            muy finas para crear canales microscópicos en la piel.
-                            Esto no solo estimula la producción natural de colágeno,
-                            sino que también permite que los productos aplicados penetren mucho más profundo.
-                          </p>
-                        </div>
-                        <p className="text-sm font-medium text-primary pt-2">
-                          Ideal para: Personas que buscan una mejora general en la
-                          luminosidad, hidratación y textura de la piel.
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <div className="md:w-1/2 md:ml-auto">
+                        <Card className="p-6 md:pl-[180px]">
+                           <CardTitle className="flex items-center gap-3 font-headline">
+                             <Syringe className="w-7 h-7 text-primary" /> Mesoterapia y Microneedling
+                           </CardTitle>
+                           <CardContent className="text-muted-foreground space-y-4 p-0 pt-4">
+                                <p>
+                                La mesoterapia es una técnica que consiste en aplicar
+                                microinyecciones en la piel para administrar un cóctel de
+                                sustancias beneficiosas directamente donde se necesitan.
+                                Estos cócteles pueden incluir vitaminas, minerales,
+                                aminoácidos y ácido hialurónico.
+                                </p>
+                                <div>
+                                <strong className="text-foreground">
+                                    Microneedling (o Micropunción):
+                                </strong>{' '}
+                                <p className="mt-1">
+                                    Es una técnica que utiliza un dispositivo con microagujas
+                                    muy finas para crear canales microscópicos en la piel.
+                                    Esto no solo estimula la producción natural de colágeno,
+                                    sino que también permite que los productos aplicados penetren mucho más profundo.
+                                </p>
+                                </div>
+                                <p className="text-sm font-medium text-primary pt-2">
+                                Ideal para: Personas que buscan una mejora general en la
+                                luminosidad, hidratación y textura de la piel.
+                                </p>
+                           </CardContent>
+                        </Card>
+                    </div>
                   </div>
+
                   {/* Skinboosters */}
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <Card className="order-2 md:order-1">
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-3">
-                          <Droplets className="w-7 h-7 text-primary" />{' '}
-                          Skinboosters
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-muted-foreground space-y-4">
-                        <p>
-                          Los Skinboosters son un tipo de tratamiento enfocado en la
-                          hidratación profunda. Se utilizan microinyecciones de un
-                          ácido hialurónico de baja densidad que no busca dar
-                          volumen, sino captar y retener agua en las capas internas
-                          de la piel.
-                        </p>
-                        <div>
-                          <strong className="text-foreground">
-                            ¿Qué puedes esperar?
-                          </strong>{' '}
-                          <p className="mt-1">
-                            Una piel visiblemente más hidratada, jugosa, elástica y con
-                            un brillo natural. Suaviza líneas finas y mejora la
-                            calidad general de la piel. Sus efectos suelen durar entre 6 y 12 meses.
-                          </p>
-                        </div>
-                        <p className="text-sm font-medium text-primary pt-2">
-                          Ideal para: Pieles deshidratadas, apagadas o que empiezan
-                          a mostrar los primeros signos de envejecimiento.
-                        </p>
-                      </CardContent>
-                    </Card>
-                     <div className="order-1 md:order-2 flex justify-center">
-                       <SectionArch imageUrl="https://picsum.photos/seed/skinbooster/250/125" alt="Tratamiento con skinboosters" data-ai-hint="skin hydration treatment" />
-                    </div>
+                  <div className="relative flex items-center min-h-[320px]">
+                      <div className="hidden md:block absolute right-0 w-1/2 h-full">
+                         <div className="relative w-[320px] h-[320px] mr-auto ml-[-160px]">
+                            <Image src="https://picsum.photos/seed/skinbooster/320/320" alt="Tratamiento con skinboosters" layout="fill" className="rounded-full object-cover" data-ai-hint="skin hydration treatment" />
+                         </div>
+                      </div>
+                      <div className="md:w-1/2 md:mr-auto">
+                          <Card className="p-6 md:pr-[180px]">
+                             <CardTitle className="flex items-center gap-3 font-headline">
+                               <Droplets className="w-7 h-7 text-primary" />{' '}
+                               Skinboosters
+                             </CardTitle>
+                             <CardContent className="text-muted-foreground space-y-4 p-0 pt-4">
+                                  <p>
+                                  Los Skinboosters son un tipo de tratamiento enfocado en la
+                                  hidratación profunda. Se utilizan microinyecciones de un
+                                  ácido hialurónico de baja densidad que no busca dar
+                                  volumen, sino captar y retener agua en las capas internas
+                                  de la piel.
+                                  </p>
+                                  <div>
+                                  <strong className="text-foreground">
+                                      ¿Qué puedes esperar?
+                                  </strong>{' '}
+                                  <p className="mt-1">
+                                      Una piel visiblemente más hidratada, jugosa, elástica y con
+                                      un brillo natural. Suaviza líneas finas y mejora la
+                                      calidad general de la piel. Sus efectos suelen durar entre 6 y 12 meses.
+                                  </p>
+                                  </div>
+                                  <p className="text-sm font-medium text-primary pt-2">
+                                  Ideal para: Pieles deshidratadas, apagadas o que empiezan
+                                  a mostrar los primeros signos de envejecimiento.
+                                  </p>
+                             </CardContent>
+                          </Card>
+                      </div>
                   </div>
+
                   {/* PDRN */}
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                     <div className="flex justify-center">
-                       <SectionArch imageUrl="https://picsum.photos/seed/pdrn/250/125" alt="Tratamiento PDRN (esperma de salmón)" data-ai-hint="collagen stimulation" />
-                     </div>
-                    <Card>
-                      <CardHeader>
-                        <CardTitle className="flex items-center gap-3">
-                          <Dna className="w-7 h-7 text-primary" /> PDRN (Esperma de Salmón)
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="text-muted-foreground space-y-4">
-                        <p>
-                          El PDRN (polideoxirribonucleótido) es un potente
-                          regenerador celular extraído del tejido gonadal del salmón.
-                          Es un fragmento de ADN purificado y seguro.
-                        </p>
-                        <div>
-                          <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
-                          <p className="mt-1">
-                            Actúa a nivel celular estimulando la reparación de los
-                            tejidos, la producción de colágeno, mejorando la
-                            elasticidad y reduciendo la inflamación.
-                          </p>
-                        </div>
-                        <div>
-                          <strong className="text-foreground">Beneficios:</strong>{' '}
-                          <p className="mt-1">
-                            Mejora la firmeza, reduce líneas finas, atenúa cicatrices
-                            de acné y devuelve la luminosidad a la piel.
-                          </p>
-                        </div>
-                        <p className="text-sm font-medium text-primary pt-2">
-                          Ideal para: Pieles que necesitan una reparación profunda,
-                          mejorar cicatrices o un extra de rejuvenecimiento.
-                        </p>
-                      </CardContent>
-                    </Card>
+                  <div className="relative flex items-center min-h-[320px]">
+                    <div className="hidden md:block absolute left-0 w-1/2 h-full">
+                       <div className="relative w-[320px] h-[320px] ml-auto mr-[-160px]">
+                         <Image src="https://picsum.photos/seed/pdrn/320/320" alt="Tratamiento PDRN (esperma de salmón)" layout="fill" className="rounded-full object-cover" data-ai-hint="collagen stimulation" />
+                       </div>
+                    </div>
+                    <div className="md:w-1/2 md:ml-auto">
+                        <Card className="p-6 md:pl-[180px]">
+                           <CardTitle className="flex items-center gap-3 font-headline">
+                             <Dna className="w-7 h-7 text-primary" /> PDRN (Esperma de Salmón)
+                           </CardTitle>
+                           <CardContent className="text-muted-foreground space-y-4 p-0 pt-4">
+                                <p>
+                                El PDRN (polideoxirribonucleótido) es un potente
+                                regenerador celular extraído del tejido gonadal del salmón.
+                                Es un fragmento de ADN purificado y seguro.
+                                </p>
+                                <div>
+                                <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
+                                <p className="mt-1">
+                                    Actúa a nivel celular estimulando la reparación de los
+                                    tejidos, la producción de colágeno, mejorando la
+                                    elasticidad y reduciendo la inflamación.
+                                </p>
+                                </div>
+                                <div>
+                                <strong className="text-foreground">Beneficios:</strong>{' '}
+                                <p className="mt-1">
+                                    Mejora la firmeza, reduce líneas finas, atenúa cicatrices
+                                    de acné y devuelve la luminosidad a la piel.
+                                </p>
+                                </div>
+                                <p className="text-sm font-medium text-primary pt-2">
+                                Ideal para: Pieles que necesitan una reparación profunda,
+                                mejorar cicatrices o un extra de rejuvenecimiento.
+                                </p>
+                           </CardContent>
+                        </Card>
+                    </div>
                   </div>
                 </div>
               </section>
