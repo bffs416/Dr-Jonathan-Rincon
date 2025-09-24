@@ -3,15 +3,8 @@ import { Button } from '@/components/ui/button';
 import {
   ArrowRight,
   CheckCircle,
-  Stethoscope,
-  Eye,
-  Wind,
-  Droplets,
-  Brain,
-  Bone,
-  ShieldAlert,
+  ShieldCheck,
   Info,
-  X,
 } from 'lucide-react';
 import {
   Accordion,
@@ -58,92 +51,52 @@ const Placeholder = ({
 );
 
 export default function BotoxTerapeuticoPage() {
-  const safetyPoints = [
+  
+  const treatmentZones = [
     {
-      title: 'Acción local y precisa',
+      title: 'Entrecejo',
       description:
-        'El efecto se concentra únicamente en el músculo tratado, sin afectar otras áreas del cuerpo.',
+        'Para suavizar el ceño fruncido que da apariencia de enojo o preocupación.',
     },
     {
-      title: 'No es un daño permanente',
-      description:
-        'No causa ninguna lesión física a los nervios ni a los músculos. Su efecto es temporal y dura varios meses.',
+      title: 'Frente',
+      description: 'Para atenuar las líneas horizontales.',
     },
     {
-      title: 'Tratamiento seguro',
+      title: 'Patas de gallo',
       description:
-        'Cuando es administrado por un médico con experiencia, es un procedimiento con un comportamiento predecible y muy pocos efectos secundarios.',
-    },
-  ];
-
-  const conditions = [
-    {
-      icon: Eye,
-      title: 'Espasmos musculares involuntarios',
-      description:
-        'Como el blefaroespasmo (contracción persistente de los párpados) o el espasmo hemifacial (movimientos en un lado del rostro).',
-    },
-    {
-      icon: Wind,
-      title: 'Distonía cervical (tortícolis espasmódica)',
-      description:
-        'Ayuda a relajar los músculos del cuello que provocan posturas dolorosas y anormales.',
-    },
-    {
-      icon: Stethoscope,
-      title: 'Espasticidad',
-      description:
-        'Reduce la rigidez muscular severa en brazos, manos o piernas, a menudo causada por parálisis cerebral en niños o como secuela de un accidente cerebrovascular (ACV) en adultos.',
-    },
-    {
-      icon: Droplets,
-      title: 'Hiperhidrosis (sudoración excesiva)',
-      description:
-        'Solución muy eficaz para la sudoración severa en axilas, manos y pies. La toxina relaja la actividad de las glándulas sudoríparas, reduciendo drásticamente la producción de sudor.',
-    },
-    {
-      icon: Brain,
-      title: 'Migrañas crónicas',
-      description:
-        'Aplicación reconocida para prevenir y reducir la frecuencia e intensidad de los dolores de cabeza crónicos.',
-    },
-    {
-      icon: Bone,
-      title: 'Dolores musculares crónicos',
-      description:
-        'Se utiliza en algias vertebrales (dolores de espalda y cuello) causadas por contracturas que no responden a otros tratamientos.',
+        'Para reducir las arrugas alrededor de los ojos que aparecen al sonreír.',
     },
   ];
 
   const faqs = [
     {
-      question: '¿Quién puede administrar el tratamiento?',
+      question: '¿Para quién es este tratamiento?',
       answer:
-        'Esto es fundamental: la toxina botulínica terapéutica debe ser administrada exclusivamente por médicos con experiencia y formación específica en su aplicación, como neurólogos, traumatólogos, oftalmólogos o especialistas en medicina física y rehabilitación.',
+        'Es ideal para hombres y mujeres que desean tratar las arrugas de expresión ya existentes o prevenir su aparición. Es un tratamiento que se adapta a las necesidades individuales, siempre buscando la armonía facial.',
     },
     {
-      question: '¿Cómo es una sesión?',
+      question: '¿El procedimiento duele?',
       answer:
-        'El médico identificará mediante palpación los músculos que necesitan ser tratados. Se aplicarán pequeñas inyecciones directamente en los músculos seleccionados. El procedimiento es rápido y se realiza en el consultorio. En la mayoría de los casos no se necesita anestesia, aunque se puede usar frío local para minimizar la molestia.',
+        '¡Es un tratamiento muy bien tolerado! Se utilizan agujas extrafinas, por lo que la molestia es mínima. La mayoría de los pacientes lo describen como pequeños pinchazos que no requieren anestesia, aunque se puede usar frío local para mayor comodidad.',
     },
     {
       question: '¿Cuándo veré los resultados y cuánto duran?',
       answer:
-        'El beneficio clínico suele empezar a notarse durante la primera semana, alcanzando su efecto máximo entre los 7 y 10 días posteriores. Los efectos duran generalmente de 3 a 6 meses, dependiendo de la condición tratada y de cada paciente. Pasado este tiempo, el tratamiento puede repetirse para mantener los beneficios.',
+        'Los efectos no son inmediatos. Empezarás a notar una mejoría entre 2 y 4 días después de la aplicación, alcanzando el resultado máximo en unos 7 a 10 días. La duración de este efecto rejuvenecedor es temporal, generalmente de 3 a 6 meses. Pasado este tiempo, el músculo recupera su movilidad y el tratamiento puede repetirse para mantener los resultados.',
     },
     {
-      question: '¿Cuáles son los efectos secundarios?',
+      question: '¿Cómo es la recuperación?',
       answer:
-        'Es un tratamiento muy seguro y bien tolerado. El efecto adverso más común es una debilidad excesiva pero temporal en el músculo inyectado o en músculos cercanos. Otros efectos leves pueden ser dolor en el punto de inyección o algún pequeño hematoma, que desaparecen en pocos días. Las complicaciones graves son extremadamente raras cuando el procedimiento es realizado por un experto.',
+        '¡No hay tiempo de recuperación! Es un procedimiento ambulatorio que te permite volver a tus actividades diarias de inmediato. Simplemente se recomienda no hacer ejercicio intenso ni masajear la zona tratada durante las primeras horas.',
+    },
+    {
+      question: '¿Es un tratamiento seguro?',
+      answer:
+        'Sí, cuando es aplicado por un médico cualificado, es un procedimiento con un comportamiento muy predecible y un alto perfil de seguridad. Los efectos secundarios son raros, leves y temporales, como pequeños hematomas o un ligero dolor en el punto de inyección.',
     },
   ];
 
-  const contraindications = [
-    'Embarazo o periodo de lactancia.',
-    'Personas con enfermedades neuromusculares como miastenia gravis o esclerosis lateral amiotrófica (ELA).',
-    'Alergia conocida a la albúmina (proteína del huevo) o a alguno de los componentes de la fórmula.',
-    'Infecciones activas en la zona a tratar.',
-  ];
 
   return (
     <div>
@@ -154,12 +107,10 @@ export default function BotoxTerapeuticoPage() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-2">
-              Más Allá de la Belleza: Cómo la Toxina Botulínica Puede Mejorar tu
-              Calidad de Vida
+              Redescubre tu Juventud: El Secreto para una Apariencia Fresca y Natural
             </h1>
             <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
-              Descubre los usos terapéuticos de un tratamiento seguro y eficaz
-              para aliviar condiciones médicas que afectan tu día a día.
+              Dile adiós a las arrugas de expresión y luce un rostro descansado, sin cirugías ni perder tu esencia.
             </p>
           </div>
         </div>
@@ -173,31 +124,24 @@ export default function BotoxTerapeuticoPage() {
         >
           <div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
-              ¿Sabías que el "Botox" es también un medicamento?
+              ¿Por qué aparecen las arrugas de expresión?
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              Cuando escuchas "toxina botulínica", probablemente piensas en el
-              tratamiento de arrugas y rejuvenecimiento facial. Si bien es
-              mundialmente famoso por sus aplicaciones estéticas, su capacidad
-              para relajar músculos de forma controlada lo convierte en una
-              poderosa herramienta médica para tratar diversas condiciones de
-              salud que pueden ser dolorosas o limitantes.
+              Cada vez que sonríes, frunces el ceño o te sorprendes, los músculos de tu rostro se contraen. Con el paso de los años, estos movimientos repetidos van dejando marcas en la piel, conocidas como arrugas dinámicas o de expresión. En una piel joven, estas líneas desaparecen al relajar el rostro, pero con el tiempo, la piel pierde elasticidad y las arrugas se vuelven visibles incluso en reposo.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
-              Este tratamiento, administrado por médicos especialistas, va más
-              allá de la superficie, ofreciendo alivio y una mejora
-              significativa en la calidad de vida de miles de personas.
+              Si buscas una forma segura y eficaz de suavizar estas líneas y recuperar una apariencia más relajada y juvenil, el tratamiento con toxina botulínica es una de las mejores y más populares opciones en la medicina estética actual.
             </p>
             <Button asChild size="lg" className="mt-8">
-              <Link href="#condiciones">
-                Ver Condiciones Tratables <ArrowRight className="ml-2" />
+              <Link href="#como-funciona">
+                Descubrir cómo funciona <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>
           <div>
             <Placeholder
               className="rounded-xl shadow-2xl w-full aspect-square"
-              text="Imagen de médico preparando tratamiento"
+              text="Imagen de rostro con arrugas de expresión"
             />
           </div>
         </section>
@@ -208,42 +152,40 @@ export default function BotoxTerapeuticoPage() {
             <div className="order-2 md:order-1">
               <Placeholder
                 className="rounded-xl shadow-2xl w-full aspect-square"
-                text="Diagrama de acción de la toxina botulínica"
+                text="Diagrama de acción de la toxina botulínica estética"
               />
             </div>
             <div className="order-1 md:order-2">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                ¿Cómo funciona la toxina botulínica en tratamientos
-                terapéuticos?
+                ¿Qué es la toxina botulínica estética y cómo funciona su "magia"?
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
-                La toxina botulínica es una neurotoxina purificada que, aplicada
-                en dosis muy pequeñas y controladas, actúa directamente en la
-                unión entre los nervios y los músculos. Su mecanismo es simple
-                pero muy efectivo: bloquea de forma temporal la liberación de
-                acetilcolina, la sustancia que transmite la orden de contracción
-                desde el nervio al músculo. Al interrumpir esta señal, el
-                músculo que está hiperactivo o causando un problema se relaja de
-                manera segura.
+                La toxina botulínica, conocida popularmente como "bótox", es una proteína purificada que actúa como un relajante muscular muy preciso. No es un relleno, su función es muy diferente y específica.
+              </p>
+               <p className="mt-4 text-lg text-muted-foreground">
+                Se aplica en dosis muy pequeñas mediante microinyecciones directamente en los músculos responsables de formar esas arrugas que te preocupan. Su mecanismo de acción es bloquear temporalmente la señal nerviosa que ordena al músculo contraerse. Al relajar el músculo de forma controlada, la piel que lo recubre se alisa y las arrugas de expresión se suavizan o desaparecen.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground">
+                 El objetivo nunca es "congelar" tu rostro, sino relajar para lograr un aspecto natural. Queremos que sigas expresando tus emociones, pero de una manera más suave y fresca.
               </p>
             </div>
           </div>
           <div className="mt-20 text-center">
             <SectionTitleWithLines>
-              <span className="text-foreground">Puntos clave</span>{' '}
-              <span className="text-primary">para tu tranquilidad</span>
+              <span className="text-foreground">Zonas más comunes</span>{' '}
+              <span className="text-primary">de tratamiento</span>
             </SectionTitleWithLines>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-              {safetyPoints.map((point, index) => (
+              {treatmentZones.map((zone, index) => (
                 <Card key={index} className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                       <CheckCircle className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg">{point.title}</h3>
+                      <h3 className="font-semibold text-lg">{zone.title}</h3>
                       <p className="text-sm text-muted-foreground mt-1">
-                        {point.description}
+                        {zone.description}
                       </p>
                     </div>
                   </div>
@@ -253,49 +195,15 @@ export default function BotoxTerapeuticoPage() {
           </div>
         </section>
 
-        {/* Section 3: Conditions */}
-        <section id="condiciones" className="scroll-mt-20 text-center">
-          <SectionTitleWithLines>
-            <span className="text-foreground">Aplicaciones</span>{' '}
-            <span className="text-primary">Terapéuticas</span>
-          </SectionTitleWithLines>
-          <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-            ¿Qué condiciones médicas se pueden tratar?
-          </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Gracias a su capacidad para relajar la musculatura de forma
-            controlada, la toxina botulínica se ha convertido en un tratamiento
-            de primera línea para diversas patologías.
-          </p>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            {conditions.map((condition, index) => (
-              <Card key={index} className="p-6 flex flex-col items-start">
-                <div className="bg-primary/10 text-primary p-3 rounded-full mb-4">
-                  <condition.icon className="w-7 h-7" />
-                </div>
-                <h3 className="font-semibold text-xl">{condition.title}</h3>
-                <p className="text-muted-foreground mt-2 flex-1">
-                  {condition.description}
-                </p>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Section 4: FAQ */}
+        {/* Section 3: FAQ */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto">
           <div className="text-center">
             <SectionTitleWithLines>
-              <span className="text-foreground">Lo que debes</span>{' '}
-              <span className="text-primary">Saber</span>
+              <span className="text-foreground">Todo lo que quieres saber</span>{' '}
+              <span className="text-primary">antes de decidirte</span>
             </SectionTitleWithLines>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-              Sobre el Procedimiento
-            </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-              Entendemos que someterse a un tratamiento médico puede generar
-              dudas. Aquí resolvemos lo que a nuestros pacientes más les
-              importa.
+              Es normal tener preguntas. Aquí respondemos las más importantes para que te sientas con total confianza.
             </p>
           </div>
           <Accordion type="single" collapsible className="w-full mt-12">
@@ -312,60 +220,46 @@ export default function BotoxTerapeuticoPage() {
           </Accordion>
         </section>
 
-        {/* Section 5: Safety */}
+        {/* Section 4: Safety */}
         <section id="seguridad" className="scroll-mt-20">
-          <Card className="shadow-xl">
+          <Card className="border-yellow-500/50 shadow-xl">
             <CardHeader className="text-center">
               <div className="flex justify-center">
-                <ShieldAlert className="w-12 h-12 text-destructive" />
+                <ShieldCheck className="w-12 h-12 text-primary" />
               </div>
               <CardTitle className="font-headline text-3xl mt-2">
-                ¿Eres Candidato? Consideraciones Importantes
+                La Clave del Éxito: Relajar, no Paralizar y Elegir al Profesional Adecuado
               </CardTitle>
-              <p className="text-muted-foreground pt-2">
-                Aunque es un procedimiento seguro, no es para todos. Tu médico
-                evaluará tu historial clínico para confirmar que eres un buen
-                candidato.
-              </p>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <h4 className="font-semibold text-lg">
-                El tratamiento está contraindicado en los siguientes casos:
-              </h4>
-              <ul className="space-y-2">
-                {contraindications.map((item, index) => (
-                  <li key={index} className="flex items-start">
-                    <X className="w-4 h-4 mr-2 mt-1 shrink-0 text-destructive" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <CardContent className="space-y-4 text-lg text-muted-foreground">
+              <p>
+                El secreto de un buen resultado es la naturalidad. El objetivo es relajar los músculos para suavizar las arrugas, no paralizarlos y dejar un rostro sin expresión. Un buen médico sabrá dosificar y aplicar el producto de forma estratégica para mantener la armonía de tus facciones.
+              </p>
+              <p>
+                Por ello, es fundamental que el tratamiento sea administrado exclusivamente por médicos con la formación y experiencia adecuadas, como dermatólogos o cirujanos plásticos. Ellos conocen a la perfección la anatomía facial y la técnica de inyección para lograr los mejores resultados y minimizar cualquier riesgo.
+              </p>
               <Alert>
                 <Info className="h-4 w-4" />
-                <AlertTitle>¡Recuerda!</AlertTitle>
+                <AlertTitle>¡Importante!</AlertTitle>
                 <AlertDescription>
-                  Siempre informa a tu médico sobre cualquier medicamento que
-                  estés tomando, especialmente antibióticos, relajantes
-                  musculares o anticoagulantes.
+                  Asegúrate de que el producto utilizado sea de una marca aprobada por las autoridades sanitarias, como Vistabel®, Azzalure® o Bocouture® en España.
                 </AlertDescription>
               </Alert>
             </CardContent>
           </Card>
         </section>
 
-        {/* Section 6: CTA */}
+
+        {/* Section 5: CTA */}
         <section id="citas" className="scroll-mt-20">
           <Card className="relative overflow-hidden shadow-xl md:grid md:grid-cols-2 items-center">
             <div className="p-8 md:p-12">
-              <Badge>Consulta Especializada</Badge>
+              <Badge>Consulta Personalizada</Badge>
               <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2 text-primary">
-                Da el Primer Paso Hacia tu Bienestar
+                ¿Estás listo/a para una mirada más joven y relajada?
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Si sufres de alguna de estas condiciones, la toxina botulínica
-                terapéutica podría ser la solución que te devuelva la comodidad
-                y la confianza. No tienes que resignarte a vivir con dolor o
-                limitaciones.
+                Si quieres reducir esas arrugas que te hacen parecer cansado/a o preocupado/a y buscas un resultado natural que te devuelva la frescura, este tratamiento es para ti.
               </p>
               <Button
                 asChild
