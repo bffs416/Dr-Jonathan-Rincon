@@ -75,6 +75,45 @@ export default function MedicinaPreventivaPage() {
           </TabsList>
           <TabsContent value="facial" className="mt-12">
             <div className="space-y-24">
+              <section id="intro-facial">
+                <div className="text-center max-w-3xl mx-auto">
+                  <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                    Guía Completa de Rejuvenecimiento:{' '}
+                    <span className="text-primary">
+                      Transforma tu Piel Sin Cirugía
+                    </span>
+                  </h2>
+                  <p className="mt-4 text-lg text-muted-foreground">
+                    Descubre los tratamientos más innovadores para hidratar,
+                    revitalizar, dar volumen y regenerar tu piel. Encuentra la
+                    solución perfecta para ti.
+                  </p>
+                  <p className="mt-6 text-muted-foreground">
+                    En el mundo de la medicina estética, existen muchas opciones
+                    para lucir una piel más joven, saludable y radiante sin
+                    necesidad de pasar por el quirófano. Desde tratamientos
+                    que hidratan en profundidad hasta aquellos que reponen el
+                    volumen perdido, hay una solución para cada necesidad.
+                  </p>
+                  <p className="mt-4 text-muted-foreground">
+                    En esta guía, te explicamos de manera sencilla los
+                    tratamientos más efectivos y demandados, organizados en dos
+                    grandes grupos para que identifiques fácilmente cuál se
+                    adapta a lo que buscas:
+                  </p>
+                   <ul className="mt-4 text-left space-y-2 inline-block">
+                        <li className="flex items-start gap-2">
+                            <CheckCircle className="w-5 h-5 text-primary mt-1 shrink-0"/>
+                            <span><strong className="text-foreground">Hidratación y Calidad de la Piel:</strong> Para quienes buscan luminosidad, mejorar la textura y una piel visiblemente más sana y jugosa.</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                            <CheckCircle className="w-5 h-5 text-primary mt-1 shrink-0"/>
+                            <span><strong className="text-foreground">Relleno y Definición con Ácido Hialurónico:</strong> Para tratar arrugas, reponer volumen perdido y definir facciones como labios, pómulos o surcos faciales.</span>
+                        </li>
+                    </ul>
+                </div>
+              </section>
+
               <section id="hidratacion-calidad" className="scroll-mt-20">
                 <SectionTitleWithLines>
                   <span className="text-foreground">Hidratación Profunda y</span>{' '}
@@ -89,27 +128,28 @@ export default function MedicinaPreventivaPage() {
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center gap-3">
-                        <Syringe className="w-7 h-7 text-primary" /> Mesoterapia y
-                        Técnicas de Aplicación (Microneedling)
+                        <Syringe className="w-7 h-7 text-primary" /> Mesoterapia
+                        y Técnicas de Aplicación (Microneedling)
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="text-muted-foreground">
                       <p>
                         La mesoterapia es una técnica que consiste en aplicar
-                        microinyecciones superficiales para administrar un cóctel de
-                        sustancias beneficiosas directamente en la piel. Estos
-                        cócteles pueden incluir vitaminas, aminoácidos, minerales y
-                        ácido hialurónico, diseñados para revitalizar e hidratar.
+                        microinyecciones en la piel para administrar un cóctel de
+                        sustancias beneficiosas directamente donde se necesitan.
+                        Estos cócteles pueden incluir vitaminas, minerales,
+                        aminoácidos y ácido hialurónico, diseñados para
+                        revitalizar e hidratar.
                       </p>
                       <p className="mt-2">
                         <strong className="text-foreground">
                           Microneedling (o Micropunción):
                         </strong>{' '}
                         Es una técnica que utiliza un dispositivo con microagujas
-                        muy finas para crear canales microscópicos en la piel. Esto
-                        no solo estimula la producción natural de colágeno, sino
-                        que también permite que los productos aplicados (como el
-                        PDRN o vitaminas) penetren mucho más profundo y sean más
+                        muy finas para crear canales microscópicos en la piel.
+                        Esto no solo estimula la producción natural de colágeno,
+                        sino que también permite que los productos aplicados (como
+                        el PDRN o vitaminas) penetren mucho más profundo y sean más
                         efectivos.
                       </p>
                       <Badge variant="secondary" className="mt-4">
@@ -127,7 +167,7 @@ export default function MedicinaPreventivaPage() {
                     </CardHeader>
                     <CardContent className="text-muted-foreground">
                       <p>
-                        Los Skinboosters son un tipo de mesoterapia enfocada en la
+                        Los Skinboosters son un tipo de tratamiento enfocado en la
                         hidratación profunda. Se utilizan microinyecciones de un
                         ácido hialurónico de baja densidad que no busca dar
                         volumen, sino captar y retener agua en las capas internas
@@ -140,7 +180,7 @@ export default function MedicinaPreventivaPage() {
                         Una piel visiblemente más hidratada, jugosa, elástica y con
                         un brillo natural. Suaviza líneas finas y mejora la
                         calidad general de la piel en rostro, cuello, escote y
-                        manos. Los efectos pueden durar entre 6 y 12 meses.
+                        manos. Sus efectos suelen durar entre 6 y 12 meses.
                       </p>
                       <Badge variant="secondary" className="mt-4">
                         Ideal para: Pieles deshidratadas, apagadas o que empiezan
@@ -166,8 +206,8 @@ export default function MedicinaPreventivaPage() {
                       <p className="mt-2">
                         <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
                         Actúa a nivel celular estimulando la reparación de los
-                        tejidos, la producción de colágeno y elastina, y reduciendo
-                        la inflamación.
+                        tejidos, la producción de colágeno, mejorando la
+                        elasticidad y reduciendo la inflamación.
                       </p>
                       <p className="mt-2">
                         <strong className="text-foreground">Beneficios:</strong>{' '}
@@ -202,7 +242,7 @@ export default function MedicinaPreventivaPage() {
                 <div className="mt-12 grid md:grid-cols-2 gap-8">
                   <Card>
                     <CardHeader>
-                      <CardTitle>Ácido Hialurónico para Rostro</CardTitle>
+                      <CardTitle>Ácido Hialurónico para Rostro (Surcos, Pómulos)</CardTitle>
                     </CardHeader>
                     <CardContent className="text-muted-foreground">
                       <p>
@@ -214,8 +254,8 @@ export default function MedicinaPreventivaPage() {
                       <p className="mt-2">
                         <strong className="text-foreground">Resultados:</strong> El
                         efecto es inmediato, logrando un aspecto más descansado y
-                        juvenil. La duración varía entre 9 y 18 meses, dependiendo
-                        del producto y la zona.
+                        juvenil. La duración es variable, pero puede prolongarse
+                        varios meses.
                       </p>
                       <Badge variant="secondary" className="mt-4">
                         Ideal para: Quienes buscan corregir arrugas profundas,
@@ -250,27 +290,37 @@ export default function MedicinaPreventivaPage() {
                   </Card>
                 </div>
               </section>
+
+               <section id="decision" className="scroll-mt-20 max-w-3xl mx-auto">
+                    <Card className="p-6 md:p-8 text-center shadow-lg border-primary/20">
+                        <CardHeader className="p-0">
+                            <CardTitle className="font-headline text-2xl text-primary">Tu Belleza, Tu Decisión – La Importancia de una Valoración Profesional</CardTitle>
+                        </CardHeader>
+                        <CardContent className="p-0 mt-4 text-muted-foreground">
+                            <p>Cada piel es única y cada rostro tiene sus propias necesidades. La clave para un resultado exitoso y seguro es una valoración personalizada con un médico especialista. Un profesional cualificado podrá evaluar tu piel, entender tus objetivos y recomendarte el tratamiento o la combinación de técnicas que te ofrezca los mejores resultados.</p>
+                        </CardContent>
+                    </Card>
+                </section>
+
             </div>
           </TabsContent>
           <TabsContent value="corporal" className="mt-12">
             <div className="space-y-24">
               <section id="intro-corporal">
                 <div className="text-center max-w-3xl mx-auto">
-                  <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                    Cuida y Previene: La Guía Esencial de Tratamientos
-                    Corporales Sin Cirugía
+                  <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                    Cuida y Previene: La Guía Esencial de{' '}
+                    <span className="text-primary">
+                      Tratamientos Corporales Sin Cirugía
+                    </span>
                   </h2>
                   <p className="mt-4 text-lg text-muted-foreground">
                     Descubre cómo los masajes reductores, la carboxiterapia y la
                     vitamina C pueden ayudarte a mantener una figura armoniosa y
                     una piel saludable a largo plazo.
                   </p>
-                  <p className="mt-4 text-muted-foreground">
-                    Adoptar un enfoque preventivo significa actuar antes de que
-                    los signos del tiempo, como la flacidez o la celulitis
-                    avanzada, se instalen. Se trata de darle a tu cuerpo las
-                    herramientas que necesita para mantenerse firme, saludable y
-                    en armonía.
+                  <p className="mt-6 text-muted-foreground">
+                    A menudo asociamos los tratamientos corporales con la idea de "corregir" algo que no nos gusta. Pero, ¿y si te dijéramos que la clave es la prevención? Adoptar un enfoque preventivo significa actuar antes de que los signos del tiempo, como la flacidez o la celulitis avanzada, se instalen.
                   </p>
                 </div>
               </section>
@@ -318,12 +368,11 @@ export default function MedicinaPreventivaPage() {
                           para otros tratamientos al ablandar el tejido adiposo.
                         </li>
                       </ul>
-                      <Alert variant="destructive">
+                      <Alert>
                         <AlertTriangle className="h-4 w-4" />
                         <AlertTitle>Importante</AlertTitle>
                         <AlertDescription>
-                          Los masajes reductores no son una solución mágica para
-                          perder peso. Son más efectivos con una alimentación
+                          Los masajes reductores no son una solución mágica. Son más efectivos con una alimentación
                           saludable y ejercicio. No se recomiendan en casos de
                           piel sensible, hipertensión, diabetes, embarazo o
                           lactancia.
@@ -419,7 +468,7 @@ export default function MedicinaPreventivaPage() {
                           </strong>{' '}
                           Mejora la firmeza, tonicidad y elasticidad.
                         </li>
-                        <li>
+<li>
                           <strong className="text-foreground">
                             Mejora la textura:
                           </strong>{' '}
