@@ -12,7 +12,7 @@ export function SectionTitleWithLines({
   return (
     <div className={cn('flex items-center gap-4 text-center', className)}>
       <div className="flex-1 border-t-[3px] border-border" />
-      <div className="flex-shrink-0 text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+      <div className="flex-shrink-0 text-sm font-semibold uppercase tracking-widest">
         {children}
       </div>
       <div className="flex-1 border-t-[3px] border-border" />

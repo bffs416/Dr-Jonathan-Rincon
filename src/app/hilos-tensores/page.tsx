@@ -484,7 +484,10 @@ export default function HilosTensoresPage() {
 
         {/* Thread Types Section */}
         <section id="tipos-hilos" className="scroll-mt-20 text-center">
-          <SectionTitleWithLines>Herramientas de Precisión</SectionTitleWithLines>
+           <SectionTitleWithLines>
+             <span className="text-foreground">Herramientas de</span>{' '}
+             <span className="text-primary">Precisión</span>
+           </SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Cada Hilo tiene su Propósito
           </h2>
@@ -543,7 +546,10 @@ export default function HilosTensoresPage() {
         
          {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
-          <SectionTitleWithLines>Beneficios Clave</SectionTitleWithLines>
+           <SectionTitleWithLines>
+             <span className="text-foreground">Beneficios</span>{' '}
+             <span className="text-primary">Clave</span>
+           </SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Resultados que Transforman con el Lifting No Quirúrgico
           </h2>
@@ -574,7 +580,10 @@ export default function HilosTensoresPage() {
 
         {/* FAQ Section */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto text-center">
-          <SectionTitleWithLines>Preguntas Frecuentes</SectionTitleWithLines>
+           <SectionTitleWithLines>
+             <span className="text-foreground">Preguntas</span>{' '}
+             <span className="text-primary">Frecuentes</span>
+           </SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mt-2">
             Resolvemos tus dudas
           </h2>
