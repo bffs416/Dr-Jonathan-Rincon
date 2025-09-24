@@ -19,7 +19,6 @@ import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import Image from 'next/image';
-import { SectionArch } from '@/components/section-arch';
 
 const Placeholder = ({
   className,
@@ -98,9 +97,7 @@ export default function MedicinaPreventivaPage() {
                     <p>
                       En el mundo de la medicina estética, existen muchas opciones
                       para lucir una piel más joven, saludable y radiante sin
-                      necesidad de pasar por el quirófano. Desde tratamientos
-                      que hidratan en profundidad hasta aquellos que reponen el
-                      volumen perdido, hay una solución para cada necesidad.
+                      necesidad de pasar por el quirófano.
                     </p>
                     <p>
                       En esta guía, te explicamos de manera sencilla los
@@ -154,7 +151,7 @@ export default function MedicinaPreventivaPage() {
                 <div className="mt-12 space-y-16">
                   
                   {/* Mesoterapia */}
-                  <div className="relative pt-16">
+                   <div className="relative pt-16">
                     <div className="hidden md:block absolute top-0 left-0 h-full w-[320px] z-10">
                       <Image src="https://picsum.photos/seed/mesoterapia/320/320" alt="Mesoterapia facial" layout="fill" className="rounded-full object-cover" data-ai-hint="facial mesotherapy" />
                     </div>
@@ -228,7 +225,7 @@ export default function MedicinaPreventivaPage() {
                   </div>
 
                   {/* PDRN */}
-                  <div className="relative pt-16">
+                   <div className="relative pt-16">
                     <div className="hidden md:block absolute top-0 left-0 h-full w-[320px] z-10">
                       <Image src="https://picsum.photos/seed/pdrn/320/320" alt="Tratamiento PDRN (esperma de salmón)" layout="fill" className="rounded-full object-cover" data-ai-hint="collagen stimulation" />
                     </div>
