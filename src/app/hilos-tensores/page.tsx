@@ -28,6 +28,8 @@ import {
 } from '@/components/ui/dialog';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import type { Metadata } from 'next';
+
 
 export default function HilosTensoresPage() {
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
@@ -141,9 +143,41 @@ export default function HilosTensoresPage() {
   const whatAreTheyImage = PlaceHolderImages.find(
     (img) => img.id === 'hilos-what-are'
   );
-  const beforeAfterImages = PlaceHolderImages.filter((img) =>
-    img.id.startsWith('hilos-results-')
-  );
+  const beforeAfterCases = [
+    {
+      title: 'Lifting de Cuello',
+      description: 'Hilos espiculados para tensado de papada.',
+      sessions: '1 sesión',
+      beforeImage: PlaceHolderImages.find(
+        (img) => img.id === 'hilos-results-1'
+      ),
+      afterImage: PlaceHolderImages.find(
+        (img) => img.id === 'hilos-results-2'
+      ),
+    },
+    {
+      title: 'Rejuvenecimiento Facial',
+      description: 'Combinación de hilos lisos y espiculados.',
+      sessions: '1 sesión',
+      beforeImage: PlaceHolderImages.find(
+        (img) => img.id === 'hilos-results-2'
+      ),
+      afterImage: PlaceHolderImages.find(
+        (img) => img.id === 'hilos-results-3'
+      ),
+    },
+    {
+      title: 'Definición Mandibular',
+      description: 'Técnica para un óvalo facial definido.',
+      sessions: '1 sesión',
+      beforeImage: PlaceHolderImages.find(
+        (img) => img.id === 'hilos-results-3'
+      ),
+      afterImage: PlaceHolderImages.find(
+        (img) => img.id === 'hilos-results-1'
+      ),
+    },
+  ];
   const ctaImage = PlaceHolderImages.find((img) => img.id === 'hilos-cta');
 
   const handleCardFlip = (index: number) => {
@@ -285,6 +319,40 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
+        {/* Thread Types Section */}
+        <section id="tipos-hilos" className="scroll-mt-20">
+          <div className="text-center">
+            <Badge variant="secondary">Herramientas de Precisión</Badge>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+              Cada Hilo tiene su Propósito
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+              Utilizo diferentes tipos de hilos (lisos, espiculados) para
+              personalizar tu tratamiento de lifting facial y lograr los mejores
+              resultados según tus necesidades de tracción o redensificación en
+              Medellín.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {threadTypes.map((type) => (
+              <Card key={type.name} className="text-center p-8">
+                <CardHeader className="p-0 items-center">
+                  {/* Placeholder for actual icons */}
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-3xl text-primary">✧</span>
+                  </div>
+                  <CardTitle className="font-headline text-xl">
+                    {type.name}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 mt-4">
+                  <p className="text-muted-foreground">{type.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
           <Badge variant="secondary">Beneficios Clave</Badge>
@@ -332,39 +400,6 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
-        {/* Thread Types Section */}
-        <section id="tipos-hilos" className="scroll-mt-20">
-          <div className="text-center">
-            <Badge variant="secondary">Herramientas de Precisión</Badge>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-              Cada Hilo tiene su Propósito
-            </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Utilizo diferentes tipos de hilos (lisos, espiculados) para
-              personalizar tu tratamiento de lifting facial y lograr los mejores
-              resultados según tus necesidades de tracción o redensificación en
-              Medellín.
-            </p>
-          </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            {threadTypes.map((type) => (
-              <Card key={type.name} className="text-center p-8">
-                <CardHeader className="p-0 items-center">
-                  {/* Placeholder for actual icons */}
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-3xl text-primary">✧</span>
-                  </div>
-                  <CardTitle className="font-headline text-xl">
-                    {type.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 mt-4">
-                  <p className="text-muted-foreground">{type.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
 
         {/* Advanced Applications Section */}
         <section id="aplicaciones" className="scroll-mt-20 text-center">
