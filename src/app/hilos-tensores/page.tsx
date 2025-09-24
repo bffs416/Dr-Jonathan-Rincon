@@ -494,14 +494,14 @@ export default function HilosTensoresPage() {
             resultados según tus necesidades de tracción o redensificación en
             Medellín.
           </p>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {threadTypes.map((type, index) => (
               <div
                 key={type.name}
                 className={cn('flip-card', { flipped: flippedCard === index })}
                 onClick={() => handleCardFlip(index)}
               >
-                <div className="flip-card-inner cursor-pointer" style={{height: "280px"}}>
+                <div className="flip-card-inner cursor-pointer" style={{height: "320px"}}>
                   <div className="flip-card-front">
                     <Card className="text-center p-8 h-full flex flex-col justify-center shadow-lg">
                       <CardHeader className="p-0 items-center">
