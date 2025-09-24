@@ -371,24 +371,23 @@ export default function HilosTensoresPage() {
             La versatilidad de los hilos tensores permite tratar diversas áreas
             del cuerpo y rostro con resultados espectaculares.
           </p>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {advancedApplications.map((app, index) => (
-              <Card key={index} className="overflow-hidden shadow-lg text-center">
-                <CardHeader className='p-0'>
-                  <SectionArch
-                      imageUrl={app.image.url}
-                      alt={app.title}
-                      data-ai-hint={app.image.hint}
-                      className="shadow-none"
-                    />
-                </CardHeader>
-                <CardContent className="p-6">
-                  <p className="font-headline font-semibold text-xl">{app.title}</p>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    {app.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <div key={index} className="flex flex-col items-center text-center">
+                <SectionArch
+                  imageUrl={app.image.url}
+                  alt={app.title}
+                  data-ai-hint={app.image.hint}
+                />
+                <Card className="w-full -mt-8 pt-12 pb-6 px-6 shadow-lg flex flex-col flex-1">
+                  <CardContent className="p-0 flex-1">
+                    <p className="font-headline font-semibold text-xl">{app.title}</p>
+                    <p className="text-sm text-muted-foreground mt-2">
+                      {app.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
         </section>
