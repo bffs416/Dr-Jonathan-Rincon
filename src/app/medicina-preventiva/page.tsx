@@ -144,7 +144,7 @@ export default function MedicinaPreventivaPage() {
                   <span className="text-foreground">Hidratación Profunda y</span>{' '}
                   <span className="text-primary">Calidad de la Piel</span>
                 </SectionTitleWithLines>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
+                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-left">
                   Estos tratamientos se enfocan en nutrir tu piel desde adentro
                   para devolverle la vitalidad, el brillo y la suavidad que ha
                   perdido con el tiempo.
@@ -265,7 +265,7 @@ export default function MedicinaPreventivaPage() {
                   </span>{' '}
                   <span className="text-primary">Volumen y Definición</span>
                 </SectionTitleWithLines>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
+                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-left">
                   El ácido hialurónico es una sustancia que nuestro cuerpo produce
                   de forma natural para mantener la piel hidratada y con volumen,
                   pero su producción disminuye con la edad. Los rellenos dérmicos
@@ -380,7 +380,7 @@ export default function MedicinaPreventivaPage() {
                 </div>
                  <div>
                   <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" text="Imagen de tratamiento corporal" />
-                </div>
+                 </div>
               </section>
 
               <section id="masajes-reductores" className="grid md:grid-cols-2 gap-12 items-center">
