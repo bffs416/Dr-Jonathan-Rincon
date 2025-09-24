@@ -11,6 +11,7 @@ import {
   Bone,
   ShieldAlert,
   Info,
+  X,
 } from 'lucide-react';
 import {
   Accordion,
@@ -80,11 +81,11 @@ export default function BotoxTerapeuticoPage() {
       icon: Eye,
       title: 'Espasmos musculares involuntarios',
       description:
-        'Como el blefaroespasmo (contracción de los párpados) o el espasmo hemifacial (movimientos en un lado del rostro).',
+        'Como el blefaroespasmo (contracción persistente de los párpados) o el espasmo hemifacial (movimientos en un lado del rostro).',
     },
     {
       icon: Wind,
-      title: 'Distonía cervical (tortícolis)',
+      title: 'Distonía cervical (tortícolis espasmódica)',
       description:
         'Ayuda a relajar los músculos del cuello que provocan posturas dolorosas y anormales.',
     },
@@ -92,13 +93,13 @@ export default function BotoxTerapeuticoPage() {
       icon: Stethoscope,
       title: 'Espasticidad',
       description:
-        'Reduce la rigidez muscular severa en extremidades, a menudo como secuela de un ACV o en parálisis cerebral.',
+        'Reduce la rigidez muscular severa en brazos, manos o piernas, a menudo causada por parálisis cerebral en niños o como secuela de un accidente cerebrovascular (ACV) en adultos.',
     },
     {
       icon: Droplets,
       title: 'Hiperhidrosis (sudoración excesiva)',
       description:
-        'Solución muy eficaz para la sudoración severa en axilas, manos y pies, al relajar la actividad de las glándulas sudoríparas.',
+        'Solución muy eficaz para la sudoración severa en axilas, manos y pies. La toxina relaja la actividad de las glándulas sudoríparas, reduciendo drásticamente la producción de sudor.',
     },
     {
       icon: Brain,
@@ -110,7 +111,7 @@ export default function BotoxTerapeuticoPage() {
       icon: Bone,
       title: 'Dolores musculares crónicos',
       description:
-        'Se utiliza en dolores de espalda y cuello causados por contracturas que no responden a otros tratamientos.',
+        'Se utiliza en algias vertebrales (dolores de espalda y cuello) causadas por contracturas que no responden a otros tratamientos.',
     },
   ];
 
@@ -153,12 +154,12 @@ export default function BotoxTerapeuticoPage() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-2">
-              Más Allá de la Belleza: El Poder Terapéutico de la Toxina
-              Botulínica
+              Más Allá de la Belleza: Cómo la Toxina Botulínica Puede Mejorar tu
+              Calidad de Vida
             </h1>
             <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
-              Descubre los usos de un tratamiento seguro y eficaz para aliviar
-              condiciones médicas que afectan tu día a día.
+              Descubre los usos terapéuticos de un tratamiento seguro y eficaz
+              para aliviar condiciones médicas que afectan tu día a día.
             </p>
           </div>
         </div>
@@ -176,11 +177,11 @@ export default function BotoxTerapeuticoPage() {
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
               Cuando escuchas "toxina botulínica", probablemente piensas en el
-              tratamiento de arrugas. Si bien es mundialmente famoso por sus
-              aplicaciones estéticas, su capacidad para relajar músculos de
-              forma controlada lo convierte en una poderosa herramienta médica
-              para tratar diversas condiciones de salud que pueden ser dolorosas
-              o limitantes.
+              tratamiento de arrugas y rejuvenecimiento facial. Si bien es
+              mundialmente famoso por sus aplicaciones estéticas, su capacidad
+              para relajar músculos de forma controlada lo convierte en una
+              poderosa herramienta médica para tratar diversas condiciones de
+              salud que pueden ser dolorosas o limitantes.
             </p>
             <p className="mt-4 text-lg text-muted-foreground">
               Este tratamiento, administrado por médicos especialistas, va más
@@ -212,14 +213,18 @@ export default function BotoxTerapeuticoPage() {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">
-                ¿Cómo funciona en tratamientos terapéuticos?
+                ¿Cómo funciona la toxina botulínica en tratamientos
+                terapéuticos?
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
                 La toxina botulínica es una neurotoxina purificada que, aplicada
-                en dosis muy pequeñas, actúa en la unión entre nervios y
-                músculos, bloqueando de forma temporal la señal de contracción.
-                Al interrumpir esta orden, el músculo que está hiperactivo o
-                causando un problema se relaja de manera segura.
+                en dosis muy pequeñas y controladas, actúa directamente en la
+                unión entre los nervios y los músculos. Su mecanismo es simple
+                pero muy efectivo: bloquea de forma temporal la liberación de
+                acetilcolina, la sustancia que transmite la orden de contracción
+                desde el nervio al músculo. Al interrumpir esta señal, el
+                músculo que está hiperactivo o causando un problema se relaja de
+                manera segura.
               </p>
             </div>
           </div>
@@ -258,9 +263,9 @@ export default function BotoxTerapeuticoPage() {
             ¿Qué condiciones médicas se pueden tratar?
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Gracias a su capacidad para relajar la musculatura, la toxina
-            botulínica se ha convertido en un tratamiento de primera línea para
-            diversas patologías.
+            Gracias a su capacidad para relajar la musculatura de forma
+            controlada, la toxina botulínica se ha convertido en un tratamiento
+            de primera línea para diversas patologías.
           </p>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             {conditions.map((condition, index) => (
@@ -358,8 +363,9 @@ export default function BotoxTerapeuticoPage() {
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Si sufres de alguna de estas condiciones, la toxina botulínica
-                terapéutica podría ser la solución. No tienes que resignarte a
-                vivir con dolor o limitaciones.
+                terapéutica podría ser la solución que te devuelva la comodidad
+                y la confianza. No tienes que resignarte a vivir con dolor o
+                limitaciones.
               </p>
               <Button
                 asChild
