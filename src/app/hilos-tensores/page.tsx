@@ -369,7 +369,7 @@ export default function HilosTensoresPage() {
 
          {/* Advanced Applications Section */}
         <section id="aplicaciones" className="scroll-mt-20 text-center">
-          <SectionTitleWithLines>Aplicaciones Específicas</SectionTitleWithLines>
+          <SectionTitleWithLines><span className="text-foreground">Aplicaciones</span>{' '}<span className="text-primary">Específicas</span></SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Más Allá del Rostro: Aplicaciones Corporales y Faciales
           </h2>
