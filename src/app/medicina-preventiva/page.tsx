@@ -345,15 +345,15 @@ export default function MedicinaPreventivaPage() {
                 </div>
               </section>
 
-              <section id="decision" className="scroll-mt-20 max-w-3xl mx-auto">
-                <Card className="p-6 md:p-8 text-center shadow-lg border-primary/20">
+              <section id="decision-facial" className="scroll-mt-20 max-w-3xl mx-auto text-center">
+                <Card className="p-6 md:p-8 shadow-lg border-primary/20">
                   <CardHeader className="p-0">
                     <CardTitle className="font-headline text-2xl text-primary">
                       Tu Belleza, Tu Decisión – La Importancia de una Valoración
                       Profesional
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="p-0 mt-4 text-muted-foreground text-left">
+                  <CardContent className="p-0 mt-4 text-muted-foreground">
                     <p>
                       Cada piel es única y cada rostro tiene sus propias
                       necesidades. La clave para un resultado exitoso y seguro es
@@ -496,7 +496,7 @@ export default function MedicinaPreventivaPage() {
                     </Card>
                  </div>
                  <div>
-                    <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" text="Imagen de carboxiterapia" />
+                    <Placeholder className="rounded-full shadow-2xl w-full aspect-square" text="Imagen de carboxiterapia" />
                  </div>
               </section>
 
@@ -565,6 +565,20 @@ export default function MedicinaPreventivaPage() {
                     </CardContent>
                   </Card>
                 </div>
+              </section>
+              <section id="decision-corporal" className="scroll-mt-20 max-w-3xl mx-auto text-center">
+                 <Card className="p-6 md:p-8 shadow-lg border-primary/20">
+                  <CardHeader className="p-0">
+                    <CardTitle className="font-headline text-2xl text-primary">
+                      Tu Cuerpo, Tu Decisión – Elige la Prevención Inteligente
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0 mt-4 text-muted-foreground">
+                     <p>
+                        Cuidar tu cuerpo es una inversión a largo plazo. Ya sea que busques moldear tu figura, mejorar la calidad de tu piel o prevenir la flacidez, estos tratamientos ofrecen soluciones seguras y efectivas cuando se realizan por profesionales.
+                    </p>
+                  </CardContent>
+                </Card>
               </section>
             </div>
           </TabsContent>
