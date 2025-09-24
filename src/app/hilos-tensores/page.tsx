@@ -92,11 +92,15 @@ export default function HilosTensoresPage() {
       name: 'Hilos Lisos (Monofilamento)',
       description:
         'Ideales para crear una malla de soporte que redensifica la piel. Estimulan el colágeno para mejorar la textura y dar un aspecto más turgente en zonas con flacidez fina.',
+      image: 'https://picsum.photos/seed/hilos-lisos/400/300',
+      imageHint: 'smooth threads illustration',
     },
     {
       name: 'Hilos Espiculados (COG)',
       description:
         'Son los protagonistas del efecto lifting. Cuentan con pequeñas anclas que se anclan al tejido, permitiendo traccionar y reposicionar la piel de forma inmediata y efectiva.',
+      image: 'https://picsum.photos/seed/hilos-cog/400/300',
+      imageHint: 'cog threads illustration',
     },
   ];
 
@@ -491,21 +495,48 @@ export default function HilosTensoresPage() {
             Medellín.
           </p>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            {threadTypes.map((type) => (
-              <Card key={type.name} className="text-center p-8">
-                <CardHeader className="p-0 items-center">
-                  {/* Placeholder for actual icons */}
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-3xl text-primary">✧</span>
+            {threadTypes.map((type, index) => (
+              <div
+                key={type.name}
+                className={cn('flip-card', { flipped: flippedCard === index })}
+                onClick={() => handleCardFlip(index)}
+              >
+                <div className="flip-card-inner cursor-pointer" style={{height: "280px"}}>
+                  <div className="flip-card-front">
+                    <Card className="text-center p-8 h-full flex flex-col justify-center shadow-lg">
+                      <CardHeader className="p-0 items-center">
+                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                          <span className="text-3xl text-primary">✧</span>
+                        </div>
+                        <CardTitle className="font-headline text-xl">
+                          {type.name}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent className="p-0 mt-4">
+                        <p className="text-muted-foreground">{type.description}</p>
+                      </CardContent>
+                      <p className="text-xs text-muted-foreground italic mt-4">
+                        (Haz clic para ver más)
+                      </p>
+                    </Card>
                   </div>
-                  <CardTitle className="font-headline text-xl">
-                    {type.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-0 mt-4">
-                  <p className="text-muted-foreground">{type.description}</p>
-                </CardContent>
-              </Card>
+                  <div className="flip-card-back">
+                    <Card className="h-full shadow-lg overflow-hidden relative">
+                      <Image
+                        src={type.image}
+                        alt={`Imagen de ${type.name}`}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={type.imageHint}
+                      />
+                       <div className="absolute inset-0 bg-black/30" />
+                       <div className="absolute top-2 right-2 bg-background/80 p-1 rounded-full text-foreground">
+                          <RefreshCw className="w-4 h-4" />
+                       </div>
+                    </Card>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </section>
