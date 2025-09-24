@@ -76,8 +76,11 @@ export default function MedicinaPreventivaPage() {
           </TabsList>
           <TabsContent value="facial" className="mt-12">
             <div className="space-y-24">
-              <section id="intro-facial" className='max-w-4xl mx-auto'>
-                <div className="text-center">
+              <section
+                id="intro-facial"
+                className="grid md:grid-cols-2 gap-12 items-center"
+              >
+                <div>
                   <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Guía Completa de Rejuvenecimiento:{' '}
                     <span className="text-primary">
@@ -89,38 +92,51 @@ export default function MedicinaPreventivaPage() {
                     revitalizar, dar volumen y regenerar tu piel. Encuentra la
                     solución perfecta para ti.
                   </p>
+                  <div className="mt-8 text-lg text-muted-foreground space-y-4">
+                    <p>
+                      En el mundo de la medicina estética, existen muchas opciones
+                      para lucir una piel más joven, saludable y radiante sin
+                      necesidad de pasar por el quirófano. Desde tratamientos
+                      que hidratan en profundidad hasta aquellos que reponen el
+                      volumen perdido, hay una solución para cada necesidad.
+                    </p>
+                    <p>
+                      En esta guía, te explicamos de manera sencilla los
+                      tratamientos más efectivos y demandados. Los hemos organizado en
+                      dos grandes grupos para que puedas identificar fácilmente
+                      cuál se adapta mejor a lo que buscas:
+                    </p>
+                  </div>
+                  <ul className="mt-6 space-y-4">
+                    <li className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                      <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0" />
+                      <div>
+                        <h3 className="font-bold text-foreground">
+                          Hidratación y Calidad de la Piel
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Para quienes buscan luminosidad, mejorar la textura y una
+                          piel visiblemente más sana y jugosa.
+                        </p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
+                      <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0" />
+                      <div>
+                        <h3 className="font-bold text-foreground">
+                          Relleno y Definición con Ácido Hialurónico
+                        </h3>
+                        <p className="text-muted-foreground">
+                          Para tratar arrugas, reponer volumen perdido y definir
+                          facciones como labios, pómulos o surcos faciales.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                 <div className="mt-8 text-lg text-muted-foreground space-y-4">
-                  <p>
-                    En el mundo de la medicina estética, existen muchas opciones
-                    para lucir una piel más joven, saludable y radiante sin
-                    necesidad de pasar por el quirófano. Desde tratamientos
-                    que hidratan en profundidad hasta aquellos que reponen el
-                    volumen perdido, hay una solución para cada necesidad.
-                  </p>
-                  <p>
-                    En esta guía, te explicamos de manera sencilla los
-                    tratamientos más efectivos y demandados. Los hemos organizado en
-                    dos grandes grupos para que puedas identificar fácilmente
-                    cuál se adapta mejor a lo que buscas:
-                  </p>
-                 </div>
-                   <ul className="mt-6 space-y-4">
-                        <li className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                            <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                            <div>
-                                <h3 className="font-bold text-foreground">Hidratación y Calidad de la Piel</h3>
-                                <p className="text-muted-foreground">Para quienes buscan luminosidad, mejorar la textura y una piel visiblemente más sana y jugosa.</p>
-                            </div>
-                        </li>
-                        <li className="flex items-start gap-3 p-4 bg-muted/50 rounded-lg">
-                            <CheckCircle className="w-6 h-6 text-primary mt-1 shrink-0"/>
-                            <div>
-                                <h3 className="font-bold text-foreground">Relleno y Definición con Ácido Hialurónico</h3>
-                                <p className="text-muted-foreground">Para tratar arrugas, reponer volumen perdido y definir facciones como labios, pómulos o surcos faciales.</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div>
+                  <Placeholder className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover" />
+                </div>
               </section>
 
               <section id="hidratacion-calidad" className="scroll-mt-20">
@@ -154,12 +170,14 @@ export default function MedicinaPreventivaPage() {
                         <strong className="text-foreground">
                           Microneedling (o Micropunción):
                         </strong>{' '}
-                        <p className='mt-1'>Es una técnica que utiliza un dispositivo con microagujas
-                        muy finas para crear canales microscópicos en la piel.
-                        Esto no solo estimula la producción natural de colágeno,
-                        sino que también permite que los productos aplicados (como
-                        el PDRN o vitaminas) penetren mucho más profundo y sean más
-                        efectivos.</p>
+                        <p className="mt-1">
+                          Es una técnica que utiliza un dispositivo con microagujas
+                          muy finas para crear canales microscópicos en la piel.
+                          Esto no solo estimula la producción natural de colágeno,
+                          sino que también permite que los productos aplicados (como
+                          el PDRN o vitaminas) penetren mucho más profundo y sean más
+                          efectivos.
+                        </p>
                       </div>
                       <Badge variant="secondary" className="mt-4">
                         Ideal para: Personas que buscan una mejora general en la
@@ -186,10 +204,12 @@ export default function MedicinaPreventivaPage() {
                         <strong className="text-foreground">
                           ¿Qué puedes esperar?
                         </strong>{' '}
-                        <p className='mt-1'>Una piel visiblemente más hidratada, jugosa, elástica y con
-                        un brillo natural. Suaviza líneas finas y mejora la
-                        calidad general de la piel en rostro, cuello, escote y
-                        manos. Sus efectos suelen durar entre 6 y 12 meses.</p>
+                        <p className="mt-1">
+                          Una piel visiblemente más hidratada, jugosa, elástica y con
+                          un brillo natural. Suaviza líneas finas y mejora la
+                          calidad general de la piel en rostro, cuello, escote y
+                          manos. Sus efectos suelen durar entre 6 y 12 meses.
+                        </p>
                       </div>
                       <Badge variant="secondary" className="mt-4">
                         Ideal para: Pieles deshidratadas, apagadas o que empiezan
@@ -214,16 +234,20 @@ export default function MedicinaPreventivaPage() {
                       </p>
                       <div>
                         <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
-                        <p className="mt-1">Actúa a nivel celular estimulando la reparación de los
-                        tejidos, la producción de colágeno, mejorando la
-                        elasticidad y reduciendo la inflamación.</p>
+                        <p className="mt-1">
+                          Actúa a nivel celular estimulando la reparación de los
+                          tejidos, la producción de colágeno, mejorando la
+                          elasticidad y reduciendo la inflamación.
+                        </p>
                       </div>
                       <div>
                         <strong className="text-foreground">Beneficios:</strong>{' '}
-                         <p className="mt-1">Mejora la firmeza, reduce líneas finas, atenúa cicatrices
-                        de acné y devuelve la luminosidad a la piel. Se aplica
-                        mediante mesoterapia o microneedling para potenciar su
-                        efecto.</p>
+                        <p className="mt-1">
+                          Mejora la firmeza, reduce líneas finas, atenúa cicatrices
+                          de acné y devuelve la luminosidad a la piel. Se aplica
+                          mediante mesoterapia o microneedling para potenciar su
+                          efecto.
+                        </p>
                       </div>
                       <Badge variant="secondary" className="mt-4">
                         Ideal para: Pieles que necesitan una reparación profunda,
@@ -248,76 +272,95 @@ export default function MedicinaPreventivaPage() {
                   utilizan una versión en gel de esta molécula para restaurar o
                   añadir volumen de forma segura y con resultados inmediatos.
                 </p>
-                <div className="mt-12 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Ácido Hialurónico para Rostro (Surcos, Pómulos)</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-4">
-                      <p>
-                        Se utiliza para corregir arrugas estáticas (las que se ven
-                        con el rostro en reposo), reponer el volumen perdido en
-                        zonas como los pómulos o el mentón, y suavizar surcos como
-                        los nasogenianos ("líneas de la sonrisa").
-                      </p>
-                      <div>
-                        <strong className="text-foreground">Resultados:</strong> 
-                        <p className='mt-1'>El
-                        efecto es inmediato, logrando un aspecto más descansado y
-                        juvenil. La duración es variable, pero puede prolongarse
-                        varios meses.</p>
-                      </div>
-                      <Badge variant="secondary" className="mt-4">
-                        Ideal para: Quienes buscan corregir arrugas profundas,
-                        restaurar volumen en mejillas o definir el contorno
-                        facial.
-                      </Badge>
-                    </CardContent>
-                  </Card>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Ácido Hialurónico en Labios</CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-4">
-                      <p>
-                        Es uno de los tratamientos más demandados. Permite no solo
-                        aumentar el volumen, sino también definir el contorno,
-                        corregir asimetrías e hidratar profundamente los labios
-                        para que luzcan más saludables y jóvenes.
-                      </p>
-                      <div>
-                        <strong className="text-foreground">
-                          ¿Qué puedes esperar?
-                        </strong>{' '}
-                        <p className='mt-1'>Un resultado natural y adaptado a tus facciones. El
-                        objetivo es embellecer, no transformar.</p>
-                      </div>
-                      <Badge variant="secondary" className="mt-4">
-                        Ideal para: Personas que desean labios más definidos,
-                        voluminosos o simplemente revitalizados.
-                      </Badge>
-                    </CardContent>
-                  </Card>
+                <div className="mt-12 grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                    <div>
+                        <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" text="Imagen de relleno facial"/>
+                    </div>
+                    <div className='space-y-8'>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>
+                            Ácido Hialurónico para Rostro (Surcos, Pómulos)
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-muted-foreground space-y-4">
+                          <p>
+                            Se utiliza para corregir arrugas estáticas (las que se ven
+                            con el rostro en reposo), reponer el volumen perdido en
+                            zonas como los pómulos o el mentón, y suavizar surcos como
+                            los nasogenianos ("líneas de la sonrisa").
+                          </p>
+                          <div>
+                            <strong className="text-foreground">Resultados:</strong>
+                            <p className="mt-1">
+                              El efecto es inmediato, logrando un aspecto más descansado y
+                              juvenil. La duración es variable, pero puede prolongarse
+                              varios meses.
+                            </p>
+                          </div>
+                          <Badge variant="secondary" className="mt-4">
+                            Ideal para: Quienes buscan corregir arrugas profundas,
+                            restaurar volumen en mejillas o definir el contorno
+                            facial.
+                          </Badge>
+                        </CardContent>
+                      </Card>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Ácido Hialurónico en Labios</CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-muted-foreground space-y-4">
+                          <p>
+                            Es uno de los tratamientos más demandados. Permite no solo
+                            aumentar el volumen, sino también definir el contorno,
+                            corregir asimetrías e hidratar profundamente los labios
+                            para que luzcan más saludables y jóvenes.
+                          </p>
+                          <div>
+                            <strong className="text-foreground">
+                              ¿Qué puedes esperar?
+                            </strong>{' '}
+                            <p className="mt-1">
+                              Un resultado natural y adaptado a tus facciones. El
+                              objetivo es embellecer, no transformar.
+                            </p>
+                          </div>
+                          <Badge variant="secondary" className="mt-4">
+                            Ideal para: Personas que desean labios más definidos,
+                            voluminosos o simplemente revitalizados.
+                          </Badge>
+                        </CardContent>
+                      </Card>
+                    </div>
                 </div>
               </section>
 
-               <section id="decision" className="scroll-mt-20 max-w-3xl mx-auto">
-                    <Card className="p-6 md:p-8 text-center shadow-lg border-primary/20">
-                        <CardHeader className="p-0">
-                            <CardTitle className="font-headline text-2xl text-primary">Tu Belleza, Tu Decisión – La Importancia de una Valoración Profesional</CardTitle>
-                        </CardHeader>
-                        <CardContent className="p-0 mt-4 text-muted-foreground">
-                            <p>Cada piel es única y cada rostro tiene sus propias necesidades. La clave para un resultado exitoso y seguro es una valoración personalizada con un médico especialista. Un profesional cualificado podrá evaluar tu piel, entender tus objetivos y recomendarte el tratamiento o la combinación de técnicas que te ofrezca los mejores resultados.</p>
-                        </CardContent>
-                    </Card>
-                </section>
-
+              <section id="decision" className="scroll-mt-20 max-w-3xl mx-auto">
+                <Card className="p-6 md:p-8 text-center shadow-lg border-primary/20">
+                  <CardHeader className="p-0">
+                    <CardTitle className="font-headline text-2xl text-primary">
+                      Tu Belleza, Tu Decisión – La Importancia de una Valoración
+                      Profesional
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0 mt-4 text-muted-foreground text-left">
+                    <p>
+                      Cada piel es única y cada rostro tiene sus propias
+                      necesidades. La clave para un resultado exitoso y seguro es
+                      una valoración personalizada con un médico especialista. Un
+                      profesional cualificado podrá evaluar tu piel, entender tus
+                      objetivos y recomendarte el tratamiento o la combinación de
+                      técnicas que te ofrezca los mejores resultados.
+                    </p>
+                  </CardContent>
+                </Card>
+              </section>
             </div>
           </TabsContent>
           <TabsContent value="corporal" className="mt-12">
             <div className="space-y-24">
-              <section id="intro-corporal">
-                <div className="text-center max-w-3xl mx-auto">
+              <section id="intro-corporal" className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
                   <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Cuida y Previene: La Guía Esencial de{' '}
                     <span className="text-primary">
@@ -329,23 +372,29 @@ export default function MedicinaPreventivaPage() {
                     vitamina C pueden ayudarte a mantener una figura armoniosa y
                     una piel saludable a largo plazo.
                   </p>
-                </div>
-                <div className='max-w-4xl mx-auto mt-8'>
-                    <p className="mt-6 text-lg text-muted-foreground">
+                   <div className='mt-8 text-lg text-muted-foreground space-y-4 text-left'>
+                    <p>
                         A menudo asociamos los tratamientos corporales con la idea de "corregir" algo que no nos gusta. Pero, ¿y si te dijéramos que la clave es la prevención? Adoptar un enfoque preventivo significa actuar antes de que los signos del tiempo, como la flacidez o la celulitis avanzada, se instalen.
                     </p>
                 </div>
+                </div>
+                 <div>
+                  <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" text="Imagen de tratamiento corporal" />
+                </div>
               </section>
 
-              <section id="masajes-reductores">
-                <SectionTitleWithLines>
+              <section id="masajes-reductores" className="grid md:grid-cols-2 gap-12 items-center">
+                 <div className="order-2 md:order-1">
+                  <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" text="Imagen de masaje reductor" />
+                </div>
+                <div className="order-1 md:order-2">
+                 <SectionTitleWithLines>
                   <span className="text-foreground">
-                    Masajes Reductores – El Poder del
+                    Masajes Reductores
                   </span>{' '}
-                  <span className="text-primary">Moldeado Manual</span>
+                  <span className="text-primary">– El Poder del Moldeado Manual</span>
                 </SectionTitleWithLines>
-                <div className="mt-12 space-y-8 max-w-4xl mx-auto">
-                  <Card>
+                  <Card className='mt-12'>
                     <CardHeader>
                       <CardTitle className="flex items-center gap-3">
                         <Hand className="w-7 h-7 text-primary" /> ¿Qué son y cómo
@@ -395,49 +444,52 @@ export default function MedicinaPreventivaPage() {
                 </div>
               </section>
 
-              <section id="carboxiterapia">
-                <SectionTitleWithLines>
-                  <span className="text-foreground">
-                    Carboxiterapia – Oxigena y
-                  </span>{' '}
-                  <span className="text-primary">Regenera tus Tejidos</span>
-                </SectionTitleWithLines>
-                <div className="mt-12 space-y-8 max-w-4xl mx-auto">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3">
-                        <Wind className="w-7 h-7 text-primary" /> ¿Qué es y para
-                        qué sirve?
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-3">
-                      <p>
-                        Es un procedimiento médico que aplica dióxido de carbono
-                        (CO₂) medicinal bajo la piel para mejorar la circulación,
-                        estimular la producción de colágeno y facilitar la
-                        eliminación de grasa.
-                      </p>
-                      <p>
-                        Es uno de los tratamientos más efectivos para la
-                        celulitis (PEFE), la grasa localizada, la flacidez y las
-                        estrías.
-                      </p>
-                      <p>
-                        <strong className="text-foreground">
-                          ¿Qué esperar?
-                        </strong>{' '}
-                        Se puede sentir un ligero ardor durante la inyección, pero
-                        es temporal. Se recomiendan de 10 a 12 sesiones (1-3 por
-                        semana). Es un procedimiento muy seguro realizado por un
-                        médico.
-                      </p>
-                      <Badge variant="secondary">
-                        Contraindicaciones: Insuficiencia renal/respiratoria,
-                        embarazo, infecciones activas.
-                      </Badge>
-                    </CardContent>
-                  </Card>
-                </div>
+              <section id="carboxiterapia" className="grid md:grid-cols-2 gap-12 items-center">
+                 <div>
+                    <SectionTitleWithLines>
+                        <span className="text-foreground">
+                            Carboxiterapia
+                        </span>{' '}
+                        <span className="text-primary">– Oxigena y Regenera</span>
+                    </SectionTitleWithLines>
+                    <Card className='mt-12'>
+                        <CardHeader>
+                        <CardTitle className="flex items-center gap-3">
+                            <Wind className="w-7 h-7 text-primary" /> ¿Qué es y para
+                            qué sirve?
+                        </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-muted-foreground space-y-3">
+                        <p>
+                            Es un procedimiento médico que aplica dióxido de carbono
+                            (CO₂) medicinal bajo la piel para mejorar la circulación,
+                            estimular la producción de colágeno y facilitar la
+                            eliminación de grasa.
+                        </p>
+                        <p>
+                            Es uno de los tratamientos más efectivos para la
+                            celulitis (PEFE), la grasa localizada, la flacidez y las
+                            estrías.
+                        </p>
+                        <p>
+                            <strong className="text-foreground">
+                            ¿Qué esperar?
+                            </strong>{' '}
+                            Se puede sentir un ligero ardor durante la inyección, pero
+                            es temporal. Se recomiendan de 10 a 12 sesiones (1-3 por
+                            semana). Es un procedimiento muy seguro realizado por un
+                            médico.
+                        </p>
+                        <Badge variant="secondary">
+                            Contraindicaciones: Insuficiencia renal/respiratoria,
+                            embarazo, infecciones activas.
+                        </Badge>
+                        </CardContent>
+                    </Card>
+                 </div>
+                 <div>
+                    <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" text="Imagen de carboxiterapia" />
+                 </div>
               </section>
 
               <section id="vitamina-c">
@@ -480,7 +532,7 @@ export default function MedicinaPreventivaPage() {
                           </strong>{' '}
                           Mejora la firmeza, tonicidad y elasticidad.
                         </li>
-<li>
+                        <li>
                           <strong className="text-foreground">
                             Mejora la textura:
                           </strong>{' '}
