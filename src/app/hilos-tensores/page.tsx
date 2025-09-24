@@ -36,6 +36,7 @@ import {
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { SectionArch } from '@/components/section-arch';
+import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 
 
 export default function HilosTensoresPage() {
@@ -364,6 +365,7 @@ export default function HilosTensoresPage() {
 
          {/* Advanced Applications Section */}
         <section id="aplicaciones" className="scroll-mt-20 text-center">
+          <SectionTitleWithLines>Aplicaciones Específicas</SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Más Allá del Rostro: Aplicaciones Corporales y Faciales
           </h2>
@@ -478,7 +480,7 @@ export default function HilosTensoresPage() {
 
         {/* Thread Types Section */}
         <section id="tipos-hilos" className="scroll-mt-20 text-center">
-          <Badge variant="secondary">Herramientas de Precisión</Badge>
+          <SectionTitleWithLines>Herramientas de Precisión</SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Cada Hilo tiene su Propósito
           </h2>
@@ -510,7 +512,7 @@ export default function HilosTensoresPage() {
         
          {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
-          <Badge variant="secondary">Beneficios Clave</Badge>
+          <SectionTitleWithLines>Beneficios Clave</SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Resultados que Transforman con el Lifting No Quirúrgico
           </h2>
@@ -541,11 +543,12 @@ export default function HilosTensoresPage() {
 
         {/* FAQ Section */}
         <section id="faq" className="scroll-mt-20 max-w-4xl mx-auto text-center">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">
-            Preguntas Frecuentes sobre Hilos Tensores
+          <SectionTitleWithLines>Preguntas Frecuentes</SectionTitleWithLines>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mt-2">
+            Resolvemos tus dudas
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
-            Resolvemos tus dudas más comunes sobre el tratamiento con hilos
+            Tus dudas más comunes sobre el tratamiento con hilos
             tensores en nuestra clínica de Medellín.
           </p>
           <Accordion type="single" collapsible className="w-full mt-12 text-left">
