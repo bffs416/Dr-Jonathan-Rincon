@@ -20,6 +20,13 @@ import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import {
   Dialog,
   DialogContent,
   DialogHeader,
@@ -28,8 +35,6 @@ import {
 } from '@/components/ui/dialog';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
-import type { Metadata } from 'next';
-
 
 export default function HilosTensoresPage() {
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
@@ -143,7 +148,7 @@ export default function HilosTensoresPage() {
   const whatAreTheyImage = PlaceHolderImages.find(
     (img) => img.id === 'hilos-what-are'
   );
-  const beforeAfterCases = [
+   const beforeAfterCases = [
     {
       title: 'Lifting de Cuello',
       description: 'Hilos espiculados para tensado de papada.',
@@ -319,6 +324,90 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
+        {/* Before and After Section */}
+        <section id="resultados" className="scroll-mt-20 text-center">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                Antes y <span className="text-primary">Después</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                Resultados reales de nuestros tratamientos. Transformaciones que hablan por sí solas.
+            </p>
+          <Carousel
+            className="w-full max-w-5xl mx-auto mt-12"
+            opts={{
+              loop: true,
+            }}
+          >
+            <CarouselContent>
+              {beforeAfterCases.map((caseItem, index) => (
+                  <CarouselItem key={index}>
+                    <Card className="shadow-xl overflow-hidden">
+                      <CardContent className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6">
+                        {/* Before */}
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-center md:text-left">
+                            Antes
+                          </h3>
+                          {caseItem.beforeImage && (
+                            <Image
+                              src={caseItem.beforeImage.imageUrl}
+                              alt={`Antes - ${caseItem.title}`}
+                              width={600}
+                              height={400}
+                              className="rounded-lg aspect-[4/3] object-cover"
+                              data-ai-hint={caseItem.beforeImage.imageHint}
+                            />
+                          )}
+                        </div>
+
+                        {/* Details */}
+                        <div className="text-center order-first md:order-none">
+                          <h4 className="text-xl font-headline font-bold">
+                            {caseItem.title}
+                          </h4>
+                          <p className="text-muted-foreground text-sm mt-1">
+                            {caseItem.description}
+                          </p>
+                          <Badge
+                            variant="secondary"
+                            className="mt-3 font-normal"
+                          >
+                            {caseItem.sessions}
+                          </Badge>
+                        </div>
+
+                        {/* After */}
+                        <div className="space-y-2">
+                          <h3 className="font-semibold text-center md:text-left">
+                            Después
+                          </h3>
+                          <div className="relative">
+                            {caseItem.afterImage && (
+                              <Image
+                                src={caseItem.afterImage.imageUrl}
+                                alt={`Después - ${caseItem.title}`}
+                                width={600}
+                                height={400}
+                                className="rounded-lg aspect-[4/3] object-cover"
+                                data-ai-hint={caseItem.afterImage.imageHint}
+                              />
+                            )}
+                            <Badge className="absolute top-2 right-2 bg-green-500 text-white">
+                              Resultado
+                            </Badge>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
+                ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 md:-left-10" />
+            <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 md:-right-10" />
+          </Carousel>
+        </section>
+
+
         {/* Thread Types Section */}
         <section id="tipos-hilos" className="scroll-mt-20">
           <div className="text-center">
@@ -353,7 +442,7 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
-        {/* Benefits Section */}
+         {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
           <Badge variant="secondary">Beneficios Clave</Badge>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
@@ -377,7 +466,7 @@ export default function HilosTensoresPage() {
                     <div className="flip-card-front">
                       <Card className="w-full h-full p-6 flex flex-col items-center justify-center gap-4 text-center shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
                         <p className="font-semibold text-lg">{benefit.title}</p>
-                        <div className="bg-primary/10 text-primary p-2 rounded-full">
+                        <div className="bg-primary/10 text-primary p-2 rounded-full mt-2">
                           <CheckCircle className="w-6 h-6" />
                         </div>
                         <span className="text-xs text-muted-foreground absolute bottom-3 right-4 flex items-center gap-1">
@@ -397,9 +486,9 @@ export default function HilosTensoresPage() {
                 </div>
               ))}
             </div>
+            
           </div>
         </section>
-
 
         {/* Advanced Applications Section */}
         <section id="aplicaciones" className="scroll-mt-20 text-center">
