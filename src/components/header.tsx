@@ -24,7 +24,7 @@ const navLinks = [
         dropdown: [
             { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
             { name: 'Bioestimuladores', href: '/bioestimuladores' },
-            { name: 'Botox Terapéutico', href: '/botox-terapeutico' },
+            { name: 'Botox', href: '/botox' },
             { name: 'Contorno Corporal', href: '/contorno-corporal' },
             { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
         ]
