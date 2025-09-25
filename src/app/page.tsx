@@ -165,7 +165,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -top-8 -left-8 w-full h-full border-4 border-primary/20 rounded-xl transform -rotate-6 z-0"></div>
               <Image
-                src="/images/Dr_Jonathan_Rincon.png"
+                src="/images/Experto-hilos-tensores-faciales.png"
                 alt="Dr. Jonathan Rincón, experto en medicina estética"
                 width={500}
                 height={625}
