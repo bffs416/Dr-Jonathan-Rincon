@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -36,10 +36,12 @@ export default function RootLayout({
           'min-h-screen bg-background font-body antialiased'
         )}
       >
-        <div className="relative flex min-h-dvh flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+        <div className="relative flex min-h-dvh flex-col p-4">
+          <div className="relative flex min-h-dvh flex-col border border-primary/20">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
         </div>
         <Toaster />
         {/* Floating WhatsApp Button */}
@@ -48,7 +50,7 @@ export default function RootLayout({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Agendar por WhatsApp"
-          className="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50 transform hover:scale-110"
+          className="fixed bottom-10 right-10 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50 transform hover:scale-110"
         >
           <MessageCircle className="w-8 h-8" />
         </a>

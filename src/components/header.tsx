@@ -56,7 +56,7 @@ export default function Header() {
   const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
     const isActive = pathname === href;
     return (
-      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-primary font-semibold" : "text-foreground")}>
+      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary/80", isActive ? "text-primary font-semibold" : "text-foreground")}>
         {children}
       </Link>
     );
@@ -67,14 +67,14 @@ export default function Header() {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className={cn("text-sm font-medium hover:text-primary px-3 data-[state=open]:text-primary", isActive ? "text-primary font-semibold" : "text-foreground")}>
+          <Button variant="ghost" className={cn("text-sm font-medium hover:text-primary/80 px-3 data-[state=open]:text-primary/80", isActive ? "text-primary font-semibold" : "text-foreground")}>
             {name} <ChevronDown className="ml-1 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
           {items.map(item => (
             <DropdownMenuItem key={item.href} asChild>
-              <Link href={item.href} className={cn(item.highlight && "font-bold text-primary")}>
+              <Link href={item.href} className={cn(item.highlight && "font-bold text-primary/80")}>
                 {item.highlight && <Award className="mr-2 h-4 w-4" />}
                 {item.name}
               </Link>
@@ -89,7 +89,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300 border-b',
+        'sticky top-0 z-50 w-full transition-all duration-300 border-b border-primary/10',
         isScrolled
           ? 'bg-background/90 backdrop-blur-lg'
           : 'bg-background'
@@ -107,16 +107,6 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center space-x-1">
-          <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="Search" className={cn("hover:text-primary", 'text-foreground')}>
-              <Search className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="Toggle Dark Mode" className={cn("hover:text-primary", 'text-foreground')}>
-              <Moon className="h-5 w-5" />
-            </a>
-          </Button>
           <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                 Agendar Cita
@@ -126,7 +116,7 @@ export default function Header() {
 
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
           <SheetTrigger asChild className="lg:hidden">
-            <Button variant="ghost" size="icon" className={cn("hover:text-primary", 'text-foreground')}>
+            <Button variant="ghost" size="icon" className={cn("hover:text-primary/80", 'text-foreground')}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Abrir menú</span>
             </Button>
@@ -143,7 +133,7 @@ export default function Header() {
             <nav className="flex-1 p-6">
               <ul className="space-y-4">
                   <li>
-                     <Link href="/" className="text-lg hover:text-primary transition-colors block">Inicio</Link>
+                     <Link href="/" className="text-lg hover:text-primary/80 transition-colors block">Inicio</Link>
                   </li>
                 {navLinks.map(link => (
                   <li key={link.name}>
@@ -153,7 +143,7 @@ export default function Header() {
                         <ul className="pl-4 space-y-3 border-l">
                           {link.dropdown.map(item => (
                             <li key={item.href}>
-                              <Link href={item.href} className={cn("hover:text-primary transition-colors block", item.highlight && "font-bold text-primary flex items-center")}>
+                              <Link href={item.href} className={cn("hover:text-primary/80 transition-colors block", item.highlight && "font-bold text-primary/80 flex items-center")}>
                                 {item.highlight && <Award className="mr-2 h-4 w-4" />}
                                 {item.name}
                               </Link>
@@ -162,7 +152,7 @@ export default function Header() {
                         </ul>
                        </div>
                     ) : (
-                      <Link href={link.href || '#'} className="text-lg hover:text-primary transition-colors block">{link.name}</Link>
+                      <Link href={link.href || '#'} className="text-lg hover:text-primary/80 transition-colors block">{link.name}</Link>
                     )}
                   </li>
                 ))}
