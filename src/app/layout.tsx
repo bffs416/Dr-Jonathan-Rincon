@@ -5,6 +5,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import './globals.css';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
+import { GeometricBackground } from '@/components/geometric-background';
 
 export const metadata: Metadata = {
   title: 'Dr. Jonathan Rincón',
@@ -36,6 +37,7 @@ export default function RootLayout({
           'min-h-screen bg-background font-body antialiased'
         )}
       >
+        <GeometricBackground />
         <div className="relative flex min-h-dvh flex-col p-4">
           <div className="relative flex min-h-dvh flex-col border border-primary/20">
             <Header />
