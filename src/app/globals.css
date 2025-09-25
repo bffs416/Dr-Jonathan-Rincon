@@ -4,38 +4,38 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%; /* #0a0a0a */
-    --foreground: 0 0% 98%; /* #fafafa */
+    --background: 0 0% 98%; /* #fafafa */
+    --foreground: 240 10% 3.9%; /* #0a0a0a */
     
-    --card: 240 10% 7%; /* #121212 */
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%; /* #ffffff */
+    --card-foreground: 240 10% 3.9%;
     
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
     
     --primary: 36 100% 50%; /* #ff9800 */
     --primary-foreground: 240 10% 3.9%;
     --primary-dark: 36 100% 40%; /* darker orange */
 
-    --secondary: 240 4% 16%; /* #292929 */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 240 5% 96%; /* #f5f5f7 */
+    --secondary-foreground: 240 10% 3.9%;
     
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%; /* #a1a1aa */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%; /* #737373 */
     
-    --accent: 240 4% 16%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 3.9%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
+    --border: 240 6% 90%; /* #e6e6e6 */
+    --input: 240 6% 90%;
     --ring: 36 100% 50%;
     
     --radius: 0.75rem;
 
-    --header-background: 240 10% 7%;
+    --header-background: 0 0% 100%;
   }
 
   .dark {

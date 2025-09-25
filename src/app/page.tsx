@@ -205,7 +205,7 @@ export default function Home() {
         </section>
 
         {/* Before and After Section */}
-        <section id="resultados" className="py-16 sm:py-24 bg-background text-foreground">
+        <section id="resultados" className="py-16 sm:py-24 bg-secondary text-foreground">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary-dark">

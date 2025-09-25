@@ -6,7 +6,7 @@ import { WhatsAppIcon } from './icons/whatsapp-icon';
 
 export default function Footer() {
   return (
-    <footer className="bg-card text-card-foreground border-t border-primary/10">
+    <footer className="bg-secondary text-card-foreground border-t border-primary/10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
