@@ -102,56 +102,65 @@ export default function Home() {
         {/* Stats and Services Section */}
         <section id="servicios" className="py-16 sm:py-24 bg-card">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Stats Column */}
-              <div className="lg:col-span-1 flex flex-col gap-8">
-                {stats.map((stat) => (
-                  <Card
-                    key={stat.label}
-                    className="flex flex-col items-center justify-center p-8 text-center shadow-lg bg-background"
-                  >
-                    <stat.icon className="w-12 h-12 text-primary mb-4" />
-                    <p className="text-5xl font-bold text-primary">
-                      {stat.value}
-                    </p>
-                    <p className="text-lg text-muted-foreground mt-2">
-                      {stat.label}
-                    </p>
-                  </Card>
-                ))}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              
+              {/* Specializations collage */}
+              <div className="grid grid-cols-2 gap-4">
+                  {specializations.map((spec, index) => (
+                     <Card
+                        key={spec.name}
+                        className={`group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${index === 0 ? 'col-span-2' : 'aspect-[4/5]'}`}
+                      >
+                       <Image
+                          src={spec.image}
+                          alt={spec.name}
+                          width={600}
+                          height={800}
+                          data-ai-hint={spec.hint}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                        <div className="relative h-full flex flex-col justify-end p-6 text-white">
+                          <h3 className="font-headline text-2xl font-bold">
+                            {spec.name}
+                          </h3>
+                          <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                            <Link
+                              href={spec.href}
+                            >
+                              <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                            </Link>
+                          </Button>
+                        </div>
+                     </Card>
+                  ))}
               </div>
 
-              {/* Services Column */}
-              <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {specializations.map((spec) => (
-                  <Card
-                    key={spec.name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
-                  >
-                    <Image
-                      src={spec.image}
-                      alt={spec.name}
-                      width={600}
-                      height={800}
-                      data-ai-hint={spec.hint}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                    <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                      <h3 className="font-headline text-2xl font-bold">
-                        {spec.name}
-                      </h3>
-                      <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
-                        <Link
-                          href={spec.href}
-                        >
-                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </Card>
-                ))}
+               {/* Stats column */}
+              <div className="flex flex-col gap-8">
+                <div className="text-left">
+                    <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
+                    <p className="mt-4 text-lg text-muted-foreground">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+                </div>
+                <div className="space-y-8 mt-4">
+                    {stats.map((stat) => (
+                      <div key={stat.label} className="flex items-start gap-6">
+                        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary shrink-0">
+                           <stat.icon className="w-8 h-8" />
+                        </div>
+                        <div>
+                          <p className="text-3xl font-bold text-foreground">
+                            {stat.value}
+                          </p>
+                          <p className="text-lg text-muted-foreground mt-1">
+                            {stat.label}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                </div>
               </div>
+
             </div>
           </div>
         </section>
