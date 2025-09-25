@@ -126,7 +126,7 @@ export default function BioestimuladoresPage() {
             </p>
             <Button asChild size="lg" className="mt-8">
               <Link href="#citas">
-                Quiero una valoración <ArrowRight className="ml-2" />
+                Quiero una valoración <ArrowRight />
               </Link>
             </Button>
           </div>
@@ -287,14 +287,14 @@ export default function BioestimuladoresPage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+                className="mt-8"
               >
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                  Agendar por WhatsApp <WhatsAppIcon />
                 </a>
               </Button>
             </div>

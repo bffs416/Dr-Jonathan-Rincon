@@ -347,7 +347,7 @@ export default function HilosTensoresPage() {
               <DialogTrigger asChild>
                 <Button size="lg" className="mt-8">
                   ¿Cómo funcionan los Hilos Tensores?{' '}
-                  <ArrowRight className="ml-2" />
+                  <ArrowRight />
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[600px]">
@@ -643,14 +643,14 @@ export default function HilosTensoresPage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+                className="mt-8"
               >
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                  Agendar por WhatsApp <WhatsAppIcon />
                 </a>
               </Button>
             </div>
@@ -671,5 +671,3 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
-
-    

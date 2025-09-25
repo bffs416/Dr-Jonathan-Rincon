@@ -107,7 +107,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center space-x-1">
-          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button asChild className="uppercase tracking-widest">
              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                 Agendar Cita
              </a>
@@ -160,7 +160,7 @@ export default function Header() {
             </nav>
 
               <div className="p-6 border-t mt-auto">
-                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-lg py-6">
+                 <Button asChild size="lg" className="w-full">
                     <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                         <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
                     </a>

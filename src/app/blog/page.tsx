@@ -167,7 +167,7 @@ export default function BlogPage() {
                 </div>
                 <Button asChild size="lg" className="mt-6 w-fit">
                     <Link href={featuredPost.slug}>
-                        Leer Artículo Completo <ArrowRight className="ml-2" />
+                        Leer Artículo Completo <ArrowRight />
                     </Link>
                 </Button>
             </div>
@@ -216,7 +216,7 @@ export default function BlogPage() {
                 </div>
               <Button asChild variant="outline" className="w-full">
                 <Link href={post.slug}>
-                  Leer Más <ArrowRight className="ml-2 h-4 w-4" />
+                  Leer Más <ArrowRight />
                 </Link>
               </Button>
             </CardFooter>

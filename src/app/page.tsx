@@ -141,12 +141,13 @@ export default function Home() {
                       <h3 className="font-headline text-2xl font-bold">
                         {spec.name}
                       </h3>
-                      <Link
-                        href={spec.href}
-                        className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80 group/link"
-                      >
-                        <span>Conocer más</span> <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
-                      </Link>
+                      <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                        <Link
+                          href={spec.href}
+                        >
+                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
                     </div>
                   </Card>
                 ))}
@@ -195,7 +196,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon /> Agendar por WhatsApp
+                  Agendar por WhatsApp <WhatsAppIcon />
                 </a>
               </Button>
             </div>
@@ -239,7 +240,7 @@ export default function Home() {
                             data-ai-hint={item.after.imageHint}
                             className="object-cover"
                           />
-                          <div className="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded">DESPUÉS</div>
+                          <div className="absolute top-2 left-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded">DESPUÉS</div>
                         </div>
                       )}
                     </div>
