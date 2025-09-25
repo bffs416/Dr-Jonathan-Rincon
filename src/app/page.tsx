@@ -83,7 +83,7 @@ export default function Home() {
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
-          <div className="container relative z-20">
+          <div className="container relative z-20 px-4">
             <h1 className="font-headline text-4xl md:text-6xl font-bold">
               Dr. Jonathan Rincón
             </h1>
