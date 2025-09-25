@@ -78,9 +78,9 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
-            src="/Dr_Jonathan%20Rincon.mp4"
           >
-            {/* You can add <source> tags here for different video formats */}
+            <source src="/Dr_Jonathan%20Rincon.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/50 z-10" />
           <div className="container relative z-20">
