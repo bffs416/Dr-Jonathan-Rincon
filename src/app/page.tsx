@@ -78,7 +78,7 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
-            src="/Dr_Jonathan Rincon.mp4"
+            src="/Dr_Jonathan%20Rincon.mp4"
           >
             {/* You can add <source> tags here for different video formats */}
           </video>
