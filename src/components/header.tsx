@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Facebook, Instagram, Menu, X, Award } from 'lucide-react';
+import { Facebook, Instagram, Menu, X, Award, Search, Moon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -22,14 +22,16 @@ const navLinks = [
     { 
         name: 'Tratamientos', 
         dropdown: [
+            { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
             { name: 'Bioestimuladores', href: '/bioestimuladores' },
             { name: 'Botox Terapéutico', href: '/botox-terapeutico' },
             { name: 'Contorno Corporal', href: '/contorno-corporal' },
             { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
         ]
     },
-    { name: 'Blog Médico', href: '/blog' },
-    { name: 'Sobre el Doctor', href: '/#sobre-el-doctor' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Sobre Mi', href: '/#sobre-el-doctor' },
+    { name: 'Contacto', href: '#' },
 ];
 
 
@@ -54,25 +56,28 @@ export default function Header() {
   const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
     const isActive = pathname === href;
     return (
-      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-primary" : "text-foreground")}>
+      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-primary font-semibold" : "text-foreground")}>
         {children}
       </Link>
     );
   };
   
-  const NavDropdown = ({ name, items }: { name: string; items: { name: string; href: string }[] }) => {
+  const NavDropdown = ({ name, items }: { name: string; items: { name: string; href: string, highlight?: boolean }[] }) => {
      const isActive = items.some(item => pathname.startsWith(item.href));
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className={cn("text-sm font-medium hover:text-primary px-3", isActive ? "text-primary" : "text-foreground")}>
+          <Button variant="ghost" className={cn("text-sm font-medium hover:text-primary px-3 data-[state=open]:text-primary", isActive ? "text-primary font-semibold" : "text-foreground")}>
             {name} <ChevronDown className="ml-1 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
           {items.map(item => (
             <DropdownMenuItem key={item.href} asChild>
-              <Link href={item.href}>{item.name}</Link>
+              <Link href={item.href} className={cn(item.highlight && "font-bold text-primary")}>
+                {item.highlight && <Award className="mr-2 h-4 w-4" />}
+                {item.name}
+              </Link>
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
@@ -84,42 +89,37 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 w-full transition-all duration-300',
+        'sticky top-0 z-50 w-full transition-all duration-300 border-b',
         isScrolled
-          ? 'bg-background/80 shadow-md backdrop-blur-lg'
-          : 'bg-transparent'
+          ? 'bg-background/90 backdrop-blur-lg'
+          : 'bg-background'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Logo />
 
-        <nav className="hidden lg:flex items-center space-x-6">
-            <Button asChild variant="ghost" className="text-primary font-bold hover:text-primary px-3">
-                <Link href="/hilos-tensores">
-                    <Award className="mr-2 h-4 w-4" />
-                    Hilos Tensores
-                </Link>
-            </Button>
+        <nav className="hidden lg:flex items-center gap-2">
+            <NavLink href="/">Inicio</NavLink>
             {navLinks.map(link => link.dropdown 
                 ? <NavDropdown key={link.name} name={link.name} items={link.dropdown} />
-                : <NavLink key={link.href} href={link.href}>{link.name}</NavLink>
+                : <NavLink key={link.name} href={link.href || '#'}>{link.name}</NavLink>
             )}
         </nav>
 
-        <div className="hidden lg:flex items-center space-x-2">
+        <div className="hidden lg:flex items-center space-x-1">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={cn("hover:text-primary", 'text-foreground')}>
-              <Instagram className="h-5 w-5" />
+            <a href="#" aria-label="Search" className={cn("hover:text-primary", 'text-foreground')}>
+              <Search className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={cn("hover:text-primary", 'text-foreground')}>
-              <Facebook className="h-5 w-5" />
+            <a href="#" aria-label="Toggle Dark Mode" className={cn("hover:text-primary", 'text-foreground')}>
+              <Moon className="h-5 w-5" />
             </a>
           </Button>
-          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
+                Agendar Cita
              </a>
           </Button>
         </div>
@@ -143,9 +143,7 @@ export default function Header() {
             <nav className="flex-1 p-6">
               <ul className="space-y-4">
                   <li>
-                    <Link href="/hilos-tensores" className="text-lg font-bold text-primary transition-colors block flex items-center">
-                        <Award className="mr-2 h-5 w-5"/> Hilos Tensores
-                    </Link>
+                     <Link href="/" className="text-lg hover:text-primary transition-colors block">Inicio</Link>
                   </li>
                 {navLinks.map(link => (
                   <li key={link.name}>
@@ -155,13 +153,16 @@ export default function Header() {
                         <ul className="pl-4 space-y-3 border-l">
                           {link.dropdown.map(item => (
                             <li key={item.href}>
-                              <Link href={item.href} className="hover:text-primary transition-colors block">{item.name}</Link>
+                              <Link href={item.href} className={cn("hover:text-primary transition-colors block", item.highlight && "font-bold text-primary flex items-center")}>
+                                {item.highlight && <Award className="mr-2 h-4 w-4" />}
+                                {item.name}
+                              </Link>
                             </li>
                           ))}
                         </ul>
                        </div>
                     ) : (
-                      <Link href={link.href} className="text-lg hover:text-primary transition-colors block">{link.name}</Link>
+                      <Link href={link.href || '#'} className="text-lg hover:text-primary transition-colors block">{link.name}</Link>
                     )}
                   </li>
                 ))}
@@ -169,23 +170,11 @@ export default function Header() {
             </nav>
 
               <div className="p-6 border-t mt-auto">
-                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-lg py-6">
+                 <Button asChild className="w-full bg-primary hover:bg-primary/90 text-lg py-6 rounded-full">
                     <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                         <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
                     </a>
                 </Button>
-                <div className="flex justify-center items-center space-x-4 mt-4">
-                  <Button variant="ghost" size="icon" asChild>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                      <Instagram className="h-6 w-6" />
-                    </a>
-                  </Button>
-                  <Button variant="ghost" size="icon" asChild>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                      <Facebook className="h-6 w-6" />
-                    </a>
-                  </Button>
-                </div>
               </div>
           </SheetContent>
         </Sheet>

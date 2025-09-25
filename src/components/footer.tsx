@@ -30,8 +30,11 @@ export default function Footer() {
           <div>
             <h3 className="font-headline font-semibold">Navegación</h3>
             <ul className="mt-4 space-y-2 text-sm">
+              <li><Link href="/" className="text-muted-foreground hover:text-primary">Inicio</Link></li>
               <li><Link href="/hilos-tensores" className="text-muted-foreground hover:text-primary">Hilos Tensores</Link></li>
-              <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog Médico</Link></li>
+              <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
+              <li><Link href="/#sobre-el-doctor" className="text-muted-foreground hover:text-primary">Sobre Mi</Link></li>
+              <li><Link href="#" className="text-muted-foreground hover:text-primary">Contacto</Link></li>
             </ul>
           </div>
           <div>
