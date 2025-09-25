@@ -79,7 +79,7 @@ export default function Home() {
             playsInline
             className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
           >
-            <source src="/Dr_Jonathan%20Rincon.mp4" type="video/mp4" />
+            <source src="/Dr_Jonathan_Rincon.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
@@ -163,7 +163,21 @@ export default function Home() {
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="absolute -top-8 -left-8 w-full h-full border-4 border-primary/20 rounded-xl transform -rotate-6 z-0"></div>
+               <svg
+                className="absolute -top-8 -left-8 w-full h-full text-primary/10 transform -rotate-6 z-0"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <path d="M 50,0 L 100,25 V 75 L 50,100 L 0,75 V 25 Z" />
+                <path d="M 50,50 L 100,25" />
+                <path d="M 50,50 L 50,100" />
+                <path d="M 50,50 L 0,25" />
+                <path d="M 0,75 L 50,50" />
+                <path d="M 100,75 L 50,50" />
+              </svg>
               <Image
                 src="/images/Experto-hilos-tensores-faciales.png"
                 alt="Dr. Jonathan Rincón, experto en medicina estética"
@@ -174,14 +188,14 @@ export default function Home() {
               />
             </div>
             <div>
-              <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary-dark">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
-                <span className="text-primary-dark">Dr. Jonathan Rincón</span>
+                <span className="text-primary">Dr. Jonathan Rincón</span>
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
                 Especialista en medicina estética con más de 8 años de
                 experiencia. Reconocido como el{' '}
-                <strong className="text-primary-dark font-bold">
+                <strong className="text-primary font-bold">
                   #1 en hilos tensores en Medellín
                 </strong>
                 , combinando técnicas avanzadas con un enfoque personalizado
@@ -209,8 +223,8 @@ export default function Home() {
         <section id="resultados" className="py-16 sm:py-24 bg-secondary text-foreground">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary-dark">
-                Resultados que <span className="text-primary-dark">Inspiran Confianza</span>
+              <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                Resultados que <span className="text-primary">Inspiran Confianza</span>
               </h2>
               <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                 Descubre las transformaciones reales de nuestros pacientes. La naturalidad y la excelencia son nuestro sello.
