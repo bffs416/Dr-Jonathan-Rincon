@@ -163,12 +163,13 @@ export default function Home() {
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
+              <div className="absolute -top-8 -left-8 w-full h-full border-4 border-primary/20 rounded-xl transform -rotate-6 z-0"></div>
               <Image
                 src="https://picsum.photos/seed/doctor-portrait/500/625"
                 alt="Dr. Jonathan Rincón, experto en medicina estética"
                 width={500}
                 height={625}
-                className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover object-top"
+                className="relative rounded-xl shadow-2xl w-full aspect-[4/5] object-cover object-top z-10"
                 data-ai-hint="doctor portrait"
               />
             </div>
