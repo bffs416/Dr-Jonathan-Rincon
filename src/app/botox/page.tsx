@@ -241,13 +241,6 @@ export default function BotoxPage() {
               <p>
                 Por ello, es fundamental que el tratamiento sea administrado exclusivamente por médicos con la formación y experiencia adecuadas, como dermatólogos o cirujanos plásticos. Ellos conocen a la perfección la anatomía facial y la técnica de inyección para lograr los mejores resultados y minimizar cualquier riesgo.
               </p>
-              <Alert>
-                <Info className="h-4 w-4" />
-                <AlertTitle>¡Importante!</AlertTitle>
-                <AlertDescription>
-                  Asegúrate de que el producto utilizado sea de una marca aprobada por las autoridades sanitarias, como Vistabel®, Azzalure® o Bocouture® en España.
-                </AlertDescription>
-              </Alert>
             </CardContent>
           </Card>
         </section>
