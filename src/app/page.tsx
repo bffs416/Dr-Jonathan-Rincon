@@ -159,7 +159,7 @@ export default function Home() {
         {/* About Doctor Section */}
         <section
           id="sobre-el-doctor"
-          className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24 bg-background text-foreground"
+          className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24 text-foreground"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
