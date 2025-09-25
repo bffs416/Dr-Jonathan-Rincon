@@ -19,12 +19,13 @@ import {
 import { ChevronDown } from 'lucide-react';
 
 const navLinks = [
-    { 
-        name: 'Tratamientos', 
+    {
+        name: 'Tratamientos',
         dropdown: [
             { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
             { name: 'Bioestimuladores', href: '/bioestimuladores' },
             { name: 'Botox', href: '/botox' },
+            { name: 'Botox Terapéutico', href: '/botox-terapeutico' },
             { name: 'Contorno Corporal', href: '/contorno-corporal' },
             { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
         ]
@@ -99,7 +100,6 @@ export default function Header() {
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-2">
-            <NavLink href="/">Inicio</NavLink>
             {navLinks.map(link => link.dropdown 
                 ? <NavDropdown key={link.name} name={link.name} items={link.dropdown} />
                 : <NavLink key={link.name} href={link.href || '#'}>{link.name}</NavLink>
@@ -132,9 +132,6 @@ export default function Header() {
 
             <nav className="flex-1 p-6">
               <ul className="space-y-4">
-                  <li>
-                     <Link href="/" className="text-lg hover:text-primary/80 transition-colors block">Inicio</Link>
-                  </li>
                 {navLinks.map(link => (
                   <li key={link.name}>
                     {link.dropdown ? (
