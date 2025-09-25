@@ -143,9 +143,9 @@ export default function Home() {
                       </h3>
                       <Link
                         href={spec.href}
-                        className="mt-4 inline-flex items-center text-sm font-semibold text-primary-foreground hover:text-primary-foreground/80"
+                        className="mt-4 inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80 group/link"
                       >
-                        Conocer más <ArrowRight className="ml-2 h-4 w-4" />
+                        <span>Conocer más</span> <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
                       </Link>
                     </div>
                   </Card>
@@ -195,7 +195,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                  <WhatsAppIcon /> Agendar por WhatsApp
                 </a>
               </Button>
             </div>
@@ -253,5 +253,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
