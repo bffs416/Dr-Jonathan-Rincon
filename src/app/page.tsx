@@ -105,7 +105,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
               {/* Specializations collage */}
-              <div className="grid grid-cols-2 grid-rows-2 gap-4 h-[550px]">
+              <div className="grid grid-cols-2 gap-4 h-[550px]">
                   <Card
                     key={specializations[0].name}
                     className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-2"
