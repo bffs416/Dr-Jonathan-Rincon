@@ -336,7 +336,7 @@ export default function HilosTensoresPage() {
             <p className="mt-4 text-lg text-muted-foreground">
               El{' '}
               <strong className="text-primary font-bold">
-                Dr. Jhonathan Rincón, reconocido como el experto #1 en hilos
+                Dr. Jonathan Rincón, reconocido como el experto #1 en hilos
                 tensores PDO en Medellín
               </strong>
               , te ofrece una solución innovadora y mínimamente invasiva para
@@ -658,7 +658,7 @@ export default function HilosTensoresPage() {
               {ctaImage && (
                 <Image
                   src={ctaImage.imageUrl}
-                  alt="Dr. Jhonathan Rincón realizando un procedimiento de hilos tensores en su clínica."
+                  alt="Dr. Jonathan Rincón realizando un procedimiento de hilos tensores en su clínica."
                   fill
                   className="object-cover"
                   data-ai-hint={ctaImage.imageHint}

@@ -24,7 +24,7 @@ export function Logo() {
         <div className="absolute inset-0 bg-primary rounded-full" />
         <Image
           src="/images/Logo Dr Jhonathan.png"
-          alt="Logo Dr. Jhonathan Rincón"
+          alt="Logo Dr. Jonathan Rincón"
           width={50}
           height={50}
           className="rounded-full relative z-10"
@@ -37,7 +37,7 @@ export function Logo() {
             'text-foreground'
           )}
         >
-          Dr. Jhonathan Rincón
+          Dr. Jonathan Rincón
         </span>
         <span
           className={cn(

@@ -85,13 +85,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
           <div className="container relative z-20">
             <h1 className="font-headline text-4xl md:text-6xl font-bold">
-              Dr. Jhonathan Rincón
+              Dr. Jonathan Rincón
             </h1>
             <p className="mt-2 font-headline text-2xl md:text-3xl">
               Procedimientos en Medicina Estética
             </p>
             <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-200">
-              Bienvenido al sitio web del Dr. Jhonathan Rincón, uno de los
+              Bienvenido al sitio web del Dr. Jonathan Rincón, uno de los
               mejores médicos estéticos en Medellín, Colombia. Especialista en
               medicina estética, con una extensa preparación en estética facial y
               corporal, tanto quirúrgica como no quirúrgica.
@@ -165,7 +165,7 @@ export default function Home() {
             <div className="relative">
               <Image
                 src="https://picsum.photos/seed/doctor-portrait/500/625"
-                alt="Dr. Jhonathan Rincón, experto en medicina estética"
+                alt="Dr. Jonathan Rincón, experto en medicina estética"
                 width={500}
                 height={625}
                 className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover object-top"
@@ -175,7 +175,7 @@ export default function Home() {
             <div>
               <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary-dark">
                 Conoce al{' '}
-                <span className="text-primary-dark">Dr. Jhonathan Rincón</span>
+                <span className="text-primary-dark">Dr. Jonathan Rincón</span>
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
                 Especialista en medicina estética con más de 5 años de

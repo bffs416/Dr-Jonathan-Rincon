@@ -11,7 +11,7 @@ async function getPostData(slug: string) {
     category: 'Hilos Tensores',
     date: '19 de enero de 2024',
     readTime: '6 min',
-    author: 'Dr. Jhonathan Rincón',
+    author: 'Dr. Jonathan Rincón',
     image: 'https://picsum.photos/seed/aesthetic-medicine-clinic/1280/853',
     imageHint: 'aesthetic medicine clinic',
     content: `
@@ -40,7 +40,7 @@ async function getPostData(slug: string) {
       <h2>El Procedimiento: Rápido y Seguro</h2>
       <p>El tratamiento se realiza en consulta bajo anestesia local. Dura aproximadamente entre 30 y 60 minutos. El Dr. Rincón marca las zonas a tratar y, mediante una fina cánula, introduce los hilos en el plano correcto de la piel. El paciente puede retomar sus actividades casi de inmediato, siguiendo unas sencillas pautas de cuidado.</p>
       <blockquote>
-        <p>"Los hilos tensores son mi especialidad y mi pasión. La capacidad de rejuvenecer un rostro de forma tan natural y con una técnica mínimamente invasiva es lo que me motiva cada día." - Dr. Jhonathan Rincón</p>
+        <p>"Los hilos tensores son mi especialidad y mi pasión. La capacidad de rejuvenecer un rostro de forma tan natural y con una técnica mínimamente invasiva es lo que me motiva cada día." - Dr. Jonathan Rincón</p>
       </blockquote>
       <h2>Resultados y Duración</h2>
       <p>Aunque el efecto tensor es visible al momento, los resultados óptimos se aprecian a partir del segundo o tercer mes, cuando la producción de nuevo colágeno está en su punto álgido. El efecto puede durar entre 12 y 18 meses, dependiendo de cada paciente.</p>

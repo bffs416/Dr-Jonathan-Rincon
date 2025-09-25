@@ -7,9 +7,9 @@ import './globals.css';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 
 export const metadata: Metadata = {
-  title: 'Dr. Jhonathan Rincón',
+  title: 'Dr. Jonathan Rincón',
   description:
-    'Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita con el Dr. Jhonathan Rincón.',
+    'Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita con el Dr. Jonathan Rincón.',
 };
 
 export default function RootLayout({

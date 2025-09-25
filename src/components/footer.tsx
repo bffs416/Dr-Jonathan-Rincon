@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-primary/10 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Dr. Jhonathan Rincón. Todos los derechos reservados. Diseñado por <a href="https://nyvara-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-primary/80 font-semibold">Nyvara Group</a>.</p>
+          <p>&copy; {new Date().getFullYear()} Dr. Jonathan Rincón. Todos los derechos reservados. Diseñado por <a href="https://nyvara-web.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-primary/80 font-semibold">Nyvara Group</a>.</p>
         </div>
       </div>
     </footer>
