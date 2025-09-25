@@ -13,6 +13,7 @@
     --popover-foreground: 225 10% 15%;
     --primary: 214 100% 50%; /* #0056FF - Azul brillante */
     --primary-foreground: 0 0% 100%;
+    --primary-dark: 215 98% 39%;
     --secondary: 224 24% 90%; /* #e1e4ea */
     --secondary-foreground: 225 10% 15%;
     --muted: 224 24% 90%;
@@ -35,13 +36,14 @@
   .dark {
     --background: 222 47% 11%; /* #0f172a - Fondo oscuro */
     --foreground: 210 40% 98%;
-    --header-background: 227 11% 48%;
+    --header-background: 222 47% 8%;
     --card: 222 47% 14%; /* #162033 - Un poco más claro que el fondo */
     --card-foreground: 210 40% 98%;
     --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%; /* Blanco para contraste */
     --primary-foreground: 222 47% 11%;
+    --primary-dark: 215 98% 39%;
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217 33% 17%;

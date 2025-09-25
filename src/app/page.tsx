@@ -100,7 +100,7 @@ export default function Home() {
         </section>
 
         {/* Stats and Services Section */}
-        <section id="servicios" className="py-16 sm:py-24 bg-background">
+        <section id="servicios" className="py-16 sm:py-24 bg-card">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Stats Column */}
@@ -108,7 +108,7 @@ export default function Home() {
                 {stats.map((stat) => (
                   <Card
                     key={stat.label}
-                    className="flex flex-col items-center justify-center p-8 text-center shadow-lg bg-card"
+                    className="flex flex-col items-center justify-center p-8 text-center shadow-lg bg-background"
                   >
                     <stat.icon className="w-12 h-12 text-primary mb-4" />
                     <p className="text-5xl font-bold text-primary">
@@ -159,7 +159,7 @@ export default function Home() {
         {/* About Doctor Section */}
         <section
           id="sobre-el-doctor"
-          className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
+          className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24 bg-background text-foreground"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
@@ -172,14 +172,14 @@ export default function Home() {
               />
             </div>
             <div>
-              <h2 className="font-headline text-4xl md:text-5xl font-bold">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary-dark">
                 Conoce al{' '}
-                <span className="text-primary">Dr. Jhonathan Rincón</span>
+                <span className="text-primary-dark">Dr. Jhonathan Rincón</span>
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
                 Especialista en medicina estética con más de 5 años de
                 experiencia. Reconocido como el{' '}
-                <strong className="text-primary font-bold">
+                <strong className="text-primary-dark font-bold">
                   #1 en hilos tensores en Medellín
                 </strong>
                 , combinando técnicas avanzadas con un enfoque personalizado
@@ -204,11 +204,11 @@ export default function Home() {
         </section>
 
         {/* Before and After Section */}
-        <section id="resultados" className="py-16 sm:py-24 bg-muted/30">
+        <section id="resultados" className="py-16 sm:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="font-headline text-4xl md:text-5xl font-bold">
-                Resultados que <span className="text-primary">Inspiran Confianza</span>
+              <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary-dark">
+                Resultados que <span className="text-primary-dark">Inspiran Confianza</span>
               </h2>
               <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                 Descubre las transformaciones reales de nuestros pacientes. La naturalidad y la excelencia son nuestro sello.
@@ -216,7 +216,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {beforeAfterImages.map((item, index) => (
-                <Card key={index} className="overflow-hidden shadow-lg">
+                <Card key={index} className="overflow-hidden shadow-lg bg-card">
                   <CardContent className="p-0">
                     <div className="grid grid-cols-2">
                       {item.before && (
