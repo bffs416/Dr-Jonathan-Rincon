@@ -23,13 +23,13 @@ export default function Home() {
     {
       name: 'Contorno Corporal',
       href: '/contorno-corporal',
-      image: 'https://picsum.photos/seed/aesthetic-body/600/800',
+      image: 'https://picsum.photos/seed/aesthetic-body/600/400',
       hint: 'body contouring',
     },
     {
       name: 'Medicina Preventiva',
       href: '/medicina-preventiva',
-      image: 'https://picsum.photos/seed/aesthetic-preventive/600/800',
+      image: 'https://picsum.photos/seed/aesthetic-preventive/600/400',
       hint: 'preventive medicine',
     },
   ];
@@ -105,35 +105,76 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
               {/* Specializations collage */}
-              <div className="grid grid-cols-2 gap-4">
-                  {specializations.map((spec, index) => (
-                     <Card
-                        key={spec.name}
-                        className={`group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 ${index === 0 ? 'col-span-2' : 'aspect-[4/5]'}`}
-                      >
-                       <Image
-                          src={spec.image}
-                          alt={spec.name}
-                          width={600}
-                          height={800}
-                          data-ai-hint={spec.hint}
-                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                        <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                          <h3 className="font-headline text-2xl font-bold">
-                            {spec.name}
-                          </h3>
-                          <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
-                            <Link
-                              href={spec.href}
-                            >
-                              <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                            </Link>
-                          </Button>
-                        </div>
-                     </Card>
-                  ))}
+              <div className="grid grid-cols-2 grid-rows-2 gap-4 h-[550px]">
+                  <Card
+                    key={specializations[0].name}
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-2"
+                  >
+                    <Image
+                      src={specializations[0].image}
+                      alt={specializations[0].name}
+                      fill
+                      data-ai-hint={specializations[0].hint}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="relative h-full flex flex-col justify-end p-6 text-white">
+                      <h3 className="font-headline text-2xl font-bold">
+                        {specializations[0].name}
+                      </h3>
+                       <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                        <Link href={specializations[0].href}>
+                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </Card>
+                  <Card
+                    key={specializations[1].name}
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1"
+                  >
+                    <Image
+                      src={specializations[1].image}
+                      alt={specializations[1].name}
+                      fill
+                      data-ai-hint={specializations[1].hint}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="relative h-full flex flex-col justify-end p-6 text-white">
+                      <h3 className="font-headline text-2xl font-bold">
+                        {specializations[1].name}
+                      </h3>
+                      <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                        <Link href={specializations[1].href}>
+                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </Card>
+                   <Card
+                    key={specializations[2].name}
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1"
+                  >
+                    <Image
+                      src={specializations[2].image}
+                      alt={specializations[2].name}
+                      fill
+                      data-ai-hint={specializations[2].hint}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="relative h-full flex flex-col justify-end p-6 text-white">
+                      <h3 className="font-headline text-2xl font-bold">
+                        {specializations[2].name}
+                      </h3>
+                      <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                        <Link href={specializations[2].href}>
+                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </Card>
               </div>
 
                {/* Stats column */}
@@ -168,7 +209,7 @@ export default function Home() {
         {/* About Doctor Section */}
         <section
           id="sobre-el-doctor"
-          className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24 text-foreground"
+          className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
