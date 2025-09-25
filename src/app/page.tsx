@@ -46,7 +46,7 @@ export default function Home() {
       icon: HeartHandshake,
     },
     {
-      value: '10 años',
+      value: '8 años',
       label: 'de Experiencia',
       icon: Award,
     },
@@ -179,7 +179,7 @@ export default function Home() {
                 <span className="text-primary-dark">Dr. Jonathan Rincón</span>
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
-                Especialista en medicina estética con más de 5 años de
+                Especialista en medicina estética con más de 8 años de
                 experiencia. Reconocido como el{' '}
                 <strong className="text-primary-dark font-bold">
                   #1 en hilos tensores en Medellín
