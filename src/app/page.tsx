@@ -78,7 +78,7 @@ export default function Home() {
             muted
             playsInline
             className="absolute z-0 w-auto min-w-full min-h-full max-w-none"
-            // src="/placeholder-video.mp4" // Add your video source here
+            src="/placeholder-video.mp4"
           >
             {/* You can add <source> tags here for different video formats */}
           </video>
