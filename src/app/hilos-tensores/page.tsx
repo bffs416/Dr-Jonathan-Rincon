@@ -285,20 +285,19 @@ export default function HilosTensoresPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
+      <section className="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
         {heroImage && (
           <Image
             src={heroImage.imageUrl}
             alt="Mujer con piel radiante tras tratamiento con hilos tensores en Medellín."
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
             data-ai-hint={heroImage.imageHint}
             priority
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-        <div className="absolute inset-0 flex items-center justify-center text-center">
-          <div className="container mx-auto px-4 text-white">
+        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="container relative z-20 px-4">
             <div className="flex flex-col items-center gap-2">
               <Badge variant="secondary">#1 en Medellín</Badge>
               <Badge>La especialidad de la casa</Badge>
@@ -310,7 +309,6 @@ export default function HilosTensoresPage() {
               Rejuvenecimiento facial sin cirugía para un lifting natural y
               duradero.
             </p>
-          </div>
         </div>
       </section>
 
@@ -462,69 +460,46 @@ export default function HilosTensoresPage() {
             <CarouselContent>
               {beforeAfterCases.map((caseItem, index) => (
                   <CarouselItem key={index}>
-                    <Card className="shadow-xl overflow-hidden">
-                      <CardContent className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6">
-                        {/* Before */}
+                    <Card className="shadow-xl overflow-hidden bg-card">
+                       <CardHeader className="text-center pb-2">
+                          <CardTitle className="font-headline text-2xl">{caseItem.title}</CardTitle>
+                          <p className="text-muted-foreground text-sm">{caseItem.description}</p>
+                          <Badge variant="secondary" className="mx-auto mt-1">{caseItem.sessions}</Badge>
+                      </CardHeader>
+                      <CardContent className="p-4 sm:p-6 grid grid-cols-2 gap-4 items-center">
                         <div className="space-y-2">
-                          <h3 className="font-semibold text-center md:text-left">
-                            Antes
-                          </h3>
+                           <h3 className="font-semibold text-center text-muted-foreground">Antes</h3>
                           {caseItem.beforeImage && (
                             <Image
                               src={caseItem.beforeImage.imageUrl}
                               alt={`Antes - ${caseItem.title}`}
                               width={600}
                               height={400}
-                              className="rounded-lg aspect-[4/3] object-cover"
+                              className="rounded-lg aspect-square object-cover"
                               data-ai-hint={caseItem.beforeImage.imageHint}
                             />
                           )}
                         </div>
-
-                        {/* Details */}
-                        <div className="text-center order-first md:order-none">
-                          <h4 className="text-xl font-headline font-bold">
-                            {caseItem.title}
-                          </h4>
-                          <p className="text-muted-foreground text-sm mt-1">
-                            {caseItem.description}
-                          </p>
-                          <Badge
-                            variant="secondary"
-                            className="mt-3 font-normal"
-                          >
-                            {caseItem.sessions}
-                          </Badge>
-                        </div>
-
-                        {/* After */}
                         <div className="space-y-2">
-                          <h3 className="font-semibold text-center md:text-left">
-                            Después
-                          </h3>
-                          <div className="relative">
-                            {caseItem.afterImage && (
-                              <Image
-                                src={caseItem.afterImage.imageUrl}
-                                alt={`Después - ${caseItem.title}`}
-                                width={600}
-                                height={400}
-                                className="rounded-lg aspect-[4/3] object-cover"
-                                data-ai-hint={caseItem.afterImage.imageHint}
-                              />
-                            )}
-                            <Badge className="absolute top-2 right-2 bg-green-500 text-white">
-                              Resultado
-                            </Badge>
-                          </div>
+                          <h3 className="font-semibold text-center text-muted-foreground">Después</h3>
+                          {caseItem.afterImage && (
+                            <Image
+                              src={caseItem.afterImage.imageUrl}
+                              alt={`Después - ${caseItem.title}`}
+                              width={600}
+                              height={400}
+                              className="rounded-lg aspect-square object-cover"
+                              data-ai-hint={caseItem.afterImage.imageHint}
+                            />
+                          )}
                         </div>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 md:-left-10" />
-            <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 md:-right-10" />
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 md:-left-10" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 md:-right-10" />
           </Carousel>
         </section>
 
@@ -696,3 +671,5 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
+
+    
