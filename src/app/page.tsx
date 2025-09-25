@@ -82,7 +82,7 @@ export default function Home() {
             <source src="/Dr_Jonathan%20Rincon.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-black/50 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
           <div className="container relative z-20">
             <h1 className="font-headline text-4xl md:text-6xl font-bold">
               Dr. Jhonathan Rincón
