@@ -16,26 +16,27 @@ import Image from 'next/image';
 
 const Placeholder = ({
   className,
-  width,
-  height,
-  text = 'Pon tu imagen aquí',
+  seed,
+  width = 600,
+  height = 600,
+  text,
+  hint
 }: {
   className?: string;
-  width?: number | string;
-  height?: number | string;
+  seed: string;
+  width?: number;
+  height?: number;
   text?: string;
+  hint: string;
 }) => (
-  <div
-    className={cn(
-      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm',
-      className
-    )}
-    style={{
-      width: width ? `${width}px` : '100%',
-      height: height ? `${height}px` : '100%',
-    }}
-  >
-    {text}
+  <div className={cn('relative', className)} style={{ width: `${width}px`, height: `${height}px` }}>
+    <Image
+      src={`https://picsum.photos/seed/${seed}/${width}/${height}`}
+      alt={text || hint}
+      fill
+      className="object-cover"
+      data-ai-hint={hint}
+    />
   </div>
 );
 
@@ -104,7 +105,7 @@ export default function ContornoCorporalPage() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
-        <Placeholder className="absolute inset-0 opacity-30" />
+        <Placeholder className="absolute inset-0 opacity-30" seed="body-contouring-hero" width={1920} height={1080} hint="body contouring" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
@@ -143,7 +144,8 @@ export default function ContornoCorporalPage() {
           <div>
             <Placeholder
               className="rounded-xl shadow-2xl w-full aspect-square"
-              text="Imagen de mujer con figura tonificada"
+              seed="toned-figure"
+              hint="toned body"
             />
           </div>
         </section>
@@ -159,7 +161,8 @@ export default function ContornoCorporalPage() {
                  <div className="order-2 md:order-1">
                   <Placeholder
                     className="rounded-xl shadow-2xl w-full aspect-square"
-                    text="Diagrama de Hidrolipoclasia"
+                    seed="hidrolipoclasia-diagram"
+                    hint="hidrolipoclasia diagram"
                   />
                 </div>
                 <div className="order-1 md:order-2">
@@ -242,7 +245,8 @@ export default function ContornoCorporalPage() {
                  <div>
                   <Placeholder
                     className="rounded-xl shadow-2xl w-full aspect-square"
-                    text="Diagrama de funcionamiento de Tensamax"
+                    seed="tensamax-diagram"
+                    hint="tensamax diagram"
                   />
                 </div>
               </div>
@@ -340,7 +344,7 @@ export default function ContornoCorporalPage() {
               </Button>
             </div>
             <div className="relative h-64 md:h-full w-full">
-              <Placeholder className="absolute inset-0" text="Imagen de mujer feliz con su figura" />
+              <Placeholder className="absolute inset-0" seed="cta-body-contouring" width={800} height={600} hint="happy woman figure"/>
             </div>
           </Card>
         </section>

@@ -12,7 +12,7 @@ async function getPostData(slug: string) {
     date: '19 de enero de 2024',
     readTime: '6 min',
     author: 'Dr. Jhonathan Rincón',
-    image: 'https://picsum.photos/seed/blog-featured/1280/853',
+    image: 'https://picsum.photos/seed/aesthetic-medicine-clinic/1280/853',
     imageHint: 'aesthetic medicine clinic',
     content: `
       <p class="lead">Descubre por qué los hilos tensores PDO se han convertido en el tratamiento #1 para el rejuvenecimiento facial sin cirugía. En este artículo, exploraremos en detalle los diferentes tipos de hilos, sus beneficios, el procedimiento y los resultados que puedes esperar.</p>
@@ -27,7 +27,7 @@ async function getPostData(slug: string) {
       </ul>
       <h2>Beneficios del Tratamiento</h2>
       <figure>
-        <img src="https://picsum.photos/seed/blog-detail-1/800/500" alt="Beneficios hilos tensores" data-ai-hint="happy patient"/>
+        <img src="https://picsum.photos/seed/happy-patient-aesthetic/800/500" alt="Beneficios hilos tensores" data-ai-hint="happy patient"/>
         <figcaption>Resultados naturales y una piel visiblemente más joven.</figcaption>
       </figure>
       <p>El principal beneficio es el <strong>efecto lifting inmediato</strong>. Sin embargo, la magia real ocurre a largo plazo. La presencia de los hilos estimula a los fibroblastos a producir colágeno y elastina de forma natural. Esto se traduce en:</p>

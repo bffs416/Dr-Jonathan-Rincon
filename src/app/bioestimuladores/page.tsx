@@ -21,26 +21,27 @@ import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 
 const Placeholder = ({
   className,
-  width,
-  height,
-  text = 'Pon tu imagen aquí',
+  seed,
+  width = 600,
+  height = 600,
+  text,
+  hint
 }: {
   className?: string;
-  width?: number | string;
-  height?: number | string;
+  seed: string;
+  width?: number;
+  height?: number;
   text?: string;
+  hint: string;
 }) => (
-  <div
-    className={cn(
-      'flex items-center justify-center bg-muted/50 border border-dashed text-muted-foreground text-sm',
-      className
-    )}
-    style={{
-      width: width ? `${width}px` : '100%',
-      height: height ? `${height}px` : '100%',
-    }}
-  >
-    {text}
+  <div className={cn('relative', className)} style={{ width: `${width}px`, height: `${height}px` }}>
+    <Image
+      src={`https://picsum.photos/seed/${seed}/${width}/${height}`}
+      alt={text || hint}
+      fill
+      className="object-cover"
+      data-ai-hint={hint}
+    />
   </div>
 );
 
@@ -84,7 +85,7 @@ export default function BioestimuladoresPage() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
-        <Placeholder className="absolute inset-0 opacity-30" />
+        <Placeholder className="absolute inset-0 opacity-30" seed="biostimulator-hero" width={1920} height={1080} hint="aesthetic medicine" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
@@ -133,7 +134,8 @@ export default function BioestimuladoresPage() {
           <div>
             <Placeholder
               className="rounded-xl shadow-2xl w-full aspect-square"
-              text="Imagen de piel joven y firme"
+              seed="firm-skin"
+              hint="firm aesthetic skin"
             />
           </div>
         </section>
@@ -144,7 +146,8 @@ export default function BioestimuladoresPage() {
             <div className="order-2 md:order-1">
               <Placeholder
                 className="rounded-xl shadow-2xl w-full aspect-square"
-                text="Diagrama del funcionamiento de bioestimuladores"
+                seed="biostimulator-diagram"
+                hint="biostimulator diagram"
               />
             </div>
             <div className="order-1 md:order-2">
@@ -299,7 +302,7 @@ export default function BioestimuladoresPage() {
               </Button>
             </div>
             <div className="relative h-64 md:h-full w-full">
-              <Placeholder className="absolute inset-0" />
+              <Placeholder className="absolute inset-0" seed="cta-bio" width={800} height={600} hint="aesthetic medicine patient" />
             </div>
           </Card>
         </section>

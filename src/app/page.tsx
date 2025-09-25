@@ -17,19 +17,19 @@ export default function Home() {
     {
       name: 'Hilos Tensores PDO',
       href: '/hilos-tensores',
-      image: 'https://picsum.photos/seed/facial-1/600/800',
+      image: 'https://picsum.photos/seed/aesthetic-threads/600/800',
       hint: 'facial threads',
     },
     {
       name: 'Contorno Corporal',
       href: '/contorno-corporal',
-      image: 'https://picsum.photos/seed/corporal-1/600/800',
+      image: 'https://picsum.photos/seed/aesthetic-body/600/800',
       hint: 'body contouring',
     },
     {
       name: 'Medicina Preventiva',
       href: '/medicina-preventiva',
-      image: 'https://picsum.photos/seed/nosurgery-1/600/800',
+      image: 'https://picsum.photos/seed/aesthetic-preventive/600/800',
       hint: 'preventive medicine',
     },
   ];
@@ -164,11 +164,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <Image
-                src="/images/Experto-hilos-tensores-faciales.png"
-                alt="Dr. Jhonathan Rincón, experto en hilos tensores faciales"
+                src="https://picsum.photos/seed/doctor-portrait/500/625"
+                alt="Dr. Jhonathan Rincón, experto en medicina estética"
                 width={500}
                 height={625}
                 className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover object-top"
+                data-ai-hint="doctor portrait"
               />
             </div>
             <div>

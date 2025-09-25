@@ -30,7 +30,7 @@ import {
 
 const featuredPost = {
   slug: '/blog/hilos-tensores-revolucion',
-  image: 'https://picsum.photos/seed/blog-featured/1200/800',
+  image: 'https://picsum.photos/seed/aesthetic-medicine-main/1200/800',
   imageHint: 'aesthetic medicine',
   title: 'Hilos Tensores: La Revolución del Lifting Sin Cirugía en Medellín',
   description:
@@ -43,7 +43,7 @@ const blogPosts = [
   {
     slug: '/blog/bioestimuladores-colageno',
     category: 'Bioestimuladores',
-    image: 'https://picsum.photos/seed/blog-1/600/400',
+    image: 'https://picsum.photos/seed/aesthetic-collagen/600/400',
     imageHint: 'collagen treatment',
     title:
       'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs Harmonca',
@@ -55,7 +55,7 @@ const blogPosts = [
   {
     slug: '/blog/botox-mitos-verdades',
     category: 'Facial',
-    image: 'https://picsum.photos/seed/blog-2/600/400',
+    image: 'https://picsum.photos/seed/aesthetic-botox/600/400',
     imageHint: 'botox injection',
     title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
     description:
@@ -66,7 +66,7 @@ const blogPosts = [
   {
     slug: '/blog/contorno-corporal-hidrolipoclasia',
     category: 'Corporal',
-    image: 'https://picsum.photos/seed/blog-3/600/400',
+    image: 'https://picsum.photos/seed/aesthetic-bodycontour/600/400',
     imageHint: 'body contouring',
     title: 'Contorno Corporal: Hidrolipoclasia vs Métodos Tradicionales',
     description:
