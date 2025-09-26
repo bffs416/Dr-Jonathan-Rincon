@@ -75,7 +75,6 @@ const TreatmentCard = ({ icon: Icon, title, description, href }: (typeof treatme
         <div className="flex items-center justify-between p-4 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
             <div className="flex-1 pr-8">
                 <h3 className="font-headline text-2xl font-semibold text-foreground group-hover:text-primary">{title}</h3>
-                <p className="text-muted-foreground mt-1 text-lg">{description}</p>
             </div>
             <div className="ml-6 flex items-center justify-center w-20 h-20 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
                 <Icon className="w-10 h-10 text-primary" />
