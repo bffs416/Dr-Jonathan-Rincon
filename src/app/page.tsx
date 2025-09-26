@@ -107,10 +107,10 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
               {/* Specializations collage */}
-              <div className="grid grid-cols-2 gap-4 h-[550px]">
+              <div className="grid grid-cols-2 gap-4 h-auto">
                   <Card
                     key={specializations[0].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-2"
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-2 h-[450px]"
                   >
                     <Image
                       src={specializations[0].image}
@@ -133,7 +133,7 @@ export default function Home() {
                   </Card>
                   <Card
                     key={specializations[1].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1"
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px]"
                   >
                     <Image
                       src={specializations[1].image}
@@ -156,7 +156,7 @@ export default function Home() {
                   </Card>
                    <Card
                     key={specializations[2].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1"
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px]"
                   >
                     <Image
                       src={specializations[2].image}
@@ -219,31 +219,6 @@ export default function Home() {
           className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-               <svg
-                className="absolute -top-8 -left-8 w-full h-full text-primary/10 transform -rotate-6 z-0"
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-              >
-                <path d="M 50,0 L 100,25 V 75 L 50,100 L 0,75 V 25 Z" />
-                <path d="M 50,50 L 100,25" />
-                <path d="M 50,50 L 50,100" />
-                <path d="M 50,50 L 0,25" />
-                <path d="M 0,75 L 50,50" />
-                <path d="M 100,75 L 50,50" />
-              </svg>
-              <Image
-                src="/images/Experto-hilos-tensores-faciales.png"
-                alt="Dr. Jonathan Rincón, experto en medicina estética"
-                width={500}
-                height={625}
-                className="relative rounded-xl shadow-2xl w-full aspect-[4/5] object-cover object-top z-10"
-                data-ai-hint="doctor portrait"
-              />
-            </div>
             <div>
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
@@ -272,6 +247,20 @@ export default function Home() {
                   Agendar por WhatsApp <WhatsAppIcon />
                 </a>
               </Button>
+            </div>
+            <div className="relative flex justify-center items-center">
+              <div className="relative w-[450px] h-[450px]">
+                  <div className="absolute inset-0 rounded-full overflow-hidden">
+                    <Image
+                      src="/images/Experto-hilos-tensores-faciales.png"
+                      alt="Dr. Jonathan Rincón, experto en medicina estética"
+                      width={450}
+                      height={450}
+                      className="object-cover w-full h-full object-top"
+                      data-ai-hint="doctor portrait"
+                    />
+                  </div>
+              </div>
             </div>
           </div>
         </section>
