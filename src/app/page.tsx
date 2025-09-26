@@ -287,27 +287,27 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative flex items-center justify-center min-h-[450px]">
-                <div className="relative w-72 h-72">
+                <div className="relative w-80 h-80">
                   <Image
                     src="https://picsum.photos/seed/face-procedure-1/400/400"
                     alt="Procedimiento facial estético"
                     width={400}
                     height={400}
                     data-ai-hint="facial procedure"
-                    className="rounded-full object-cover w-full h-full absolute top-0 left-0"
+                    className="rounded-full object-cover w-full h-full shadow-lg"
                   />
                 </div>
-                <div className="relative w-56 h-56 -ml-24 mt-32">
+                <div className="absolute -bottom-8 -right-4 w-64 h-64">
                    <Image
                     src="https://picsum.photos/seed/facial-injection/400/400"
                     alt="Aplicación de inyección facial"
                     width={400}
                     height={400}
                     data-ai-hint="facial injection"
-                    className="rounded-full object-cover w-full h-full absolute top-0 left-0 border-4 border-background"
+                    className="rounded-full object-cover w-full h-full border-8 border-background shadow-lg"
                   />
                 </div>
-                 <div className="absolute top-1/2 -translate-y-1/2 -ml-32 w-48 h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg">
+                 <div className="absolute -top-8 -left-4 w-48 h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform -rotate-12">
                     <p className="font-headline text-4xl font-bold text-accent-foreground">500+</p>
                     <p className="text-lg font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
                 </div>
