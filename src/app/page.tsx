@@ -136,21 +136,14 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 h-auto">
                   <Card
                     key={specializations[0].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-2 h-[450px]"
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-2 h-[450px] bg-primary"
                   >
-                    <Image
-                      src={specializations[0].image}
-                      alt={specializations[0].name}
-                      fill
-                      data-ai-hint={specializations[0].hint}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     <div className="relative h-full flex flex-col justify-end p-6 text-white">
                       <h3 className="font-headline text-2xl font-bold">
                         {specializations[0].name}
                       </h3>
-                       <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                       <Button asChild variant="link" className="text-white hover:text-white/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
                         <Link href={specializations[0].href}>
                           <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
@@ -159,21 +152,14 @@ export default function Home() {
                   </Card>
                   <Card
                     key={specializations[1].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px]"
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px] bg-primary"
                   >
-                    <Image
-                      src={specializations[1].image}
-                      alt={specializations[1].name}
-                      fill
-                      data-ai-hint={specializations[1].hint}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     <div className="relative h-full flex flex-col justify-end p-6 text-white">
                       <h3 className="font-headline text-2xl font-bold">
                         {specializations[1].name}
                       </h3>
-                      <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                      <Button asChild variant="link" className="text-white hover:text-white/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
                         <Link href={specializations[1].href}>
                           <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
@@ -182,21 +168,14 @@ export default function Home() {
                   </Card>
                    <Card
                     key={specializations[2].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px]"
+                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px] bg-primary"
                   >
-                    <Image
-                      src={specializations[2].image}
-                      alt={specializations[2].name}
-                      fill
-                      data-ai-hint={specializations[2].hint}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                     <div className="relative h-full flex flex-col justify-end p-6 text-white">
                       <h3 className="font-headline text-2xl font-bold">
                         {specializations[2].name}
                       </h3>
-                      <Button asChild variant="link" className="text-primary hover:text-primary/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
+                      <Button asChild variant="link" className="text-white hover:text-white/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
                         <Link href={specializations[2].href}>
                           <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
