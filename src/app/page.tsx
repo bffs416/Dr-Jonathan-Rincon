@@ -69,11 +69,11 @@ const treatments = [
 
 const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, title: string, href: string}) => (
     <Link href={href} className="group block">
-        <div className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
-            <div className="mb-2 flex items-center justify-center w-12 h-12 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
-                <Icon className="w-6 h-6 text-primary" />
+        <div className="flex h-full flex-col items-center justify-start p-2 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg rounded-lg">
+            <div className="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300">
+                <Icon className="w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110" />
             </div>
-            <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center">{title}</h3>
+            <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center flex-1">{title}</h3>
         </div>
     </Link>
 );
