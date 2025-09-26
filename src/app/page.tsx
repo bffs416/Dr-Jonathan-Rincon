@@ -5,7 +5,13 @@ import {
   Stethoscope,
   Sparkles,
   Award,
-  ArrowLeft,
+  ChevronRight,
+  Wind,
+  Droplets,
+  Bot,
+  StretchHorizontal,
+  HelpingHand,
+  ShieldCheck,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -23,29 +29,63 @@ import {
 } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
+import { cn } from '@/lib/utils';
+
+const treatments = [
+  {
+    icon: StretchHorizontal,
+    title: 'Hilos Tensores',
+    description: 'Lifting facial y corporal sin cirugía para un rejuvenecimiento natural.',
+    href: '/hilos-tensores',
+  },
+  {
+    icon: Droplets,
+    title: 'Bioestimuladores de Colágeno',
+    description: 'Activa la juventud de tu piel desde adentro, restaurando firmeza y volumen.',
+    href: '/bioestimuladores',
+  },
+  {
+    icon: Bot,
+    title: 'Toxina Botulínica',
+    description: 'Suaviza arrugas de expresión para una apariencia fresca y descansada.',
+    href: '/botox',
+  },
+  {
+    icon: Wind,
+    title: 'Contorno Corporal',
+    description: 'Moldea tu figura, elimina grasa localizada y combate la flacidez sin cirugía.',
+    href: '/contorno-corporal',
+  },
+   {
+    icon: ShieldCheck,
+    title: 'Medicina Preventiva Facial',
+    description: 'Hidratación profunda, revitalización y volumen para prevenir el envejecimiento.',
+    href: '/medicina-preventiva',
+  },
+  {
+    icon: HelpingHand,
+    title: 'Medicina Preventiva Corporal',
+    description: 'Masajes, carboxiterapia y más para mantener una figura armoniosa.',
+    href: '/medicina-preventiva',
+  },
+];
+
+const TreatmentCard = ({ icon: Icon, title, description, href }: (typeof treatments)[0]) => (
+    <Link href={href} className="group">
+        <Card className="flex items-center justify-between p-6 transition-all duration-300 ease-in-out hover:bg-secondary hover:shadow-lg transform hover:-translate-y-1">
+            <div className="flex-1">
+                <h3 className="font-headline text-xl font-semibold text-foreground group-hover:text-primary">{title}</h3>
+                <p className="text-muted-foreground mt-1">{description}</p>
+            </div>
+            <div className="ml-6 flex items-center justify-center w-16 h-16 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
+                <Icon className="w-8 h-8 text-primary" />
+            </div>
+        </Card>
+    </Link>
+);
 
 
 export default function Home() {
-  const specializations = [
-    {
-      name: 'Hilos Tensores PDO',
-      href: '/hilos-tensores',
-      image: 'https://picsum.photos/seed/aesthetic-threads/600/800',
-      hint: 'facial threads',
-    },
-    {
-      name: 'Contorno Corporal',
-      href: '/contorno-corporal',
-      image: 'https://picsum.photos/seed/aesthetic-body/600/400',
-      hint: 'body contouring',
-    },
-    {
-      name: 'Medicina Preventiva',
-      href: '/medicina-preventiva',
-      image: 'https://picsum.photos/seed/aesthetic-preventive/600/400',
-      hint: 'preventive medicine',
-    },
-  ];
 
   const stats = [
     {
@@ -130,6 +170,23 @@ export default function Home() {
         {/* Infinite Moving Cards Section */}
         <section className="py-16 sm:py-24">
           <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
+        </section>
+
+         {/* Treatments Section */}
+        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4">
+             <div className="text-center max-w-2xl mx-auto">
+                <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                    Nuestros <span className="text-primary">Tratamientos Principales</span>
+                </h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
+                </p>
+            </div>
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {treatments.map((treatment) => (
+                    <TreatmentCard key={treatment.title} {...treatment} />
+                ))}
+            </div>
         </section>
 
         {/* About Doctor Section */}
