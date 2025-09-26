@@ -13,6 +13,7 @@ import {
   HelpingHand,
   ShieldCheck,
   Star,
+  Medal,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -172,6 +173,10 @@ export default function Home() {
                       </div>
                     </div>
                   ))}
+              </div>
+              <div className="mt-12 flex items-center justify-center gap-3 text-lg text-slate-200">
+                <Medal className="w-7 h-7 text-yellow-400" />
+                <p>Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
               </div>
           </div>
         </section>
