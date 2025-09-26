@@ -130,8 +130,8 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 text-center overflow-hidden">
-          <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden">
+        <section className="relative py-16 md:py-24 text-center">
+          <div className="absolute inset-0 w-full h-full [mask-image:linear-gradient(to_right,transparent,white_5%,white_95%,transparent)]">
               <video
                   autoPlay
                   loop
@@ -145,7 +145,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
           </div>
 
-          <div className="relative z-10 text-white">
+          <div className="relative z-10 text-white container mx-auto px-4">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary-foreground">Confianza</span></h2>
               <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
 
