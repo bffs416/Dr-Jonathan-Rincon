@@ -5,6 +5,7 @@ import {
   Stethoscope,
   Sparkles,
   Award,
+  ArrowLeft,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -13,6 +14,16 @@ import Image from 'next/image';
 import { PlaceHolderImagesHome } from '@/lib/placeholder-images-home';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 import { GalleryImages } from '@/lib/placeholder-images-gallery';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { SectionTitleWithLines } from '@/components/section-title-with-lines';
+
 
 export default function Home() {
   const specializations = [
@@ -54,18 +65,24 @@ export default function Home() {
     },
   ];
 
-  const beforeAfterImages = [
+  const testimonials = [
     {
-      before: PlaceHolderImagesHome.find(img => img.id === 'home-before-1'),
-      after: PlaceHolderImagesHome.find(img => img.id === 'home-after-1'),
+      name: 'Ana María G.',
+      title: 'Paciente de Hilos Tensores',
+      avatar: 'https://i.pravatar.cc/150?img=1',
+      text: '“El resultado con los hilos tensores superó mis expectativas. El Dr. Rincón es un verdadero profesional, me sentí segura en todo momento y el cambio en mi rostro es natural y rejuvenecedor. ¡Lo recomiendo a ojos cerrados!”',
     },
-     {
-      before: PlaceHolderImagesHome.find(img => img.id === 'home-before-2'),
-      after: PlaceHolderImagesHome.find(img => img.id === 'home-after-2'),
+    {
+      name: 'Carlos V.',
+      title: 'Paciente de Contorno Corporal',
+      avatar: 'https://i.pravatar.cc/150?img=2',
+      text: '“Después de probar dietas y ejercicio sin ver resultados en mi abdomen, la hidrolipoclasia fue la solución. El procedimiento fue rápido y el Dr. Rincón y su equipo son increíbles. Estoy muy contento con mi nueva figura.”',
     },
-     {
-      before: PlaceHolderImagesHome.find(img => img.id === 'home-before-3'),
-      after: PlaceHolderImagesHome.find(img => img.id === 'home-after-3'),
+    {
+      name: 'Luisa F.',
+      title: 'Paciente de Botox',
+      avatar: 'https://i.pravatar.cc/150?img=3',
+      text: '“Tenía miedo de que el botox me dejara sin expresión, pero el Dr. Rincón logró un resultado súper natural. Me veo más descansada y fresca, sin que nadie note que me hice algo. ¡Es exactamente lo que quería!”',
     },
   ];
 
@@ -265,53 +282,87 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Before and After Section */}
-        <section id="resultados" className="py-16 sm:py-24 text-foreground">
+        {/* Testimonials Section */}
+        <section id="testimonios" className="py-16 sm:py-24 text-foreground">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="font-headline text-4xl md:text-5xl font-bold">
-                Resultados que <span className="text-primary">Inspiran Confianza</span>
-              </h2>
-              <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-                Descubre las transformaciones reales de nuestros pacientes. La naturalidad y la excelencia son nuestro sello.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {beforeAfterImages.map((item, index) => (
-                <Card key={index} className="overflow-hidden shadow-lg">
-                  <CardContent className="p-0">
-                    <div className="grid grid-cols-2">
-                      {item.before && (
-                        <div className="relative aspect-square">
-                          <Image
-                            src={item.before.imageUrl}
-                            alt={item.before.description}
-                            fill
-                            data-ai-hint={item.before.imageHint}
-                            className="object-cover"
-                          />
-                          <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded">ANTES</div>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative flex items-center justify-center min-h-[450px]">
+                <div className="relative w-72 h-72">
+                  <Image
+                    src="https://picsum.photos/seed/face-procedure-1/400/400"
+                    alt="Procedimiento facial estético"
+                    width={400}
+                    height={400}
+                    data-ai-hint="facial procedure"
+                    className="rounded-full object-cover w-full h-full absolute top-0 left-0"
+                  />
+                </div>
+                <div className="relative w-56 h-56 -ml-24 mt-32">
+                   <Image
+                    src="https://picsum.photos/seed/facial-injection/400/400"
+                    alt="Aplicación de inyección facial"
+                    width={400}
+                    height={400}
+                    data-ai-hint="facial injection"
+                    className="rounded-full object-cover w-full h-full absolute top-0 left-0 border-4 border-background"
+                  />
+                </div>
+                 <div className="absolute top-1/2 -translate-y-1/2 -ml-32 w-48 h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg">
+                    <p className="font-headline text-4xl font-bold text-accent-foreground">500+</p>
+                    <p className="text-lg font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
+                </div>
+              </div>
+              <div className="relative">
+                <Carousel
+                  opts={{ loop: true }}
+                  className="w-full max-w-xl mx-auto"
+                >
+                  <div className="pl-4">
+                    <SectionTitleWithLines className="!justify-start">
+                        <span className="text-primary">Testimonios</span>
+                    </SectionTitleWithLines>
+                    <h2 className="font-headline text-4xl md:text-5xl font-bold mt-2">
+                      Qué dicen nuestros <br /> pacientes
+                    </h2>
+                  </div>
+
+                  <CarouselContent className="mt-8">
+                    {testimonials.map((testimonial, index) => (
+                      <CarouselItem key={index}>
+                        <div className="pl-4 pr-4">
+                          <div className="flex space-x-2 my-4">
+                            {testimonials.map((t, i) => (
+                                <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
+                                    <AvatarImage src={t.avatar} />
+                                    <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
+                                </Avatar>
+                            ))}
+                          </div>
+                          <blockquote className="text-lg text-muted-foreground italic">
+                            {testimonial.text}
+                          </blockquote>
+                          <div className="mt-4">
+                            <p className="font-bold text-lg text-foreground">
+                              {testimonial.name}
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                              {testimonial.title}
+                            </p>
+                          </div>
                         </div>
-                      )}
-                      {item.after && (
-                        <div className="relative aspect-square">
-                          <Image
-                            src={item.after.imageUrl}
-                            alt={item.after.description}
-                            fill
-                            data-ai-hint={item.after.imageHint}
-                            className="object-cover"
-                          />
-                          <div className="absolute top-2 left-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded">DESPUÉS</div>
-                        </div>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="absolute -bottom-12 right-0 flex items-center gap-2">
+                    <CarouselPrevious className="static -translate-y-0" />
+                    <CarouselNext className="static -translate-y-0" />
+                  </div>
+                </Carousel>
+              </div>
             </div>
           </div>
         </section>
+
       </main>
     </div>
   );
