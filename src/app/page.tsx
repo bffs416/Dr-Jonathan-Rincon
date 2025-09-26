@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import {
   HeartHandshake,
@@ -49,7 +50,7 @@ const treatments = [
     description: 'Suaviza arrugas de expresión para una apariencia fresca y descansada.',
     href: '/botox',
   },
-  {
+   {
     icon: Wind,
     title: 'Contorno Corporal',
     description: 'Moldea tu figura, elimina grasa localizada y combate la flacidez sin cirugía.',
