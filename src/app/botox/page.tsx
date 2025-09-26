@@ -180,7 +180,7 @@ export default function BotoxPage() {
             </SectionTitleWithLines>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
               {treatmentZones.map((zone, index) => (
-                <Card key={index} className="p-6">
+                <div key={index} className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                       <CheckCircle className="w-6 h-6" />
@@ -192,7 +192,7 @@ export default function BotoxPage() {
                       </p>
                     </div>
                   </div>
-                </Card>
+                </div>
               ))}
             </div>
           </div>
@@ -225,24 +225,24 @@ export default function BotoxPage() {
 
         {/* Section 4: Safety */}
         <section id="seguridad" className="scroll-mt-20">
-          <Card className="border-yellow-500/50 shadow-xl">
-            <CardHeader className="text-center">
+          <div className="p-8 md:p-12">
+            <div className="text-center">
               <div className="flex justify-center">
                 <ShieldCheck className="w-12 h-12 text-primary" />
               </div>
-              <CardTitle className="font-headline text-3xl mt-2">
+              <h2 className="font-headline text-3xl mt-2">
                 La Clave del Éxito: Relajar, no Paralizar y Elegir al Profesional Adecuado
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-lg text-muted-foreground">
+              </h2>
+            </div>
+            <div className="space-y-4 text-lg text-muted-foreground mt-4">
               <p>
                 El secreto de un buen resultado es la naturalidad. El objetivo es relajar los músculos para suavizar las arrugas, no paralizarlos y dejar un rostro sin expresión. Un buen médico sabrá dosificar y aplicar el producto de forma estratégica para mantener la armonía de tus facciones.
               </p>
               <p>
                 Por ello, es fundamental que el tratamiento sea administrado exclusivamente por médicos con la formación y experiencia adecuadas, como dermatólogos o cirujanos plásticos. Ellos conocen a la perfección la anatomía facial y la técnica de inyección para lograr los mejores resultados y minimizar cualquier riesgo.
               </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </section>
 
 

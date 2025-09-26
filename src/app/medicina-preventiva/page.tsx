@@ -156,35 +156,33 @@ export default function MedicinaPreventivaPage() {
                     <div className="hidden md:block absolute top-0 left-0 h-full w-[320px] z-10">
                       <Image src="https://picsum.photos/seed/mesoterapia-facial/320/320" alt="Mesoterapia facial" layout="fill" className="rounded-full object-cover" data-ai-hint="facial mesotherapy" />
                     </div>
-                    <Card className="md:ml-[160px]">
-                      <CardContent className="p-6 md:pl-[180px] text-left">
-                        <CardTitle className="flex items-center gap-3 font-headline">
-                          <Syringe className="w-7 h-7 text-primary" /> Mesoterapia y Microneedling
-                        </CardTitle>
-                        <div className="text-muted-foreground space-y-4 pt-4">
-                          <p>
-                          La mesoterapia es una técnica que consiste en aplicar
-                          microinyecciones en la piel para administrar un cóctel de
-                          sustancias beneficiosas directamente donde se necesitan.
-                          </p>
-                          <div>
-                          <strong className="text-foreground">
-                              Microneedling (o Micropunción):
-                          </strong>{' '}
-                          <p className="mt-1">
-                              Es una técnica que utiliza un dispositivo con microagujas
-                              muy finas para crear canales microscópicos en la piel.
-                              Esto no solo estimula la producción natural de colágeno,
-                              sino que también permite que los productos aplicados penetren mucho más profundo.
-                          </p>
-                          </div>
-                          <p className="text-sm font-medium text-primary pt-2">
-                          Ideal para: Personas que buscan una mejora general en la
-                          luminosidad, hidratación y textura de la piel.
-                          </p>
+                    <div className="p-6 md:pl-[180px] text-left md:ml-[160px]">
+                      <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
+                        <Syringe className="w-7 h-7 text-primary" /> Mesoterapia y Microneedling
+                      </h3>
+                      <div className="text-muted-foreground space-y-4 pt-4">
+                        <p>
+                        La mesoterapia es una técnica que consiste en aplicar
+                        microinyecciones en la piel para administrar un cóctel de
+                        sustancias beneficiosas directamente donde se necesitan.
+                        </p>
+                        <div>
+                        <strong className="text-foreground">
+                            Microneedling (o Micropunción):
+                        </strong>{' '}
+                        <p className="mt-1">
+                            Es una técnica que utiliza un dispositivo con microagujas
+                            muy finas para crear canales microscópicos en la piel.
+                            Esto no solo estimula la producción natural de colágeno,
+                            sino que también permite que los productos aplicados penetren mucho más profundo.
+                        </p>
                         </div>
-                      </CardContent>
-                    </Card>
+                        <p className="text-sm font-medium text-primary pt-2">
+                        Ideal para: Personas que buscan una mejora general en la
+                        luminosidad, hidratación y textura de la piel.
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Skinboosters */}
@@ -192,37 +190,35 @@ export default function MedicinaPreventivaPage() {
                       <div className="hidden md:block absolute top-0 right-0 h-full w-[320px] z-10">
                         <Image src="https://picsum.photos/seed/skinbooster-treatment/320/320" alt="Tratamiento con skinboosters" layout="fill" className="rounded-full object-cover" data-ai-hint="skin hydration treatment" />
                       </div>
-                      <Card className="md:mr-[160px]">
-                        <CardContent className="p-6 md:pr-[180px] text-left">
-                          <CardTitle className="flex items-center gap-3 font-headline">
-                            <Droplets className="w-7 h-7 text-primary" />{' '}
-                            Skinboosters
-                          </CardTitle>
-                          <div className="text-muted-foreground space-y-4 pt-4">
-                                <p>
-                                Los Skinboosters son un tipo de tratamiento enfocado en la
-                                hidratación profunda. Se utilizan microinyecciones de un
-                                ácido hialurónico de baja densidad que no busca dar
-                                volumen, sino captar y retener agua en las capas internas
-                                de la piel.
-                                </p>
-                                <div>
-                                <strong className="text-foreground">
-                                    ¿Qué puedes esperar?
-                                </strong>{' '}
-                                <p className="mt-1">
-                                    Una piel visiblemente más hidratada, jugosa, elástica y con
-                                    un brillo natural. Suaviza líneas finas y mejora la
-                                    calidad general de la piel. Sus efectos suelen durar entre 6 y 12 meses.
-                                </p>
-                                </div>
-                                <p className="text-sm font-medium text-primary pt-2">
-                                Ideal para: Pieles deshidratadas, apagadas o que empiezan
-                                a mostrar los primeros signos de envejecimiento.
-                                </p>
-                          </div>
-                        </CardContent>
-                      </Card>
+                      <div className="p-6 md:pr-[180px] text-left md:mr-[160px]">
+                        <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
+                          <Droplets className="w-7 h-7 text-primary" />{' '}
+                          Skinboosters
+                        </h3>
+                        <div className="text-muted-foreground space-y-4 pt-4">
+                              <p>
+                              Los Skinboosters son un tipo de tratamiento enfocado en la
+                              hidratación profunda. Se utilizan microinyecciones de un
+                              ácido hialurónico de baja densidad que no busca dar
+                              volumen, sino captar y retener agua en las capas internas
+                              de la piel.
+                              </p>
+                              <div>
+                              <strong className="text-foreground">
+                                  ¿Qué puedes esperar?
+                              </strong>{' '}
+                              <p className="mt-1">
+                                  Una piel visiblemente más hidratada, jugosa, elástica y con
+                                  un brillo natural. Suaviza líneas finas y mejora la
+                                  calidad general de la piel. Sus efectos suelen durar entre 6 y 12 meses.
+                              </p>
+                              </div>
+                              <p className="text-sm font-medium text-primary pt-2">
+                              Ideal para: Pieles deshidratadas, apagadas o que empiezan
+                              a mostrar los primeros signos de envejecimiento.
+                              </p>
+                        </div>
+                      </div>
                   </div>
 
                   {/* PDRN */}
@@ -230,39 +226,37 @@ export default function MedicinaPreventivaPage() {
                     <div className="hidden md:block absolute top-0 left-0 h-full w-[320px] z-10">
                       <Image src="https://picsum.photos/seed/pdrn-collagen/320/320" alt="Tratamiento PDRN (esperma de salmón)" layout="fill" className="rounded-full object-cover" data-ai-hint="collagen stimulation" />
                     </div>
-                    <Card className="md:ml-[160px]">
-                      <CardContent className="p-6 md:pl-[180px] text-left">
-                          <CardTitle className="flex items-center gap-3 font-headline">
-                            <Dna className="w-7 h-7 text-primary" /> PDRN (Esperma de Salmón)
-                          </CardTitle>
-                          <div className="text-muted-foreground space-y-4 pt-4">
-                              <p>
-                              El PDRN (polideoxirribonucleótido) es un potente
-                              regenerador celular extraído del tejido gonadal del salmón.
-                              Es un fragmento de ADN purificado y seguro.
-                              </p>
-                              <div>
-                              <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
-                              <p className="mt-1">
-                                  Actúa a nivel celular estimulando la reparación de los
-                                  tejidos, la producción de colágeno, mejorando la
-                                  elasticidad y reduciendo la inflamación.
-                              </p>
-                              </div>
-                              <div>
-                              <strong className="text-foreground">Beneficios:</strong>{' '}
-                              <p className="mt-1">
-                                  Mejora la firmeza, reduce líneas finas, atenúa cicatrices
-                                  de acné y devuelve la luminosidad a la piel.
-                              </p>
-                              </div>
-                              <p className="text-sm font-medium text-primary pt-2">
-                              Ideal para: Pieles que necesitan una reparación profunda,
-                              mejorar cicatrices o un extra de rejuvenecimiento.
-                              </p>
-                          </div>
-                      </CardContent>
-                    </Card>
+                    <div className="p-6 md:pl-[180px] text-left md:ml-[160px]">
+                        <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
+                          <Dna className="w-7 h-7 text-primary" /> PDRN (Esperma de Salmón)
+                        </h3>
+                        <div className="text-muted-foreground space-y-4 pt-4">
+                            <p>
+                            El PDRN (polideoxirribonucleótido) es un potente
+                            regenerador celular extraído del tejido gonadal del salmón.
+                            Es un fragmento de ADN purificado y seguro.
+                            </p>
+                            <div>
+                            <strong className="text-foreground">¿Cómo funciona?</strong>{' '}
+                            <p className="mt-1">
+                                Actúa a nivel celular estimulando la reparación de los
+                                tejidos, la producción de colágeno, mejorando la
+                                elasticidad y reduciendo la inflamación.
+                            </p>
+                            </div>
+                            <div>
+                            <strong className="text-foreground">Beneficios:</strong>{' '}
+                            <p className="mt-1">
+                                Mejora la firmeza, reduce líneas finas, atenúa cicatrices
+                                de acné y devuelve la luminosidad a la piel.
+                            </p>
+                            </div>
+                            <p className="text-sm font-medium text-primary pt-2">
+                            Ideal para: Pieles que necesitan una reparación profunda,
+                            mejorar cicatrices o un extra de rejuvenecimiento.
+                            </p>
+                        </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -285,13 +279,11 @@ export default function MedicinaPreventivaPage() {
                         <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" seed="facial-filler" hint="facial filler"/>
                     </div>
                     <div className='space-y-8 text-left'>
-                      <Card>
-                        <CardHeader>
-                          <CardTitle>
-                            Ácido Hialurónico para Rostro (Surcos, Pómulos)
-                          </CardTitle>
-                        </CardHeader>
-                        <CardContent className="text-muted-foreground space-y-4">
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold">
+                          Ácido Hialurónico para Rostro (Surcos, Pómulos)
+                        </h3>
+                        <div className="text-muted-foreground space-y-4 mt-4">
                           <p>
                             Se utiliza para corregir arrugas estáticas (las que se ven
                             con el rostro en reposo), reponer el volumen perdido en
@@ -311,13 +303,11 @@ export default function MedicinaPreventivaPage() {
                             restaurar volumen en mejillas o definir el contorno
                             facial.
                           </p>
-                        </CardContent>
-                      </Card>
-                      <Card>
-                        <CardHeader>
-                          <CardTitle>Ácido Hialurónico en Labios</CardTitle>
-                        </CardHeader>
-                        <CardContent className="text-muted-foreground space-y-4">
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold">Ácido Hialurónico en Labios</h3>
+                        <div className="text-muted-foreground space-y-4 mt-4">
                           <p>
                             Es uno de los tratamientos más demandados. Permite no solo
                             aumentar el volumen, sino también definir el contorno,
@@ -337,21 +327,21 @@ export default function MedicinaPreventivaPage() {
                             Ideal para: Personas que desean labios más definidos,
                             voluminosos o simplemente revitalizados.
                           </p>
-                        </CardContent>
-                      </Card>
+                        </div>
+                      </div>
                     </div>
                 </div>
               </section>
 
               <section id="decision-facial" className="scroll-mt-20 max-w-3xl mx-auto text-center">
-                <Card className="p-6 md:p-8 shadow-lg border-primary/20">
-                  <CardHeader className="p-0">
-                    <CardTitle className="font-headline text-2xl text-primary">
+                <div className="p-6 md:p-8">
+                  <div className="p-0">
+                    <h2 className="font-headline text-2xl text-primary">
                       Tu Belleza, Tu Decisión – La Importancia de una Valoración
                       Profesional
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0 mt-4 text-muted-foreground">
+                    </h2>
+                  </div>
+                  <div className="p-0 mt-4 text-muted-foreground">
                     <p>
                       Cada piel es única y cada rostro tiene sus propias
                       necesidades. La clave para un resultado exitoso y seguro es
@@ -360,8 +350,8 @@ export default function MedicinaPreventivaPage() {
                       objetivos y recomendarte el tratamiento o la combinación de
                       técnicas que te ofrezca los mejores resultados.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </section>
             </div>
           </TabsContent>
@@ -401,53 +391,51 @@ export default function MedicinaPreventivaPage() {
                     Masajes Reductores –{' '}
                   <span className="text-primary">Moldeado Manual</span></h2>
                 </SectionTitleWithLines>
-                  <Card className='mt-12'>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3">
-                        <Hand className="w-7 h-7 text-primary" /> ¿Qué son y cómo
-                        funcionan?
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-3">
-                      <p>
-                        Los masajes reductores son una técnica manual en la que se
-                        aplica una presión fuerte y un ritmo rápido sobre zonas
-                        específicas para movilizar la grasa y facilitar su
-                        eliminación natural.
-                      </p>
-                      <ul className="list-disc pl-5 space-y-1">
-                        <li>
-                          <strong className="text-foreground">
-                            Mejoran la circulación
-                          </strong>{' '}
-                          sanguínea y linfática para eliminar toxinas y líquidos
-                          retenidos.
-                        </li>
-                        <li>
-                          <strong className="text-foreground">
-                            Combaten la flacidez y la celulitis
-                          </strong>
-                          , dando a la piel un aspecto más liso y firme.
-                        </li>
-                        <li>
-                          <strong className="text-foreground">
-                            Preparan el cuerpo
-                          </strong>{' '}
-                          para otros tratamientos al ablandar el tejido adiposo.
-                        </li>
-                      </ul>
-                      <Alert>
-                        <AlertTriangle className="h-4 w-4" />
-                        <AlertTitle>Importante</AlertTitle>
-                        <AlertDescription>
-                          Los masajes reductores no son una solución mágica. Son más efectivos con una alimentación
-                          saludable y ejercicio. No se recomiendan en casos de
-                          piel sensible, hipertensión, diabetes, embarazo o
-                          lactancia.
-                        </AlertDescription>
-                      </Alert>
-                    </CardContent>
-                  </Card>
+                    <div className='mt-12 p-6'>
+                        <h3 className="flex items-center gap-3 text-xl font-bold">
+                            <Hand className="w-7 h-7 text-primary" /> ¿Qué son y cómo
+                            funcionan?
+                        </h3>
+                        <div className="text-muted-foreground space-y-3 mt-4">
+                        <p>
+                            Los masajes reductores son una técnica manual en la que se
+                            aplica una presión fuerte y un ritmo rápido sobre zonas
+                            específicas para movilizar la grasa y facilitar su
+                            eliminación natural.
+                        </p>
+                        <ul className="list-disc pl-5 space-y-1">
+                            <li>
+                            <strong className="text-foreground">
+                                Mejoran la circulación
+                            </strong>{' '}
+                            sanguínea y linfática para eliminar toxinas y líquidos
+                            retenidos.
+                            </li>
+                            <li>
+                            <strong className="text-foreground">
+                                Combaten la flacidez y la celulitis
+                            </strong>
+                            , dando a la piel un aspecto más liso y firme.
+                            </li>
+                            <li>
+                            <strong className="text-foreground">
+                                Preparan el cuerpo
+                            </strong>{' '}
+                            para otros tratamientos al ablandar el tejido adiposo.
+                            </li>
+                        </ul>
+                        <Alert>
+                            <AlertTriangle className="h-4 w-4" />
+                            <AlertTitle>Importante</AlertTitle>
+                            <AlertDescription>
+                            Los masajes reductores no son una solución mágica. Son más efectivos con una alimentación
+                            saludable y ejercicio. No se recomiendan en casos de
+                            piel sensible, hipertensión, diabetes, embarazo o
+                            lactancia.
+                            </AlertDescription>
+                        </Alert>
+                        </div>
+                    </div>
                 </div>
               </section>
 
@@ -458,14 +446,12 @@ export default function MedicinaPreventivaPage() {
                             Carboxiterapia –{' '}
                         <span className="text-primary">Oxigena y Regenera</span></h2>
                     </SectionTitleWithLines>
-                    <Card className='mt-12'>
-                        <CardHeader>
-                        <CardTitle className="flex items-center gap-3">
+                    <div className='mt-12 p-6'>
+                        <h3 className="flex items-center gap-3 text-xl font-bold">
                             <Wind className="w-7 h-7 text-primary" /> ¿Qué es y para
                             qué sirve?
-                        </CardTitle>
-                        </CardHeader>
-                        <CardContent className="text-muted-foreground space-y-3">
+                        </h3>
+                        <div className="text-muted-foreground space-y-3 mt-4">
                         <p>
                             Es un procedimiento médico que aplica dióxido de carbono
                             (CO₂) medicinal bajo la piel para mejorar la circulación,
@@ -490,8 +476,8 @@ export default function MedicinaPreventivaPage() {
                             Contraindicaciones: Insuficiencia renal/respiratoria,
                             embarazo, infecciones activas.
                         </Badge>
-                        </CardContent>
-                    </Card>
+                        </div>
+                    </div>
                  </div>
                  <div>
                     <Placeholder className="rounded-full shadow-2xl w-full aspect-square" seed="carboxytherapy-image" hint="carboxytherapy" />
@@ -517,14 +503,12 @@ export default function MedicinaPreventivaPage() {
                       sustancias que causan daños irreversibles.
                     </AlertDescription>
                   </Alert>
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-3">
-                        <Sparkles className="w-7 h-7 text-primary" /> Beneficios
-                        Reales y Aplicación Segura
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-muted-foreground space-y-3">
+                  <div className="p-6">
+                    <h3 className="flex items-center gap-3 text-xl font-bold">
+                      <Sparkles className="w-7 h-7 text-primary" /> Beneficios
+                      Reales y Aplicación Segura
+                    </h3>
+                    <div className="text-muted-foreground space-y-3 mt-4">
                       <p>
                         La verdadera aplicación de la vitamina C inyectable en
                         glúteos es un tratamiento preventivo que mejora la
@@ -560,23 +544,23 @@ export default function MedicinaPreventivaPage() {
                         hacer ejercicio el mismo día, pero sí en días posteriores
                         para potenciar el efecto.
                       </p>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
               </section>
               <section id="decision-corporal" className="scroll-mt-20 max-w-3xl mx-auto text-center">
-                 <Card className="p-6 md:p-8 shadow-lg border-primary/20">
-                  <CardHeader className="p-0">
-                    <CardTitle className="font-headline text-2xl text-primary">
+                 <div className="p-6 md:p-8">
+                  <div className="p-0">
+                    <h2 className="font-headline text-2xl text-primary">
                       Tu Cuerpo, Tu Decisión – Elige la Prevención Inteligente
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0 mt-4 text-muted-foreground">
+                    </h2>
+                  </div>
+                  <div className="p-0 mt-4 text-muted-foreground">
                      <p>
                         Cuidar tu cuerpo es una inversión a largo plazo. Ya sea que busques moldear tu figura, mejorar la calidad de tu piel o prevenir la flacidez, estos tratamientos ofrecen soluciones seguras y efectivas cuando se realizan por profesionales.
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </section>
             </div>
           </TabsContent>

@@ -185,7 +185,7 @@ export default function ContornoCorporalPage() {
                     <h3 className="font-headline text-2xl md:text-3xl font-bold">Beneficios clave de la Hidrolipoclasia</h3>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                         {hidrolipoclasiaBenefits.map((benefit, index) => (
-                        <Card key={index} className="p-6 flex items-start gap-4">
+                        <div key={index} className="p-6 flex items-start gap-4">
                             <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
                             <CheckCircle className="w-6 h-6" />
                             </div>
@@ -194,7 +194,7 @@ export default function ContornoCorporalPage() {
                                 {benefit}
                             </p>
                             </div>
-                        </Card>
+                        </div>
                         ))}
                     </div>
                 </div>
@@ -254,7 +254,7 @@ export default function ContornoCorporalPage() {
                     <h3 className="font-headline text-2xl md:text-3xl font-bold">Beneficios clave de Tensamax</h3>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                         {tensamaxBenefits.map((benefit, index) => (
-                        <Card key={index} className="p-6 flex items-start gap-4">
+                        <div key={index} className="p-6 flex items-start gap-4">
                             <div className="bg-primary/10 text-primary p-2 rounded-full mt-1">
                             <CheckCircle className="w-6 h-6" />
                             </div>
@@ -263,7 +263,7 @@ export default function ContornoCorporalPage() {
                                     {benefit}
                                 </p>
                             </div>
-                        </Card>
+                        </div>
                         ))}
                     </div>
                 </div>
@@ -293,11 +293,11 @@ export default function ContornoCorporalPage() {
 
         {/* Comparison Section */}
         <section id="comparacion" className="scroll-mt-20">
-          <Card className="shadow-xl p-8 md:p-12">
-            <CardHeader className="text-center p-0 pb-8">
-              <CardTitle className="font-headline text-3xl md:text-4xl font-bold">¿Cuál es la mejor opción para ti: Hidrolipoclasia o Tensamax?</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6 text-lg text-muted-foreground">
+          <div className="p-8 md:p-12">
+            <div className="text-center p-0 pb-8">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">¿Cuál es la mejor opción para ti: Hidrolipoclasia o Tensamax?</h2>
+            </div>
+            <div className="space-y-6 text-lg text-muted-foreground">
                 <p>Aunque ambos tratamientos ayudan a mejorar la figura, están diseñados para objetivos diferentes. La elección dependerá de tus necesidades específicas.</p>
                 <div className='grid md:grid-cols-2 gap-8 items-start'>
                     <div className='bg-muted/50 p-6 rounded-lg'>
@@ -314,8 +314,8 @@ export default function ContornoCorporalPage() {
                     <p className='mt-2 max-w-3xl mx-auto'>En muchos casos, la mejor estrategia es combinar ambos tratamientos. Un profesional puede diseñar un plan donde primero se reduce el volumen de grasa con hidrolipoclasia y luego se reafirma y tensa la piel con Tensamax para un resultado espectacular.</p>
                     <p className='mt-4 font-semibold'>La consulta médica es clave para crear un plan de tratamiento individualizado y seguro para ti.</p>
                 </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}

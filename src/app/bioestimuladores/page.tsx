@@ -183,7 +183,7 @@ export default function BioestimuladoresPage() {
             </h3>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               {benefits.map((benefit, index) => (
-                <Card key={index} className="p-6 flex items-start gap-4">
+                <div key={index} className="p-6 flex items-start gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                     <CheckCircle className="w-6 h-6" />
                   </div>
@@ -192,7 +192,7 @@ export default function BioestimuladoresPage() {
                       {benefit}
                     </p>
                   </div>
-                </Card>
+                </div>
               ))}
             </div>
           </div>
@@ -229,16 +229,16 @@ export default function BioestimuladoresPage() {
 
         {/* Section 4: Safety */}
         <section id="seguridad" className="scroll-mt-20">
-          <Card className="border-yellow-500/50 shadow-xl">
-            <CardHeader className="text-center">
+          <div className="p-8 md:p-12">
+            <div className="text-center">
               <div className="flex justify-center">
                 <ShieldCheck className="w-12 h-12 text-primary" />
               </div>
-              <CardTitle className="font-headline text-3xl mt-2">
+              <h2 className="font-headline text-3xl mt-2">
                 Seguridad Ante Todo: Elige Siempre a un Profesional Cualificado
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-lg text-muted-foreground">
+              </h2>
+            </div>
+            <div className="space-y-4 text-lg text-muted-foreground mt-4">
               <p>
                 El éxito y la seguridad de tu tratamiento dependen directamente
                 de la experiencia del profesional. Asegúrate siempre de acudir
@@ -270,8 +270,8 @@ export default function BioestimuladoresPage() {
                   </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </section>
 
         {/* Section 5: CTA */}
