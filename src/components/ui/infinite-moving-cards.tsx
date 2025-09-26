@@ -1,14 +1,19 @@
+
 "use client";
 
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { Award } from "lucide-react";
 
 type GalleryImage = {
   id: string;
   imageUrl: string;
   imageHint: string;
   title: string;
+  href: string;
+  category?: string;
 };
 
 export const InfiniteMovingCards = ({
@@ -82,7 +87,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}
     >
@@ -96,22 +101,31 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="w-[200px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[250px]"
+            className="w-[200px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[250px] group"
             key={item.id}
           >
-             <div className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg">
-                <Image
-                    src={item.imageUrl}
-                    alt={item.imageHint}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-lg"
-                    data-ai-hint={item.imageHint}
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 bg-black/50 backdrop-blur-sm">
-                  <p className="text-white text-sm font-semibold text-center truncate">{item.title}</p>
-                </div>
-            </div>
+            <Link href={item.href} className="block w-full h-full">
+              <div className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+                  <Image
+                      src={item.imageUrl}
+                      alt={item.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-lg"
+                      data-ai-hint={item.imageHint}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  {item.category === "Hilos Tensores" && (
+                     <div className="absolute top-2 right-2 bg-primary/80 text-primary-foreground text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1 backdrop-blur-sm">
+                       <Award className="w-3 h-3" />
+                       Especialidad
+                     </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <p className="text-white text-sm font-semibold text-center truncate">{item.title}</p>
+                  </div>
+              </div>
+            </Link>
           </li>
         ))}
       </ul>
