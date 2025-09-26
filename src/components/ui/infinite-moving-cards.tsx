@@ -12,7 +12,7 @@ type GalleryImage = {
   imageUrl: string;
   imageHint: string;
   title: string;
-  href: string;
+  href?: string;
   category?: string;
 };
 
@@ -82,6 +82,29 @@ export const InfiniteMovingCards = ({
       }
     }
   };
+  
+  const CardContent = ({ item }: { item: GalleryImage }) => (
+    <div className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105">
+        <Image
+            src={item.imageUrl}
+            alt={item.title}
+            layout="fill"
+            objectFit="cover"
+            data-ai-hint={item.imageHint}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        {item.category === "Hilos Tensores" && (
+           <div className="absolute top-2 right-2 bg-primary/80 text-primary-foreground text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1 backdrop-blur-sm">
+             <Award className="w-3 h-3" />
+             Especialidad
+           </div>
+        )}
+        <div className="absolute bottom-0 left-0 right-0 p-3">
+          <p className="text-white text-sm font-semibold text-center truncate">{item.title}</p>
+        </div>
+    </div>
+  );
+
 
   return (
     <div
@@ -104,27 +127,13 @@ export const InfiniteMovingCards = ({
             className="w-[200px] max-w-full relative flex-shrink-0 md:w-[250px] group"
             key={item.id}
           >
-            <Link href={item.href} className="block w-full h-full">
-              <div className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105">
-                  <Image
-                      src={item.imageUrl}
-                      alt={item.title}
-                      layout="fill"
-                      objectFit="cover"
-                      data-ai-hint={item.imageHint}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  {item.category === "Hilos Tensores" && (
-                     <div className="absolute top-2 right-2 bg-primary/80 text-primary-foreground text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1 backdrop-blur-sm">
-                       <Award className="w-3 h-3" />
-                       Especialidad
-                     </div>
-                  )}
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                    <p className="text-white text-sm font-semibold text-center truncate">{item.title}</p>
-                  </div>
-              </div>
-            </Link>
+            {item.href ? (
+                <Link href={item.href} className="block w-full h-full">
+                    <CardContent item={item} />
+                </Link>
+            ) : (
+                <CardContent item={item} />
+            )}
           </li>
         ))}
       </ul>

@@ -5,7 +5,7 @@ export type GalleryImage = {
   imageUrl: string;
   imageHint: string;
   title: string;
-  href: string;
+  href?: string;
   category?: string;
 };
 
