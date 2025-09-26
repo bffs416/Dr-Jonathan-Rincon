@@ -130,7 +130,7 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 text-center overflow-hidden container">
+        <section className="relative py-16 md:py-24 text-center overflow-hidden">
           <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden">
               <video
                   autoPlay
@@ -182,7 +182,7 @@ export default function Home() {
         </section>
 
          {/* Treatments Section */}
-        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4">
+        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto">
              <div className="text-center max-w-2xl mx-auto">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Nuestros <span className="text-primary">Tratamientos Principales</span>
