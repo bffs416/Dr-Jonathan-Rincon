@@ -98,7 +98,7 @@ export const InfiniteMovingCards = ({
             className="w-[350px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[450px]"
             key={item.id}
           >
-             <div className="relative w-full h-48 overflow-hidden rounded-lg">
+             <div className="relative w-full aspect-square overflow-hidden rounded-lg">
                 <Image
                     src={item.imageUrl}
                     alt={item.imageHint}
