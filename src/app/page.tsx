@@ -176,13 +176,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Infinite Moving Cards Section */}
-        <section className="py-2 sm:py-4">
-          <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
-        </section>
-
          {/* Treatments Section */}
-        <section id="tratamientos" className="py-8 sm:py-12 container mx-auto px-4">
+        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4">
              <div className="text-center max-w-2xl mx-auto">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Nuestros <span className="text-primary">Tratamientos Principales</span>
@@ -196,6 +191,11 @@ export default function Home() {
                     <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
             </div>
+        </section>
+
+        {/* Infinite Moving Cards Section */}
+        <section className="py-2 sm:py-4">
+          <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
         </section>
 
         {/* About Doctor Section */}
