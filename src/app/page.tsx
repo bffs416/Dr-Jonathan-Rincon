@@ -127,67 +127,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section id="servicios" className="py-16 sm:py-24">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              
-              {/* Specializations collage */}
-              <div className="grid grid-cols-2 gap-4 h-auto">
-                  <Card
-                    key={specializations[0].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-2 h-[450px] bg-primary"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                    <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                      <h3 className="font-headline text-2xl font-bold">
-                        {specializations[0].name}
-                      </h3>
-                       <Button asChild variant="link" className="text-white hover:text-white/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
-                        <Link href={specializations[0].href}>
-                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </Card>
-                  <Card
-                    key={specializations[1].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px] bg-primary"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                    <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                      <h3 className="font-headline text-2xl font-bold">
-                        {specializations[1].name}
-                      </h3>
-                      <Button asChild variant="link" className="text-white hover:text-white/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
-                        <Link href={specializations[1].href}>
-                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </Card>
-                   <Card
-                    key={specializations[2].name}
-                    className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 col-span-1 row-span-1 h-[215px] bg-primary"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                    <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                      <h3 className="font-headline text-2xl font-bold">
-                        {specializations[2].name}
-                      </h3>
-                      <Button asChild variant="link" className="text-white hover:text-white/80 !p-0 !h-auto !justify-start !gap-2 mt-4 text-sm font-semibold uppercase tracking-widest">
-                        <Link href={specializations[2].href}>
-                          <span>Conocer más</span> <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </Card>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
         {/* Infinite Moving Cards Section */}
         <section className="py-16 sm:py-24">
           <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
