@@ -71,11 +71,11 @@ const treatments = [
 
 const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, title: string, href: string}) => (
     <Link href={href} className="group block">
-        <div className="flex flex-col items-center justify-center p-4 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
-            <div className="mb-3 flex items-center justify-center w-12 h-12 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
+        <div className="flex flex-col items-center justify-center p-2 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
+            <div className="mb-2 flex items-center justify-center w-12 h-12 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
                 <Icon className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-headline text-lg font-semibold text-foreground group-hover:text-primary text-center">{title}</h3>
+            <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center">{title}</h3>
         </div>
     </Link>
 );
@@ -164,12 +164,12 @@ export default function Home() {
         </section>
 
         {/* Infinite Moving Cards Section */}
-        <section className="py-16 sm:py-24">
+        <section className="py-16 sm:py-24 pb-8 sm:pb-12">
           <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
         </section>
 
          {/* Treatments Section */}
-        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4">
+        <section id="tratamientos" className="py-8 sm:py-12 container mx-auto px-4">
              <div className="text-center max-w-2xl mx-auto">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Nuestros <span className="text-primary">Tratamientos Principales</span>
@@ -178,7 +178,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {treatments.map((treatment) => (
                     <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
