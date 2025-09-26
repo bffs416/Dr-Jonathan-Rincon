@@ -30,42 +30,37 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { cn } from '@/lib/utils';
+import { AnimatedCounter } from '@/components/ui/animated-counter';
 
 const treatments = [
   {
     icon: StretchHorizontal,
     title: 'Hilos Tensores',
-    description: 'Lifting facial y corporal sin cirugía para un rejuvenecimiento natural.',
     href: '/hilos-tensores',
   },
   {
     icon: Droplets,
     title: 'Bioestimuladores de Colágeno',
-    description: 'Activa la juventud de tu piel desde adentro, restaurando firmeza y volumen.',
     href: '/bioestimuladores',
   },
   {
     icon: Bot,
     title: 'Toxina Botulínica',
-    description: 'Suaviza arrugas de expresión para una apariencia fresca y descansada.',
     href: '/botox',
   },
    {
     icon: Wind,
     title: 'Contorno Corporal',
-    description: 'Moldea tu figura, elimina grasa localizada y combate la flacidez sin cirugía.',
     href: '/contorno-corporal',
   },
    {
     icon: ShieldCheck,
     title: 'Medicina Preventiva Facial',
-    description: 'Hidratación profunda, revitalización y volumen para prevenir el envejecimiento.',
     href: '/medicina-preventiva',
   },
   {
     icon: HelpingHand,
     title: 'Medicina Preventiva Corporal',
-    description: 'Masajes, carboxiterapia y más para mantener una figura armoniosa.',
     href: '/medicina-preventiva',
   },
 ];
@@ -86,19 +81,22 @@ export default function Home() {
 
   const stats = [
     {
-      value: '100%',
+      value: 100,
       label: 'Satisfacción',
       icon: Sparkles,
+      suffix: '%',
     },
     {
-      value: '500+',
+      value: 500,
       label: 'Pacientes Satisfechos',
       icon: HeartHandshake,
+      suffix: '+',
     },
     {
-      value: '8 años',
+      value: 8,
       label: 'de Experiencia',
       icon: Award,
+      prefix: 'años',
     },
   ];
 
@@ -152,9 +150,17 @@ export default function Home() {
                                <stat.icon className="w-8 h-8" />
                             </div>
                             <div>
-                              <p className="text-3xl font-bold text-foreground">
-                                {stat.value}
-                              </p>
+                                <p className="text-3xl font-bold text-foreground">
+                                    {stat.prefix ? (
+                                        <>
+                                            <AnimatedCounter targetValue={stat.value} /> {stat.prefix}
+                                        </>
+                                    ) : (
+                                        <>
+                                            <AnimatedCounter targetValue={stat.value} />{stat.suffix}
+                                        </>
+                                    )}
+                                </p>
                               <p className="text-lg text-muted-foreground">
                                 {stat.label}
                               </p>
@@ -227,7 +233,7 @@ export default function Home() {
               <div className="relative w-[450px] h-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
-                      src="/images/Experto-hilos-tensores-faciales.png"
+                      src="/images/Logo Dr Johnathan.png"
                       alt="Dr. Jonathan Rincón, experto en medicina estética"
                       width={450}
                       height={450}
