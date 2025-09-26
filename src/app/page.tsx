@@ -12,6 +12,7 @@ import {
   StretchHorizontal,
   HelpingHand,
   ShieldCheck,
+  Star,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -106,18 +107,21 @@ export default function Home() {
       title: 'Paciente de Hilos Tensores',
       avatar: 'https://i.pravatar.cc/150?img=1',
       text: '“El resultado con los hilos tensores superó mis expectativas. El Dr. Rincón es un verdadero profesional, me sentí segura en todo momento y el cambio en mi rostro es natural y rejuvenecedor. ¡Lo recomiendo a ojos cerrados!”',
+      rating: 5,
     },
     {
       name: 'Carlos V.',
       title: 'Paciente de Contorno Corporal',
       avatar: 'https://i.pravatar.cc/150?img=2',
       text: '“Después de probar dietas y ejercicio sin ver resultados en mi abdomen, la hidrolipoclasia fue la solución. El procedimiento fue rápido y el Dr. Rincón y su equipo son increíbles. Estoy muy contento con mi nueva figura.”',
+      rating: 5,
     },
     {
       name: 'Luisa F.',
       title: 'Paciente de Botox',
       avatar: 'https://i.pravatar.cc/150?img=3',
       text: '“Tenía miedo de que el botox me dejara sin expresión, pero el Dr. Rincón logró un resultado súper natural. Me veo más descansada y fresca, sin que nadie note que me hice algo. ¡Es exactamente lo que quería!”',
+      rating: 5,
     },
   ];
 
@@ -173,7 +177,7 @@ export default function Home() {
         </section>
 
         {/* Infinite Moving Cards Section */}
-        <section className="py-8 sm:py-12">
+        <section className="py-2 sm:py-4">
           <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
         </section>
 
@@ -294,7 +298,7 @@ export default function Home() {
                     {testimonials.map((testimonial, index) => (
                       <CarouselItem key={index}>
                         <div className="pl-4 pr-4">
-                          <div className="flex space-x-2 my-4">
+                          <div className="flex items-center space-x-2 my-4">
                             {testimonials.map((t, i) => (
                                 <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
                                     <AvatarImage src={t.avatar} />
@@ -302,6 +306,20 @@ export default function Home() {
                                 </Avatar>
                             ))}
                           </div>
+                          <div className="flex items-center gap-0.5 mb-2">
+                                {[...Array(5)].map((_, i) => (
+                                <Star
+                                    key={i}
+                                    className={cn(
+                                    'w-5 h-5',
+                                    i < testimonial.rating
+                                        ? 'text-yellow-400'
+                                        : 'text-muted-foreground/30'
+                                    )}
+                                    fill="currentColor"
+                                />
+                                ))}
+                            </div>
                           <blockquote className="text-lg text-muted-foreground italic">
                             {testimonial.text}
                           </blockquote>
