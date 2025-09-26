@@ -11,7 +11,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
 import { PlaceHolderImagesHome } from '@/lib/placeholder-images-home';
-import videoSrc from './Dr_Jonathan_Rincon.mp4';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import { GalleryImages } from '@/lib/placeholder-images-gallery';
 
 export default function Home() {
   const specializations = [
@@ -207,6 +208,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Infinite Moving Cards Section */}
+        <section className="py-16 sm:py-24">
+          <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
+        </section>
+
         {/* About Doctor Section */}
         <section
           id="sobre-el-doctor"
@@ -283,7 +289,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {beforeAfterImages.map((item, index) => (
-                <Card key={index} className="overflow-hidden shadow-lg bg-card">
+                <Card key={index} className="overflow-hidden shadow-lg">
                   <CardContent className="p-0">
                     <div className="grid grid-cols-2">
                       {item.before && (

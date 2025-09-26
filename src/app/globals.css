@@ -146,3 +146,31 @@
     animation: float 8s ease-in-out infinite;
   }
 }
+
+/* Marquee for infinite scroll */
+@layer components {
+  .marquee {
+    animation: marquee 50s linear infinite;
+  }
+  .marquee-vertical {
+    animation: marquee-vertical 50s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "galleryImages": [
+    {
+      "id": "gallery-1",
+      "imageUrl": "https://picsum.photos/seed/face-procedure-1/400/300",
+      "imageHint": "facial procedure"
+    },
+    {
+      "id": "gallery-2",
+      "imageUrl": "https://picsum.photos/seed/man-consultation/400/300",
+      "imageHint": "man consultation"
+    },
+    {
+      "id": "gallery-3",
+      "imageUrl": "https://picsum.photos/seed/facial-marking/400/300",
+      "imageHint": "facial marking"
+    },
+    {
+      "id": "gallery-4",
+      "imageUrl": "https://picsum.photos/seed/facial-injection/400/300",
+      "imageHint": "facial injection"
+    },
+    {
+      "id": "gallery-5",
+      "imageUrl": "https://picsum.photos/seed/skin-treatment/400/300",
+      "imageHint": "skin treatment"
+    },
+    {
+      "id": "gallery-6",
+      "imageUrl": "https://picsum.photos/seed/nose-injection/400/300",
+      "imageHint": "nose injection"
+    },
+    {
+      "id": "gallery-7",
+      "imageUrl": "https://picsum.photos/seed/patient-lying/400/300",
+      "imageHint": "patient treatment"
+    },
+    {
+      "id": "gallery-8",
+      "imageUrl": "https://picsum.photos/seed/man-profile/400/300",
+      "imageHint": "man profile"
+    }
+  ]
+}
