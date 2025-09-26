@@ -129,51 +129,51 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-24 text-center overflow-hidden">
-            <div className="container">
-                <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
-                <p className="mt-4 text-lg text-muted-foreground mx-auto max-w-2xl">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+        <section className="relative py-20 md:py-32 text-center overflow-hidden container">
+          <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden">
+              <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute z-0 w-full h-full object-cover"
+              >
+                  <source src="/Dr_Jonathan.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+              </video>
+              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+          </div>
 
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
-                    {stats.map((stat) => (
-                      <div key={stat.label} className="flex flex-col items-center gap-2">
-                        <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
-                           <stat.icon className="w-8 h-8" />
-                        </div>
-                        <div>
-                            <p className="text-3xl font-bold text-foreground">
-                                {stat.prefix ? (
-                                    <>
-                                        <AnimatedCounter targetValue={stat.value} /> {stat.prefix}
-                                    </>
-                                ) : (
-                                    <>
-                                        <AnimatedCounter targetValue={stat.value} />{stat.suffix}
-                                    </>
-                                )}
-                            </p>
-                          <p className="text-lg text-muted-foreground">
-                            {stat.label}
-                          </p>
-                        </div>
+          <div className="relative z-10 text-white">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary-foreground">Confianza</span></h2>
+              <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="flex flex-col items-center gap-2">
+                      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white">
+                         <stat.icon className="w-8 h-8" />
                       </div>
-                    ))}
-                </div>
-            </div>
-             <div className="container mt-12">
-                <div className="relative w-full max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute z-0 w-full h-full object-cover"
-                    >
-                        <source src="/Dr_Jonathan.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
+                      <div>
+                          <p className="text-3xl font-bold text-white">
+                              {stat.prefix ? (
+                                  <>
+                                      <AnimatedCounter targetValue={stat.value} /> {stat.prefix}
+                                  </>
+                              ) : (
+                                  <>
+                                      <AnimatedCounter targetValue={stat.value} />{stat.suffix}
+                                  </>
+                              )}
+                          </p>
+                        <p className="text-lg text-slate-200">
+                          {stat.label}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+          </div>
         </section>
 
         {/* Infinite Moving Cards Section */}
@@ -349,3 +349,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
