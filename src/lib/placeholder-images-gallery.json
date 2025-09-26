@@ -3,42 +3,50 @@
     {
       "id": "gallery-1",
       "imageUrl": "https://picsum.photos/seed/face-procedure-1/400/300",
-      "imageHint": "facial procedure"
+      "imageHint": "facial procedure",
+      "title": "Lifting de Cuello"
     },
     {
       "id": "gallery-2",
       "imageUrl": "https://picsum.photos/seed/man-consultation/400/300",
-      "imageHint": "man consultation"
+      "imageHint": "man consultation",
+      "title": "Rejuvenecimiento Facial"
     },
     {
       "id": "gallery-3",
       "imageUrl": "https://picsum.photos/seed/facial-marking/400/300",
-      "imageHint": "facial marking"
+      "imageHint": "facial marking",
+      "title": "Marcación Mandibular"
     },
     {
       "id": "gallery-4",
       "imageUrl": "https://picsum.photos/seed/facial-injection/400/300",
-      "imageHint": "facial injection"
+      "imageHint": "facial injection",
+      "title": "Rinomodelación"
     },
     {
       "id": "gallery-5",
       "imageUrl": "https://picsum.photos/seed/skin-treatment/400/300",
-      "imageHint": "skin treatment"
+      "imageHint": "skin treatment",
+      "title": "Tratamiento de Ojeras"
     },
     {
       "id": "gallery-6",
       "imageUrl": "https://picsum.photos/seed/nose-injection/400/300",
-      "imageHint": "nose injection"
+      "imageHint": "nose injection",
+      "title": "Foxy Eyes"
     },
     {
       "id": "gallery-7",
       "imageUrl": "https://picsum.photos/seed/patient-lying/400/300",
-      "imageHint": "patient treatment"
+      "imageHint": "patient treatment",
+      "title": "Lifting de Glúteos"
     },
     {
       "id": "gallery-8",
       "imageUrl": "https://picsum.photos/seed/man-profile/400/300",
-      "imageHint": "man profile"
+      "imageHint": "man profile",
+      "title": "Marcación Abdominal"
     }
   ]
 }

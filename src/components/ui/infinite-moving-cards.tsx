@@ -8,6 +8,7 @@ type GalleryImage = {
   id: string;
   imageUrl: string;
   imageHint: string;
+  title: string;
 };
 
 export const InfiniteMovingCards = ({
@@ -98,7 +99,7 @@ export const InfiniteMovingCards = ({
             className="w-[200px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[250px]"
             key={item.id}
           >
-             <div className="relative w-full aspect-square overflow-hidden rounded-lg">
+             <div className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg">
                 <Image
                     src={item.imageUrl}
                     alt={item.imageHint}
@@ -107,6 +108,9 @@ export const InfiniteMovingCards = ({
                     className="rounded-lg"
                     data-ai-hint={item.imageHint}
                 />
+                <div className="absolute bottom-0 left-0 right-0 p-2 bg-black/50 backdrop-blur-sm">
+                  <p className="text-white text-sm font-semibold text-center truncate">{item.title}</p>
+                </div>
             </div>
           </li>
         ))}

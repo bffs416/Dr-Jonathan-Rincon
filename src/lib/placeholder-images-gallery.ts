@@ -4,6 +4,7 @@ export type GalleryImage = {
   id: string;
   imageUrl: string;
   imageHint: string;
+  title: string;
 };
 
 export const GalleryImages: GalleryImage[] = data.galleryImages;
