@@ -101,7 +101,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="w-[200px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[250px] group"
+            className="w-[200px] max-w-full relative flex-shrink-0 md:w-[250px] group"
             key={item.id}
           >
             <Link href={item.href} className="block w-full h-full">
@@ -111,7 +111,6 @@ export const InfiniteMovingCards = ({
                       alt={item.title}
                       layout="fill"
                       objectFit="cover"
-                      className="rounded-lg"
                       data-ai-hint={item.imageHint}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
