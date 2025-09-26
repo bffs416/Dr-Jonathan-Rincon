@@ -130,7 +130,7 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-16 md:py-24 text-center">
+        <section className="relative py-16 md:py-24 text-center overflow-hidden">
           <div className="absolute inset-0 w-full h-full [mask-image:linear-gradient(to_right,transparent,white_5%,white_95%,transparent)]">
               <video
                   autoPlay
@@ -182,7 +182,7 @@ export default function Home() {
         </section>
 
          {/* Treatments Section */}
-        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto">
+        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4">
              <div className="text-center max-w-2xl mx-auto">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Nuestros <span className="text-primary">Tratamientos Principales</span>
@@ -242,7 +242,7 @@ export default function Home() {
               <div className="relative w-[450px] h-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
-                      src="/images/Logo Dr Johnathan.png"
+                      src="/images/Experto-hilos-tensores-faciales.png"
                       alt="Dr. Jonathan Rincón, experto en medicina estética"
                       width={450}
                       height={450}
