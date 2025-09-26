@@ -70,14 +70,14 @@ const treatments = [
   },
 ];
 
-const TreatmentCard = ({ icon: Icon, title, description, href }: (typeof treatments)[0]) => (
+const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, title: string, href: string}) => (
     <Link href={href} className="group block">
-        <div className="flex items-center justify-between p-4 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
-            <div className="flex-1 pr-8">
-                <h3 className="font-headline text-2xl font-semibold text-foreground group-hover:text-primary">{title}</h3>
+        <div className="flex items-center justify-between p-2 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
+            <div className="flex-1 pr-4">
+                <h3 className="font-headline text-xl font-semibold text-foreground group-hover:text-primary">{title}</h3>
             </div>
-            <div className="ml-6 flex items-center justify-center w-20 h-20 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
-                <Icon className="w-10 h-10 text-primary" />
+            <div className="ml-4 flex items-center justify-center w-16 h-16 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
+                <Icon className="w-8 h-8 text-primary" />
             </div>
         </div>
     </Link>
@@ -181,7 +181,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-y-8 gap-x-16">
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-12">
                 {treatments.map((treatment) => (
                     <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
