@@ -138,7 +138,7 @@ export default function Home() {
                     playsInline
                     className="absolute z-0 w-full h-full object-cover"
                 >
-                    <source src="/Dr_Jonathan_Rincon.mp4" type="video/mp4" />
+                    <source src="/Dr_Jonathan.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>
