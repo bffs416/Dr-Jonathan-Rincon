@@ -23,7 +23,7 @@ export function Logo() {
       <div className="relative flex items-center justify-center w-[50px] h-[50px]">
         <div className="absolute inset-0 bg-primary rounded-full" />
         <Image
-          src="/images/Logo Dr Jhonathan.png"
+          src="/images/Logo Dr Johnathan.png"
           alt="Logo Dr. Jonathan Rincón"
           width={50}
           height={50}
