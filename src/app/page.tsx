@@ -101,7 +101,7 @@ export default function Home() {
         </section>
 
         {/* Stats and Services Section */}
-        <section id="servicios" className="py-16 sm:py-24 bg-card">
+        <section id="servicios" className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               
