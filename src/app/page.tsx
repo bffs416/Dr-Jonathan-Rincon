@@ -130,7 +130,7 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 text-center overflow-hidden container">
+        <section className="relative py-16 md:py-24 text-center overflow-hidden container">
           <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden">
               <video
                   autoPlay

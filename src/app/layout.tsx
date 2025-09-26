@@ -38,8 +38,8 @@ export default function RootLayout({
         )}
       >
         <GeometricBackground />
-        <div className="relative flex min-h-dvh flex-col p-4">
-          <div className="relative flex min-h-dvh flex-col border border-primary/20">
+        <div className="relative flex min-h-dvh flex-col">
+          <div className="relative flex min-h-dvh flex-col">
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
