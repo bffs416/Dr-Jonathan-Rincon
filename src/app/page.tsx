@@ -129,8 +129,8 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="grid md:grid-cols-2 items-center min-h-[60vh]">
-            <div className="relative w-full h-[60vh] md:h-full overflow-hidden">
+        <section className="grid md:grid-cols-2 items-center min-h-[60vh] overflow-hidden">
+            <div className="relative w-full h-[60vh] md:h-full md:rounded-l-2xl overflow-hidden">
                 <video
                     autoPlay
                     loop
@@ -349,5 +349,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
