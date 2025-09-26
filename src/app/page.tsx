@@ -129,49 +129,49 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="grid md:grid-cols-2 items-center min-h-[60vh] overflow-hidden">
-            <div className="relative w-full h-[60vh] md:h-full md:rounded-l-2xl overflow-hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute z-0 w-full h-full object-cover"
-                >
-                    <source src="/Dr_Jonathan.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div className="container py-12 md:py-24 text-center md:text-left">
-                <div className="md:pl-8">
-                    <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
-                    <p className="mt-4 text-lg text-muted-foreground mx-auto max-w-2xl md:mx-0">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+        <section className="py-12 md:py-24 text-center overflow-hidden">
+            <div className="container">
+                <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
+                <p className="mt-4 text-lg text-muted-foreground mx-auto max-w-2xl">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
 
-                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-                        {stats.map((stat) => (
-                          <div key={stat.label} className="flex flex-col items-center gap-2">
-                            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
-                               <stat.icon className="w-8 h-8" />
-                            </div>
-                            <div>
-                                <p className="text-3xl font-bold text-foreground">
-                                    {stat.prefix ? (
-                                        <>
-                                            <AnimatedCounter targetValue={stat.value} /> {stat.prefix}
-                                        </>
-                                    ) : (
-                                        <>
-                                            <AnimatedCounter targetValue={stat.value} />{stat.suffix}
-                                        </>
-                                    )}
-                                </p>
-                              <p className="text-lg text-muted-foreground">
-                                {stat.label}
-                              </p>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                    {stats.map((stat) => (
+                      <div key={stat.label} className="flex flex-col items-center gap-2">
+                        <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
+                           <stat.icon className="w-8 h-8" />
+                        </div>
+                        <div>
+                            <p className="text-3xl font-bold text-foreground">
+                                {stat.prefix ? (
+                                    <>
+                                        <AnimatedCounter targetValue={stat.value} /> {stat.prefix}
+                                    </>
+                                ) : (
+                                    <>
+                                        <AnimatedCounter targetValue={stat.value} />{stat.suffix}
+                                    </>
+                                )}
+                            </p>
+                          <p className="text-lg text-muted-foreground">
+                            {stat.label}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+            </div>
+             <div className="container mt-12">
+                <div className="relative w-full max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute z-0 w-full h-full object-cover"
+                    >
+                        <source src="/Dr_Jonathan.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>
@@ -349,7 +349,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
