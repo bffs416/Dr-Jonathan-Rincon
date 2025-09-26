@@ -11,6 +11,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
 import { PlaceHolderImagesHome } from '@/lib/placeholder-images-home';
+import videoSrc from './Dr_Jonathan_Rincon.mp4';
 
 export default function Home() {
   const specializations = [
