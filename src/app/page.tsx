@@ -71,7 +71,7 @@ const treatments = [
 
 const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, title: string, href: string}) => (
     <Link href={href} className="group block">
-        <div className="flex flex-col items-center justify-center p-2 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
+        <div className="flex flex-col items-center justify-center p-1 transition-all duration-300 ease-in-out hover:bg-secondary/50 rounded-lg">
             <div className="mb-2 flex items-center justify-center w-12 h-12 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors">
                 <Icon className="w-6 h-6 text-primary" />
             </div>
@@ -126,45 +126,47 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover"
-          >
-            <source src="/Dr_Jonathan_Rincon.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
-          <div className="container relative z-20 px-4">
-             <div className="text-center">
-                <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
-                <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+        <section className="grid md:grid-cols-2 items-center min-h-[60vh]">
+            <div className="relative w-full h-[60vh] md:h-full overflow-hidden">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute z-0 w-full h-full object-cover"
+                >
+                    <source src="/Dr_Jonathan_Rincon.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="flex flex-col items-center gap-2">
-                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-white">
-                       <stat.icon className="w-8 h-8" />
+            <div className="container py-12 md:py-24 text-center md:text-left">
+                <div className="md:pl-8">
+                    <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
+                    <p className="mt-4 text-lg text-muted-foreground mx-auto max-w-2xl md:mx-0">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+
+                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                        {stats.map((stat) => (
+                          <div key={stat.label} className="flex flex-col items-center gap-2">
+                            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary">
+                               <stat.icon className="w-8 h-8" />
+                            </div>
+                            <div>
+                              <p className="text-3xl font-bold text-foreground">
+                                {stat.value}
+                              </p>
+                              <p className="text-lg text-muted-foreground">
+                                {stat.label}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
                     </div>
-                    <div>
-                      <p className="text-3xl font-bold">
-                        {stat.value}
-                      </p>
-                      <p className="text-lg text-slate-300">
-                        {stat.label}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Infinite Moving Cards Section */}
-        <section className="py-16 sm:py-24 pb-8 sm:pb-12">
+        <section className="py-12 sm:py-20">
           <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
         </section>
 
@@ -178,7 +180,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4">
                 {treatments.map((treatment) => (
                     <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
@@ -222,7 +224,7 @@ export default function Home() {
             </div>
             <div className="relative flex justify-center items-center">
               <div className="relative w-[450px] h-[450px]">
-                  <div className="absolute inset-0 rounded-full overflow-hidden">
+                  <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
                       src="/images/Experto-hilos-tensores-faciales.png"
                       alt="Dr. Jonathan Rincón, experto en medicina estética"
