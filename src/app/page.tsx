@@ -103,10 +103,31 @@ export default function Home() {
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
           <div className="container relative z-20 px-4">
+             <div className="text-center">
+                <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
+                <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+            </div>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="flex flex-col items-center gap-2">
+                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/20 text-white">
+                       <stat.icon className="w-8 h-8" />
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold">
+                        {stat.value}
+                      </p>
+                      <p className="text-lg text-slate-300">
+                        {stat.label}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
         </section>
 
-        {/* Stats and Services Section */}
+        {/* Services Section */}
         <section id="servicios" className="py-16 sm:py-24">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -182,31 +203,6 @@ export default function Home() {
                       </Button>
                     </div>
                   </Card>
-              </div>
-
-               {/* Stats column */}
-              <div>
-                <div className="text-left">
-                    <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary">Confianza</span></h2>
-                    <p className="mt-4 text-lg text-muted-foreground">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
-                </div>
-                <div className="space-y-8 mt-4">
-                    {stats.map((stat) => (
-                      <div key={stat.label} className="flex items-start gap-6">
-                        <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary shrink-0">
-                           <stat.icon className="w-8 h-8" />
-                        </div>
-                        <div>
-                          <p className="text-3xl font-bold text-foreground">
-                            {stat.value}
-                          </p>
-                          <p className="text-lg text-muted-foreground mt-1">
-                            {stat.label}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                </div>
               </div>
 
             </div>
