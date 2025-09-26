@@ -110,10 +110,10 @@ export default function Home() {
       rating: 5,
     },
     {
-      name: 'Carlos V.',
+      name: 'Sofía R.',
       title: 'Paciente de Contorno Corporal',
-      avatar: 'https://i.pravatar.cc/150?img=2',
-      text: '“Después de probar dietas y ejercicio sin ver resultados en mi abdomen, la hidrolipoclasia fue la solución. El procedimiento fue rápido y el Dr. Rincón y su equipo son increíbles. Estoy muy contento con mi nueva figura.”',
+      avatar: 'https://i.pravatar.cc/150?img=5',
+      text: '“Después de probar dietas y ejercicio sin ver resultados en mi abdomen, la hidrolipoclasia fue la solución. El procedimiento fue rápido y el Dr. Rincón y su equipo son increíbles. Estoy muy contenta con mi nueva figura.”',
       rating: 5,
     },
     {
@@ -349,3 +349,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
