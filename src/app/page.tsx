@@ -271,8 +271,8 @@ export default function Home() {
         <section id="testimonios" className="py-16 sm:py-24 text-foreground overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative w-full max-w-sm mx-auto lg:max-w-none h-96 lg:h-[500px]">
-                <div className="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform -rotate-12 z-20">
+              <div className="relative w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-[500px]">
+                <div className="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform lg:-rotate-12 z-20">
                   <p className="font-headline text-2xl md:text-4xl font-bold text-accent-foreground">500+</p>
                   <p className="text-sm md:text-base font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
                 </div>
@@ -308,7 +308,7 @@ export default function Home() {
               <div className="relative">
                 <Carousel
                   opts={{ loop: true }}
-                  className="w-full max-w-xl mx-auto lg:mx-0"
+                  className="w-full max-w-xl mx-auto lg:mx-0 [transform:translateZ(0)]"
                 >
                   <div className="pl-4">
                     <SectionTitleWithLines className="!justify-start">
