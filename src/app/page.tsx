@@ -37,7 +37,7 @@ const treatments: { icon: string; title: string; href: string; size?: number }[]
     icon: '/images/Hilos_Tensores_Icono.png',
     title: 'Hilos Tensores',
     href: '/hilos-tensores',
-    size: 90,
+    size: 80,
   },
   {
     icon: '/images/Bioestimuladores.png',
@@ -49,17 +49,19 @@ const treatments: { icon: string; title: string; href: string; size?: number }[]
     icon: '/images/botox.png',
     title: 'Toxina Botulínica',
     href: '/botox',
-    size: 500,
+    size: 200,
   },
   {
-    icon: '/images/Estetica Corporal.png',
+    icon: '/images/Body_Estetica Corporal.png',
     title: 'Contorno Corporal',
     href: '/contorno-corporal',
+    size: 700,
   },
   {
-    icon: '/images/Estetica Facial.png',
+    icon: '/images/icono_Face_estetica_facial.png',
     title: 'Estetica facial Avanzada',
     href: '/medicina-preventiva',
+    size: 700,
   },
 ];
 
@@ -218,10 +220,17 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-4">
-                {treatments.map((treatment) => (
-                    <TreatmentCard key={treatment.title} {...treatment} />
+            <div className="mt-12 flex flex-col items-center gap-y-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 md:gap-x-16 w-full max-w-4xl">
+                {treatments.slice(0, 3).map((treatment) => (
+                  <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
+              </div>
+              <div className="grid grid-cols-2 gap-x-4 md:gap-x-16 w-full max-w-md">
+                {treatments.slice(3, 5).map((treatment) => (
+                  <TreatmentCard key={treatment.title} {...treatment} />
+                ))}
+              </div>
             </div>
         </section>
 
@@ -236,8 +245,8 @@ export default function Home() {
           className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col items-center text-center order-1 md:order-2">
-              <div className="relative w-full aspect-square max-w-[200px] sm:max-w-[300px] md:max-w-[450px]">
+            <div className="flex flex-col items-center text-center md:order-2">
+              <div className="relative w-full aspect-square max-w-[300px] md:max-w-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
                       src="/images/Experto-hilos-tensores-faciales.png"
@@ -249,7 +258,7 @@ export default function Home() {
                     />
                   </div>
               </div>
-               <Button asChild size="lg" className="mt-8">
+               <Button asChild size="lg" className="mt-8 md:hidden">
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
@@ -259,12 +268,12 @@ export default function Home() {
                 </a>
               </Button>
             </div>
-            <div className="flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
+            <div className="flex flex-col text-center items-center md:text-left md:items-start md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
                 <span className="text-primary">Dr. Jonathan Rincón</span>
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground text-center md:text-justify">
+              <p className="mt-6 text-lg text-muted-foreground md:text-justify">
                 Especialista en medicina estética con más de 8 años de
                 experiencia. Reconocido como el{' '}
                 <strong className="text-primary font-bold">
@@ -273,11 +282,20 @@ export default function Home() {
                 , combinando técnicas avanzadas con un enfoque personalizado
                 para cada paciente.
               </p>
-              <p className="mt-4 text-lg text-muted-foreground text-center md:text-justify">
+              <p className="mt-4 text-lg text-muted-foreground md:text-justify">
                 Mi pasión es ayudar a las personas a sentirse seguras y
                 hermosas, utilizando los tratamientos más innovadores y seguros
                 del mercado.
               </p>
+              <Button asChild size="lg" className="mt-8 hidden md:inline-flex">
+                <a
+                  href="https://wa.me/573122784757"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Agendar por WhatsApp <WhatsAppIcon />
+                </a>
+              </Button>
             </div>
           </div>
         </section>
@@ -336,43 +354,45 @@ export default function Home() {
                   <CarouselContent>
                     {testimonials.map((testimonial, index) => (
                       <CarouselItem key={index}>
-                        <Card className="bg-background/80 backdrop-blur-lg p-6 rounded-xl shadow-lg border-white/20">
-                          <CardContent className="p-0">
-                            <div className="flex items-center space-x-2 my-4">
-                              {testimonials.map((t, i) => (
-                                  <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
-                                      <AvatarImage src={t.avatar} />
-                                      <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
-                                  </Avatar>
-                              ))}
-                            </div>
-                            <div className="flex items-center gap-0.5 mb-2">
-                                  {[...Array(5)].map((_, i) => (
-                                  <Star
-                                      key={i}
-                                      className={cn(
-                                      'w-5 h-5',
-                                      i < testimonial.rating
-                                          ? 'text-yellow-400'
-                                          : 'text-muted-foreground/30'
-                                      )}
-                                      fill="currentColor"
-                                  />
-                                  ))}
+                        <div className="px-1">
+                          <Card className="bg-background/80 backdrop-blur-lg p-6 rounded-xl shadow-lg border-white/20">
+                            <CardContent className="p-0">
+                              <div className="flex items-center space-x-2 my-4">
+                                {testimonials.map((t, i) => (
+                                    <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
+                                        <AvatarImage src={t.avatar} />
+                                        <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
+                                    </Avatar>
+                                ))}
                               </div>
-                            <blockquote className="text-base text-muted-foreground italic">
-                              {testimonial.text}
-                            </blockquote>
-                            <div className="mt-4">
-                              <p className="font-bold text-lg text-foreground">
-                                {testimonial.name}
-                              </p>
-                              <p className="text-sm text-muted-foreground">
-                                {testimonial.title}
-                              </p>
-                            </div>
-                          </CardContent>
-                        </Card>
+                              <div className="flex items-center gap-0.5 mb-2">
+                                    {[...Array(5)].map((_, i) => (
+                                    <Star
+                                        key={i}
+                                        className={cn(
+                                        'w-5 h-5',
+                                        i < testimonial.rating
+                                            ? 'text-yellow-400'
+                                            : 'text-muted-foreground/30'
+                                        )}
+                                        fill="currentColor"
+                                    />
+                                    ))}
+                                </div>
+                              <blockquote className="text-base text-muted-foreground italic">
+                                {testimonial.text}
+                              </blockquote>
+                              <div className="mt-4">
+                                <p className="font-bold text-lg text-foreground">
+                                  {testimonial.name}
+                                </p>
+                                <p className="text-sm text-muted-foreground">
+                                  {testimonial.title}
+                                </p>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </div>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
