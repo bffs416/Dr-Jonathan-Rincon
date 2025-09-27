@@ -39,41 +39,52 @@ const treatments: { icon: string; title: string; href: string }[] = [
     href: '/hilos-tensores',
   },
   {
-    icon: '/images/bioestimuladores-icon.png',
+    icon: '/images/Bioestimuladores.png',
     title: 'Bioestimuladores de Colágeno',
     href: '/bioestimuladores',
   },
   {
-    icon: '/images/botox-icon.png',
+    icon: '/images/botox.png',
     title: 'Toxina Botulínica',
     href: '/botox',
   },
-   {
-    icon: '/images/corporal-icon.png',
+  {
+    icon: '/images/Estetica Corporal.png',
     title: 'Contorno Corporal',
     href: '/contorno-corporal',
   },
-   {
-    icon: '/images/facial-icon.png',
-    title: 'Medicina Preventiva Facial',
-    href: '/medicina-preventiva',
-  },
   {
-    icon: '/images/corporal-preventiva-icon.png',
-    title: 'Medicina Preventiva Corporal',
+    icon: '/images/Estetica Facial.png',
+    title: 'Estetica facial Avanzada',
     href: '/medicina-preventiva',
   },
 ];
 
-const TreatmentCard = ({ icon, title, href }: {icon: string, title: string, href: string}) => (
-    <Link href={href} className="group block">
-        <div className="flex h-full flex-col items-center justify-start p-2 rounded-lg">
-            <div className="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
-                <Image src={icon} alt={title} width={40} height={40} className="transition-transform duration-300" />
-            </div>
-            <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center flex-1">{title}</h3>
-        </div>
-    </Link>
+const TreatmentCard = ({
+  icon,
+  title,
+  href,
+}: {
+  icon: string;
+  title: string;
+  href: string;
+}) => (
+  <Link href={href} className="group block">
+    <div className="flex h-full flex-col items-center justify-start p-2 rounded-lg">
+      <div className="mb-4 flex items-center justify-center w-24 h-24 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
+        <Image
+          src={icon}
+          alt={title}
+          width={56}
+          height={56}
+          className="transition-transform duration-300"
+        />
+      </div>
+      <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center flex-1">
+        {title}
+      </h3>
+    </div>
+  </Link>
 );
 
 
@@ -202,7 +213,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-4">
                 {treatments.map((treatment) => (
                     <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
@@ -220,6 +231,20 @@ export default function Home() {
           className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative flex justify-center items-center order-1 md:order-2">
+              <div className="relative w-full aspect-square max-w-[300px] md:max-w-[450px]">
+                  <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
+                    <Image
+                      src="/images/Experto-hilos-tensores-faciales.png"
+                      alt="Dr. Jonathan Rincón, experto en medicina estética"
+                      width={450}
+                      height={450}
+                      className="object-cover w-full h-full object-top"
+                      data-ai-hint="doctor portrait"
+                    />
+                  </div>
+              </div>
+            </div>
             <div className="order-2 md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
@@ -249,20 +274,6 @@ export default function Home() {
                 </a>
               </Button>
             </div>
-            <div className="relative flex justify-center items-center order-1 md:order-2">
-              <div className="relative w-full aspect-square max-w-[300px] md:max-w-[450px]">
-                  <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
-                    <Image
-                      src="/images/Experto-hilos-tensores-faciales.png"
-                      alt="Dr. Jonathan Rincón, experto en medicina estética"
-                      width={450}
-                      height={450}
-                      className="object-cover w-full h-full object-top"
-                      data-ai-hint="doctor portrait"
-                    />
-                  </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -270,13 +281,13 @@ export default function Home() {
         <section id="testimonios" className="py-16 sm:py-24 text-foreground">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-full order-2 lg:order-1">
+              <div className="relative w-full h-full min-h-[450px] sm:min-h-[550px] lg:min-h-full order-2 lg:order-1">
                  <div className="relative mx-auto h-full w-full max-w-md">
                     <div className="absolute -top-4 -left-4 z-20 flex flex-col items-center justify-center rounded-full bg-accent p-2 text-center shadow-lg w-24 h-24 lg:w-32 lg:h-32 lg:-rotate-12">
                       <p className="font-headline text-2xl font-bold text-accent-foreground lg:text-4xl">500+</p>
                       <p className="text-xs font-medium leading-tight text-accent-foreground lg:text-base">Pacientes Felices</p>
                     </div>
-                    <div className="absolute left-1/2 top-1/2 z-10 aspect-square w-full max-w-[250px] -translate-x-1/2 -translate-y-1/2 lg:h-64 lg:w-64 xl:h-80 xl:w-80">
+                    <div className="absolute left-1/2 top-1/2 z-10 aspect-square w-full max-w-[250px] -translate-x-1/2 -translate-y-1/2 sm:max-w-[300px] lg:h-64 lg:w-64 xl:h-80 xl:w-80">
                       {testimonialImage1 && (
                           <Image
                               src={testimonialImage1.src}
