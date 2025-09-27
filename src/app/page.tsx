@@ -220,7 +220,7 @@ export default function Home() {
           className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="order-2 md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
                 <span className="text-primary">Dr. Jonathan Rincón</span>
@@ -249,7 +249,7 @@ export default function Home() {
                 </a>
               </Button>
             </div>
-            <div className="relative flex justify-center items-center">
+            <div className="relative flex justify-center items-center order-1 md:order-2">
               <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
@@ -270,7 +270,7 @@ export default function Home() {
         <section id="testimonios" className="py-16 sm:py-24 text-foreground overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative w-full aspect-square max-w-sm mx-auto lg:hidden">
+               <div className="relative w-full aspect-square max-w-xs mx-auto lg:hidden">
                   <div className="absolute top-0 left-0 w-24 h-24 bg-accent rounded-full flex flex-col items-center justify-center text-center p-2 shadow-lg z-20">
                     <p className="font-headline text-2xl font-bold text-accent-foreground">500+</p>
                     <p className="text-xs font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
