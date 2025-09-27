@@ -32,21 +32,24 @@ import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { cn } from '@/lib/utils';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
 
-const treatments: { icon: string; title: string; href: string }[] = [
+const treatments: { icon: string; title: string; href: string; size?: number }[] = [
   {
     icon: '/images/Hilos_Tensores_Icono.png',
     title: 'Hilos Tensores',
     href: '/hilos-tensores',
+    size: 60,
   },
   {
     icon: '/images/Bioestimuladores.png',
     title: 'Bioestimuladores de Colágeno',
     href: '/bioestimuladores',
+    size: 60,
   },
   {
     icon: '/images/botox.png',
     title: 'Toxina Botulínica',
     href: '/botox',
+    size: 60,
   },
   {
     icon: '/images/Estetica Corporal.png',
@@ -64,10 +67,12 @@ const TreatmentCard = ({
   icon,
   title,
   href,
+  size = 50
 }: {
   icon: string;
   title: string;
   href: string;
+  size?: number;
 }) => (
   <Link href={href} className="group block">
     <div className="flex h-full flex-col items-center justify-start p-2 rounded-lg">
@@ -75,8 +80,8 @@ const TreatmentCard = ({
         <Image
           src={icon}
           alt={title}
-          width={50}
-          height={50}
+          width={size}
+          height={size}
           className="transition-transform duration-300"
         />
       </div>
@@ -231,7 +236,7 @@ export default function Home() {
           className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative flex justify-center items-center order-1 md:order-2">
+            <div className="relative flex justify-center items-center order-2 md:order-2">
               <div className="relative w-full aspect-square max-w-[300px] md:max-w-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
@@ -245,7 +250,7 @@ export default function Home() {
                   </div>
               </div>
             </div>
-            <div className="order-2 md:order-1">
+            <div className="order-1 md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
                 <span className="text-primary">Dr. Jonathan Rincón</span>
@@ -328,9 +333,9 @@ export default function Home() {
                   opts={{ loop: true }}
                   className="w-full max-w-xl mx-auto lg:mx-0 [transform:translateZ(0)]"
                 >
-                  <CarouselContent className="-ml-4">
+                  <CarouselContent>
                     {testimonials.map((testimonial, index) => (
-                      <CarouselItem key={index} className="pl-4">
+                      <CarouselItem key={index}>
                         <div className="px-1">
                           <Card className="bg-background/80 backdrop-blur-lg p-6 rounded-xl shadow-lg border-white/20">
                             <CardContent className="p-0">
