@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -282,8 +283,8 @@ export default function HilosTensoresPage() {
         )}
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="container relative z-20 px-4">
-            <div className="flex flex-col items-center gap-2">
-              <Badge variant="secondary">#1 en Medellín</Badge>
+            <div className="flex flex-col items-center gap-4">
+              <p className="bg-secondary/20 text-white font-bold text-2xl md:text-4xl py-2 px-6 rounded-full backdrop-blur-sm">#1 en Medellín</p>
               <Badge>La especialidad de la casa</Badge>
             </div>
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-4">
