@@ -40,39 +40,37 @@ const testimonials = [
 export function TestimonialsSection() {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: true }));
   return (
-    <section className="relative py-20">
+    <section className="relative py-20 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 relative mb-10 md:mb-0">
-            <div className="relative w-full max-w-md mx-auto">
-              <div className="relative">
-                <Image
-                  src="/images/Hilos_Tensores_Resultados_Paciente.jpg"
-                  alt="Paciente satisfecha"
-                  width={500}
-                  height={500}
-                  className="rounded-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-10 -right-10 z-10">
-                <Image
-                  src="/images/Hilos_Tensores_Analisis.png"
-                  alt="Análisis facial"
-                  width={300}
-                  height={300}
-                  className="rounded-full object-cover border-4 border-white"
-                />
-              </div>
-              <div className="absolute -top-10 -left-10 z-20 w-48 h-48 flex flex-col items-center justify-center text-center">
-                <div className="absolute inset-0 bg-gradient-radial from-primary to-primary-dark rounded-full animate-spin-slow blur-md opacity-50"></div>
-                <div className="relative text-primary-foreground">
-                  <p className="text-5xl font-bold">500+</p>
-                  <p className="text-xl">Pacientes Felices</p>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative w-full max-w-md mx-auto h-[400px] sm:h-[500px]">
+            <div className="absolute top-0 left-0 w-3/4 h-3/4">
+              <Image
+                src="/images/Hilos_Tensores_Resultados_Paciente.jpg"
+                alt="Paciente satisfecha"
+                width={500}
+                height={500}
+                className="rounded-full object-cover w-full h-full shadow-lg"
+              />
+            </div>
+            <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
+              <Image
+                src="/images/Hilos_Tensores_Analisis.png"
+                alt="Análisis facial"
+                width={300}
+                height={300}
+                className="rounded-full object-cover w-full h-full border-4 border-white shadow-lg"
+              />
+            </div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-48 sm:h-48 flex flex-col items-center justify-center text-center">
+              <div className="absolute inset-0 bg-gradient-radial from-primary to-primary-dark rounded-full animate-spin-slow blur-md opacity-50"></div>
+              <div className="relative text-primary-foreground">
+                <p className="text-4xl sm:text-5xl font-bold">500+</p>
+                <p className="text-lg sm:text-xl">Pacientes Felices</p>
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:pl-10 text-center">
+          <div className="text-center">
             <h2 className="text-3xl font-bold mb-6 text-center">
               Qué dicen nuestros pacientes
             </h2>
@@ -85,13 +83,15 @@ export function TestimonialsSection() {
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index}>
-                    <Card className="p-4 bg-background/80 backdrop-blur-lg rounded-lg text-left">
-                      <p className="italic">"{testimonial.comment}"</p>
-                      <p className="mt-4 font-bold text-right">
+                    <Card className="p-3 sm:p-4 bg-background/80 backdrop-blur-lg rounded-lg text-left">
+                      <p className="italic text-sm sm:text-base">
+                        "{testimonial.comment}"
+                      </p>
+                      <p className="mt-2 sm:mt-4 font-bold text-right text-sm sm:text-base">
                         - {testimonial.name}
                       </p>
-                      <div className="flex flex-col items-end mt-2">
-                        <p className="text-sm text-gray-600">
+                      <div className="flex flex-col items-end mt-1 sm:mt-2">
+                        <p className="text-xs sm:text-sm text-gray-600">
                           Tratamiento: {testimonial.treatment}
                         </p>
                         <div className="flex mt-1">
@@ -99,7 +99,7 @@ export function TestimonialsSection() {
                             (_, i) => (
                               <Star
                                 key={i}
-                                className="w-4 h-4 text-yellow-500 fill-yellow-500"
+                                className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 fill-yellow-500"
                               />
                             )
                           )}
@@ -109,8 +109,8 @@ export function TestimonialsSection() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="absolute -left-2 top-1/2 -translate-y-1/2" />
+              <CarouselNext className="absolute -right-2 top-1/2 -translate-y-1/2" />
             </Carousel>
           </div>
         </div>

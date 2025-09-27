@@ -70,7 +70,6 @@ const TreatmentCard = ({
   icon,
   title,
   href,
-  size = 50
 }: {
   icon: string;
   title: string;
@@ -79,16 +78,15 @@ const TreatmentCard = ({
 }) => (
   <Link href={href} className="group block">
     <div className="flex h-full flex-col items-center justify-start p-2 rounded-lg">
-      <div className="mb-4 flex items-center justify-center w-24 h-24 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
+      <div className="relative mb-4 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
         <Image
           src={icon}
           alt={title}
-          width={size}
-          height={size}
-          className="transition-transform duration-300"
+          fill
+          className="object-contain transition-transform duration-300 p-2"
         />
       </div>
-      <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center flex-1">
+      <h3 className="font-headline text-sm sm:text-base font-semibold text-foreground group-hover:text-primary text-center flex-1 text-wrap">
         {title}
       </h3>
     </div>
@@ -221,17 +219,10 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 flex flex-col items-center gap-y-8">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 md:gap-x-16 w-full max-w-4xl">
-                {treatments.slice(0, 3).map((treatment) => (
+            <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
+                {treatments.map((treatment) => (
                   <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
-              </div>
-              <div className="grid grid-cols-2 gap-x-4 md:gap-x-16 w-full max-w-md">
-                {treatments.slice(3, 5).map((treatment) => (
-                  <TreatmentCard key={treatment.title} {...treatment} />
-                ))}
-              </div>
             </div>
         </section>
 
