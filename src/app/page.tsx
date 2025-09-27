@@ -55,13 +55,11 @@ const treatments: { icon: string; title: string; href: string; size?: number }[]
     icon: '/images/Estetica Corporal.png',
     title: 'Contorno Corporal',
     href: '/contorno-corporal',
-    size: 300,
   },
   {
     icon: '/images/Estetica Facial.png',
     title: 'Estetica facial Avanzada',
     href: '/medicina-preventiva',
-    size: 300,
   },
 ];
 
@@ -261,12 +259,12 @@ export default function Home() {
                 </a>
               </Button>
             </div>
-            <div className="md:order-1 text-center md:text-left flex flex-col items-center md:items-start">
+            <div className="text-center md:text-left flex flex-col items-center md:items-start md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
                 <span className="text-primary">Dr. Jonathan Rincón</span>
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground">
+              <p className="mt-6 text-lg text-muted-foreground text-center md:text-justify">
                 Especialista en medicina estética con más de 8 años de
                 experiencia. Reconocido como el{' '}
                 <strong className="text-primary font-bold">
@@ -275,7 +273,7 @@ export default function Home() {
                 , combinando técnicas avanzadas con un enfoque personalizado
                 para cada paciente.
               </p>
-              <p className="mt-4 text-lg text-muted-foreground">
+              <p className="mt-4 text-lg text-muted-foreground text-center md:text-justify">
                 Mi pasión es ayudar a las personas a sentirse seguras y
                 hermosas, utilizando los tratamientos más innovadores y seguros
                 del mercado.
@@ -347,45 +345,43 @@ export default function Home() {
                   <CarouselContent>
                     {testimonials.map((testimonial, index) => (
                       <CarouselItem key={index}>
-                        <div className="px-1">
-                          <Card className="bg-background/80 backdrop-blur-lg p-6 rounded-xl shadow-lg border-white/20">
-                            <CardContent className="p-0">
-                              <div className="flex items-center space-x-2 my-4">
-                                {testimonials.map((t, i) => (
-                                    <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
-                                        <AvatarImage src={t.avatar} />
-                                        <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
-                                    </Avatar>
-                                ))}
+                        <Card className="bg-background/80 backdrop-blur-lg p-6 rounded-xl shadow-lg border-white/20">
+                          <CardContent className="p-0">
+                            <div className="flex items-center space-x-2 my-4">
+                              {testimonials.map((t, i) => (
+                                  <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
+                                      <AvatarImage src={t.avatar} />
+                                      <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
+                                  </Avatar>
+                              ))}
+                            </div>
+                            <div className="flex items-center gap-0.5 mb-2">
+                                  {[...Array(5)].map((_, i) => (
+                                  <Star
+                                      key={i}
+                                      className={cn(
+                                      'w-5 h-5',
+                                      i < testimonial.rating
+                                          ? 'text-yellow-400'
+                                          : 'text-muted-foreground/30'
+                                      )}
+                                      fill="currentColor"
+                                  />
+                                  ))}
                               </div>
-                              <div className="flex items-center gap-0.5 mb-2">
-                                    {[...Array(5)].map((_, i) => (
-                                    <Star
-                                        key={i}
-                                        className={cn(
-                                        'w-5 h-5',
-                                        i < testimonial.rating
-                                            ? 'text-yellow-400'
-                                            : 'text-muted-foreground/30'
-                                        )}
-                                        fill="currentColor"
-                                    />
-                                    ))}
-                                </div>
-                              <blockquote className="text-base text-muted-foreground italic">
-                                {testimonial.text}
-                              </blockquote>
-                              <div className="mt-4">
-                                <p className="font-bold text-lg text-foreground">
-                                  {testimonial.name}
-                                </p>
-                                <p className="text-sm text-muted-foreground">
-                                  {testimonial.title}
-                                </p>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </div>
+                            <blockquote className="text-base text-muted-foreground italic">
+                              {testimonial.text}
+                            </blockquote>
+                            <div className="mt-4">
+                              <p className="font-bold text-lg text-foreground">
+                                {testimonial.name}
+                              </p>
+                              <p className="text-sm text-muted-foreground">
+                                {testimonial.title}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
