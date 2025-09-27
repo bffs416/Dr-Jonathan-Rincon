@@ -18,32 +18,32 @@ import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
+import { findImage } from '@/lib/images';
 
 const Placeholder = ({
   className,
   seed,
-  width = 600,
-  height = 600,
-  text,
-  hint
 }: {
   className?: string;
   seed: string;
-  width?: number;
-  height?: number;
-  text?: string;
-  hint: string;
-}) => (
-  <div className={cn('relative', className)} style={{ width: `${width}px`, height: `${height}px` }}>
-    <Image
-      src={`https://picsum.photos/seed/${seed}/${width}/${height}`}
-      alt={text || hint}
-      fill
-      className="object-cover"
-      data-ai-hint={hint}
-    />
-  </div>
-);
+}) => {
+  const image = findImage(seed);
+  return (
+    <div className={cn('relative bg-muted w-full h-full', className)}>
+      {image ? (
+        <Image
+          src={image.src}
+          alt={image.hint}
+          fill
+          className="object-cover"
+          data-ai-hint={image.hint}
+        />
+      ) : (
+        <div className="w-full h-full bg-secondary" />
+      )}
+    </div>
+  );
+};
 
 export default function BioestimuladoresPage() {
   const benefits = [
@@ -85,7 +85,9 @@ export default function BioestimuladoresPage() {
     <div>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
-        <Placeholder className="absolute inset-0 opacity-30" seed="biostimulator-hero" width={1920} height={1080} hint="aesthetic medicine" />
+        <div className="absolute inset-0 opacity-30">
+          <Placeholder seed="biostimulator-hero" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
@@ -131,11 +133,10 @@ export default function BioestimuladoresPage() {
               </Link>
             </Button>
           </div>
-          <div>
+          <div className="w-full aspect-square">
             <Placeholder
-              className="rounded-xl shadow-2xl w-full aspect-square"
+              className="rounded-xl shadow-2xl"
               seed="firm-skin"
-              hint="firm aesthetic skin"
             />
           </div>
         </section>
@@ -143,11 +144,10 @@ export default function BioestimuladoresPage() {
         {/* Section 2: What they are & Benefits */}
         <section id="que-son" className="scroll-mt-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 w-full aspect-square">
               <Placeholder
-                className="rounded-xl shadow-2xl w-full aspect-square"
+                className="rounded-xl shadow-2xl"
                 seed="biostimulator-diagram"
-                hint="biostimulator diagram"
               />
             </div>
             <div className="order-1 md:order-2">
@@ -302,7 +302,7 @@ export default function BioestimuladoresPage() {
               </Button>
             </div>
             <div className="relative h-64 md:h-full w-full">
-              <Placeholder className="absolute inset-0" seed="cta-bio" width={800} height={600} hint="aesthetic medicine patient" />
+              <Placeholder className="absolute inset-0" seed="cta-bio" />
             </div>
           </Card>
         </section>

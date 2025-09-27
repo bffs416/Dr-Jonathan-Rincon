@@ -2,9 +2,12 @@ import { Badge } from '@/components/ui/badge';
 import { CalendarDays, Clock, User } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { findImage } from '@/lib/images';
 
 // This is a placeholder for your actual blog post data fetching logic
 async function getPostData(slug: string) {
+  const heroImage = findImage('blog-post-hero');
+  const contentImage = findImage('blog-post-content');
   // In a real app, you would fetch this from a CMS or database
   return {
     title: 'Hilos Tensores: La Revolución del Lifting Sin Cirugía en Medellín',
@@ -12,8 +15,8 @@ async function getPostData(slug: string) {
     date: '19 de enero de 2024',
     readTime: '6 min',
     author: 'Dr. Jonathan Rincón',
-    image: 'https://picsum.photos/seed/aesthetic-medicine-clinic/1280/853',
-    imageHint: 'aesthetic medicine clinic',
+    image: heroImage,
+    imageHint: heroImage?.hint || 'aesthetic medicine clinic',
     content: `
       <p class="lead">Descubre por qué los hilos tensores PDO se han convertido en el tratamiento #1 para el rejuvenecimiento facial sin cirugía. En este artículo, exploraremos en detalle los diferentes tipos de hilos, sus beneficios, el procedimiento y los resultados que puedes esperar.</p>
       <h2>¿Qué son los Hilos Tensores?</h2>
@@ -27,7 +30,7 @@ async function getPostData(slug: string) {
       </ul>
       <h2>Beneficios del Tratamiento</h2>
       <figure>
-        <img src="https://picsum.photos/seed/happy-patient-aesthetic/800/500" alt="Beneficios hilos tensores" data-ai-hint="happy patient"/>
+        <img src="${contentImage?.src}" alt="Beneficios hilos tensores" data-ai-hint="${contentImage?.hint}"/>
         <figcaption>Resultados naturales y una piel visiblemente más joven.</figcaption>
       </figure>
       <p>El principal beneficio es el <strong>efecto lifting inmediato</strong>. Sin embargo, la magia real ocurre a largo plazo. La presencia de los hilos estimula a los fibroblastos a producir colágeno y elastina de forma natural. Esto se traduce en:</p>
@@ -58,14 +61,16 @@ export default async function BlogPostPage({
   return (
     <div>
       <section className="relative h-[40vh] md:h-[50vh] w-full bg-slate-900">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          className="object-cover opacity-30"
-          data-ai-hint={post.imageHint}
-          priority
-        />
+        {post.image && (
+          <Image
+            src={post.image.src}
+            alt={post.title}
+            fill
+            className="object-cover opacity-30"
+            data-ai-hint={post.imageHint}
+            priority
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0">
           <div className="container mx-auto px-4 py-8 md:py-12 text-white">

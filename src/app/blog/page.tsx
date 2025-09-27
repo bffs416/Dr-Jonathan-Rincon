@@ -27,11 +27,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { findImage } from '@/lib/images';
 
 const featuredPost = {
   slug: '/blog/hilos-tensores-revolucion',
-  image: 'https://picsum.photos/seed/aesthetic-medicine-main/1200/800',
-  imageHint: 'aesthetic medicine',
+  image: findImage('blog-featured'),
   title: 'Hilos Tensores: La Revolución del Lifting Sin Cirugía en Medellín',
   description:
     'Descubre por qué los hilos tensores PDO se han convertido en el tratamiento #1 para el rejuvenecimiento facial sin cirugía. Conoce los tipos, beneficios y resultados.',
@@ -43,8 +43,7 @@ const blogPosts = [
   {
     slug: '/blog/bioestimuladores-colageno',
     category: 'Bioestimuladores',
-    image: 'https://picsum.photos/seed/aesthetic-collagen/600/400',
-    imageHint: 'collagen treatment',
+    image: findImage('blog-post-1'),
     title:
       'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs Harmonca',
     description:
@@ -55,8 +54,7 @@ const blogPosts = [
   {
     slug: '/blog/botox-mitos-verdades',
     category: 'Facial',
-    image: 'https://picsum.photos/seed/aesthetic-botox/600/400',
-    imageHint: 'botox injection',
+    image: findImage('blog-post-2'),
     title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
     description:
       'Desmitificamos las creencias más comunes sobre el Botox. Conoce la verdad detrás de este tratamiento y sus beneficios reales.',
@@ -66,8 +64,7 @@ const blogPosts = [
   {
     slug: '/blog/contorno-corporal-hidrolipoclasia',
     category: 'Corporal',
-    image: 'https://picsum.photos/seed/aesthetic-bodycontour/600/400',
-    imageHint: 'body contouring',
+    image: findImage('blog-post-3'),
     title: 'Contorno Corporal: Hidrolipoclasia vs Métodos Tradicionales',
     description:
       'Conoce las ventajas de la hidrolipoclasia sobre otros métodos de reducción de grasa. Procedimiento, resultados y cuidados post-tratamiento.',
@@ -136,13 +133,15 @@ export default function BlogPage() {
       <div className="mt-16">
         <Card className="overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-2">
           <div className="relative aspect-[4/3] lg:aspect-auto">
-            <Image
-              src={featuredPost.image}
-              alt={featuredPost.title}
-              fill
-              className="object-cover"
-              data-ai-hint={featuredPost.imageHint}
-            />
+            {featuredPost.image && (
+              <Image
+                src={featuredPost.image.src}
+                alt={featuredPost.title}
+                fill
+                className="object-cover"
+                data-ai-hint={featuredPost.image.hint}
+              />
+            )}
           </div>
           <div className="p-8 md:p-12 flex flex-col">
             <div>
@@ -183,13 +182,15 @@ export default function BlogPage() {
           >
             <CardHeader className="p-0 relative">
               <Link href={post.slug} className="block aspect-[3/2] relative">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={post.imageHint}
-                />
+                {post.image && (
+                  <Image
+                    src={post.image.src}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={post.image.hint}
+                  />
+                )}
               </Link>
               <Badge className="absolute top-4 left-4" variant="secondary">
                 {post.category}

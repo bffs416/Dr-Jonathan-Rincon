@@ -18,7 +18,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
   Carousel,
   CarouselContent,
@@ -37,53 +36,63 @@ import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { SectionArch } from '@/components/section-arch';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
+import { findImage } from '@/lib/images';
 
 
 export default function HilosTensoresPage() {
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
+  
+  const heroImage = findImage('hilos-hero');
+  const whatAreTheyImage = findImage('hilos-what-are');
+  const ctaImage = findImage('hilos-cta');
+  
+  const threadTypeImages = {
+    lisos: findImage('hilos-lisos'),
+    cog: findImage('hilos-cog'),
+  };
+  
+  const appImages = {
+    rhino: findImage('rhino-shaping'),
+    fox: findImage('fox-eyes'),
+    abs: findImage('abs-definition'),
+    arms: findImage('arm-lift'),
+    glutes: findImage('butt-lift'),
+    scars: findImage('scar-treatment'),
+  };
+  
+  const benefitImages = {
+    cheeks: findImage('cheek-lift'),
+    jawline: findImage('jawline-definition'),
+    eyebrow: findImage('eyebrow-lift'),
+    nasolabial: findImage('nasolabial-folds'),
+    neck: findImage('neck-rejuvenation'),
+    skin: findImage('skin-improvement'),
+  };
 
   const benefits = [
     {
       title: 'Lifting de mejillas y pómulos.',
-      image: {
-        url: 'https://picsum.photos/seed/cheeks/250/125',
-        hint: 'cheek lift',
-      },
+      image: benefitImages.cheeks
     },
     {
       title: 'Redefinición del óvalo facial.',
-      image: {
-        url: 'https://picsum.photos/seed/jawline/250/125',
-        hint: 'jawline definition',
-      },
+      image: benefitImages.jawline
     },
     {
       title: 'Elevación de cejas caídas.',
-      image: {
-        url: 'https://picsum.photos/seed/eyebrow/250/125',
-        hint: 'eyebrow lift',
-      },
+      image: benefitImages.eyebrow
     },
     {
       title: 'Corrección de surcos nasogenianos.',
-      image: {
-        url: 'https://picsum.photos/seed/nasolabial/250/125',
-        hint: 'nasolabial folds',
-      },
+      image: benefitImages.nasolabial
     },
     {
       title: 'Rejuvenecimiento del cuello.',
-      image: {
-        url: 'https://picsum.photos/seed/neck/250/125',
-        hint: 'neck rejuvenation',
-      },
+      image: benefitImages.neck
     },
     {
       title: 'Mejora general de la piel.',
-      image: {
-        url: 'https://picsum.photos/seed/skin/250/125',
-        hint: 'skin improvement',
-      },
+      image: benefitImages.skin
     },
   ];
 
@@ -92,15 +101,13 @@ export default function HilosTensoresPage() {
       name: 'Hilos Lisos (Monofilamento)',
       description:
         'Ideales para crear una malla de soporte que redensifica la piel. Estimulan el colágeno para mejorar la textura y dar un aspecto más turgente en zonas con flacidez fina.',
-      image: 'https://picsum.photos/seed/hilos-lisos/400/300',
-      imageHint: 'smooth threads illustration',
+      image: threadTypeImages.lisos,
     },
     {
       name: 'Hilos Espiculados (COG)',
       description:
         'Son los protagonistas del efecto lifting. Cuentan con pequeñas anclas que se anclan al tejido, permitiendo traccionar y reposicionar la piel de forma inmediata y efectiva.',
-      image: 'https://picsum.photos/seed/hilos-cog/400/300',
-      imageHint: 'cog threads illustration',
+      image: threadTypeImages.cog,
     },
   ];
 
@@ -109,53 +116,35 @@ export default function HilosTensoresPage() {
       title: 'Rinomodelación con Hilos',
       description:
         'Alternativa no quirúrgica para elevar la punta y rectificar el dorso nasal.',
-      image: {
-        url: 'https://picsum.photos/seed/rhino/250/125',
-        hint: 'nose shaping',
-      }
+      image: appImages.rhino,
     },
     {
       title: 'Lifting de Cejas (Fox Eyes)',
       description:
         'Eleva la cola de la ceja para una mirada más abierta y juvenil.',
-      image: {
-        url: 'https://picsum.photos/seed/foxeyes/250/125',
-        hint: 'eyebrow lift',
-      }
+      image: appImages.fox,
     },
     {
       title: 'Marcación Abdominal',
       description: 'Define los rectos abdominales y combate la flacidez.',
-       image: {
-        url: 'https://picsum.photos/seed/abs/250/125',
-        hint: 'abdominal definition',
-      }
+       image: appImages.abs,
     },
     {
       title: 'Lifting de Brazos y Piernas',
       description:
         'Solución eficaz para la flacidez en cara interna de brazos y muslos.',
-       image: {
-        url: 'https://picsum.photos/seed/arms/250/125',
-        hint: 'arm lift',
-      }
+       image: appImages.arms,
     },
     {
       title: 'Levantamiento de Glúteos',
       description: 'Mejora la ptosis leve a moderada y redefine el contorno.',
-       image: {
-        url: 'https://picsum.photos/seed/glutes/250/125',
-        hint: 'butt lift',
-      }
+       image: appImages.glutes,
     },
     {
       title: 'Tratamiento de Cicatrices Atróficas',
       description:
         'Estimula colágeno para rellenar y mejorar la textura de cicatrices.',
-       image: {
-        url: 'https://picsum.photos/seed/scars/250/125',
-        hint: 'scar treatment',
-      }
+       image: appImages.scars,
     },
   ];
 
@@ -187,92 +176,87 @@ export default function HilosTensoresPage() {
     },
   ];
 
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hilos-hero');
-  const whatAreTheyImage = PlaceHolderImages.find(
-    (img) => img.id === 'hilos-what-are'
-  );
    const beforeAfterCases = [
     // Faciales
     {
       title: 'Lifting de Cuello (Papada)',
       description: 'Hilos espiculados para tensado submentoniano.',
       sessions: '1 sesión',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/neck-before/600/400', imageHint: 'neck lift before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/neck-after/600/400', imageHint: 'neck lift after' },
+      beforeImage: findImage('neck-before'),
+      afterImage: findImage('neck-after'),
     },
     {
       title: 'Rejuvenecimiento Periorbital',
       description: 'Hilos lisos para patas de gallo y ojeras.',
       sessions: '2 sesiones',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/eyes-before/600/400', imageHint: 'eye rejuvenation before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/eyes-after/600/400', imageHint: 'eye rejuvenation after' },
+      beforeImage: findImage('eyes-before'),
+      afterImage: findImage('eyes-after'),
     },
     {
       title: 'Definición Mandibular',
       description: 'Técnica para un óvalo facial más definido y joven.',
       sessions: '1 sesión',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/jawline-before/600/400', imageHint: 'jawline before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/jawline-after/600/400', imageHint: 'jawline after' },
+      beforeImage: findImage('jawline-before'),
+      afterImage: findImage('jawline-after'),
     },
     {
       title: 'Foxy Eyes (Lifting de Cejas)',
       description: 'Elevación de la cola de la ceja con hilos espiculados.',
       sessions: '1 sesión',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/foxy-before/600/400', imageHint: 'fox eyes before' },
-      afterImage: { imageUrl: '/Hilos_Foxy_eyes.png', imageHint: 'fox eyes after' },
+      beforeImage: findImage('foxy-before'),
+      afterImage: findImage('foxy-after'),
     },
     {
       title: 'Rinomodelación no quirúrgica',
       description: 'Elevación de punta y rectificación de dorso nasal.',
       sessions: '1 sesión',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/rhino-before/600/400', imageHint: 'rhino before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/rhino-after/600/400', imageHint: 'rhino after' },
+      beforeImage: findImage('rhino-before'),
+      afterImage: findImage('rhino-after'),
     },
     {
       title: 'Líneas de Marioneta',
       description: 'Suavizado de los pliegues de las comisuras de los labios.',
       sessions: '1 sesión',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/marionette-before/600/400', imageHint: 'marionette lines before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/marionette-after/600/400', imageHint: 'marionette lines after' },
+      beforeImage: findImage('marionette-before'),
+      afterImage: findImage('marionette-after'),
     },
     // Corporales
     {
       title: 'Levantamiento de Glúteos',
       description: 'Hilos espiculados para mejorar la ptosis glútea leve.',
       sessions: '2 sesiones',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/glutes-before/600/400', imageHint: 'butt lift before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/glutes-after/600/400', imageHint: 'butt lift after' },
+      beforeImage: findImage('glutes-before'),
+      afterImage: findImage('glutes-after'),
     },
     {
       title: 'Marcación Abdominal',
       description: 'Red de hilos para estimular colágeno y definir.',
       sessions: '3 sesiones',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/abs-before/600/400', imageHint: 'abs definition before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/abs-after/600/400', imageHint: 'abs definition after' },
+      beforeImage: findImage('abs-before'),
+      afterImage: findImage('abs-after'),
     },
     {
       title: 'Lifting de Brazos',
       description: 'Tratamiento de la flacidez en cara interna de brazos.',
       sessions: '2 sesiones',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/arms-before/600/400', imageHint: 'arm lift before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/arms-after/600/400', imageHint: 'arm lift after' },
+      beforeImage: findImage('arms-before'),
+      afterImage: findImage('arms-after'),
     },
     {
       title: 'Lifting de Muslos',
       description: 'Reducción de flacidez en cara interna de muslos.',
       sessions: '2 sesiones',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/thighs-before/600/400', imageHint: 'thigh lift before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/thighs-after/600/400', imageHint: 'thigh lift after' },
+      beforeImage: findImage('thighs-before'),
+      afterImage: findImage('thighs-after'),
     },
     {
       title: 'Rejuvenecimiento de Rodillas',
       description: 'Hilos lisos para tratar la piel laxa sobre las rodillas.',
       sessions: '2 sesiones',
-      beforeImage: { imageUrl: 'https://picsum.photos/seed/knees-before/600/400', imageHint: 'knee rejuvenation before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/knees-after/600/400', imageHint: 'knee rejuvenation after' },
+      beforeImage: findImage('knees-before'),
+      afterImage: findImage('knees-after'),
     },
   ];
-  const ctaImage = PlaceHolderImages.find((img) => img.id === 'hilos-cta');
 
   const handleCardFlip = (index: number) => {
     if (flippedCard === index) {
@@ -288,11 +272,11 @@ export default function HilosTensoresPage() {
       <section className="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
         {heroImage && (
           <Image
-            src={heroImage.imageUrl}
-            alt="Mujer con piel radiante tras tratamiento con hilos tensores en Medellín."
+            src={heroImage.src}
+            alt={heroImage.hint}
             fill
             className="object-cover"
-            data-ai-hint={heroImage.imageHint}
+            data-ai-hint={heroImage.hint}
             priority
           />
         )}
@@ -400,12 +384,12 @@ export default function HilosTensoresPage() {
           <div>
             {whatAreTheyImage && (
               <Image
-                src={whatAreTheyImage.imageUrl}
-                alt="Diagrama explicativo del funcionamiento de los hilos tensores en la piel."
+                src={whatAreTheyImage.src}
+                alt={whatAreTheyImage.hint}
                 width={600}
                 height={600}
                 className="rounded-xl shadow-2xl w-full aspect-square object-cover"
-                data-ai-hint={whatAreTheyImage.imageHint}
+                data-ai-hint={whatAreTheyImage.hint}
               />
             )}
           </div>
@@ -424,11 +408,13 @@ export default function HilosTensoresPage() {
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {advancedApplications.map((app, index) => (
               <div key={index} className="flex flex-col items-center text-center">
-                <SectionArch
-                  imageUrl={app.image.url}
-                  alt={app.title}
-                  data-ai-hint={app.image.hint}
-                />
+                {app.image && (
+                  <SectionArch
+                    imageUrl={app.image.src}
+                    alt={app.title}
+                    data-ai-hint={app.image.hint}
+                  />
+                )}
                 <Card className="w-full -mt-8 pt-12 pb-6 px-6 shadow-lg flex flex-col flex-1">
                   <CardContent className="p-0 flex-1">
                     <p className="font-headline font-semibold text-xl">{app.title}</p>
@@ -471,12 +457,12 @@ export default function HilosTensoresPage() {
                            <h3 className="font-semibold text-center text-muted-foreground">Antes</h3>
                           {caseItem.beforeImage && (
                             <Image
-                              src={caseItem.beforeImage.imageUrl}
+                              src={caseItem.beforeImage.src}
                               alt={`Antes - ${caseItem.title}`}
                               width={600}
                               height={400}
                               className="rounded-lg aspect-square object-cover"
-                              data-ai-hint={caseItem.beforeImage.imageHint}
+                              data-ai-hint={caseItem.beforeImage.hint}
                             />
                           )}
                         </div>
@@ -484,12 +470,12 @@ export default function HilosTensoresPage() {
                           <h3 className="font-semibold text-center text-muted-foreground">Después</h3>
                           {caseItem.afterImage && (
                             <Image
-                              src={caseItem.afterImage.imageUrl}
+                              src={caseItem.afterImage.src}
                               alt={`Después - ${caseItem.title}`}
                               width={600}
                               height={400}
                               className="rounded-lg aspect-square object-cover"
-                              data-ai-hint={caseItem.afterImage.imageHint}
+                              data-ai-hint={caseItem.afterImage.hint}
                             />
                           )}
                         </div>
@@ -546,13 +532,15 @@ export default function HilosTensoresPage() {
                   </div>
                   <div className="flip-card-back">
                     <Card className="h-full shadow-lg overflow-hidden relative">
-                      <Image
-                        src={type.image}
-                        alt={`Imagen de ${type.name}`}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={type.imageHint}
-                      />
+                      {type.image && (
+                        <Image
+                          src={type.image.src}
+                          alt={`Imagen de ${type.name}`}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={type.image.hint}
+                        />
+                      )}
                        <div className="absolute inset-0 bg-black/30" />
                        <div className="absolute top-2 right-2 bg-background/80 p-1 rounded-full text-foreground">
                           <RefreshCw className="w-4 h-4" />
@@ -581,11 +569,13 @@ export default function HilosTensoresPage() {
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex flex-col items-center text-center">
-                <SectionArch
-                  imageUrl={benefit.image.url}
-                  alt={benefit.title}
-                  data-ai-hint={benefit.image.hint}
-                />
+                {benefit.image && (
+                  <SectionArch
+                    imageUrl={benefit.image.src}
+                    alt={benefit.title}
+                    data-ai-hint={benefit.image.hint}
+                  />
+                )}
                 <Card className="w-full -mt-8 pt-12 pb-4 px-4 shadow-lg">
                   <CardContent className="p-0 flex items-center justify-center gap-4">
                      <div className="bg-primary/10 text-primary p-2 rounded-full">
@@ -657,11 +647,11 @@ export default function HilosTensoresPage() {
             <div className="relative h-64 md:h-full w-full">
               {ctaImage && (
                 <Image
-                  src={ctaImage.imageUrl}
-                  alt="Dr. Jonathan Rincón realizando un procedimiento de hilos tensores en su clínica."
+                  src={ctaImage.src}
+                  alt={ctaImage.hint}
                   fill
                   className="object-cover"
-                  data-ai-hint={ctaImage.imageHint}
+                  data-ai-hint={ctaImage.hint}
                 />
               )}
             </div>

@@ -19,39 +19,41 @@ import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import Image from 'next/image';
+import { findImage } from '@/lib/images';
 
 const Placeholder = ({
   className,
   seed,
-  width = 600,
-  height = 600,
-  text,
-  hint
 }: {
   className?: string;
   seed: string;
-  width?: number;
-  height?: number;
-  text?: string;
-  hint: string;
-}) => (
-  <div className={cn('relative', className)} style={{ width: `${width}px`, height: `${height}px` }}>
-    <Image
-      src={`https://picsum.photos/seed/${seed}/${width}/${height}`}
-      alt={text || hint}
-      fill
-      className="object-cover"
-      data-ai-hint={hint}
-    />
-  </div>
-);
+}) => {
+  const image = findImage(seed);
+  return (
+    <div className={cn('relative bg-muted w-full h-full', className)}>
+      {image ? (
+        <Image
+          src={image.src}
+          alt={image.hint}
+          fill
+          className="object-cover"
+          data-ai-hint={image.hint}
+        />
+      ) : (
+        <div className="w-full h-full bg-secondary" />
+      )}
+    </div>
+  );
+};
 
 export default function MedicinaPreventivaPage() {
   return (
     <div>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
-        <Placeholder className="absolute inset-0 opacity-30" seed="preventive-hero" width={1920} height={1080} hint="preventive medicine" />
+        <div className="absolute inset-0 opacity-30">
+          <Placeholder seed="preventive-hero" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
@@ -134,8 +136,8 @@ export default function MedicinaPreventivaPage() {
                     </li>
                   </ul>
                 </div>
-                <div>
-                  <Placeholder className="rounded-xl shadow-2xl w-full aspect-[4/5] object-cover" seed="rejuvenation-guide" hint="facial rejuvenation" />
+                <div className="w-full aspect-[4/5] object-cover">
+                  <Placeholder className="rounded-xl shadow-2xl" seed="rejuvenation-guide" />
                 </div>
               </section>
 
@@ -153,8 +155,8 @@ export default function MedicinaPreventivaPage() {
                   
                   {/* Mesoterapia */}
                    <div className="relative pt-16">
-                    <div className="hidden md:block absolute top-0 left-0 h-full w-[320px] z-10">
-                      <Image src="https://picsum.photos/seed/mesoterapia-facial/320/320" alt="Mesoterapia facial" layout="fill" className="rounded-full object-cover" data-ai-hint="facial mesotherapy" />
+                    <div className="hidden md:block absolute top-0 left-0 h-[320px] w-[320px] z-10">
+                      <Placeholder seed="mesoterapia-facial" className="rounded-full !w-full !h-full" />
                     </div>
                     <div className="p-6 md:pl-[180px] text-left md:ml-[160px]">
                       <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
@@ -187,8 +189,8 @@ export default function MedicinaPreventivaPage() {
 
                   {/* Skinboosters */}
                   <div className="relative pt-16">
-                      <div className="hidden md:block absolute top-0 right-0 h-full w-[320px] z-10">
-                        <Image src="https://picsum.photos/seed/skinbooster-treatment/320/320" alt="Tratamiento con skinboosters" layout="fill" className="rounded-full object-cover" data-ai-hint="skin hydration treatment" />
+                      <div className="hidden md:block absolute top-0 right-0 h-[320px] w-[320px] z-10">
+                        <Placeholder seed="skinbooster-treatment" className="rounded-full !w-full !h-full"/>
                       </div>
                       <div className="p-6 md:pr-[180px] text-left md:mr-[160px]">
                         <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
@@ -223,8 +225,8 @@ export default function MedicinaPreventivaPage() {
 
                   {/* PDRN */}
                    <div className="relative pt-16">
-                    <div className="hidden md:block absolute top-0 left-0 h-full w-[320px] z-10">
-                      <Image src="https://picsum.photos/seed/pdrn-collagen/320/320" alt="Tratamiento PDRN (esperma de salmón)" layout="fill" className="rounded-full object-cover" data-ai-hint="collagen stimulation" />
+                    <div className="hidden md:block absolute top-0 left-0 h-[320px] w-[320px] z-10">
+                      <Placeholder seed="pdrn-collagen" className="rounded-full !w-full !h-full" />
                     </div>
                     <div className="p-6 md:pl-[180px] text-left md:ml-[160px]">
                         <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
@@ -275,8 +277,8 @@ export default function MedicinaPreventivaPage() {
                   añadir volumen de forma segura y con resultados inmediatos.
                 </p>
                 <div className="mt-12 grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-                    <div>
-                        <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" seed="facial-filler" hint="facial filler"/>
+                    <div className="w-full aspect-square">
+                        <Placeholder className="rounded-xl shadow-2xl" seed="facial-filler"/>
                     </div>
                     <div className='space-y-8 text-left'>
                       <div className="p-6">
@@ -376,14 +378,14 @@ export default function MedicinaPreventivaPage() {
                     </p>
                 </div>
                 </div>
-                 <div>
-                  <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" seed="body-treatment" hint="body treatment" />
+                 <div className="w-full aspect-square">
+                  <Placeholder className="rounded-xl shadow-2xl" seed="body-treatment" />
                  </div>
               </section>
 
               <section id="masajes-reductores" className="grid md:grid-cols-2 gap-12 items-center">
-                 <div className="order-2 md:order-1">
-                  <Placeholder className="rounded-xl shadow-2xl w-full aspect-square" seed="reducing-massage" hint="reducing massage" />
+                 <div className="order-2 md:order-1 w-full aspect-square">
+                  <Placeholder className="rounded-xl shadow-2xl" seed="reducing-massage" />
                 </div>
                 <div className="order-1 md:order-2 text-left">
                  <SectionTitleWithLines>
@@ -479,8 +481,8 @@ export default function MedicinaPreventivaPage() {
                         </div>
                     </div>
                  </div>
-                 <div>
-                    <Placeholder className="rounded-full shadow-2xl w-full aspect-square" seed="carboxytherapy-image" hint="carboxytherapy" />
+                 <div className='w-full aspect-square'>
+                    <Placeholder className="rounded-full shadow-2xl" seed="carboxytherapy-image" />
                  </div>
               </section>
 
@@ -597,9 +599,6 @@ export default function MedicinaPreventivaPage() {
               <Placeholder
                 className="absolute inset-0"
                 seed="cta-preventive"
-                width={800}
-                height={600}
-                hint="radiant skin"
               />
             </div>
           </Card>

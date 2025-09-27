@@ -6,12 +6,10 @@ import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Award } from "lucide-react";
+import type { SiteImage } from "@/lib/images";
 
-type GalleryImage = {
-  id: string;
-  imageUrl: string;
-  imageHint: string;
-  title: string;
+type GalleryImage = SiteImage & {
+  title?: string;
   href?: string;
   category?: string;
 };
@@ -84,14 +82,18 @@ export const InfiniteMovingCards = ({
   };
   
   const CardContent = ({ item }: { item: GalleryImage }) => (
-    <div className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105">
-        <Image
-            src={item.imageUrl}
-            alt={item.title}
-            layout="fill"
-            objectFit="cover"
-            data-ai-hint={item.imageHint}
-        />
+    <div className="relative w-full aspect-square overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 group-hover:scale-105 bg-muted">
+        {item.src ? (
+            <Image
+                src={item.src}
+                alt={item.title || item.hint}
+                fill
+                className="object-cover"
+                data-ai-hint={item.hint}
+            />
+        ) : (
+            <div className="w-full h-full bg-secondary"></div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
         {item.category === "Hilos Tensores" && (
            <div className="absolute top-2 right-2 bg-primary/80 text-primary-foreground text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1 backdrop-blur-sm">
@@ -122,10 +124,10 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item) => (
+        {items.map((item, idx) => (
           <li
             className="w-[200px] max-w-full relative flex-shrink-0 md:w-[250px] group"
-            key={item.id}
+            key={`${item.id}-${idx}`}
           >
             {item.href ? (
                 <Link href={item.href} className="block w-full h-full">

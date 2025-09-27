@@ -19,9 +19,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
-import { PlaceHolderImagesHome } from '@/lib/placeholder-images-home';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import { GalleryImages } from '@/lib/placeholder-images-gallery';
 import {
   Carousel,
   CarouselContent,
@@ -33,6 +31,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { cn } from '@/lib/utils';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import { findImage } from '@/lib/images';
 
 const treatments = [
   {
@@ -69,9 +68,9 @@ const treatments = [
 
 const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, title: string, href: string}) => (
     <Link href={href} className="group block">
-        <div className="flex h-full flex-col items-center justify-start p-2 transition-all duration-300 ease-in-out rounded-lg">
-            <div className="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300">
-                <Icon className="w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110" />
+        <div className="flex h-full flex-col items-center justify-start p-2 rounded-lg">
+            <div className="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
+                <Icon className="w-10 h-10 text-primary transition-transform duration-300" />
             </div>
             <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center flex-1">{title}</h3>
         </div>
@@ -80,6 +79,19 @@ const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, ti
 
 
 export default function Home() {
+  const testimonialImage1 = findImage('home-testimonial-1');
+  const testimonialImage2 = findImage('home-testimonial-2');
+  const galleryImages = [
+    findImage('gallery-1'),
+    findImage('gallery-2'),
+    findImage('gallery-3'),
+    findImage('gallery-4'),
+    findImage('gallery-5'),
+    findImage('gallery-6'),
+    findImage('gallery-7'),
+    findImage('gallery-8'),
+  ].filter(Boolean) as any[];
+
 
   const stats = [
     {
@@ -200,7 +212,7 @@ export default function Home() {
 
         {/* Infinite Moving Cards Section */}
         <section className="py-2 sm:py-4">
-          <InfiniteMovingCards items={GalleryImages} direction="right" speed="slow" />
+          <InfiniteMovingCards items={galleryImages} direction="right" speed="slow" />
         </section>
 
         {/* About Doctor Section */}
@@ -261,24 +273,28 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative flex items-center justify-center min-h-[450px]">
                 <div className="relative w-80 h-80">
-                  <Image
-                    src="https://picsum.photos/seed/face-procedure-1/400/400"
-                    alt="Procedimiento facial estético"
-                    width={400}
-                    height={400}
-                    data-ai-hint="facial procedure"
-                    className="rounded-full object-cover w-full h-full shadow-lg"
-                  />
+                  {testimonialImage1 && (
+                    <Image
+                      src={testimonialImage1.src}
+                      alt={testimonialImage1.hint}
+                      width={400}
+                      height={400}
+                      data-ai-hint={testimonialImage1.hint}
+                      className="rounded-full object-cover w-full h-full shadow-lg"
+                    />
+                  )}
                 </div>
                 <div className="absolute -bottom-8 -right-4 w-64 h-64">
-                   <Image
-                    src="https://picsum.photos/seed/facial-injection/400/400"
-                    alt="Aplicación de inyección facial"
-                    width={400}
-                    height={400}
-                    data-ai-hint="facial injection"
-                    className="rounded-full object-cover w-full h-full border-8 border-background shadow-lg"
-                  />
+                   {testimonialImage2 && (
+                    <Image
+                      src={testimonialImage2.src}
+                      alt={testimonialImage2.hint}
+                      width={400}
+                      height={400}
+                      data-ai-hint={testimonialImage2.hint}
+                      className="rounded-full object-cover w-full h-full border-8 border-background shadow-lg"
+                    />
+                   )}
                 </div>
                  <div className="absolute -top-8 -left-4 w-48 h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform -rotate-12">
                     <p className="font-headline text-4xl font-bold text-accent-foreground">500+</p>
@@ -354,5 +370,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
