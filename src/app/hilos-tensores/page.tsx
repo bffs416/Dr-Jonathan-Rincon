@@ -441,6 +441,7 @@ export default function HilosTensoresPage() {
             className="w-full max-w-5xl mx-auto mt-12"
             opts={{
               loop: true,
+              duration: 50,
             }}
           >
             <CarouselContent>
