@@ -31,6 +31,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { cn } from '@/lib/utils';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
+import { TestimonialsSection } from '@/components/testimonials-section';
 
 const treatments: { icon: string; title: string; href: string; size?: number }[] = [
   {
@@ -301,110 +302,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonios" className="py-16 sm:py-24 text-foreground">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative w-full h-full min-h-[450px] sm:min-h-[550px] lg:min-h-full order-2 lg:order-1">
-                 <div className="relative mx-auto h-full w-full max-w-md">
-                    <div className="absolute -top-4 -left-4 z-20 flex flex-col items-center justify-center rounded-full bg-accent p-2 text-center shadow-lg w-24 h-24 lg:w-32 lg:h-32 lg:-rotate-12">
-                      <p className="font-headline text-2xl font-bold text-accent-foreground lg:text-4xl">500+</p>
-                      <p className="text-xs font-medium leading-tight text-accent-foreground lg:text-base">Pacientes Felices</p>
-                    </div>
-                    <div className="absolute left-1/2 top-1/2 z-10 aspect-square w-full max-w-[250px] -translate-x-1/2 -translate-y-1/2 sm:max-w-[300px] lg:h-64 lg:w-64 xl:h-80 xl:w-80">
-                      {testimonialImage1 && (
-                          <Image
-                              src={testimonialImage1.src}
-                              alt={testimonialImage1.hint}
-                              width={400}
-                              height={400}
-                              data-ai-hint={testimonialImage1.hint}
-                              className="rounded-full object-cover w-full h-full shadow-lg"
-                              quality={80}
-                          />
-                      )}
-                    </div>
-                    <div className="absolute -bottom-4 -right-4 z-20 h-32 w-32 lg:h-40 lg:w-40 xl:h-64 xl:w-64">
-                       {testimonialImage2 && (
-                          <Image
-                              src={testimonialImage2.src}
-                              alt={testimonialImage2.hint}
-                              width={400}
-                              height={400}
-                              data-ai-hint={testimonialImage2.hint}
-                              className="rounded-full object-cover w-full h-full border-4 md:border-8 border-background shadow-lg"
-                              quality={80}
-                          />
-                      )}
-                    </div>
-                  </div>
-              </div>
-              <div className="relative order-1 lg:order-2">
-                 <div className="mb-8 text-center">
-                    <SectionTitleWithLines className="justify-center">
-                        <span className="text-primary">Testimonios</span>
-                    </SectionTitleWithLines>
-                    <h2 className="font-headline text-3xl md:text-5xl font-bold mt-2">
-                      Qué dicen nuestros <br /> pacientes
-                    </h2>
-                  </div>
-                <Carousel
-                  opts={{ loop: true }}
-                  className="w-full max-w-xl mx-auto lg:mx-0 [transform:translateZ(0)]"
-                >
-                  <CarouselContent>
-                    {testimonials.map((testimonial, index) => (
-                      <CarouselItem key={index}>
-                        <div className="px-1">
-                          <Card className="bg-background/80 backdrop-blur-lg p-6 rounded-xl shadow-lg border-white/20">
-                            <CardContent className="p-0">
-                              <div className="flex items-center space-x-2 my-4">
-                                {testimonials.map((t, i) => (
-                                    <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
-                                        <AvatarImage src={t.avatar} />
-                                        <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
-                                    </Avatar>
-                                ))}
-                              </div>
-                              <div className="flex items-center gap-0.5 mb-2">
-                                    {[...Array(5)].map((_, i) => (
-                                    <Star
-                                        key={i}
-                                        className={cn(
-                                        'w-5 h-5',
-                                        i < testimonial.rating
-                                            ? 'text-yellow-400'
-                                            : 'text-muted-foreground/30'
-                                        )}
-                                        fill="currentColor"
-                                    />
-                                    ))}
-                                </div>
-                              <blockquote className="text-base text-muted-foreground italic">
-                                {testimonial.text}
-                              </blockquote>
-                              <div className="mt-4">
-                                <p className="font-bold text-lg text-foreground">
-                                  {testimonial.name}
-                                </p>
-                                <p className="text-sm text-muted-foreground">
-                                  {testimonial.title}
-                                </p>
-                              </div>
-                            </CardContent>
-                          </Card>
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                   <div className="mt-8 flex justify-start gap-2">
-                    <CarouselPrevious className="static -translate-y-0" />
-                    <CarouselNext className="static -translate-y-0" />
-                  </div>
-                </Carousel>
-              </div>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection />
 
       </main>
     </div>
