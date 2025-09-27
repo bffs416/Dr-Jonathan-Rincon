@@ -2,7 +2,7 @@
   "galleryImages": [
     {
       "id": "gallery-1",
-      "imageUrl": "https://picsum.photos/seed/face-procedure-1/400/300",
+      "imageUrl": "/images/gallery/lifting-cuello.png",
       "imageHint": "facial procedure",
       "title": "Lifting de Cuello",
       "href": "/hilos-tensores",
@@ -10,7 +10,7 @@
     },
     {
       "id": "gallery-2",
-      "imageUrl": "https://picsum.photos/seed/man-consultation/400/300",
+      "imageUrl": "/images/gallery/rejuvenecimiento-facial.png",
       "imageHint": "man consultation",
       "title": "Rejuvenecimiento Facial",
       "href": "/bioestimuladores",
@@ -18,7 +18,7 @@
     },
     {
       "id": "gallery-3",
-      "imageUrl": "https://picsum.photos/seed/facial-marking/400/300",
+      "imageUrl": "/images/gallery/marcacion-mandibular.png",
       "imageHint": "facial marking",
       "title": "Marcación Mandibular",
       "href": "/hilos-tensores",
@@ -26,7 +26,7 @@
     },
     {
       "id": "gallery-4",
-      "imageUrl": "https://picsum.photos/seed/facial-injection/400/300",
+      "imageUrl": "/images/gallery/rinomodelacion.png",
       "imageHint": "facial injection",
       "title": "Rinomodelación",
       "href": "/hilos-tensores",
@@ -34,7 +34,7 @@
     },
     {
       "id": "gallery-5",
-      "imageUrl": "https://picsum.photos/seed/skin-treatment/400/300",
+      "imageUrl": "/images/gallery/tratamiento-ojeras.png",
       "imageHint": "skin treatment",
       "title": "Tratamiento de Ojeras",
       "href": "/medicina-preventiva"
@@ -49,7 +49,7 @@
     },
     {
       "id": "gallery-7",
-      "imageUrl": "https://picsum.photos/seed/patient-lying/400/300",
+      "imageUrl": "/images/gallery/lifting-gluteos.png",
       "imageHint": "patient treatment",
       "title": "Lifting de Glúteos",
       "href": "/hilos-tensores",
@@ -57,7 +57,7 @@
     },
     {
       "id": "gallery-8",
-      "imageUrl": "https://picsum.photos/seed/man-profile/400/300",
+      "imageUrl": "/images/gallery/marcacion-abdominal.png",
       "imageHint": "man profile",
       "title": "Marcación Abdominal",
       "href": "/contorno-corporal"
