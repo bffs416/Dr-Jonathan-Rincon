@@ -17,7 +17,7 @@ export const IMAGES: SiteImage[] = [
 
   // Hilos Tensores - Advanced Applications & Benefits
   { id: 'rhino-shaping', src: '/images/placeholders/rhino.png', hint: 'nose shaping' },
-  { id: 'fox-eyes', src: '/images/placeholders/foxeyes.png', hint: 'eyebrow lift' },
+  { id: 'fox-eyes', src: '/images/Hilos_Foxy_eyes.png', hint: 'eyebrow lift' },
   { id: 'abs-definition', src: '/images/placeholders/abs.png', hint: 'abdominal definition' },
   { id: 'arm-lift', src: '/images/placeholders/arms.png', hint: 'arm lift' },
   { id: 'butt-lift', src: '/images/placeholders/glutes.png', hint: 'butt lift' },
