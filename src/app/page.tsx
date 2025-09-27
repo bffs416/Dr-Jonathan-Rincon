@@ -203,7 +203,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4">
+            <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4">
                 {treatments.map((treatment) => (
                     <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
@@ -268,11 +268,16 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonios" className="py-16 sm:py-24 text-foreground">
+        <section id="testimonios" className="py-16 sm:py-24 text-foreground overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative flex items-center justify-center min-h-[380px] md:min-h-[450px]">
-                <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <div className="relative w-full max-w-sm mx-auto lg:max-w-none h-96 lg:h-[500px]">
+                <div className="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform -rotate-12 z-20">
+                  <p className="font-headline text-2xl md:text-4xl font-bold text-accent-foreground">500+</p>
+                  <p className="text-sm md:text-base font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
+                </div>
+
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 z-10">
                   {testimonialImage1 && (
                     <Image
                       src={testimonialImage1.src}
@@ -285,7 +290,8 @@ export default function Home() {
                     />
                   )}
                 </div>
-                <div className="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64">
+                
+                <div className="absolute bottom-0 right-0 w-40 h-40 md:w-64 md:h-64 z-20">
                    {testimonialImage2 && (
                     <Image
                       src={testimonialImage2.src}
@@ -298,15 +304,11 @@ export default function Home() {
                     />
                    )}
                 </div>
-                 <div className="absolute -top-4 -left-4 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform -rotate-12">
-                    <p className="font-headline text-2xl md:text-4xl font-bold text-accent-foreground">500+</p>
-                    <p className="text-sm md:text-lg font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
-                </div>
               </div>
               <div className="relative">
                 <Carousel
                   opts={{ loop: true }}
-                  className="w-full max-w-xl mx-auto"
+                  className="w-full max-w-xl mx-auto lg:mx-0"
                 >
                   <div className="pl-4">
                     <SectionTitleWithLines className="!justify-start">

@@ -98,8 +98,8 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-post-content', src: '/images/happy-patient-aesthetic.png', hint: 'happy patient' },
 
   // Home Page
-  { id: 'home-testimonial-1', src: '/images/face-procedure-1.png', hint: 'facial procedure' },
-  { id: 'home-testimonial-2', src: '/images/facial-injection.png', hint: 'facial injection' },
+  { id: 'home-testimonial-1', src: '/images/Hilos_Tensores_Resultados Paciente.jpg', hint: 'facial procedure' },
+  { id: 'home-testimonial-2', src: '/images/Hilos Tensores_Analisis_.png', hint: 'facial injection' },
   
   // Gallery Images (for Infinite Moving Cards)
   { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title: 'Lifting de Cuello', href: '/hilos-tensores', category: 'Hilos Tensores' },
