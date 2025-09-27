@@ -64,7 +64,7 @@ export function TestimonialsSection() {
                 />
               </div>
               <div className="absolute -top-10 -left-10 z-20 w-48 h-48 flex flex-col items-center justify-center text-center">
-                <div className="absolute inset-0 bg-gradient-radial from-primary to-primary-dark rounded-full animate-spin-slow blur-md"></div>
+                <div className="absolute inset-0 bg-gradient-radial from-primary to-primary-dark rounded-full animate-spin-slow blur-md opacity-50"></div>
                 <div className="relative text-primary-foreground">
                   <p className="text-5xl font-bold">500+</p>
                   <p className="text-xl">Pacientes Felices</p>
