@@ -270,73 +270,41 @@ export default function Home() {
         <section id="testimonios" className="py-16 sm:py-24 text-foreground">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative lg:hidden">
-                <div className="w-full max-w-sm mx-auto">
-                    <div className="relative aspect-square">
-                        <div className="absolute top-0 left-0 w-24 h-24 bg-accent rounded-full flex flex-col items-center justify-center text-center p-2 shadow-lg z-20">
-                            <p className="font-headline text-2xl font-bold text-accent-foreground">500+</p>
-                            <p className="text-xs font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
+              <div className="relative w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-full lg:block">
+                  <div className="lg:absolute w-full h-full">
+                      <div className="relative w-full aspect-square max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-full">
+                        <div className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 bg-accent rounded-full flex flex-col items-center justify-center text-center p-2 lg:p-4 shadow-lg lg:-rotate-12 z-20">
+                            <p className="font-headline text-2xl lg:text-4xl font-bold text-accent-foreground">500+</p>
+                            <p className="text-xs lg:text-base font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
                         </div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <Image
-                                src={testimonialImage1.src}
-                                alt={testimonialImage1.hint}
-                                width={250}
-                                height={250}
-                                data-ai-hint={testimonialImage1.hint}
-                                className="rounded-full object-cover w-[250px] h-[250px] shadow-lg"
-                                quality={80}
-                            />
+                        <div className="absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-full max-w-[250px] lg:max-w-none lg:w-64 lg:h-64 xl:w-80 xl:h-80 mx-auto mt-8 z-10">
+                            {testimonialImage1 && (
+                                <Image
+                                    src={testimonialImage1.src}
+                                    alt={testimonialImage1.hint}
+                                    width={400}
+                                    height={400}
+                                    data-ai-hint={testimonialImage1.hint}
+                                    className="rounded-full object-cover w-full h-full shadow-lg"
+                                    quality={80}
+                                />
+                            )}
                         </div>
-                        <div className="absolute bottom-0 right-0 w-32 h-32 z-20">
-                            <Image
-                                src={testimonialImage2.src}
-                                alt={testimonialImage2.hint}
-                                width={128}
-                                height={128}
-                                data-ai-hint={testimonialImage2.hint}
-                                className="rounded-full object-cover w-full h-full border-4 border-background shadow-lg"
-                                quality={80}
-                            />
+                        <div className="absolute bottom-0 right-0 w-32 h-32 lg:w-40 lg:h-40 xl:w-64 xl:h-64 z-20">
+                            {testimonialImage2 && (
+                                <Image
+                                    src={testimonialImage2.src}
+                                    alt={testimonialImage2.hint}
+                                    width={400}
+                                    height={400}
+                                    data-ai-hint={testimonialImage2.hint}
+                                    className="rounded-full object-cover w-full h-full border-4 md:border-8 border-background shadow-lg"
+                                    quality={80}
+                                />
+                            )}
                         </div>
                     </div>
-                </div>
-              </div>
-
-
-              <div className="relative hidden w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-[500px] lg:block">
-                <div className="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform lg:-rotate-12 z-20">
-                  <p className="font-headline text-2xl md:text-4xl font-bold text-accent-foreground">500+</p>
-                  <p className="text-sm md:text-base font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
-                </div>
-
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 md:w-80 md:h-80 z-10">
-                  {testimonialImage1 && (
-                    <Image
-                      src={testimonialImage1.src}
-                      alt={testimonialImage1.hint}
-                      width={400}
-                      height={400}
-                      data-ai-hint={testimonialImage1.hint}
-                      className="rounded-full object-cover w-full h-full shadow-lg"
-                      quality={80}
-                    />
-                  )}
-                </div>
-                
-                <div className="absolute bottom-0 right-0 w-40 h-40 md:w-64 md:h-64 z-20">
-                   {testimonialImage2 && (
-                    <Image
-                      src={testimonialImage2.src}
-                      alt={testimonialImage2.hint}
-                      width={400}
-                      height={400}
-                      data-ai-hint={testimonialImage2.hint}
-                      className="rounded-full object-cover w-full h-full border-4 md:border-8 border-background shadow-lg"
-                      quality={80}
-                    />
-                   )}
-                </div>
+                  </div>
               </div>
               <div className="relative">
                 <Carousel
@@ -355,7 +323,7 @@ export default function Home() {
                   <CarouselContent className="mt-8 [transform:translateZ(0)]">
                     {testimonials.map((testimonial, index) => (
                       <CarouselItem key={index}>
-                        <div className="pl-4 pr-4">
+                        <div className="px-4">
                           <div className="flex items-center space-x-2 my-4">
                             {testimonials.map((t, i) => (
                                 <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
