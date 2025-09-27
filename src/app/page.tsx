@@ -251,7 +251,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative flex justify-center items-center">
-              <div className="relative w-[450px] h-[450px]">
+              <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
                       src="/images/Experto-hilos-tensores-faciales.png"
@@ -271,8 +271,8 @@ export default function Home() {
         <section id="testimonios" className="py-16 sm:py-24 text-foreground">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative flex items-center justify-center min-h-[450px]">
-                <div className="relative w-80 h-80">
+              <div className="relative flex items-center justify-center min-h-[380px] md:min-h-[450px]">
+                <div className="relative w-64 h-64 md:w-80 md:h-80">
                   {testimonialImage1 && (
                     <Image
                       src={testimonialImage1.src}
@@ -281,10 +281,11 @@ export default function Home() {
                       height={400}
                       data-ai-hint={testimonialImage1.hint}
                       className="rounded-full object-cover w-full h-full shadow-lg"
+                      quality={80}
                     />
                   )}
                 </div>
-                <div className="absolute -bottom-8 -right-4 w-64 h-64">
+                <div className="absolute -bottom-4 -right-4 w-48 h-48 md:w-64 md:h-64">
                    {testimonialImage2 && (
                     <Image
                       src={testimonialImage2.src}
@@ -292,13 +293,14 @@ export default function Home() {
                       width={400}
                       height={400}
                       data-ai-hint={testimonialImage2.hint}
-                      className="rounded-full object-cover w-full h-full border-8 border-background shadow-lg"
+                      className="rounded-full object-cover w-full h-full border-4 md:border-8 border-background shadow-lg"
+                      quality={80}
                     />
                    )}
                 </div>
-                 <div className="absolute -top-8 -left-4 w-48 h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform -rotate-12">
-                    <p className="font-headline text-4xl font-bold text-accent-foreground">500+</p>
-                    <p className="text-lg font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
+                 <div className="absolute -top-4 -left-4 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform -rotate-12">
+                    <p className="font-headline text-2xl md:text-4xl font-bold text-accent-foreground">500+</p>
+                    <p className="text-sm md:text-lg font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
                 </div>
               </div>
               <div className="relative">
@@ -310,7 +312,7 @@ export default function Home() {
                     <SectionTitleWithLines className="!justify-start">
                         <span className="text-primary">Testimonios</span>
                     </SectionTitleWithLines>
-                    <h2 className="font-headline text-4xl md:text-5xl font-bold mt-2">
+                    <h2 className="font-headline text-3xl md:text-5xl font-bold mt-2">
                       Qué dicen nuestros <br /> pacientes
                     </h2>
                   </div>
