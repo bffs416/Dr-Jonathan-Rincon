@@ -267,37 +267,42 @@ export default function Home() {
         </section>
 
         {/* Testimonials Section */}
-        <section id="testimonios" className="py-16 sm:py-24 text-foreground overflow-hidden">
+        <section id="testimonios" className="py-16 sm:py-24 text-foreground">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-               <div className="relative w-full aspect-square max-w-xs mx-auto lg:hidden">
-                  <div className="absolute top-0 left-0 w-24 h-24 bg-accent rounded-full flex flex-col items-center justify-center text-center p-2 shadow-lg z-20">
-                    <p className="font-headline text-2xl font-bold text-accent-foreground">500+</p>
-                    <p className="text-xs font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                      <Image
-                        src={testimonialImage1.src}
-                        alt={testimonialImage1.hint}
-                        width={250}
-                        height={250}
-                        data-ai-hint={testimonialImage1.hint}
-                        className="rounded-full object-cover w-[250px] h-[250px] shadow-lg"
-                        quality={80}
-                      />
-                  </div>
-                  <div className="absolute bottom-0 right-0 w-32 h-32 z-20">
-                    <Image
-                        src={testimonialImage2.src}
-                        alt={testimonialImage2.hint}
-                        width={128}
-                        height={128}
-                        data-ai-hint={testimonialImage2.hint}
-                        className="rounded-full object-cover w-full h-full border-4 border-background shadow-lg"
-                        quality={80}
-                      />
-                  </div>
+              <div className="relative lg:hidden">
+                <div className="w-full max-w-sm mx-auto">
+                    <div className="relative aspect-square">
+                        <div className="absolute top-0 left-0 w-24 h-24 bg-accent rounded-full flex flex-col items-center justify-center text-center p-2 shadow-lg z-20">
+                            <p className="font-headline text-2xl font-bold text-accent-foreground">500+</p>
+                            <p className="text-xs font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
+                        </div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <Image
+                                src={testimonialImage1.src}
+                                alt={testimonialImage1.hint}
+                                width={250}
+                                height={250}
+                                data-ai-hint={testimonialImage1.hint}
+                                className="rounded-full object-cover w-[250px] h-[250px] shadow-lg"
+                                quality={80}
+                            />
+                        </div>
+                        <div className="absolute bottom-0 right-0 w-32 h-32 z-20">
+                            <Image
+                                src={testimonialImage2.src}
+                                alt={testimonialImage2.hint}
+                                width={128}
+                                height={128}
+                                data-ai-hint={testimonialImage2.hint}
+                                className="rounded-full object-cover w-full h-full border-4 border-background shadow-lg"
+                                quality={80}
+                            />
+                        </div>
+                    </div>
+                </div>
               </div>
+
 
               <div className="relative hidden w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-[500px] lg:block">
                 <div className="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform lg:-rotate-12 z-20">
