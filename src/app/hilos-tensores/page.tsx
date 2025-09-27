@@ -443,7 +443,7 @@ export default function HilosTensoresPage() {
               loop: true,
             }}
           >
-            <CarouselContent>
+            <CarouselContent className="[transform:translateZ(0)]">
               {beforeAfterCases.map((caseItem, index) => (
                   <CarouselItem key={index}>
                     <Card className="shadow-xl overflow-hidden bg-card">
