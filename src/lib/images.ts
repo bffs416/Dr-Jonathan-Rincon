@@ -3,6 +3,9 @@ export type SiteImage = {
   id: string;
   src: string;
   hint: string;
+  title?: string;
+  href?: string;
+  category?: string;
 };
 
 export const IMAGES: SiteImage[] = [
