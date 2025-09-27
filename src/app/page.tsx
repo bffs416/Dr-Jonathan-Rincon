@@ -37,29 +37,31 @@ const treatments: { icon: string; title: string; href: string; size?: number }[]
     icon: '/images/Hilos_Tensores_Icono.png',
     title: 'Hilos Tensores',
     href: '/hilos-tensores',
-    size: 60,
+    size: 90,
   },
   {
     icon: '/images/Bioestimuladores.png',
     title: 'Bioestimuladores de Colágeno',
     href: '/bioestimuladores',
-    size: 60,
+    size: 90,
   },
   {
     icon: '/images/botox.png',
     title: 'Toxina Botulínica',
     href: '/botox',
-    size: 60,
+    size: 500,
   },
   {
     icon: '/images/Estetica Corporal.png',
     title: 'Contorno Corporal',
     href: '/contorno-corporal',
+    size: 300,
   },
   {
     icon: '/images/Estetica Facial.png',
     title: 'Estetica facial Avanzada',
     href: '/medicina-preventiva',
+    size: 300,
   },
 ];
 
@@ -236,8 +238,8 @@ export default function Home() {
           className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative flex justify-center items-center order-2 md:order-2">
-              <div className="relative w-full aspect-square max-w-[300px] md:max-w-[450px]">
+            <div className="flex flex-col items-center md:order-2">
+              <div className="relative w-full aspect-square max-w-[200px] sm:max-w-[300px] md:max-w-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
                       src="/images/Experto-hilos-tensores-faciales.png"
@@ -249,8 +251,17 @@ export default function Home() {
                     />
                   </div>
               </div>
+               <Button asChild size="lg" className="mt-8 md:hidden">
+                <a
+                  href="https://wa.me/573122784757"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Agendar por WhatsApp <WhatsAppIcon />
+                </a>
+              </Button>
             </div>
-            <div className="order-1 md:order-1">
+            <div className="md:order-1 text-center md:text-left flex flex-col items-center md:items-start">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
                 <span className="text-primary">Dr. Jonathan Rincón</span>
@@ -269,7 +280,7 @@ export default function Home() {
                 hermosas, utilizando los tratamientos más innovadores y seguros
                 del mercado.
               </p>
-              <Button asChild size="lg" className="mt-8">
+              <Button asChild size="lg" className="mt-8 hidden md:inline-flex">
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
