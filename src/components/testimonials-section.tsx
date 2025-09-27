@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from "next/image";
@@ -11,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -18,18 +18,21 @@ const testimonials = [
     treatment: "Rinomodelación",
     comment:
       "El Dr. Jonathan es un verdadero artista. Me sentí segura y en las mejores manos. ¡El resultado superó mis expectativas!",
+    rating: 5,
   },
   {
     name: "Carlos G.",
     treatment: "Botox",
     comment:
       "Excelente atención y profesionalismo. El Dr. Jonathan se tomó el tiempo de explicarme todo el procedimiento. ¡Muy recomendado!",
+    rating: 5,
   },
   {
     name: "Ana P.",
     treatment: "Hilos Tensores",
     comment:
       "Estoy feliz con los resultados de los hilos tensores. El Dr. Jonathan tiene una técnica increíble y el trato es inmejorable.",
+    rating: 5,
   },
 ];
 
@@ -65,9 +68,9 @@ export function TestimonialsSection() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:pl-10">
+          <div className="md:w-1/2 md:pl-10 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Opiniones de nuestros pacientes
+              Qué dicen nuestros pacientes
             </h2>
             <Carousel
               plugins={[plugin.current]}
@@ -78,7 +81,7 @@ export function TestimonialsSection() {
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index}>
-                    <div className="p-4 bg-gray-100 rounded-lg">
+                    <div className="p-4 bg-gray-100 rounded-lg text-left">
                       <p className="italic">"{testimonial.comment}"</p>
                       <p className="mt-4 font-bold text-right">
                         - {testimonial.name}
@@ -86,6 +89,11 @@ export function TestimonialsSection() {
                       <p className="text-sm text-gray-600 text-right">
                         Tratamiento: {testimonial.treatment}
                       </p>
+                       <div className="flex justify-end mt-2">
+                        {Array.from({ length: testimonial.rating }).map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                        ))}
+                      </div>
                     </div>
                   </CarouselItem>
                 ))}
