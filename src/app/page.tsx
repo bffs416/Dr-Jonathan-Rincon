@@ -315,7 +315,7 @@ export default function Home() {
                     </h2>
                   </div>
 
-                  <CarouselContent className="mt-8">
+                  <CarouselContent className="mt-8 [transform:translateZ(0)]">
                     {testimonials.map((testimonial, index) => (
                       <CarouselItem key={index}>
                         <div className="pl-4 pr-4">

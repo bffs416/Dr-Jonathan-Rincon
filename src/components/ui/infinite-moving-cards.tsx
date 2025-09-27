@@ -126,7 +126,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[200px] max-w-full relative flex-shrink-0 md:w-[250px] group"
+            className="w-[200px] max-w-full relative flex-shrink-0 md:w-[250px] group [transform:translateZ(0)]"
             key={`${item.id}-${idx}`}
           >
             {item.href ? (
