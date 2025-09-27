@@ -250,7 +250,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="relative flex justify-center items-center order-1 md:order-2">
-              <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
+              <div className="relative w-full aspect-square max-w-[300px] md:max-w-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
                       src="/images/Experto-hilos-tensores-faciales.png"
@@ -270,14 +270,14 @@ export default function Home() {
         <section id="testimonios" className="py-16 sm:py-24 text-foreground">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-full lg:block">
-                  <div className="lg:absolute w-full h-full">
-                      <div className="relative w-full aspect-square max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-full">
+              <div className="relative w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-full order-2 lg:order-1">
+                  <div className="w-full h-full">
+                      <div className="relative w-full max-w-md mx-auto aspect-square lg:w-full lg:h-full lg:max-w-none">
                         <div className="absolute top-0 left-0 w-24 h-24 lg:w-32 lg:h-32 bg-accent rounded-full flex flex-col items-center justify-center text-center p-2 lg:p-4 shadow-lg lg:-rotate-12 z-20">
                             <p className="font-headline text-2xl lg:text-4xl font-bold text-accent-foreground">500+</p>
                             <p className="text-xs lg:text-base font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
                         </div>
-                        <div className="absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 w-full max-w-[250px] lg:max-w-none lg:w-64 lg:h-64 xl:w-80 xl:h-80 mx-auto mt-8 z-10">
+                        <div className="absolute w-full h-full max-w-[250px] lg:max-w-none lg:w-64 lg:h-64 xl:w-80 xl:h-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-8 lg:mt-0 z-10">
                             {testimonialImage1 && (
                                 <Image
                                     src={testimonialImage1.src}
@@ -306,12 +306,12 @@ export default function Home() {
                     </div>
                   </div>
               </div>
-              <div className="relative">
+              <div className="relative order-1 lg:order-2">
                 <Carousel
                   opts={{ loop: true }}
                   className="w-full max-w-xl mx-auto lg:mx-0 [transform:translateZ(0)]"
                 >
-                  <div className="pl-4">
+                  <div className="mb-8">
                     <SectionTitleWithLines className="!justify-start">
                         <span className="text-primary">Testimonios</span>
                     </SectionTitleWithLines>
@@ -320,10 +320,10 @@ export default function Home() {
                     </h2>
                   </div>
 
-                  <CarouselContent className="mt-8 [transform:translateZ(0)]">
+                  <CarouselContent className="[transform:translateZ(0)] -ml-4">
                     {testimonials.map((testimonial, index) => (
-                      <CarouselItem key={index}>
-                        <div className="px-4">
+                      <CarouselItem key={index} className="pl-4">
+                        <div className="px-1">
                           <div className="flex items-center space-x-2 my-4">
                             {testimonials.map((t, i) => (
                                 <Avatar key={i} className="border-2 border-transparent data-[active=true]:border-primary" data-active={i === index}>
@@ -361,7 +361,7 @@ export default function Home() {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <div className="absolute -bottom-12 right-0 flex items-center gap-2">
+                  <div className="mt-8 flex justify-start gap-2">
                     <CarouselPrevious className="static -translate-y-0" />
                     <CarouselNext className="static -translate-y-0" />
                   </div>
