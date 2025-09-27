@@ -461,7 +461,7 @@ export default function HilosTensoresPage() {
                               alt={`Antes - ${caseItem.title}`}
                               width={600}
                               height={400}
-                              className="rounded-lg aspect-square object-cover transition-transform duration-300"
+                              className="rounded-lg aspect-square object-cover"
                               data-ai-hint={caseItem.beforeImage.hint}
                             />
                           )}
@@ -474,7 +474,7 @@ export default function HilosTensoresPage() {
                               alt={`Después - ${caseItem.title}`}
                               width={600}
                               height={400}
-                              className="rounded-lg aspect-square object-cover transition-transform duration-300"
+                              className="rounded-lg aspect-square object-cover"
                               data-ai-hint={caseItem.afterImage.hint}
                             />
                           )}
