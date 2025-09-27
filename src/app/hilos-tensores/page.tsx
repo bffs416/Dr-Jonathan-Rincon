@@ -463,6 +463,7 @@ export default function HilosTensoresPage() {
                               height={400}
                               className="rounded-lg aspect-square object-cover"
                               data-ai-hint={caseItem.beforeImage.hint}
+                              quality={80}
                             />
                           )}
                         </div>
@@ -476,6 +477,7 @@ export default function HilosTensoresPage() {
                               height={400}
                               className="rounded-lg aspect-square object-cover"
                               data-ai-hint={caseItem.afterImage.hint}
+                              quality={80}
                             />
                           )}
                         </div>

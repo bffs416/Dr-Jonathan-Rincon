@@ -211,7 +211,7 @@ export default function Home() {
         </section>
 
         {/* Infinite Moving Cards Section */}
-        <section className="py-2 sm:py-4">
+        <section className="py-2 sm:py-4 [transform:translateZ(0)]">
           <InfiniteMovingCards items={galleryImages} direction="right" speed="slow" />
         </section>
 
