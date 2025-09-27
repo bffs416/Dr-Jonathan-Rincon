@@ -219,7 +219,7 @@ export default function HilosTensoresPage() {
       description: 'Elevación de la cola de la ceja con hilos espiculados.',
       sessions: '1 sesión',
       beforeImage: { imageUrl: 'https://picsum.photos/seed/foxy-before/600/400', imageHint: 'fox eyes before' },
-      afterImage: { imageUrl: 'https://picsum.photos/seed/foxy-after/600/400', imageHint: 'fox eyes after' },
+      afterImage: { imageUrl: '/Hilos_Foxy_eyes.png', imageHint: 'fox eyes after' },
     },
     {
       title: 'Rinomodelación no quirúrgica',
