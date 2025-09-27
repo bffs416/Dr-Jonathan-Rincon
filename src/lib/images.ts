@@ -104,7 +104,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'gallery-3', src: '/images/gallery/marcacion-mandibular.png', hint: 'facial marking', title: 'Marcación Mandibular', href: '/hilos-tensores', category: 'Hilos Tensores' },
   { id: 'gallery-4', src: '/images/gallery/rinomodelacion.png', hint: 'facial injection', title: 'Rinomodelación', href: '/hilos-tensores' },
   { id: 'gallery-5', src: '/images/gallery/tratamiento-ojeras.png', hint: 'skin treatment', title: 'Tratamiento de Ojeras', href: '/medicina-preventiva' },
-  { id: 'gallery-6', src: '/Hilos_Foxy_eyes.png', hint: 'foxy eyes procedure', title: 'Foxy Eyes', href: '/hilos-tensores', category: 'Hilos Tensores' },
+  { id: 'gallery-6', src: '/images/Hilos_Foxy_eyes.png', hint: 'foxy eyes procedure', title: 'Foxy Eyes', href: '/hilos-tensores', category: 'Hilos Tensores' },
   { id: 'gallery-7', src: '/images/gallery/lifting-gluteos.png', hint: 'patient treatment', title: 'Lifting de Glúteos', href: '/hilos-tensores' },
   { id: 'gallery-8', src: '/images/gallery/marcacion-abdominal.png', hint: 'man profile', title: 'Marcación Abdominal', href: '/hilos-tensores', category: 'Hilos Tensores' }
 ];
