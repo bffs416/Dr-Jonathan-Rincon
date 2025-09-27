@@ -236,7 +236,7 @@ export default function Home() {
           className="scroll-mt-20 container mx-auto px-4 py-16 sm:py-24"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="flex flex-col items-center md:order-2">
+            <div className="flex flex-col items-center text-center order-1 md:order-2">
               <div className="relative w-full aspect-square max-w-[200px] sm:max-w-[300px] md:max-w-[450px]">
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
                     <Image
@@ -249,7 +249,7 @@ export default function Home() {
                     />
                   </div>
               </div>
-               <Button asChild size="lg" className="mt-8 md:hidden">
+               <Button asChild size="lg" className="mt-8">
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
@@ -259,7 +259,7 @@ export default function Home() {
                 </a>
               </Button>
             </div>
-            <div className="text-center md:text-left flex flex-col items-center md:items-start md:order-1">
+            <div className="flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
                 Conoce al{' '}
                 <span className="text-primary">Dr. Jonathan Rincón</span>
@@ -278,15 +278,6 @@ export default function Home() {
                 hermosas, utilizando los tratamientos más innovadores y seguros
                 del mercado.
               </p>
-              <Button asChild size="lg" className="mt-8 hidden md:inline-flex">
-                <a
-                  href="https://wa.me/573122784757"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Agendar por WhatsApp <WhatsAppIcon />
-                </a>
-              </Button>
             </div>
           </div>
         </section>
@@ -330,8 +321,8 @@ export default function Home() {
                   </div>
               </div>
               <div className="relative order-1 lg:order-2">
-                 <div className="mb-8">
-                    <SectionTitleWithLines className="!justify-start">
+                 <div className="mb-8 text-center">
+                    <SectionTitleWithLines className="justify-center">
                         <span className="text-primary">Testimonios</span>
                     </SectionTitleWithLines>
                     <h2 className="font-headline text-3xl md:text-5xl font-bold mt-2">
