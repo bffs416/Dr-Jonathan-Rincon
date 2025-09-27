@@ -16,6 +16,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         body: ['Outfit', 'sans-serif'],
         headline: ['Outfit', 'sans-serif'],
@@ -102,12 +105,21 @@ export default {
             transform: 'translate(calc(-50% - 0.5rem))',
           },
         },
+        'spin-slow': {
+          from: {
+            transform: 'rotate(0deg)',
+          },
+          to: {
+            transform: 'rotate(360deg)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         scroll:
           'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite',
+        'spin-slow': 'spin-slow 15s linear infinite',
       },
       typography: (theme: (arg0: string) => any) => ({
         DEFAULT: {

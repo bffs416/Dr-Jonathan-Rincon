@@ -1,38 +1,38 @@
 'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
-import { Star } from "lucide-react";
-import { Card } from "./ui/card";
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import { useRef } from 'react';
+import { Star } from 'lucide-react';
+import { Card } from './ui/card';
 
 const testimonials = [
   {
-    name: "Laura M.",
-    treatment: "Rinomodelación",
+    name: 'Laura M.',
+    treatment: 'Rinomodelación',
     comment:
-      "El Dr. Jonathan es un verdadero artista. Me sentí segura y en las mejores manos. ¡El resultado superó mis expectativas!",
+      'El Dr. Jonathan es un verdadero artista. Me sentí segura y en las mejores manos. ¡El resultado superó mis expectativas!',
     rating: 5,
   },
   {
-    name: "Carlos G.",
-    treatment: "Botox",
+    name: 'Carlos G.',
+    treatment: 'Botox',
     comment:
-      "Excelente atención y profesionalismo. El Dr. Jonathan se tomó el tiempo de explicarme todo el procedimiento. ¡Muy recomendado!",
+      'Excelente atención y profesionalismo. El Dr. Jonathan se tomó el tiempo de explicarme todo el procedimiento. ¡Muy recomendado!',
     rating: 5,
   },
   {
-    name: "Ana P.",
-    treatment: "Hilos Tensores",
+    name: 'Ana P.',
+    treatment: 'Hilos Tensores',
     comment:
-      "Estoy feliz con los resultados de los hilos tensores. El Dr. Jonathan tiene una técnica increíble y el trato es inmejorable.",
+      'Estoy feliz con los resultados de los hilos tensores. El Dr. Jonathan tiene una técnica increíble y el trato es inmejorable.',
     rating: 5,
   },
 ];
@@ -63,7 +63,7 @@ export function TestimonialsSection() {
                   className="rounded-full object-cover border-4 border-white"
                 />
               </div>
-              <div className="absolute -top-10 -left-10 z-20 bg-primary/80 backdrop-blur-md text-primary-foreground rounded-full p-6 w-48 h-48 flex flex-col items-center justify-center text-center">
+              <div className="absolute -top-10 -left-10 z-20 bg-gradient-radial from-primary to-primary-dark backdrop-blur-md text-primary-foreground rounded-full p-6 w-48 h-48 flex flex-col items-center justify-center text-center animate-spin-slow">
                 <p className="text-5xl font-bold">500+</p>
                 <p className="text-xl">Pacientes Felices</p>
               </div>
@@ -90,10 +90,15 @@ export function TestimonialsSection() {
                       <p className="text-sm text-gray-600 text-right">
                         Tratamiento: {testimonial.treatment}
                       </p>
-                       <div className="flex justify-end mt-2">
-                        {Array.from({ length: testimonial.rating }).map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                        ))}
+                      <div className="flex justify-end mt-2">
+                        {Array.from({ length: testimonial.rating }).map(
+                          (_, i) => (
+                            <Star
+                              key={i}
+                              className="w-4 h-4 text-yellow-500 fill-yellow-500"
+                            />
+                          )
+                        )}
                       </div>
                     </Card>
                   </CarouselItem>
