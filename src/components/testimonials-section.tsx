@@ -63,9 +63,12 @@ export function TestimonialsSection() {
                   className="rounded-full object-cover border-4 border-white"
                 />
               </div>
-              <div className="absolute -top-10 -left-10 z-20 bg-gradient-radial from-primary to-primary-dark backdrop-blur-md text-primary-foreground rounded-full p-6 w-48 h-48 flex flex-col items-center justify-center text-center animate-spin-slow">
-                <p className="text-5xl font-bold">500+</p>
-                <p className="text-xl">Pacientes Felices</p>
+              <div className="absolute -top-10 -left-10 z-20 w-48 h-48 flex flex-col items-center justify-center text-center">
+                <div className="absolute inset-0 bg-gradient-radial from-primary to-primary-dark rounded-full animate-spin-slow blur-md"></div>
+                <div className="relative text-primary-foreground">
+                  <p className="text-5xl font-bold">500+</p>
+                  <p className="text-xl">Pacientes Felices</p>
+                </div>
               </div>
             </div>
           </div>
@@ -87,18 +90,20 @@ export function TestimonialsSection() {
                       <p className="mt-4 font-bold text-right">
                         - {testimonial.name}
                       </p>
-                      <p className="text-sm text-gray-600 text-right">
-                        Tratamiento: {testimonial.treatment}
-                      </p>
-                      <div className="flex justify-end mt-2">
-                        {Array.from({ length: testimonial.rating }).map(
-                          (_, i) => (
-                            <Star
-                              key={i}
-                              className="w-4 h-4 text-yellow-500 fill-yellow-500"
-                            />
-                          )
-                        )}
+                      <div className="flex flex-col items-end mt-2">
+                        <p className="text-sm text-gray-600">
+                          Tratamiento: {testimonial.treatment}
+                        </p>
+                        <div className="flex mt-1">
+                          {Array.from({ length: testimonial.rating }).map(
+                            (_, i) => (
+                              <Star
+                                key={i}
+                                className="w-4 h-4 text-yellow-500 fill-yellow-500"
+                              />
+                            )
+                          )}
+                        </div>
                       </div>
                     </Card>
                   </CarouselItem>
