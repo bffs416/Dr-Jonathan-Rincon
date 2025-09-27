@@ -320,9 +320,9 @@ export default function Home() {
                     </h2>
                   </div>
 
-                  <CarouselContent className="[transform:translateZ(0)] -ml-4">
+                  <CarouselContent className="[transform:translateZ(0)]">
                     {testimonials.map((testimonial, index) => (
-                      <CarouselItem key={index} className="pl-4">
+                      <CarouselItem key={index}>
                         <div className="px-1">
                           <div className="flex items-center space-x-2 my-4">
                             {testimonials.map((t, i) => (
