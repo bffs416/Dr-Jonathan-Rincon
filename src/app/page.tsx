@@ -75,8 +75,8 @@ const TreatmentCard = ({
         <Image
           src={icon}
           alt={title}
-          width={56}
-          height={56}
+          width={50}
+          height={50}
           className="transition-transform duration-300"
         />
       </div>
@@ -328,9 +328,9 @@ export default function Home() {
                   opts={{ loop: true }}
                   className="w-full max-w-xl mx-auto lg:mx-0 [transform:translateZ(0)]"
                 >
-                  <CarouselContent>
+                  <CarouselContent className="-ml-4">
                     {testimonials.map((testimonial, index) => (
-                      <CarouselItem key={index}>
+                      <CarouselItem key={index} className="pl-4">
                         <div className="px-1">
                           <Card className="bg-background/80 backdrop-blur-lg p-6 rounded-xl shadow-lg border-white/20">
                             <CardContent className="p-0">
