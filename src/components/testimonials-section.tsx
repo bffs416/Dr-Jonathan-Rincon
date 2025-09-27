@@ -11,6 +11,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 import { Star } from "lucide-react";
+import { Card } from "./ui/card";
 
 const testimonials = [
   {
@@ -62,14 +63,14 @@ export function TestimonialsSection() {
                   className="rounded-full object-cover border-4 border-white"
                 />
               </div>
-              <div className="absolute -top-10 -left-10 z-20 bg-[#83c5be] text-black rounded-full p-6 w-48 h-48 flex flex-col items-center justify-center text-center border-4 border-dotted border-black">
+              <div className="absolute -top-10 -left-10 z-20 bg-primary/80 backdrop-blur-md text-primary-foreground rounded-full p-6 w-48 h-48 flex flex-col items-center justify-center text-center">
                 <p className="text-5xl font-bold">500+</p>
                 <p className="text-xl">Pacientes Felices</p>
               </div>
             </div>
           </div>
           <div className="md:w-1/2 md:pl-10 text-center">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-3xl font-bold mb-6 text-center">
               Qué dicen nuestros pacientes
             </h2>
             <Carousel
@@ -81,7 +82,7 @@ export function TestimonialsSection() {
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
                   <CarouselItem key={index}>
-                    <div className="p-4 bg-gray-100 rounded-lg text-left">
+                    <Card className="p-4 bg-background/80 backdrop-blur-lg rounded-lg text-left">
                       <p className="italic">"{testimonial.comment}"</p>
                       <p className="mt-4 font-bold text-right">
                         - {testimonial.name}
@@ -94,7 +95,7 @@ export function TestimonialsSection() {
                           <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
                         ))}
                       </div>
-                    </div>
+                    </Card>
                   </CarouselItem>
                 ))}
               </CarouselContent>
