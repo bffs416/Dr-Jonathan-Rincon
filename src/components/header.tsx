@@ -19,10 +19,10 @@ import {
 import { ChevronDown } from 'lucide-react';
 
 const navLinks = [
+    { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
     {
         name: 'Tratamientos',
         dropdown: [
-            { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
             { name: 'Bioestimuladores', href: '/bioestimuladores' },
             { name: 'Botox', href: '/botox' },
             { name: 'Contorno Corporal', href: '/contorno-corporal' },
@@ -53,10 +53,11 @@ export default function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
   
-  const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+  const NavLink = ({ href, children, highlight = false }: { href: string; children: React.ReactNode; highlight?: boolean }) => {
     const isActive = pathname === href;
     return (
-      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary/80", isActive ? "text-primary font-semibold" : "text-foreground")}>
+      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary/80 flex items-center gap-1", isActive ? "text-primary font-semibold" : "text-foreground", highlight && "font-bold text-primary/80")}>
+        {highlight && <Award className="h-4 w-4" />}
         {children}
       </Link>
     );
@@ -101,7 +102,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-2">
             {navLinks.map(link => link.dropdown 
                 ? <NavDropdown key={link.name} name={link.name} items={link.dropdown} />
-                : <NavLink key={link.name} href={link.href || '#'}>{link.name}</NavLink>
+                : <NavLink key={link.name} href={link.href || '#'} highlight={link.highlight}>{link.name}</NavLink>
             )}
         </nav>
 
@@ -148,7 +149,10 @@ export default function Header() {
                         </ul>
                        </div>
                     ) : (
-                      <Link href={link.href || '#'} className="text-lg hover:text-primary/80 transition-colors block">{link.name}</Link>
+                      <Link href={link.href || '#'} className={cn("text-lg hover:text-primary/80 transition-colors block", link.highlight && "font-bold text-primary/80 flex items-center")}>
+                         {link.highlight && <Award className="mr-2 h-4 w-4" />}
+                        {link.name}
+                      </Link>
                     )}
                   </li>
                 ))}
