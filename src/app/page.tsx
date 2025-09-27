@@ -31,46 +31,45 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { cn } from '@/lib/utils';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
-import { findImage } from '@/lib/images';
 
-const treatments = [
+const treatments: { icon: string; title: string; href: string }[] = [
   {
-    icon: StretchHorizontal,
+    icon: '/images/hilos-tensores-icon.png',
     title: 'Hilos Tensores',
     href: '/hilos-tensores',
   },
   {
-    icon: Droplets,
+    icon: '/images/bioestimuladores-icon.png',
     title: 'Bioestimuladores de Colágeno',
     href: '/bioestimuladores',
   },
   {
-    icon: Bot,
+    icon: '/images/botox-icon.png',
     title: 'Toxina Botulínica',
     href: '/botox',
   },
    {
-    icon: Wind,
+    icon: '/images/corporal-icon.png',
     title: 'Contorno Corporal',
     href: '/contorno-corporal',
   },
    {
-    icon: ShieldCheck,
+    icon: '/images/facial-icon.png',
     title: 'Medicina Preventiva Facial',
     href: '/medicina-preventiva',
   },
   {
-    icon: HelpingHand,
+    icon: '/images/corporal-preventiva-icon.png',
     title: 'Medicina Preventiva Corporal',
     href: '/medicina-preventiva',
   },
 ];
 
-const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, title: string, href: string}) => (
+const TreatmentCard = ({ icon, title, href }: {icon: string, title: string, href: string}) => (
     <Link href={href} className="group block">
         <div className="flex h-full flex-col items-center justify-start p-2 rounded-lg">
             <div className="mb-4 flex items-center justify-center w-20 h-20 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
-                <Icon className="w-10 h-10 text-primary transition-transform duration-300" />
+                <Image src={icon} alt={title} width={40} height={40} className="transition-transform duration-300" />
             </div>
             <h3 className="font-headline text-base font-semibold text-foreground group-hover:text-primary text-center flex-1">{title}</h3>
         </div>
@@ -79,17 +78,17 @@ const TreatmentCard = ({ icon: Icon, title, href }: {icon: React.ElementType, ti
 
 
 export default function Home() {
-  const testimonialImage1 = findImage('home-testimonial-1');
-  const testimonialImage2 = findImage('home-testimonial-2');
+  const testimonialImage1 = { src: '/images/Hilos_Tensores_Resultados Paciente.jpg', hint: 'facial procedure' };
+  const testimonialImage2 = { src: '/images/Hilos Tensores_Analisis_.png', hint: 'facial injection' };
   const galleryImages = [
-    findImage('gallery-1'),
-    findImage('gallery-2'),
-    findImage('gallery-3'),
-    findImage('gallery-4'),
-    findImage('gallery-5'),
-    findImage('gallery-6'),
-    findImage('gallery-7'),
-    findImage('gallery-8'),
+    { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title: 'Lifting de Cuello', href: '/hilos-tensores', category: 'Hilos Tensores' },
+    { id: 'gallery-2', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'man consultation', title: 'Rejuvenecimiento Facial', href: '/medicina-preventiva' },
+    { id: 'gallery-3', src: '/images/Hilos tensores_Marcacion mandibular.png', hint: 'facial marking', title: 'Marcación Mandibular', href: '/hilos-tensores', category: 'Hilos Tensores' },
+    { id: 'gallery-4', src: '/images/Rinomodelacion.png', hint: 'facial injection', title: 'Rinomodelación', href: '/hilos-tensores' },
+    { id: 'gallery-5', src: '/images/Ojeras.png', hint: 'skin treatment', title: 'Tratamiento de Ojeras', href: '/medicina-preventiva' },
+    { id: 'gallery-6', src: '/images/Hilos_Foxy_eyes.png', hint: 'foxy eyes procedure', title: 'Foxy Eyes', href: '/hilos-tensores', category: 'Hilos Tensores' },
+    { id: 'gallery-7', src: '/images/Hilos_Tensores _Levantamiento de gluteos.png', hint: 'patient treatment', title: 'Lifting de Glúteos', href: '/hilos-tensores' },
+    { id: 'gallery-8', src: '/images/Hilos_Tensores_Abdomen_1.jpg', hint: 'man profile', title: 'Marcación Abdominal', href: '/hilos-tensores', category: 'Hilos Tensores' }
   ].filter(Boolean) as any[];
 
 
@@ -203,7 +202,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4">
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-8 gap-x-4">
                 {treatments.map((treatment) => (
                     <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
@@ -271,7 +270,36 @@ export default function Home() {
         <section id="testimonios" className="py-16 sm:py-24 text-foreground overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="relative w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-[500px]">
+              <div className="relative w-full aspect-square max-w-sm mx-auto lg:hidden">
+                  <div className="absolute top-0 left-0 w-24 h-24 bg-accent rounded-full flex flex-col items-center justify-center text-center p-2 shadow-lg z-20">
+                    <p className="font-headline text-2xl font-bold text-accent-foreground">500+</p>
+                    <p className="text-xs font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
+                  </div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                      <Image
+                        src={testimonialImage1.src}
+                        alt={testimonialImage1.hint}
+                        width={250}
+                        height={250}
+                        data-ai-hint={testimonialImage1.hint}
+                        className="rounded-full object-cover w-[250px] h-[250px] shadow-lg"
+                        quality={80}
+                      />
+                  </div>
+                  <div className="absolute bottom-0 right-0 w-32 h-32 z-20">
+                    <Image
+                        src={testimonialImage2.src}
+                        alt={testimonialImage2.hint}
+                        width={128}
+                        height={128}
+                        data-ai-hint={testimonialImage2.hint}
+                        className="rounded-full object-cover w-full h-full border-4 border-background shadow-lg"
+                        quality={80}
+                      />
+                  </div>
+              </div>
+
+              <div className="relative hidden w-full aspect-[4/5] max-w-sm mx-auto lg:max-w-none lg:aspect-auto lg:h-[500px] lg:block">
                 <div className="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-accent rounded-full flex flex-col items-center justify-center text-center p-4 shadow-lg transform lg:-rotate-12 z-20">
                   <p className="font-headline text-2xl md:text-4xl font-bold text-accent-foreground">500+</p>
                   <p className="text-sm md:text-base font-medium text-accent-foreground leading-tight">Pacientes Felices</p>
