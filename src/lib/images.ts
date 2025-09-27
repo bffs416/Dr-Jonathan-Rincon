@@ -37,7 +37,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'jawline-before', src: '/images/placeholders/jawline-before.png', hint: 'jawline before' },
   { id: 'jawline-after', src: '/images/placeholders/jawline-after.png', hint: 'jawline after' },
   { id: 'foxy-before', src: '/images/placeholders/foxy-before.png', hint: 'fox eyes before' },
-  { id: 'foxy-after', src: '/Hilos_Foxy_eyes.png', hint: 'fox eyes after' },
+  { id: 'foxy-after', src: '/images/Hilos_Foxy_eyes.png', hint: 'fox eyes after' },
   { id: 'rhino-before', src: '/images/placeholders/rhino-before.png', hint: 'rhino before' },
   { id: 'rhino-after', src: '/images/placeholders/rhino-after.png', hint: 'rhino after' },
   { id: 'marionette-before', src: '/images/placeholders/marionette-before.png', hint: 'marionette lines before' },
