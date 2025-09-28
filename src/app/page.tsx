@@ -201,11 +201,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Infinite Moving Cards Section */}
-        <section className="py-2 sm:py-4 [transform:translateZ(0)]">
-          <InfiniteMovingCards items={galleryImages} direction="right" speed="slow" />
-        </section>
-
         {/* Video Testimonials Section */}
         <section id="videos-home" className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto px-4 text-center">
@@ -248,6 +243,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+        
+        {/* Infinite Moving Cards Section */}
+        <section className="py-2 sm:py-4 [transform:translateZ(0)]">
+          <InfiniteMovingCards items={galleryImages} direction="right" speed="slow" />
         </section>
 
          {/* Treatments Section */}
