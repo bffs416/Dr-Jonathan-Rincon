@@ -33,17 +33,17 @@ export const IMAGES: SiteImage[] = [
   { id: 'skin-improvement', src: '/images/skin.png', hint: 'skin improvement' },
 
   // Hilos Tensores - Before/After Combined
-  { id: 'hilos-jawline-combined', src: '/images/1.png', hint: 'thread lift before after' },
+  { id: 'hilos-jawline-combined', src: '/images/Antes y Despues/1_1.png', hint: 'thread lift before after' },
   { id: 'neck-combined', src: '/images/Antes y Despues/2.png', hint: 'neck lift before after' }, 
-  { id: 'eyes-combined', src: '/images/Antes y Despues/hilos-ojos.jpg', hint: 'eye rejuvenation before after' }, 
-  { id: 'foxy-combined', src: '/images/Antes y Despues/hilos-foxy.jpg', hint: 'fox eyes before after' }, 
-  { id: 'rhino-combined', src: '/images/Antes y Despues/hilos-rino.jpg', hint: 'rhino before after' }, 
-  { id: 'marionette-combined', src: '/images/Antes y Despues/hilos-marioneta.jpg', hint: 'marionette lines before after' }, 
-  { id: 'glutes-combined', src: '/images/Antes y Despues/hilos-gluteos.jpg', hint: 'butt lift before after' }, 
-  { id: 'abs-combined', src: '/images/20.png', hint: 'abs definition before after' }, 
-  { id: 'arms-combined', src: '/images/Antes y Despues/hilos-brazos.jpg', hint: 'arm lift before after' }, 
-  { id: 'thighs-combined', src: '/images/Antes y Despues/hilos-muslos.jpg', hint: 'thigh lift before after' }, 
-  { id: 'knees-combined', src: '/images/Antes y Despues/hilos-rodillas.jpg', hint: 'knee rejuvenation before after' }, 
+  { id: 'eyes-combined', src: '/images/Antes y Despues/2.png', hint: 'eye rejuvenation before after' }, 
+  { id: 'foxy-combined', src: '/images/Antes y Despues/2.png', hint: 'fox eyes before after' }, 
+  { id: 'rhino-combined', src: '/images/Antes y Despues/2.png', hint: 'rhino before after' }, 
+  { id: 'marionette-combined', src: '/images/Antes y Despues/2.png', hint: 'marionette lines before after' }, 
+  { id: 'glutes-combined', src: '/images/Antes y Despues/2.png', hint: 'butt lift before after' }, 
+  { id: 'abs-combined', src: '/images/Antes y Despues/20.png', hint: 'abs definition before after' }, 
+  { id: 'arms-combined', src: '/images/Antes y Despues/2.png', hint: 'arm lift before after' }, 
+  { id: 'thighs-combined', src: '/images/Antes y Despues/2.png', hint: 'thigh lift before after' }, 
+  { id: 'knees-combined', src: '/images/Antes y Despues/2.png', hint: 'knee rejuvenation before after' }, 
 
 
   // Bioestimuladores Page
