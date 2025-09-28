@@ -148,6 +148,54 @@ async function getPostData(slug: string) {
         <p>Agenda tu cita de valoración para descubrir cuál de estos potentes tratamientos es el perfecto para devolverle la juventud y firmeza a tu piel.</p>
       `,
     },
+    'botox-mitos-y-verdades': {
+      title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
+      category: 'Facial',
+      date: '16 de enero de 2024',
+      readTime: '6 min',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('blog-post-2'),
+      content: `
+        <p class="lead">La toxina botulínica, popularmente conocida como "Botox", es uno de los tratamientos de rejuvenecimiento facial más demandados y, a la vez, uno de los más rodeados de mitos. Desde el miedo a quedar "sin expresión" hasta dudas sobre su seguridad, es hora de aclarar qué es ciencia y qué es ficción. Basado en evidencia científica, te explicamos de forma sencilla cómo funciona realmente este tratamiento y cuáles son sus verdaderos beneficios.</p>
+        
+        <h2>Verdad: No es un relleno, es un relajante muscular</h2>
+        <p>A diferencia del ácido hialurónico, que se utiliza para rellenar surcos o dar volumen, la toxina botulínica no añade nada. Su mecanismo de acción es mucho más sofisticado.</p>
+        <ul>
+            <li><strong>¿Cómo funciona científicamente?</strong> La toxina botulínica es una neurotoxina producida por la bacteria Clostridium botulinum. Al inyectarla en dosis muy pequeñas y controladas en un músculo específico, bloquea de forma temporal la liberación de acetilcolina, un neurotransmisor que ordena al músculo contraerse.</li>
+            <li><strong>El resultado:</strong> El músculo se relaja, lo que impide que se formen las llamadas "arrugas hiperdinámicas" o de expresión, como las del entrecejo, la frente o las "patas de gallo".</li>
+        </ul>
+
+        <h2>Mito 1: "Te deja la cara congelada y sin expresión"</h2>
+        <p>Esta es quizás la creencia más extendida. Un tratamiento bien realizado no busca paralizar, sino relajar los músculos de manera estratégica. El objetivo es suavizar las arrugas de expresión manteniendo la naturalidad del rostro. Un profesional experto conoce la anatomía facial a la perfección y sabe exactamente dónde y cuánto inyectar para lograr un resultado fresco y descansado, sin afectar tu capacidad de expresar emociones. Un rostro inexpresivo no es sinónimo de belleza y no es el objetivo de un buen tratamiento.</p>
+
+        <h2>Verdad: Es un tratamiento seguro y con múltiples aplicaciones médicas</h2>
+        <p>Aunque su uso estético es el más famoso, la toxina botulínica tiene una larga historia en la medicina para tratar diversas condiciones neurológicas y musculares.</p>
+        <ul>
+            <li><strong>Aplicaciones terapéuticas:</strong> Se utiliza con éxito para tratar espasmos musculares (como el espasmo hemifacial o el blefaroespasmo), distonía cervical (tortícolis), migraña crónica, sudoración excesiva (hiperhidrosis) y espasticidad por lesiones cerebrales.</li>
+            <li><strong>Seguridad:</strong> Su uso es muy seguro cuando lo administra un médico cualificado. La dosis utilizada en estética es extremadamente pequeña y no representa un riesgo de intoxicación. Los efectos secundarios suelen ser leves, localizados y temporales, como pequeños hematomas o dolor en el sitio de la inyección.</li>
+        </ul>
+        
+        <h2>Mito 2: "El efecto es inmediato y permanente"</h2>
+        <p>Ni lo uno ni lo otro.</p>
+        <ul>
+            <li><strong>Resultados graduales:</strong> El efecto no es instantáneo. La debilidad muscular comienza a notarse entre 2 y 4 días después de la inyección, alcanzando su efecto máximo entre los 7 y 10 días.</li>
+            <li><strong>Efecto temporal:</strong> La relajación muscular es reversible. El cuerpo crea nuevas terminaciones nerviosas para restablecer la comunicación con el músculo. Por eso, el efecto suele durar entre 3 y 6 meses. Para mantener los resultados, el tratamiento debe repetirse periódicamente.</li>
+        </ul>
+
+        <h2>Verdad: La calidad y la técnica de aplicación son clave</h2>
+        <p>Los resultados del tratamiento dependen directamente de dos factores: la calidad del producto y, sobre todo, la experiencia del médico que lo aplica.</p>
+        <ul>
+            <li><strong>Marcas autorizadas:</strong> Es fundamental asegurarse de que el producto utilizado sea auténtico, aprobado por las autoridades sanitarias (como Invima en Colombia) y esté debidamente conservado.</li>
+            <li><strong>Profesionales cualificados:</strong> Solo los médicos con formación específica y un conocimiento profundo de la anatomía facial pueden garantizar una aplicación segura y resultados armoniosos. La aplicación de toxina botulínica es un procedimiento médico.</li>
+        </ul>
+
+        <h2>Mito 3: "Es un tratamiento solo para personas mayores"</h2>
+        <p>No necesariamente. Si bien es muy eficaz para tratar arrugas ya existentes, cada vez más personas jóvenes lo utilizan de forma preventiva. Al relajar los músculos que causan las líneas de expresión, se evita que estas arrugas se marquen de forma permanente en la piel con el paso del tiempo.</p>
+
+        <h2>Conclusión</h2>
+        <p>La toxina botulínica es una herramienta científica segura y eficaz para el rejuvenecimiento facial cuando se utiliza correctamente. La clave del éxito está en acudir a un médico especialista que realice un diagnóstico personalizado, utilice productos de calidad y aplique la técnica adecuada para lograr un resultado natural y satisfactorio.</p>
+      `,
+    },
   };
 
   const post = posts[slug];
@@ -224,6 +272,7 @@ export async function generateStaticParams() {
   const slugs = [
     'hilos-tensores-revolucion',
     'bioestimuladores-colageno',
+    'botox-mitos-y-verdades',
   ];
   return slugs.map((slug) => ({
     slug,

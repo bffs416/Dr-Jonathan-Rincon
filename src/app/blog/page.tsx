@@ -52,7 +52,7 @@ const blogPosts = [
     readTime: '8 min',
   },
   {
-    slug: '/blog/botox-mitos-verdades',
+    slug: '/blog/botox-mitos-y-verdades',
     category: 'Facial',
     image: findImage('blog-post-2'),
     title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
