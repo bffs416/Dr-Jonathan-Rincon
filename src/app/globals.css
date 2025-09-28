@@ -209,3 +209,48 @@
     animation: fade-out 0.5s ease-in-out forwards;
   }
 }
+
+/* TikTok Embed Placeholder */
+@layer components {
+  .tiktok-container {
+      position: relative;
+      width: 325px;
+      height: 578px; /* Approx 9:16 aspect ratio for 325px width */
+      background-image: url('/images/tiktok-placeholder.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .tiktok-container::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      z-index: 1;
+  }
+   .tiktok-container::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, -50%);
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 25px solid white;
+      z-index: 2;
+  }
+
+  .tiktok-embed {
+      position: relative;
+      z-index: 5;
+  }
+}

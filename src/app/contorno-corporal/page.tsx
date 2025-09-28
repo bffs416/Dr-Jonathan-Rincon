@@ -343,22 +343,24 @@ export default function ContornoCorporalPage() {
               ></iframe>
             </div>
              <div className="flex justify-center">
-              <blockquote
-                className="tiktok-embed"
-                cite="https://www.tiktok.com/@drjonathanrincon/video/7350796850839817477"
-                data-video-id="7350796850839817477"
-                style={{ maxWidth: '325px', minWidth: '325px' }}
-              >
-                <section>
-                  <a
-                    target="_blank"
-                    title="@drjonathanrincon"
-                    href="https://www.tiktok.com/@drjonathanrincon?refer=embed"
-                  >
-                    @drjonathanrincon
-                  </a>
-                </section>
-              </blockquote>
+               <div className="tiktok-container">
+                <blockquote
+                  className="tiktok-embed"
+                  cite="https://www.tiktok.com/@drjonathanrincon/video/7350796850839817477"
+                  data-video-id="7350796850839817477"
+                  style={{ maxWidth: '325px', minWidth: '325px' }}
+                >
+                  <section>
+                    <a
+                      target="_blank"
+                      title="@drjonathanrincon"
+                      href="https://www.tiktok.com/@drjonathanrincon?refer=embed"
+                    >
+                      @drjonathanrincon
+                    </a>
+                  </section>
+                </blockquote>
+              </div>
             </div>
           </div>
         </section>

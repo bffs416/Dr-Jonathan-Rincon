@@ -253,22 +253,24 @@ export default function BioestimuladoresPage() {
               ></iframe>
             </div>
             <div className="flex justify-center">
-              <blockquote
-                className="tiktok-embed"
-                cite="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
-                data-video-id="7550473078103428357"
-                style={{ maxWidth: '325px', minWidth: '325px' }}
-              >
-                <section>
-                  <a
-                    target="_blank"
-                    title="@drjonathanrincon"
-                    href="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
-                  >
-                    @drjonathanrincon
-                  </a>
-                </section>
-              </blockquote>
+              <div className="tiktok-container">
+                <blockquote
+                  className="tiktok-embed"
+                  cite="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
+                  data-video-id="7550473078103428357"
+                  style={{ maxWidth: '325px', minWidth: '325px' }}
+                >
+                  <section>
+                    <a
+                      target="_blank"
+                      title="@drjonathanrincon"
+                      href="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
+                    >
+                      @drjonathanrincon
+                    </a>
+                  </section>
+                </blockquote>
+              </div>
             </div>
           </div>
         </section>
