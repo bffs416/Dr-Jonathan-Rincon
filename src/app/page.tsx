@@ -202,7 +202,7 @@ export default function Home() {
         </section>
 
          {/* Treatments Section */}
-        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4">
+        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4 scroll-mt-20">
              <div className="text-center max-w-2xl mx-auto">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold">
                     Nuestros <span className="text-primary">Tratamientos Principales</span>
@@ -216,6 +216,40 @@ export default function Home() {
                   <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
             </div>
+        </section>
+
+        {/* Video Testimonials Section */}
+        <section id="videos-home" className="py-16 sm:py-24 bg-background">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold">
+              Testimonios en <span className="text-primary">Video</span>
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+              Pacientes reales comparten sus experiencias y resultados.
+            </p>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+              <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/8_jxKjCNLTA"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/4HyDiDdty3c"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Infinite Moving Cards Section */}

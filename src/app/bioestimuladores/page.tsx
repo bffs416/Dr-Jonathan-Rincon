@@ -252,25 +252,15 @@ export default function BioestimuladoresPage() {
                   allowFullScreen
               ></iframe>
             </div>
-            <div className="flex justify-center">
-              <div className="tiktok-container">
-                <blockquote
-                  className="tiktok-embed"
-                  cite="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
-                  data-video-id="7550473078103428357"
-                  style={{ maxWidth: '325px', minWidth: '325px' }}
-                >
-                  <section>
-                    <a
-                      target="_blank"
-                      title="@drjonathanrincon"
-                      href="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
-                    >
-                      @drjonathanrincon
-                    </a>
-                  </section>
-                </blockquote>
-              </div>
+            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+               <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/rokGy0huYEA"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+              ></iframe>
             </div>
           </div>
         </section>

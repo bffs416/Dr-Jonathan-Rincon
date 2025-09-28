@@ -172,7 +172,7 @@ export default function ContornoCorporalPage() {
                   <p className="mt-6 text-lg text-muted-foreground">
                    La hidrolipoclasia es un procedimiento estético mínimamente invasivo, conocido como la "liposucción sin cirugía" por sus excelentes resultados para eliminar depósitos de grasa localizada. Es ideal para tratar zonas específicas como el abdomen, las caderas, los muslos ("cartucheras") o brazos.
                   </p>
-                  <p className="mt-4 text-muted-foreground">Su funcionamiento es una combinación inteligente de dos pasos:</p>
+                  <p className="mt-4 text-muted-foreground">Su funcionamento es una combinación inteligente de dos pasos:</p>
                   <ol className="mt-4 space-y-3 text-muted-foreground list-decimal pl-5">
                     <li><strong>Infiltración de una solución:</strong> Primero, se inyecta una solución isotónica (suero fisiológico) en la zona donde se acumula la grasa. Esta solución ablanda y prepara las células grasas (adipocitos).</li>
                     <li><strong>Aplicación de ultrasonido:</strong> Inmediatamente después, se aplica un ultrasonido de alta potencia sobre la zona. Las ondas ultrasónicas generan microburbujas que vibran y provocan que la membrana de las células grasas se rompa, liberando la grasa de su interior.</li>
@@ -342,25 +342,15 @@ export default function ContornoCorporalPage() {
                 allowFullScreen
               ></iframe>
             </div>
-             <div className="flex justify-center">
-               <div className="tiktok-container">
-                <blockquote
-                  className="tiktok-embed"
-                  cite="https://www.tiktok.com/@drjonathanrincon/video/7350796850839817477"
-                  data-video-id="7350796850839817477"
-                  style={{ maxWidth: '325px', minWidth: '325px' }}
-                >
-                  <section>
-                    <a
-                      target="_blank"
-                      title="@drjonathanrincon"
-                      href="https://www.tiktok.com/@drjonathanrincon?refer=embed"
-                    >
-                      @drjonathanrincon
-                    </a>
-                  </section>
-                </blockquote>
-              </div>
+             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+               <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/Vesbkoh8oPQ"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+              ></iframe>
             </div>
           </div>
         </section>

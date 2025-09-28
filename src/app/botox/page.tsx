@@ -238,25 +238,15 @@ export default function BotoxPage() {
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div className="flex justify-center">
-              <div className="tiktok-container">
-                <blockquote
-                  className="tiktok-embed"
-                  cite="https://www.tiktok.com/@drjonathanrincon/video/7350796850839817477"
-                  data-video-id="7350796850839817477"
-                  style={{ maxWidth: '325px', minWidth: '325px' }}
-                >
-                  <section>
-                    <a
-                      target="_blank"
-                      title="@drjonathanrincon"
-                      href="https://www.tiktok.com/@drjonathanrincon?refer=embed"
-                    >
-                      @drjonathanrincon
-                    </a>
-                  </section>
-                </blockquote>
-              </div>
+            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/Vesbkoh8oPQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
               <iframe
