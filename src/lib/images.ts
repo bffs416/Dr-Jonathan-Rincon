@@ -64,8 +64,8 @@ export const IMAGES: SiteImage[] = [
   { id: 'hidrolipoclasia-diagram', src: '/images/Hidrolipoclasia_2.png', hint: 'hidrolipoclasia diagram' },
   { id: 'tensamax-diagram', src: '/images/Tensamax.png', hint: 'tensamax diagram' },
   { id: 'cta-body-contouring', src: '/images/Hilos Tensores.png', hint: 'happy woman figure' },
-  { id: 'hidrolipoclasia-result', src: 'https://picsum.photos/seed/hidro1/300/400', hint: 'hidrolipoclasia result' },
-  { id: 'tensamax-result', src: 'https://picsum.photos/seed/tensa1/300/400', hint: 'tensamax result' },
+  { id: 'hidrolipoclasia-result', src: '/images/Modelo 6.jpg', hint: 'hidrolipoclasia result' },
+  { id: 'tensamax-result', src: '/images/Modelo 7.jpg', hint: 'tensamax result' },
 
 
   // Medicina Estetica Avanzada Page
