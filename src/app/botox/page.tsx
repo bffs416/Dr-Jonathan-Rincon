@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -241,7 +242,7 @@ export default function BotoxPage() {
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/Vesbkoh8oPQ"
+                src="https://www.youtube.com/embed/VIK35mnWmqQ"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -251,7 +252,7 @@ export default function BotoxPage() {
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/rokGy0huYEA"
+                src="https://www.youtube.com/embed/VxXR_aDzS1w"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

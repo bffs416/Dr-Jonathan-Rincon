@@ -72,7 +72,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'preventive-hero', src: '/images/Productos.jpg', hint: 'preventive medicine' },
   { id: 'rejuvenation-guide', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'facial rejuvenation' },
   { id: 'mesoterapia-facial', src: '/images/mesoterapia.png', hint: 'facial mesotherapy' },
-  { id: 'skinbooster-treatment', src: '/images/Skinbooster.png', hint: 'skin hydration treatment' },
+  { id: 'skinbooster-treatment', src: '/images/Skinbooster_2.png', hint: 'skin hydration treatment' },
   { id: 'pdrn-collagen', src: '/images/PDRN.jpg', hint: 'collagen stimulation' },
   { id: 'facial-filler', src: '/images/Hacido Hialuronico.png', hint: 'facial filler' },
   { id: 'body-treatment', src: '/images/diptico_marcas_preoperatorias.png', hint: 'body treatment' },

@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -270,7 +271,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                   <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/rokGy0huYEA"
+                      src="https://www.youtube.com/embed/LazyrYxAgow"
                       title="YouTube video player"
                       frameBorder="0"
                       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -280,7 +281,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                   <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                      src="https://www.youtube.com/embed/yP1JM_3sX50"
                       title="YouTube video player"
                       frameBorder="0"
                       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
