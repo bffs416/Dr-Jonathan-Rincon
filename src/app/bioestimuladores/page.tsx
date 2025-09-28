@@ -244,12 +244,12 @@ export default function BioestimuladoresPage() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
              <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/LXb3EKWsInQ"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/Vesbkoh8oPQ"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
               ></iframe>
             </div>
             <div className="flex justify-center">
@@ -263,7 +263,7 @@ export default function BioestimuladoresPage() {
                   <a
                     target="_blank"
                     title="@drjonathanrincon"
-                    href="https://www.tiktok.com/@drjonathanrincon?refer=embed"
+                    href="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357?is_from_webapp=1&sender_device=pc"
                   >
                     @drjonathanrincon
                   </a>
