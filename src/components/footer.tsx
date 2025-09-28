@@ -3,7 +3,7 @@ import { Logo } from './logo';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
-import { TikTokIcon } from './icons/tiktok-icon';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <a href="https://www.tiktok.com/@drjonathanrincon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                  <TikTokIcon className="h-5 w-5" />
+                  <Image src="/images/tiktok-logo.png" alt="TikTok" width={20} height={20} />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
