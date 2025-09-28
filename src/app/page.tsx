@@ -227,11 +227,11 @@ export default function Home() {
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
               Pacientes reales comparten sus experiencias y resultados.
             </p>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/8_jxKjCNLTA"
+                  src="https://www.youtube.com/embed/f7z-cWbd-PE"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -241,7 +241,17 @@ export default function Home() {
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/4HyDiDdty3c"
+                  src="https://www.youtube.com/embed/2rzLC0plzho"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/LXb3EKWsInQ"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

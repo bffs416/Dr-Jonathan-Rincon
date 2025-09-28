@@ -255,7 +255,7 @@ export default function BioestimuladoresPage() {
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/rokGy0huYEA"
+                  src="https://www.youtube.com/shorts/2ibpjBt7pXc?feature=share"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
