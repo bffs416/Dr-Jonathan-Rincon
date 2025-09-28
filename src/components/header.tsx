@@ -26,7 +26,7 @@ const navLinks = [
             { name: 'Bioestimuladores', href: '/bioestimuladores' },
             { name: 'Botox', href: '/botox' },
             { name: 'Contorno Corporal', href: '/contorno-corporal' },
-            { name: 'Medicina Preventiva', href: '/medicina-preventiva' },
+            { name: 'Medicina Estética Avanzada', href: '/medicina-estetica-avanzada' },
         ]
     },
     { name: 'Blog', href: '/blog' },

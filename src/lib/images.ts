@@ -99,7 +99,7 @@ export const IMAGES: SiteImage[] = [
 
   // Home Page
   { id: 'home-testimonial-1', src: '/images/Hilos_Tensores_Resultados Paciente.jpg', hint: 'facial procedure' },
-  { id: 'home-testimonial-2', src: '/images/Hilos Tensores_Analisis_.png', hint: 'facial injection' },
+  { id: 'home-testimonial-2', src: '/images/Modelo 6.jpg', hint: 'facial injection' },
   
   // Gallery Images (for Infinite Moving Cards)
   { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title: 'Lifting de Cuello', href: '/hilos-tensores', category: 'Hilos Tensores' },
