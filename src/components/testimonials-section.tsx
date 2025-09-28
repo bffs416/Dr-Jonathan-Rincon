@@ -46,7 +46,7 @@ export function TestimonialsSection() {
           <div className="relative w-full max-w-md mx-auto h-[400px] sm:h-[500px]">
             <div className="absolute top-0 left-0 w-3/4 h-3/4">
               <Image
-                src="/images/Hilos_Tensores_Resultados_Paciente.jpg"
+                src="/images/Modelo 6.jpg"
                 alt="Paciente satisfecha"
                 width={500}
                 height={500}
@@ -55,7 +55,7 @@ export function TestimonialsSection() {
             </div>
             <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
               <Image
-                src="/images/Hilos_Tensores_Analisis.png"
+                src="/images/Modelo 6.jpg"
                 alt="Análisis facial"
                 width={300}
                 height={300}
@@ -65,7 +65,7 @@ export function TestimonialsSection() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-48 sm:h-48 flex flex-col items-center justify-center text-center">
               <div className="absolute inset-0 bg-gradient-radial from-primary to-primary-dark rounded-full animate-spin-slow blur-md opacity-50"></div>
               <div className="relative text-primary-foreground">
-                <p className="text-4xl sm:text-5xl font-bold">500+</p>
+                <p className="text-4xl sm:text-5xl font-bold">1000+</p>
                 <p className="text-lg sm:text-xl">Pacientes Felices</p>
               </div>
             </div>

@@ -98,7 +98,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-post-content', src: '/images/happy-patient-aesthetic.png', hint: 'happy patient' },
 
   // Home Page
-  { id: 'home-testimonial-1', src: '/images/Hilos_Tensores_Resultados Paciente.jpg', hint: 'facial procedure' },
+  { id: 'home-testimonial-1', src: '/images/Modelo 6.jpg', hint: 'facial procedure' },
   { id: 'home-testimonial-2', src: '/images/Modelo 6.jpg', hint: 'facial injection' },
   
   // Gallery Images (for Infinite Moving Cards)
