@@ -174,7 +174,21 @@ export default {
             blockquote: {
               fontWeight: '400',
               fontStyle: 'italic',
-            }
+            },
+            table: {
+              width: '100%',
+              borderCollapse: 'collapse',
+            },
+            th: {
+              border: `1px solid ${theme('colors.border')}`,
+              padding: '0.5rem 1rem',
+              backgroundColor: theme('colors.muted.DEFAULT'),
+              fontWeight: '600',
+            },
+            td: {
+              border: `1px solid ${theme('colors.border')}`,
+              padding: '0.5rem 1rem',
+            },
           },
         },
       }),

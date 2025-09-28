@@ -81,14 +81,16 @@ export const IMAGES: SiteImage[] = [
   { id: 'cta-preventive', src: '/images/Hilos Tensores.png', hint: 'radiant skin' },
 
   // Blog Listing Page
-  { id: 'blog-featured', src: '/images/aesthetic-medicine-main.png', hint: 'aesthetic medicine' },
-  { id: 'blog-post-1', src: '/images/aesthetic-collagen.png', hint: 'collagen treatment' },
-  { id: 'blog-post-2', src: '/images/aesthetic-botox.png', hint: 'botox injection' },
-  { id: 'blog-post-3', src: '/images/aesthetic-bodycontour.png', hint: 'body contouring' },
+  { id: 'blog-featured', src: '/images/perfil_derecho_natiz_perfecta_1.png', hint: 'aesthetic medicine' },
+  { id: 'blog-post-1', src: '/images/Bioestimuladores de Colágeno_1.png', hint: 'collagen treatment' },
+  { id: 'blog-post-2', src: '/images/mitos y verdades Botox.jpg', hint: 'botox injection' },
+  { id: 'blog-post-3', src: '/images/Hidrolipoclasia Vs Tradicion.jpg', hint: 'body contouring' },
 
   // Blog Post Page
-  { id: 'blog-post-hero', src: '/images/aesthetic-medicine-clinic.png', hint: 'aesthetic medicine clinic' },
+  { id: 'blog-post-hero', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'aesthetic medicine clinic' },
   { id: 'blog-post-content', src: '/images/happy-patient-aesthetic.png', hint: 'happy patient' },
+  { id: 'blog-radiesse-sculptra-hero', src: '/images/Bioestimuladores de Colágeno_1.png', hint: 'biostimulator products' },
+  { id: 'blog-radiesse-sculptra-content', src: '/images/bioestimuladores_Diagrama.png', hint: 'biostimulator diagram' },
 
   // Home Page
   { id: 'home-testimonial-1', src: '/images/Modelo 6.jpg', hint: 'facial procedure' },

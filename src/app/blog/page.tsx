@@ -45,11 +45,11 @@ const blogPosts = [
     category: 'Bioestimuladores',
     image: findImage('blog-post-1'),
     title:
-      'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs Harmonca',
+      'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs HArmonyCa',
     description:
       'Comparativa completa entre los principales bioestimuladores. Aprende cuál es el mejor para tu tipo de piel y objetivos estéticos.',
-    date: '17 de enero de 2024',
-    readTime: '10 min',
+    date: '25 de julio de 2024',
+    readTime: '8 min',
   },
   {
     slug: '/blog/botox-mitos-verdades',
