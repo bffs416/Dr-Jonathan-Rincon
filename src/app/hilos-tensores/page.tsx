@@ -575,10 +575,10 @@ export default function HilosTensoresPage() {
         
          {/* Benefits Section */}
         <section id="beneficios" className="scroll-mt-20 text-center">
-           <SectionTitleWithLines>
-             <span className="text-foreground">Beneficios</span>{' '}
-             <span className="text-primary">Clave</span>
-           </SectionTitleWithLines>
+          <SectionTitleWithLines>
+            <span className="text-foreground">Beneficios</span>{' '}
+            <span className="text-primary">Clave</span>
+          </SectionTitleWithLines>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
             Resultados que Transforman con el Lifting No Quirúrgico
           </h2>
@@ -588,20 +588,25 @@ export default function HilosTensoresPage() {
           </p>
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
+              <div key={index} className="flex flex-col items-center text-center group">
                 {benefit.image && (
-                  <SectionArch
-                    imageUrl={benefit.image.src}
-                    alt={benefit.title}
-                    data-ai-hint={benefit.image.hint}
-                  />
+                  <div className="relative w-48 h-48 mb-4">
+                    <Image
+                      src={benefit.image.src}
+                      alt={benefit.title}
+                      width={200}
+                      height={200}
+                      className="rounded-xl shadow-lg w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={benefit.image.hint}
+                    />
+                  </div>
                 )}
-                <Card className="w-full -mt-8 pt-12 pb-4 px-4 shadow-lg">
-                  <CardContent className="p-0 flex items-center justify-center gap-4">
-                     <div className="bg-primary/10 text-primary p-2 rounded-full">
-                        <CheckCircle className="w-6 h-6" />
-                      </div>
-                    <p className="font-semibold text-lg">{benefit.title}</p>
+                <Card className="w-full shadow-lg">
+                  <CardContent className="p-4 flex items-center justify-center gap-4">
+                    <div className="bg-primary/10 text-primary p-2 rounded-full">
+                      <CheckCircle className="w-6 h-6" />
+                    </div>
+                    <p className="font-semibold text-lg flex-1">{benefit.title}</p>
                   </CardContent>
                 </Card>
               </div>
