@@ -29,9 +29,6 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    // Adding a timestamp to force cache invalidation on server restart
-    // This helps with hot-reloading static assets like images.
-    minimumCacheTTL: new Date().getTime(),
   },
 };
 
