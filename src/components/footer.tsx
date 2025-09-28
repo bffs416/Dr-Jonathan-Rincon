@@ -1,8 +1,9 @@
-import { Facebook, Instagram, MapPin, Clock, Phone } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Clock, Phone, Youtube } from 'lucide-react';
 import { Logo } from './logo';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
+import { TikTokIcon } from './icons/tiktok-icon';
 
 export default function Footer() {
   return (
@@ -16,13 +17,23 @@ export default function Footer() {
             </p>
             <div className="flex space-x-2 mt-4">
                <Button variant="ghost" size="icon" asChild>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://www.instagram.com/drjonathanrincon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <Instagram className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=100063747843041&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <Facebook className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://www.tiktok.com/@drjonathanrincon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                  <TikTokIcon className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a href="https://www.youtube.com/@dr.jonathanrincon298" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <Youtube className="h-5 w-5" />
                 </a>
               </Button>
             </div>
