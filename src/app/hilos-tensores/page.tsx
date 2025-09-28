@@ -494,7 +494,7 @@ export default function HilosTensoresPage() {
                             alt={`Antes y Después - ${caseItem.title}`}
                             width={800}
                             height={800}
-                            className="rounded-lg aspect-square object-contain"
+                            className="rounded-lg aspect-square object-contain mx-auto"
                             data-ai-hint={caseItem.image.hint}
                             quality={90}
                           />
@@ -681,5 +681,7 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
+
+    
 
     
