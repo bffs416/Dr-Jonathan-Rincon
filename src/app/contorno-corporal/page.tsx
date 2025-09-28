@@ -292,7 +292,44 @@ export default function ContornoCorporalPage() {
               </Accordion>
             </section>
         </div>
-
+        
+        {/* Section: Videos */}
+        <section id="videos" className="scroll-mt-20">
+          <div className="text-center">
+            <SectionTitleWithLines>
+              <span className="text-foreground">Transformaciones</span>{' '}
+              <span className="text-primary">Reales</span>
+            </SectionTitleWithLines>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+              Resultados de Contorno Corporal
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+              Observa cómo nuestros tratamientos de contorno corporal han ayudado a los pacientes a lograr sus metas.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+               <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/I2VYteGaCto"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+              ></iframe>
+            </div>
+             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+               <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/mNFlBwGm8h4"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
 
         {/* Comparison Section */}
         <section id="comparacion" className="scroll-mt-20">
@@ -342,44 +379,6 @@ export default function ContornoCorporalPage() {
                         <p className='mt-4 font-semibold'>La consulta médica es clave para crear un plan de tratamiento individualizado y seguro para ti.</p>
                     </div>
                 </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section: Videos */}
-        <section id="videos" className="scroll-mt-20">
-          <div className="text-center">
-            <SectionTitleWithLines>
-              <span className="text-foreground">Transformaciones</span>{' '}
-              <span className="text-primary">Reales</span>
-            </SectionTitleWithLines>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
-              Resultados de Contorno Corporal
-            </h2>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Observa cómo nuestros tratamientos de contorno corporal han ayudado a los pacientes a lograr sus metas.
-            </p>
-          </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-               <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/I2VYteGaCto"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-              ></iframe>
-            </div>
-             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-               <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/mNFlBwGm8h4"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-              ></iframe>
             </div>
           </div>
         </section>
