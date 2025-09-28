@@ -201,23 +201,6 @@ export default function Home() {
           </div>
         </section>
 
-         {/* Treatments Section */}
-        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4 scroll-mt-20">
-             <div className="text-center max-w-2xl mx-auto">
-                <h2 className="font-headline text-4xl md:text-5xl font-bold">
-                    Nuestros <span className="text-primary">Tratamientos Principales</span>
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
-                </p>
-            </div>
-            <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
-                {treatments.map((treatment) => (
-                  <TreatmentCard key={treatment.title} {...treatment} />
-                ))}
-            </div>
-        </section>
-
         {/* Video Testimonials Section */}
         <section id="videos-home" className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto px-4 text-center">
@@ -260,6 +243,23 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+         {/* Treatments Section */}
+        <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4 scroll-mt-20">
+             <div className="text-center max-w-2xl mx-auto">
+                <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                    Nuestros <span className="text-primary">Tratamientos Principales</span>
+                </h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
+                </p>
+            </div>
+            <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
+                {treatments.map((treatment) => (
+                  <TreatmentCard key={treatment.title} {...treatment} />
+                ))}
+            </div>
         </section>
 
         {/* Infinite Moving Cards Section */}
