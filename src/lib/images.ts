@@ -69,8 +69,8 @@ export const IMAGES: SiteImage[] = [
 
 
   // Medicina Estetica Avanzada Page
-  { id: 'preventive-hero', src: '/images/preventive-hero.png', hint: 'preventive medicine' },
-  { id: 'rejuvenation-guide', src: '/images/rejuvenation-guide.png', hint: 'facial rejuvenation' },
+  { id: 'preventive-hero', src: '/images/Productos.jpg', hint: 'preventive medicine' },
+  { id: 'rejuvenation-guide', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'facial rejuvenation' },
   { id: 'mesoterapia-facial', src: '/images/mesoterapia-facial.png', hint: 'facial mesotherapy' },
   { id: 'skinbooster-treatment', src: '/images/skinbooster-treatment.png', hint: 'skin hydration treatment' },
   { id: 'pdrn-collagen', src: '/images/pdrn-collagen.png', hint: 'collagen stimulation' },

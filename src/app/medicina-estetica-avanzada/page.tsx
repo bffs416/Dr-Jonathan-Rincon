@@ -160,7 +160,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                     </div>
                     <div className="p-6 md:pl-[180px] text-left md:ml-[160px]">
                       <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
-                        <Syringe className="w-7 h-7 text-primary" /> Mesoterapia y Microneedling
+                        <Syringe className="w-7 h-7 text-primary" /> Mesoterapia 
                       </h3>
                       <div className="text-muted-foreground space-y-4 pt-4">
                         <p>
@@ -168,17 +168,6 @@ export default function MedicinaEsteticaAvanzadaPage() {
                         microinyecciones en la piel para administrar un cóctel de
                         sustancias beneficiosas directamente donde se necesitan.
                         </p>
-                        <div>
-                        <strong className="text-foreground">
-                            Microneedling (o Micropunción):
-                        </strong>{' '}
-                        <p className="mt-1">
-                            Es una técnica que utiliza un dispositivo con microagujas
-                            muy finas para crear canales microscópicos en la piel.
-                            Esto no solo estimula la producción natural de colágeno,
-                            sino que también permite que los productos aplicados penetren mucho más profundo.
-                        </p>
-                        </div>
                         <p className="text-sm font-medium text-primary pt-2">
                         Ideal para: Personas que buscan una mejora general en la
                         luminosidad, hidratación y textura de la piel.
