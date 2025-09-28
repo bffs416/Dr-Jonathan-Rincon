@@ -444,7 +444,8 @@ export default function HilosTensoresPage() {
             <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                src="https://www.youtube.com/shorts/4HyDiDdty3c?feature=share
+"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -454,7 +455,7 @@ export default function HilosTensoresPage() {
             <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/rokGy0huYEA"
+                src="https://www.youtube.com/shorts/ynRpDfgLCno?feature=share"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
