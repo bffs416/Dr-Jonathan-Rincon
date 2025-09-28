@@ -11,7 +11,7 @@ export type SiteImage = {
 export const IMAGES: SiteImage[] = [
   // Hilos Tensores Page
   { id: 'hilos-hero', src: '/images/Dr_Jhonathan_Rincon.jpg', hint: 'aesthetic clinic' },
-  { id: 'hilos-what-are', src: '/images/Recupera la Firmeza y Juventud de tu Piel con Hilos Tensores PDO.png', hint: 'facial treatment' },
+  { id: 'hilos-what-are', src: '/images/mujer_rubia_primer_plano_mano_mejilla.png', hint: 'facial treatment' },
   { id: 'hilos-cta', src: '/images/doctor-consulta.png', hint: 'doctor patient consultation' },
   
   // Hilos Tensores - Thread Types
@@ -19,12 +19,12 @@ export const IMAGES: SiteImage[] = [
   { id: 'hilos-cog', src: '/images/hilos-cog.png', hint: 'cog threads illustration' },
 
   // Hilos Tensores - Advanced Applications & Benefits
-  { id: 'rhino-shaping', src: '/images/rhino.png', hint: 'nose shaping' },
+  { id: 'rhino-shaping', src: '/images/Rinomodelacion.png', hint: 'nose shaping' },
   { id: 'fox-eyes', src: '/images/Hilos_Foxy_eyes.png', hint: 'eyebrow lift' },
-  { id: 'abs-definition', src: '/images/abs.png', hint: 'abdominal definition' },
-  { id: 'arm-lift', src: '/images/arms.png', hint: 'arm lift' },
-  { id: 'butt-lift', src: '/images/glutes.png', hint: 'butt lift' },
-  { id: 'scar-treatment', src: '/images/scars.png', hint: 'scar treatment' },
+  { id: 'abs-definition', src: '/images/Hilos_Tensores_Abdomen_1.jpg', hint: 'abdominal definition' },
+  { id: 'arm-lift', src: '/images/diptico_marcas_preoperatorias.png', hint: 'arm lift' },
+  { id: 'butt-lift', src: '/images/Hilos_Tensores _Levantamiento de gluteos _1.png', hint: 'butt lift' },
+  { id: 'scar-treatment', src: '/images/Tratamiento de Cicatrices Atróficas.jpg', hint: 'scar treatment' },
   { id: 'cheek-lift', src: '/images/cheeks.png', hint: 'cheek lift' },
   { id: 'jawline-definition', src: '/images/jawline.png', hint: 'jawline definition' },
   { id: 'eyebrow-lift', src: '/images/eyebrow.png', hint: 'eyebrow lift' },

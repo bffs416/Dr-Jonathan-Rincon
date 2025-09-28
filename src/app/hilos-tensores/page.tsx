@@ -2,13 +2,13 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import {
   ArrowRight,
   CheckCircle,
   PlusCircle,
   RefreshCw,
 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import {
   Accordion,
   AccordionContent,
@@ -285,7 +285,7 @@ export default function HilosTensoresPage() {
         <div className="container relative z-20 px-4">
             <div className="flex flex-col items-center gap-4">
               <p className="bg-secondary/20 text-white font-bold text-2xl md:text-4xl py-2 px-6 rounded-full backdrop-blur-sm">#1 en Medellín</p>
-              <Badge>La especialidad de la casa</Badge>
+              <p className="bg-primary font-bold text-white text-base py-1 px-3 rounded-full">La especialidad de la casa</p>
             </div>
             <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold !leading-tight tracking-tight drop-shadow-lg mt-4">
               Hilos Tensores en Medellín: Lifting Facial y Corporal sin Cirugía
@@ -335,7 +335,7 @@ export default function HilosTensoresPage() {
                   <ArrowRight />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[600px]">
+              <DialogContent className="sm:max-w-[600px] rounded-2xl shadow-xl border">
                 <DialogHeader>
                   <DialogTitle className="font-headline text-2xl text-primary">
                     ¿Qué Son Exactamente los Hilos Tensores y Cómo Funcionan?
@@ -429,6 +429,52 @@ export default function HilosTensoresPage() {
           </div>
         </section>
 
+        {/* YouTube Videos Section */}
+        <section id="videos" className="scroll-mt-20 text-center">
+          <SectionTitleWithLines>
+            <span className="text-foreground">Testimonios y</span>{' '}
+            <span className="text-primary">Casos de Éxito</span>
+          </SectionTitleWithLines>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+            Resultados que Hablan por Sí Mismos
+          </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+            Mira cómo los hilos tensores han transformado la vida de nuestros
+            pacientes.
+          </p>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/rokGy0huYEA"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
 
         {/* Before and After Section */}
         <section id="resultados" className="scroll-mt-20 text-center">
@@ -664,3 +710,5 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
+
+    
