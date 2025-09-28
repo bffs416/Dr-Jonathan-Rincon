@@ -53,17 +53,20 @@ export const IMAGES: SiteImage[] = [
   { id: 'cta-bio', src: '/images/Hilos Tensores.png', hint: 'aesthetic medicine patient' },
 
   // Botox Page
-  { id: 'botox-hero', src: '/images/botox-hero.png', hint: 'aesthetic medicine face' },
-  { id: 'expression-wrinkles', src: '/images/expression-wrinkles.png', hint: 'expression wrinkles' },
-  { id: 'botox-diagram', src: '/images/botox-diagram.png', hint: 'botox injection diagram' },
-  { id: 'cta-botox', src: '/images/cta-botox.png', hint: 'aesthetic botox patient' },
+  { id: 'botox-hero', src: '/images/Botox.jpg', hint: 'aesthetic medicine face' },
+  { id: 'expression-wrinkles', src: '/images/Botox Masculino.jpg', hint: 'expression wrinkles' },
+  { id: 'botox-diagram', src: '/images/Botox Como funciona.png', hint: 'botox injection diagram' },
+  { id: 'cta-botox', src: '/images/Hilos Tensores.png', hint: 'aesthetic botox patient' },
 
   // Contorno Corporal Page
-  { id: 'body-contouring-hero', src: '/images/body-contouring-hero.png', hint: 'body contouring' },
-  { id: 'toned-figure', src: '/images/toned-figure.png', hint: 'toned body' },
-  { id: 'hidrolipoclasia-diagram', src: '/images/hidrolipoclasia-diagram.png', hint: 'hidrolipoclasia diagram' },
-  { id: 'tensamax-diagram', src: '/images/tensamax-diagram.png', hint: 'tensamax diagram' },
-  { id: 'cta-body-contouring', src: '/images/cta-body-contouring.png', hint: 'happy woman figure' },
+  { id: 'body-contouring-hero', src: '/images/Hilos_Tensores_Abdomen_1.jpg', hint: 'body contouring' },
+  { id: 'toned-figure', src: '/images/doctor_triste_bascula_brocoli.png', hint: 'toned body' },
+  { id: 'hidrolipoclasia-diagram', src: '/images/Hidrolipoclasia_2.png', hint: 'hidrolipoclasia diagram' },
+  { id: 'tensamax-diagram', src: '/images/Tensamax.png', hint: 'tensamax diagram' },
+  { id: 'cta-body-contouring', src: '/images/Hilos Tensores.png', hint: 'happy woman figure' },
+  { id: 'hidrolipoclasia-result', src: 'https://picsum.photos/seed/hidro1/300/400', hint: 'hidrolipoclasia result' },
+  { id: 'tensamax-result', src: 'https://picsum.photos/seed/tensa1/300/400', hint: 'tensamax result' },
+
 
   // Medicina Estetica Avanzada Page
   { id: 'preventive-hero', src: '/images/preventive-hero.png', hint: 'preventive medicine' },

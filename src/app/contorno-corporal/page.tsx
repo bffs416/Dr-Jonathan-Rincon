@@ -101,6 +101,9 @@ export default function ContornoCorporalPage() {
     },
   ];
 
+  const hidrolipoclasiaResultImage = findImage('hidrolipoclasia-result');
+  const tensamaxResultImage = findImage('tensamax-result');
+
   return (
     <div>
       {/* Hero Section */}
@@ -296,7 +299,27 @@ export default function ContornoCorporalPage() {
             <div className="text-center p-0 pb-8">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">¿Cuál es la mejor opción para ti: Hidrolipoclasia o Tensamax?</h2>
             </div>
-            <div className="space-y-6 text-lg text-muted-foreground">
+
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center max-w-lg mx-auto">
+                <div className="text-center">
+                    {hidrolipoclasiaResultImage && (
+                        <div className="relative w-48 h-72 mx-auto rounded-[50%] overflow-hidden shadow-lg">
+                            <Image src={hidrolipoclasiaResultImage.src} alt={hidrolipoclasiaResultImage.hint} fill className="object-cover" data-ai-hint={hidrolipoclasiaResultImage.hint} />
+                        </div>
+                    )}
+                    <h3 className="mt-4 font-bold text-lg">Resultados Hidrolipoclasia</h3>
+                </div>
+                <div className="text-center">
+                    {tensamaxResultImage && (
+                        <div className="relative w-48 h-72 mx-auto rounded-[50%] overflow-hidden shadow-lg">
+                            <Image src={tensamaxResultImage.src} alt={tensamaxResultImage.hint} fill className="object-cover" data-ai-hint={tensamaxResultImage.hint} />
+                        </div>
+                    )}
+                    <h3 className="mt-4 font-bold text-lg">Resultados Tensamax</h3>
+                </div>
+            </div>
+
+            <div className="space-y-6 text-lg text-muted-foreground mt-12">
                 <p>Aunque ambos tratamientos ayudan a mejorar la figura, están diseñados para objetivos diferentes. La elección dependerá de tus necesidades específicas.</p>
                 <div className='grid md:grid-cols-2 gap-8 items-start'>
                     <div className='bg-muted/50 p-6 rounded-lg'>
