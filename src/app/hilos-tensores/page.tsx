@@ -222,7 +222,7 @@ export default function HilosTensoresPage() {
       image: findImage('glutes-combined'),
     },
     {
-      title: 'Rectificación Abdominal',
+      title: 'Marcación Abdominal',
       description: 'Red de hilos para estimular colágeno y definir.',
       sessions: '2 sesiones',
       image: findImage('abs-combined'),
@@ -430,14 +430,14 @@ export default function HilosTensoresPage() {
             Mira cómo los hilos tensores han transformado la vida de nuestros
             pacientes.
           </p>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[320px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/shorts/8_jxKjCNLTA?feature=share"
+                src="https://www.youtube.com/embed/8_jxKjCNLTA?feature=share"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
@@ -596,7 +596,7 @@ export default function HilosTensoresPage() {
                       alt={benefit.title}
                       width={200}
                       height={200}
-                      className="rounded-xl shadow-lg w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="rounded-xl shadow-lg w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 aspect-square"
                       data-ai-hint={benefit.image.hint}
                     />
                   </div>
@@ -690,3 +690,4 @@ export default function HilosTensoresPage() {
     
 
     
+
