@@ -245,7 +245,7 @@ export default function BioestimuladoresPage() {
              <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/Vesbkoh8oPQ"
+                  src="https://www.youtube.com/embed/Vesbkoh8oPQ?autoplay=0"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -255,7 +255,7 @@ export default function BioestimuladoresPage() {
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/shorts/2ibpjBt7pXc?feature=share"
+                  src="https://www.youtube.com/embed/2ibpjBt7pXc?autoplay=0"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

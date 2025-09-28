@@ -50,7 +50,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'biostimulator-hero', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'aesthetic medicine' },
   { id: 'firm-skin', src: '/images/medico_estetico_con_jeringa.png', hint: 'firm aesthetic skin' },
   { id: 'biostimulator-diagram', src: '/images/bioestimuladores_Diagrama.png', hint: 'biostimulator diagram' },
-  { id: 'cta-bio', src: '/images/cta-bio.png', hint: 'aesthetic medicine patient' },
+  { id: 'cta-bio', src: '/images/Hilos Tensores.png', hint: 'aesthetic medicine patient' },
 
   // Botox Page
   { id: 'botox-hero', src: '/images/botox-hero.png', hint: 'aesthetic medicine face' },
