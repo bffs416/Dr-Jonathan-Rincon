@@ -33,7 +33,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'skin-improvement', src: '/images/skin.png', hint: 'skin improvement' },
 
   // Hilos Tensores - Before/After Combined
-  { id: 'hilos-jawline-combined', src: '/images/1_1.png', hint: 'thread lift before after' },
+  { id: 'hilos-jawline-combined', src: '/images/1.png', hint: 'thread lift before after' },
   { id: 'neck-combined', src: '/images/Antes y Despues/2.png', hint: 'neck lift before after' }, 
   { id: 'eyes-combined', src: '/images/Antes y Despues/hilos-ojos.jpg', hint: 'eye rejuvenation before after' }, 
   { id: 'foxy-combined', src: '/images/Antes y Despues/hilos-foxy.jpg', hint: 'fox eyes before after' }, 
