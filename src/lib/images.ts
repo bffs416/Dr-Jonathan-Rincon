@@ -26,11 +26,11 @@ export const IMAGES: SiteImage[] = [
   { id: 'butt-lift', src: '/images/Hilos_Tensores _Levantamiento de gluteos _1.png', hint: 'butt lift' },
   { id: 'scar-treatment', src: '/images/Tratamiento de Cicatrices Atróficas.jpg', hint: 'scar treatment' },
   { id: 'cheek-lift', src: '/images/Levantamiento de  pomulos.png', hint: 'cheek lift' },
-  { id: 'jawline-definition', src: '/images/jawline.png', hint: 'jawline definition' },
-  { id: 'eyebrow-lift', src: '/images/eyebrow.png', hint: 'eyebrow lift' },
-  { id: 'nasolabial-folds', src: '/images/nasolabial.png', hint: 'nasolabial folds' },
-  { id: 'neck-rejuvenation', src: '/images/neck.png', hint: 'neck rejuvenation' },
-  { id: 'skin-improvement', src: '/images/skin.png', hint: 'skin improvement' },
+  { id: 'jawline-definition', src: '/images/Ovalo Facial.jpg', hint: 'jawline definition' },
+  { id: 'eyebrow-lift', src: '/images/Elevación de cejas caídas..jpg', hint: 'eyebrow lift' },
+  { id: 'nasolabial-folds', src: '/images/lineas_de_marioneta.png', hint: 'nasolabial folds' },
+  { id: 'neck-rejuvenation', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'neck rejuvenation' },
+  { id: 'skin-improvement', src: '/images/calidad de piel .png', hint: 'skin improvement' },
 
   // Hilos Tensores - Before/After Combined
   { id: 'hilos-jawline-combined', src: '/images/Antes y Despues/2.png', hint: 'thread lift before after' },
