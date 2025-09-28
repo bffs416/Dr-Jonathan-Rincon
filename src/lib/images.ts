@@ -33,17 +33,17 @@ export const IMAGES: SiteImage[] = [
   { id: 'skin-improvement', src: '/images/skin.png', hint: 'skin improvement' },
 
   // Hilos Tensores - Before/After Combined
-  { id: 'hilos-jawline-combined', src: '/images/Antes y Despues/1_1.png', hint: 'thread lift before after' },
-  { id: 'neck-combined', src: '/images/Antes y Despues/2.png', hint: 'neck lift before after' }, 
-  { id: 'eyes-combined', src: '/images/Antes y Despues/2.png', hint: 'eye rejuvenation before after' }, 
-  { id: 'foxy-combined', src: '/images/Antes y Despues/2.png', hint: 'fox eyes before after' }, 
-  { id: 'rhino-combined', src: '/images/Antes y Despues/2.png', hint: 'rhino before after' }, 
-  { id: 'marionette-combined', src: '/images/Antes y Despues/2.png', hint: 'marionette lines before after' }, 
-  { id: 'glutes-combined', src: '/images/Antes y Despues/2.png', hint: 'butt lift before after' }, 
-  { id: 'abs-combined', src: '/images/Antes y Despues/20.png', hint: 'abs definition before after' }, 
-  { id: 'arms-combined', src: '/images/Antes y Despues/2.png', hint: 'arm lift before after' }, 
-  { id: 'thighs-combined', src: '/images/Antes y Despues/2.png', hint: 'thigh lift before after' }, 
-  { id: 'knees-combined', src: '/images/Antes y Despues/2.png', hint: 'knee rejuvenation before after' }, 
+  { id: 'hilos-jawline-combined', src: '/images/Antes y Despues/2.png', hint: 'thread lift before after' },
+  { id: 'neck-combined', src: '/images/Antes y Despues/8.png', hint: 'neck lift before after' }, 
+  { id: 'eyes-combined', src: '/images/Antes y Despues/7.png', hint: 'eye rejuvenation before after' }, 
+  { id: 'foxy-combined', src: '/images/Antes y Despues/11.png', hint: 'fox eyes before after' }, 
+  { id: 'rhino-combined', src: '/images/Antes y Despues/4.png', hint: 'rhino before after' }, 
+  { id: 'marionette-combined', src: '/images/Antes y Despues/19.png', hint: 'marionette lines before after' }, 
+  { id: 'glutes-combined', src: '/images/Antes y Despues/12.png', hint: 'butt lift before after' }, 
+  { id: 'abs-combined', src: '/images/Antes y Despues/13.png', hint: 'abs definition before after' }, 
+  { id: 'arms-combined', src: '/images/Antes y Despues/18.png', hint: 'arm lift before after' }, 
+  { id: 'thighs-combined', src: '/images/Antes y Despues/17.png', hint: 'thigh lift before after' }, 
+  { id: 'knees-combined', src: '/images/Antes y Despues/3.png', hint: 'knee rejuvenation before after' }, 
 
 
   // Bioestimuladores Page
@@ -90,9 +90,9 @@ export const IMAGES: SiteImage[] = [
   // Home Page
   { id: 'home-testimonial-1', src: '/images/Modelo 6.jpg', hint: 'facial procedure' },
   { id: 'home-testimonial-2', src: '/images/Modelo 9.jpg', hint: 'facial injection' },
-  { id: 'home-before-after-1', src: '/images/antes-y-despues-hilos-mandibular.jpg', hint: 'jawline definition before after' },
-  { id: 'home-before-after-2', src: '/images/antes-y-despues-hilos-rino.jpg', hint: 'rhinoplasty before after' },
-  { id: 'home-before-after-3', src: '/images/antes-y-despues-hilos-foxy.jpg', hint: 'foxy eyes before after' },
+  { id: 'home-before-after-1', src: '/images/logo_circular_bolsillo_medico.png', hint: 'jawline definition before after' },
+  { id: 'home-before-after-2', src: '/images/Productos.jpg', hint: 'rhinoplasty before after' },
+  { id: 'home-before-after-3', src: '/images/Modelo 1.jpg', hint: 'foxy eyes before after' },
   
   // Gallery Images (for Infinite Moving Cards)
   { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title: 'Lifting de Cuello', href: '/hilos-tensores', category: 'Hilos Tensores' },

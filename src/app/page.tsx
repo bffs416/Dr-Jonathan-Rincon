@@ -314,7 +314,7 @@ export default function Home() {
               ))}
             </div>
             <Button asChild size="lg" className="mt-12">
-              <Link href="/medicina-estetica-avanzada">Ver Todos los Tratamientos</Link>
+              <Link href="#tratamientos">Ver Todos los Tratamientos</Link>
             </Button>
           </div>
         </section>
