@@ -227,6 +227,44 @@ export default function BioestimuladoresPage() {
           </Accordion>
         </section>
 
+        {/* Section: Videos */}
+        <section id="videos" className="scroll-mt-20">
+          <div className="text-center">
+            <SectionTitleWithLines>
+              <span className="text-foreground">Resultados que</span>{' '}
+              <span className="text-primary">Inspiran</span>
+            </SectionTitleWithLines>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mt-2">
+              Pacientes Reales, Historias Reales
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+              Mira cómo los bioestimuladores de colágeno han ayudado a nuestros pacientes a lograr una piel más firme y joven.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
         {/* Section 4: Safety */}
         <section id="seguridad" className="scroll-mt-20">
           <div className="p-8 md:p-12">
