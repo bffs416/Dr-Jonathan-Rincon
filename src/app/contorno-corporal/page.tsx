@@ -304,7 +304,7 @@ export default function ContornoCorporalPage() {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center max-w-lg mx-auto">
                 <div className="text-center">
                     {hidrolipoclasiaResultImage && (
-                        <div className="relative w-60 h-70 mx-auto rounded-[50%] overflow-hidden shadow-lg">
+                        <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden shadow-lg">
                             <Image src={hidrolipoclasiaResultImage.src} alt={hidrolipoclasiaResultImage.hint} fill className="object-cover" data-ai-hint={hidrolipoclasiaResultImage.hint} />
                         </div>
                     )}
@@ -312,7 +312,7 @@ export default function ContornoCorporalPage() {
                 </div>
                 <div className="text-center">
                     {tensamaxResultImage && (
-                        <div className="relative w-60 h-70 mx-auto rounded-[50%] overflow-hidden shadow-lg">
+                        <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden shadow-lg">
                             <Image src={tensamaxResultImage.src} alt={tensamaxResultImage.hint} fill className="object-cover" data-ai-hint={tensamaxResultImage.hint} />
                         </div>
                     )}
