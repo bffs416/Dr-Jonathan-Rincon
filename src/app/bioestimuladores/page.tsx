@@ -255,15 +255,15 @@ export default function BioestimuladoresPage() {
             <div className="flex justify-center">
               <blockquote
                 className="tiktok-embed"
-                cite="https://www.tiktok.com/@drjonathanrincon/video/7350796850839817477"
-                data-video-id="7350796850839817477"
+                cite="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
+                data-video-id="7550473078103428357"
                 style={{ maxWidth: '325px', minWidth: '325px' }}
               >
                 <section>
                   <a
                     target="_blank"
                     title="@drjonathanrincon"
-                    href="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357?is_from_webapp=1&sender_device=pc"
+                    href="https://www.tiktok.com/@drjonathanrincon/video/7550473078103428357"
                   >
                     @drjonathanrincon
                   </a>
