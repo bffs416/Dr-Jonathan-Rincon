@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, PlusCircle } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -331,10 +331,15 @@ export default function ContornoCorporalPage() {
                         <p>...tu preocupación es la <strong className='text-primary'>flacidez, la celulitis y la falta de tonicidad</strong> en la piel, o si buscas modelar el contorno de forma no invasiva.</p>
                     </div>
                 </div>
-                <div className='text-center pt-6'>
-                    <h4 className='font-headline text-2xl font-bold text-primary'>La Combinación Perfecta</h4>
-                    <p className='mt-2 max-w-3xl mx-auto'>En muchos casos, la mejor estrategia es combinar ambos tratamientos. Un profesional puede diseñar un plan donde primero se reduce el volumen de grasa con hidrolipoclasia y luego se reafirma y tensa la piel con Tensamax para un resultado espectacular.</p>
-                    <p className='mt-4 font-semibold'>La consulta médica es clave para crear un plan de tratamiento individualizado y seguro para ti.</p>
+                <div className='text-center pt-6 max-w-4xl mx-auto'>
+                    <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-lg shadow-lg text-left">
+                        <h4 className='font-headline text-2xl font-bold text-primary flex items-center gap-2'>
+                          <PlusCircle className="w-6 h-6" />
+                          La Combinación Perfecta
+                        </h4>
+                        <p className='mt-4'>En muchos casos, la mejor estrategia es combinar ambos tratamientos. Un profesional puede diseñar un plan donde primero se reduce el volumen de grasa con hidrolipoclasia y luego se reafirma y tensa la piel con Tensamax para un resultado espectacular.</p>
+                        <p className='mt-4 font-semibold'>La consulta médica es clave para crear un plan de tratamiento individualizado y seguro para ti.</p>
+                    </div>
                 </div>
             </div>
           </div>
@@ -356,13 +361,13 @@ export default function ContornoCorporalPage() {
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/LXb3EKWsInQ"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+               <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/LXb3EKWsInQ"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
               ></iframe>
             </div>
              <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
