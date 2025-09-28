@@ -17,6 +17,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { ChevronDown } from 'lucide-react';
+import React from 'react';
 
 const navLinks = [
     { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
@@ -99,11 +100,16 @@ export default function Header() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Logo />
 
-        <nav className="hidden lg:flex items-center gap-2">
-            {navLinks.map(link => link.dropdown 
-                ? <NavDropdown key={link.name} name={link.name} items={link.dropdown} />
-                : <NavLink key={link.name} href={link.href || '#'} highlight={link.highlight}>{link.name}</NavLink>
-            )}
+        <nav className="hidden lg:flex items-center gap-4">
+            {navLinks.map((link, index) => (
+              <React.Fragment key={link.name}>
+                {index > 0 && <div className="h-4 w-px bg-border" />}
+                {link.dropdown 
+                    ? <NavDropdown name={link.name} items={link.dropdown} />
+                    : <NavLink href={link.href || '#'} highlight={link.highlight}>{link.name}</NavLink>
+                }
+              </React.Fragment>
+            ))}
         </nav>
 
         <div className="hidden lg:flex items-center space-x-1">
