@@ -133,15 +133,15 @@ export default function Home() {
 
   const beforeAfterCases = [
     {
-      title: 'Definición Mandibular',
+      title: 'Capacitacion a mis pacientes',
       image: findImage('home-before-after-1'),
     },
     {
-      title: 'Rinomodelación no quirúrgica',
+      title: 'Excelentes productos',
       image: findImage('home-before-after-2'),
     },
     {
-      title: 'Foxy Eyes (Lifting de Cejas)',
+      title: 'Pacientes Felices',
       image: findImage('home-before-after-3'),
     },
   ];

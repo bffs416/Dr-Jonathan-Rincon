@@ -441,24 +441,23 @@ export default function HilosTensoresPage() {
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[320px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/shorts/4HyDiDdty3c?feature=share
-"
+                src="https://www.youtube.com/embed/4HyDiDdty3c"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[320px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/shorts/ynRpDfgLCno?feature=share"
+                src="https://www.youtube.com/embed/ynRpDfgLCno"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
@@ -691,4 +690,5 @@ export default function HilosTensoresPage() {
     
 
     
+
 

@@ -47,9 +47,9 @@ export const IMAGES: SiteImage[] = [
 
 
   // Bioestimuladores Page
-  { id: 'biostimulator-hero', src: '/images/biostimulator-hero.png', hint: 'aesthetic medicine' },
-  { id: 'firm-skin', src: '/images/firm-skin.png', hint: 'firm aesthetic skin' },
-  { id: 'biostimulator-diagram', src: '/images/biostimulator-diagram.png', hint: 'biostimulator diagram' },
+  { id: 'biostimulator-hero', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'aesthetic medicine' },
+  { id: 'firm-skin', src: '/images/medico_estetico_con_jeringa.png', hint: 'firm aesthetic skin' },
+  { id: 'biostimulator-diagram', src: '/images/bioestimuladores_Diagrama.png', hint: 'biostimulator diagram' },
   { id: 'cta-bio', src: '/images/cta-bio.png', hint: 'aesthetic medicine patient' },
 
   // Botox Page
