@@ -32,29 +32,19 @@ export const IMAGES: SiteImage[] = [
   { id: 'neck-rejuvenation', src: '/images/neck.png', hint: 'neck rejuvenation' },
   { id: 'skin-improvement', src: '/images/skin.png', hint: 'skin improvement' },
 
-  // Hilos Tensores - Before/After
-  { id: 'neck-before', src: '/images/Antes y Despues/neck-before.png', hint: 'neck lift before' },
-  { id: 'neck-after', src: '/images/Antes y Despues/neck-after.png', hint: 'neck lift after' },
-  { id: 'eyes-before', src: '/images/Antes y Despues/eyes-before.png', hint: 'eye rejuvenation before' },
-  { id: 'eyes-after', src: '/imagesAntes y Despues//eyes-after.png', hint: 'eye rejuvenation after' },
-  { id: 'jawline-before', src: '/images/Antes y Despues/jawline-before.png', hint: 'jawline before' },
-  { id: 'jawline-after', src: '/images/Antes y Despues/jawline-after.png', hint: 'jawline after' },
-  { id: 'foxy-before', src: '/images/Antes y Despues/foxy-before.png', hint: 'fox eyes before' },
-  { id: 'foxy-after', src: '/images/Antes y Despues/Hilos_Foxy_eyes.png', hint: 'fox eyes after' },
-  { id: 'rhino-before', src: '/images/Antes y Despues/rhino-before.png', hint: 'rhino before' },
-  { id: 'rhino-after', src: '/images/Antes y Despues/rhino-after.png', hint: 'rhino after' },
-  { id: 'marionette-before', src: '/images/Antes y Despues/marionette-before.png', hint: 'marionette lines before' },
-  { id: 'marionette-after', src: '/images/Antes y Despues/marionette-after.png', hint: 'marionette lines after' },
-  { id: 'glutes-before', src: '/images/Antes y Despues/glutes-before.png', hint: 'butt lift before' },
-  { id: 'glutes-after', src: '/images/Antes y Despues/glutes-after.png', hint: 'butt lift after' },
-  { id: 'abs-before', src: '/images/Antes y Despues/abs-before.png', hint: 'abs definition before' },
-  { id: 'abs-after', src: '/images/Antes y Despues/abs-after.png', hint: 'abs definition after' },
-  { id: 'arms-before', src: '/images/Antes y Despues/arms-before.png', hint: 'arm lift before' },
-  { id: 'arms-after', src: '/images/Antes y Despues/arms-after.png', hint: 'arm lift after' },
-  { id: 'thighs-before', src: '/images/Antes y Despues/thighs-before.png', hint: 'thigh lift before' },
-  { id: 'thighs-after', src: '/images/Antes y Despues/thighs-after.png', hint: 'thigh lift after' },
-  { id: 'knees-before', src: '/images/Antes y Despues/knees-before.png', hint: 'knee rejuvenation before' },
-  { id: 'knees-after', src: '/images/Antes y Despues/knees-after.png', hint: 'knee rejuvenation after' },
+  // Hilos Tensores - Before/After Combined
+  { id: 'hilos-jawline-combined', src: '/images/antes-y-despues-hilos-mandibular.jpg', hint: 'thread lift before after' },
+  { id: 'neck-combined', src: '/images/Antes y Despues/neck-before.png', hint: 'neck lift before after' }, // Placeholder, replace with combined
+  { id: 'eyes-combined', src: '/images/Antes y Despues/eyes-before.png', hint: 'eye rejuvenation before after' }, // Placeholder
+  { id: 'foxy-combined', src: '/images/Antes y Despues/foxy-before.png', hint: 'fox eyes before after' }, // Placeholder
+  { id: 'rhino-combined', src: '/images/Antes y Despues/rhino-before.png', hint: 'rhino before after' }, // Placeholder
+  { id: 'marionette-combined', src: '/images/Antes y Despues/marionette-before.png', hint: 'marionette lines before after' }, // Placeholder
+  { id: 'glutes-combined', src: '/images/Antes y Despues/glutes-before.png', hint: 'butt lift before after' }, // Placeholder
+  { id: 'abs-combined', src: '/images/Antes y Despues/abs-before.png', hint: 'abs definition before after' }, // Placeholder
+  { id: 'arms-combined', src: '/images/Antes y Despues/arms-before.png', hint: 'arm lift before after' }, // Placeholder
+  { id: 'thighs-combined', src: '/images/Antes y Despues/thighs-before.png', hint: 'thigh lift before after' }, // Placeholder
+  { id: 'knees-combined', src: '/images/Antes y Despues/knees-before.png', hint: 'knee rejuvenation before after' }, // Placeholder
+
 
   // Bioestimuladores Page
   { id: 'biostimulator-hero', src: '/images/biostimulator-hero.png', hint: 'aesthetic medicine' },

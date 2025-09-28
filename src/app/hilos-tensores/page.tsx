@@ -178,84 +178,72 @@ export default function HilosTensoresPage() {
   ];
 
    const beforeAfterCases = [
-    // Faciales
+    {
+      title: 'Definición Mandibular',
+      description: 'Técnica para un óvalo facial más definido y joven.',
+      sessions: '1 sesión',
+      image: findImage('hilos-jawline-combined'),
+    },
     {
       title: 'Lifting de Cuello (Papada)',
       description: 'Hilos espiculados para tensado submentoniano.',
       sessions: '1 sesión',
-      beforeImage: findImage('neck-before'),
-      afterImage: findImage('neck-after'),
+      image: findImage('neck-combined'),
     },
     {
       title: 'Rejuvenecimiento Periorbital',
       description: 'Hilos lisos para patas de gallo y ojeras.',
       sessions: '2 sesiones',
-      beforeImage: findImage('eyes-before'),
-      afterImage: findImage('eyes-after'),
-    },
-    {
-      title: 'Definición Mandibular',
-      description: 'Técnica para un óvalo facial más definido y joven.',
-      sessions: '1 sesión',
-      beforeImage: findImage('jawline-before'),
-      afterImage: findImage('jawline-after'),
+      image: findImage('eyes-combined'),
     },
     {
       title: 'Foxy Eyes (Lifting de Cejas)',
       description: 'Elevación de la cola de la ceja con hilos espiculados.',
       sessions: '1 sesión',
-      beforeImage: findImage('foxy-before'),
-      afterImage: findImage('foxy-after'),
+      image: findImage('foxy-combined'),
     },
     {
       title: 'Rinomodelación no quirúrgica',
       description: 'Elevación de punta y rectificación de dorso nasal.',
       sessions: '1 sesión',
-      beforeImage: findImage('rhino-before'),
-      afterImage: findImage('rhino-after'),
+      image: findImage('rhino-combined'),
     },
     {
       title: 'Líneas de Marioneta',
       description: 'Suavizado de los pliegues de las comisuras de los labios.',
       sessions: '1 sesión',
-      beforeImage: findImage('marionette-before'),
-      afterImage: findImage('marionette-after'),
+      image: findImage('marionette-combined'),
     },
     // Corporales
     {
       title: 'Levantamiento de Glúteos',
       description: 'Hilos espiculados para mejorar la ptosis glútea leve.',
       sessions: '2 sesiones',
-      beforeImage: findImage('glutes-before'),
-      afterImage: findImage('glutes-after'),
+      image: findImage('glutes-combined'),
     },
     {
       title: 'Marcación Abdominal',
       description: 'Red de hilos para estimular colágeno y definir.',
       sessions: '3 sesiones',
-      beforeImage: findImage('abs-before'),
-      afterImage: findImage('abs-after'),
+      image: findImage('abs-combined'),
     },
     {
       title: 'Lifting de Brazos',
       description: 'Tratamiento de la flacidez en cara interna de brazos.',
       sessions: '2 sesiones',
-      beforeImage: findImage('arms-before'),
-      afterImage: findImage('arms-after'),
+      image: findImage('arms-combined'),
     },
     {
       title: 'Lifting de Muslos',
       description: 'Reducción de flacidez en cara interna de muslos.',
       sessions: '2 sesiones',
-      beforeImage: findImage('thighs-before'),
-      afterImage: findImage('thighs-after'),
+      image: findImage('thighs-combined'),
     },
     {
       title: 'Rejuvenecimiento de Rodillas',
       description: 'Hilos lisos para tratar la piel laxa sobre las rodillas.',
       sessions: '2 sesiones',
-      beforeImage: findImage('knees-before'),
-      afterImage: findImage('knees-after'),
+      image: findImage('knees-combined'),
     },
   ];
 
@@ -499,35 +487,18 @@ export default function HilosTensoresPage() {
                           <p className="text-muted-foreground text-sm">{caseItem.description}</p>
                           <Badge variant="secondary" className="mx-auto mt-1">{caseItem.sessions}</Badge>
                       </CardHeader>
-                      <CardContent className="p-4 sm:p-6 grid grid-cols-2 gap-4 items-center">
-                        <div className="space-y-2">
-                           <h3 className="font-semibold text-center text-muted-foreground">Antes</h3>
-                          {caseItem.beforeImage && (
-                            <Image
-                              src={caseItem.beforeImage.src}
-                              alt={`Antes - ${caseItem.title}`}
-                              width={600}
-                              height={400}
-                              className="rounded-lg aspect-square object-cover"
-                              data-ai-hint={caseItem.beforeImage.hint}
-                              quality={80}
-                            />
-                          )}
-                        </div>
-                        <div className="space-y-2">
-                          <h3 className="font-semibold text-center text-muted-foreground">Después</h3>
-                          {caseItem.afterImage && (
-                            <Image
-                              src={caseItem.afterImage.src}
-                              alt={`Después - ${caseItem.title}`}
-                              width={600}
-                              height={400}
-                              className="rounded-lg aspect-square object-cover"
-                              data-ai-hint={caseItem.afterImage.hint}
-                              quality={80}
-                            />
-                          )}
-                        </div>
+                      <CardContent className="p-4 sm:p-6">
+                        {caseItem.image && (
+                          <Image
+                            src={caseItem.image.src}
+                            alt={`Antes y Después - ${caseItem.title}`}
+                            width={800}
+                            height={800}
+                            className="rounded-lg aspect-square object-contain"
+                            data-ai-hint={caseItem.image.hint}
+                            quality={90}
+                          />
+                        )}
                       </CardContent>
                     </Card>
                   </CarouselItem>
