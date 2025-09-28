@@ -65,7 +65,7 @@ const blogPosts = [
     slug: '/blog/contorno-corporal-hidrolipoclasia',
     category: 'Corporal',
     image: findImage('blog-post-3'),
-    title: 'Contorno Corporal: Hidrolipoclasia vs Métodos Tradicionales',
+    title: 'Contorno Corporal: Hidrolipoclasia vs. Métodos Tradicionales',
     description:
       'Conoce las ventajas de la hidrolipoclasia sobre otros métodos de reducción de grasa. Procedimiento, resultados y cuidados post-tratamiento.',
     date: '11 de enero de 2024',
