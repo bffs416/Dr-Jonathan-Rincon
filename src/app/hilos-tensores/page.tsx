@@ -15,7 +15,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
@@ -482,11 +482,6 @@ export default function HilosTensoresPage() {
               {beforeAfterCases.map((caseItem, index) => (
                   <CarouselItem key={index}>
                     <Card className="shadow-xl overflow-hidden bg-card">
-                       <CardHeader className="text-center pb-2">
-                          <CardTitle className="font-headline text-2xl">{caseItem.title}</CardTitle>
-                          <p className="text-muted-foreground text-sm">{caseItem.description}</p>
-                          <Badge variant="secondary" className="mx-auto mt-1">{caseItem.sessions}</Badge>
-                      </CardHeader>
                       <CardContent className="p-4 sm:p-6">
                         {caseItem.image && (
                           <Image
@@ -500,6 +495,11 @@ export default function HilosTensoresPage() {
                           />
                         )}
                       </CardContent>
+                      <CardFooter className="flex flex-col items-center text-center p-4 sm:p-6 pt-0">
+                          <CardTitle className="font-headline text-2xl">{caseItem.title}</CardTitle>
+                          <p className="text-muted-foreground text-sm mt-1">{caseItem.description}</p>
+                          <Badge variant="secondary" className="mx-auto mt-2">{caseItem.sessions}</Badge>
+                      </CardFooter>
                     </Card>
                   </CarouselItem>
                 ))}
