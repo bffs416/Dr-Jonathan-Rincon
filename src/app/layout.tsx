@@ -10,6 +10,7 @@ import './globals.css';
 import { GeometricBackground } from '@/components/geometric-background';
 import { MessageCircle } from 'lucide-react';
 import { LoadingScreen } from '@/components/loading-screen';
+import Script from 'next/script';
 
 // export const metadata: Metadata = {
 //   title: 'Dr. Jonathan Rincón',
@@ -75,6 +76,7 @@ export default function RootLayout({
             </a>
           </>
         )}
+        <Script async src="https://www.tiktok.com/embed.js" />
       </body>
     </html>
   );

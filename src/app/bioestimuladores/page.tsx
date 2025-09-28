@@ -241,19 +241,9 @@ export default function BioestimuladoresPage() {
               Mira cómo los bioestimuladores de colágeno han ayudado a nuestros pacientes a lograr una piel más firme y joven.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
-              <iframe
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+             <div className="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/LXb3EKWsInQ"
                 title="YouTube video player"
@@ -261,6 +251,24 @@ export default function BioestimuladoresPage() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
+            </div>
+            <div className="flex justify-center">
+              <blockquote
+                className="tiktok-embed"
+                cite="https://www.tiktok.com/@drjonathanrincon/video/7350796850839817477"
+                data-video-id="7350796850839817477"
+                style={{ maxWidth: '325px', minWidth: '325px' }}
+              >
+                <section>
+                  <a
+                    target="_blank"
+                    title="@drjonathanrincon"
+                    href="https://www.tiktok.com/@drjonathanrincon?refer=embed"
+                  >
+                    @drjonathanrincon
+                  </a>
+                </section>
+              </blockquote>
             </div>
           </div>
         </section>
