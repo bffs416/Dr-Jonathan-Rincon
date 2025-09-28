@@ -154,11 +154,11 @@ export default function MedicinaEsteticaAvanzadaPage() {
                 <div className="mt-12 space-y-16">
                   
                   {/* Mesoterapia */}
-                   <div className="relative pt-16">
-                    <div className="hidden md:block absolute top-0 left-0 h-[320px] w-[320px] z-10">
-                      <Placeholder seed="mesoterapia-facial" className="rounded-full !w-full !h-full" />
+                   <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="w-full aspect-square">
+                        <Placeholder seed="mesoterapia-facial" className="rounded-xl shadow-xl" />
                     </div>
-                    <div className="p-6 md:pl-[180px] text-left md:ml-[160px]">
+                    <div className="text-left">
                       <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
                         <Syringe className="w-7 h-7 text-primary" /> Mesoterapia 
                       </h3>
@@ -177,11 +177,11 @@ export default function MedicinaEsteticaAvanzadaPage() {
                   </div>
 
                   {/* Skinboosters */}
-                  <div className="relative pt-16">
-                      <div className="hidden md:block absolute top-0 right-0 h-[320px] w-[320px] z-10">
-                        <Placeholder seed="skinbooster-treatment" className="rounded-full !w-full !h-full"/>
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
+                      <div className="w-full aspect-square md:order-2">
+                        <Placeholder seed="skinbooster-treatment" className="rounded-xl shadow-xl"/>
                       </div>
-                      <div className="p-6 md:pr-[180px] text-left md:mr-[160px]">
+                      <div className="text-left md:order-1">
                         <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
                           <Droplets className="w-7 h-7 text-primary" />{' '}
                           Skinboosters
@@ -213,11 +213,11 @@ export default function MedicinaEsteticaAvanzadaPage() {
                   </div>
 
                   {/* PDRN */}
-                   <div className="relative pt-16">
-                    <div className="hidden md:block absolute top-0 left-0 h-[320px] w-[320px] z-10">
-                      <Placeholder seed="pdrn-collagen" className="rounded-full !w-full !h-full" />
+                   <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div className="w-full aspect-square">
+                      <Placeholder seed="pdrn-collagen" className="rounded-xl shadow-xl" />
                     </div>
-                    <div className="p-6 md:pl-[180px] text-left md:ml-[160px]">
+                    <div className="text-left">
                         <h3 className="flex items-center gap-3 font-headline text-2xl font-bold">
                           <Dna className="w-7 h-7 text-primary" /> PDRN (Esperma de Salmón)
                         </h3>
@@ -509,7 +509,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                     </div>
                  </div>
                  <div className='w-full aspect-square'>
-                    <Placeholder className="rounded-full shadow-2xl" seed="carboxytherapy-image" />
+                    <Placeholder className="rounded-xl shadow-2xl" seed="carboxytherapy-image" />
                  </div>
               </section>
 
