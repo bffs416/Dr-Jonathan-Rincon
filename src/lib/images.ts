@@ -71,14 +71,14 @@ export const IMAGES: SiteImage[] = [
   // Medicina Estetica Avanzada Page
   { id: 'preventive-hero', src: '/images/Productos.jpg', hint: 'preventive medicine' },
   { id: 'rejuvenation-guide', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'facial rejuvenation' },
-  { id: 'mesoterapia-facial', src: '/images/mesoterapia-facial.png', hint: 'facial mesotherapy' },
-  { id: 'skinbooster-treatment', src: '/images/skinbooster-treatment.png', hint: 'skin hydration treatment' },
-  { id: 'pdrn-collagen', src: '/images/pdrn-collagen.png', hint: 'collagen stimulation' },
-  { id: 'facial-filler', src: '/images/facial-filler.png', hint: 'facial filler' },
-  { id: 'body-treatment', src: '/images/body-treatment.png', hint: 'body treatment' },
-  { id: 'reducing-massage', src: '/images/reducing-massage.png', hint: 'reducing massage' },
-  { id: 'carboxytherapy-image', src: '/images/carboxytherapy-image.png', hint: 'carboxytherapy' },
-  { id: 'cta-preventive', src: '/images/cta-preventive.png', hint: 'radiant skin' },
+  { id: 'mesoterapia-facial', src: '/images/mesoterapia.png', hint: 'facial mesotherapy' },
+  { id: 'skinbooster-treatment', src: '/images/Skinbooster.png', hint: 'skin hydration treatment' },
+  { id: 'pdrn-collagen', src: '/images/PDRN.jpg', hint: 'collagen stimulation' },
+  { id: 'facial-filler', src: '/images/Hacido Hialuronico.png', hint: 'facial filler' },
+  { id: 'body-treatment', src: '/images/diptico_marcas_preoperatorias.png', hint: 'body treatment' },
+  { id: 'reducing-massage', src: '/images/reducing-massage.jpg', hint: 'reducing massage' },
+  { id: 'carboxytherapy-image', src: '/images/Carboxyterapia.png', hint: 'carboxytherapy' },
+  { id: 'cta-preventive', src: '/images/Hilos Tensores.png', hint: 'radiant skin' },
 
   // Blog Listing Page
   { id: 'blog-featured', src: '/images/aesthetic-medicine-main.png', hint: 'aesthetic medicine' },
