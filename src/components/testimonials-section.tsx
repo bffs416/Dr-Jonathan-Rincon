@@ -55,7 +55,7 @@ export function TestimonialsSection() {
             </div>
             <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
               <Image
-                src="/images/Modelo 6.jpg"
+                src="/images/Modelo 9.jpg"
                 alt="Análisis facial"
                 width={300}
                 height={300}
