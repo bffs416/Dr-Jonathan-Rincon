@@ -32,6 +32,7 @@ import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { cn } from '@/lib/utils';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
 import { TestimonialsSection } from '@/components/testimonials-section';
+import { findImage } from '@/lib/images';
 
 const treatments: { icon: string; title: string; href: string; size?: number }[] = [
   {
@@ -95,8 +96,8 @@ const TreatmentCard = ({
 
 
 export default function Home() {
-  const testimonialImage1 = { src: '/images/Hilos_Tensores_Resultados Paciente.jpg', hint: 'facial procedure' };
-  const testimonialImage2 = { src: '/images/Hilos Tensores_Analisis_.png', hint: 'facial injection' };
+  const testimonialImage1 = { src: '/images/Modelo 6.jpg', hint: 'facial procedure' };
+  const testimonialImage2 = { src: '/images/Modelo 9.jpg', hint: 'facial injection' };
   const galleryImages = [
     { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title: 'Lifting de Cuello', href: '/hilos-tensores', category: 'Hilos Tensores' },
     { id: 'gallery-2', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'man consultation', title: 'Rejuvenecimiento Facial', href: '/medicina-estetica-avanzada' },
@@ -111,16 +112,16 @@ export default function Home() {
 
   const stats = [
     {
+      value: 1000,
+      label: 'Pacientes Satisfechos',
+      icon: HeartHandshake,
+      suffix: '+',
+    },
+    {
       value: 100,
       label: 'Satisfacción',
       icon: Sparkles,
       suffix: '%',
-    },
-    {
-      value: 500,
-      label: 'Pacientes Satisfechos',
-      icon: HeartHandshake,
-      suffix: '+',
     },
     {
       value: 8,
@@ -130,27 +131,18 @@ export default function Home() {
     },
   ];
 
-  const testimonials = [
+  const beforeAfterCases = [
     {
-      name: 'Ana María G.',
-      title: 'Paciente de Hilos Tensores',
-      avatar: 'https://i.pravatar.cc/150?img=1',
-      text: '“El resultado con los hilos tensores superó mis expectativas. El Dr. Rincón es un verdadero profesional, me sentí segura en todo momento y el cambio en mi rostro es natural y rejuvenecedor. ¡Lo recomiendo a ojos cerrados!”',
-      rating: 5,
+      title: 'Definición Mandibular',
+      image: findImage('home-before-after-1'),
     },
     {
-      name: 'Sofía R.',
-      title: 'Paciente de Contorno Corporal',
-      avatar: 'https://i.pravatar.cc/150?img=5',
-      text: '“Después de probar dietas y ejercicio sin ver resultados en mi abdomen, la hidrolipoclasia fue la solución. El procedimiento fue rápido y el Dr. Rincón y su equipo son increíbles. Estoy muy contenta con mi nueva figura.”',
-      rating: 5,
+      title: 'Rinomodelación no quirúrgica',
+      image: findImage('home-before-after-2'),
     },
     {
-      name: 'Luisa F.',
-      title: 'Paciente de Botox',
-      avatar: 'https://i.pravatar.cc/150?img=3',
-      text: '“Tenía miedo de que el botox me dejara sin expresión, pero el Dr. Rincón logró un resultado súper natural. Me veo más descansada y fresca, sin que nadie note que me hice algo. ¡Es exactamente lo que quería!”',
-      rating: 5,
+      title: 'Foxy Eyes (Lifting de Cejas)',
+      image: findImage('home-before-after-3'),
     },
   ];
 
@@ -291,6 +283,42 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Before and After Section */}
+        <section id="resultados-home" className="py-16 sm:py-24 bg-secondary">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold">
+              Resultados que <span className="text-primary">Inspiran</span>
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+              Transformaciones reales que reflejan mi compromiso con la excelencia y la naturalidad.
+            </p>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+              {beforeAfterCases.map((caseItem, index) => (
+                <Card key={index} className="overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                  {caseItem.image && (
+                    <div className="aspect-square relative">
+                      <Image
+                        src={caseItem.image.src}
+                        alt={`Antes y Después - ${caseItem.title}`}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={caseItem.image.hint}
+                      />
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-lg font-headline">{caseItem.title}</CardTitle>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+            <Button asChild size="lg" className="mt-12">
+              <Link href="/medicina-estetica-avanzada">Ver Todos los Tratamientos</Link>
+            </Button>
+          </div>
+        </section>
+
 
         {/* Testimonials Section */}
         <TestimonialsSection />
