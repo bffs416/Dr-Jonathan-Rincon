@@ -404,7 +404,7 @@ export default function HilosTensoresPage() {
                     data-ai-hint={app.image.hint}
                   />
                 )}
-                <Card className="w-full -mt-8 pt-12 pb-6 px-6 shadow-lg flex flex-col flex-1">
+                <Card className="w-full -mt-[60px] pt-20 pb-6 px-6 shadow-lg flex flex-col flex-1">
                   <CardContent className="p-0 flex-1">
                     <p className="font-headline font-semibold text-xl">{app.title}</p>
                     <p className="text-sm text-muted-foreground mt-2">
@@ -590,7 +590,7 @@ export default function HilosTensoresPage() {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex flex-col items-center text-center group">
                 {benefit.image && (
-                  <div className="relative w-48 h-48 mb-4">
+                  <div className="relative w-40 h-40 md:w-48 md:h-48 mb-4">
                     <Image
                       src={benefit.image.src}
                       alt={benefit.title}
@@ -603,10 +603,10 @@ export default function HilosTensoresPage() {
                 )}
                 <Card className="w-full shadow-lg">
                   <CardContent className="p-4 flex items-center justify-center gap-4">
-                    <div className="bg-primary/10 text-primary p-2 rounded-full">
+                    <div className="bg-primary/10 text-primary p-2 rounded-full shrink-0">
                       <CheckCircle className="w-6 h-6" />
                     </div>
-                    <p className="font-semibold text-lg flex-1">{benefit.title}</p>
+                    <p className="font-semibold text-base md:text-lg flex-1 text-left">{benefit.title}</p>
                   </CardContent>
                 </Card>
               </div>

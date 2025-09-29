@@ -421,7 +421,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                     Masajes Reductores –{' '}
                   <span className="text-primary">Moldeado Manual</span></h2>
                 </SectionTitleWithLines>
-                    <div className='mt-12 p-6'>
+                    <div className='mt-12 p-0 md:p-6'>
                         <h3 className="flex items-center gap-3 text-xl font-bold">
                             <Hand className="w-7 h-7 text-primary" /> ¿Qué son y cómo
                             funcionan?
@@ -476,7 +476,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                             Carboxiterapia –{' '}
                         <span className="text-primary">Oxigena y Regenera</span></h2>
                     </SectionTitleWithLines>
-                    <div className='mt-12 p-6'>
+                    <div className='mt-12 p-0 md:p-6'>
                         <h3 className="flex items-center gap-3 text-xl font-bold">
                             <Wind className="w-7 h-7 text-primary" /> ¿Qué es y para
                             qué sirve?

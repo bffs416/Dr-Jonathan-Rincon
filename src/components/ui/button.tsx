@@ -43,14 +43,12 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     
-    // This logic separates the icon from the text to apply the animated circle
     const childrenArray = React.Children.toArray(children);
     const iconChild = childrenArray.find(
-      (child) => React.isValidElement(child) && (child.type as any).displayName?.includes('Icon')
+      (child) => React.isValidElement(child) && ((child.type as any).displayName?.includes('Icon') || (child.type as any).name?.includes('Icon'))
     );
     const textChildren = childrenArray.filter(child => child !== iconChild);
 
-    // If there is an icon, apply the special layout
     if (iconChild) {
       return (
         <Comp
@@ -59,7 +57,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           {...props}
         >
           {textChildren}
-          <div className="bg-accent text-accent-foreground rounded-full w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform">
+          <div className="bg-accent text-accent-foreground rounded-full w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
             {React.cloneElement(iconChild as React.ReactElement, { className: 'w-4 h-4' })}
           </div>
         </Comp>

@@ -260,7 +260,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
+            <div className="mt-12 grid grid-cols-2 gap-y-8 gap-x-4 md:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
                 {treatments.map((treatment) => (
                   <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
