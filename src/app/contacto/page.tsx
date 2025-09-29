@@ -9,6 +9,7 @@ import {
   MapPin,
   Phone,
   Youtube,
+  Send,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,6 +17,9 @@ import { findImage } from '@/lib/images';
 import { cn } from '@/lib/utils';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 
 const Placeholder = ({
   className,
@@ -64,8 +68,43 @@ export default function ContactoPage() {
       </section>
 
       <div className="container mx-auto px-4 py-16 sm:py-24">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
-          {/* Contact Info */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Form Section */}
+          <div className="space-y-8">
+             <div>
+              <h2 className="font-headline text-3xl font-bold">
+                Envíame un Mensaje
+              </h2>
+              <p className="mt-2 text-muted-foreground">
+                Completa el formulario y te responderé lo antes posible.
+              </p>
+            </div>
+            <form className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Nombre Completo</Label>
+                  <Input id="name" placeholder="Tu nombre" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Correo Electrónico</Label>
+                  <Input id="email" type="email" placeholder="tu@correo.com" />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="subject">Asunto</Label>
+                <Input id="subject" placeholder="Ej: Consulta sobre Hilos Tensores" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message">Mensaje</Label>
+                <Textarea id="message" placeholder="Escribe tu mensaje aquí..." className="min-h-[120px]" />
+              </div>
+              <Button type="submit" size="lg" className="w-full">
+                Enviar Mensaje <Send />
+              </Button>
+            </form>
+          </div>
+
+          {/* Contact Info & Map */}
           <div className="space-y-8">
             <div>
               <h2 className="font-headline text-3xl font-bold">
@@ -107,6 +146,18 @@ export default function ContactoPage() {
                     </a>
                   </div>
                 </div>
+                 <div className="flex items-start gap-4">
+                  <Mail className="w-6 h-6 text-primary mt-1" />
+                  <div>
+                    <h3 className="font-semibold">Email</h3>
+                    <a
+                      href="mailto:contacto@drjonathanrincon.com"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      contacto@drjonathanrincon.com
+                    </a>
+                  </div>
+                </div>
                 <div className="flex items-start gap-4">
                   <Clock className="w-6 h-6 text-primary mt-1" />
                   <div>
@@ -119,8 +170,18 @@ export default function ContactoPage() {
                 </div>
               </CardContent>
             </Card>
-            
-            <div className="space-y-4">
+            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.116749910408!2d-75.60995392523219!3d6.248744093740263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44299719eb7b37%3A0x6c63fdf538466b04!2sEdificio%20Azor%2C%20Cra.%2084%20%2337b-195%2C%20La%20Am%C3%A9rica%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1709239562473!5m2!1ses-419!2sco"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+             <div className="space-y-4">
               <SectionTitleWithLines>
                 <span className='text-primary font-bold'>Sígueme</span>
               </SectionTitleWithLines>
@@ -148,29 +209,10 @@ export default function ContactoPage() {
             </div>
             </div>
           </div>
-
-          {/* Map */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="font-headline text-3xl font-bold">Ubicación</h2>
-              <p className="mt-2 text-muted-foreground">
-                Encuéntrame en el corazón de La América, Medellín.
-              </p>
-            </div>
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.116749910408!2d-75.60995392523219!3d6.248744093740263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44299719eb7b37%3A0x6c63fdf538466b04!2sEdificio%20Azor%2C%20Cra.%2084%20%2337b-195%2C%20La%20Am%C3%A9rica%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1709239562473!5m2!1ses-419!2sco"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
 }
+
+    
