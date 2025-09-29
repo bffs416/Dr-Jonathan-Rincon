@@ -143,19 +143,23 @@ export default function MedicinaEsteticaAvanzadaPage() {
               </section>
 
               <section id="hidratacion-calidad" className="scroll-mt-20">
-                <div className="px-4 break-words">
-                  <SectionTitleWithLines>
-                    <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-center text-balance">Hidratación Profunda y{' '}
-                    <span className="text-primary">Calidad de la Piel</span></h2>
-                  </SectionTitleWithLines>
-                </div>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
-                  Estos tratamientos se enfocan en nutrir tu piel desde adentro
-                  para devolverle la vitalidad, el brillo y la suavidad que ha
-                  perdido con el tiempo.
-                </p>
+                <Card className="shadow-none border-none text-center">
+                  <CardHeader>
+                    <CardTitle className="font-headline text-3xl md:text-4xl text-balance">
+                      Hidratación Profunda y{' '}
+                      <span className="text-primary">Calidad de la Piel</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                      Estos tratamientos se enfocan en nutrir tu piel desde adentro
+                      para devolverle la vitalidad, el brillo y la suavidad que ha
+                      perdido con el tiempo.
+                    </p>
+                  </CardContent>
+                </Card>
+
                 <div className="mt-12 space-y-16">
-                  
                   {/* Mesoterapia */}
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full aspect-square">
@@ -294,18 +298,23 @@ export default function MedicinaEsteticaAvanzadaPage() {
               </section>
 
               <section id="rellenos" className="scroll-mt-20">
-                <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-3xl font-bold text-center">
-                    Rellenos con Ácido Hialurónico –{' '}
-                  <span className="text-primary">Volumen y Definición</span></h2>
-                </SectionTitleWithLines>
-                <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
-                  El ácido hialurónico es una sustancia que nuestro cuerpo produce
-                  de forma natural para mantener la piel hidratada y con volumen,
-                  pero su producción disminuye con la edad. Los rellenos dérmicos
-                  utilizan una versión en gel de esta molécula para restaurar o
-                  añadir volumen de forma segura y con resultados inmediatos.
-                </p>
+                <Card className="shadow-none border-none text-center">
+                  <CardHeader>
+                    <CardTitle className="font-headline text-3xl md:text-4xl text-balance">
+                      Rellenos con Ácido Hialurónico –{' '}
+                      <span className="text-primary">Volumen y Definición</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                      El ácido hialurónico es una sustancia que nuestro cuerpo produce
+                      de forma natural para mantener la piel hidratada y con volumen,
+                      pero su producción disminuye con la edad. Los rellenos dérmicos
+                      utilizan una versión en gel de esta molécula para restaurar o
+                      añadir volumen de forma segura y con resultados inmediatos.
+                    </p>
+                  </CardContent>
+                </Card>
                 <div className="mt-12 grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                     <div className="w-full aspect-square">
                         <Placeholder className="rounded-xl shadow-2xl" seed="facial-filler"/>
@@ -418,14 +427,15 @@ export default function MedicinaEsteticaAvanzadaPage() {
                   <Placeholder className="rounded-xl shadow-2xl" seed="reducing-massage" />
                 </div>
                 <div className="order-1 md:order-2 text-left">
-                 <div className="px-4 break-words">
-                  <SectionTitleWithLines>
-                    <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-balance">
-                      Masajes Reductores –{' '}
-                    <span className="text-primary">Moldeado Manual</span></h2>
-                  </SectionTitleWithLines>
-                 </div>
-                    <div className='mt-12 p-0 md:p-6'>
+                  <Card className="shadow-none border-none">
+                    <CardHeader>
+                      <CardTitle className="font-headline text-3xl md:text-4xl text-balance">
+                        Masajes Reductores –{' '}
+                        <span className="text-primary">Moldeado Manual</span>
+                      </CardTitle>
+                    </CardHeader>
+                  </Card>
+                    <div className='mt-6 p-0 md:p-6'>
                         <h3 className="flex items-center gap-3 text-xl font-bold">
                             <Hand className="w-7 h-7 text-primary" /> ¿Qué son y cómo
                             funcionan?
@@ -475,12 +485,15 @@ export default function MedicinaEsteticaAvanzadaPage() {
 
               <section id="carboxiterapia" className="grid md:grid-cols-2 gap-12 items-center">
                  <div className="text-left">
-                    <SectionTitleWithLines>
-                        <h2 className="text-foreground font-headline text-3xl font-bold">
-                            Carboxiterapia –{' '}
-                        <span className="text-primary">Oxigena y Regenera</span></h2>
-                    </SectionTitleWithLines>
-                    <div className='mt-12 p-0 md:p-6'>
+                    <Card className="shadow-none border-none">
+                      <CardHeader>
+                        <CardTitle className="font-headline text-3xl md:text-4xl text-balance">
+                          Carboxiterapia –{' '}
+                          <span className="text-primary">Oxigena y Regenera</span>
+                        </CardTitle>
+                      </CardHeader>
+                    </Card>
+                    <div className='mt-6 p-0 md:p-6'>
                         <h3 className="flex items-center gap-3 text-xl font-bold">
                             <Wind className="w-7 h-7 text-primary" /> ¿Qué es y para
                             qué sirve?
@@ -519,11 +532,14 @@ export default function MedicinaEsteticaAvanzadaPage() {
               </section>
 
               <section id="vitamina-c">
-                <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-3xl font-bold text-center">
-                    Vitamina C en Glúteos – Firmeza y{' '}
-                  <span className="text-primary">Calidad para tu Piel</span></h2>
-                </SectionTitleWithLines>
+                <Card className="shadow-none border-none text-center">
+                  <CardHeader>
+                    <CardTitle className="font-headline text-3xl md:text-4xl text-balance">
+                      Vitamina C en Glúteos – Firmeza y{' '}
+                      <span className="text-primary">Calidad para tu Piel</span>
+                    </CardTitle>
+                  </CardHeader>
+                </Card>
                 <div className="mt-12 space-y-8 max-w-4xl mx-auto">
                   <Alert variant="destructive">
                     <AlertTriangle className="h-4 w-4" />
