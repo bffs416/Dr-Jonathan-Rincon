@@ -138,7 +138,7 @@ export default function BlogPage() {
                 src={featuredPost.image.src}
                 alt={featuredPost.title}
                 fill
-                className="object-cover"
+                className="object-cover animate-fade-in duration-500"
                 data-ai-hint={featuredPost.image.hint}
               />
             )}
@@ -187,7 +187,7 @@ export default function BlogPage() {
                     src={post.image.src}
                     alt={post.title}
                     fill
-                    className="object-cover"
+                    className="object-cover animate-fade-in duration-500"
                     data-ai-hint={post.image.hint}
                   />
                 )}

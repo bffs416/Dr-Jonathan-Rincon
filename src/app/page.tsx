@@ -281,7 +281,7 @@ export default function Home() {
                       alt="Dr. Jonathan Rincón, experto en medicina estética"
                       width={450}
                       height={450}
-                      className="object-cover w-full h-full object-top"
+                      className="object-cover w-full h-full object-top animate-fade-in duration-500"
                       data-ai-hint="doctor portrait"
                     />
                   </div>
@@ -346,7 +346,7 @@ export default function Home() {
                         src={caseItem.image.src}
                         alt={`Antes y Después - ${caseItem.title}`}
                         fill
-                        className="object-cover"
+                        className="object-cover animate-fade-in duration-500"
                         data-ai-hint={caseItem.image.hint}
                       />
                     </div>

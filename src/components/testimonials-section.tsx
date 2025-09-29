@@ -50,7 +50,7 @@ export function TestimonialsSection() {
                 alt="Paciente satisfecha"
                 width={500}
                 height={500}
-                className="rounded-full object-cover w-full h-full shadow-lg"
+                className="rounded-full object-cover w-full h-full shadow-lg animate-fade-in duration-500"
               />
             </div>
             <div className="absolute bottom-0 right-0 w-1/2 h-1/2">
@@ -59,7 +59,7 @@ export function TestimonialsSection() {
                 alt="Análisis facial"
                 width={300}
                 height={300}
-                className="rounded-full object-cover w-full h-full border-4 border-white shadow-lg"
+                className="rounded-full object-cover w-full h-full border-4 border-white shadow-lg animate-fade-in duration-500"
               />
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-48 sm:h-48 flex flex-col items-center justify-center text-center">

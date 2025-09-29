@@ -88,7 +88,7 @@ export const InfiniteMovingCards = ({
                 src={item.src}
                 alt={item.title || item.hint}
                 fill
-                className="object-cover"
+                className="object-cover animate-fade-in duration-500"
                 data-ai-hint={item.hint}
             />
         ) : (

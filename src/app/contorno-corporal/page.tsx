@@ -31,7 +31,7 @@ const Placeholder = ({
           src={image.src}
           alt={image.hint}
           fill
-          className="object-cover"
+          className="object-cover animate-fade-in duration-500"
           data-ai-hint={image.hint}
         />
       ) : (
@@ -342,7 +342,7 @@ export default function ContornoCorporalPage() {
                 <div className="text-center">
                     {hidrolipoclasiaResultImage && (
                         <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden shadow-lg">
-                            <Image src={hidrolipoclasiaResultImage.src} alt={hidrolipoclasiaResultImage.hint} fill className="object-cover" data-ai-hint={hidrolipoclasiaResultImage.hint} />
+                            <Image src={hidrolipoclasiaResultImage.src} alt={hidrolipoclasiaResultImage.hint} fill className="object-cover animate-fade-in duration-500" data-ai-hint={hidrolipoclasiaResultImage.hint} />
                         </div>
                     )}
                     <h3 className="mt-4 font-bold text-lg">Resultados Hidrolipoclasia</h3>
@@ -350,7 +350,7 @@ export default function ContornoCorporalPage() {
                 <div className="text-center">
                     {tensamaxResultImage && (
                         <div className="relative w-60 h-60 mx-auto rounded-full overflow-hidden shadow-lg">
-                            <Image src={tensamaxResultImage.src} alt={tensamaxResultImage.hint} fill className="object-cover" data-ai-hint={tensamaxResultImage.hint} />
+                            <Image src={tensamaxResultImage.src} alt={tensamaxResultImage.hint} fill className="object-cover animate-fade-in duration-500" data-ai-hint={tensamaxResultImage.hint} />
                         </div>
                     )}
                     <h3 className="mt-4 font-bold text-lg">Resultados Tensamax</h3>

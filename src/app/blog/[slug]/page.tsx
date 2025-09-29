@@ -172,7 +172,7 @@ async function getPostData(slug: string) {
         <p>Aunque su uso estético es el más famoso, la toxina botulínica tiene una larga historia en la medicina para tratar diversas condiciones neurológicas y musculares.</p>
         <ul>
             <li><strong>Aplicaciones terapéuticas:</strong> Se utiliza con éxito para tratar espasmos musculares (como el espasmo hemifacial o el blefaroespasmo), distonía cervical (tortícolis), migraña crónica, sudoración excesiva (hiperhidrosis) y espasticidad por lesiones cerebrales.</li>
-            <li><strong>Seguridad:</strong> Su uso es muy seguro cuando lo administra un médico cualificado. La dosis utilizada en estética es extremadamente pequeña y no representa un riesgo de intoxicación. Los efectos secundarios suelen ser leves, localizados y temporales, como pequeños hematomas o dolor en el sitio de la inyección.</li>
+            <li><strong>Seguridad:</strong> Su uso es muy seguro cuando lo administra un médico cualificado. La dosis utilizada en estética es extremadamente pequeña y no representa un riesgo de intoxicación. Los efectos secundarios suelen ser leves, localizados y temporales, como pequeños hematomas o un ligero dolor en el sitio de la inyección.</li>
         </ul>
         
         <h2>Mito 2: "El efecto es inmediato y permanente"</h2>
@@ -333,7 +333,7 @@ export default async function BlogPostPage({
             src={post.image.src}
             alt={post.title}
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-30 animate-fade-in duration-500"
             data-ai-hint={post.image.hint}
             priority
           />

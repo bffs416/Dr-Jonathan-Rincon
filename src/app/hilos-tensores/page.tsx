@@ -264,7 +264,7 @@ export default function HilosTensoresPage() {
             src={heroImage.src}
             alt={heroImage.hint}
             fill
-            className="object-cover"
+            className="object-cover animate-fade-in duration-500"
             data-ai-hint={heroImage.hint}
             priority
           />
@@ -377,7 +377,7 @@ export default function HilosTensoresPage() {
                 alt={whatAreTheyImage.hint}
                 width={600}
                 height={600}
-                className="rounded-xl shadow-2xl w-full aspect-square object-cover"
+                className="rounded-xl shadow-2xl w-full aspect-square object-cover animate-fade-in duration-500"
                 data-ai-hint={whatAreTheyImage.hint}
               />
             )}
@@ -489,7 +489,7 @@ export default function HilosTensoresPage() {
                             alt={`Antes y Después - ${caseItem.title}`}
                             width={800}
                             height={800}
-                            className="rounded-lg aspect-square object-contain mx-auto"
+                            className="rounded-lg aspect-square object-contain mx-auto animate-fade-in duration-500"
                             data-ai-hint={caseItem.image.hint}
                             quality={90}
                           />
@@ -557,7 +557,7 @@ export default function HilosTensoresPage() {
                           src={type.image.src}
                           alt={`Imagen de ${type.name}`}
                           fill
-                          className="object-cover"
+                          className="object-cover animate-fade-in duration-500"
                           data-ai-hint={type.image.hint}
                         />
                       )}
@@ -596,7 +596,7 @@ export default function HilosTensoresPage() {
                       alt={benefit.title}
                       width={200}
                       height={200}
-                      className="rounded-xl shadow-lg w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 aspect-square"
+                      className="rounded-xl shadow-lg w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 aspect-square animate-fade-in duration-500"
                       data-ai-hint={benefit.image.hint}
                     />
                   </div>
@@ -675,7 +675,7 @@ export default function HilosTensoresPage() {
                   src={ctaImage.src}
                   alt={ctaImage.hint}
                   fill
-                  className="object-cover"
+                  className="object-cover animate-fade-in duration-500"
                   data-ai-hint={ctaImage.hint}
                 />
               )}

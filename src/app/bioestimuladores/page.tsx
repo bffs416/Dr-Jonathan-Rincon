@@ -35,7 +35,7 @@ const Placeholder = ({
           src={image.src}
           alt={image.hint}
           fill
-          className="object-cover"
+          className="object-cover animate-fade-in duration-500"
           data-ai-hint={image.hint}
         />
       ) : (
