@@ -74,10 +74,10 @@ export default function RootLayout({
               href="https://wa.me/573122784757"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Contactar por WhatsApp"
-              className="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50 transform hover:scale-110"
+              aria-label="Agendar Cita por WhatsApp"
+              className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50 transform hover:scale-110 font-bold text-lg"
             >
-              <MessageCircle className="w-8 h-8" />
+              Citas
             </a>
           </>
         )}
