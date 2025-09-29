@@ -309,26 +309,14 @@ export default function Home() {
                 <span className="text-primary">Dr. Jonathan Rincón</span>
               </h2>
               <p className="mt-6 text-lg text-muted-foreground md:text-justify">
-                Especialista en medicina estética con más de 8 años de
-                experiencia. Reconocido como el{' '}
+                Médico Cirujano especialista en Medicina Estética, con más de 8 años de experiencia. Reconocido como el{' '}
                 <strong className="text-primary font-bold">
                   #1 en hilos tensores en Medellín y Bogotá
                 </strong>
-                , combinando técnicas avanzadas con un enfoque personalizado
-                para cada paciente.
+                , combino mi práctica clínica con una profunda pasión por la anatomía y las técnicas avanzadas para ofrecer resultados seguros, naturales y armoniosos.
               </p>
               <p className="mt-4 text-lg text-muted-foreground md:text-justify">
-                Además de mi práctica clínica, soy un apasionado educador y{' '}
-                <strong className="text-primary font-bold">
-                  trainer para marcas líderes en la industria, capacitando a médicos estéticos
-                </strong>
-                y compartiendo mi conocimiento sobre técnicas avanzadas de rejuvenecimiento facial y
-                corporal.
-              </p>
-              <p className="mt-4 text-lg text-muted-foreground md:text-justify">
-                Mi pasión es ayudar a las personas a sentirse seguras y
-                hermosas, utilizando los tratamientos más innovadores y seguros
-                del mercado.
+                Mi dedicación a la excelencia va más allá de la consulta. Como <strong className="text-primary font-bold">trainer oficial para marcas líderes en la industria</strong>, tengo la misión de elevar el estándar de la medicina estética. Ofrezco <strong className="text-primary font-bold">capacitaciones avanzadas y personalizadas para médicos</strong> que buscan perfeccionar sus técnicas, dominar los procedimientos más innovadores y ofrecer resultados excepcionales a sus propios pacientes.
               </p>
               <div className="mt-8 hidden md:flex items-center gap-4">
                 <Button asChild size="lg" className="bg-green-500 hover:bg-green-600">
@@ -340,7 +328,7 @@ export default function Home() {
                     Agendar Cita <MessageCircle />
                   </a>
                 </Button>
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                    <a
                     href="https://wa.me/573122784757"
                     target="_blank"
