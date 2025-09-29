@@ -1,4 +1,6 @@
+'use client';
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -47,6 +49,18 @@ const Placeholder = ({
 };
 
 export default function ContactoPage() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const mailtoHref = `mailto:jonathanra36@hotmail.com?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(
+    `Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`
+  )}`;
+
+
   return (
     <div>
       {/* Hero Section */}
@@ -83,23 +97,23 @@ export default function ContactoPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nombre Completo</Label>
-                  <Input id="name" placeholder="Tu nombre" />
+                  <Input id="name" placeholder="Tu nombre" value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo Electrónico</Label>
-                  <Input id="email" type="email" placeholder="tu@correo.com" />
+                  <Input id="email" type="email" placeholder="tu@correo.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="subject">Asunto</Label>
-                <Input id="subject" placeholder="Ej: Consulta sobre Hilos Tensores" />
+                <Input id="subject" placeholder="Ej: Consulta sobre Hilos Tensores" value={subject} onChange={(e) => setSubject(e.target.value)} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Mensaje</Label>
-                <Textarea id="message" placeholder="Escribe tu mensaje aquí..." className="min-h-[120px]" />
+                <Textarea id="message" placeholder="Escribe tu mensaje aquí..." className="min-h-[120px]" value={message} onChange={(e) => setMessage(e.target.value)} />
               </div>
               <Button asChild size="lg" className="w-full">
-                <a href="mailto:jonathanra36@hotmail.com">
+                <a href={mailtoHref}>
                   Enviar Mensaje <Send />
                 </a>
               </Button>
