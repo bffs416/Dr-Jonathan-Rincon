@@ -144,7 +144,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
 
               <section id="hidratacion-calidad" className="scroll-mt-20">
                 <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-3xl font-bold text-center text-balance">Hidratación Profunda y{' '}
+                  <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-center text-balance">Hidratación Profunda y{' '}
                   <span className="text-primary">Calidad de la Piel</span></h2>
                 </SectionTitleWithLines>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
@@ -417,7 +417,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                 </div>
                 <div className="order-1 md:order-2 text-left">
                  <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-3xl font-bold text-balance">
+                  <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-balance">
                     Masajes Reductores –{' '}
                   <span className="text-primary">Moldeado Manual</span></h2>
                 </SectionTitleWithLines>
