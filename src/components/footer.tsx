@@ -28,7 +28,7 @@ export default function Footer() {
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <a href="https://www.tiktok.com/@drjonathanrincon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                  <Image src="/images/tiktok-logo.png" alt="TikTok" width={20} height={20} />
+                  <Image src="/images/1946552.png" alt="TikTok" width={20} height={20} />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
