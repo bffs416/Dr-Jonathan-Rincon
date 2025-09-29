@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -7,7 +8,7 @@ import { Facebook, Instagram, Menu, X, Award, Search, Moon } from 'lucide-react'
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from './logo';
 import { WhatsAppIcon } from './icons/whatsapp-icon';
 import {
@@ -128,6 +129,9 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-full max-w-sm bg-background p-0 flex flex-col">
+              <SheetHeader className="sr-only">
+                <SheetTitle>Navegación Principal</SheetTitle>
+              </SheetHeader>
               <div className="flex justify-between items-center p-4 border-b">
                  <Logo />
                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
