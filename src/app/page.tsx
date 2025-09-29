@@ -320,11 +320,9 @@ export default function Home() {
               <p className="mt-4 text-lg text-muted-foreground md:text-justify">
                 Además de mi práctica clínica, soy un apasionado educador y{' '}
                 <strong className="text-primary font-bold">
-                  trainer para marcas líderes en la industria
+                  trainer para marcas líderes en la industria, capacitando a médicos estéticos
                 </strong>
-                , y he tenido el honor de ser ponente (speaker) en múltiples
-                congresos nacionales e internacionales, compartiendo mi
-                conocimiento sobre técnicas de rejuvenecimiento facial y
+                y compartiendo mi conocimiento sobre técnicas avanzadas de rejuvenecimiento facial y
                 corporal.
               </p>
               <p className="mt-4 text-lg text-muted-foreground md:text-justify">
