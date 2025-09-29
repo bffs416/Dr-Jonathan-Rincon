@@ -79,7 +79,7 @@ export default function ContactoPage() {
                 Completa el formulario y te responderé lo antes posible.
               </p>
             </div>
-            <form className="space-y-4">
+            <div className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Nombre Completo</Label>
@@ -98,10 +98,12 @@ export default function ContactoPage() {
                 <Label htmlFor="message">Mensaje</Label>
                 <Textarea id="message" placeholder="Escribe tu mensaje aquí..." className="min-h-[120px]" />
               </div>
-              <Button type="submit" size="lg" className="w-full">
-                Enviar Mensaje <Send />
+              <Button asChild size="lg" className="w-full">
+                <a href="mailto:jonathanra36@hotmail.com">
+                  Enviar Mensaje <Send />
+                </a>
               </Button>
-            </form>
+            </div>
           </div>
 
           {/* Contact Info & Map */}
@@ -151,10 +153,10 @@ export default function ContactoPage() {
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <a
-                      href="mailto:contacto@drjonathanrincon.com"
+                      href="mailto:jonathanra36@hotmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      contacto@drjonathanrincon.com
+                      jonathanra36@hotmail.com
                     </a>
                   </div>
                 </div>
@@ -214,5 +216,3 @@ export default function ContactoPage() {
     </div>
   );
 }
-
-    
