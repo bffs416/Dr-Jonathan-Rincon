@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Facebook, Instagram, Menu, X, Award, Search, Moon } from 'lucide-react';
+import { Facebook, Instagram, Menu, X, Award, Search, Moon, MessageCircle } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -114,9 +114,9 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center space-x-1">
-          <Button asChild className="uppercase tracking-widest">
+          <Button asChild className="uppercase tracking-widest bg-green-500 hover:bg-green-600">
              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                Agendar Cita
+                Agendar Cita <MessageCircle />
              </a>
           </Button>
         </div>
@@ -170,9 +170,9 @@ export default function Header() {
             </nav>
 
               <div className="p-6 border-t mt-auto">
-                 <Button asChild size="lg" className="w-full">
+                 <Button asChild size="lg" className="w-full bg-green-500 hover:bg-green-600">
                     <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                        Agendar Cita <WhatsAppIcon />
+                        Agendar Cita <MessageCircle />
                     </a>
                 </Button>
               </div>

@@ -14,6 +14,7 @@ import {
   ShieldCheck,
   Star,
   Medal,
+  MessageCircle,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -191,7 +192,7 @@ export default function Home() {
               </div>
               <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-slate-200">
                 <Medal className="w-10 h-10 md:w-12 md:h-12 text-yellow-300" />
-                <p className="font-semibold text-base md:text-xl text-center">Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
+                <p className="font-semibold text-lg md:text-xl text-center">Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
               </div>
           </div>
         </section>
@@ -281,13 +282,13 @@ export default function Home() {
                     />
                   </div>
               </div>
-               <Button asChild size="lg" className="mt-8 md:hidden">
+               <Button asChild size="lg" className="mt-8 md:hidden bg-green-500 hover:bg-green-600">
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Agendar por WhatsApp <WhatsAppIcon />
+                  Agendar por WhatsApp <MessageCircle />
                 </a>
               </Button>
             </div>
@@ -310,13 +311,13 @@ export default function Home() {
                 hermosas, utilizando los tratamientos más innovadores y seguros
                 del mercado.
               </p>
-              <Button asChild size="lg" className="mt-8 hidden md:inline-flex">
+              <Button asChild size="lg" className="mt-8 hidden md:inline-flex bg-green-500 hover:bg-green-600">
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Agendar por WhatsApp <WhatsAppIcon />
+                  Agendar por WhatsApp <MessageCircle />
                 </a>
               </Button>
             </div>
