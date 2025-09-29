@@ -13,6 +13,7 @@ import { GeometricBackground } from '@/components/geometric-background';
 import { LoadingScreen } from '@/components/loading-screen';
 import Script from 'next/script';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
+import { MessageCircle } from 'lucide-react';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -76,7 +77,7 @@ export default function RootLayout({
               aria-label="Contactar por WhatsApp"
               className="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50 transform hover:scale-110"
             >
-              <WhatsAppIcon className="w-8 h-8" />
+              <MessageCircle className="w-8 h-8" />
             </a>
           </>
         )}
