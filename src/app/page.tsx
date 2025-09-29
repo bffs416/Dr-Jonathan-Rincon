@@ -189,9 +189,9 @@ export default function Home() {
                     </div>
                   ))}
               </div>
-              <div className="mt-12 flex items-center justify-center gap-3 text-lg text-slate-200">
-                <Medal className="w-7 h-7 text-yellow-400" />
-                <p>Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
+              <div className="mt-12 flex items-center justify-center gap-4 text-xl text-slate-200">
+                <Medal className="w-8 h-8 text-yellow-400" />
+                <p className="font-semibold">Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
               </div>
           </div>
         </section>
