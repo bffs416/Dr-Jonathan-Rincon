@@ -298,7 +298,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Capacítate
+                    Capacítate Conmigo
                   </a>
                 </Button>
               </div>
@@ -338,7 +338,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Capacítate
+                    Capacítate Conmigo
                   </a>
                 </Button>
               </div>
