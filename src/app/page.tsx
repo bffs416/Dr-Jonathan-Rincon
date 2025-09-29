@@ -189,9 +189,9 @@ export default function Home() {
                     </div>
                   ))}
               </div>
-              <div className="mt-12 flex items-center justify-center gap-4 text-xl text-slate-200">
-                <Medal className="w-8 h-8 text-yellow-400" />
-                <p className="font-semibold">Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
+              <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-slate-200">
+                <Medal className="w-10 h-10 md:w-12 md:h-12 text-yellow-300" />
+                <p className="font-semibold text-base md:text-xl text-center">Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
               </div>
           </div>
         </section>
@@ -255,7 +255,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 gap-y-8 sm:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
+            <div className="mt-12 grid grid-cols-2 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-8 w-full max-w-6xl mx-auto">
                 {treatments.map((treatment) => (
                   <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
