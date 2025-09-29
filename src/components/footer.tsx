@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, MapPin, Clock, Phone, Youtube } from 'lucide-react';
 import { Logo } from './logo';
 import { Button } from './ui/button';
@@ -45,7 +46,7 @@ export default function Footer() {
               <li><Link href="/hilos-tensores" className="text-muted-foreground hover:text-primary/80">Hilos Tensores</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-primary/80">Blog</Link></li>
               <li><Link href="/#sobre-el-doctor" className="text-muted-foreground hover:text-primary/80">Sobre Mi</Link></li>
-              <li><Link href="#contacto" className="text-muted-foreground hover:text-primary/80">Contacto</Link></li>
+              <li><Link href="/contacto" className="text-muted-foreground hover:text-primary/80">Contacto</Link></li>
             </ul>
           </div>
           <div>
