@@ -32,7 +32,7 @@ const navLinks = [
     },
     { name: 'Blog', href: '/blog' },
     { name: 'Sobre Mi', href: '/#sobre-el-doctor' },
-    { name: 'Contacto', href: '#' },
+    { name: 'Contacto', href: '#contacto' },
 ];
 
 
