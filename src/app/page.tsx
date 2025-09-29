@@ -282,15 +282,26 @@ export default function Home() {
                     />
                   </div>
               </div>
-               <Button asChild size="lg" className="mt-8 md:hidden bg-green-500 hover:bg-green-600">
-                <a
-                  href="https://wa.me/573122784757"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Agendar por WhatsApp <MessageCircle />
-                </a>
-              </Button>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 md:hidden">
+                <Button asChild size="lg" className="bg-green-500 hover:bg-green-600">
+                  <a
+                    href="https://wa.me/573122784757"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Agendar Cita <MessageCircle />
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                   <a
+                    href="https://wa.me/573122784757"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Capacítate
+                  </a>
+                </Button>
+              </div>
             </div>
             <div className="flex flex-col text-center items-center md:text-left md:items-start md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
@@ -311,15 +322,26 @@ export default function Home() {
                 hermosas, utilizando los tratamientos más innovadores y seguros
                 del mercado.
               </p>
-              <Button asChild size="lg" className="mt-8 hidden md:inline-flex bg-green-500 hover:bg-green-600">
-                <a
-                  href="https://wa.me/573122784757"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Agendar por WhatsApp <MessageCircle />
-                </a>
-              </Button>
+              <div className="mt-8 hidden md:flex items-center gap-4">
+                <Button asChild size="lg" className="bg-green-500 hover:bg-green-600">
+                  <a
+                    href="https://wa.me/573122784757"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Agendar Cita <MessageCircle />
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                   <a
+                    href="https://wa.me/573122784757"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Capacítate
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
