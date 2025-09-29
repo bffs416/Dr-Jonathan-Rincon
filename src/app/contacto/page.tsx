@@ -188,7 +188,7 @@ export default function ContactoPage() {
             </Card>
             <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.116749910408!2d-75.60995392523219!3d6.248744093740263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44299719eb7b37%3A0x6c63fdf538466b04!2sEdificio%20Azor%2C%20Cra.%2084%20%2337b-195%2C%20La%20Am%C3%A9rica%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1709239562473!5m2!1ses-419!2sco"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.116753170425!2d-75.6099539!3d6.2487441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44299719eb7b37%3A0x6c63fdf538466b04!2sEdificio%20Azor!5e0!3m2!1ses-419!2sco!4v1719424754859!5m2!1ses-419!2sco"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
