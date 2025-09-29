@@ -292,13 +292,13 @@ export default function Home() {
                     Agendar Cita <MessageCircle />
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg">
                    <a
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Capacítate Conmigo
+                    Capacítate Conmigo <MessageCircle />
                   </a>
                 </Button>
               </div>
@@ -312,10 +312,20 @@ export default function Home() {
                 Especialista en medicina estética con más de 8 años de
                 experiencia. Reconocido como el{' '}
                 <strong className="text-primary font-bold">
-                  #1 en hilos tensores en Medellín
+                  #1 en hilos tensores en Medellín y Bogotá
                 </strong>
                 , combinando técnicas avanzadas con un enfoque personalizado
                 para cada paciente.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground md:text-justify">
+                Además de mi práctica clínica, soy un apasionado educador y{' '}
+                <strong className="text-primary font-bold">
+                  trainer para marcas líderes en la industria
+                </strong>
+                , y he tenido el honor de ser ponente (speaker) en múltiples
+                congresos nacionales e internacionales, compartiendo mi
+                conocimiento sobre técnicas de rejuvenecimiento facial y
+                corporal.
               </p>
               <p className="mt-4 text-lg text-muted-foreground md:text-justify">
                 Mi pasión es ayudar a las personas a sentirse seguras y
@@ -332,13 +342,13 @@ export default function Home() {
                     Agendar Cita <MessageCircle />
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild size="lg">
                    <a
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Capacítate Conmigo
+                    Capacítate Conmigo <MessageCircle />
                   </a>
                 </Button>
               </div>
