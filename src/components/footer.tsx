@@ -23,7 +23,7 @@ export default function Footer() {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://www.facebook.com/profile.php?id=100063747843041&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=100063747843041" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <Facebook className="h-5 w-5" />
                 </a>
               </Button>

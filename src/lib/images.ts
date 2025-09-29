@@ -81,7 +81,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'cta-preventive', src: '/images/Hilos Tensores.png', hint: 'radiant skin' },
 
   // Blog Listing Page
-  { id: 'blog-featured', src: '/images/perfil_derecho_natiz_perfecta_1.png', hint: 'aesthetic medicine' },
+  { id: 'blog-featured', src: '/images/Hilos tensores_Marcacion mandibular.png', hint: 'aesthetic medicine' },
   { id: 'blog-post-1', src: '/images/Bioestimuladores de Colágeno_1.png', hint: 'collagen treatment' },
   { id: 'blog-post-2', src: '/images/mitos y verdades Botox.jpg', hint: 'botox injection' },
   { id: 'blog-post-3', src: '/images/Hidrolipoclasia Vs Tradicion.jpg', hint: 'body contouring' },
