@@ -241,7 +241,7 @@ export default function BioestimuladoresPage() {
               Mira cómo los bioestimuladores de colágeno han ayudado a nuestros pacientes a lograr una piel más firme y joven.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
              <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                <iframe
                   className="w-full h-full"

@@ -155,7 +155,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                 <div className="mt-12 space-y-16">
                   
                   {/* Mesoterapia */}
-                   <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full aspect-square">
                         <Placeholder seed="mesoterapia-facial" className="rounded-xl shadow-xl" />
                     </div>
@@ -214,7 +214,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                   </div>
 
                   {/* PDRN */}
-                   <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="w-full aspect-square">
                       <Placeholder seed="pdrn-collagen" className="rounded-xl shadow-xl" />
                     </div>
@@ -267,7 +267,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
                     Ve cómo nuestros tratamientos faciales avanzados han rejuvenecido la piel de nuestros pacientes.
                   </p>
                 </div>
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
                   <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                     <iframe
                       className="w-full h-full"
@@ -612,14 +612,14 @@ export default function MedicinaEsteticaAvanzadaPage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+                className="mt-8"
               >
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                  <WhatsAppIcon /> Agendar por WhatsApp
                 </a>
               </Button>
             </div>

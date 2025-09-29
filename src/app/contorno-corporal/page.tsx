@@ -307,7 +307,7 @@ export default function ContornoCorporalPage() {
               Observa cómo nuestros tratamientos de contorno corporal han ayudado a los pacientes a lograr sus metas.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                <iframe
                   className="w-full h-full"

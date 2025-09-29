@@ -39,31 +39,26 @@ const treatments: { icon: string; title: string; href: string; size?: number }[]
     icon: '/images/Hilos_Tensores_Icono.png',
     title: 'Hilos Tensores',
     href: '/hilos-tensores',
-    size: 80,
   },
   {
     icon: '/images/Bioestimuladores.png',
     title: 'Bioestimuladores de Colágeno',
     href: '/bioestimuladores',
-    size: 90,
   },
   {
     icon: '/images/botox.png',
     title: 'Toxina Botulínica',
     href: '/botox',
-    size: 200,
   },
   {
     icon: '/images/Body_Estetica Corporal.png',
     title: 'Contorno Corporal',
     href: '/contorno-corporal',
-    size: 700,
   },
   {
     icon: '/images/icono_Face_estetica_facial.png',
     title: 'Medicina Estética Avanzada',
     href: '/medicina-estetica-avanzada',
-    size: 700,
   },
 ];
 
@@ -79,7 +74,7 @@ const TreatmentCard = ({
 }) => (
   <Link href={href} className="group block">
     <div className="flex h-full flex-col items-center justify-start p-2 rounded-lg">
-      <div className="relative mb-4 flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
+      <div className="relative mb-4 flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-secondary group-hover:bg-primary/10 transition-colors duration-300 transform group-hover:scale-110">
         <Image
           src={icon}
           alt={title}
@@ -260,7 +255,7 @@ export default function Home() {
                     Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
                 </p>
             </div>
-            <div className="mt-12 grid grid-cols-2 gap-y-8 gap-x-4 md:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
+            <div className="mt-12 grid grid-cols-2 gap-y-8 sm:grid-cols-3 md:gap-8 w-full max-w-4xl mx-auto">
                 {treatments.map((treatment) => (
                   <TreatmentCard key={treatment.title} {...treatment} />
                 ))}
