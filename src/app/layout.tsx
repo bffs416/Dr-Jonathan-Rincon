@@ -1,7 +1,9 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import type { Metadata } from 'next';
+import { Outfit } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/header';
@@ -11,6 +13,11 @@ import { GeometricBackground } from '@/components/geometric-background';
 import { MessageCircle } from 'lucide-react';
 import { LoadingScreen } from '@/components/loading-screen';
 import Script from 'next/script';
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+});
 
 // export const metadata: Metadata = {
 //   title: 'Dr. Jonathan Rincón',
@@ -26,9 +33,11 @@ export default function RootLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // We can use a shorter timeout or more sophisticated logic
+    // to determine when the initial loading is done.
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Adjust time as needed
+    }, 500); // Reduced delay
 
     return () => clearTimeout(timer);
   }, []);
@@ -41,18 +50,13 @@ export default function RootLayout({
           name="description"
           content="Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita con el Dr. Jonathan Rincón."
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
       </head>
-      <body className={cn('min-h-screen bg-background font-body antialiased')}>
+      <body 
+        className={cn(
+          'min-h-screen bg-background font-body antialiased',
+           outfit.variable
+        )}
+      >
         {loading ? (
           <LoadingScreen />
         ) : (

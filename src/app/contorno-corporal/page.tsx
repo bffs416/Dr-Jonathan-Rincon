@@ -143,7 +143,7 @@ export default function ContornoCorporalPage() {
             </p>
             <Button asChild size="lg" className="mt-8">
               <Link href="#citas">
-                Agenda tu Valoración <ArrowRight className="ml-2" />
+                Agenda tu Valoración <ArrowRight />
               </Link>
             </Button>
           </div>
@@ -397,14 +397,14 @@ export default function ContornoCorporalPage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+                className="mt-8"
               >
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                  <WhatsAppIcon /> Agendar por WhatsApp
                 </a>
               </Button>
             </div>

@@ -168,7 +168,7 @@ export default function Header() {
               <div className="p-6 border-t mt-auto">
                  <Button asChild size="lg" className="w-full">
                     <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                        <WhatsAppIcon className="h-5 w-5 mr-2" /> Agendar Cita
+                        Agendar Cita <WhatsAppIcon />
                     </a>
                 </Button>
               </div>

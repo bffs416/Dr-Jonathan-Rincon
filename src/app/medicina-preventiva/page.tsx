@@ -520,7 +520,7 @@ export default function MedicinaPreventivaPage() {
                     </div>
                  </div>
                  <div className='w-full aspect-square'>
-                    <Placeholder className="rounded-full shadow-2xl" seed="carboxytherapy-image" />
+                    <Placeholder className="rounded-xl shadow-2xl" seed="carboxytherapy-image" />
                  </div>
               </section>
 
@@ -622,14 +622,14 @@ export default function MedicinaPreventivaPage() {
               <Button
                 asChild
                 size="lg"
-                className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90"
+                className="mt-8"
               >
                 <a
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <WhatsAppIcon className="w-5 h-5 mr-2" /> Agendar por WhatsApp
+                  <WhatsAppIcon /> Agendar por WhatsApp
                 </a>
               </Button>
             </div>
