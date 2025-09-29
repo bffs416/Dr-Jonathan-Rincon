@@ -143,10 +143,12 @@ export default function MedicinaEsteticaAvanzadaPage() {
               </section>
 
               <section id="hidratacion-calidad" className="scroll-mt-20">
-                <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-center text-balance">Hidratación Profunda y{' '}
-                  <span className="text-primary">Calidad de la Piel</span></h2>
-                </SectionTitleWithLines>
+                <div className="px-4 break-words">
+                  <SectionTitleWithLines>
+                    <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-center text-balance">Hidratación Profunda y{' '}
+                    <span className="text-primary">Calidad de la Piel</span></h2>
+                  </SectionTitleWithLines>
+                </div>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
                   Estos tratamientos se enfocan en nutrir tu piel desde adentro
                   para devolverle la vitalidad, el brillo y la suavidad que ha
@@ -416,11 +418,13 @@ export default function MedicinaEsteticaAvanzadaPage() {
                   <Placeholder className="rounded-xl shadow-2xl" seed="reducing-massage" />
                 </div>
                 <div className="order-1 md:order-2 text-left">
-                 <SectionTitleWithLines>
-                  <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-balance">
-                    Masajes Reductores –{' '}
-                  <span className="text-primary">Moldeado Manual</span></h2>
-                </SectionTitleWithLines>
+                 <div className="px-4 break-words">
+                  <SectionTitleWithLines>
+                    <h2 className="text-foreground font-headline text-2xl md:text-3xl font-bold text-balance">
+                      Masajes Reductores –{' '}
+                    <span className="text-primary">Moldeado Manual</span></h2>
+                  </SectionTitleWithLines>
+                 </div>
                     <div className='mt-12 p-0 md:p-6'>
                         <h3 className="flex items-center gap-3 text-xl font-bold">
                             <Hand className="w-7 h-7 text-primary" /> ¿Qué son y cómo
