@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -294,5 +294,3 @@ Sat: 8:00 AM - 2:00 PM`,
     </div>
   );
 }
-
-    
