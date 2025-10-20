@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -187,7 +188,7 @@ export default function MedicinaEsteticaAvanzadaPage() {
       facialDecisionDesc: 'Every skin is unique, and every face has its own needs. The key to a successful and safe result is a personalized assessment with a medical specialist. A qualified professional will be able to evaluate your skin, understand your goals, and recommend the treatment or combination of techniques that will offer you the best results.',
       corporalIntroTitle: 'Care and Prevention: The Essential Guide to Advanced Body Treatments',
       corporalIntroSubtitle: 'Discover how reducing massages, carboxytherapy, and vitamin C can help you maintain a harmonious figure and healthy skin in the long term.',
-      corporalIntroP1: 'We often associate body treatments with the idea of "correcting" something we don\'t like. But what if we told you that the key is prevention? Adopting a preventive approach means acting before the signs of time, such as sagging or advanced cellulite, set in.',
+      corporalIntroP1: "We often associate body treatments with the idea of 'correcting' something we don't like. But what if we told you that the key is prevention? Adopting a preventive approach means acting before the signs of time, such as sagging or advanced cellulite, set in.",
       reducingMassageTitle: 'Reducing Massages – Manual Contouring',
       reducingMassageHow: 'What are they and how do they work?',
       reducingMassageDesc: 'Reducing massages are a manual technique in which strong pressure and a fast rhythm are applied to specific areas to mobilize fat and facilitate its natural elimination.',
