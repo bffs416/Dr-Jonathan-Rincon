@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -28,54 +29,12 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { findImage } from '@/lib/images';
-
-const featuredPost = {
-  slug: '/blog/hilos-tensores-revolucion',
-  image: findImage('blog-featured'),
-  title: 'Hilos Tensores: La Revolución del Lifting Sin Cirugía en Medellín',
-  description:
-    'Descubre por qué los hilos tensores PDO se han convertido en el tratamiento #1 para el rejuvenecimiento facial sin cirugía. Conoce los tipos, beneficios y resultados.',
-  date: '19 de enero de 2024',
-  readTime: '6 min',
-};
-
-const blogPosts = [
-  {
-    slug: '/blog/bioestimuladores-colageno',
-    category: 'Bioestimuladores',
-    image: findImage('blog-post-1'),
-    title:
-      'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs HArmonyCa',
-    description:
-      'Comparativa completa entre los principales bioestimuladores. Aprende cuál es el mejor para tu tipo de piel y objetivos estéticos.',
-    date: '25 de julio de 2024',
-    readTime: '8 min',
-  },
-  {
-    slug: '/blog/botox-mitos-y-verdades',
-    category: 'Facial',
-    image: findImage('blog-post-2'),
-    title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
-    description:
-      'Desmitificamos las creencias más comunes sobre el Botox. Conoce la verdad detrás de este tratamiento y sus beneficios reales.',
-    date: '16 de enero de 2024',
-    readTime: '6 min',
-  },
-  {
-    slug: '/blog/contorno-corporal-hidrolipoclasia',
-    category: 'Corporal',
-    image: findImage('blog-post-3'),
-    title: 'Contorno Corporal: Hidrolipoclasia vs. Métodos Tradicionales',
-    description:
-      'Conoce las ventajas de la hidrolipoclasia sobre otros métodos de reducción de grasa. Procedimiento, resultados y cuidados post-tratamiento.',
-    date: '11 de enero de 2024',
-    readTime: '7 min',
-  },
-];
+import { useLanguage } from '@/context/language-context';
 
 export default function BlogPage() {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState('');
+  const { lang } = useLanguage();
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const term = event.target.value;
@@ -85,15 +44,131 @@ export default function BlogPage() {
     }
   };
 
+  const content = {
+    es: {
+      pageTitle: 'Blog de Medicina Estética',
+      pageSubtitle: 'Mantente informado con los últimos avances, consejos y tendencias en medicina estética',
+      searchPlaceholder: 'Buscar artículos...',
+      filterAll: 'Todas',
+      filterThreadLifts: 'Hilos Tensores',
+      filterBiostimulators: 'Bioestimuladores',
+      filterBotox: 'Botox',
+      filterBody: 'Corporal',
+      featuredBadge: 'Artículo Destacado',
+      featuredPost: {
+        slug: '/blog/hilos-tensores-revolucion',
+        image: findImage('blog-featured'),
+        title: 'Hilos Tensores: La Revolución del Lifting Sin Cirugía en Medellín',
+        description:
+          'Descubre por qué los hilos tensores PDO se han convertido en el tratamiento #1 para el rejuvenecimiento facial sin cirugía. Conoce los tipos, beneficios y resultados.',
+        date: '19 de enero de 2024',
+        readTime: '6 min',
+      },
+      blogPosts: [
+        {
+          slug: '/blog/bioestimuladores-colageno',
+          category: 'Bioestimuladores',
+          image: findImage('blog-post-1'),
+          title:
+            'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs HArmonyCa',
+          description:
+            'Comparativa completa entre los principales bioestimuladores. Aprende cuál es el mejor para tu tipo de piel y objetivos estéticos.',
+          date: '25 de julio de 2024',
+          readTime: '8 min',
+        },
+        {
+          slug: '/blog/botox-mitos-y-verdades',
+          category: 'Facial',
+          image: findImage('blog-post-2'),
+          title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
+          description:
+            'Desmitificamos las creencias más comunes sobre el Botox. Conoce la verdad detrás de este tratamiento y sus beneficios reales.',
+          date: '16 de enero de 2024',
+          readTime: '6 min',
+        },
+        {
+          slug: '/blog/contorno-corporal-hidrolipoclasia',
+          category: 'Corporal',
+          image: findImage('blog-post-3'),
+          title: 'Contorno Corporal: Hidrolipoclasia vs. Métodos Tradicionales',
+          description:
+            'Conoce las ventajas de la hidrolipoclasia sobre otros métodos de reducción de grasa. Procedimiento, resultados y cuidados post-tratamiento.',
+          date: '11 de enero de 2024',
+          readTime: '7 min',
+        },
+      ],
+      readFullArticle: 'Leer Artículo Completo',
+      readMore: 'Leer Más',
+    },
+    en: {
+      pageTitle: 'Aesthetic Medicine Blog',
+      pageSubtitle: 'Stay informed with the latest advances, tips, and trends in aesthetic medicine',
+      searchPlaceholder: 'Search articles...',
+      filterAll: 'All',
+      filterThreadLifts: 'Thread Lifts',
+      filterBiostimulators: 'Biostimulators',
+      filterBotox: 'Botox',
+      filterBody: 'Body',
+      featuredBadge: 'Featured Article',
+      featuredPost: {
+        slug: '/blog/hilos-tensores-revolucion',
+        image: findImage('blog-featured'),
+        title: 'Thread Lifts: The Non-Surgical Lifting Revolution in Medellín',
+        description:
+          'Discover why PDO thread lifts have become the #1 treatment for non-surgical facial rejuvenation. Learn about the types, benefits, and results.',
+        date: 'January 19, 2024',
+        readTime: '6 min read',
+      },
+      blogPosts: [
+        {
+          slug: '/blog/bioestimuladores-colageno',
+          category: 'Biostimulators',
+          image: findImage('blog-post-1'),
+          title:
+            'Collagen Biostimulators: Radiesse vs Sculptra vs HArmonyCa',
+          description:
+            'A complete comparison of the main biostimulators. Find out which is best for your skin type and aesthetic goals.',
+          date: 'July 25, 2024',
+          readTime: '8 min read',
+        },
+        {
+          slug: '/blog/botox-mitos-y-verdades',
+          category: 'Facial',
+          image: findImage('blog-post-2'),
+          title: 'Botox: Myths and Truths about Botulinum Toxin',
+          description:
+            'We debunk the most common beliefs about Botox. Learn the truth behind this treatment and its real benefits.',
+          date: 'January 16, 2024',
+          readTime: '6 min read',
+        },
+        {
+          slug: '/blog/contorno-corporal-hidrolipoclasia',
+          category: 'Body',
+          image: findImage('blog-post-3'),
+          title: 'Body Contouring: Hydrolipoclasy vs. Traditional Methods',
+          description:
+            'Learn the advantages of hydrolipoclasy over other fat reduction methods. Procedure, results, and post-treatment care.',
+          date: 'January 11, 2024',
+          readTime: '7 min read',
+        },
+      ],
+      readFullArticle: 'Read Full Article',
+      readMore: 'Read More',
+    }
+  }
+
+  const currentContent = content[lang];
+  const featuredPost = currentContent.featuredPost;
+  const blogPosts = currentContent.blogPosts;
+
   return (
     <div className="container mx-auto px-4 py-16 sm:py-24">
       <div className="text-center max-w-3xl mx-auto">
         <h1 className="font-headline text-4xl md:text-5xl font-bold">
-          Blog de <span className="text-primary">Medicina Estética</span>
+          {currentContent.pageTitle.split(' ').slice(0, -2).join(' ')} <span className="text-primary">{currentContent.pageTitle.split(' ').slice(-2).join(' ')}</span>
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          Mantente informado con los últimos avances, consejos y tendencias en
-          medicina estética
+          {currentContent.pageSubtitle}
         </p>
       </div>
 
@@ -103,7 +178,7 @@ export default function BlogPage() {
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
-                placeholder="Buscar artículos..."
+                placeholder={currentContent.searchPlaceholder}
                 className="pl-10 w-full"
                 value={searchTerm}
                 onChange={handleSearchChange}
@@ -113,16 +188,16 @@ export default function BlogPage() {
               <Filter className="h-5 w-5 text-muted-foreground" />
               <Select>
                 <SelectTrigger className="w-full md:w-[180px]">
-                  <SelectValue placeholder="Todas" />
+                  <SelectValue placeholder={currentContent.filterAll} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="todas">Todas</SelectItem>
-                  <SelectItem value="hilos-tensores">Hilos Tensores</SelectItem>
+                  <SelectItem value="todas">{currentContent.filterAll}</SelectItem>
+                  <SelectItem value="hilos-tensores">{currentContent.filterThreadLifts}</SelectItem>
                   <SelectItem value="bioestimuladores">
-                    Bioestimuladores
+                    {currentContent.filterBiostimulators}
                   </SelectItem>
-                  <SelectItem value="botox">Botox</SelectItem>
-                  <SelectItem value="corporal">Corporal</SelectItem>
+                  <SelectItem value="botox">{currentContent.filterBotox}</SelectItem>
+                  <SelectItem value="corporal">{currentContent.filterBody}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -145,7 +220,7 @@ export default function BlogPage() {
           </div>
           <div className="p-8 md:p-12 flex flex-col">
             <div>
-              <Badge variant="default">Artículo Destacado</Badge>
+              <Badge variant="default">{currentContent.featuredBadge}</Badge>
               <h2 className="font-headline text-3xl md:text-4xl font-bold mt-4">
                 <Link href={featuredPost.slug} className="hover:text-primary transition-colors">{featuredPost.title}</Link>
               </h2>
@@ -166,7 +241,7 @@ export default function BlogPage() {
                 </div>
                 <Button asChild size="lg" className="mt-6 w-fit">
                     <Link href={featuredPost.slug}>
-                        Leer Artículo Completo <ArrowRight />
+                        {currentContent.readFullArticle} <ArrowRight />
                     </Link>
                 </Button>
             </div>
@@ -217,7 +292,7 @@ export default function BlogPage() {
                 </div>
               <Button asChild variant="outline" className="w-full">
                 <Link href={post.slug}>
-                  Leer Más <ArrowRight />
+                  {currentContent.readMore} <ArrowRight />
                 </Link>
               </Button>
             </CardFooter>
