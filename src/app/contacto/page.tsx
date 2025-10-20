@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -22,6 +23,7 @@ import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { useLanguage } from '@/context/language-context';
 
 const Placeholder = ({
   className,
@@ -53,6 +55,66 @@ export default function ContactoPage() {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const { lang } = useLanguage();
+
+  const content = {
+    es: {
+      heroTitle: 'Contacto',
+      heroSubtitle: 'Estoy aquí para ayudarte. Agenda una cita o resuelve tus dudas.',
+      formTitle: 'Envíame un Mensaje',
+      formSubtitle: 'Completa el formulario y te responderé lo antes posible.',
+      labelName: 'Nombre Completo',
+      placeholderName: 'Tu nombre',
+      labelEmail: 'Correo Electrónico',
+      placeholderEmail: 'tu@correo.com',
+      labelSubject: 'Asunto',
+      placeholderSubject: 'Ej: Consulta sobre Hilos Tensores',
+      labelMessage: 'Mensaje',
+      placeholderMessage: 'Escribe tu mensaje aquí...',
+      buttonSend: 'Enviar Mensaje',
+      infoTitle: 'Información de Contacto',
+      infoSubtitle: 'Utiliza los siguientes canales para comunicarte conmigo.',
+      infoAddressTitle: 'Dirección',
+      infoAddress: `Edificio Azor, Cra. 84 #37b - 195
+Primer piso, La América
+Medellín, Antioquia`,
+      infoWhatsappTitle: 'WhatsApp',
+      infoEmailTitle: 'Email',
+      infoHoursTitle: 'Horario de Atención',
+      infoHours: `Lun - Vie: 8:00 AM - 6:00 PM
+Sáb: 8:00 AM - 2:00 PM`,
+      socialTitle: 'Sígueme',
+    },
+    en: {
+      heroTitle: 'Contact',
+      heroSubtitle: 'I\'m here to help. Schedule an appointment or resolve your doubts.',
+      formTitle: 'Send me a Message',
+      formSubtitle: 'Complete the form and I will respond as soon as possible.',
+      labelName: 'Full Name',
+      placeholderName: 'Your name',
+      labelEmail: 'Email Address',
+      placeholderEmail: 'you@email.com',
+      labelSubject: 'Subject',
+      placeholderSubject: 'e.g., Inquiry about Thread Lifts',
+      labelMessage: 'Message',
+      placeholderMessage: 'Write your message here...',
+      buttonSend: 'Send Message',
+      infoTitle: 'Contact Information',
+      infoSubtitle: 'Use the following channels to get in touch with me.',
+      infoAddressTitle: 'Address',
+      infoAddress: `Azor Building, Cra. 84 #37b - 195
+First floor, La América
+Medellín, Antioquia`,
+      infoWhatsappTitle: 'WhatsApp',
+      infoEmailTitle: 'Email',
+      infoHoursTitle: 'Opening Hours',
+      infoHours: `Mon - Fri: 8:00 AM - 6:00 PM
+Sat: 8:00 AM - 2:00 PM`,
+      socialTitle: 'Follow Me',
+    },
+  };
+  
+  const currentContent = content[lang];
 
   const mailtoHref = `mailto:jonathanra36@hotmail.com?subject=${encodeURIComponent(
     subject
@@ -72,10 +134,10 @@ export default function ContactoPage() {
         <div className="absolute inset-0 flex items-center justify-center text-center">
           <div className="container mx-auto px-4 text-white">
             <h1 className="font-headline text-4xl md:text-6xl font-bold !leading-tight tracking-tight drop-shadow-lg">
-              Contacto
+              {currentContent.heroTitle}
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-200 drop-shadow-md">
-              Estoy aquí para ayudarte. Agenda una cita o resuelve tus dudas.
+              {currentContent.heroSubtitle}
             </p>
           </div>
         </div>
@@ -87,34 +149,34 @@ export default function ContactoPage() {
           <div className="space-y-8">
              <div>
               <h2 className="font-headline text-3xl font-bold">
-                Envíame un Mensaje
+                {currentContent.formTitle}
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Completa el formulario y te responderé lo antes posible.
+                {currentContent.formSubtitle}
               </p>
             </div>
             <div className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nombre Completo</Label>
-                  <Input id="name" placeholder="Tu nombre" value={name} onChange={(e) => setName(e.target.value)} />
+                  <Label htmlFor="name">{currentContent.labelName}</Label>
+                  <Input id="name" placeholder={currentContent.placeholderName} value={name} onChange={(e) => setName(e.target.value)} />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Correo Electrónico</Label>
-                  <Input id="email" type="email" placeholder="tu@correo.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <Label htmlFor="email">{currentContent.labelEmail}</Label>
+                  <Input id="email" type="email" placeholder={currentContent.placeholderEmail} value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="subject">Asunto</Label>
-                <Input id="subject" placeholder="Ej: Consulta sobre Hilos Tensores" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                <Label htmlFor="subject">{currentContent.labelSubject}</Label>
+                <Input id="subject" placeholder={currentContent.placeholderSubject} value={subject} onChange={(e) => setSubject(e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message">Mensaje</Label>
-                <Textarea id="message" placeholder="Escribe tu mensaje aquí..." className="min-h-[120px]" value={message} onChange={(e) => setMessage(e.target.value)} />
+                <Label htmlFor="message">{currentContent.labelMessage}</Label>
+                <Textarea id="message" placeholder={currentContent.placeholderMessage} className="min-h-[120px]" value={message} onChange={(e) => setMessage(e.target.value)} />
               </div>
               <Button asChild size="lg" className="w-full">
                 <a href={mailtoHref}>
-                  Enviar Mensaje <Send />
+                  {currentContent.buttonSend} <Send />
                 </a>
               </Button>
             </div>
@@ -124,10 +186,10 @@ export default function ContactoPage() {
           <div className="space-y-8">
             <div>
               <h2 className="font-headline text-3xl font-bold">
-                Información de Contacto
+                {currentContent.infoTitle}
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Utiliza los siguientes canales para comunicarte conmigo.
+                {currentContent.infoSubtitle}
               </p>
             </div>
             <Card>
@@ -135,23 +197,26 @@ export default function ContactoPage() {
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold">Dirección</h3>
+                    <h3 className="font-semibold">{currentContent.infoAddressTitle}</h3>
                     <a
                       href="https://maps.app.goo.gl/Um7JKhc2Nhewzhm67"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      Edificio Azor, Cra. 84 #37b - 195 <br />
-                      Primer piso, La América <br />
-                      Medellín, Antioquia
+                      {currentContent.infoAddress.split('\n').map((line, index) => (
+                        <React.Fragment key={index}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <WhatsAppIcon className="w-6 h-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold">WhatsApp</h3>
+                    <h3 className="font-semibold">{currentContent.infoWhatsappTitle}</h3>
                     <a
                       href="https://wa.me/573122784757"
                       target="_blank"
@@ -165,7 +230,7 @@ export default function ContactoPage() {
                  <div className="flex items-start gap-4">
                   <Mail className="w-6 h-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold">Email</h3>
+                    <h3 className="font-semibold">{currentContent.infoEmailTitle}</h3>
                     <a
                       href="mailto:jonathanra36@hotmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
@@ -177,10 +242,9 @@ export default function ContactoPage() {
                 <div className="flex items-start gap-4">
                   <Clock className="w-6 h-6 text-primary mt-1" />
                   <div>
-                    <h3 className="font-semibold">Horario de Atención</h3>
-                    <p className="text-muted-foreground">
-                      Lun - Vie: 8:00 AM - 6:00 PM <br />
-                      Sáb: 8:00 AM - 2:00 PM
+                    <h3 className="font-semibold">{currentContent.infoHoursTitle}</h3>
+                    <p className="text-muted-foreground whitespace-pre-line">
+                      {currentContent.infoHours}
                     </p>
                   </div>
                 </div>
@@ -199,7 +263,7 @@ export default function ContactoPage() {
             </div>
              <div className="space-y-4">
               <SectionTitleWithLines>
-                <span className='text-primary font-bold'>Sígueme</span>
+                <span className='text-primary font-bold'>{currentContent.socialTitle}</span>
               </SectionTitleWithLines>
                <div className="flex justify-center space-x-2 mt-4">
                <Button variant="outline" size="icon" asChild>
@@ -230,3 +294,5 @@ export default function ContactoPage() {
     </div>
   );
 }
+
+    
