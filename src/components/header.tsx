@@ -19,6 +19,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { ChevronDown } from 'lucide-react';
 import React from 'react';
+import { useLanguage } from '@/context/language-context';
 
 const navLinks = [
     { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
@@ -41,6 +42,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { lang, setLang } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,7 +115,11 @@ export default function Header() {
             ))}
         </nav>
 
-        <div className="hidden lg:flex items-center space-x-1">
+        <div className="hidden lg:flex items-center space-x-2">
+          <div className="flex items-center border rounded-full p-1">
+            <Button variant={lang === 'es' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs" onClick={() => setLang('es')}>ES</Button>
+            <Button variant={lang === 'en' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs" onClick={() => setLang('en')}>EN</Button>
+          </div>
           <Button asChild className="uppercase tracking-widest bg-green-500 hover:bg-green-600">
              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
                 Agendar Cita <MessageCircle />
@@ -175,6 +181,10 @@ export default function Header() {
                         Agendar Cita <MessageCircle />
                     </a>
                 </Button>
+                <div className="flex items-center justify-center border rounded-full p-1 mt-4">
+                  <Button variant={lang === 'es' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs w-full" onClick={() => setLang('es')}>Español</Button>
+                  <Button variant={lang === 'en' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs w-full" onClick={() => setLang('en')}>English</Button>
+                </div>
               </div>
           </SheetContent>
         </Sheet>

@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
@@ -23,6 +22,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import Image from 'next/image';
 import { findImage } from '@/lib/images';
+import { useLanguage } from '@/context/language-context';
 
 const Placeholder = ({
   className,
@@ -50,7 +50,7 @@ const Placeholder = ({
 };
 
 export default function MedicinaEsteticaAvanzadaPage() {
-  const [lang, setLang] = useState<'es' | 'en'>('es');
+  const { lang } = useLanguage();
 
   const content = {
     es: {
@@ -162,15 +162,15 @@ export default function MedicinaEsteticaAvanzadaPage() {
       skinboostersExpect: 'What can you expect?',
       skinboostersExpectDesc: 'Visibly more hydrated, juicy, elastic skin with a natural glow. It softens fine lines and improves overall skin quality. Its effects usually last between 6 and 12 months.',
       skinboostersIdeal: 'Ideal for: Dehydrated, dull skin or skin that is beginning to show the first signs of aging.',
-      pdrnTitle: 'PDRN (Salmon Sperm)',
+      pdrnTitle: 'PDRN (Salmon DNA)',
       pdrnDesc: 'PDRN (polydeoxyribonucleotide) is a potent cell regenerator extracted from salmon gonadal tissue. It is a purified and safe DNA fragment.',
       pdrnHow: 'How does it work?',
       pdrnHowDesc: 'It acts at a cellular level, stimulating tissue repair, collagen production, improving elasticity, and reducing inflammation.',
       pdrnBenefits: 'Benefits:',
       pdrnBenefitsDesc: 'Improves firmness, reduces fine lines, diminishes acne scars, and restores radiance to the skin.',
       pdrnIdeal: 'Ideal for: Skin that needs deep repair, improvement of scars, or an extra boost of rejuvenation.',
-      facialVideosTitle: 'Results that Speak for Themselves',
-      facialVideosSubtitle: 'See how our advanced facial treatments have rejuvenated our patients\' skin.',
+      facialVideosTitle: 'Results that Speak',
+      facialVideosSubtitle: "See how our advanced facial treatments have rejuvenated our patients' skin.",
       fillersTitle: 'Fillers with Hyaluronic Acid – Volume and Definition',
       fillersSubtitle: 'Hyaluronic acid is a substance that our body produces naturally to keep the skin hydrated and voluminous, but its production decreases with age. Dermal fillers use a gel version of this molecule to safely restore or add volume with immediate results.',
       fillersFaceTitle: 'Hyaluronic Acid for the Face (Grooves, Cheekbones)',
@@ -250,11 +250,6 @@ export default function MedicinaEsteticaAvanzadaPage() {
       </section>
 
       <div className="container mx-auto px-4 py-16 sm:py-24 space-y-24">
-        
-        <div className="flex justify-center items-center gap-2">
-            <Button variant={lang === 'es' ? 'default' : 'outline'} onClick={() => setLang('es')}>Español</Button>
-            <Button variant={lang === 'en' ? 'default' : 'outline'} onClick={() => setLang('en')}>English</Button>
-        </div>
         
         <Tabs defaultValue="facial" className="w-full">
           <TabsList className="grid w-full grid-cols-2 max-w-lg mx-auto h-auto">
