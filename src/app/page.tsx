@@ -1,3 +1,4 @@
+'use client';
 
 import Link from 'next/link';
 import {
@@ -34,31 +35,37 @@ import { cn } from '@/lib/utils';
 import { AnimatedCounter } from '@/components/ui/animated-counter';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { findImage } from '@/lib/images';
+import { useLanguage } from '@/context/language-context';
 
-const treatments: { icon: string; title: string; href: string; size?: number }[] = [
+const treatments: { icon: string; title: string; title_en: string; href: string; size?: number }[] = [
   {
     icon: '/images/Hilos_Tensores_Icono.png',
     title: 'Hilos Tensores',
+    title_en: 'Thread Lifts',
     href: '/hilos-tensores',
   },
   {
     icon: '/images/Bioestimuladores.png',
     title: 'Bioestimuladores de Colágeno',
+    title_en: 'Collagen Biostimulators',
     href: '/bioestimuladores',
   },
   {
     icon: '/images/botox.png',
     title: 'Toxina Botulínica',
+    title_en: 'Botulinum Toxin',
     href: '/botox',
   },
   {
     icon: '/images/Body_Estetica Corporal.png',
     title: 'Contorno Corporal',
+    title_en: 'Body Contouring',
     href: '/contorno-corporal',
   },
   {
     icon: '/images/icono_Face_estetica_facial.png',
     title: 'Medicina Estética Avanzada',
+    title_en: 'Advanced Aesthetic Medicine',
     href: '/medicina-estetica-avanzada',
   },
 ];
@@ -92,6 +99,71 @@ const TreatmentCard = ({
 
 
 export default function Home() {
+  const { lang } = useLanguage();
+  
+  const content = {
+    es: {
+      heroTitle: 'Resultados y Confianza',
+      heroSubtitle: 'Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.',
+      stat1: 'Pacientes Satisfechos',
+      stat2: 'Satisfacción',
+      stat3: 'de Experiencia',
+      recognition: 'Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá',
+      videoTitle: 'Testimonios en Video',
+      videoSubtitle: 'Pacientes reales comparten sus experiencias y resultados.',
+      treatmentsTitle: 'Nuestros Tratamientos Principales',
+      treatmentsSubtitle: 'Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.',
+      aboutTitle: 'Conoce al Dr. Jonathan Rincón',
+      aboutP1: 'Médico Cirujano especialista en Medicina Estética, con más de 8 años de experiencia. Reconocido como el',
+      aboutP1Strong: '#1 en hilos tensores en Medellín y Bogotá',
+      aboutP1Cont: ', combino mi práctica clínica con una profunda pasión por la anatomía y las técnicas avanzadas para ofrecer resultados seguros, naturales y armoniosos.',
+      aboutP2: 'Mi dedicación a la excelencia va más allá de la consulta. Como',
+      aboutP2Strong1: 'trainer oficial para marcas líderes en la industria',
+      aboutP2Cont: ', tengo la misión de elevar el estándar de la medicina estética. Ofrezco',
+      aboutP2Strong2: 'capacitaciones avanzadas y personalizadas para médicos',
+      aboutP2Cont2: ' que buscan perfeccionar sus técnicas, dominar los procedimientos más innovadores y ofrecer resultados excepcionales a sus propios pacientes.',
+      ctaButton1: 'Agendar Cita',
+      ctaButton2: 'Capacítate Conmigo',
+      resultsTitle: 'Resultados que Inspiran',
+      resultsSubtitle: 'Transformaciones reales que reflejan mi compromiso con la excelencia y la naturalidad.',
+      beforeAfter1: 'Capacitacion a mis pacientes',
+      beforeAfter2: 'Excelentes productos',
+      beforeAfter3: 'Pacientes Felices',
+      viewAllButton: 'Ver Todos los Tratamientos',
+    },
+    en: {
+      heroTitle: 'Results and Trust',
+      heroSubtitle: 'My commitment is to your well-being and satisfaction, backed by years of experience and hundreds of happy patients.',
+      stat1: 'Satisfied Patients',
+      stat2: 'Satisfaction',
+      stat3: 'of Experience',
+      recognition: 'Recognized as the #1 expert in PDO threads in Medellín and Bogotá',
+      videoTitle: 'Video Testimonials',
+      videoSubtitle: 'Real patients share their experiences and results.',
+      treatmentsTitle: 'Our Main Treatments',
+      treatmentsSubtitle: 'Customized solutions to enhance your natural beauty with the most advanced and safe techniques.',
+      aboutTitle: 'Meet Dr. Jonathan Rincón',
+      aboutP1: 'Aesthetic Medicine Specialist Surgeon, with over 8 years of experience. Recognized as the',
+      aboutP1Strong: '#1 expert in thread lifts in Medellín and Bogotá',
+      aboutP1Cont: ', I combine my clinical practice with a deep passion for anatomy and advanced techniques to offer safe, natural, and harmonious results.',
+      aboutP2: 'My dedication to excellence goes beyond the consultation. As an',
+      aboutP2Strong1: 'official trainer for leading industry brands',
+      aboutP2Cont: ', my mission is to raise the standard of aesthetic medicine. I offer',
+      aboutP2Strong2: 'advanced and personalized training for doctors',
+      aboutP2Cont2: ' seeking to perfect their techniques, master the most innovative procedures, and deliver exceptional results to their own patients.',
+      ctaButton1: 'Schedule Appointment',
+      ctaButton2: 'Train With Me',
+      resultsTitle: 'Inspiring Results',
+      resultsSubtitle: 'Real transformations that reflect my commitment to excellence and naturalness.',
+      beforeAfter1: 'Training my patients',
+      beforeAfter2: 'Excellent products',
+      beforeAfter3: 'Happy Patients',
+      viewAllButton: 'View All Treatments',
+    },
+  };
+
+  const currentContent = content[lang];
+  
   const testimonialImage1 = { src: '/images/Modelo 6.jpg', hint: 'facial procedure' };
   const testimonialImage2 = { src: '/images/Modelo 9.jpg', hint: 'facial injection' };
   const galleryImages = [
@@ -109,35 +181,35 @@ export default function Home() {
   const stats = [
     {
       value: 1000,
-      label: 'Pacientes Satisfechos',
+      label: currentContent.stat1,
       icon: HeartHandshake,
       suffix: '+',
     },
     {
       value: 100,
-      label: 'Satisfacción',
+      label: currentContent.stat2,
       icon: Sparkles,
       suffix: '%',
     },
     {
       value: 8,
-      label: 'de Experiencia',
+      label: currentContent.stat3,
       icon: Award,
-      prefix: 'años',
+      prefix: lang === 'es' ? 'años' : 'years',
     },
   ];
 
   const beforeAfterCases = [
     {
-      title: 'Capacitacion a mis pacientes',
+      title: currentContent.beforeAfter1,
       image: findImage('home-before-after-1'),
     },
     {
-      title: 'Excelentes productos',
+      title: currentContent.beforeAfter2,
       image: findImage('home-before-after-2'),
     },
     {
-      title: 'Pacientes Felices',
+      title: currentContent.beforeAfter3,
       image: findImage('home-before-after-3'),
     },
   ];
@@ -162,8 +234,8 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 text-white container mx-auto px-4">
-              <h2 className="font-headline text-4xl md:text-5xl font-bold">Resultados y <span className="text-primary-foreground">Confianza</span></h2>
-              <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">Mi compromiso es con tu bienestar y satisfacción, respaldado por años de experiencia y cientos de pacientes felices.</p>
+              <h2 className="font-headline text-4xl md:text-5xl font-bold">{currentContent.heroTitle}</h2>
+              <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">{currentContent.heroSubtitle}</p>
 
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
                   {stats.map((stat) => (
@@ -192,7 +264,7 @@ export default function Home() {
               </div>
               <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-slate-200">
                 <Medal className="w-10 h-10 md:w-12 md:h-12 text-yellow-300" />
-                <p className="font-semibold text-lg md:text-xl text-center">Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá</p>
+                <p className="font-semibold text-lg md:text-xl text-center">{currentContent.recognition}</p>
               </div>
           </div>
         </section>
@@ -201,10 +273,10 @@ export default function Home() {
         <section id="videos-home" className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-headline text-4xl md:text-5xl font-bold">
-              Testimonios en <span className="text-primary">Video</span>
+              {currentContent.videoTitle}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-              Pacientes reales comparten sus experiencias y resultados.
+              {currentContent.videoSubtitle}
             </p>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
@@ -220,7 +292,7 @@ export default function Home() {
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/vlBIojuoo3Y?autoplay=0"
+                  src="https://www.youtube.com/embed/vlBIojuoo3Y"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -230,7 +302,7 @@ export default function Home() {
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/_jQTyBUkhwY?autoplay=0"
+                  src="https://www.youtube.com/embed/_jQTyBUkhwY"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -250,15 +322,15 @@ export default function Home() {
         <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4 scroll-mt-20">
              <div className="text-center max-w-2xl mx-auto">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold">
-                    Nuestros <span className="text-primary">Tratamientos Principales</span>
+                    <span className="text-primary">{currentContent.treatmentsTitle}</span>
                 </h2>
                 <p className="mt-4 text-lg text-muted-foreground">
-                    Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.
+                    {currentContent.treatmentsSubtitle}
                 </p>
             </div>
             <div className="mt-12 grid grid-cols-2 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-8 w-full max-w-6xl mx-auto">
                 {treatments.map((treatment) => (
-                  <TreatmentCard key={treatment.title} {...treatment} />
+                  <TreatmentCard key={treatment.title} {...treatment} title={lang === 'es' ? treatment.title : treatment.title_en} />
                 ))}
             </div>
         </section>
@@ -289,7 +361,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Agendar Cita <MessageCircle />
+                    {currentContent.ctaButton1} <MessageCircle />
                   </a>
                 </Button>
                 <Button asChild size="lg">
@@ -298,25 +370,24 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Capacítate Conmigo <MessageCircle />
+                    {currentContent.ctaButton2} <MessageCircle />
                   </a>
                 </Button>
               </div>
             </div>
             <div className="flex flex-col text-center items-center md:text-left md:items-start md:order-1">
               <h2 className="font-headline text-4xl md:text-5xl font-bold">
-                Conoce al{' '}
-                <span className="text-primary">Dr. Jonathan Rincón</span>
+                {currentContent.aboutTitle}
               </h2>
               <p className="mt-6 text-lg text-muted-foreground md:text-justify">
-                Médico Cirujano especialista en Medicina Estética, con más de 8 años de experiencia. Reconocido como el{' '}
+                {currentContent.aboutP1}{' '}
                 <strong className="text-primary font-bold">
-                  #1 en hilos tensores en Medellín y Bogotá
+                  {currentContent.aboutP1Strong}
                 </strong>
-                , combino mi práctica clínica con una profunda pasión por la anatomía y las técnicas avanzadas para ofrecer resultados seguros, naturales y armoniosos.
+                {currentContent.aboutP1Cont}
               </p>
               <p className="mt-4 text-lg text-muted-foreground md:text-justify">
-                Mi dedicación a la excelencia va más allá de la consulta. Como <strong className="text-primary font-bold">trainer oficial para marcas líderes en la industria</strong>, tengo la misión de elevar el estándar de la medicina estética. Ofrezco <strong className="text-primary font-bold">capacitaciones avanzadas y personalizadas para médicos</strong> que buscan perfeccionar sus técnicas, dominar los procedimientos más innovadores y ofrecer resultados excepcionales a sus propios pacientes.
+                {currentContent.aboutP2} <strong className="text-primary font-bold">{currentContent.aboutP2Strong1}</strong>{currentContent.aboutP2Cont} <strong className="text-primary font-bold">{currentContent.aboutP2Strong2}</strong>{currentContent.aboutP2Cont2}
               </p>
               <div className="mt-8 hidden md:flex items-center gap-4">
                 <Button asChild size="lg" className="bg-green-500 hover:bg-green-600">
@@ -325,7 +396,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Agendar Cita <MessageCircle />
+                    {currentContent.ctaButton1} <MessageCircle />
                   </a>
                 </Button>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
@@ -334,7 +405,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Capacítate Conmigo <MessageCircle />
+                    {currentContent.ctaButton2} <MessageCircle />
                   </a>
                 </Button>
               </div>
@@ -346,10 +417,10 @@ export default function Home() {
         <section id="resultados-home" className="py-16 sm:py-24 bg-secondary">
           <div className="container mx-auto px-4 text-center">
             <h2 className="font-headline text-4xl md:text-5xl font-bold">
-              Resultados que <span className="text-primary">Inspiran</span>
+              {currentContent.resultsTitle}
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-              Transformaciones reales que reflejan mi compromiso con la excelencia y la naturalidad.
+              {currentContent.resultsSubtitle}
             </p>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               {beforeAfterCases.map((caseItem, index) => (
@@ -372,7 +443,7 @@ export default function Home() {
               ))}
             </div>
             <Button asChild size="lg" className="mt-12">
-              <Link href="#tratamientos">Ver Todos los Tratamientos</Link>
+              <Link href="#tratamientos">{currentContent.viewAllButton}</Link>
             </Button>
           </div>
         </section>
