@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -130,6 +131,16 @@ export default function Home() {
       beforeAfter2: 'Excelentes productos',
       beforeAfter3: 'Pacientes Felices',
       viewAllButton: 'Ver Todos los Tratamientos',
+      gallery: {
+        'Lifting de Cuello': 'Lifting de Cuello',
+        'Rejuvenecimiento Facial': 'Rejuvenecimiento Facial',
+        'Marcación Mandibular': 'Marcación Mandibular',
+        'Rinomodelación': 'Rinomodelación',
+        'Tratamiento de Ojeras': 'Tratamiento de Ojeras',
+        'Foxy Eyes': 'Foxy Eyes',
+        'Lifting de Glúteos': 'Lifting de Glúteos',
+        'Marcación Abdominal': 'Marcación Abdominal',
+      }
     },
     en: {
       heroTitle: 'Results and Trust',
@@ -159,6 +170,16 @@ export default function Home() {
       beforeAfter2: 'Excellent products',
       beforeAfter3: 'Happy Patients',
       viewAllButton: 'View All Treatments',
+      gallery: {
+        'Lifting de Cuello': 'Neck Lift',
+        'Rejuvenecimiento Facial': 'Facial Rejuvenation',
+        'Marcación Mandibular': 'Jawline Definition',
+        'Rinomodelación': 'Rhinomodeling',
+        'Tratamiento de Ojeras': 'Under-Eye Treatment',
+        'Foxy Eyes': 'Foxy Eyes',
+        'Lifting de Glúteos': 'Buttock Lift',
+        'Marcación Abdominal': 'Abdominal Definition',
+      }
     },
   };
 
@@ -166,15 +187,15 @@ export default function Home() {
   
   const testimonialImage1 = { src: '/images/Modelo 6.jpg', hint: 'facial procedure' };
   const testimonialImage2 = { src: '/images/Modelo 9.jpg', hint: 'facial injection' };
-  const galleryImages = [
-    { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title: 'Lifting de Cuello', href: '/hilos-tensores', category: 'Hilos Tensores' },
-    { id: 'gallery-2', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'man consultation', title: 'Rejuvenecimiento Facial', href: '/medicina-estetica-avanzada' },
-    { id: 'gallery-3', src: '/images/Hilos tensores_Marcacion mandibular.png', hint: 'facial marking', title: 'Marcación Mandibular', href: '/hilos-tensores', category: 'Hilos Tensores' },
-    { id: 'gallery-4', src: '/images/Rinomodelacion.png', hint: 'facial injection', title: 'Rinomodelación', href: '/hilos-tensores' },
-    { id: 'gallery-5', src: '/images/Ojeras.png', hint: 'skin treatment', title: 'Tratamiento de Ojeras', href: '/medicina-estetica-avanzada' },
-    { id: 'gallery-6', src: '/images/Hilos_Foxy_eyes.png', hint: 'foxy eyes procedure', title: 'Foxy Eyes', href: '/hilos-tensores', category: 'Hilos Tensores' },
-    { id: 'gallery-7', src: '/images/Hilos_Tensores _Levantamiento de gluteos.png', hint: 'patient treatment', title: 'Lifting de Glúteos', href: '/hilos-tensores' },
-    { id: 'gallery-8', src: '/images/Hilos_Tensores_Abdomen_1.jpg', hint: 'man profile', title: 'Marcación Abdominal', href: '/hilos-tensores', category: 'Hilos Tensores' }
+  const getGalleryImages = () => [
+    { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title: currentContent.gallery['Lifting de Cuello'], href: '/hilos-tensores', category: 'Hilos Tensores' },
+    { id: 'gallery-2', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'man consultation', title: currentContent.gallery['Rejuvenecimiento Facial'], href: '/medicina-estetica-avanzada' },
+    { id: 'gallery-3', src: '/images/Hilos tensores_Marcacion mandibular.png', hint: 'facial marking', title: currentContent.gallery['Marcación Mandibular'], href: '/hilos-tensores', category: 'Hilos Tensores' },
+    { id: 'gallery-4', src: '/images/Rinomodelacion.png', hint: 'facial injection', title: currentContent.gallery['Rinomodelación'], href: '/hilos-tensores' },
+    { id: 'gallery-5', src: '/images/Ojeras.png', hint: 'skin treatment', title: currentContent.gallery['Tratamiento de Ojeras'], href: '/medicina-estetica-avanzada' },
+    { id: 'gallery-6', src: '/images/Hilos_Foxy_eyes.png', hint: 'foxy eyes procedure', title: currentContent.gallery['Foxy Eyes'], href: '/hilos-tensores', category: 'Hilos Tensores' },
+    { id: 'gallery-7', src: '/images/Hilos_Tensores _Levantamiento de gluteos.png', hint: 'patient treatment', title: currentContent.gallery['Lifting de Glúteos'], href: '/hilos-tensores' },
+    { id: 'gallery-8', src: '/images/Hilos_Tensores_Abdomen_1.jpg', hint: 'man profile', title: currentContent.gallery['Marcación Abdominal'], href: '/hilos-tensores', category: 'Hilos Tensores' }
   ].filter(Boolean) as any[];
 
 
@@ -315,7 +336,7 @@ export default function Home() {
         
         {/* Infinite Moving Cards Section */}
         <section className="py-2 sm:py-4 [transform:translateZ(0)]">
-          <InfiniteMovingCards items={galleryImages} direction="right" speed="slow" />
+          <InfiniteMovingCards items={getGalleryImages()} direction="right" speed="slow" />
         </section>
 
          {/* Treatments Section */}
