@@ -21,23 +21,6 @@ import { ChevronDown } from 'lucide-react';
 import React from 'react';
 import { useLanguage } from '@/context/language-context';
 
-const navLinks = [
-    { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
-    {
-        name: 'Tratamientos',
-        dropdown: [
-            { name: 'Bioestimuladores', href: '/bioestimuladores' },
-            { name: 'Botox', href: '/botox' },
-            { name: 'Contorno Corporal', href: '/contorno-corporal' },
-            { name: 'Medicina Estética Avanzada', href: '/medicina-estetica-avanzada' },
-        ]
-    },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Sobre Mi', href: '/#sobre-el-doctor' },
-    { name: 'Contacto', href: '/contacto' },
-];
-
-
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,6 +39,53 @@ export default function Header() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
+
+  const content = {
+    es: {
+      navLinks: [
+        { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
+        {
+          name: 'Tratamientos',
+          dropdown: [
+            { name: 'Bioestimuladores', href: '/bioestimuladores' },
+            { name: 'Botox', href: '/botox' },
+            { name: 'Contorno Corporal', href: '/contorno-corporal' },
+            { name: 'Medicina Estética Avanzada', href: '/medicina-estetica-avanzada' },
+          ],
+        },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Sobre Mi', href: '/#sobre-el-doctor' },
+        { name: 'Contacto', href: '/contacto' },
+      ],
+      ctaButton: 'Agendar Cita',
+      mobileMenuTitle: 'Navegación Principal',
+      mobileMenuClose: 'Cerrar menú',
+      openMenu: 'Abrir menú',
+    },
+    en: {
+      navLinks: [
+        { name: 'Thread Lifts', href: '/hilos-tensores', highlight: true },
+        {
+          name: 'Treatments',
+          dropdown: [
+            { name: 'Biostimulators', href: '/bioestimuladores' },
+            { name: 'Botox', href: '/botox' },
+            { name: 'Body Contouring', href: '/contorno-corporal' },
+            { name: 'Advanced Aesthetic Medicine', href: '/medicina-estetica-avanzada' },
+          ],
+        },
+        { name: 'Blog', href: '/blog' },
+        { name: 'About Me', href: '/#sobre-el-doctor' },
+        { name: 'Contact', href: '/contacto' },
+      ],
+      ctaButton: 'Schedule Appointment',
+      mobileMenuTitle: 'Main Navigation',
+      mobileMenuClose: 'Close menu',
+      openMenu: 'Open menu',
+    },
+  };
+
+  const currentContent = content[lang];
   
   const NavLink = ({ href, children, highlight = false }: { href: string; children: React.ReactNode; highlight?: boolean }) => {
     const isActive = pathname === href;
@@ -104,12 +134,12 @@ export default function Header() {
         <Logo />
 
         <nav className="hidden lg:flex items-center gap-4">
-            {navLinks.map((link, index) => (
+            {currentContent.navLinks.map((link, index) => (
               <React.Fragment key={link.name}>
                 {index > 0 && <div className="h-4 w-px bg-border" />}
                 {link.dropdown 
                     ? <NavDropdown name={link.name} items={link.dropdown} />
-                    : <NavLink href={link.href || '#'} highlight={link.highlight}>{link.name}</NavLink>
+                    : <NavLink href={link.href || '#'} highlight={!!link.highlight}>{link.name}</NavLink>
                 }
               </React.Fragment>
             ))}
@@ -122,7 +152,7 @@ export default function Header() {
           </div>
           <Button asChild className="uppercase tracking-widest bg-green-500 hover:bg-green-600">
              <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                Agendar Cita <MessageCircle />
+                {currentContent.ctaButton} <MessageCircle />
              </a>
           </Button>
         </div>
@@ -131,24 +161,24 @@ export default function Header() {
           <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="icon" className={cn("hover:text-primary/80", 'text-foreground')}>
               <Menu className="h-6 w-6" />
-              <span className="sr-only">Abrir menú</span>
+              <span className="sr-only">{currentContent.openMenu}</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-full max-w-sm bg-background p-0 flex flex-col">
               <SheetHeader className="sr-only">
-                <SheetTitle>Navegación Principal</SheetTitle>
+                <SheetTitle>{currentContent.mobileMenuTitle}</SheetTitle>
               </SheetHeader>
               <div className="flex justify-between items-center p-4 border-b">
                  <Logo />
                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                     <X className="h-6 w-6" />
-                    <span className="sr-only">Cerrar menú</span>
+                    <span className="sr-only">{currentContent.mobileMenuClose}</span>
                  </Button>
               </div>
 
             <nav className="flex-1 p-6">
               <ul className="space-y-4">
-                {navLinks.map(link => (
+                {currentContent.navLinks.map(link => (
                   <li key={link.name}>
                     {link.dropdown ? (
                        <div>
@@ -178,7 +208,7 @@ export default function Header() {
               <div className="p-6 border-t mt-auto">
                  <Button asChild size="lg" className="w-full bg-green-500 hover:bg-green-600">
                     <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
-                        Agendar Cita <MessageCircle />
+                        {currentContent.ctaButton} <MessageCircle />
                     </a>
                 </Button>
                 <div className="flex items-center justify-center border rounded-full p-1 mt-4">
