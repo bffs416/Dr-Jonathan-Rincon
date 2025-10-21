@@ -40,6 +40,7 @@ import { SectionArch } from '@/components/section-arch';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { findImage } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
+import Head from 'next/head';
 
 
 export default function HilosTensoresPage() {
@@ -262,8 +263,58 @@ export default function HilosTensoresPage() {
     }
   };
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalProcedure',
+    name: 'Lifting con Hilos Tensores (Thread Lift)',
+    description: 'Tratamiento de rejuvenecimiento facial y corporal sin cirugía para un lifting natural y duradero mediante hilos de Polidioxanona (PDO).',
+    bodyLocation: [
+      { '@type': 'BodyPart', name: 'Cara' },
+      { '@type': 'BodyPart', name: 'Cuello' },
+      { '@type': 'BodyPart', name: 'Brazos' },
+      { '@type': 'BodyPart', name: 'Abdomen' },
+      { '@type': 'BodyPart', name: 'Glúteos' },
+    ],
+    procedureType: {
+      '@type': 'MedicalProcedureType',
+      name: 'Mínimamente Invasivo'
+    },
+    indication: [
+      { '@type': 'MedicalIndication', name: 'Flacidez cutánea' },
+      { '@type': 'MedicalIndication', name: 'Arrugas faciales' },
+      { '@type': 'MedicalIndication', name: 'Pérdida de definición del óvalo facial' },
+    ],
+    performer: {
+      '@type': 'Physician',
+      name: 'Dr. Jonathan Rincón',
+      jobTitle: 'Médico Cirujano especialista en Medicina Estética',
+      url: 'https://www.drjonathanrincon.com/'
+    },
+    provider: {
+      '@type': 'MedicalBusiness',
+      name: 'Dr. Jonathan Rincón - Medicina Estética',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Edificio Azor, Cra. 84 #37b - 195, Primer piso, La América',
+        addressLocality: 'Medellín',
+        addressRegion: 'Antioquia',
+        postalCode: '050032',
+        addressCountry: 'CO'
+      },
+      telephone: '+573122784757',
+      url: 'https://www.drjonathanrincon.com/',
+      image: 'https://www.drjonathanrincon.com/images/Logo Dr Johnathan.png'
+    }
+  };
+
   return (
     <div>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
         {heroImage && (
@@ -657,5 +708,3 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
-
-    
