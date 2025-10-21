@@ -30,6 +30,7 @@ import {
 } from '@/components/ui/select';
 import { findImage } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
+import { POSTS } from '@/lib/blog-posts';
 
 export default function BlogPage() {
   const router = useRouter();
@@ -44,6 +45,25 @@ export default function BlogPage() {
     }
   };
 
+  const allPosts = Object.entries(POSTS).map(([slug, postData]) => ({
+    slug: `/blog/${slug}`,
+    ...postData[lang],
+    originalSlug: slug,
+  }));
+
+  const featuredPostData = POSTS['hilos-tensores-revolucion'][lang];
+  const featuredPost = {
+    slug: '/blog/hilos-tensores-revolucion',
+    image: featuredPostData.image,
+    title: featuredPostData.title,
+    description: featuredPostData.content.match(/<p class="lead">(.*?)<\/p>/)?.[1] || '',
+    date: featuredPostData.date,
+    readTime: featuredPostData.readTime,
+  };
+  
+  const regularPosts = allPosts.filter(p => p.originalSlug !== 'hilos-tensores-revolucion');
+
+
   const content = {
     es: {
       pageTitle: 'Blog de Medicina Estética',
@@ -55,48 +75,6 @@ export default function BlogPage() {
       filterBotox: 'Botox',
       filterBody: 'Corporal',
       featuredBadge: 'Artículo Destacado',
-      featuredPost: {
-        slug: '/blog/hilos-tensores-revolucion',
-        image: findImage('blog-featured'),
-        title: 'Hilos Tensores: La Revolución del Lifting Sin Cirugía en Medellín',
-        description:
-          'Descubre por qué los hilos tensores PDO se han convertido en el tratamiento #1 para el rejuvenecimiento facial sin cirugía. Conoce los tipos, beneficios y resultados.',
-        date: '19 de enero de 2024',
-        readTime: '6 min',
-      },
-      blogPosts: [
-        {
-          slug: '/blog/bioestimuladores-colageno',
-          category: 'Bioestimuladores',
-          image: findImage('blog-post-1'),
-          title:
-            'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs HArmonyCa',
-          description:
-            'Comparativa completa entre los principales bioestimuladores. Aprende cuál es el mejor para tu tipo de piel y objetivos estéticos.',
-          date: '25 de julio de 2024',
-          readTime: '8 min',
-        },
-        {
-          slug: '/blog/botox-mitos-y-verdades',
-          category: 'Facial',
-          image: findImage('blog-post-2'),
-          title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
-          description:
-            'Desmitificamos las creencias más comunes sobre el Botox. Conoce la verdad detrás de este tratamiento y sus beneficios reales.',
-          date: '16 de enero de 2024',
-          readTime: '6 min',
-        },
-        {
-          slug: '/blog/contorno-corporal-hidrolipoclasia',
-          category: 'Corporal',
-          image: findImage('blog-post-3'),
-          title: 'Contorno Corporal: Hidrolipoclasia vs. Métodos Tradicionales',
-          description:
-            'Conoce las ventajas de la hidrolipoclasia sobre otros métodos de reducción de grasa. Procedimiento, resultados y cuidados post-tratamiento.',
-          date: '11 de enero de 2024',
-          readTime: '7 min',
-        },
-      ],
       readFullArticle: 'Leer Artículo Completo',
       readMore: 'Leer Más',
     },
@@ -110,57 +88,13 @@ export default function BlogPage() {
       filterBotox: 'Botox',
       filterBody: 'Body',
       featuredBadge: 'Featured Article',
-      featuredPost: {
-        slug: '/blog/hilos-tensores-revolucion',
-        image: findImage('blog-featured'),
-        title: 'Thread Lifts: The Non-Surgical Lifting Revolution in Medellín',
-        description:
-          'Discover why PDO thread lifts have become the #1 treatment for non-surgical facial rejuvenation. Learn about the types, benefits, and results.',
-        date: 'January 19, 2024',
-        readTime: '6 min read',
-      },
-      blogPosts: [
-        {
-          slug: '/blog/bioestimuladores-colageno',
-          category: 'Biostimulators',
-          image: findImage('blog-post-1'),
-          title:
-            'Collagen Biostimulators: Radiesse vs Sculptra vs HArmonyCa',
-          description:
-            'A complete comparison of the main biostimulators. Find out which is best for your skin type and aesthetic goals.',
-          date: 'July 25, 2024',
-          readTime: '8 min read',
-        },
-        {
-          slug: '/blog/botox-mitos-y-verdades',
-          category: 'Facial',
-          image: findImage('blog-post-2'),
-          title: 'Botox: Myths and Truths about Botulinum Toxin',
-          description:
-            'We debunk the most common beliefs about Botox. Learn the truth behind this treatment and its real benefits.',
-          date: 'January 16, 2024',
-          readTime: '6 min read',
-        },
-        {
-          slug: '/blog/contorno-corporal-hidrolipoclasia',
-          category: 'Body',
-          image: findImage('blog-post-3'),
-          title: 'Body Contouring: Hydrolipoclasy vs. Traditional Methods',
-          description:
-            'Learn the advantages of hydrolipoclasy over other fat reduction methods. Procedure, results, and post-treatment care.',
-          date: 'January 11, 2024',
-          readTime: '7 min read',
-        },
-      ],
       readFullArticle: 'Read Full Article',
       readMore: 'Read More',
     }
   }
 
   const currentContent = content[lang];
-  const featuredPost = currentContent.featuredPost;
-  const blogPosts = currentContent.blogPosts;
-
+  
   return (
     <div className="container mx-auto px-4 py-16 sm:py-24">
       <div className="text-center max-w-3xl mx-auto">
@@ -250,7 +184,7 @@ export default function BlogPage() {
       </div>
 
       <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.map((post) => (
+        {regularPosts.map((post) => (
           <Card
             key={post.slug}
             className="flex flex-col overflow-hidden shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
@@ -276,7 +210,7 @@ export default function BlogPage() {
                  <Link href={post.slug} className="hover:text-primary transition-colors">{post.title}</Link>
               </h3>
               <p className="mt-2 text-muted-foreground text-sm line-clamp-3">
-                {post.description}
+                {post.content.match(/<p class="lead">(.*?)<\/p>/)?.[1] || ''}
               </p>
             </CardContent>
             <CardFooter className="p-6 pt-0 flex-col items-start">
