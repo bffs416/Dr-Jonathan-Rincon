@@ -3,7 +3,8 @@ export type SiteImage = {
   id: string;
   src: string;
   hint: string;
-  title?: string;
+  title_es?: string;
+  title_en?: string;
   href?: string;
   category?: string;
 };
@@ -91,6 +92,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-post-content', src: '/images/happy-patient-aesthetic.png', hint: 'happy patient' },
   { id: 'blog-radiesse-sculptra-hero', src: '/images/Bioestimuladores de Colágeno_1.png', hint: 'biostimulator products' },
   { id: 'blog-radiesse-sculptra-content', src: '/images/bioestimuladores_Diagrama.png', hint: 'biostimulator diagram' },
+  { id: 'blog-hilos-cuidados-hero', src: '/images/mujer_rubia_primer_plano_mano_mejilla.png', hint: 'woman after treatment'},
 
   // Home Page
   { id: 'home-testimonial-1', src: '/images/Modelo 6.jpg', hint: 'facial procedure' },
@@ -103,7 +105,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'tiktok-placeholder', src: '/images/tiktok-placeholder.png', hint: 'tiktok video' }
 ];
 
-export const GALLERY_IMAGES_DATA = [
+export const GALLERY_IMAGES_DATA: SiteImage[] = [
   { id: 'gallery-1', src: '/images/Hilos_Tensores_Lifting cuello.png', hint: 'facial procedure', title_es: 'Lifting de Cuello', title_en: 'Neck Lift', href: '/hilos-tensores', category: 'Hilos Tensores' },
   { id: 'gallery-2', src: '/images/Rejuvenecimiento Facial.jpg', hint: 'man consultation', title_es: 'Rejuvenecimiento Facial', title_en: 'Facial Rejuvenation', href: '/medicina-estetica-avanzada' },
   { id: 'gallery-3', src: '/images/Hilos tensores_Marcacion mandibular.png', hint: 'facial marking', title_es: 'Marcación Mandibular', title_en: 'Jawline Definition', href: '/hilos-tensores', category: 'Hilos Tensores' },
