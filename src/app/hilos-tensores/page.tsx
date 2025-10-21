@@ -301,6 +301,12 @@ export default function HilosTensoresPage() {
         postalCode: '050032',
         addressCountry: 'CO'
       },
+      areaServed: [
+        { '@type': 'Country', name: 'Colombia' },
+        { '@type': 'Country', name: 'United States' },
+        { '@type': 'Country', name: 'Spain' },
+        { '@type': 'Continent', name: 'Europe' }
+      ],
       telephone: '+573122784757',
       url: 'https://www.drjonathanrincon.com/',
       image: 'https://www.drjonathanrincon.com/images/Logo Dr Johnathan.png'
@@ -708,3 +714,5 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
+
+    
