@@ -2,7 +2,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
@@ -19,12 +18,6 @@ const outfit = Outfit({
   subsets: ['latin'],
   variable: '--font-outfit',
 });
-
-// export const metadata: Metadata = {
-//   title: 'Dr. Jonathan Rincón',
-//   description:
-//     'Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita con el Dr. Jonathan Rincón.',
-// };
 
 export default function RootLayout({
   children,
@@ -87,7 +80,7 @@ export default function RootLayout({
         {/* Google Analytics Scripts */}
         <Script
           strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-X5L7STH0LV"
         />
         <Script
           id="google-analytics"
@@ -97,7 +90,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+              gtag('config', 'G-X5L7STH0LV', {
                 page_path: window.location.pathname,
               });
             `,
