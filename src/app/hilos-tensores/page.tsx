@@ -85,7 +85,7 @@ export default function HilosTensoresPage() {
       introP1Strong: 'hilos tensores de última generación MINT',
       introP1Cont: ', ese deseo es una realidad en Medellín.',
       introP2: 'El',
-      introP2Strong: 'Dr. Jonathan Rincón, reconocido como el experto #1 en hilos tensores PDO en Medellín',
+      introP2Strong: 'Dr. Jonathan Rincón, reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá',
       introP2Cont: ', te ofrece una solución innovadora y mínimamente invasiva para revitalizar tu apariencia facial y corporal, con resultados que te encantarán.',
       introButton: '¿Cómo funcionan los Hilos Tensores?',
       dialogTitle: '¿Qué Son Exactamente los Hilos Tensores y Cómo Funcionan?',
@@ -173,7 +173,7 @@ export default function HilosTensoresPage() {
       introP1Strong: 'latest generation MINT thread lifts',
       introP1Cont: ', that desire is a reality in Medellín.',
       introP2: 'Dr.',
-      introP2Strong: 'Jonathan Rincón, recognized as the #1 expert in PDO thread lifts in Medellín',
+      introP2Strong: 'Jonathan Rincón, recognized as the #1 expert in PDO thread lifts in Medellín and Bogotá',
       introP2Cont: ', offers you an innovative and minimally invasive solution to revitalize your facial and body appearance, with results you will love.',
       introButton: 'How do Thread Lifts work?',
       dialogTitle: 'What Exactly Are Thread Lifts and How Do They Work?',
@@ -287,6 +287,7 @@ export default function HilosTensoresPage() {
     performer: {
       '@type': 'Physician',
       name: 'Dr. Jonathan Rincón',
+      image: 'https://www.drjonathanrincon.com/images/Logo%20Dr%20Johnathan.png',
       jobTitle: 'Médico Cirujano especialista en Medicina Estética',
       url: 'https://www.drjonathanrincon.com/'
     },
@@ -714,5 +715,3 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
-
-    
