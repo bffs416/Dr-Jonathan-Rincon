@@ -267,7 +267,9 @@ export default function HilosTensoresPage() {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
     name: 'Lifting con Hilos Tensores (Thread Lift)',
+    alternateName: ["Hilos Mágicos PDO", "Lifting con Hilos PDO"],
     description: 'Tratamiento de rejuvenecimiento facial y corporal sin cirugía para un lifting natural y duradero mediante hilos de Polidioxanona (PDO).',
+    keywords: "hilos tensores, hilos tensores medellín, hilos pdo, lifting facial sin cirugía, rejuvenecimiento facial, experto en hilos, promoción hilos tensores, hilos tensores bogotá, hilos tensores colombia",
     bodyLocation: [
       { '@type': 'BodyPart', name: 'Cara' },
       { '@type': 'BodyPart', name: 'Cuello' },
