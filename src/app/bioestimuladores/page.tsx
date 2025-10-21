@@ -49,133 +49,133 @@ const Placeholder = ({
   );
 };
 
-export default function BioestimuladoresPage() {
+const content = {
+  es: {
+    heroTitle: 'Descubre el Secreto de una Piel Joven y Natural: Bioestimuladores de Colágeno',
+    heroSubtitle: 'Rejuvenece desde adentro hacia afuera, sin cirugías ni resultados artificiales.',
+    introTitle: '¿Sientes que tu piel ha perdido firmeza?',
+    introP1: 'Con el paso de los años, es natural notar que la piel pierde elasticidad, aparecen las primeras líneas de expresión y el rostro ya no luce tan firme como antes. Esto se debe a que, a partir de los 25 o 30 años, nuestro cuerpo empieza a producir menos colágeno, la proteína encargada de darle soporte y estructura a la piel.',
+    introP2: 'Si buscas una solución que vaya más allá de las cremas superficiales, pero no quieres recurrir a procedimientos invasivos, los bioestimuladores de colágeno son la respuesta que estabas buscando.',
+    introButton: 'Quiero una valoración',
+    whatAreTitle: '¿Qué son exactamente los bioestimuladores y cómo funcionan?',
+    whatAreP1: 'Imagina que pudieras "despertar" a las células de tu piel para que vuelvan a trabajar como lo hacían en su juventud. Eso es exactamente lo que hacen los bioestimuladores.',
+    whatAreP2: 'Son sustancias seguras y biocompatibles que se aplican mediante microinyecciones en áreas específicas. Una vez dentro de la piel, su función principal no es rellenar, sino activar a unas células llamadas fibroblastos, que son las "fábricas" naturales de colágeno y elastina de tu cuerpo.',
+    whatAreP3: 'Al reactivar esta producción, tu propia piel comienza un proceso de regeneración desde el interior, reconstruyendo la estructura que le da firmeza y elasticidad.',
+    benefitsTitle: 'Beneficios clave que te encantarán',
+    benefitsSectionTitle1: 'Beneficios',
+    benefitsSectionTitle2: 'Clave',
+    benefits: [
+      'Resultados 100% naturales y progresivos: El cambio no es brusco ni artificial. Tu piel mejora gradualmente, luciendo más fresca, firme y descansada.',
+      'Mejora integral de la piel: No solo combate la flacidez, sino que también mejora la textura, restaura el volumen perdido y suaviza arrugas y líneas finas.',
+      'Efectos duraderos: A diferencia de otros tratamientos, los resultados pueden durar hasta dos años, ya que tu cuerpo sigue produciendo colágeno de forma natural.',
+      'Tratamiento versátil: Funciona de maravilla en rostro, cuello, escote, manos e incluso en zonas corporales como brazos, abdomen o glúteos.',
+    ],
+    faqTitle: 'Antes, Durante y Después del Tratamiento',
+    faqSubtitle: 'Tu tranquilidad y seguridad son lo más importante. Por eso, aquí resolvemos las dudas más frecuentes de nuestros pacientes.',
+    faqSectionTitle1: 'Lo que debes',
+    faqSectionTitle2: 'Saber',
+    faqs: [
+      {
+        question: '¿Para quién es este tratamiento?',
+        answer: 'Es ideal para hombres y mujeres, generalmente a partir de los 30 años, que notan los primeros signos de flacidez o envejecimiento y buscan una alternativa natural y preventiva. También es excelente para quienes ya tienen signos más avanzados y desean una mejora integral sin cirugía.',
+      },
+      {
+        question: '¿El procedimiento duele?',
+        answer: 'Es un tratamiento muy bien tolerado. Se utiliza anestesia tópica (en crema) para asegurar que la molestia durante las microinyecciones sea mínima. La mayoría de los pacientes lo describen como un procedimiento cómodo.',
+      },
+      {
+        question: '¿Necesitaré tiempo de recuperación?',
+        answer: '¡No! Esta es una de las grandes ventajas. Puedes retomar tus actividades diarias inmediatamente después de la sesión. Podrías experimentar un leve enrojecimiento o algún pequeño hematoma en la zona de aplicación, pero estos efectos desaparecen en pocos días.',
+      },
+      {
+        question: '¿Cuándo veré los resultados?',
+        answer: 'Los bioestimuladores trabajan al ritmo de tu cuerpo. Aunque algunos productos ofrecen un leve efecto inicial, los verdaderos resultados comienzan a ser visibles entre la tercera y cuarta semana, con mejoras continuas durante los siguientes meses a medida que el nuevo colágeno se forma. El resultado final se aprecia completamente después de unos meses, ¡y es un cambio que te encantará por su naturalidad!',
+      },
+      {
+        question: '¿Cuántas sesiones necesito?',
+        answer: 'Dependerá de tu tipo de piel, edad y los objetivos que busques. Generalmente, se recomiendan entre una y tres sesiones iniciales, seguidas de un mantenimiento anual o cada dos años para prolongar los efectos.',
+      },
+    ],
+    videosTitle: 'Pacientes Reales, Historias Reales',
+    videosSubtitle: 'Mira cómo los bioestimuladores de colágeno han ayudado a nuestros pacientes a lograr una piel más firme y joven.',
+    videosSectionTitle1: 'Resultados que',
+    videosSectionTitle2: 'Inspiran',
+    safetyTitle: 'Seguridad Ante Todo: Elige Siempre a un Profesional Cualificado',
+    safetyP1: 'El éxito y la seguridad de tu tratamiento dependen directamente de la experiencia del profesional. Asegúrate siempre de acudir a un médico especializado con experiencia certificada en la aplicación de bioestimuladores.',
+    safetyP2: 'Un profesional cualificado no solo garantizará una técnica de inyección correcta para evitar complicaciones, sino que también utilizará productos de marcas líderes, aprobados por entidades como el Invima, asegurando que lo que se te aplica es seguro y efectivo.',
+    safetyWarningTitle: '¡Cuidado con las ofertas engañosas!',
+    safetyWarning: 'Desconfía de precios excesivamente bajos o de centros no médicos que ofrecen estos tratamientos, ya que podrían usar productos no certificados o ser aplicados por personal no cualificado, poniendo en riesgo tu salud.',
+    ctaBadge: 'Consulta Personalizada',
+    ctaTitle: '¿Listo/a para devolverle la juventud a tu piel?',
+    ctaP1: 'Si buscas un rejuvenecimiento real, que respete tus facciones y te haga lucir una versión más fresca y radiante de ti mismo/a, los bioestimuladores de colágeno son tu mejor aliado.',
+    ctaButton: 'Agendar por WhatsApp',
+  },
+  en: {
+    heroTitle: 'Discover the Secret to Young, Natural Skin: Collagen Biostimulators',
+    heroSubtitle: 'Rejuvenate from the inside out, without surgery or artificial results.',
+    introTitle: 'Do you feel your skin has lost its firmness?',
+    introP1: 'Over the years, it\'s natural to notice that the skin loses elasticity, the first expression lines appear, and the face no longer looks as firm as it used to. This is because, from the age of 25 or 30, our body begins to produce less collagen, the protein responsible for giving the skin support and structure.',
+    introP2: 'If you are looking for a solution that goes beyond superficial creams but do not want to resort to invasive procedures, collagen biostimulators are the answer you have been looking for.',
+    introButton: 'I want an assessment',
+    whatAreTitle: 'What exactly are biostimulators and how do they work?',
+    whatAreP1: 'Imagine if you could "wake up" your skin cells to work as they did in their youth. That is exactly what biostimulators do.',
+    whatAreP2: 'They are safe and biocompatible substances that are applied through microinjections in specific areas. Once inside the skin, their main function is not to fill, but to activate cells called fibroblasts, which are your body\'s natural "factories" of collagen and elastin.',
+    whatAreP3: 'By reactivating this production, your own skin begins a process of regeneration from within, rebuilding the structure that gives it firmness and elasticity.',
+    benefitsTitle: 'Key benefits you will love',
+    benefitsSectionTitle1: 'Key',
+    benefitsSectionTitle2: 'Benefits',
+    benefits: [
+      '100% natural and progressive results: The change is not abrupt or artificial. Your skin improves gradually, looking fresher, firmer, and more rested.',
+      'Comprehensive skin improvement: Not only does it combat sagging, but it also improves texture, restores lost volume, and smoothes wrinkles and fine lines.',
+      'Long-lasting effects: Unlike other treatments, the results can last up to two years, as your body continues to produce collagen naturally.',
+      'Versatile treatment: It works wonderfully on the face, neck, décolleté, hands, and even on body areas such as arms, abdomen, or buttocks.',
+    ],
+    faqTitle: 'Before, During, and After the Treatment',
+    faqSubtitle: 'Your peace of mind and safety are the most important thing. That is why we answer our patients\' most frequent questions here.',
+    faqSectionTitle1: 'What you should',
+    faqSectionTitle2: 'Know',
+    faqs: [
+      {
+        question: 'Who is this treatment for?',
+        answer: 'It is ideal for men and women, generally from the age of 30, who notice the first signs of sagging or aging and are looking for a natural and preventive alternative. It is also excellent for those who already have more advanced signs and want a comprehensive improvement without surgery.',
+      },
+      {
+        question: 'Does the procedure hurt?',
+        answer: 'It is a very well-tolerated treatment. A topical anesthetic (cream) is used to ensure that the discomfort during the microinjections is minimal. Most patients describe it as a comfortable procedure.',
+      },
+      {
+        question: 'Will I need recovery time?',
+        answer: 'No! This is one of the great advantages. You can resume your daily activities immediately after the session. You may experience slight redness or a small bruise in the application area, but these effects disappear in a few days.',
+      },
+      {
+        question: 'When will I see the results?',
+        answer: 'Biostimulators work at your body\'s pace. Although some products offer a slight initial effect, the real results begin to be visible between the third and fourth week, with continuous improvements over the following months as new collagen is formed. The final result is fully appreciated after a few months, and it is a change you will love for its naturalness!',
+      },
+      {
+        question: 'How many sessions do I need?',
+        answer: 'It will depend on your skin type, age, and the goals you are looking for. Generally, one to three initial sessions are recommended, followed by annual or biennial maintenance to prolong the effects.',
+      },
+    ],
+    videosTitle: 'Real Patients, Real Stories',
+    videosSubtitle: 'See how collagen biostimulators have helped our patients achieve firmer, younger skin.',
+    videosSectionTitle1: 'Results that',
+    videosSectionTitle2: 'Inspire',
+    safetyTitle: 'Safety First: Always Choose a Qualified Professional',
+    safetyP1: 'The success and safety of your treatment depend directly on the professional\'s experience. Always make sure to go to a specialized doctor with certified experience in the application of biostimulators.',
+    safetyP2: 'A qualified professional will not only ensure a correct injection technique to avoid complications, but will also use products from leading brands, approved by entities such as Invima, ensuring that what is applied to you is safe and effective.',
+    safetyWarningTitle: 'Beware of misleading offers!',
+    safetyWarning: 'Be wary of excessively low prices or non-medical centers that offer these treatments, as they may use uncertified products or be applied by unqualified personnel, putting your health at risk.',
+    ctaBadge: 'Personalized Consultation',
+    ctaTitle: 'Ready to bring youth back to your skin?',
+    ctaP1: 'If you are looking for a real rejuvenation that respects your features and makes you look like a fresher, more radiant version of yourself, collagen biostimulators are your best ally.',
+    ctaButton: 'Schedule via WhatsApp',
+  },
+};
+
+function BioestimuladoresContent() {
   const { lang } = useLanguage();
-
-  const content = {
-    es: {
-      heroTitle: 'Descubre el Secreto de una Piel Joven y Natural: Bioestimuladores de Colágeno',
-      heroSubtitle: 'Rejuvenece desde adentro hacia afuera, sin cirugías ni resultados artificiales.',
-      introTitle: '¿Sientes que tu piel ha perdido firmeza?',
-      introP1: 'Con el paso de los años, es natural notar que la piel pierde elasticidad, aparecen las primeras líneas de expresión y el rostro ya no luce tan firme como antes. Esto se debe a que, a partir de los 25 o 30 años, nuestro cuerpo empieza a producir menos colágeno, la proteína encargada de darle soporte y estructura a la piel.',
-      introP2: 'Si buscas una solución que vaya más allá de las cremas superficiales, pero no quieres recurrir a procedimientos invasivos, los bioestimuladores de colágeno son la respuesta que estabas buscando.',
-      introButton: 'Quiero una valoración',
-      whatAreTitle: '¿Qué son exactamente los bioestimuladores y cómo funcionan?',
-      whatAreP1: 'Imagina que pudieras "despertar" a las células de tu piel para que vuelvan a trabajar como lo hacían en su juventud. Eso es exactamente lo que hacen los bioestimuladores.',
-      whatAreP2: 'Son sustancias seguras y biocompatibles que se aplican mediante microinyecciones en áreas específicas. Una vez dentro de la piel, su función principal no es rellenar, sino activar a unas células llamadas fibroblastos, que son las "fábricas" naturales de colágeno y elastina de tu cuerpo.',
-      whatAreP3: 'Al reactivar esta producción, tu propia piel comienza un proceso de regeneración desde el interior, reconstruyendo la estructura que le da firmeza y elasticidad.',
-      benefitsTitle: 'Beneficios clave que te encantarán',
-      benefitsSectionTitle1: 'Beneficios',
-      benefitsSectionTitle2: 'Clave',
-      benefits: [
-        'Resultados 100% naturales y progresivos: El cambio no es brusco ni artificial. Tu piel mejora gradualmente, luciendo más fresca, firme y descansada.',
-        'Mejora integral de la piel: No solo combate la flacidez, sino que también mejora la textura, restaura el volumen perdido y suaviza arrugas y líneas finas.',
-        'Efectos duraderos: A diferencia de otros tratamientos, los resultados pueden durar hasta dos años, ya que tu cuerpo sigue produciendo colágeno de forma natural.',
-        'Tratamiento versátil: Funciona de maravilla en rostro, cuello, escote, manos e incluso en zonas corporales como brazos, abdomen o glúteos.',
-      ],
-      faqTitle: 'Antes, Durante y Después del Tratamiento',
-      faqSubtitle: 'Tu tranquilidad y seguridad son lo más importante. Por eso, aquí resolvemos las dudas más frecuentes de nuestros pacientes.',
-      faqSectionTitle1: 'Lo que debes',
-      faqSectionTitle2: 'Saber',
-      faqs: [
-        {
-          question: '¿Para quién es este tratamiento?',
-          answer: 'Es ideal para hombres y mujeres, generalmente a partir de los 30 años, que notan los primeros signos de flacidez o envejecimiento y buscan una alternativa natural y preventiva. También es excelente para quienes ya tienen signos más avanzados y desean una mejora integral sin cirugía.',
-        },
-        {
-          question: '¿El procedimiento duele?',
-          answer: 'Es un tratamiento muy bien tolerado. Se utiliza anestesia tópica (en crema) para asegurar que la molestia durante las microinyecciones sea mínima. La mayoría de los pacientes lo describen como un procedimiento cómodo.',
-        },
-        {
-          question: '¿Necesitaré tiempo de recuperación?',
-          answer: '¡No! Esta es una de las grandes ventajas. Puedes retomar tus actividades diarias inmediatamente después de la sesión. Podrías experimentar un leve enrojecimiento o algún pequeño hematoma en la zona de aplicación, pero estos efectos desaparecen en pocos días.',
-        },
-        {
-          question: '¿Cuándo veré los resultados?',
-          answer: 'Los bioestimuladores trabajan al ritmo de tu cuerpo. Aunque algunos productos ofrecen un leve efecto inicial, los verdaderos resultados comienzan a ser visibles entre la tercera y cuarta semana, con mejoras continuas durante los siguientes meses a medida que el nuevo colágeno se forma. El resultado final se aprecia completamente después de unos meses, ¡y es un cambio que te encantará por su naturalidad!',
-        },
-        {
-          question: '¿Cuántas sesiones necesito?',
-          answer: 'Dependerá de tu tipo de piel, edad y los objetivos que busques. Generalmente, se recomiendan entre una y tres sesiones iniciales, seguidas de un mantenimiento anual o cada dos años para prolongar los efectos.',
-        },
-      ],
-      videosTitle: 'Pacientes Reales, Historias Reales',
-      videosSubtitle: 'Mira cómo los bioestimuladores de colágeno han ayudado a nuestros pacientes a lograr una piel más firme y joven.',
-      videosSectionTitle1: 'Resultados que',
-      videosSectionTitle2: 'Inspiran',
-      safetyTitle: 'Seguridad Ante Todo: Elige Siempre a un Profesional Cualificado',
-      safetyP1: 'El éxito y la seguridad de tu tratamiento dependen directamente de la experiencia del profesional. Asegúrate siempre de acudir a un médico especializado con experiencia certificada en la aplicación de bioestimuladores.',
-      safetyP2: 'Un profesional cualificado no solo garantizará una técnica de inyección correcta para evitar complicaciones, sino que también utilizará productos de marcas líderes, aprobados por entidades como el Invima, asegurando que lo que se te aplica es seguro y efectivo.',
-      safetyWarningTitle: '¡Cuidado con las ofertas engañosas!',
-      safetyWarning: 'Desconfía de precios excesivamente bajos o de centros no médicos que ofrecen estos tratamientos, ya que podrían usar productos no certificados o ser aplicados por personal no cualificado, poniendo en riesgo tu salud.',
-      ctaBadge: 'Consulta Personalizada',
-      ctaTitle: '¿Listo/a para devolverle la juventud a tu piel?',
-      ctaP1: 'Si buscas un rejuvenecimiento real, que respete tus facciones y te haga lucir una versión más fresca y radiante de ti mismo/a, los bioestimuladores de colágeno son tu mejor aliado.',
-      ctaButton: 'Agendar por WhatsApp',
-    },
-    en: {
-      heroTitle: 'Discover the Secret to Young, Natural Skin: Collagen Biostimulators',
-      heroSubtitle: 'Rejuvenate from the inside out, without surgery or artificial results.',
-      introTitle: 'Do you feel your skin has lost its firmness?',
-      introP1: 'Over the years, it\'s natural to notice that the skin loses elasticity, the first expression lines appear, and the face no longer looks as firm as it used to. This is because, from the age of 25 or 30, our body begins to produce less collagen, the protein responsible for giving the skin support and structure.',
-      introP2: 'If you are looking for a solution that goes beyond superficial creams but do not want to resort to invasive procedures, collagen biostimulators are the answer you have been looking for.',
-      introButton: 'I want an assessment',
-      whatAreTitle: 'What exactly are biostimulators and how do they work?',
-      whatAreP1: 'Imagine if you could "wake up" your skin cells to work as they did in their youth. That is exactly what biostimulators do.',
-      whatAreP2: 'They are safe and biocompatible substances that are applied through microinjections in specific areas. Once inside the skin, their main function is not to fill, but to activate cells called fibroblasts, which are your body\'s natural "factories" of collagen and elastin.',
-      whatAreP3: 'By reactivating this production, your own skin begins a process of regeneration from within, rebuilding the structure that gives it firmness and elasticity.',
-      benefitsTitle: 'Key benefits you will love',
-      benefitsSectionTitle1: 'Key',
-      benefitsSectionTitle2: 'Benefits',
-      benefits: [
-        '100% natural and progressive results: The change is not abrupt or artificial. Your skin improves gradually, looking fresher, firmer, and more rested.',
-        'Comprehensive skin improvement: Not only does it combat sagging, but it also improves texture, restores lost volume, and smoothes wrinkles and fine lines.',
-        'Long-lasting effects: Unlike other treatments, the results can last up to two years, as your body continues to produce collagen naturally.',
-        'Versatile treatment: It works wonderfully on the face, neck, décolleté, hands, and even on body areas such as arms, abdomen, or buttocks.',
-      ],
-      faqTitle: 'Before, During, and After the Treatment',
-      faqSubtitle: 'Your peace of mind and safety are the most important thing. That is why we answer our patients\' most frequent questions here.',
-      faqSectionTitle1: 'What you should',
-      faqSectionTitle2: 'Know',
-      faqs: [
-        {
-          question: 'Who is this treatment for?',
-          answer: 'It is ideal for men and women, generally from the age of 30, who notice the first signs of sagging or aging and are looking for a natural and preventive alternative. It is also excellent for those who already have more advanced signs and want a comprehensive improvement without surgery.',
-        },
-        {
-          question: 'Does the procedure hurt?',
-          answer: 'It is a very well-tolerated treatment. A topical anesthetic (cream) is used to ensure that the discomfort during the microinjections is minimal. Most patients describe it as a comfortable procedure.',
-        },
-        {
-          question: 'Will I need recovery time?',
-          answer: 'No! This is one of the great advantages. You can resume your daily activities immediately after the session. You may experience slight redness or a small bruise in the application area, but these effects disappear in a few days.',
-        },
-        {
-          question: 'When will I see the results?',
-          answer: 'Biostimulators work at your body\'s pace. Although some products offer a slight initial effect, the real results begin to be visible between the third and fourth week, with continuous improvements over the following months as new collagen is formed. The final result is fully appreciated after a few months, and it is a change you will love for its naturalness!',
-        },
-        {
-          question: 'How many sessions do I need?',
-          answer: 'It will depend on your skin type, age, and the goals you are looking for. Generally, one to three initial sessions are recommended, followed by annual or biennial maintenance to prolong the effects.',
-        },
-      ],
-      videosTitle: 'Real Patients, Real Stories',
-      videosSubtitle: 'See how collagen biostimulators have helped our patients achieve firmer, younger skin.',
-      videosSectionTitle1: 'Results that',
-      videosSectionTitle2: 'Inspire',
-      safetyTitle: 'Safety First: Always Choose a Qualified Professional',
-      safetyP1: 'The success and safety of your treatment depend directly on the professional\'s experience. Always make sure to go to a specialized doctor with certified experience in the application of biostimulators.',
-      safetyP2: 'A qualified professional will not only ensure a correct injection technique to avoid complications, but will also use products from leading brands, approved by entities such as Invima, ensuring that what is applied to you is safe and effective.',
-      safetyWarningTitle: 'Beware of misleading offers!',
-      safetyWarning: 'Be wary of excessively low prices or non-medical centers that offer these treatments, as they may use uncertified products or be applied by unqualified personnel, putting your health at risk.',
-      ctaBadge: 'Personalized Consultation',
-      ctaTitle: 'Ready to bring youth back to your skin?',
-      ctaP1: 'If you are looking for a real rejuvenation that respects your features and makes you look like a fresher, more radiant version of yourself, collagen biostimulators are your best ally.',
-      ctaButton: 'Schedule via WhatsApp',
-    },
-  };
-
   const currentContent = content[lang];
+  
   return (
     <div>
       {/* Hero Section */}
@@ -413,4 +413,7 @@ export default function BioestimuladoresPage() {
   );
 }
 
-    
+
+export default function BioestimuladoresPage() {
+  return <BioestimuladoresContent />;
+}
