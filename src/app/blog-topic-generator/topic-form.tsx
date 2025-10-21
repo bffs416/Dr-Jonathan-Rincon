@@ -4,7 +4,7 @@ import { useFormStatus } from 'react-dom';
 import { useActionState, useEffect, useRef } from 'react';
 import { Copy, Sparkles, Wand2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { getBlogTopics, type FormState } from './actions';
+import { getBlogPost, type FormState } from './actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -17,12 +17,12 @@ function SubmitButton() {
       {pending ? (
         <>
           <Sparkles className="mr-2 h-5 w-5 animate-spin" />
-          Generando...
+          Generando Artículo...
         </>
       ) : (
         <>
           <Wand2 className="mr-2 h-5 w-5" />
-          Generar Temas
+          Generar Artículo
         </>
       )}
     </Button>
@@ -31,7 +31,7 @@ function SubmitButton() {
 
 export default function TopicForm() {
   const initialState: FormState = { message: '', errors: {} };
-  const [state, dispatch] = useActionState(getBlogTopics, initialState);
+  const [state, dispatch] = useActionState(getBlogPost, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -45,10 +45,10 @@ export default function TopicForm() {
         });
       }
     }
-    if (state.topics && state.topics.length > 0) {
+    if (state.blogPost) {
       toast({
         title: '¡Éxito!',
-        description: 'Se han generado nuevos temas para tu blog.',
+        description: 'Se ha generado un nuevo artículo para tu blog.',
       });
       formRef.current?.reset();
     }
@@ -58,7 +58,7 @@ export default function TopicForm() {
     navigator.clipboard.writeText(text);
     toast({
       title: 'Copiado',
-      description: 'El tema ha sido copiado al portapapeles.',
+      description: 'El contenido del artículo ha sido copiado al portapapeles.',
     });
   };
 
@@ -68,19 +68,19 @@ export default function TopicForm() {
         <CardContent className="p-6">
           <form ref={formRef} action={dispatch} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="keywords" className="text-lg font-medium">
-                Palabras Clave
+              <Label htmlFor="information" className="text-lg font-medium">
+                Información y Datos para el Artículo
               </Label>
               <Textarea
-                id="keywords"
-                name="keywords"
-                placeholder="Ej: hilos tensores, rejuvenecimiento facial, colágeno, Medellín..."
-                className="min-h-[100px] text-base"
+                id="information"
+                name="information"
+                placeholder="Pega aquí tus notas, datos, ideas clave, o un borrador del artículo..."
+                className="min-h-[200px] text-base"
                 required
               />
-              {state.errors?.keywords && (
+              {state.errors?.information && (
                 <p className="text-sm font-medium text-destructive">
-                  {state.errors.keywords[0]}
+                  {state.errors.information[0]}
                 </p>
               )}
             </div>
@@ -89,29 +89,29 @@ export default function TopicForm() {
         </CardContent>
       </Card>
 
-      {state.topics && state.topics.length > 0 && (
+      {state.blogPost && (
         <div>
-          <h2 className="text-2xl font-headline font-bold text-center mb-6">
-            Temas Sugeridos
-          </h2>
-          <div className="space-y-4">
-            {state.topics.map((topic, index) => (
-              <Card
-                key={index}
-                className="flex items-center justify-between p-4"
-              >
-                <p className="flex-1 pr-4">{topic}</p>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => handleCopy(topic)}
-                  aria-label="Copiar tema"
-                >
-                  <Copy className="h-5 w-5 text-muted-foreground" />
-                </Button>
-              </Card>
-            ))}
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-headline font-bold text-center">
+              Artículo Sugerido
+            </h2>
+            <Button
+              variant="outline"
+              onClick={() => handleCopy(state.blogPost ?? '')}
+              aria-label="Copiar artículo"
+            >
+              <Copy className="mr-2 h-4 w-4" />
+              Copiar HTML
+            </Button>
           </div>
+          <Card>
+            <CardContent className="p-6">
+              <div
+                className="prose prose-lg lg:prose-xl dark:prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: state.blogPost }}
+              />
+            </CardContent>
+          </Card>
         </div>
       )}
     </div>

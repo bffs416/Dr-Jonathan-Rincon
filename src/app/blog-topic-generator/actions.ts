@@ -1,28 +1,28 @@
 'use server';
 
-import { generateBlogTopics } from '@/ai/flows/generate-blog-topics';
+import { generateBlogPost } from '@/ai/flows/generate-blog-post';
 import { z } from 'zod';
 
 const FormSchema = z.object({
-  keywords: z.string().min(3, {
-    message: 'Por favor, introduce al menos 3 caracteres.',
+  information: z.string().min(10, {
+    message: 'Por favor, introduce información más detallada (mínimo 10 caracteres).',
   }),
 });
 
 export type FormState = {
   message: string;
-  topics?: string[];
+  blogPost?: string;
   errors?: {
-    keywords?: string[];
+    information?: string[];
   };
 };
 
-export async function getBlogTopics(
+export async function getBlogPost(
   prevState: FormState,
   formData: FormData
 ): Promise<FormState> {
   const validatedFields = FormSchema.safeParse({
-    keywords: formData.get('keywords'),
+    information: formData.get('information'),
   });
 
   if (!validatedFields.success) {
@@ -32,22 +32,22 @@ export async function getBlogTopics(
     };
   }
 
-  const { keywords } = validatedFields.data;
+  const { information } = validatedFields.data;
 
   try {
-    const result = await generateBlogTopics({ keywords, numTopics: 5 });
-    if (result && result.topics.length > 0) {
+    const result = await generateBlogPost({ information });
+    if (result && result.blogPost) {
       return {
-        message: '¡Temas generados con éxito!',
-        topics: result.topics,
+        message: '¡Artículo generado con éxito!',
+        blogPost: result.blogPost,
       };
     } else {
       return {
-        message: 'No se pudieron generar temas. Inténtalo de nuevo con otras palabras clave.',
+        message: 'No se pudo generar el artículo. Inténtalo de nuevo con otra información.',
       };
     }
   } catch (error) {
-    console.error('Error generating blog topics:', error);
+    console.error('Error generating blog post:', error);
     return {
       message: 'Ha ocurrido un error en el servidor. Por favor, inténtalo más tarde.',
     };
