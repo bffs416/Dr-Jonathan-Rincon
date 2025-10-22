@@ -80,12 +80,12 @@ export default function HilosTensoresPage() {
       heroTag2: 'La especialidad de la casa',
       heroTitle: 'Hilos Tensores en Medellín: Lifting Facial y Corporal sin Cirugía',
       heroSubtitle: 'Rejuvenecimiento facial sin cirugía para un lifting natural y duradero.',
-      introTitle: 'Recupera la Firmeza y Juventud de tu Piel con Hilos Tensores PDO',
+      introTitle: 'Recupera la Firmeza y Juventud de tu Piel con Hilos Tensores',
       introP1: '¿Sientes que tu rostro ha perdido firmeza y luce más cansado? ¿La flacidez en tu abdomen, brazos o glúteos te impide sentirte con total confianza? Imagina poder retroceder el tiempo, recuperar la firmeza y redefinir tus contornos de una manera natural, segura y sin pasar por el quirófano. Hoy, gracias a los',
       introP1Strong: 'hilos tensores de última generación MINT',
       introP1Cont: ', ese deseo es una realidad en Medellín.',
       introP2: 'El',
-      introP2Strong: 'Dr. Jonathan Rincón, reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá',
+      introP2Strong: 'Dr. Jonathan Rincón, reconocido como el experto #1 en hilos tensores en Medellín y Bogotá',
       introP2Cont: ', te ofrece una solución innovadora y mínimamente invasiva para revitalizar tu apariencia facial y corporal, con resultados que te encantarán.',
       introButton: '¿Cómo funcionan los Hilos Tensores?',
       dialogTitle: '¿Qué Son Exactamente los Hilos Tensores y Cómo Funcionan?',
@@ -153,7 +153,7 @@ export default function HilosTensoresPage() {
       faqSubtitle: 'Tus dudas más comunes sobre el tratamiento con hilos tensores en nuestra clínica de Medellín.',
       faqs: [
         { question: '¿El procedimiento con hilos tensores es doloroso?', answer: 'Se utiliza anestesia local para minimizar cualquier molestia. La mayoría de los pacientes en Medellín reportan una sensación de presión leve, pero no dolor significativo durante el tratamiento de hilos tensores.' },
-        { question: '¿Cuánto dura el efecto de los hilos tensores?', answer: 'Los resultados de los hilos PDO pueden durar entre 12 y 18 meses. Esto depende del tipo de hilo, la edad del paciente y su tipo de piel. La producción de colágeno inducida prolonga los beneficios del lifting facial.' },
+        { question: '¿Cuánto dura el efecto de los hilos tensores?', answer: 'Los resultados de los hilos tensores pueden durar entre 12 y 18 meses. Esto depende del tipo de hilo, la edad del paciente y su tipo de piel. La producción de colágeno inducida prolonga los beneficios del lifting facial.' },
         { question: '¿Cuándo veré los resultados finales del lifting sin cirugía?', answer: 'Aunque hay un efecto tensor inmediato, el resultado final se aprecia mejor después de 2-3 meses. Para este tiempo, el nuevo colágeno se ha formado completamente alrededor de los hilos, maximizando la firmeza.' },
         { question: '¿Qué cuidados debo tener después del tratamiento?', answer: 'Se recomienda evitar gesticular exageradamente, masajear la zona tratada y realizar ejercicio intenso durante los primeros días. El Dr. Rincón te dará una pauta completa de cuidados post-tratamiento para asegurar los mejores resultados.' },
         { question: '¿Soy un buen candidato para los hilos tensores en Medellín?', answer: 'Los hilos tensores son ideales para personas que presentan flacidez facial o corporal de leve a moderada y desean un rejuvenecimiento sin cirugía. La mejor manera de saberlo es agendando una cita de valoración personalizada con el Dr. Rincón.' },
@@ -168,12 +168,12 @@ export default function HilosTensoresPage() {
       heroTag2: 'The house specialty',
       heroTitle: 'Thread Lifts in Medellín: Non-Surgical Facial and Body Lifting',
       heroSubtitle: 'Non-surgical facial rejuvenation for a natural and long-lasting lift.',
-      introTitle: 'Restore the Firmness and Youth of Your Skin with PDO Thread Lifts',
+      introTitle: 'Restore the Firmness and Youth of Your Skin with Thread Lifts',
       introP1: 'Do you feel that your face has lost firmness and looks more tired? Does sagging in your abdomen, arms, or buttocks prevent you from feeling completely confident? Imagine being able to turn back time, regain firmness, and redefine your contours in a natural, safe way without surgery. Today, thanks to',
       introP1Strong: 'latest generation MINT thread lifts',
       introP1Cont: ', that desire is a reality in Medellín.',
       introP2: 'Dr.',
-      introP2Strong: 'Jonathan Rincón, recognized as the #1 expert in PDO thread lifts in Medellín and Bogotá',
+      introP2Strong: 'Jonathan Rincón, recognized as the #1 expert in thread lifts in Medellín and Bogotá',
       introP2Cont: ', offers you an innovative and minimally invasive solution to revitalize your facial and body appearance, with results you will love.',
       introButton: 'How do Thread Lifts work?',
       dialogTitle: 'What Exactly Are Thread Lifts and How Do They Work?',
@@ -241,7 +241,7 @@ export default function HilosTensoresPage() {
       faqSubtitle: 'Your most common questions about thread lift treatment at our Medellín clinic.',
       faqs: [
         { question: 'Is the thread lift procedure painful?', answer: 'Local anesthesia is used to minimize any discomfort. Most patients in Medellín report a slight pressure sensation, but no significant pain during the thread lift treatment.' },
-        { question: 'How long do the effects of thread lifts last?', answer: 'The results of PDO threads can last between 12 and 18 months. This depends on the type of thread, the patient\'s age, and their skin type. The induced collagen production prolongs the benefits of the facial lift.' },
+        { question: 'How long do the effects of thread lifts last?', answer: 'The results of thread lifts can last between 12 and 18 months. This depends on the type of thread, the patient\'s age, and their skin type. The induced collagen production prolongs the benefits of the facial lift.' },
         { question: 'When will I see the final results of the non-surgical lift?', answer: 'Although there is an immediate tightening effect, the final result is best appreciated after 2-3 months. By this time, the new collagen has completely formed around the threads, maximizing firmness.' },
         { question: 'What care should I take after the treatment?', answer: 'It is recommended to avoid exaggerated gestures, massaging the treated area, and intense exercise for the first few days. Dr. Rincón will give you a complete post-treatment care guide to ensure the best results.' },
         { question: 'Am I a good candidate for thread lifts in Medellín?', answer: 'Thread lifts are ideal for people with mild to moderate facial or body sagging who want a non-surgical rejuvenation. The best way to find out is by scheduling a personalized assessment appointment with Dr. Rincón.' },
@@ -266,8 +266,8 @@ export default function HilosTensoresPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
-    name: 'Lifting con Hilos Tensores (Thread Lift)',
-    alternateName: ["Hilos Mágicos PDO", "Lifting con Hilos PDO"],
+    name: 'Lifting con Hilos Tensores',
+    alternateName: ["Hilos Mágicos", "Lifting sin Cirugía"],
     description: 'Tratamiento de rejuvenecimiento facial y corporal sin cirugía para un lifting natural y duradero mediante hilos de Polidioxanona (PDO).',
     keywords: "hilos tensores, hilos tensores medellín, hilos pdo, lifting facial sin cirugía, rejuvenecimiento facial, experto en hilos, promoción hilos tensores, hilos tensores bogotá, hilos tensores colombia",
     bodyLocation: [
@@ -717,3 +717,5 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
+
+    
