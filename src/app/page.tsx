@@ -109,7 +109,7 @@ export default function Home() {
       stat1: 'Pacientes Satisfechos',
       stat2: 'Satisfacción',
       stat3: 'de Experiencia',
-      recognition: 'Reconocido como el experto #1 en hilos tensores PDO en Medellín y Bogotá',
+      recognition: 'Reconocido como el experto #1 en hilos tensores en Medellín y Bogotá',
       videoTitle: 'Testimonios en Video',
       videoSubtitle: 'Pacientes reales comparten sus experiencias y resultados.',
       treatmentsTitle: 'Nuestros Tratamientos Principales',
