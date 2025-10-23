@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Script from 'next/script';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -125,6 +126,17 @@ Sat: 8:00 AM - 2:00 PM`,
 
   return (
     <div>
+      <Script id="google-ads-contact-conversion" strategy="afterInteractive">
+        {`
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-17663251036/brYXCM7J47AbENykv-ZB',
+                'value': 1.0,
+                'currency': 'COP'
+            });
+          }
+        `}
+      </Script>
       {/* Hero Section */}
       <section className="relative h-[50vh] w-full bg-slate-900">
         <div className="absolute inset-0 opacity-30">
