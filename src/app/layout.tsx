@@ -19,6 +19,13 @@ const outfit = Outfit({
   variable: '--font-outfit',
 });
 
+// Define gtag_report_conversion in a scope accessible by components
+declare global {
+  interface Window {
+    gtag_report_conversion: (url?: string) => boolean;
+  }
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,6 +42,20 @@ export default function RootLayout({
 
     return () => clearTimeout(timer);
   }, []);
+  
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const url = e.currentTarget.href;
+    if (window.gtag_report_conversion) {
+      window.gtag_report_conversion(url);
+    } else {
+      // Fallback if gtag is not available
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    }
+  };
+
 
   return (
     <html lang="es" suppressHydrationWarning>
@@ -69,6 +90,7 @@ export default function RootLayout({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Agendar Cita por WhatsApp"
+                onClick={handleWhatsAppClick}
                 className="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-4 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50 transform hover:scale-110 font-bold text-lg"
               >
                 Citas
@@ -96,6 +118,28 @@ export default function RootLayout({
             `,
           }}
         />
+        
+        {/* Google Ads Conversion Snippet */}
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              window.gtag('event', 'conversion', {
+                  'send_to': 'AW-17663251036/PAwiCM6evbAbENykv-ZB',
+                  'value': 1.0,
+                  'currency': 'COP',
+                  'event_callback': callback
+              });
+              return false;
+            }
+            window.gtag_report_conversion = gtag_report_conversion;
+          `}
+        </Script>
+        
         <Script async src="https://www.tiktok.com/embed.js" />
       </body>
     </html>

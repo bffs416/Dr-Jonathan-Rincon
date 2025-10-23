@@ -176,6 +176,19 @@ function BioestimuladoresContent() {
   const { lang } = useLanguage();
   const currentContent = content[lang];
   
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const url = e.currentTarget.href;
+    if (window.gtag_report_conversion) {
+      window.gtag_report_conversion(url);
+    } else {
+      // Fallback if gtag is not available
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    }
+  };
+  
   return (
     <div>
       {/* Hero Section */}
@@ -398,6 +411,7 @@ function BioestimuladoresContent() {
                   href="https://wa.me/573122784757"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={handleWhatsAppClick}
                 >
                   {currentContent.ctaButton} <WhatsAppIcon />
                 </a>

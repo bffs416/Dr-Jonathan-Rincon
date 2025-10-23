@@ -210,6 +210,19 @@ export default function Home() {
     },
   ];
 
+  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const url = e.currentTarget.href;
+    if (window.gtag_report_conversion) {
+      window.gtag_report_conversion(url);
+    } else {
+      // Fallback if gtag is not available
+      if (typeof(url) != 'undefined') {
+        window.location.href = url;
+      }
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-dvh">
       <main className="flex-1">
@@ -356,6 +369,7 @@ export default function Home() {
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleWhatsAppClick}
                   >
                     {currentContent.ctaButton1} <MessageCircle />
                   </a>
@@ -365,6 +379,7 @@ export default function Home() {
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleWhatsAppClick}
                   >
                     {currentContent.ctaButton2} <MessageCircle />
                   </a>
@@ -391,6 +406,7 @@ export default function Home() {
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleWhatsAppClick}
                   >
                     {currentContent.ctaButton1} <MessageCircle />
                   </a>
@@ -400,6 +416,7 @@ export default function Home() {
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleWhatsAppClick}
                   >
                     {currentContent.ctaButton2} <MessageCircle />
                   </a>
