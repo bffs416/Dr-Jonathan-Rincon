@@ -29,6 +29,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { findImage } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
+import Head from 'next/head';
 
 const Placeholder = ({
   className,
@@ -155,8 +156,54 @@ function BotoxContent() {
     }
   };
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalProcedure',
+    name: 'Toxina Botulínica (Botox)',
+    alternateName: 'Botox',
+    description: 'Tratamiento para suavizar arrugas de expresión en entrecejo, frente y patas de gallo. Realizado por el Dr. Jonathan Rincón en Medellín para un resultado natural.',
+    keywords: "botox medellín, toxina botulínica, arrugas de expresión, quitar arrugas frente, patas de gallo, botox precio",
+    bodyLocation: [
+      { '@type': 'BodyPart', name: 'Entrecejo' },
+      { '@type': 'BodyPart', name: 'Frente' },
+      { '@type': 'BodyPart', name: 'Patas de gallo' },
+    ],
+    procedureType: {
+      '@type': 'MedicalProcedureType',
+      name: 'Mínimamente Invasivo'
+    },
+    indication: [
+      { '@type': 'MedicalIndication', name: 'Arrugas dinámicas' },
+      { '@type': 'MedicalIndication', name: 'Líneas de expresión facial' },
+    ],
+    performer: {
+      '@type': 'Physician',
+      name: 'Dr. Jonathan Rincón',
+      url: 'https://www.drjonathanrincon.com/'
+    },
+    provider: {
+      '@type': 'MedicalBusiness',
+      name: 'Dr. Jonathan Rincón - Medicina Estética',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Edificio Azor, Cra. 84 #37b - 195, Primer piso, La América',
+        addressLocality: 'Medellín',
+        addressRegion: 'Antioquia',
+        addressCountry: 'CO'
+      },
+      telephone: '+573122784757',
+      url: 'https://www.drjonathanrincon.com/'
+    }
+  };
+
   return (
     <div>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
         <div className="absolute inset-0 opacity-30">
@@ -380,3 +427,5 @@ function BotoxContent() {
 export default function BotoxPage() {
   return <BotoxContent />;
 }
+
+    

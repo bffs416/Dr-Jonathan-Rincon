@@ -93,6 +93,8 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-radiesse-sculptra-hero', src: '/images/Bioestimuladores de Colágeno_1.png', hint: 'biostimulator products' },
   { id: 'blog-radiesse-sculptra-content', src: '/images/bioestimuladores_Diagrama.png', hint: 'biostimulator diagram' },
   { id: 'blog-hilos-cuidados-hero', src: '/images/mujer_rubia_primer_plano_mano_mejilla.png', hint: 'woman after treatment'},
+  { id: 'blog-hilos-vs-bio-hero', src: '/images/Productos.jpg', hint: 'aesthetic products comparison' },
+
 
   // Home Page
   { id: 'home-testimonial-1', src: '/images/Modelo 6.jpg', hint: 'facial procedure' },
@@ -120,3 +122,5 @@ export const GALLERY_IMAGES_DATA: SiteImage[] = [
 export function findImage(id: string): SiteImage | undefined {
   return IMAGES.find(img => img.id === id);
 }
+
+    

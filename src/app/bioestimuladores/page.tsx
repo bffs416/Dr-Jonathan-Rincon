@@ -23,6 +23,7 @@ import { cn } from '@/lib/utils';
 import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import { findImage } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
+import Head from 'next/head';
 
 const Placeholder = ({
   className,
@@ -188,9 +189,59 @@ function BioestimuladoresContent() {
       }
     }
   };
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalProcedure',
+    name: 'Bioestimuladores de Colágeno',
+    alternateName: ["Radiesse", "Sculptra", "HArmonyCa"],
+    description: 'Tratamiento para la flacidez facial y corporal que estimula la producción natural de colágeno para una piel más firme y joven. Realizado por el Dr. Jonathan Rincón en Medellín.',
+    keywords: "bioestimuladores de colágeno, radiesse medellín, sculptra medellín, harmonyca, tratamiento para flacidez, producción de colágeno, rejuvenecimiento facial",
+    bodyLocation: [
+      { '@type': 'BodyPart', name: 'Cara' },
+      { '@type': 'BodyPart', name: 'Cuello' },
+      { '@type': 'BodyPart', name: 'Manos' },
+      { '@type': 'BodyPart', name: 'Brazos' },
+      { '@type': 'BodyPart', name: 'Abdomen' },
+      { '@type': 'BodyPart', name: 'Glúteos' },
+    ],
+    procedureType: {
+      '@type': 'MedicalProcedureType',
+      name: 'Mínimamente Invasivo'
+    },
+    indication: [
+      { '@type': 'MedicalIndication', name: 'Flacidez cutánea' },
+      { '@type': 'MedicalIndication', name: 'Pérdida de volumen facial' },
+      { '@type': 'MedicalIndication', name: 'Mejora de la calidad de la piel' },
+    ],
+    performer: {
+      '@type': 'Physician',
+      name: 'Dr. Jonathan Rincón',
+      url: 'https://www.drjonathanrincon.com/'
+    },
+    provider: {
+      '@type': 'MedicalBusiness',
+      name: 'Dr. Jonathan Rincón - Medicina Estética',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Edificio Azor, Cra. 84 #37b - 195, Primer piso, La América',
+        addressLocality: 'Medellín',
+        addressRegion: 'Antioquia',
+        addressCountry: 'CO'
+      },
+      telephone: '+573122784757',
+      url: 'https://www.drjonathanrincon.com/'
+    }
+  };
   
   return (
     <div>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
         <div className="absolute inset-0 opacity-30">
@@ -431,3 +482,5 @@ function BioestimuladoresContent() {
 export default function BioestimuladoresPage() {
   return <BioestimuladoresContent />;
 }
+
+    

@@ -18,6 +18,7 @@ import { SectionTitleWithLines } from '@/components/section-title-with-lines';
 import Image from 'next/image';
 import { findImage } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
+import Head from 'next/head';
 
 const Placeholder = ({
   className,
@@ -202,8 +203,57 @@ function ContornoCorporalContent() {
     }
   };
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalProcedure',
+    name: 'Contorno Corporal (Hidrolipoclasia y Tensamax)',
+    alternateName: ["Liposucción sin cirugía", "Hidrolipoclasia", "Tensamax"],
+    description: 'Tratamientos no invasivos para eliminar grasa localizada y combatir la flacidez. Hidrolipoclasia para reducir grasa y Tensamax para reafirmar la piel.',
+    keywords: "hidrolipoclasia medellín, tensamax, contorno corporal sin cirugía, eliminar grasa localizada, tratamiento para flacidez corporal",
+    bodyLocation: [
+      { '@type': 'BodyPart', name: 'Abdomen' },
+      { '@type': 'BodyPart', name: 'Caderas' },
+      { '@type': 'BodyPart', name: 'Muslos' },
+      { '@type': 'BodyPart', name: 'Brazos' },
+      { '@type': 'BodyPart', name: 'Glúteos' },
+    ],
+    procedureType: {
+      '@type': 'MedicalProcedureType',
+      name: 'Mínimamente Invasivo'
+    },
+    indication: [
+      { '@type': 'MedicalIndication', name: 'Grasa localizada' },
+      { '@type': 'MedicalIndication', name: 'Flacidez de la piel' },
+      { '@type': 'MedicalIndication', name: 'Celulitis' },
+    ],
+    performer: {
+      '@type': 'Physician',
+      name: 'Dr. Jonathan Rincón',
+      url: 'https://www.drjonathanrincon.com/'
+    },
+    provider: {
+      '@type': 'MedicalBusiness',
+      name: 'Dr. Jonathan Rincón - Medicina Estética',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Edificio Azor, Cra. 84 #37b - 195, Primer piso, La América',
+        addressLocality: 'Medellín',
+        addressRegion: 'Antioquia',
+        addressCountry: 'CO'
+      },
+      telephone: '+573122784757',
+      url: 'https://www.drjonathanrincon.com/'
+    }
+  };
+
   return (
     <div>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
       {/* Hero Section */}
       <section className="relative h-[50vh] md:h-[60vh] w-full bg-slate-900">
         <div className="absolute inset-0 opacity-30">
@@ -520,3 +570,5 @@ function ContornoCorporalContent() {
 export default function ContornoCorporalPage() {
   return <ContornoCorporalContent />;
 }
+
+    

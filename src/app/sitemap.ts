@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next';
 import { POSTS } from '@/lib/blog-posts';
 
@@ -77,3 +78,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticPages, ...blogPosts];
 }
+
+    
