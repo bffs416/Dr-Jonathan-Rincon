@@ -13,6 +13,7 @@ import { LoadingScreen } from '@/components/loading-screen';
 import Script from 'next/script';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { LanguageProvider } from '@/context/language-context';
+import { Analytics } from '@vercel/analytics/react';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -141,6 +142,7 @@ export default function RootLayout({
         </Script>
         
         <Script async src="https://www.tiktok.com/embed.js" />
+        <Analytics />
       </body>
     </html>
   );
