@@ -341,23 +341,23 @@ function BotoxContent() {
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+            <div className="w-full aspect-[16/9] rounded-lg shadow-lg overflow-hidden max-w-[450px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/VIK35mnWmqQ"
+                src="https://www.youtube-nocookie.com/embed/VIK35mnWmqQ"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
+            <div className="w-full aspect-[16/9] rounded-lg shadow-lg overflow-hidden max-w-[450px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/VxXR_aDzS1w"
+                src="https://www.youtube-nocookie.com/embed/VxXR_aDzS1w"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
@@ -427,6 +427,3 @@ function BotoxContent() {
 export default function BotoxPage() {
   return <BotoxContent />;
 }
-
-    
-    

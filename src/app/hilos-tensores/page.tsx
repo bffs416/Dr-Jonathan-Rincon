@@ -477,30 +477,30 @@ export default function HilosTensoresPage() {
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[320px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/8_jxKjCNLTA?feature=share"
+                src="https://www.youtube-nocookie.com/embed/8_jxKjCNLTA"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[320px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/4HyDiDdty3c"
+                src="https://www.youtube-nocookie.com/embed/4HyDiDdty3c"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
             <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[320px] mx-auto">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/ynRpDfgLCno"
+                src="https://www.youtube-nocookie.com/embed/ynRpDfgLCno"
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
             </div>
@@ -721,5 +721,3 @@ export default function HilosTensoresPage() {
     </div>
   );
 }
-
-    
