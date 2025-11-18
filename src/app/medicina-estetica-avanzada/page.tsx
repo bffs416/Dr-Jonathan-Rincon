@@ -766,3 +766,5 @@ function MedicinaEsteticaAvanzadaContent() {
 export default function MedicinaEsteticaAvanzadaPage() {
   return <MedicinaEsteticaAvanzadaContent />;
 }
+
+    
