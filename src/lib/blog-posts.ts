@@ -2,6 +2,92 @@
 import { findImage } from './images';
 
 export const POSTS: { [key: string]: any } = {
+  'harmonyca-redefine-ovalo-facial': {
+    es: {
+      title: 'Adiós a la Flacidez: Cómo HArmonyCa Redefine el Óvalo Facial',
+      category: 'Bioestimuladores',
+      date: '01 de agosto de 2024',
+      readTime: '7 min',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('blog-harmonyca-hero'),
+      content: `
+        <p class="lead">Con el paso del tiempo, nuestro rostro no solo pierde volumen, sino también su estructura de soporte. La flacidez y la pérdida de definición en el óvalo facial son dos de las principales preocupaciones que escuchamos en consulta. Sin embargo, la medicina estética ha evolucionado hacia soluciones "híbridas" que hacen más que simplemente rellenar.</p>
+        
+        <h2>¿Por qué HArmonyCa es diferente a los rellenos tradicionales?</h2>
+        <p>La mayoría de los tratamientos inyectables ofrecen una de dos cosas: o volumen inmediato (ácido hialurónico) o estimulación de colágeno a largo plazo (bioestimuladores). HArmonyCa es innovador porque es un <strong>inyectable híbrido</strong> que combina ambos beneficios en una sola jeringa:</p>
+        <ol>
+            <li><strong>Ácido Hialurónico (HA):</strong> Aporta hidratación y un efecto de elevación inmediato, recuperando la estructura perdida al instante.</li>
+            <li><strong>Hidroxiapatita de Calcio (CaHA):</strong> Microesferas que actúan como un potente bioestimulador, activando tus fibroblastos para producir nuevo colágeno en las semanas posteriores al tratamiento.</li>
+        </ol>
+
+        <h3>Redefiniendo el Óvalo Facial: El Efecto Lifting</h3>
+        <p>Uno de los mayores beneficios de este tratamiento es su capacidad para redefinir el contorno del rostro sin cirugía. Al aplicarse en las zonas laterales de la cara (como los pómulos y la línea mandibular), HArmonyCa crea un vector de tensión que ayuda a "levantar" los tejidos caídos. Esto mejora significativamente la definición de la línea de la mandíbula (jawline), reduciendo la apariencia de flacidez y recuperando la forma juvenil del rostro.</p>
+
+        <h3>Mejorando la Calidad de la Piel desde el Interior</h3>
+        <p>El verdadero secreto de HArmonyCa no es solo lo que ves al salir del consultorio, sino lo que sucede después. Mientras el ácido hialurónico se va integrando, las microesferas de calcio forman un "andamio" interno que estimula la producción de colágeno nuevo y elastina.</p>
+        <p>Los estudios clínicos demuestran que, entre los 3 y 6 meses posteriores al tratamiento, la piel se vuelve más densa, firme y elástica. Esto significa que no solo te verás mejor por el efecto lifting, sino que la <strong>arquitectura misma de tu piel mejorará</strong>, haciéndola más resistente al paso del tiempo.</p>
+
+        <h3>¿Cómo es la experiencia con el Dr. Jonathan Rincón?</h3>
+        <p>El Dr. Rincón prioriza tu seguridad y confort. El tratamiento con HArmonyCa es rápido y generalmente bien tolerado gracias a que el producto contiene lidocaína, un anestésico que reduce las molestias durante la aplicación.</p>
+        <ul>
+            <li><strong>Técnica Segura:</strong> El Dr. Rincón utiliza cánulas (puntas romas) para distribuir el producto de manera uniforme en las capas profundas de la piel, minimizando el riesgo de moretones y asegurando un resultado natural y homogéneo.</li>
+            <li><strong>Resultados Duraderos:</strong> Los beneficios pueden extenderse entre 12 y 18 meses, ofreciendo una satisfacción prolongada.</li>
+        </ul>
+
+        <h3>¿Es el tratamiento ideal para ti?</h3>
+        <p>Si notas que tu piel ha perdido firmeza, sientes el rostro "caído" o deseas definir mejor tu perfil sin recurrir a una cirugía, HArmonyCa podría ser la solución ideal. Es especialmente efectivo para pacientes que buscan un resultado natural, que no altere sus facciones, sino que restaure la estructura perdida.</p>
+
+        <blockquote>
+          <p>No dejes que la flacidez defina tu expresión. Confía tu rostro a las manos expertas del Dr. Jonathan Rincón y descubre el poder de la tecnología híbrida.</p>
+        </blockquote>
+
+        <h4>¿Listo para decirle adiós a la flacidez?</h4>
+        <p>Agenda tu valoración personalizada y diseñemos juntos el plan para recuperar la firmeza y luminosidad de tu piel.</p>
+      `,
+    },
+    en: {
+      title: 'Goodbye to Sagging: How HArmonyCa Redefines the Facial Oval',
+      category: 'Biostimulators',
+      date: 'August 01, 2024',
+      readTime: '7 min read',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('blog-harmonyca-hero'),
+      content: `
+        <p class="lead">Over time, our face not only loses volume but also its supporting structure. Sagging and loss of definition in the facial oval are two of the main concerns we hear in consultation. However, aesthetic medicine has evolved towards "hybrid" solutions that do more than just fill.</p>
+        
+        <h2>Why is HArmonyCa different from traditional fillers?</h2>
+        <p>Most injectable treatments offer one of two things: either immediate volume (hyaluronic acid) or long-term collagen stimulation (biostimulators). HArmonyCa is innovative because it is a <strong>hybrid injectable</strong> that combines both benefits in a single syringe:</p>
+        <ol>
+            <li><strong>Hyaluronic Acid (HA):</strong> Provides hydration and an immediate lifting effect, instantly recovering the lost structure.</li>
+            <li><strong>Calcium Hydroxylapatite (CaHA):</strong> Microspheres that act as a potent biostimulator, activating your fibroblasts to produce new collagen in the weeks following the treatment.</li>
+        </ol>
+
+        <h3>Redefining the Facial Oval: The Lifting Effect</h3>
+        <p>One of the greatest benefits of this treatment is its ability to redefine the contour of the face without surgery. When applied to the lateral areas of the face (such as the cheekbones and jawline), HArmonyCa creates a tension vector that helps to "lift" sagging tissues. This significantly improves the definition of the jawline, reducing the appearance of sagging and recovering the youthful shape of the face.</p>
+
+        <h3>Improving Skin Quality from the Inside</h3>
+        <p>The real secret of HArmonyCa is not just what you see when you leave the office, but what happens next. While the hyaluronic acid integrates, the calcium microspheres form an internal "scaffold" that stimulates the production of new collagen and elastin.</p>
+        <p>Clinical studies show that between 3 and 6 months after treatment, the skin becomes denser, firmer, and more elastic. This means that you will not only look better because of the lifting effect, but the <strong>very architecture of your skin will improve</strong>, making it more resistant to the passage of time.</p>
+
+        <h3>What is the experience like with Dr. Jonathan Rincón?</h3>
+        <p>Dr. Rincón prioritizes your safety and comfort. The HArmonyCa treatment is quick and generally well-tolerated because the product contains lidocaine, an anesthetic that reduces discomfort during application.</p>
+        <ul>
+            <li><strong>Safe Technique:</strong> Dr. Rincón uses cannulas (blunt tips) to distribute the product evenly in the deep layers of the skin, minimizing the risk of bruising and ensuring a natural and homogeneous result.</li>
+            <li><strong>Lasting Results:</strong> The benefits can last between 12 and 18 months, offering prolonged satisfaction.</li>
+        </ul>
+
+        <h3>Is it the ideal treatment for you?</h3>
+        <p>If you notice that your skin has lost firmness, your face feels "fallen," or you want to better define your profile without resorting to surgery, HArmonyCa could be the ideal solution. It is especially effective for patients seeking a natural result that does not alter their features, but restores the lost structure.</p>
+
+        <blockquote>
+          <p>Don't let sagging define your expression. Trust your face to the expert hands of Dr. Jonathan Rincón and discover the power of hybrid technology.</p>
+        </blockquote>
+
+        <h4>Ready to say goodbye to sagging?</h4>
+        <p>Schedule your personalized assessment and let's design together the plan to recover the firmness and radiance of your skin.</p>
+      `,
+    },
+  },
   'hilos-vs-bioestimuladores': {
     es: {
       title: 'Hilos Tensores vs. Bioestimuladores: ¿Cuál es Mejor para tu Piel?',
