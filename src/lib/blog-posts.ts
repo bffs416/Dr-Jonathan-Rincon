@@ -101,7 +101,7 @@ export const POSTS: { [key: string]: any } = {
       date: '02 de agosto de 2024',
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-radiesse-sculptra-hero'),
+      image: findImage('radiesse-dec'),
       content: `
         <p class="lead">En la búsqueda del rejuvenecimiento facial, muchos pacientes llegan a la consulta del Dr. Jonathan Rincón buscando no solo rellenar una arruga, sino recuperar la firmeza y el contorno que el tiempo se ha llevado. Radiesse® es la opción superior para quienes necesitan soporte estructural y una verdadera regeneración de la piel.</p>
         
@@ -145,7 +145,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'August 02, 2024',
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-radiesse-sculptra-hero'),
+      image: findImage('radiesse-dec'),
       content: `
         <p class="lead">In the quest for facial rejuvenation, many patients come to Dr. Jonathan Rincón's office looking not just to fill a wrinkle, but to recover the firmness and contour that time has taken away. Radiesse® is the superior option for those who need structural support and true skin regeneration.</p>
         

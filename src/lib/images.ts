@@ -95,6 +95,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-hilos-cuidados-hero', src: '/images/mujer_rubia_primer_plano_mano_mejilla.png', hint: 'woman after treatment'},
   { id: 'blog-hilos-vs-bio-hero', src: '/images/Productos.jpg', hint: 'aesthetic products comparison' },
   { id: 'blog-harmonyca-hero', src: '/images/Hacido Hialuronico.png', hint: 'harmonyca treatment' },
+  { id: 'radiesse-dec', src: '/images/Radiesse_Dec.png', hint: 'Radiesse product' },
 
 
   // Home Page
