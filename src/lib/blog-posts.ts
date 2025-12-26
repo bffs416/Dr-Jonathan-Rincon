@@ -2,6 +2,96 @@
 import { findImage } from './images';
 
 export const POSTS: { [key: string]: any } = {
+  'radiesse-bioestimulador-restaura-estructura': {
+    es: {
+      title: 'Radiesse®: El Bioestimulador que Restaura la Estructura y Juventud de tu Piel',
+      category: 'Bioestimuladores',
+      date: '02 de agosto de 2024',
+      readTime: '8 min',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('blog-radiesse-sculptra-hero'),
+      content: `
+        <p class="lead">En la búsqueda del rejuvenecimiento facial, muchos pacientes llegan a la consulta del Dr. Jonathan Rincón buscando no solo rellenar una arruga, sino recuperar la firmeza y el contorno que el tiempo se ha llevado. Radiesse® es la opción superior para quienes necesitan soporte estructural y una verdadera regeneración de la piel.</p>
+        
+        <h2>¿Qué es Radiesse® y qué lo hace único?</h2>
+        <p>Radiesse® no es un relleno común; es un bioestimulador regenerativo. Su fórmula única se compone de microesferas de Hidroxiapatita de Calcio (CaHA) suspendidas en un gel acuoso. Este componente se encuentra naturalmente en nuestro cuerpo, lo que lo hace totalmente biocompatible y seguro.</p>
+        <p>A diferencia de los rellenos que solo "ocupan espacio", Radiesse® funciona como un arquitecto dérmico, proporcionando una estructura firme sobre la cual tu piel puede reconstruirse.</p>
+
+        <h3>El Poder del "Doble Efecto": Volumen Instantáneo y Juventud Duradera</h3>
+        <p>Al elegir Radiesse® con el Dr. Jonathan Rincón, obtienes dos beneficios en un solo procedimiento:</p>
+        <ol>
+            <li><strong>Efecto Lifting Inmediato:</strong> El gel portador del producto proporciona una corrección visible al instante al ser inyectado. Esto permite suavizar arrugas profundas y definir contornos perdidos en el momento.</li>
+            <li><strong>Bioestimulación a Largo Plazo:</strong> A medida que tu cuerpo absorbe el gel, las microesferas de calcio permanecen y actúan como un "andamio", estimulando a tus fibroblastos para que produzcan nuevo colágeno (Tipo I y III) y elastina.</li>
+        </ol>
+        <p>El resultado final es que, meses después del tratamiento, tu piel es estructuralmente más joven, densa y elástica gracias a tu propio tejido regenerado.</p>
+
+        <h3>¿Qué zonas podemos perfeccionar?</h3>
+        <p>Gracias a su alta viscosidad, Radiesse® es ideal para zonas que requieren definición ósea y soporte estructural. El Dr. Rincón lo utiliza para:</p>
+        <ul>
+            <li><strong>Definición de Mandíbula (Jawline):</strong> Para esculpir un perfil nítido y reducir la papada.</li>
+            <li><strong>Pómulos:</strong> Para restaurar el volumen perdido y crear un efecto "lifting" natural.</li>
+            <li><strong>Rejuvenecimiento de Manos:</strong> Es el único relleno aprobado por la FDA para corregir la pérdida de volumen en el dorso de las manos.</li>
+        </ul>
+
+        <h3>La Innovación del "Radiesse Hiperdiluido": Firmeza sin Volumen</h3>
+        <p>Para pacientes que buscan combatir la flacidez y la piel fina sin añadir volumen, el Dr. Rincón aplica la técnica de Radiesse Hiperdiluido. Al diluir el producto, se transforma en un potente agente de tensado de la piel, ideal para cuello, escote, brazos o abdomen.</p>
+
+        <h3>¿Cuánto duran los resultados?</h3>
+        <p>Gracias a la producción de colágeno propio, los resultados suelen mantenerse visibles entre 12 y 18 meses, e incluso hasta 2 años en algunos pacientes, superando a muchos rellenos de ácido hialurónico.</p>
+
+        <blockquote>
+          <p>Recupera la estructura de tu belleza. Si sientes que tu rostro ha "caído" o perdido sus contornos, Radiesse® ofrece una solución que invierte en el futuro de tu piel.</p>
+        </blockquote>
+
+        <h4>Confía en la experiencia</h4>
+        <p>La aplicación de Hidroxiapatita de Calcio requiere un conocimiento anatómico profundo. No dejes tu rostro en manos inexpertas. Agenda tu valoración con el Dr. Jonathan Rincón y descubre si eres candidato para este tratamiento bioestimulador.</p>
+      `,
+    },
+    en: {
+      title: 'Radiesse®: The Biostimulator that Restores Your Skin\'s Structure and Youth',
+      category: 'Biostimulators',
+      date: 'August 02, 2024',
+      readTime: '8 min read',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('blog-radiesse-sculptra-hero'),
+      content: `
+        <p class="lead">In the quest for facial rejuvenation, many patients come to Dr. Jonathan Rincón's office looking not just to fill a wrinkle, but to recover the firmness and contour that time has taken away. Radiesse® is the superior option for those who need structural support and true skin regeneration.</p>
+        
+        <h2>What is Radiesse® and what makes it unique?</h2>
+        <p>Radiesse® is not a common filler; it is a regenerative biostimulator. Its unique formula consists of Calcium Hydroxylapatite (CaHA) microspheres suspended in an aqueous gel. This component is naturally found in our body, making it fully biocompatible and safe.</p>
+        <p>Unlike fillers that just "take up space," Radiesse® acts as a dermal architect, providing a firm structure on which your skin can rebuild itself.</p>
+
+        <h3>The Power of the "Dual Effect": Instant Volume and Lasting Youth</h3>
+        <p>By choosing Radiesse® with Dr. Jonathan Rincón, you get two benefits in one procedure:</p>
+        <ol>
+            <li><strong>Immediate Lifting Effect:</strong> The product's carrier gel provides instant visible correction upon injection. This helps to smooth deep wrinkles and define lost contours right away.</li>
+            <li><strong>Long-Term Biostimulation:</strong> As your body gradually absorbs the gel, the calcium microspheres remain and act as a "scaffold," stimulating your fibroblasts to produce new collagen (Type I and III) and elastin.</li>
+        </ol>
+        <p>The end result is that, months after the treatment, your skin is structurally younger, denser, and more elastic thanks to your own regenerated tissue.</p>
+
+        <h3>Which areas can we perfect?</h3>
+        <p>Thanks to its high viscosity, Radiesse® is ideal for areas requiring bony definition and structural support. Dr. Rincón uses it for:</p>
+        <ul>
+            <li><strong>Jawline Definition:</strong> To sculpt a sharp profile and reduce the jowl area.</li>
+            <li><strong>Cheekbones:</strong> To restore lost volume and create a natural lifting effect.</li>
+            <li><strong>Hand Rejuvenation:</strong> It is the only FDA-approved filler to correct volume loss on the back of the hands.</li>
+        </ul>
+
+        <h3>The Innovation of "Hyperdilute Radiesse": Firmness without Volume</h3>
+        <p>For patients who want to combat sagging and "crepey skin" without adding volume, Dr. Rincón applies the Hyperdilute Radiesse technique. By diluting the product, it becomes a powerful skin-tightening agent, ideal for the neck, décolletage, arms, or abdomen.</p>
+
+        <h3>How long do the results last?</h3>
+        <p>Thanks to the production of your own collagen, the results typically remain visible for 12 to 18 months, and even up to 2 years in some patients, outlasting many hyaluronic acid fillers.</p>
+
+        <blockquote>
+          <p>Recover your beauty's structure. If you feel your face has "fallen" or lost its defined contours, Radiesse® offers a solution that invests in your skin's future.</p>
+        </blockquote>
+
+        <h4>Trust in experience</h4>
+        <p>The application of Calcium Hydroxylapatite requires deep anatomical knowledge. Do not leave your face in inexperienced hands. Schedule your assessment with Dr. Jonathan Rincón and find out if you are a candidate for this biostimulator treatment.</p>
+      `,
+    },
+  },
   'harmonyca-redefine-ovalo-facial': {
     es: {
       title: 'Adiós a la Flacidez: Cómo HArmonyCa Redefine el Óvalo Facial',
@@ -996,7 +1086,7 @@ export const POSTS: { [key: string]: any } = {
         <p>The direct tightening effect of PDO threads can last between 12 and 18 months, although the benefits persist for up to 2 years thanks to the new collagen.</p>
         <table>
           <thead>
-            <tr><th>Indication</th><th>Explicit Detail for the Patient</th><th>Reason for Durability</th></tr>
+            <tr><th>Indicación</th><th>Detalle Explícito para el Paciente</th><th>Razón para la Durabilidad</th></tr>
           </thead>
           <tbody>
             <tr><td><strong>Care Routine</strong></td><td>Maintain intense skin hydration (with products like hyaluronic acid) and daily sun protection. Avoid harmful habits like smoking and excessive alcohol consumption, as these affect collagen production.</td><td>These habits help preserve the skin's firmness and elasticity, prolonging the treatment's effects.</td></tr>
@@ -1015,3 +1105,4 @@ export const POSTS: { [key: string]: any } = {
 };
 
     
+
