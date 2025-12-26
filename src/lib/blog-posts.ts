@@ -9,7 +9,7 @@ export const POSTS: { [key: string]: any } = {
       date: '03 de agosto de 2024',
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-radiesse-sculptra-hero'),
+      image: findImage('sculptra-dec'),
       content: `
         <p class="lead">Vivimos en un mundo de gratificación instantánea, donde queremos ver resultados al momento. Sin embargo, en la medicina estética regenerativa, las mejores cosas se hacen esperar. Si estás considerando Sculptra® (ácido poli-L-láctico) con el Dr. Jonathan Rincón, estás eligiendo un camino diferente: no se trata de "rellenar" una arruga hoy, sino de reconstruir la arquitectura de tu piel para el mañana.</p>
         <p>Para lograr ese resultado natural y duradero que caracteriza a Sculptra, hay dos ingredientes secretos que tú, como paciente, debes aportar: disciplina con la Regla 5-5-5 y paciencia.</p>
@@ -54,7 +54,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'August 03, 2024',
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-radiesse-sculptra-hero'),
+      image: findImage('sculptra-dec'),
       content: `
         <p class="lead">We live in a world of instant gratification, where we want to see results immediately. However, in regenerative aesthetic medicine, the best things come to those who wait. If you are considering Sculptra® (poly-L-lactic acid) with Dr. Jonathan Rincón, you are choosing a different path: it's not about "filling" a wrinkle today, but about rebuilding your skin's architecture for tomorrow.</p>
         <p>To achieve that natural and long-lasting result that characterizes Sculptra, there are two secret ingredients that you, as a patient, must provide: discipline with the 5-5-5 Rule and patience.</p>
@@ -532,210 +532,6 @@ export const POSTS: { [key: string]: any } = {
       `,
     },
   },
-  'bioestimuladores-colageno': {
-    es: {
-      title: 'Bioestimuladores de Colágeno: Radiesse vs Sculptra vs HArmonyCa',
-      category: 'Bioestimuladores',
-      date: '25 de julio de 2024',
-      readTime: '8 min',
-      author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-radiesse-sculptra-hero'),
-      content: `
-        <p class="lead">Los bioestimuladores de colágeno son la piedra angular del rejuvenecimiento moderno, pero con tantas opciones en el mercado, ¿cuál es la mejor para ti? Analizamos a fondo los tres gigantes: Radiesse, Sculptra y el innovador HArmonyCa.</p>
-        <h2>¿Qué hacen los Bioestimuladores?</h2>
-        <p>Antes de comparar, recordemos su función: son sustancias inyectables que, una vez en la piel, "despiertan" a nuestras células (fibroblastos) para que produzcan colágeno nuevo y de calidad. El resultado no es un relleno inmediato, sino una mejora progresiva de la firmeza, densidad y calidad de la piel.</p>
-        
-        <h2>Radiesse (Hidroxiapatita de Calcio)</h2>
-        <figure>
-          <img src="${findImage('blog-radiesse-sculptra-content')?.src}" alt="Aplicación de Radiesse" data-ai-hint="Radiesse application"/>
-          <figcaption>Radiesse ofrece un doble efecto: relleno inmediato y bioestimulación a largo plazo.</figcaption>
-        </figure>
-        <p>Radiesse es un veterano confiable y muy versátil. Está compuesto por microesferas de hidroxiapatita de calcio suspendidas en un gel portador.</p>
-        <ul>
-          <li><strong>Efecto Inmediato:</strong> Sí. El gel proporciona un ligero volumen y corrección instantánea de surcos o arrugas.</li>
-          <li><strong>Mecanismo:</strong> Las microesferas actúan como un "andamio" sobre el cual el cuerpo construye nuevo colágeno.</li>
-          <li><strong>Ideal para:</strong> Pacientes que desean un resultado visible desde el principio, además del efecto a largo plazo. Excelente para definir el contorno mandibular, los pómulos y tratar la flacidez facial y corporal (cuello, manos, brazos).</li>
-          <li><strong>Duración:</strong> Entre 12 y 18 meses.</li>
-        </ul>
-
-        <h2>Sculptra (Ácido Poli-L-Láctico)</h2>
-        <p>Sculptra es el "maratonista" de los bioestimuladores. Compuesto por ácido poli-L-láctico, su enfoque es 100% la estimulación de colágeno, sin efecto de relleno inicial.</p>
-        <ul>
-          <li><strong>Efecto Inmediato:</strong> No. El efecto de volumen inicial se debe al agua de la reconstitución y desaparece en unos días. Los resultados reales aparecen gradualmente en meses.</li>
-          <li><strong>Mecanismo:</strong> Induce una respuesta inflamatoria controlada que desencadena una potente producción de colágeno tipo I.</li>
-          <li><strong>Ideal para:</strong> Pacientes con pérdida de volumen generalizada (atrofia facial), flacidez significativa y que buscan un resultado muy progresivo y natural. Es el rey del "full face" y del tratamiento de la celulitis y lifting de glúteos.</li>
-          <li><strong>Duración:</strong> Hasta 25 meses, siendo uno de los más duraderos.</li>
-        </ul>
-
-        <h2>HArmonyCa (Hidroxiapatita de Calcio + Ácido Hialurónico)</h2>
-        <p>HArmonyCa es el híbrido más nuevo y emocionante. Combina lo mejor de dos mundos: la capacidad de bioestimulación de la hidroxiapatita de calcio (como Radiesse) con el poder de hidratación y efecto lifting inmediato del ácido hialurónico reticulado.</p>
-        <ul>
-          <li><strong>Efecto Inmediato:</strong> Sí, y muy notorio. El ácido hialurónico proporciona un lifting e hidratación instantáneos.</li>
-          <li><strong>Mecanismo:</strong> Doble acción. El ácido hialurónico da soporte inmediato mientras que la hidroxiapatita de calcio construye la red de colágeno a largo plazo.</li>
-          <li><strong>Ideal para:</strong> Pacientes que buscan tanto un efecto lifting inmediato como una mejora sostenida de la calidad de la piel. Es perfecto para el tercio medio e inferior del rostro, especialmente para el "lifting de la mejilla lateral".</li>
-          <li><strong>Duración:</strong> Resultados sostenidos hasta por 18-24 meses.</li>
-        </ul>
-        
-        <h2>Tabla Comparativa Rápida</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Característica</th>
-              <th>Radiesse</th>
-              <th>Sculptra</th>
-              <th>HArmonyCa</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Componente Principal</strong></td>
-              <td>Hidroxiapatita de Calcio</td>
-              <td>Ácido Poli-L-Láctico</td>
-              <td>Hidroxiapatita + Ácido Hialurónico</td>
-            </tr>
-            <tr>
-              <td><strong>Efecto Inmediato</strong></td>
-              <td>Sí (moderado)</td>
-              <td>No</td>
-              <td>Sí (alto)</td>
-            </tr>
-            <tr>
-              <td><strong>Objetivo Principal</strong></td>
-              <td>Definición y bioestimulación</td>
-              <td>Volumen y bioestimulación</td>
-              <td>Lifting y bioestimulación</td>
-            </tr>
-             <tr>
-              <td><strong>Mejor para...</strong></td>
-              <td>Contorno mandibular, pómulos</td>
-              <td>Flacidez severa, glúteos</td>
-              <td>Lifting lateral, efecto dual</td>
-            </tr>
-            <tr>
-              <td><strong>Duración</strong></td>
-              <td>~18 meses</td>
-              <td>~25 meses</td>
-              <td>~24 meses</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <blockquote>
-          <p>"La elección del bioestimulador no se basa en cuál es 'mejor', sino en cuál es el adecuado para la anatomía, objetivos y tipo de piel de cada paciente. La personalización es la clave del éxito." - Dr. Jonathan Rincón</p>
-        </blockquote>
-        
-        <h2>Conclusión: ¿Cuál elegir?</h2>
-        <p>La decisión final siempre debe tomarse en una consulta de valoración con un médico experto.</p>
-        <ul>
-          <li>Si buscas <strong>definición y un resultado visible desde el día uno</strong>, <strong>Radiesse</strong> es una excelente opción.</li>
-          <li>Si tu prioridad es tratar la <strong>flacidez general y no tienes prisa por ver el resultado final</strong>, <strong>Sculptra</strong> es inigualable.</li>
-          <li>Si quieres lo mejor de ambos mundos, un <strong>lifting inmediato y una mejora a largo plazo</strong>, <strong>HArmonyCa</strong> es la tecnología más avanzada.</li>
-        </ul>
-        <p>Agenda tu cita de valoración para descubrir cuál de estos potentes tratamientos es el perfecto para devolverle la juventud y firmeza a tu piel.</p>
-      `,
-    },
-    en: {
-      title: 'Collagen Biostimulators: Radiesse vs Sculptra vs HArmonyCa',
-      category: 'Biostimulators',
-      date: 'July 25, 2024',
-      readTime: '8 min read',
-      author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-radiesse-sculptra-hero'),
-      content: `
-        <p class="lead">Collagen biostimulators are the cornerstone of modern rejuvenation, but with so many options on the market, which one is best for you? We take a deep dive into the three giants: Radiesse, Sculptra, and the innovative HArmonyCa.</p>
-        <h2>What do Biostimulators do?</h2>
-        <p>Before comparing, let's remember their function: they are injectable substances that, once in the skin, "wake up" our cells (fibroblasts) to produce new, high-quality collagen. The result is not an immediate filling, but a progressive improvement in the skin's firmness, density, and quality.</p>
-        
-        <h2>Radiesse (Calcium Hydroxylapatite)</h2>
-        <figure>
-          <img src="${findImage('blog-radiesse-sculptra-content')?.src}" alt="Radiesse application" data-ai-hint="Radiesse application"/>
-          <figcaption>Radiesse offers a dual effect: immediate filling and long-term biostimulation.</figcaption>
-        </figure>
-        <p>Radiesse is a reliable and very versatile veteran. It is composed of calcium hydroxylapatite microspheres suspended in a carrier gel.</p>
-        <ul>
-          <li><strong>Immediate Effect:</strong> Yes. The gel provides slight volume and instant correction of furrows or wrinkles.</li>
-          <li><strong>Mechanism:</strong> The microspheres act as a "scaffold" on which the body builds new collagen.</li>
-          <li><strong>Ideal for:</strong> Patients who want a visible result from the beginning, in addition to the long-term effect. Excellent for defining the jawline, cheekbones, and treating facial and body sagging (neck, hands, arms).</li>
-          <li><strong>Duration:</strong> Between 12 and 18 months.</li>
-        </ul>
-
-        <h2>Sculptra (Poly-L-Lactic Acid)</h2>
-        <p>Sculptra is the "marathon runner" of biostimulators. Composed of poly-L-lactic acid, its focus is 100% on collagen stimulation, with no initial filling effect.</p>
-        <ul>
-          <li><strong>Immediate Effect:</strong> No. The initial volume effect is due to the reconstitution water and disappears in a few days. The real results appear gradually over months.</li>
-          <li><strong>Mechanism:</strong> It induces a controlled inflammatory response that triggers potent production of type I collagen.</li>
-          <li><strong>Ideal for:</strong> Patients with generalized volume loss (facial atrophy), significant sagging, and who are looking for a very progressive and natural result. It is the king of the "full face" and the treatment of cellulite and buttock lifts.</li>
-          <li><strong>Duration:</strong> Up to 25 months, being one of the most durable.</li>
-        </ul>
-
-        <h2>HArmonyCa (Calcium Hydroxylapatite + Hyaluronic Acid)</h2>
-        <p>HArmonyCa is the newest and most exciting hybrid. It combines the best of both worlds: the biostimulation capacity of calcium hydroxylapatite (like Radiesse) with the hydrating power and immediate lifting effect of cross-linked hyaluronic acid.</p>
-        <ul>
-          <li><strong>Immediate Effect:</strong> Yes, and very noticeable. The hyaluronic acid provides an instant lift and hydration.</li>
-          <li><strong>Mechanism:</strong> Dual action. The hyaluronic acid gives immediate support while the calcium hydroxylapatite builds the long-term collagen network.</li>
-          <li><strong>Ideal for:</strong> Patients seeking both an immediate lifting effect and a sustained improvement in skin quality. It is perfect for the middle and lower third of the face, especially for the "lateral cheek lift".</li>
-          <li><strong>Duration:</strong> Sustained results for up to 18-24 months.</li>
-        </ul>
-        
-        <h2>Quick Comparison Table</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Radiesse</th>
-              <th>Sculptra</th>
-              <th>HArmonyCa</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Main Component</strong></td>
-              <td>Calcium Hydroxylapatite</td>
-              <td>Poly-L-Lactic Acid</td>
-              <td>Hydroxylapatite + Hyaluronic Acid</td>
-            </tr>
-            <tr>
-              <td><strong>Immediate Effect</strong></td>
-              <td>Yes (moderate)</td>
-              <td>No</td>
-              <td>Yes (high)</td>
-            </tr>
-            <tr>
-              <td><strong>Main Goal</strong></td>
-              <td>Definition and biostimulation</td>
-              <td>Volume and biostimulation</td>
-              <td>Lifting and biostimulation</td>
-            </tr>
-             <tr>
-              <td><strong>Best for...</strong></td>
-              <td>Jawline contour, cheekbones</td>
-              <td>Severe sagging, buttocks</td>
-              <td>Lateral lift, dual effect</td>
-            </tr>
-            <tr>
-              <td><strong>Duration</strong></td>
-              <td>~18 months</td>
-              <td>~25 months</td>
-              <td>~24 months</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <blockquote>
-          <p>"The choice of biostimulator is not based on which is 'better', but on which is right for the anatomy, goals, and skin type of each patient. Personalization is the key to success." - Dr. Jonathan Rincón</p>
-        </blockquote>
-        
-        <h2>Conclusion: Which to choose?</h2>
-        <p>The final decision should always be made in a consultation with an expert doctor.</p>
-        <ul>
-          <li>If you are looking for <strong>definition and a visible result from day one</strong>, <strong>Radiesse</strong> is an excellent choice.</li>
-          <li>If your priority is to treat <strong>general sagging and you are not in a hurry to see the final result</strong>, <strong>Sculptra</strong> is unparalleled.</li>
-          <li>If you want the best of both worlds, an <strong>immediate lift and a long-term improvement</strong>, <strong>HArmonyCa</strong> is the most advanced technology.</li>
-        </ul>
-        <p>Schedule your assessment appointment to discover which of these powerful treatments is perfect for restoring youth and firmness to your skin.</p>
-      `,
-    },
-  },
   'botox-mitos-y-verdades': {
     es: {
       title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
@@ -1201,3 +997,4 @@ export const POSTS: { [key: string]: any } = {
 
 
     
+

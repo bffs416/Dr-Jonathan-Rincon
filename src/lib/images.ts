@@ -96,6 +96,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-hilos-vs-bio-hero', src: '/images/Productos.jpg', hint: 'aesthetic products comparison' },
   { id: 'blog-harmonyca-hero', src: '/images/Hacido Hialuronico.png', hint: 'harmonyca treatment' },
   { id: 'radiesse-dec', src: '/images/Radiesse_Dec.png', hint: 'Radiesse product' },
+  { id: 'sculptra-dec', src: '/images/Sculptra_Dec.png', hint: 'Sculptra product' },
 
 
   // Home Page
