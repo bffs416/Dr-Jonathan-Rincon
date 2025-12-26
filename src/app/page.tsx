@@ -291,7 +291,7 @@ export default function Home() {
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube-nocookie.com/embed/f7z-cWbd-PE"
+                  src="https://www.youtube.com/embed/f7z-cWbd-PE"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -301,7 +301,7 @@ export default function Home() {
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube-nocookie.com/embed/vlBIojuoo3Y"
+                  src="https://www.youtube.com/embed/vjFzLYu1jt8"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -311,7 +311,7 @@ export default function Home() {
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube-nocookie.com/embed/_jQTyBUkhwY"
+                  src="https://www.youtube.com/embed/_jQTyBUkhwY"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
