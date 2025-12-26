@@ -6,7 +6,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'La Regla 5-5-5 y la Paciencia: Todo lo que Debes Saber Antes de tu Tratamiento Sculptra',
       category: 'Bioestimuladores',
-      date: '03 de agosto de 2024',
+      date: '03 de agosto de 2024', // <-- CAMBIA LA FECHA AQUÍ
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('sculptra-dec'),
@@ -51,7 +51,7 @@ export const POSTS: { [key: string]: any } = {
     en: {
       title: 'The 5-5-5 Rule and Patience: Everything You Need to Know Before Your Sculptra Treatment',
       category: 'Biostimulators',
-      date: 'August 03, 2024',
+      date: 'August 03, 2024', // <-- CHANGE THE DATE HERE
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('sculptra-dec'),
@@ -997,4 +997,5 @@ export const POSTS: { [key: string]: any } = {
 
 
     
+
 
