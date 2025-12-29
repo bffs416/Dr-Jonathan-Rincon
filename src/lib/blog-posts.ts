@@ -6,7 +6,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'La Regla 5-5-5 y la Paciencia: Todo lo que Debes Saber Antes de tu Tratamiento Sculptra',
       category: 'Bioestimuladores',
-      date: '03 de agosto de 2024', // <-- CAMBIA LA FECHA AQUÍ
+      date: '03 de agosto de 2025', // <-- CAMBIA LA FECHA AQUÍ
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('sculptra-dec'),
@@ -51,7 +51,7 @@ export const POSTS: { [key: string]: any } = {
     en: {
       title: 'The 5-5-5 Rule and Patience: Everything You Need to Know Before Your Sculptra Treatment',
       category: 'Biostimulators',
-      date: 'August 03, 2024', // <-- CHANGE THE DATE HERE
+      date: 'Septiembre 18, 2025', // <-- CHANGE THE DATE HERE
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('sculptra-dec'),
@@ -98,7 +98,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'Radiesse®: El Bioestimulador que Restaura la Estructura y Juventud de tu Piel',
       category: 'Bioestimuladores',
-      date: '02 de agosto de 2024',
+      date: '02 de Noviembre de 2025',
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('radiesse-dec'),
@@ -142,7 +142,7 @@ export const POSTS: { [key: string]: any } = {
     en: {
       title: 'Radiesse®: The Biostimulator that Restores Your Skin\'s Structure and Youth',
       category: 'Biostimulators',
-      date: 'August 02, 2024',
+      date: 'Octubre 07, 2025',
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('radiesse-dec'),
@@ -188,7 +188,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'Adiós a la Flacidez: Cómo HArmonyCa Redefine el Óvalo Facial',
       category: 'Bioestimuladores',
-      date: '01 de agosto de 2024',
+      date: '01 de Julio de 2025',
       readTime: '7 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-harmonyca-hero'),
@@ -230,7 +230,7 @@ export const POSTS: { [key: string]: any } = {
     en: {
       title: 'Goodbye to Sagging: How HArmonyCa Redefines the Facial Oval',
       category: 'Biostimulators',
-      date: 'August 01, 2024',
+      date: 'Abril 01, 2025',
       readTime: '7 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-harmonyca-hero'),
@@ -274,7 +274,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'Hilos Tensores vs. Bioestimuladores: ¿Cuál es Mejor para tu Piel?',
       category: 'Rejuvenecimiento Facial',
-      date: '31 de julio de 2024',
+      date: '31 de Enero de 2025',
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-hilos-vs-bio-hero'),
@@ -364,7 +364,7 @@ export const POSTS: { [key: string]: any } = {
     en: {
       title: 'Thread Lifts vs. Biostimulators: Which is Better for Your Skin?',
       category: 'Facial Rejuvenation',
-      date: 'July 31, 2024',
+      date: 'Octubre 31, 2024',
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-hilos-vs-bio-hero'),
@@ -456,7 +456,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'Hilos Tensores: La Revolución del Lifting Sin Cirugía en Medellín',
       category: 'Hilos Tensores',
-      date: '19 de enero de 2024',
+      date: '19 de Agosto de 2024',
       readTime: '6 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-post-hero'),
@@ -536,7 +536,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'Botox: Mitos y Verdades sobre la Toxina Botulínica',
       category: 'Facial',
-      date: '16 de enero de 2024',
+      date: '16 de Abril de 2024',
       readTime: '6 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-post-2'),
@@ -584,7 +584,7 @@ export const POSTS: { [key: string]: any } = {
     en: {
       title: 'Botox: Myths and Truths about Botulinum Toxin',
       category: 'Facial',
-      date: 'January 16, 2024',
+      date: 'Enero 16, 2024',
       readTime: '6 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-post-2'),
@@ -634,7 +634,7 @@ export const POSTS: { [key: string]: any } = {
     es: {
       title: 'Contorno Corporal: Hidrolipoclasia vs. Métodos Tradicionales',
       category: 'Corporal',
-      date: '11 de enero de 2024',
+      date: '11 de Noviembre de 2024',
       readTime: '7 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-post-3'),
@@ -742,7 +742,7 @@ export const POSTS: { [key: string]: any } = {
     en: {
       title: 'Body Contouring: Hydrolipoclasy vs. Traditional Methods',
       category: 'Body',
-      date: 'January 11, 2024',
+      date: 'Mayo 11, 2025',
       readTime: '7 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('blog-post-3'),
