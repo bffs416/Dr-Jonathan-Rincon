@@ -17,6 +17,8 @@ import {
   Star,
   Medal,
   MessageCircle,
+  X,
+  BookOpen,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -37,6 +39,9 @@ import { AnimatedCounter } from '@/components/ui/animated-counter';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { findImage, GALLERY_IMAGES_DATA } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
+import { useEffect, useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+
 
 const treatments: { icon: string; title: string; title_en: string; href: string; size?: number }[] = [
   {
@@ -97,6 +102,73 @@ const TreatmentCard = ({
     </div>
   </Link>
 );
+
+const NewBlogPostPopup = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { lang } = useLanguage();
+  const postImage = findImage('sculptra-dec');
+
+  useEffect(() => {
+    const hasSeenPopup = sessionStorage.getItem('hasSeenNewBlogPopup');
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        sessionStorage.setItem('hasSeenNewBlogPopup', 'true');
+      }, 2000); // Delay popup by 2 seconds
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const content = {
+    es: {
+      title: "¡Nuevo Artículo en el Blog!",
+      description: "Descubre todo sobre Sculptra, la Regla 5-5-5 y por qué la paciencia es clave para un resultado espectacular. ¡No te lo pierdas!",
+      cta: "Leer Ahora",
+      close: "Cerrar"
+    },
+    en: {
+      title: "New Blog Post!",
+      description: "Learn all about Sculptra, the 5-5-5 Rule, and why patience is key to a spectacular result. Don't miss it!",
+      cta: "Read Now",
+      close: "Close"
+    }
+  }
+
+  const currentContent = content[lang];
+
+  return (
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogContent className="sm:max-w-md p-0 overflow-hidden">
+        {postImage && (
+          <div className="relative h-48 w-full">
+            <Image src={postImage.src} alt={postImage.hint} fill className="object-cover" />
+             <div className="absolute inset-0 bg-black/30" />
+          </div>
+        )}
+        <div className="p-6 pt-2">
+          <DialogHeader>
+            <DialogTitle className="font-headline text-2xl text-primary">{currentContent.title}</DialogTitle>
+            <DialogDescription className="mt-2 text-muted-foreground">
+              {currentContent.description}
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-6 flex flex-col sm:flex-row gap-2">
+            <Button asChild className="w-full">
+              <Link href="/blog/sculptra-regla-5-5-5">
+                <BookOpen className="mr-2 h-4 w-4" />
+                {currentContent.cta}
+              </Link>
+            </Button>
+            <Button variant="outline" onClick={() => setIsOpen(false)} className="w-full">
+               <X className="mr-2 h-4 w-4" />
+               {currentContent.close}
+            </Button>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
 
 
 export default function Home() {
@@ -301,7 +373,7 @@ export default function Home() {
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <iframe
                   className="w-full h-full"
-                  src="https://www.youtube.com/embed/nvne0NH2NaI"
+                  src="https://www.youtube.com/embed/Qn_sDlnb5-g?feature=share"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -466,6 +538,7 @@ export default function Home() {
         <TestimonialsSection />
 
       </main>
+      <NewBlogPostPopup />
     </div>
   );
 }
