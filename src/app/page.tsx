@@ -106,7 +106,7 @@ const TreatmentCard = ({
 const NewBlogPostPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { lang } = useLanguage();
-  const postImage = findImage('sculptra-dec');
+  const postImage = findImage('harmonica');
 
   useEffect(() => {
     const hasSeenPopup = sessionStorage.getItem('hasSeenNewBlogPopup');
@@ -121,14 +121,14 @@ const NewBlogPostPopup = () => {
 
   const content = {
     es: {
-      title: "¡Nuevo Artículo en el Blog!",
-      description: "Descubre todo sobre Sculptra, la Regla 5-5-5 y por qué la paciencia es clave para un resultado espectacular. ¡No te lo pierdas!",
+      title: "¡Nuevo Tratamiento: HArmonyCa!",
+      description: "Descubre el secreto del lifting facial sin cirugía y la bioestimulación de colágeno con el Dr. Jonathan Rincón.",
       cta: "Leer Ahora",
       close: "Cerrar"
     },
     en: {
-      title: "New Blog Post!",
-      description: "Learn all about Sculptra, the 5-5-5 Rule, and why patience is key to a spectacular result. Don't miss it!",
+      title: "New Treatment: HArmonyCa!",
+      description: "Discover the secret to non-surgical facial lifting and collagen biostimulation with Dr. Jonathan Rincón.",
       cta: "Read Now",
       close: "Close"
     }
@@ -148,13 +148,13 @@ const NewBlogPostPopup = () => {
         <div className="p-6 pt-2">
           <DialogHeader>
             <DialogTitle className="font-headline text-2xl text-primary">{currentContent.title}</DialogTitle>
-            <DialogDescription className="mt-2 text-muted-foreground">
+            <DialogHeader className="mt-2 text-muted-foreground">
               {currentContent.description}
-            </DialogDescription>
+            </DialogHeader>
           </DialogHeader>
           <div className="mt-6 flex flex-col sm:flex-row gap-2">
             <Button asChild className="w-full">
-              <Link href="/blog/sculptra-regla-5-5-5">
+              <Link href="/blog/harmonyca-lifting-facial-sin-cirugia">
                 <BookOpen className="mr-2 h-4 w-4" />
                 {currentContent.cta}
               </Link>

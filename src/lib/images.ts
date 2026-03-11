@@ -94,7 +94,8 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-radiesse-sculptra-content', src: '/images/bioestimuladores_Diagrama.png', hint: 'biostimulator diagram' },
   { id: 'blog-hilos-cuidados-hero', src: '/images/mujer_rubia_primer_plano_mano_mejilla.png', hint: 'woman after treatment'},
   { id: 'blog-hilos-vs-bio-hero', src: '/images/Productos.jpg', hint: 'aesthetic products comparison' },
-  { id: 'blog-harmonyca-hero', src: '/images/Hacido Hialuronico.png', hint: 'harmonyca treatment' },
+  { id: 'harmonica', src: '/images/harmonyca-principal.png', hint: 'HArmonyCa treatment overview' },
+  { id: 'harmonica-info', src: '/images/harmonyca-info.png', hint: 'HArmonyCa technical diagram' },
   { id: 'radiesse-dec', src: '/images/Radiesse_Dec.png', hint: 'Radiesse product' },
   { id: 'sculptra-dec', src: '/images/Sculptra_Dec.png', hint: 'Sculptra product' },
 

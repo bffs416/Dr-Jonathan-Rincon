@@ -2,6 +2,144 @@
 import { findImage } from './images';
 
 export const POSTS: { [key: string]: any } = {
+  'harmonyca-lifting-facial-sin-cirugia': {
+    es: {
+      title: 'HArmonyCa con el Dr. Jonathan Rincón: El Secreto del Lifting Facial Sin Cirugía y la Bioestimulación',
+      category: 'Bioestimuladores',
+      date: '11 de Marzo de 2026',
+      readTime: '9 min',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('harmonica'),
+      content: `
+        <p class="lead">El envejecimiento facial no solo se manifiesta con la aparición de arrugas, sino también con la pérdida de volumen, soporte estructural y la temida flacidez facial. En la búsqueda constante de tratamientos estéticos que ofrezcan resultados naturales y duraderos, ha surgido una revolución en la medicina estética que el Dr. Jonathan Rincón ya ofrece a sus pacientes en Medellín: <strong>HArmonyCa</strong>.</p>
+        
+        <p>Este innovador <strong>relleno dérmico híbrido</strong> se ha posicionado como uno de los tratamientos de rejuvenecimiento facial más completos del mercado. Pero, ¿qué lo hace tan especial y por qué el Dr. Rincón lo recomienda para combatir la flacidez?</p>
+
+        <div class="my-10 flex flex-col items-center gap-6">
+          <img src="/images/harmonyca-principal.png" alt="HArmonyCa Overview" class="rounded-xl shadow-2xl max-w-full h-auto border border-primary/10" />
+          <p class="text-xs text-muted-foreground italic text-center max-w-md">HArmonyCa combina Ácido Hialurónico y Hidroxiapatita de Calcio para un resultado inmediato y duradero.</p>
+        </div>
+
+        <h2>¿Qué es HArmonyCa y por qué el Dr. Jonathan Rincón lo recomienda?</h2>
+        <p>HArmonyCa es un <strong>inyectable facial híbrido</strong> único en su clase que combina dos de los ingredientes más potentes en la medicina estética dentro de una sola jeringa: <strong>ácido hialurónico (HA)</strong> reticulado y microesferas de <strong>hidroxiapatita de calcio (CaHA)</strong>.</p>
+        
+        <p>Bajo la experiencia del Dr. Jonathan Rincón, esta formulación híbrida ofrece a los pacientes un doble beneficio clínico y estético:</p>
+        <ul>
+            <li><strong>Efecto lifting y voluminizador inmediato:</strong> Gracias al ácido hialurónico, el tratamiento proporciona una hidratación profunda y restaura el volumen perdido al instante, generando un efecto lifting inmediato tras la inyección.</li>
+            <li><strong>Bioestimulación de colágeno a largo plazo (Neocolagénesis):</strong> Las microesferas de hidroxiapatita de calcio actúan como un "andamio" bajo la piel, estimulando la producción de nuevo colágeno y elastina a nivel profundo. Este proceso mejora la arquitectura de la piel, aumenta su firmeza y genera un efecto tensor sostenido.</li>
+        </ul>
+
+        <div class="my-12 p-4 bg-slate-50 rounded-2xl border-2 border-primary/5 shadow-inner">
+          <img src="/images/harmonyca-info.png" alt="HArmonyCa technical details" class="rounded-lg shadow-lg max-w-full h-auto" />
+          <p class="mt-4 text-sm font-medium text-primary text-center">Infografía detallada: El mecanismo de acción dual de HArmonyCa.</p>
+        </div>
+
+        <h2>Zonas de Aplicación: El Enfoque Experto</h2>
+        <p>Para lograr un contorno facial armonioso y un <strong>reposicionamiento de tejidos blandos</strong> efectivo, el Dr. Jonathan Rincón aplica HArmonyCa estratégicamente en el tercio medio e inferior del rostro:</p>
+        <ul>
+            <li><strong>Región malar y submalar (pómulos):</strong> Excelente para combatir la flacidez y reposicionar los tejidos caídos.</li>
+            <li><strong>Marcación del contorno mandibular:</strong> Ideal para definir la línea de la mandíbula y dar una estructura firme al rostro.</li>
+            <li><strong>Área preauricular:</strong> Funciona como un punto de anclaje fundamental para lograr un efecto de tracción y tensado de la piel.</li>
+        </ul>
+
+        <h2>La Ventaja Dinámica: Resultados Naturales</h2>
+        <p>Uno de los aspectos que más destaca el Dr. Rincón es que HArmonyCa actúa como un relleno dinámico, mejorando la elasticidad y reduciendo la flacidez incluso durante el movimiento facial, como al sonreír o hablar. Es un tratamiento panfacial ideal para quienes buscan un rejuvenecimiento integral.</p>
+
+        <section class="mt-8 bg-secondary/30 p-6 rounded-lg border border-primary/20">
+            <h3 class="font-headline text-xl font-bold mb-4">Preguntas Frecuentes (FAQs) sobre HArmonyCa</h3>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-bold">¿Qué diferencia hay entre HArmonyCa y el Ácido Hialurónico tradicional?</h4>
+                    <p class="text-sm">HArmonyCa es un relleno híbrido. Mientras el ácido hialurónico da volumen inmediato, las microesferas de hidroxiapatita de calcio estimulan el colágeno (neocolagénesis) para un efecto tensor prolongado y una mejor <strong>remodelación dérmica</strong>.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">¿Cuánto duran los resultados de HArmonyCa?</h4>
+                    <p class="text-sm">Diversos estudios clínicos demuestran que el efecto de lifting y remodelación facial se mantiene de forma exitosa entre 12 y 18 meses.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">¿Es seguro combinar HArmonyCa con Bótox?</h4>
+                    <p class="text-sm">Sí, los consensos médicos recomiendan combinarlo con neuromoduladores como la toxina botulínica para un rejuvenecimiento integral, logrando una mejora completa de la <strong>matriz extracelular</strong> y la calidad de la piel.</p>
+                </div>
+            </div>
+        </section>
+
+        <blockquote>
+          <p>Si buscas un tratamiento que ofrezca volumen inmediato sin perder naturalidad, al mismo tiempo que inviertes en la firmeza a largo plazo, HArmonyCa es la opción ideal en nuestra clínica en Medellín.</p>
+        </blockquote>
+
+        <h4>¿Listo para tu transformación?</h4>
+        <p>Agenda hoy mismo tu consulta de valoración con el Dr. Jonathan Rincón en Medellín y descubre cómo la tecnología híbrida de HArmonyCa puede ayudarte a lucir tu mejor versión.</p>
+      `,
+    },
+    en: {
+      title: 'HArmonyCa with Dr. Jonathan Rincón: The Secret to Non-Surgical Facial Lifting and Biostimulation',
+      category: 'Biostimulators',
+      date: 'March 11, 2026',
+      readTime: '9 min read',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('harmonica'),
+      content: `
+        <p class="lead">Facial aging manifests not only through wrinkles but also through loss of volume, structural support, and the dreaded facial sagging. In the constant search for aesthetic treatments that offer natural and long-lasting results, a revolution has emerged that Dr. Jonathan Rincón already offers to his patients in Medellin: <strong>HArmonyCa</strong>.</p>
+        
+        <p>This innovative <strong>hybrid dermal filler</strong> has positioned itself as one of the most complete facial rejuvenation treatments on the market. But what makes it so special and why does Dr. Rincon recommend it to combat sagging?</p>
+
+        <div class="my-10 flex flex-col items-center gap-6">
+          <img src="/images/harmonyca-principal.png" alt="HArmonyCa Overview" class="rounded-xl shadow-2xl max-w-full h-auto border border-primary/10" />
+          <p class="text-xs text-muted-foreground italic text-center max-w-md">HArmonyCa combines Hyaluronic Acid and Calcium Hydroxylapatite for immediate and long-lasting results.</p>
+        </div>
+
+        <h2>What is HArmonyCa and why does Dr. Jonathan Rincón recommend it?</h2>
+        <p>HArmonyCa is a unique **hybrid facial injectable** that combines two of the most potent ingredients in aesthetic medicine within a single syringe: cross-linked **hyaluronic acid (HA)** and **calcium hydroxylapatite (CaHA)** microspheres.</p>
+        
+        <p>Under the expertise of Dr. Jonathan Rincón, this hybrid formulation offers patients a double clinical and aesthetic benefit:</p>
+        <ul>
+            <li><strong>Immediate lifting and volumizing effect:</strong> Thanks to hyaluronic acid, the treatment provides deep hydration and instantly restores lost volume, generating an immediate lifting effect.</li>
+            <li><strong>Long-term collagen biostimulation (Neocollagenesis):</strong> Calcium hydroxylapatite microspheres act as a "scaffold" under the skin, stimulating the production of new collagen and elastin deep down. This process improves skin architecture, increases firmness, and generates a sustained tightening effect.</li>
+        </ul>
+
+        <div class="my-12 p-4 bg-slate-50 rounded-2xl border-2 border-primary/5 shadow-inner">
+          <img src="/images/harmonyca-info.png" alt="HArmonyCa technical details" class="rounded-lg shadow-lg max-w-full h-auto" />
+          <p class="mt-4 text-sm font-medium text-primary text-center">Detailed infographic: The dual action mechanism of HArmonyCa.</p>
+        </div>
+
+        <h2>Application Zones: The Expert Approach</h2>
+        <p>To achieve a harmonious facial contour and effective **soft tissue repositioning**, Dr. Jonathan Rincón applies HArmonyCa strategically in the middle and lower thirds of the face:</p>
+        <ul>
+            <li><strong>Malar and submalar region (cheekbones):</strong> Excellent for combating sagging and repositioning fallen tissues.</li>
+            <li><strong>Jawline definition:</strong> Ideal for defining the jawline and providing a firm structure to the face.</li>
+            <li><strong>Preauricular area:</strong> Functions as a fundamental anchor point to achieve a skin pulling and tightening effect.</li>
+        </ul>
+
+        <h2>The Dynamic Advantage: Natural Results</h2>
+        <p>One of the aspects that Dr. Rincon highlights most is that HArmonyCa acts as a dynamic filler, improving elasticity and reducing sagging even during facial movement, such as smiling or talking. it is an ideal panfacial treatment for those looking for comprehensive rejuvenation.</p>
+
+        <section class="mt-8 bg-secondary/30 p-6 rounded-lg border border-primary/20">
+            <h3 class="font-headline text-xl font-bold mb-4">Frequently Asked Questions (FAQs) about HArmonyCa</h3>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-bold">What is the difference between HArmonyCa and traditional Hyaluronic Acid?</h4>
+                    <p class="text-sm">HArmonyCa is a hybrid filler. While hyaluronic acid provides immediate volume, calcium hydroxylapatite microspheres stimulate collagen (neocollagenesis) for a sustained tightening effect and better **dermal remodeling**.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">How long do HArmonyCa results last?</h4>
+                    <p class="text-sm">Various clinical studies demonstrate that the lifting and facial remodeling effect is successfully maintained for between 12 and 18 months.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">Is it safe to combine HArmonyCa with Botox?</h4>
+                    <p class="text-sm">Yes, medical consensus recommends combining it with neuromodulators like botulinum toxin for overall rejuvenation, achieving complete improvement of the **extracellular matrix** and skin quality.</p>
+                </div>
+            </div>
+        </section>
+
+        <blockquote>
+          <p>If you are looking for a treatment that offers immediate volume without losing naturalness, while investing in long-term firmness, HArmonyCa is the ideal option at our clinic in Medellin.</p>
+        </blockquote>
+
+        <h4>Ready for your transformation?</h4>
+        <p>Schedule your assessment today with Dr. Jonathan Rincón in Medellin and discover how HArmonyCa's hybrid technology can help you look your best.</p>
+      `,
+    },
+  },
   'sculptra-regla-5-5-5': {
     es: {
       title: 'La Regla 5-5-5 y la Paciencia: Todo lo que Debes Saber Antes de tu Tratamiento Sculptra',
