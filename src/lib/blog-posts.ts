@@ -182,7 +182,6 @@ export const POSTS: { [key: string]: any } = {
 
         <h4>Ready for your transformation?</h4>
         <p>Schedule your assessment today and discover how to redefine your facial oval with the science of HArmonyCa.</p>
-an Rincón in Medellin and discover how HArmonyCa's hybrid technology can help you look your best.</p>
       `,
     },
   },
