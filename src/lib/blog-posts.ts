@@ -369,12 +369,12 @@ export const POSTS: { [key: string]: any } = {
   },
   'harmonyca-redefine-ovalo-facial': {
     es: {
-      title: 'Adiós a la Flacidez: Cómo HArmonyCa Redefine el Óvalo Facial',
+      title: 'HArmonyCa: Redefinición del Óvalo Facial sin Cirugía',
       category: 'Bioestimuladores',
-      date: '01 de Julio de 2025',
+      date: '11 de Julio de 2025',
       readTime: '7 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-harmonyca-hero'),
+      image: findImage('harmonica-ovalo'),
       content: `
         <p class="lead">Con el paso del tiempo, nuestro rostro no solo pierde volumen, sino también su estructura de soporte. La flacidez y la pérdida de definición en el óvalo facial son dos de las principales preocupaciones que escuchamos en consulta. Sin embargo, la medicina estética ha evolucionado hacia soluciones "híbridas" que hacen más que simplemente rellenar.</p>
         
@@ -411,12 +411,12 @@ export const POSTS: { [key: string]: any } = {
       `,
     },
     en: {
-      title: 'Goodbye to Sagging: How HArmonyCa Redefines the Facial Oval',
+      title: 'HArmonyCa: Non-Surgical Facial Oval Redefinition',
       category: 'Biostimulators',
-      date: 'Abril 01, 2025',
+      date: 'July 11, 2025',
       readTime: '7 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-harmonyca-hero'),
+      image: findImage('harmonica-ovalo'),
       content: `
         <p class="lead">Over time, our face not only loses volume but also its supporting structure. Sagging and loss of definition in the facial oval are two of the main concerns we hear in consultation. However, aesthetic medicine has evolved towards "hybrid" solutions that do more than just fill.</p>
         
