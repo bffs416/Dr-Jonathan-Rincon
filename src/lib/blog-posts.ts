@@ -9,7 +9,7 @@ export const POSTS: { [key: string]: any } = {
       date: '11 de Marzo de 2026',
       readTime: '9 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica-ovalo'),
+      image: findImage('harmonica'),
       content: `
         <p class="lead">El envejecimiento facial no solo se manifiesta con la aparición de arrugas, sino también con la pérdida de volumen, soporte estructural y la temida flacidez facial. En la búsqueda constante de tratamientos estéticos que ofrezcan resultados naturales y duraderos, ha surgido una revolución en la medicina estética que el Dr. Jonathan Rincón ya ofrece a sus pacientes en Medellín: <strong>HArmonyCa</strong>.</p>
         
@@ -98,7 +98,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'March 11, 2026',
       readTime: '9 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica-ovalo'),
+      image: findImage('harmonica'),
       content: `
         <p class="lead">Facial aging manifests not only through wrinkles but also through loss of volume, structural support, and the dreaded facial sagging. In the constant search for aesthetic treatments that offer natural and long-lasting results, a revolution has emerged that Dr. Jonathan Rincón already offers to his patients in Medellin: <strong>HArmonyCa</strong>.</p>
         
