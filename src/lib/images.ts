@@ -96,6 +96,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-hilos-vs-bio-hero', src: '/images/Productos.jpg', hint: 'aesthetic products comparison' },
   { id: 'harmonica', src: '/images/harmonyca-principal.png', hint: 'HArmonyCa treatment overview' },
   { id: 'harmonica-info', src: '/images/harmonyca-info.png', hint: 'HArmonyCa technical diagram' },
+  { id: 'harmonica-ovalo', src: '/images/harmonyca-ovalo.png', hint: 'HArmonyCa facial oval redefined' },
   { id: 'radiesse-dec', src: '/images/Radiesse_Dec.png', hint: 'Radiesse product' },
   { id: 'sculptra-dec', src: '/images/Sculptra_Dec.png', hint: 'Sculptra product' },
 

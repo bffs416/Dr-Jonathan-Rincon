@@ -4,12 +4,12 @@ import { findImage } from './images';
 export const POSTS: { [key: string]: any } = {
   'harmonyca-lifting-facial-sin-cirugia': {
     es: {
-      title: 'HArmonyCa con el Dr. Jonathan Rincón: El Secreto del Lifting Facial Sin Cirugía y la Bioestimulación',
+      title: 'Adiós a la Flacidez: Cómo HArmonyCa Redefine el Óvalo Facial',
       category: 'Bioestimuladores',
       date: '11 de Marzo de 2026',
       readTime: '9 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica'),
+      image: findImage('harmonica-ovalo'),
       content: `
         <p class="lead">El envejecimiento facial no solo se manifiesta con la aparición de arrugas, sino también con la pérdida de volumen, soporte estructural y la temida flacidez facial. En la búsqueda constante de tratamientos estéticos que ofrezcan resultados naturales y duraderos, ha surgido una revolución en la medicina estética que el Dr. Jonathan Rincón ya ofrece a sus pacientes en Medellín: <strong>HArmonyCa</strong>.</p>
         
@@ -72,14 +72,11 @@ export const POSTS: { [key: string]: any } = {
       `,
     },
     en: {
-      title: 'HArmonyCa with Dr. Jonathan Rincón: The Secret to Non-Surgical Facial Lifting and Biostimulation',
+      title: 'Farewell to Sagging: How HArmonyCa Redefines the Facial Oval',
       category: 'Biostimulators',
       date: 'March 11, 2026',
       readTime: '9 min read',
-      author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica'),
-      content: `
-        <p class="lead">Facial aging manifests not only through wrinkles but also through loss of volume, structural support, and the dreaded facial sagging. In the constant search for aesthetic treatments that offer natural and long-lasting results, a revolution has emerged that Dr. Jonathan Rincón already offers to his patients in Medellin: <strong>HArmonyCa</strong>.</p>
+          <p class="lead">Facial aging manifests not only through wrinkles but also through loss of volume, structural support, and the dreaded facial sagging. In the constant search for aesthetic treatments that offer natural and long-lasting results, a revolution has emerged that Dr. Jonathan Rincón already offers to his patients in Medellin: <strong>HArmonyCa</strong>.</p>
         
         <p>This innovative <strong>hybrid dermal filler</strong> has positioned itself as one of the most complete facial rejuvenation treatments on the market. But what makes it so special and why does Dr. Rincon recommend it to combat sagging?</p>
 
@@ -88,13 +85,13 @@ export const POSTS: { [key: string]: any } = {
           <p class="text-xs text-muted-foreground italic text-center max-w-md">HArmonyCa combines Hyaluronic Acid and Calcium Hydroxylapatite for immediate and long-lasting results.</p>
         </div>
 
-        <h2>What is HArmonyCa and why does Dr. Jonathan Rincón recommend it?</h2>
-        <p>HArmonyCa is a unique **hybrid facial injectable** that combines two of the most potent ingredients in aesthetic medicine within a single syringe: cross-linked **hyaluronic acid (HA)** and **calcium hydroxylapatite (CaHA)** microspheres.</p>
+        <h2>What is HArmonyCa and how does its hybrid technology work?</h2>
+        <p>HArmonyCa is a unique <strong>hybrid facial injectable</strong> that combines two of the most potent ingredients in aesthetic medicine within a single syringe: cross-linked <strong>hyaluronic acid (HA)</strong> and <strong>calcium hydroxylapatite (CaHA)</strong> microspheres.</p>
         
         <p>Under the expertise of Dr. Jonathan Rincón, this hybrid formulation offers patients a double clinical and aesthetic benefit:</p>
         <ul>
-            <li><strong>Immediate lifting and volumizing effect:</strong> Thanks to hyaluronic acid, the treatment provides deep hydration and instantly restores lost volume, generating an immediate lifting effect.</li>
-            <li><strong>Long-term collagen biostimulation (Neocollagenesis):</strong> Calcium hydroxylapatite microspheres act as a "scaffold" under the skin, stimulating the production of new collagen and elastin deep down. This process improves skin architecture, increases firmness, and generates a sustained tightening effect.</li>
+            <li><strong>Immediate lifting and volumizing effect:</strong> Hyaluronic acid provides deep hydration and instantly restores lost volume, generating a tissue lift immediately after injection.</li>
+            <li><strong>Long-term collagen biostimulation (Neocollagenesis):</strong> Calcium hydroxylapatite microspheres act as a structural "scaffold" that stimulates fibroblasts to produce new endogenous collagen. This process improves <strong>skin architecture</strong>, increases firmness, and generates a sustained tightening effect noticed from the first month.</li>
         </ul>
 
         <div class="my-12 p-4 bg-slate-50 rounded-2xl border-2 border-primary/5 shadow-inner">
@@ -102,41 +99,66 @@ export const POSTS: { [key: string]: any } = {
           <p class="mt-4 text-sm font-medium text-primary text-center">Detailed infographic: The dual action mechanism of HArmonyCa.</p>
         </div>
 
-        <h2>Application Zones: The Expert Approach</h2>
-        <p>To achieve a harmonious facial contour and effective **soft tissue repositioning**, Dr. Jonathan Rincón applies HArmonyCa strategically in the middle and lower thirds of the face:</p>
+        <h2>How long do HArmonyCa results last?</h2>
+        <p>The average duration of results is estimated between <strong>12 and 18 months</strong>. While hyaluronic acid provides volume for 6-12 months, the newly formed <strong>extracellular matrix</strong> of collagen and elastin maintains long-term support and firmness.</p>
+
+        <h2>Application Zones: Dr. Rincón's Expert Approach</h2>
+        <p>To achieve effective <strong>soft tissue repositioning</strong>, Dr. Jonathan Rincón strategically applies HArmonyCa in the middle and lower thirds of the face, focusing on lateral (fixed) areas to maximize the traction vector:</p>
         <ul>
-            <li><strong>Malar and submalar region (cheekbones):</strong> Excellent for combating sagging and repositioning fallen tissues.</li>
-            <li><strong>Jawline definition:</strong> Ideal for defining the jawline and providing a firm structure to the face.</li>
-            <li><strong>Preauricular area:</strong> Functions as a fundamental anchor point to achieve a skin pulling and tightening effect.</li>
+            <li><strong>Malar and submalar region (cheekbones):</strong> Restores lost volume and improves sagging.</li>
+            <li><strong>Zygomatic arch:</strong> Provides structural support in the upper lateral part.</li>
+            <li><strong>Preauricular area:</strong> Fundamental anchor point for the upward and backward lifting effect.</li>
+            <li><strong>Jawline and mandibular angle:</strong> Defines the jawline and reduces "jowls."</li>
+            <li><strong>Chin and prejowl sulcus:</strong> Sculpts the lower third and smooths irregularities.</li>
         </ul>
 
-        <h2>The Dynamic Advantage: Natural Results</h2>
-        <p>One of the aspects that Dr. Rincon highlights most is that HArmonyCa acts as a dynamic filler, improving elasticity and reducing sagging even during facial movement, such as smiling or talking. it is an ideal panfacial treatment for those looking for comprehensive rejuvenation.</p>
+        <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 my-8">
+            <h3 class="text-amber-800 mt-0">⚠️ Contraindicated Zones</h3>
+            <p class="text-amber-900 text-sm">Due to its composition, HArmonyCa <strong>should not be injected</strong> into high-mobility areas: lips, perioral region, glabella (frown lines), or periocular area (around the eyes).</p>
+        </div>
+
+        <h2>The Dynamic Advantage: Natural-Looking Results</h2>
+        <p>One of the most fascinating findings is that HArmonyCa acts as a <strong>dynamic filler</strong>. It improves skin elasticity and reduces laxity even during facial movement (smiling or talking), ensuring your expression remains natural and fluid.</p>
+
+        <h2>Age-Specific Skin Response</h2>
+        <p>The treatment is highly effective for both young and mature skin, with specific biological benefits:</p>
+        <ul>
+            <li><strong>Younger Patients (20-30s):</strong> Faster dermal remodeling response with active production of collagen types I and III.</li>
+            <li><strong>Mature Patients (45+):</strong> Reduces <strong>epidermal acanthosis</strong> (age-related thickening), refining texture and visibly improving skin quality.</li>
+        </ul>
+
+        <h2>Combination with Other Treatments</h2>
+        <p>HArmonyCa is ideal for a <strong>panfacial</strong> approach:</p>
+        <ul>
+            <li><strong>Botulinum Toxin:</strong> Can be safely applied in the same session.</li>
+            <li><strong>Lasers and Radiofrequency:</strong> It is recommended to wait at least 4 weeks after HArmonyCa application to allow neocollagenesis before intense heat therapies.</li>
+        </ul>
 
         <section class="mt-8 bg-secondary/30 p-6 rounded-lg border border-primary/20">
-            <h3 class="font-headline text-xl font-bold mb-4">Frequently Asked Questions (FAQs) about HArmonyCa</h3>
+            <h3 class="font-headline text-xl font-bold mb-4">Frequently Asked Questions (FAQs)</h3>
             <div class="space-y-4">
                 <div>
-                    <h4 class="font-bold">What is the difference between HArmonyCa and traditional Hyaluronic Acid?</h4>
-                    <p class="text-sm">HArmonyCa is a hybrid filler. While hyaluronic acid provides immediate volume, calcium hydroxylapatite microspheres stimulate collagen (neocollagenesis) for a sustained tightening effect and better **dermal remodeling**.</p>
+                    <h4 class="font-bold">Is the procedure painful?</h4>
+                    <p class="text-sm">No. HArmonyCa contains lidocaine (local anesthetic), and Dr. Rincón typically uses <strong>blunt-tip cannulas</strong> to minimize discomfort and reduce the risk of bruising.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold">How long do HArmonyCa results last?</h4>
-                    <p class="text-sm">Various clinical studies demonstrate that the lifting and facial remodeling effect is successfully maintained for between 12 and 18 months.</p>
+                    <h4 class="font-bold">What side effects are normal?</h4>
+                    <p class="text-sm">Mild transient responses such as redness, slight swelling, or tenderness may occur, which usually resolve on their own within 24-48 hours.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold">Is it safe to combine HArmonyCa with Botox?</h4>
-                    <p class="text-sm">Yes, medical consensus recommends combining it with neuromodulators like botulinum toxin for overall rejuvenation, achieving complete improvement of the **extracellular matrix** and skin quality.</p>
+                    <h4 class="font-bold">When will I see the final results?</h4>
+                    <p class="text-sm">You will notice an immediate change from the hyaluronic acid, but the greatest firmness and skin quality from the collagen will peak after the second or third month.</p>
                 </div>
             </div>
         </section>
 
         <blockquote>
-          <p>If you are looking for a treatment that offers immediate volume without losing naturalness, while investing in long-term firmness, HArmonyCa is the ideal option at our clinic in Medellin.</p>
+          <p>If you are looking for a treatment that offers immediate volume without losing naturalness, while investing in long-term firmness, HArmonyCa with Dr. Jonathan Rincón is the leading option in Medellin.</p>
         </blockquote>
 
         <h4>Ready for your transformation?</h4>
-        <p>Schedule your assessment today with Dr. Jonathan Rincón in Medellin and discover how HArmonyCa's hybrid technology can help you look your best.</p>
+        <p>Schedule your assessment today and discover how to redefine your facial oval with the science of HArmonyCa.</p>
+an Rincón in Medellin and discover how HArmonyCa's hybrid technology can help you look your best.</p>
       `,
     },
   },

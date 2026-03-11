@@ -106,7 +106,7 @@ const TreatmentCard = ({
 const NewBlogPostPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { lang } = useLanguage();
-  const postImage = findImage('harmonica');
+  const postImage = findImage('harmonica-ovalo');
 
   useEffect(() => {
     const hasSeenPopup = sessionStorage.getItem('hasSeenNewBlogPopup');
