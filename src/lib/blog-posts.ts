@@ -34,16 +34,37 @@ export const POSTS: { [key: string]: any } = {
           <p class="mt-4 text-sm font-medium text-primary text-center">Infografía detallada: El mecanismo de acción dual de HArmonyCa.</p>
         </div>
 
-        <h2>Zonas de Aplicación: El Enfoque Experto</h2>
-        <p>Para lograr un contorno facial armonioso y un <strong>reposicionamiento de tejidos blandos</strong> efectivo, el Dr. Jonathan Rincón aplica HArmonyCa estratégicamente en el tercio medio e inferior del rostro:</p>
+        <h2>Zonas de Aplicación: El Enfoque Experto del Dr. Rincón</h2>
+        <p>Para lograr un <strong>reposicionamiento de tejidos blandos</strong> efectivo, el Dr. Jonathan Rincón aplica HArmonyCa estratégicamente en el tercio medio e inferior del rostro, centrándose en las zonas laterales (fijas) para maximizar el vector de tracción:</p>
         <ul>
-            <li><strong>Región malar y submalar (pómulos):</strong> Excelente para combatir la flacidez y reposicionar los tejidos caídos.</li>
-            <li><strong>Marcación del contorno mandibular:</strong> Ideal para definir la línea de la mandíbula y dar una estructura firme al rostro.</li>
-            <li><strong>Área preauricular:</strong> Funciona como un punto de anclaje fundamental para lograr un efecto de tracción y tensado de la piel.</li>
+            <li><strong>Región malar y submalar (pómulos):</strong> Restaura el volumen perdido y mejora la flacidez.</li>
+            <li><strong>Arco cigomático:</strong> Aporta soporte estructural en la parte lateral superior.</li>
+            <li><strong>Área preauricular:</strong> Punto de anclaje fundamental para el efecto lifting hacia atrás y arriba.</li>
+            <li><strong>Línea y ángulo de la mandíbula:</strong> Define el contorno mandibular y reduce los "jowls" o papada.</li>
+            <li><strong>Mentón y surco prejowl:</strong> Esculpe el tercio inferior y suaviza irregularidades.</li>
         </ul>
 
+        <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 my-8">
+            <h3 class="text-amber-800 mt-0">⚠️ Zonas Contraindicadas</h3>
+            <p class="text-amber-900 text-sm">Debido a su composición, HArmonyCa <strong>no debe inyectarse</strong> en zonas de alta movilidad: labios, región perioral, entrecejo (glabela) ni contorno de ojos (periocular).</p>
+        </div>
+
         <h2>La Ventaja Dinámica: Resultados Naturales</h2>
-        <p>Uno de los aspectos que más destaca el Dr. Rincón es que HArmonyCa actúa como un relleno dinámico, mejorando la elasticidad y reduciendo la flacidez incluso durante el movimiento facial, como al sonreír o hablar. Es un tratamiento panfacial ideal para quienes buscan un rejuvenecimiento integral.</p>
+        <p>Uno de los hallazgos más fascinantes es que HArmonyCa actúa como un <strong>relleno dinámico</strong>. Mejora la elasticidad y reduce la flacidez de la piel incluso durante el movimiento facial (al sonreír o hablar), garantizando que tu expresión se mantenga natural y fluida.</p>
+
+        <h2>¿Cómo responde la piel según la edad?</h2>
+        <p>El tratamiento es altamente efectivo tanto en pieles jóvenes como maduras, con beneficios biológicos específicos:</p>
+        <ul>
+            <li><strong>Pacientes Jóvenes (20-30 años):</strong> Respuesta rápida en la remodelación dérmica con producción activa de colágeno tipos I y III.</li>
+            <li><strong>Pacientes Maduros (+45 años):</strong> Reduce la <strong>acantosis epidérmica</strong> (engrosamiento por edad), afinando la textura y mejorando visiblemente la calidad de la piel.</li>
+        </ul>
+
+        <h2>Combinación con otros Tratamientos</h2>
+        <p>HArmonyCa es ideal para un enfoque <strong>panfacial</strong>:</p>
+        <ul>
+            <li><strong>Toxina Botulínica:</strong> Se puede aplicar de forma segura en la misma sesión.</li>
+            <li><strong>Láseres y Radiofrecuencia:</strong> Se recomienda esperar al menos 4 semanas tras la aplicación de HArmonyCa para permitir la neocolagénesis antes de aplicar terapias de calor intenso.</li>
+        </ul>
 
         <section class="mt-8 bg-secondary/30 p-6 rounded-lg border border-primary/20">
             <h3 class="font-headline text-xl font-bold mb-4">Preguntas Frecuentes (FAQs) sobre HArmonyCa</h3>
@@ -76,7 +97,10 @@ export const POSTS: { [key: string]: any } = {
       category: 'Biostimulators',
       date: 'March 11, 2026',
       readTime: '9 min read',
-          <p class="lead">Facial aging manifests not only through wrinkles but also through loss of volume, structural support, and the dreaded facial sagging. In the constant search for aesthetic treatments that offer natural and long-lasting results, a revolution has emerged that Dr. Jonathan Rincón already offers to his patients in Medellin: <strong>HArmonyCa</strong>.</p>
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('harmonica-ovalo'),
+      content: `
+        <p class="lead">Facial aging manifests not only through wrinkles but also through loss of volume, structural support, and the dreaded facial sagging. In the constant search for aesthetic treatments that offer natural and long-lasting results, a revolution has emerged that Dr. Jonathan Rincón already offers to his patients in Medellin: <strong>HArmonyCa</strong>.</p>
         
         <p>This innovative <strong>hybrid dermal filler</strong> has positioned itself as one of the most complete facial rejuvenation treatments on the market. But what makes it so special and why does Dr. Rincon recommend it to combat sagging?</p>
 
