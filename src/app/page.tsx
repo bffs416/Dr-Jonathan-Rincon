@@ -371,7 +371,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <VideoFacade 
-                  videoUrl="https://www.youtube.com/embed/f7z-cWbd-PE" 
+                  videoUrl="https://www.youtube.com/embed/nHXoOj7LJgw" 
                   title="Testimonio 1"
                 />
               </div>

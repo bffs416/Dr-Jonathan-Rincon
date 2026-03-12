@@ -72,7 +72,7 @@ export const POSTS: { [key: string]: any } = {
             <div class="space-y-4">
                 <div>
                     <h4 class="font-bold">¿Qué diferencia hay entre HArmonyCa y el Ácido Hialurónico tradicional?</h4>
-                    <p class="text-sm">HArmonyCa es un relleno híbrido. Mientras el ácido hialurónico da volumen inmediato, las microesferas de hidroxiapatita de calcio estimulan el colágeno (neocolagénesis) para un efecto tensor prolongado y una mejor <strong>remodelación dérmica</strong>.</p>
+                    <p class="text-sm">HArmonyCa es un bioestimulador híbrido. Mientras el ácido hialurónico da volumen inmediato, las microesferas de hidroxiapatita de calcio estimulan el colágeno (neocolagénesis) para un efecto tensor prolongado y una mejor <strong>remodelación dérmica</strong>.</p>
                 </div>
                 <div>
                     <h4 class="font-bold">¿Cuánto duran los resultados de HArmonyCa?</h4>
