@@ -4,7 +4,7 @@ import { findImage } from './images';
 export const POSTS: { [key: string]: any } = {
   'harmonyca-lifting-facial-sin-cirugia': {
     es: {
-      title: 'Adiós a la Flacidez: Cómo HArmonyCa Redefine el Óvalo Facial',
+      title: "HArmonyCa: El 'Efecto Lifting' Híbrido que Redefine tu Rostro sin Cirugía",
       category: 'Bioestimuladores',
       date: '11 de Marzo de 2026',
       readTime: '9 min',
@@ -93,7 +93,7 @@ export const POSTS: { [key: string]: any } = {
       `,
     },
     en: {
-      title: 'Farewell to Sagging: How HArmonyCa Redefines the Facial Oval',
+      title: "HArmonyCa: The Hybrid 'Lifting Effect' Redefining Your Face Without Surgery",
       category: 'Biostimulators',
       date: 'March 11, 2026',
       readTime: '9 min read',
