@@ -10,6 +10,7 @@ export const POSTS: { [key: string]: any } = {
       readTime: '9 min',
       author: 'Dr. Jonathan Rincón',
       image: findImage('harmonica'),
+      description: 'Descubre cómo HArmonyCa de Allergan Aesthetics combina ácido hialurónico e hidroxiapatita de calcio para un efecto lifting inmediato y bioestimulación de colágeno en Medellín.',
       content: `
         <p class="lead">El envejecimiento facial no solo se manifiesta con la aparición de arrugas, sino también con la pérdida de volumen, soporte estructural y la temida flacidez facial. En la búsqueda constante de tratamientos estéticos que ofrezcan resultados naturales y duraderos, ha surgido una revolución en la medicina estética que el Dr. Jonathan Rincón ya ofrece a sus pacientes en Medellín: <strong>HArmonyCa</strong>.</p>
         
