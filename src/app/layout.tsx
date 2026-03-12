@@ -66,6 +66,7 @@ export default function RootLayout({
           name="description"
           content="Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita con el Dr. Jonathan Rincón."
         />
+        <meta name="google-site-verification" content="googledd9a1b76f2d2f3f3" />
       </head>
       <body 
         className={cn(
