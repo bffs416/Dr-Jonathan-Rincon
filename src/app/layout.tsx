@@ -61,12 +61,195 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        <title>Dr. Jonathan Rincón</title>
+        <title>Dr. Jonathan Rincón | Medicina Estética en Medellín - Hilos Tensores, Botox y Más</title>
         <meta
           name="description"
-          content="Medicina estética en Medellín, especialista en hilos tensores. Agenda tu cita con el Dr. Jonathan Rincón."
+          content="Dr. Jonathan Rincón, médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores, bioestimuladores de colágeno, botox y contorno corporal. +1000 pacientes satisfechos. Agenda tu cita."
         />
         <meta name="google-site-verification" content="googledd9a1b76f2d2f3f3" />
+        
+        {/* Schema.org JSON-LD Structured Data for Google AI */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Physician",
+              "name": "Dr. Jonathan Rincón",
+              "url": "https://www.drjonathanrincon.com",
+              "image": "https://www.drjonathanrincon.com/images/Experto-hilos-tensores-faciales.png",
+              "description": "Médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores faciales en Medellín y Bogotá, con más de 8 años de experiencia y más de 1000 pacientes satisfechos.",
+              "medicalSpecialty": "Aesthetic Medicine",
+              "telephone": "+573122784757",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Medellín",
+                "addressRegion": "Antioquia",
+                "addressCountry": "CO"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 6.2442,
+                "longitude": -75.5812
+              },
+              "sameAs": [
+                "https://www.instagram.com/drjonathanrincon",
+                "https://www.tiktok.com/@drjonathanrincon"
+              ],
+              "knowsAbout": [
+                "Hilos tensores faciales",
+                "Bioestimuladores de colágeno",
+                "Toxina botulínica",
+                "Contorno corporal",
+                "Medicina estética avanzada",
+                "HarmonyCa",
+                "Thread lifts",
+                "Collagen biostimulators"
+              ],
+              "award": "Experto #1 en hilos tensores en Medellín y Bogotá",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "ratingCount": "1000"
+              }
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              "name": "Dr. Jonathan Rincón - Medicina Estética",
+              "url": "https://www.drjonathanrincon.com",
+              "description": "Clínica de medicina estética en Medellín especializada en hilos tensores, bioestimuladores de colágeno, toxina botulínica y contorno corporal.",
+              "telephone": "+573122784757",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Medellín",
+                "addressRegion": "Antioquia",
+                "addressCountry": "CO"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Tratamientos de Medicina Estética",
+                "itemListElement": [
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Hilos Tensores",
+                    "description": "Procedimiento mínimamente invasivo para el lifting facial sin cirugía usando hilos PDO.",
+                    "url": "https://www.drjonathanrincon.com/hilos-tensores"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Bioestimuladores de Colágeno",
+                    "description": "Tratamiento para estimular la producción natural de colágeno y rejuvenecer la piel.",
+                    "url": "https://www.drjonathanrincon.com/bioestimuladores"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Toxina Botulínica (Botox)",
+                    "description": "Aplicación de toxina botulínica para reducción de arrugas y líneas de expresión.",
+                    "url": "https://www.drjonathanrincon.com/botox"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Contorno Corporal",
+                    "description": "Procedimientos para esculpir y mejorar la silueta corporal de forma no invasiva.",
+                    "url": "https://www.drjonathanrincon.com/contorno-corporal"
+                  },
+                  {
+                    "@type": "MedicalProcedure",
+                    "name": "Medicina Estética Avanzada",
+                    "description": "Tratamientos de última generación para rejuvenecimiento facial y corporal.",
+                    "url": "https://www.drjonathanrincon.com/medicina-estetica-avanzada"
+                  }
+                ]
+              }
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "¿Qué son los hilos tensores y cuánto duran?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Los hilos tensores son un procedimiento mínimamente invasivo que utiliza hilos de PDO (polidioxanona) para lograr un efecto de lifting facial sin cirugía. Los resultados duran entre 12 y 18 meses, durante los cuales los hilos también estimulan la producción natural de colágeno para un efecto de rejuvenecimiento progresivo."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Cuánto cuesta un tratamiento de medicina estética en Medellín?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El costo varía según el tratamiento. Los hilos tensores, bioestimuladores de colágeno, botox y contorno corporal tienen diferentes rangos de precio. Le recomendamos agendar una consulta de valoración con el Dr. Jonathan Rincón para recibir un presupuesto personalizado según sus necesidades específicas."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Es seguro el HarmonyCa?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, HarmonyCa es un tratamiento seguro aprobado para uso estético. Combina ácido hialurónico con hidroxiapatita de calcio para lograr un efecto de lifting inmediato y bioestimulación de colágeno a largo plazo. El Dr. Jonathan Rincón es trainer oficial certificado en la aplicación de este producto."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Cuál es el mejor médico estético en Medellín?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El Dr. Jonathan Rincón es reconocido como el experto #1 en hilos tensores en Medellín y Bogotá. Con más de 8 años de experiencia, más de 1000 pacientes satisfechos, y su rol como trainer oficial de marcas líderes de la industria, es uno de los referentes en medicina estética en Colombia."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Los tratamientos de medicina estética son dolorosos?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "La mayoría de los tratamientos de medicina estética son mínimamente invasivos y se realizan con anestesia local. Los pacientes pueden experimentar una molestia leve durante el procedimiento, pero en general son bien tolerados. El Dr. Rincón utiliza técnicas avanzadas para minimizar cualquier incomodidad."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Cómo agendar una cita con el Dr. Jonathan Rincón?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Puede agendar su cita directamente por WhatsApp al +57 312 278 4757 o a través de nuestra página web www.drjonathanrincon.com. Ofrecemos consultas de valoración personalizadas para diseñar el plan de tratamiento ideal para cada paciente."
+                  }
+                }
+              ]
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://www.drjonathanrincon.com",
+              "name": "Dr. Jonathan Rincón - Medicina Estética",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.drjonathanrincon.com/blog?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
       <body 
         className={cn(

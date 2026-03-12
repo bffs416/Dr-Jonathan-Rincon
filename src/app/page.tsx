@@ -534,6 +534,66 @@ export default function Home() {
         {/* Testimonials Section */}
         <TestimonialsSection />
 
+        {/* FAQ Section - Visible content for Google AI */}
+        <section id="preguntas-frecuentes" className="py-16 sm:py-24 bg-secondary scroll-mt-20">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="text-center mb-12">
+              <h2 className="font-headline text-4xl md:text-5xl font-bold">
+                <span className="text-primary">{lang === 'es' ? 'Preguntas Frecuentes' : 'Frequently Asked Questions'}</span>
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                {lang === 'es' 
+                  ? 'Resolvemos tus dudas sobre nuestros tratamientos de medicina estética.' 
+                  : 'We answer your questions about our aesthetic medicine treatments.'}
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                {
+                  q: lang === 'es' ? '¿Qué son los hilos tensores y cuánto duran?' : 'What are thread lifts and how long do they last?',
+                  a: lang === 'es' 
+                    ? 'Los hilos tensores son un procedimiento mínimamente invasivo que utiliza hilos de PDO (polidioxanona) para lograr un efecto de lifting facial sin cirugía. Los resultados duran entre 12 y 18 meses, durante los cuales los hilos también estimulan la producción natural de colágeno para un efecto de rejuvenecimiento progresivo.'
+                    : 'Thread lifts are a minimally invasive procedure that uses PDO (polydioxanone) threads to achieve a facelift effect without surgery. Results last between 12 and 18 months, during which the threads also stimulate natural collagen production for a progressive rejuvenation effect.'
+                },
+                {
+                  q: lang === 'es' ? '¿Cuánto cuesta un tratamiento de medicina estética en Medellín?' : 'How much does an aesthetic medicine treatment cost in Medellín?',
+                  a: lang === 'es'
+                    ? 'El costo varía según el tratamiento. Los hilos tensores, bioestimuladores de colágeno, botox y contorno corporal tienen diferentes rangos de precio. Le recomendamos agendar una consulta de valoración con el Dr. Jonathan Rincón para recibir un presupuesto personalizado según sus necesidades específicas.'
+                    : 'The cost varies depending on the treatment. Thread lifts, collagen biostimulators, botox, and body contouring all have different price ranges. We recommend scheduling a consultation with Dr. Jonathan Rincón to receive a personalized quote based on your specific needs.'
+                },
+                {
+                  q: lang === 'es' ? '¿Es seguro el HarmonyCa?' : 'Is HarmonyCa safe?',
+                  a: lang === 'es'
+                    ? 'Sí, HarmonyCa es un tratamiento seguro aprobado para uso estético. Combina ácido hialurónico con hidroxiapatita de calcio para lograr un efecto de lifting inmediato y bioestimulación de colágeno a largo plazo. El Dr. Jonathan Rincón es trainer oficial certificado en la aplicación de este producto.'
+                    : 'Yes, HarmonyCa is a safe treatment approved for aesthetic use. It combines hyaluronic acid with calcium hydroxyapatite to achieve an immediate lifting effect and long-term collagen biostimulation. Dr. Jonathan Rincón is an officially certified trainer in applying this product.'
+                },
+                {
+                  q: lang === 'es' ? '¿Los tratamientos de medicina estética son dolorosos?' : 'Are aesthetic medicine treatments painful?',
+                  a: lang === 'es'
+                    ? 'La mayoría de los tratamientos de medicina estética son mínimamente invasivos y se realizan con anestesia local. Los pacientes pueden experimentar una molestia leve durante el procedimiento, pero en general son bien tolerados. El Dr. Rincón utiliza técnicas avanzadas para minimizar cualquier incomodidad.'
+                    : 'Most aesthetic medicine treatments are minimally invasive and performed with local anesthesia. Patients may experience mild discomfort during the procedure, but they are generally well tolerated. Dr. Rincón uses advanced techniques to minimize any discomfort.'
+                },
+                {
+                  q: lang === 'es' ? '¿Cómo agendar una cita con el Dr. Jonathan Rincón?' : 'How do I schedule an appointment with Dr. Jonathan Rincón?',
+                  a: lang === 'es'
+                    ? 'Puede agendar su cita directamente por WhatsApp al +57 312 278 4757 o a través de nuestra página web. Ofrecemos consultas de valoración personalizadas para diseñar el plan de tratamiento ideal para cada paciente.'
+                    : 'You can schedule your appointment directly via WhatsApp at +57 312 278 4757 or through our website. We offer personalized assessment consultations to design the ideal treatment plan for each patient.'
+                },
+              ].map((faq, index) => (
+                <details key={index} className="group rounded-xl border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-md">
+                  <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-left font-headline text-lg font-semibold text-foreground transition-colors group-open:text-primary">
+                    {faq.q}
+                    <ChevronRight className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-90 text-muted-foreground group-open:text-primary" />
+                  </summary>
+                  <div className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </main>
       <NewBlogPostPopup />
     </div>
