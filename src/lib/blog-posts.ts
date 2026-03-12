@@ -14,7 +14,7 @@ export const POSTS: { [key: string]: any } = {
       content: `
         <p class="lead">El envejecimiento facial no solo se manifiesta con la aparición de arrugas, sino también con la pérdida de volumen, soporte estructural y la temida flacidez facial. En la búsqueda constante de tratamientos estéticos que ofrezcan resultados naturales y duraderos, ha surgido una revolución en la medicina estética que el Dr. Jonathan Rincón ya ofrece a sus pacientes en Medellín: <strong>HArmonyCa</strong>.</p>
         
-        <p>Este innovador <strong>relleno dérmico híbrido</strong> se ha posicionado como uno de los tratamientos de rejuvenecimiento facial más completos del mercado. Pero, ¿qué lo hace tan especial y por qué el Dr. Rincón lo recomienda para combatir la flacidez?</p>
+        <p>Este innovador <strong>bioestimulador híbrido</strong> se ha posicionado como uno de los tratamientos de rejuvenecimiento facial más completos del mercado. Pero, ¿qué lo hace tan especial y por qué el Dr. Rincón lo recomienda para combatir la flacidez?</p>
 
         <div class="my-10 flex flex-col items-center gap-6">
           <img src="/images/harmonyca-principal.png" alt="HArmonyCa Overview" class="rounded-xl shadow-2xl max-w-full h-auto border border-primary/10" />
