@@ -39,7 +39,7 @@ export default function RootLayout({
     // to determine when the initial loading is done.
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500); // Reduced delay
+    }, 100); // Reduced delay for faster FCP
 
     return () => clearTimeout(timer);
   }, []);

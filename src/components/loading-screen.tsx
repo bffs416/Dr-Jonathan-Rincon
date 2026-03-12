@@ -10,7 +10,7 @@ export function LoadingScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsExiting(true);
-    }, 1500); // Start fade out animation slightly before unmounting
+    }, 300); // Reduced delay for faster FCP
 
     return () => clearTimeout(timer);
   }, []);

@@ -38,9 +38,10 @@ export default function BlogPostContent({ postData }: { postData: any }) {
             src={post.image.src}
             alt={post.title}
             fill
-            className="object-cover opacity-30 animate-fade-in duration-500"
+            className="object-cover animate-none transition-none shadow-2xl"
             data-ai-hint={post.image.hint}
             priority
+            loading="eager"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
