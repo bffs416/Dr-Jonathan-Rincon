@@ -115,7 +115,7 @@ const NewBlogPostPopup = () => {
       const timer = setTimeout(() => {
         setIsOpen(true);
         sessionStorage.setItem('hasSeenNewBlogPopup', 'true');
-      }, 5000); // Delay popup by 5 seconds to prioritize LCP
+      }, 2000); // Popup delay reduced for better UX balance
       return () => clearTimeout(timer);
     }
   }, []);
