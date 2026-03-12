@@ -28,6 +28,8 @@ export function Logo() {
           width={50}
           height={50}
           className="rounded-full relative z-10"
+          priority
+          loading="eager"
         />
       </div>
       <div className="flex flex-col">

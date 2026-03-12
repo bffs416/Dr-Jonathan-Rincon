@@ -142,7 +142,14 @@ const NewBlogPostPopup = () => {
       <DialogContent className="sm:max-w-md p-0 overflow-hidden">
         {postImage && (
           <div className="relative h-48 w-full">
-            <Image src={postImage.src} alt={postImage.hint} fill className="object-cover" />
+            <Image 
+              src={postImage.src} 
+              alt={postImage.hint} 
+              fill 
+              className="object-cover" 
+              priority
+              loading="eager"
+            />
              <div className="absolute inset-0 bg-black/30" />
           </div>
         )}
@@ -307,6 +314,7 @@ export default function Home() {
                   loop
                   muted
                   playsInline
+                  preload="auto"
                   className="absolute z-0 w-full h-full object-cover"
               >
                   <source src="/Dr_Jonathan.mp4" type="video/mp4" />
@@ -419,7 +427,7 @@ export default function Home() {
                       alt="Dr. Jonathan Rincón, experto en medicina estética"
                       width={450}
                       height={450}
-                      className="object-cover w-full h-full object-top animate-fade-in duration-500"
+                      className="object-cover w-full h-full object-top"
                       data-ai-hint="doctor portrait"
                     />
                   </div>
