@@ -41,6 +41,7 @@ import { findImage, GALLERY_IMAGES_DATA } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
 import { useEffect, useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { VideoFacade } from '@/components/video-facade';
 
 
 const treatments: { icon: string; title: string; title_en: string; href: string; size?: number }[] = [
@@ -114,7 +115,7 @@ const NewBlogPostPopup = () => {
       const timer = setTimeout(() => {
         setIsOpen(true);
         sessionStorage.setItem('hasSeenNewBlogPopup', 'true');
-      }, 2000); // Delay popup by 2 seconds
+      }, 5000); // Delay popup by 5 seconds to prioritize LCP
       return () => clearTimeout(timer);
     }
   }, []);
@@ -361,34 +362,22 @@ export default function Home() {
             </p>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/f7z-cWbd-PE"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <VideoFacade 
+                  videoUrl="https://www.youtube.com/embed/f7z-cWbd-PE" 
+                  title="Testimonio 1"
+                />
               </div>
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/Qn_sDlnb5-g?feature=share"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <VideoFacade 
+                  videoUrl="https://www.youtube.com/embed/Qn_sDlnb5-g?feature=share" 
+                  title="Testimonio 2"
+                />
               </div>
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/_jQTyBUkhwY"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <VideoFacade 
+                  videoUrl="https://www.youtube.com/embed/_jQTyBUkhwY" 
+                  title="Testimonio 3"
+                />
               </div>
             </div>
           </div>

@@ -121,7 +121,7 @@ export default function RootLayout({
         />
         
         {/* Google Ads Conversion Snippet */}
-        <Script id="google-ads-conversion" strategy="afterInteractive">
+        <Script id="google-ads-conversion" strategy="lazyOnload">
           {`
             function gtag_report_conversion(url) {
               var callback = function () {
@@ -141,7 +141,7 @@ export default function RootLayout({
           `}
         </Script>
         
-        <Script async src="https://www.tiktok.com/embed.js" />
+        <Script strategy="lazyOnload" src="https://www.tiktok.com/embed.js" />
         <Analytics />
       </body>
     </html>

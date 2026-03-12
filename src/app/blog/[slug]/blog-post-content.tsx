@@ -9,22 +9,12 @@ import { useEffect, useState } from 'react';
 
 export default function BlogPostContent({ postData }: { postData: any }) {
   const { lang } = useLanguage();
-  const [post, setPost] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    if (!postData) {
-      notFound();
-    } else {
-      const content = postData[lang];
-      setPost(content);
-      setLoading(false);
-    }
-  }, [postData, lang]);
-
-  if (loading) {
-    return <div>Loading...</div>;
+  
+  if (!postData) {
+    return notFound();
   }
+
+  const post = postData[lang];
   
   if (!post) {
       return notFound();
