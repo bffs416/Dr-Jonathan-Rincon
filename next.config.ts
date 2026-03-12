@@ -28,6 +28,18 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
     // Adding a timestamp to force cache invalidation on server restart
     // This helps with hot-reloading static assets like images.
