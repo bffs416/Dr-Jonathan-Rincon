@@ -99,6 +99,7 @@ export const POSTS: { [key: string]: any } = {
       readTime: '9 min read',
       author: 'Dr. Jonathan Rincón',
       image: findImage('harmonica'),
+      description: "Discover how HArmonyCa by Allergan Aesthetics combines hyaluronic acid and calcium hydroxylapatite for an immediate lifting effect and collagen biostimulation in Medellin.",
       content: `
         <p class="lead">Facial aging manifests not only through wrinkles but also through loss of volume, structural support, and the dreaded facial sagging. In the constant search for aesthetic treatments that offer natural and long-lasting results, a revolution has emerged that Dr. Jonathan Rincón already offers to his patients in Medellin: <strong>HArmonyCa</strong>.</p>
         
