@@ -20,6 +20,42 @@ export default function BlogPostContent({ postData }: { postData: any }) {
       return notFound();
   }
 
+  useEffect(() => {
+    // Select all main blocks inside the article to animate
+    const elements = document.querySelectorAll(
+      '.prose article > div, .prose article > figure, .prose article > h2, .prose article > h3, .prose article > ul, .prose article > blockquote'
+    );
+
+    // Initial state setup (more pronounced: deeper translate, slight scale down)
+    elements.forEach((el) => {
+      el.classList.add('opacity-0', 'translate-y-24', 'scale-95', 'transition-all', 'duration-1000', 'ease-out');
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0', 'translate-y-24', 'scale-95');
+            entry.target.classList.add('opacity-100', 'translate-y-0', 'scale-100');
+            // Optional: unobserve after animating once
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15, // Trigger when 15% of element is visible
+        rootMargin: '0px 0px -100px 0px' // Wait until element is further up in the viewport
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+      observer.disconnect();
+    };
+  }, [postData, lang]);
+
   return (
     <div>
       <section className="relative h-[40vh] md:h-[50vh] w-full bg-slate-900">

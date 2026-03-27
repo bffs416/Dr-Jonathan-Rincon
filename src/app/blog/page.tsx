@@ -45,11 +45,17 @@ export default function BlogPage() {
     }
   };
 
-  const allPosts = Object.entries(POSTS).map(([slug, postData]) => ({
-    slug: `/blog/${slug}`,
-    ...postData[lang],
-    originalSlug: slug,
-  }));
+  const allPosts = Object.entries(POSTS).map(([slug, postData]) => {
+    // We use the English date string because JS can parse 'March 26, 2026' natively
+    const enDateString = postData['en']?.date || '';
+    const parsedDate = new Date(enDateString).getTime() || 0;
+    return {
+      slug: `/blog/${slug}`,
+      ...postData[lang],
+      originalSlug: slug,
+      parsedDate
+    };
+  }).sort((a, b) => b.parsedDate - a.parsedDate);
 
   const featuredPostData = POSTS['hilos-tensores-revolucion'][lang];
   const featuredPost = {
