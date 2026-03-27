@@ -57,9 +57,9 @@ export default function BlogPage() {
     };
   }).sort((a, b) => b.parsedDate - a.parsedDate);
 
-  const featuredPostData = POSTS['hilos-tensores-revolucion'][lang];
+  const featuredPostData = POSTS['harmonyca-experto-y-seguridad'][lang];
   const featuredPost = {
-    slug: '/blog/hilos-tensores-revolucion',
+    slug: '/blog/harmonyca-experto-y-seguridad',
     image: featuredPostData.image,
     title: featuredPostData.title,
     description: featuredPostData.content.match(/<p class="lead">(.*?)<\/p>/)?.[1] || '',
@@ -67,7 +67,7 @@ export default function BlogPage() {
     readTime: featuredPostData.readTime,
   };
   
-  const regularPosts = allPosts.filter(p => p.originalSlug !== 'hilos-tensores-revolucion');
+  const regularPosts = allPosts.filter(p => p.originalSlug !== 'harmonyca-experto-y-seguridad');
 
 
   const content = {
