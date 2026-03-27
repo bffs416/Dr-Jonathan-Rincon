@@ -9,7 +9,7 @@ export const POSTS: { [key: string]: any } = {
       date: '27 de Marzo de 2026',
       readTime: '6 min',
       author: 'Dr. Jonathan Rincón',
-      image: { src: '/images/harmonyca-arquitectura-1.png', alt: 'Facial Architecture', hint: 'facial_architecture' },
+      image: findImage('blog-arquitectura-3d'),
       description: 'Descubre cómo la medicina estética ha evolucionado del relleno de arrugas a la arquitectura facial 3D, y por qué HArmonyCa es clave para el `Top Model Look`.',
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
@@ -122,7 +122,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'March 27, 2026',
       readTime: '6 min read',
       author: 'Dr. Jonathan Rincón',
-      image: { src: '/images/harmonyca-arquitectura-1.png', alt: 'Facial Architecture', hint: 'facial_architecture' },
+      image: findImage('blog-arquitectura-3d'),
       description: 'Discover how aesthetic medicine has evolved from wrinkle filling to 3D facial architecture, and why HArmonyCa is key to the Top Model Look.',
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
@@ -238,7 +238,7 @@ export const POSTS: { [key: string]: any } = {
       date: '11 de Marzo de 2026',
       readTime: '9 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica'),
+      image: findImage('blog-harmonyca-lifting'),
       description: 'Descubre cómo HArmonyCa de Allergan Aesthetics combina ácido hialurónico e hidroxiapatita de calcio para un efecto lifting inmediato y bioestimulación de colágeno en Medellín.',
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
@@ -391,7 +391,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'March 11, 2026',
       readTime: '9 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica'),
+      image: findImage('blog-harmonyca-lifting'),
       description: "Discover how HArmonyCa by Allergan Aesthetics combines hyaluronic acid and calcium hydroxylapatite for an immediate lifting effect and collagen biostimulation in Medellin.",
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
@@ -550,7 +550,7 @@ export const POSTS: { [key: string]: any } = {
       date: '03 de agosto de 2025', // <-- CAMBIA LA FECHA AQUÍ
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('sculptra-dec'),
+      image: findImage('blog-bioestimuladores-uso-2'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -621,7 +621,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'Septiembre 18, 2025', // <-- CHANGE THE DATE HERE
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('sculptra-dec'),
+      image: findImage('blog-bioestimuladores-uso-2'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -694,7 +694,7 @@ export const POSTS: { [key: string]: any } = {
       date: '02 de Noviembre de 2025',
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('radiesse-dec'),
+      image: findImage('blog-bioestimuladores-uso-1'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -762,7 +762,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'Octubre 07, 2025',
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('radiesse-dec'),
+      image: findImage('blog-bioestimuladores-uso-1'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -832,7 +832,7 @@ export const POSTS: { [key: string]: any } = {
       date: '11 de Julio de 2025',
       readTime: '7 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica-ovalo'),
+      image: findImage('blog-harmonyca-ovalo'),
       description: 'Redefine tu óvalo facial sin cirugía con HArmonyCa. Conoce los beneficios de la tecnología híbrida para combatir la flacidez y recuperar la firmeza facial.',
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
@@ -896,7 +896,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'July 11, 2025',
       readTime: '7 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica-ovalo'),
+      image: findImage('blog-harmonyca-ovalo'),
       description: 'Redefine your facial oval without surgery using HArmonyCa. Learn about the benefits of hybrid technology to combat sagging and restore facial firmness.',
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
@@ -962,7 +962,7 @@ export const POSTS: { [key: string]: any } = {
       date: '31 de Enero de 2025',
       readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-hilos-vs-bio-hero'),
+      image: findImage('blog-hilos-vs-bioestimuladores'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1079,7 +1079,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'Octubre 31, 2024',
       readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-hilos-vs-bio-hero'),
+      image: findImage('blog-hilos-vs-bioestimuladores'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1198,7 +1198,7 @@ export const POSTS: { [key: string]: any } = {
       date: '19 de Agosto de 2024',
       readTime: '6 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-post-hero'),
+      image: findImage('blog-hilos-revolucion'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1298,7 +1298,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'January 19, 2024',
       readTime: '6 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-post-hero'),
+      image: findImage('blog-hilos-revolucion'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1386,7 +1386,7 @@ export const POSTS: { [key: string]: any } = {
       date: '16 de Abril de 2024',
       readTime: '6 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-post-2'),
+      image: findImage('blog-botox-mitos'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1469,7 +1469,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'Enero 16, 2024',
       readTime: '6 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-post-2'),
+      image: findImage('blog-botox-mitos'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1554,7 +1554,7 @@ export const POSTS: { [key: string]: any } = {
       date: '11 de Noviembre de 2024',
       readTime: '7 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-post-3'),
+      image: findImage('blog-contorno-corporal'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1703,7 +1703,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'Mayo 11, 2025',
       readTime: '7 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-post-3'),
+      image: findImage('blog-contorno-corporal'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1854,7 +1854,7 @@ export const POSTS: { [key: string]: any } = {
       date: '30 de julio de 2024',
       readTime: '7 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-hilos-cuidados-hero'),
+      image: findImage('blog-hilos-cuidados'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">
@@ -1924,7 +1924,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'July 30, 2024',
       readTime: '7 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('blog-hilos-cuidados-hero'),
+      image: findImage('blog-hilos-cuidados'),
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
   <div class="max-w-3xl mx-auto space-y-8">

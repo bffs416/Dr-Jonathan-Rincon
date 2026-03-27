@@ -100,6 +100,19 @@ export const IMAGES: SiteImage[] = [
   { id: 'radiesse-dec', src: '/images/Radiesse_Dec.png', hint: 'Radiesse product' },
   { id: 'sculptra-dec', src: '/images/Sculptra_Dec.png', hint: 'Sculptra product' },
 
+  // Blog Posts - Nuevas imágenes
+  { id: 'blog-arquitectura-3d', src: '/images/Arquitectura Facial 3D Cómo HArmonyCa Esculpe tus Luces y Sombras Naturales .jpg', hint: 'Arquitectura Facial 3D' },
+  { id: 'blog-harmonyca-lifting', src: '/images/HArmonyCa El Efecto Lifting Híbrido que Redefine tu Rostro sin Cirugía.jpg', hint: 'HArmonyCa Lifting' },
+  { id: 'blog-harmonyca-ovalo', src: '/images/HArmonyCa Redefinición del Óvalo Facial sin Cirugía.jpg', hint: 'HArmonyCa Óvalo Facial' },
+  { id: 'blog-hilos-vs-bioestimuladores', src: '/images/Hilos Vs estimuladores .jpg', hint: 'Hilos vs Bioestimuladores' },
+  { id: 'blog-hilos-revolucion', src: '/images/Hilos Tensores La Revolución del Lifting Sin Cirugía en Medellín.jpg', hint: 'Hilos Tensores Revolución' },
+  { id: 'blog-hilos-cuidados', src: '/images/Hilos Tensores Guía Definitiva de Cuidados Post-Tratamiento.jpg', hint: 'Hilos Tensores Cuidados' },
+  { id: 'blog-botox-mitos', src: '/images/Botox Mitos y Verdades sobre la Toxina Botulínica.jpg', hint: 'Botox Mitos y Verdades' },
+  { id: 'blog-contorno-corporal', src: '/images/Contorno Corporal Hidrolipoclasia vs. Métodos Tradicionales.jpg', hint: 'Contorno Corporal' },
+  { id: 'blog-bioestimuladores-uso-1', src: '/images/Bioestimuladores_Uso_General_1.jpg', hint: 'Bioestimuladores Uso 1' },
+  { id: 'blog-bioestimuladores-uso-2', src: '/images/Bioestimuladores_Uso_General_2.jpg', hint: 'Bioestimuladores Uso 2' },
+  { id: 'blog-bioestimuladores-uso-3', src: '/images/Bioestimuladores_Uso_General_3.jpg', hint: 'Bioestimuladores Uso 3' },
+
 
   // Home Page
   { id: 'home-testimonial-1', src: '/images/Modelo 6.jpg', hint: 'facial procedure' },

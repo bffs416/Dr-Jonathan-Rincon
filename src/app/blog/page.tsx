@@ -62,7 +62,7 @@ export default function BlogPage() {
     slug: '/blog/harmonyca-experto-y-seguridad',
     image: featuredPostData.image,
     title: featuredPostData.title,
-    description: featuredPostData.content.match(/<p class="lead">(.*?)<\/p>/)?.[1] || '',
+    description: featuredPostData.description || featuredPostData.content.match(/<p class="lead">(.*?)<\/p>/)?.[1] || '',
     date: featuredPostData.date,
     readTime: featuredPostData.readTime,
   };
