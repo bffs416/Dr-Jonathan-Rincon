@@ -91,16 +91,35 @@ export function PromoPopup() {
               <X className="w-6 h-6" />
             </button>
 
-            {/* Left Side: Image */}
-            <div className="w-full md:w-[450px] shrink-0 aspect-[4/5] relative bg-slate-100 overflow-hidden group">
-              <Image 
-                src="/images/harmonyca.jpg"
-                alt="HArmonyCa - Promoción 30% Descuento"
-                fill
-                className="object-cover transition-all duration-[15s] group-hover:scale-105"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+            {/* Left Side: Two stacked images */}
+            <div className="w-full md:w-[520px] shrink-0 flex flex-col bg-slate-100 overflow-hidden">
+
+              {/* Imagen 1: Banner Principal */}
+              <div className="relative w-full overflow-hidden group" style={{ aspectRatio: '4/3' }}>
+                <Image 
+                  src="/images/harmonyca.jpg"
+                  alt="HArmonyCa - Promoción 30% Descuento"
+                  fill
+                  className="object-cover transition-all duration-700 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              {/* Imagen 2: Imagen inferior independiente */}
+              <div className="relative w-full overflow-hidden group border-t border-white/20" style={{ aspectRatio: '4/2' }}>
+                <Image 
+                  src="/images/Sin título.jpg"
+                  alt="Nuevo Tratamiento - Más Información"
+                  fill
+                  className="object-cover transition-all duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute bottom-3 left-3 bg-black/50 text-white text-[10px] px-3 py-1 rounded-full tracking-widest uppercase backdrop-blur-sm">
+                  Más Información
+                </div>
+              </div>
+
             </div>
 
             {/* Right Side: Content */}
