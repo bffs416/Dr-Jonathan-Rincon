@@ -18,7 +18,6 @@ import {
   Medal,
   MessageCircle,
   X,
-  BookOpen,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -40,7 +39,6 @@ import { TestimonialsSection } from '@/components/testimonials-section';
 import { findImage, GALLERY_IMAGES_DATA } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
 import { useEffect, useState } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { VideoFacade } from '@/components/video-facade';
 
 
@@ -104,79 +102,7 @@ const TreatmentCard = ({
   </Link>
 );
 
-const NewBlogPostPopup = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { lang } = useLanguage();
-  const postImage = findImage('harmonica-ovalo');
 
-  useEffect(() => {
-    const hasSeenPopup = sessionStorage.getItem('hasSeenNewBlogPopup');
-    if (!hasSeenPopup) {
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-        sessionStorage.setItem('hasSeenNewBlogPopup', 'true');
-      }, 2000); // Popup delay reduced for better UX balance
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
-  const content = {
-    es: {
-      title: "¡Nuevo Tratamiento: HArmonyCa!",
-      description: "Descubre el secreto del lifting facial sin cirugía y la bioestimulación de colágeno con el Dr. Jonathan Rincón.",
-      cta: "Leer Ahora",
-      close: "Cerrar"
-    },
-    en: {
-      title: "New Treatment: HArmonyCa!",
-      description: "Discover the secret to non-surgical facial lifting and collagen biostimulation with Dr. Jonathan Rincón.",
-      cta: "Read Now",
-      close: "Close"
-    }
-  }
-
-  const currentContent = content[lang];
-
-  return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-md p-0 overflow-hidden">
-        {postImage && (
-          <div className="relative h-48 w-full">
-            <Image 
-              src={postImage.src} 
-              alt={postImage.hint} 
-              fill 
-              className="object-cover" 
-              priority
-              loading="eager"
-            />
-             <div className="absolute inset-0 bg-black/30" />
-          </div>
-        )}
-        <div className="p-6 pt-2">
-          <DialogHeader>
-            <DialogTitle className="font-headline text-2xl text-primary">{currentContent.title}</DialogTitle>
-            <DialogHeader className="mt-2 text-muted-foreground">
-              {currentContent.description}
-            </DialogHeader>
-          </DialogHeader>
-          <div className="mt-6 flex flex-col sm:flex-row gap-2">
-            <Button asChild className="w-full">
-              <Link href="/blog/harmonyca-lifting-facial-sin-cirugia">
-                <BookOpen className="mr-2 h-4 w-4" />
-                {currentContent.cta}
-              </Link>
-            </Button>
-            <Button variant="outline" onClick={() => setIsOpen(false)} className="w-full">
-               <X className="mr-2 h-4 w-4" />
-               {currentContent.close}
-            </Button>
-          </div>
-        </div>
-      </DialogContent>
-    </Dialog>
-  );
-};
 
 
 export default function Home() {
@@ -595,7 +521,7 @@ export default function Home() {
         </section>
 
       </main>
-      <NewBlogPostPopup />
+
     </div>
   );
 }
