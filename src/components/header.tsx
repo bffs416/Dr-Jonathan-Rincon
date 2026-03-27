@@ -139,7 +139,7 @@ export default function Header() {
                 {index > 0 && <div className="h-4 w-px bg-border" />}
                 {link.dropdown 
                     ? <NavDropdown name={link.name} items={link.dropdown} />
-                    : <NavLink href={link.href || '#'} highlight={!!link.highlight}>{link.name}</NavLink>
+                    : <NavLink href={(link as any).href || '#'} highlight={!!(link as any).highlight}>{link.name}</NavLink>
                 }
               </React.Fragment>
             ))}
@@ -186,8 +186,8 @@ export default function Header() {
                         <ul className="pl-4 space-y-3 border-l">
                           {link.dropdown.map(item => (
                             <li key={item.href}>
-                              <Link href={item.href} className={cn("hover:text-primary/80 transition-colors block", item.highlight && "font-bold text-primary/80 flex items-center")}>
-                                {item.highlight && <Award className="mr-2 h-4 w-4" />}
+                              <Link href={item.href} className={cn("hover:text-primary/80 transition-colors block", (item as any).highlight && "font-bold text-primary/80 flex items-center")}>
+                                {(item as any).highlight && <Award className="mr-2 h-4 w-4" />}
                                 {item.name}
                               </Link>
                             </li>
@@ -195,8 +195,8 @@ export default function Header() {
                         </ul>
                        </div>
                     ) : (
-                      <Link href={link.href || '#'} className={cn("text-lg hover:text-primary/80 transition-colors block", link.highlight && "font-bold text-primary/80 flex items-center")}>
-                         {link.highlight && <Award className="mr-2 h-4 w-4" />}
+                      <Link href={(link as any).href || '#'} className={cn("text-lg hover:text-primary/80 transition-colors block", (link as any).highlight && "font-bold text-primary/80 flex items-center")}>
+                         {(link as any).highlight && <Award className="mr-2 h-4 w-4" />}
                         {link.name}
                       </Link>
                     )}

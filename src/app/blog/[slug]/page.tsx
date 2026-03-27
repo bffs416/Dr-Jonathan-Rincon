@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { POSTS } from '@/lib/blog-posts';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const postData = POSTS[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const postData = POSTS[slug];
   if (!postData) return {};
 
   // Default to Spanish for metadata if needed, or we could pass lang if available in params
@@ -22,9 +23,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 import BlogPostContent from './blog-post-content';
 
-// This is now a Server Component
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const postData = POSTS[params.slug];
+// This is now an async Server Component to await params
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const postData = POSTS[slug];
 
   if (!postData) {
     notFound();

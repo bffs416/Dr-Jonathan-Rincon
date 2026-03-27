@@ -2,6 +2,235 @@
 import { findImage } from './images';
 
 export const POSTS: { [key: string]: any } = {
+  'harmonyca-arquitectura-facial-3d': {
+    es: {
+      title: 'Arquitectura Facial 3D: Cómo HArmonyCa Esculpe tus Luces y Sombras Naturales',
+      category: 'Bioestimuladores',
+      date: '27 de Marzo de 2026',
+      readTime: '6 min',
+      author: 'Dr. Jonathan Rincón',
+      image: { src: '/images/harmonyca-arquitectura-1.png', alt: 'Facial Architecture', hint: 'facial_architecture' },
+      description: 'Descubre cómo la medicina estética ha evolucionado del relleno de arrugas a la arquitectura facial 3D, y por qué HArmonyCa es clave para el `Top Model Look`.',
+      content: `
+<article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
+  <div class="max-w-3xl mx-auto space-y-8">
+    <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
+      En el ámbito de la medicina y la estética avanzada, el rostro humano no se lee como un plano bidimensional, sino como una compleja estructura arquitectónica tridimensional. Hoy en día, la excelencia clínica no busca simplemente "rellenar" arrugas, sino <strong>esculpir luces y sombras</strong> para devolverle al rostro su juventud y proporciones doradas. En este sentido, <strong>HArmonyCa</strong> es la herramienta definitiva para lograr el anhelado "Top Model Look".
+    </p>
+  </div>
+
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      Iluminación lateral y contorno pronunciado logrado a través de la restauración estructural con bioestimuladores híbridos.
+    </figcaption>
+  </figure>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> El Arte del Contorno: Luces y Sombras Naturales
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">¿Alguna vez te has preguntado por qué algunas personas parecen tener un rostro naturalmente esculpido bajo cualquier iluminación? El secreto radica en la prominencia ósea y el soporte estructural de los pómulos y la línea mandibular.</p>
+    <p class="text-lg leading-relaxed text-muted-foreground">Esta estructura crea áreas donde la luz rebota (los puntos altos) y áreas que caen en sombra sutil (el hueco de la mejilla). Con el paso del tiempo, el soporte se pierde y el rostro se "aplana". HArmonyCa actúa exactamente donde se necesita soporte estructural, reposicionando los tejidos para recrear este balance lumínico.</p>
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Restauración del "Triángulo de la Juventud" con un vector de fuerza ascendente.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Definición aguda del arco cigomático (pómulos) para atrapar la luz natural.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Perfilamiento del ángulo mandibular, separando visualmente el rostro del cuello.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Efecto de contorneado ("contouring") permanente y libre de maquillaje.</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      ¿Por qué HArmonyCa y no un Relleno Común?
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">A diferencia de los rellenos de ácido hialurónico convencionales (que son excelentes para hidratar y dar volumen centralizado), HArmonyCa posee una reticulación única y microesferas de <em>Hidroxiapatita de Calcio</em>. Esta combinación lo convierte en el "hormigón armado" de la arquitectura facial.</p>
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Soporte estructural rígido que no se desplaza con la gravedad.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Estimulación intensa del colágeno tipo I y III (Neocolagénesis) en las capas profundas de la dermis.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Alta viscosidad y elasticidad ideal para emular la densidad del tejido óseo.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Resultados que mejoran mes a mes, a medida que tu propia piel produce su propia malla de colágeno natural.</span>
+      </li>
+    </ul>
+  </div>
+
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-2.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      Proyección tridimensional del arco cigomático y reafirmación tisular activa.
+    </figcaption>
+  </figure>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> El "Top Model Look" sin Filtros
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">El término <em>Top Model Look</em> se refiere a características faciales muy angulares y bien definidas lateralmente. Mediante la aplicación de HArmonyCa con vectores de tensión específicos (técnica de retroinyección lineal con cánula), logramos este efecto de forma no quirúrgica.</p>
+
+    <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
+      <div class="absolute top-0 right-0 p-8 opacity-10">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+      </div>
+      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">Advertencia Estética</h3>
+      <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">El contorno facial debe ser realizado exclusivamente por médicos expertos en anatomía. Un volumen mal colocado puede volver el rostro más ancho o masculino en lugar de lograr un efecto "lifting" femenino y estilizado.</p>
+    </div>
+
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      Una Base Sólida para el Futuro
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Invertir en HArmonyCa es, en esencia, invertir en el capital de colágeno de tu piel. Estás construyendo pilares de soporte que retrasarán la aparición de flacidez severa durante los próximos 18 a 24 meses.</p>
+  </div>
+</article>
+`
+    },
+    en: {
+      title: '3D Facial Architecture: How HArmonyCa Sculpts Your Natural Lights and Shadows',
+      category: 'Biostimulators',
+      date: 'March 27, 2026',
+      readTime: '6 min read',
+      author: 'Dr. Jonathan Rincón',
+      image: { src: '/images/harmonyca-arquitectura-1.png', alt: 'Facial Architecture', hint: 'facial_architecture' },
+      description: 'Discover how aesthetic medicine has evolved from wrinkle filling to 3D facial architecture, and why HArmonyCa is key to the Top Model Look.',
+      content: `
+<article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
+  <div class="max-w-3xl mx-auto space-y-8">
+    <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
+      In the realm of advanced medical aesthetics, the human face is not viewed as a two-dimensional plane, but as a complex, three-dimensional architectural structure. Today's clinical excellence isn't just about "filling" wrinkles; it's about <strong>sculpting light and shadow</strong> to return youth and golden proportions to the face. In this sense, <strong>HArmonyCa</strong> is the ultimate tool to achieve the coveted "Top Model Look".
+    </p>
+  </div>
+
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      Lateral illumination and pronounced contouring achieved through structural restoration with hybrid biostimulators.
+    </figcaption>
+  </figure>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> The Art of Contouring: Natural Lights and Shadows
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Have you ever wondered why some people seem to have a naturally sculpted face under any lighting? The secret lies in bony prominence and the structural support of the cheekbones and jawline.</p>
+    <p class="text-lg leading-relaxed text-muted-foreground">This structure creates areas where light sharply bounces (the high points) and areas that fall into subtle, flattering shadow (the hollows of the cheeks). Over time, this support diminishes and the face "flattens." HArmonyCa acts exactly where structural support is desperately needed, repositioning tissues to recreate this luminous balance.</p>
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Restoration of the "Triangle of Youth" with an upward force vector.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Sharp definition of the zygomatic arch (cheekbones) to catch natural light.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Contouring of the mandibular angle, visually separating the face from the neck.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Permanent, makeup-free "contouring" effect.</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      Why HArmonyCa over a Traditional Filler?
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Unlike conventional hyaluronic acid fillers (which are excellent for hydration and centralized volume), HArmonyCa possesses unique cross-linking and <em>Calcium Hydroxylapatite</em> microspheres. This combination makes it the "reinforced concrete" of facial architecture.</p>
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Rigid structural support that resists the downward pull of gravity.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Intense stimulation of Type I and III collagen (Neocollagenesis) in the deep dermis layers.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>High viscosity and elasticity perfectly suited to emulate bone tissue density.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span>Results that progressively improve month by month as your skin produces its own natural collagen mesh.</span>
+      </li>
+    </ul>
+  </div>
+
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-2.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      Three-dimensional projection of the zygomatic arch and active tissue tightening.
+    </figcaption>
+  </figure>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> The Filter-Free "Top Model Look"
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">The term <em>Top Model Look</em> refers to highly angular and well-defined lateral facial features. By strategically applying HArmonyCa with specific tension vectors (using retrograde linear injection with a cannula), we achieve this stunning effect non-surgically.</p>
+
+    <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
+      <div class="absolute top-0 right-0 p-8 opacity-10">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+      </div>
+      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">Aesthetic Warning</h3>
+      <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">Facial contouring should only be performed by doctors with deep anatomical expertise. Improperly placed volume can actually make the face look wider or masculine, rather than achieving a stylized, feminine lifting effect.</p>
+    </div>
+
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      A Solid Foundation for the Future
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Investing in HArmonyCa is essentially investing in your skin's collagen capital. You are building support pillars that will actively delay the onset of severe skin laxity for the next 18 to 24 months.</p>
+  </div>
+</article>
+`
+    }
+  },
+
   'harmonyca-lifting-facial-sin-cirugia': {
     es: {
       title: "HArmonyCa: El 'Efecto Lifting' Híbrido que Redefine tu Rostro sin Cirugía",
@@ -981,21 +1210,35 @@ export const POSTS: { [key: string]: any } = {
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
       <span class="w-12 h-px bg-primary hidden md:block"></span> Tipos de Hilos PDO
     </h2>
-    <p class="text-lg leading-relaxed text-muted-foreground">Existen varios tipos de hilos, cada uno con un propósito específico:</p>
-    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
-      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Hilos Monofilamento:</strong> Ideales para mejorar la textura de la piel y crear un efecto de "malla" que redensifica la zona.</span>
-      </li>
-      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Hilos Espiculados o de Tracción:</strong> Cuentan con pequeñas espículas que se anclan al tejido, permitiendo reposicionar y levantar las zonas con flacidez.</span>
-      </li>
-      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Hilos Tornillo o Screw:</strong> Aportan volumen en áreas específicas y son excelentes para tratar arrugas profundas.</span>
-      </li>
-    </ul>
+                <ul class="space-y-4 text-muted-foreground my-8">
+                  <li class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                      <img src="${findImage('hilos-lisos')?.src}" alt="Hilos Monofilamento" class="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <strong class="text-foreground block text-lg mb-1">Hilos Monofilamento (Lisos)</strong>
+                      Son hilos delgados y suaves que se disponen en forma de malla bajo la piel. Su función principal no es traccionar, sino crear una estructura de soporte que induce la producción masiva de colágeno, mejorando la firmeza y calidad de la dermis de forma progresiva.
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                      <img src="${findImage('hilos-cog')?.src}" alt="Hilos Espiculados" class="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <strong class="text-foreground block text-lg mb-1">Hilos Espiculados (COGS)</strong>
+                      Cuentan con pequeñas espículas o "dientes" que se anclan al tejido subcutáneo. Al ser tensados, proporcionan un efecto lifting inmediato y mecánico, ideal para elevar mejillas, definir la mandíbula o levantar las cejas (Foxy Eyes).
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                      <img src="${findImage('hilos-cta')?.src}" alt="Hilos de Tracción" class="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <strong class="text-foreground block text-lg mb-1">Hilos de Tracción Media y Alta</strong>
+                      Diseñados para corregir grados más avanzados de flacidez, estos hilos ofrecen una resistencia mayor y una capacidad de reposicionamiento de tejidos más profunda, con resultados que rivalizan con procedimientos más invasivos.
+                    </div>
+                  </li>
+                </ul>
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
       Beneficios del Tratamiento
     </h2>
@@ -1617,22 +1860,51 @@ export const POSTS: { [key: string]: any } = {
   <div class="max-w-3xl mx-auto space-y-8">
     <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">¡Felicidades por su procedimiento! Los hilos tensores son una solución efectiva y mínimamente invasiva para combatir la flacidez y estimular la producción de colágeno. El éxito a largo plazo de este tratamiento depende en gran medida de su compromiso con los cuidados post-procedimiento.</p>
     <p class="text-lg leading-relaxed text-muted-foreground">Los hilos funcionan creando un soporte mecánico inmediato (efecto lifting) y una estimulación biológica a largo plazo (neocolagénesis), que es su objetivo más duradero. Nuestro enfoque en el post-cuidado es proteger esta fijación inicial para permitir que el nuevo colágeno se forme correctamente alrededor de la sutura reabsorbible.</p>
-    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
-      Fase 1: Inmediatamente Después del Procedimiento (Día 0)
-    </h2>
-    <p class="text-lg leading-relaxed text-muted-foreground">Justo al salir del consultorio, su enfoque debe ser minimizar la inflamación y proteger los puntos de anclaje de los hilos.</p>
-    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
-      Fase 2: Primera Semana (Días 1 a 7)
-    </h2>
-    <p class="text-lg leading-relaxed text-muted-foreground">Esta semana es crucial para el asentamiento inicial de los hilos y la disminución de la hinchazón.</p>
-    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
-      Fase 3: Primeras 4 Semanas (Día 7 a Día 30)
-    </h2>
-    <p class="text-lg leading-relaxed text-muted-foreground">En este periodo, la inflamación debe haber cedido casi por completo, y la estimulación de colágeno está en pleno apogeo.</p>
-    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
-      Fase 4: Mantenimiento y Seguimiento (Más allá del Mes 1)
-    </h2>
-    <p class="text-lg leading-relaxed text-muted-foreground">El efecto tensor directo de los hilos de PDO puede durar entre 12 y 18 meses, aunque los beneficios persisten hasta por 2 años gracias al colágeno nuevo.</p>
+    <div class="space-y-12">
+      <section>
+        <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
+          Fase 1: Inmediatamente Después del Procedimiento (Día 0)
+        </h2>
+        <p class="text-lg leading-relaxed text-muted-foreground">Justo al salir del consultorio, su enfoque debe ser minimizar la inflamación y proteger los puntos de anclaje de los hilos. Es normal sentir una ligera tensión o ver pequeños hematomas.</p>
+        <ul class="mt-4 space-y-2 text-muted-foreground">
+          <li>• Aplique frío local (compresas suaves) durante 15 minutos cada hora.</li>
+          <li>• Mantenga la cabeza elevada, incluso al descansar.</li>
+          <li>• Evite gesticular exageradamente o abrir mucho la boca.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
+          Fase 2: Primera Semana (Días 1 a 7)
+        </h2>
+        <p class="text-lg leading-relaxed text-muted-foreground">Esta semana es crucial para el asentamiento inicial de los hilos y la disminución de la hinchazón.</p>
+        <ul class="mt-4 space-y-2 text-muted-foreground">
+          <li>• Duerma boca arriba con dos almohadas para evitar presión lateral.</li>
+          <li>• Lave su rostro con extrema suavidad, sin frotar hacia abajo.</li>
+          <li>• Evite el ejercicio físico intenso y la exposición solar directa o saunas.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
+          Fase 3: Primeras 4 Semanas (Día 7 a Día 30)
+        </h2>
+        <p class="text-lg leading-relaxed text-muted-foreground">En este periodo, la inflamación debe haber cedido casi por completo, y la estimulación de colágeno está en pleno apogeo.</p>
+        <ul class="mt-4 space-y-2 text-muted-foreground">
+          <li>• Puede retomar actividad física moderada.</li>
+          <li>• Evite tratamientos dentales profundos o limpiezas faciales agresivas.</li>
+          <li>• Use protector solar rigurosamente para evitar manchas en zonas de hematomas previos.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
+          Fase 4: Mantenimiento y Seguimiento (Más allá del Mes 1)
+        </h2>
+        <p class="text-lg leading-relaxed text-muted-foreground">El efecto tensor directo de los hilos de PDO puede durar entre 12 y 18 meses, aunque los beneficios persisten hasta por 2 años gracias al colágeno nuevo.</p>
+        <p class="text-lg leading-relaxed text-muted-foreground mt-4">Asista a su cita de control para evaluar la simetría y el proceso de neocolagénesis. Recuerde que el colágeno sigue formándose durante los primeros 4-6 meses.</p>
+      </section>
+    </div>
     <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
       
           <h3 class="text-2xl font-medium tracking-tight text-foreground mt-14 mb-6 flex items-center gap-4">
