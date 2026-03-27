@@ -14,6 +14,7 @@ import Script from 'next/script';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { LanguageProvider } from '@/context/language-context';
 import { Analytics } from '@vercel/analytics/react';
+import { PromoPopup } from '@/components/promo-popup';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -269,6 +270,7 @@ export default function RootLayout({
                 <Footer />
               </div>
               <Toaster />
+              <PromoPopup />
               {/* Floating WhatsApp Button */}
               <a
                 href="https://wa.me/573122784757"
