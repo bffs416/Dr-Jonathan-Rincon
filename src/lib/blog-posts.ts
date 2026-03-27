@@ -1210,51 +1210,47 @@ export const POSTS: { [key: string]: any } = {
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
       <span class="w-12 h-px bg-primary hidden md:block"></span> Tipos de Hilos PDO
     </h2>
-                <ul class="space-y-4 text-muted-foreground my-8">
-                  <li class="flex items-start gap-4">
-                    <div class="flex-shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                      <img src="${findImage('hilos-lisos')?.src}" alt="Hilos Monofilamento" class="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                      <strong class="text-foreground block text-lg mb-1">Hilos Monofilamento (Lisos)</strong>
-                      Son hilos delgados y suaves que se disponen en forma de malla bajo la piel. Su función principal no es traccionar, sino crear una estructura de soporte que induce la producción masiva de colágeno, mejorando la firmeza y calidad de la dermis de forma progresiva.
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-4">
-                    <div class="flex-shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                      <img src="${findImage('hilos-cog')?.src}" alt="Hilos Espiculados" class="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                      <strong class="text-foreground block text-lg mb-1">Hilos Espiculados (COGS)</strong>
-                      Cuentan con pequeñas espículas o "dientes" que se anclan al tejido subcutáneo. Al ser tensados, proporcionan un efecto lifting inmediato y mecánico, ideal para elevar mejillas, definir la mandíbula o levantar las cejas (Foxy Eyes).
-                    </div>
-                  </li>
-                  <li class="flex items-start gap-4">
-                    <div class="flex-shrink-0 w-24 h-24 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                      <img src="${findImage('hilos-cta')?.src}" alt="Hilos de Tracción" class="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                      <strong class="text-foreground block text-lg mb-1">Hilos de Tracción Media y Alta</strong>
-                      Diseñados para corregir grados más avanzados de flacidez, estos hilos ofrecen una resistencia mayor y una capacidad de reposicionamiento de tejidos más profunda, con resultados que rivalizan con procedimientos más invasivos.
-                    </div>
-                  </li>
-                </ul>
+    <p class="text-lg leading-relaxed text-muted-foreground mb-8">Existen varios tipos de hilos, cada uno con un propósito específico:</p>
+    <div class="space-y-12 mb-16">
+      <div class="flex flex-col items-center text-center group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl rounded-[2.5rem] p-8 md:p-12 hover:shadow-2xl transition-all duration-500">
+        <div class="w-full max-w-md aspect-[4/3] relative overflow-hidden rounded-2xl mb-8 border border-primary/10 flex items-center justify-center bg-slate-50 dark:bg-slate-800/50">
+          <img src="${findImage('hilos-lisos')?.src}" alt="Hilos Monofilamento" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="max-w-xl mx-auto">
+          <h4 class="text-2xl font-light text-primary mb-4">Hilos Monofilamento (Lisos)</h4>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Son hilos delgados y suaves que se disponen en forma de malla bajo la piel. Su función principal no es traccionar, sino crear una estructura de soporte que induce la producción masiva de colágeno, mejorando la firmeza y calidad de la dermis de forma progresiva.
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex flex-col items-center text-center group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl rounded-[2.5rem] p-8 md:p-12 hover:shadow-2xl transition-all duration-500">
+        <div class="w-full max-w-md aspect-[4/3] relative overflow-hidden rounded-2xl mb-8 border border-primary/10 flex items-center justify-center bg-slate-50 dark:bg-slate-800/50">
+          <img src="${findImage('hilos-cog')?.src}" alt="Hilos Espiculados" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="max-w-xl mx-auto">
+          <h4 class="text-2xl font-light text-primary mb-4">Hilos Espiculados (COGS)</h4>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Cuentan con pequeñas espículas o "dientes" que se anclan al tejido subcutáneo. Al ser tensados, proporcionan un efecto lifting inmediato y mecánico, ideal para elevar mejillas, definir la mandíbula o levantar las cejas (Foxy Eyes).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-16 flex justify-center w-full">
+      <figure class="relative group overflow-hidden rounded-[2.5rem] border border-primary/20 shadow-2xl w-full max-w-3xl aspect-[16/9] md:aspect-[21/9] flex items-center justify-center bg-slate-100 dark:bg-slate-900">
+        <img src="${findImage('fox-eyes')?.src}" alt="Foxy Eyes con Hilos Tensores" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8 flex justify-center text-center">
+          <figcaption class="text-white text-lg md:text-xl tracking-wide font-light"><span class="font-medium text-primary-foreground/90">Efecto Foxy Eyes:</span> Elevación natural de la mirada mediante hilos espiculados</figcaption>
+        </div>
+      </figure>
+    </div>
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
       Beneficios del Tratamiento
     </h2>
   </div>
 
-      <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
-        <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-          <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-            <img src="${findImage('blog-post-content')?.src}" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
-          </div>
-        </div>
-        <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
-          Resultados naturales y una piel visiblemente más joven.
-        </figcaption>
-      </figure>
   <div class="max-w-3xl mx-auto space-y-8">
     <p class="text-lg leading-relaxed text-muted-foreground">El principal beneficio es el <strong>efecto lifting inmediato</strong>. Sin embargo, la magia real ocurre a largo plazo. La presencia de los hilos estimula a los fibroblastos a producir colágeno y elastina de forma natural. Esto se traduce en:</p>
     <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
@@ -1310,37 +1306,47 @@ export const POSTS: { [key: string]: any } = {
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
       <span class="w-12 h-px bg-primary hidden md:block"></span> Types of PDO Threads
     </h2>
-    <p class="text-lg leading-relaxed text-muted-foreground">There are several types of threads, each with a specific purpose:</p>
-    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
-      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Monofilament Threads:</strong> Ideal for improving skin texture and creating a "mesh" effect that redensifies the area.</span>
-      </li>
-      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Barbed or Traction Threads:</strong> These have small barbs that anchor to the tissue, allowing sagging areas to be repositioned and lifted.</span>
-      </li>
-      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Screw Threads:</strong> Add volume in specific areas and are excellent for treating deep wrinkles.</span>
-      </li>
-    </ul>
+    <p class="text-lg leading-relaxed text-muted-foreground mb-8">There are several types of threads, each with a specific purpose:</p>
+    <div class="space-y-12 mb-16">
+      <div class="flex flex-col items-center text-center group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl rounded-[2.5rem] p-8 md:p-12 hover:shadow-2xl transition-all duration-500">
+        <div class="w-full max-w-md aspect-[4/3] relative overflow-hidden rounded-2xl mb-8 border border-primary/10 flex items-center justify-center bg-slate-50 dark:bg-slate-800/50">
+          <img src="${findImage('hilos-lisos')?.src}" alt="Hilos Monofilamento" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="max-w-xl mx-auto">
+          <h4 class="text-2xl font-light text-primary mb-4">Monofilament Threads (Smooth)</h4>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Thin and smooth threads arranged in a mesh-like pattern under the skin. Their primary function isn't traction but creating a support structure that induces massive collagen production, progressively improving dermis firmness and quality.
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex flex-col items-center text-center group bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl rounded-[2.5rem] p-8 md:p-12 hover:shadow-2xl transition-all duration-500">
+        <div class="w-full max-w-md aspect-[4/3] relative overflow-hidden rounded-2xl mb-8 border border-primary/10 flex items-center justify-center bg-slate-50 dark:bg-slate-800/50">
+          <img src="${findImage('hilos-cog')?.src}" alt="Hilos Espiculados" class="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" />
+        </div>
+        <div class="max-w-xl mx-auto">
+          <h4 class="text-2xl font-light text-primary mb-4">Barbed or Traction Threads (COGs)</h4>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Feature small barbs or "teeth" that anchor to the subcutaneous tissue. When tensioned, they provide an immediate mechanical lifting effect, ideal for lifting cheeks, defining the jawline, or lifting eyebrows (Foxy Eyes).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-16 flex justify-center w-full">
+      <figure class="relative group overflow-hidden rounded-[2.5rem] border border-primary/20 shadow-2xl w-full max-w-3xl aspect-[16/9] md:aspect-[21/9] flex items-center justify-center bg-slate-100 dark:bg-slate-900">
+        <img src="${findImage('fox-eyes')?.src}" alt="Foxy Eyes con Hilos Tensores" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8 flex justify-center text-center">
+          <figcaption class="text-white text-lg md:text-xl tracking-wide font-light"><span class="font-medium text-primary-foreground/90">Foxy Eyes Effect:</span> Natural eye lift using barbed threads</figcaption>
+        </div>
+      </figure>
+    </div>
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 mt-12 border-l-4 border-primary pl-6">
       Treatment Benefits
     </h2>
   </div>
 
-      <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
-        <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-          <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-            <img src="${findImage('blog-post-content')?.src}" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
-          </div>
-        </div>
-        <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
-          Natural results and visibly younger skin.
-        </figcaption>
-      </figure>
   <div class="max-w-3xl mx-auto space-y-8">
     <p class="text-lg leading-relaxed text-muted-foreground">The main benefit is the <strong>immediate lifting effect</strong>. However, the real magic happens in the long term. The presence of the threads stimulates fibroblasts to produce collagen and elastin naturally. This translates into:</p>
     <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
@@ -1961,238 +1967,300 @@ export const POSTS: { [key: string]: any } = {
     },
   },
 
-    'harmonyca-experto-y-seguridad': {
+  'harmonyca-dr-rincon-profesional': {
     es: {
       title: 'HArmonyCa: ¿Por Qué el Dr. Rincón es el Profesional Que Otros Médicos Aprenden?',
       category: 'Bioestimuladores',
-      date: '26 de Marzo de 2026',
-      readTime: '9 min',
+      date: '27 de Marzo de 2026',
+      readTime: '8 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica'),
-      description: 'Descubre qué hace que el Dr. Jonathan Rincón sea formador autorizado de Allergan y cómo garantiza tu seguridad en cada tratamiento con HArmonyCa.',
+      image: findImage('blog-harmonyca-dr-rincon'),
+      description: 'Descubre por qué el Dr. Jonathan Rincón es reconocido como formador y referente en técnicas avanzadas de inyección con HArmonyCa en Colombia.',
       content: `
-        <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
-          
-          <div class="max-w-3xl mx-auto space-y-6">
-            <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
-              En el mundo de la medicina estética, no todos los tratamientos son iguales y, lo más importante, no todos los inyectables son aplicados por igual. Cuando se trata de un producto de la calidad e innovación de <strong>HArmonyCa</strong>, la diferencia entre un resultado natural y uno mediocre radica en dos factores fundamentales: la experiencia del profesional que lo aplica y los protocolos de seguridad que se siguen durante el tratamiento.<br><br>En este artículo, te presento por qué soy reconocido como formador autorizado de Allergan en Colombia y qué garantías tienes como paciente al elegir mi consulta para tu tratamiento de HArmonyCa.
-            </p>
-          </div>
+<article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
+  <div class="max-w-3xl mx-auto space-y-8">
+    <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
+      En el competitivo mundo de la medicina estética, no todos los profesionales alcanza el nivel de excelencia que los convierte en referentes para sus colegas. El <strong>Dr. Jonathan Rincón</strong> se ha posicionado como uno de los médicos más solicitados en Medellín no solo por sus pacientes, sino también por otros profesionales que desean perfeccionar sus técnicas de inyección.
+    </p>
+  </div>
 
-          <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
-            <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-              <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden">
-                <img src="/images/harmonyca-principal.png" alt="HarmonyCa Treatment" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
-              </div>
-            </div>
-            <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
-              Entrenamiento Clínico Avanzado en Técnicas de Inyección Segura.
-            </figcaption>
-          </figure>
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/grok-image-156de948-9dcc-4db6-a574-e7b11ce87847.jpg" alt="Dr. Jonathan Rincón" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      El Dr. Jonathan Rincón, referente en medicina estética avanzanda y formación de profesionales.
+    </figcaption>
+  </figure>
 
-          <div class="max-w-3xl mx-auto space-y-8">
-            <h2 class="text-2xl md:text-4xl font-light text-foreground mb-6 flex items-center gap-4">
-              <span class="w-12 h-px bg-primary hidden md:block"></span>
-              ¿Qué significa ser "Formador de Allergan"?
-            </h2>
-            <p class="text-lg leading-relaxed text-muted-foreground">Allergan Aesthetics, la compañía detrás de marcas icónicas como Botox®, Juvéderm® y ahora HArmonyCa™, selecciona cuidadosamente a los profesionales que participarán en sus programas de formación avanzada. No es suficiente ser un buen inyectólogo; se requiere un dominio profundo de la anatomía facial, una técnica impecable y, sobre todo, la capacidad de transmitir ese conocimiento a otros colegas.</p>
-            <p class="text-lg leading-relaxed text-muted-foreground"><strong>Ser formador de Allergan no es solo un título honorífico</strong>; es una responsabilidad continua que exige excelencia médica y actualización constante.</p>
-            
-            <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
-              <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Recibir formación continua sobre las últimas técnicas y protocolos de seguridad.</span>
-              </li><li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Demostrar resultados consistentes y predecibles en tus pacientes.</span>
-              </li><li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Capacidad de evaluación facial integral y avanzada.</span>
-              </li><li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Dominio de las últimas tendencias tecnológicas en estética.</span>
-              </li>
-            </ul>
-          </div>
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> Entrenamiento Clínico Avanzado en Técnicas de Inyección Segura
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Lo que distingue al Dr. Rincón no es únicamente su habilidad clínica, sino su compromiso inquebrantable con la seguridad y la excelencia técnica. Su formación continua y su participación en talleres internacionales le han permitido dominar las técnicas más avanzadas de inyección con bioestimuladores híbridos como HArmonyCa.</p>
+    
+    <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+      <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+        <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+          <img src="/images/Bioestimuladores_Uso_General_3.jpg" alt="Entrenamiento Clínico Avanzado" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+        </div>
+      </div>
+      <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+        Entrenamiento clínico avanzado en técnicas de inyección segura.
+      </figcaption>
+    </figure>
 
-          <div class="max-w-3xl mx-auto space-y-8 mt-20">
-            <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
-              El Valor de un Profesional Capacitado
-            </h2>
-            <p class="text-lg leading-relaxed text-muted-foreground">Cuando eliges un profesional que ha sido formado directamente por la marca, estás asegurando que tu rostro está en manos de alguien con conocimientos técnicos de vanguardia. No solo aplico el producto; comprendo en profundidad cómo interactúa el ácido hialurónico con la hidroxiapatita de calcio a nivel celular.</p>
-            <div class="grid md:grid-cols-2 gap-6 mt-8">
-              <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Determinación de la profundidad exacta de inyección para cada zona facial.</p>
-              </div><div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Cálculo del vector de tracción perfecto para lograr un efecto lifting natural.</p>
-              </div><div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Personalización de las dosis exactas requeridas para cada paciente.</p>
-              </div><div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Manejo de técnicas avanzadas con cánulas para reducir inflamación y dolor.</p>
-              </div>
-            </div>
-          </div>
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Anatomía Facial Profunda:</strong> Conocimiento exhaustivo de los planos faciales, vasos sanguíneos y nervios para evitar complicaciones.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Técnica de Retroinyección:</strong> Dominio de la inyección lineal retrógrada para una distribución uniforme del producto.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Uso de Cánulas de Punta Romana:</strong> Minimización del riesgo de hematomas y lesiones tisulares.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Evaluación Personalizada:</strong> Análisis detallado de cada rostro para diseñar un plan de tratamiento único.</span>
+      </li>
+    </ul>
+  </div>
 
-          <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-20 group">
-            <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-              <div class="aspect-[4/3] md:aspect-[16/6] w-full relative overflow-hidden">
-                <img src="/images/harmonyca-info.png" alt="Facial Assessment" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent mix-blend-overlay"></div>
-              </div>
-            </div>
-            <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
-              Resultados naturales e inmediatos que mejoran progresivamente con el tiempo.
-            </figcaption>
-          </figure>
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      ¿Por Qué Otros Médicos Aprenden del Dr. Rincón?
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">El Dr. Rincón no solo ejecuta tratamientos de manera impecable; también comparte su conocimiento con la comunidad médica. Su enfoque pedagógico y su experiencia práctica lo han convertido en un formador solicitado en talleres y congresos de medicina estética.</p>
+    
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Resultados Predecibles:</strong> La consistencia en los resultados genera confianza tanto en pacientes como en colegas.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Seguridad Primero:</strong> Protocolos estrictos que minimizan riesgos y maximizan la satisfacción del paciente.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Enfoque Natural:</strong> Prioriza la armonía facial y los resultados que realzan la belleza sin alterar la identidad.</span>
+      </li>
+    </ul>
+  </div>
 
-          <div class="max-w-3xl mx-auto space-y-12">
-            <div class="space-y-6">
-              <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
-                <span class="w-12 h-px bg-primary hidden md:block"></span>
-                Seguridad y Autenticidad Primero
-              </h2>
-              <p class="text-lg leading-relaxed text-muted-foreground">Antes de cualquier procedimiento, la transparencia es vital. HArmonyCa es un producto de Allergan Aesthetics, y la autenticidad garantiza tu seguridad.</p>
-            </div>
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca.jpg" alt="HArmonyCa Resultados" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+  </figure>
 
-            <div class="relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30">
-              <div class="absolute top-0 right-0 p-8 opacity-10">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
-              </div>
-              <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">Señales de Alerta que No Debes Ignorar</h3>
-              <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">Desconfía de precios sospechosamente bajos, consultorios sin certificaciones a la vista, o profesionales que no dedican tiempo suficiente a tu valoración clínica inicial.</p>
-            </div>
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> Resultados naturales e inmediatos que mejoran progresivamente con el tiempo
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Una de las ventajas más destacadas de HArmonyCa es su capacidad para ofrecer resultados que van más allá del efecto inmediato. Gracias a la combinación de ácido hialurónico e hidroxiapatita de calcio, el tratamiento no solo proporciona volumen instantáneo, sino que también stimulate la producción de colágeno natural.</p>
+    
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Efecto Inmediato:</strong> El ácido hialurónico proporciona volumen y hidratación desde el primer momento.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Mejora Progresiva:</strong> La hidroxiapatita de calcio estimule la neocolagénesis, mejorando la firmeza y calidad de la piel mes a mes.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Resultados Duraderos:</strong> Los efectos pueden mantenerse entre 12 y 24 meses, dependiendo del estilo de vida y el cuidado de la piel.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Apariencia Natural:</strong> El resultado final es un rostro rejuvenecido que mantiene sus expresiones naturales.</span>
+      </li>
+    </ul>
+  </div>
 
-            <div class="space-y-6">
-              <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
-                Protocolos de Seguridad en Mi Consulta
-              </h2>
-              <p class="text-lg leading-relaxed text-muted-foreground">Como líder de opinión clínica y profesional comprometido con la ética, mi consulta en Medellín opera bajo un rigor procedimental estricto. La valoración personalizada es el primer y más crucial paso, seguido por una técnica aséptica impecable utilizando cánulas de punta roma para minimizar el trauma en los tejidos blandos.</p>
-            </div>
+  <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
+    <div class="absolute top-0 right-0 p-8 opacity-10">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+    </div>
+    <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">Compromiso con la Excelencia</h3>
+    <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">El Dr. Rincón se mantiene actualizado con las últimas tendencias y tecnologías en medicina estética, asistiendo a congresos internacionales y participando en investigaciones clínicas. Su dedicación a la formación continua garantiza que sus pacientes siempre reciban los tratamientos más avanzados y seguros.</p>
+  </div>
 
-            <div class="pt-8 border-t border-slate-200 dark:border-slate-800">
-              <h2 class="text-2xl font-medium text-foreground mb-4">Tu Transformación Segura</h2>
-              <p class="text-lg leading-relaxed text-muted-foreground">No dejes tu rostro en manos de cualquiera. La diferencia entre un tratamiento estandarizado y uno excepcional está en la experiencia, formación y compromiso del profesional. Estoy aquí para resolver todas tus dudas y garantizar que tu ruta hacia una apariencia rejuvenecida sea sublime y libre de riesgos.</p>
-            </div>
-          </div>
-        </article>
-  `
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      Elige la Excelencia para tu Tratamiento
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Cuando eliges al Dr. Jonathan Rincón, no solo eliges un profesional con años de experiencia, sino también un médico comprometido con la formación y la mejora continua. Su reputación como formador de otros médicos es testimonio de su experiencia y dedicación al campo de la medicina estética.</p>
+    
+    <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
+      <p>"La verdadera excelencia en medicina estética no solo se mide por los resultados que logras, sino por la diferencia que haces en la vida de tus pacientes y en la formación de tus colegas."</p>
+    </blockquote>
+
+    <h4 class="text-xl font-medium text-foreground mt-8 mb-4">¿Listo para vivir la experiencia Dr. Rincón?</h4>
+    <p class="text-lg leading-relaxed text-muted-foreground">Agenda hoy mismo tu consulta de valoración y descubre por qué tantos profesionales de la salud confían en la experiencia del Dr. Jonathan Rincón para su formación y tratamientos.</p>
+  </div>
+</article>
+`
     },
     en: {
-      title: 'HArmonyCa: Why Dr. Rincón is the Professional Other Doctors Learn From?',
+      title: 'HArmonyCa: Why is Dr. Rincón the Professional Other Doctors Learn From?',
       category: 'Biostimulators',
-      date: 'March 26, 2026',
-      readTime: '9 min read',
+      date: 'March 27, 2026',
+      readTime: '8 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('harmonica'),
-      description: 'Discover what makes Dr. Jonathan Rincón an authorized Allergan trainer and how he guarantees your safety in every HArmonyCa treatment.',
+      image: findImage('blog-harmonyca-dr-rincon'),
+      description: 'Discover why Dr. Jonathan Rincón is recognized as a trainer and reference in advanced HArmonyCa injection techniques in Colombia.',
       content: `
-        <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
-          
-          <div class="max-w-3xl mx-auto space-y-6">
-            <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
-              In the world of aesthetic medicine, not all treatments are created equal, and most importantly, not all injectables are applied the same way. When it comes to a premium innovation like <strong>HArmonyCa</strong>, the difference between a natural, breathtaking result and an average one lies in two fundamental pillars: the injector's expertise and the safety protocols in place.<br><br>In this article, I will explain what it means to be an official Allergan Trainer in Colombia and how this guarantees your safety and stellar results when you choose my practice.
-            </p>
-          </div>
+<article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
+  <div class="max-w-3xl mx-auto space-y-8">
+    <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
+      In the competitive world of aesthetic medicine, not every professional reaches the level of excellence that makes them a reference for their colleagues. <strong>Dr. Jonathan Rincón</strong> has positioned himself as one of the most sought-after physicians in Medellin, not only by his patients but also by other professionals who want to perfect their injection techniques.
+    </p>
+  </div>
 
-          <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
-            <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-              <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden">
-                <img src="/images/harmonyca-principal.png" alt="HarmonyCa Treatment" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
-              </div>
-            </div>
-            <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
-              Advanced Clinical Training in Safe Injection Techniques.
-            </figcaption>
-          </figure>
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/grok-image-156de948-9dcc-4db6-a574-e7b11ce87847.jpg" alt="Dr. Jonathan Rincón" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      Dr. Jonathan Rincón, reference in advanced aesthetic medicine and professional training.
+    </figcaption>
+  </figure>
 
-          <div class="max-w-3xl mx-auto space-y-8">
-            <h2 class="text-2xl md:text-4xl font-light text-foreground mb-6 flex items-center gap-4">
-              <span class="w-12 h-px bg-primary hidden md:block"></span>
-              What Does Being an "Allergan Trainer" Mean?
-            </h2>
-            <p class="text-lg leading-relaxed text-muted-foreground">Allergan Aesthetics—the maker of iconic brands like Botox®, Juvéderm®, and HArmonyCa™—carefully handpicks physicians to lead their advanced training programs. It's not enough to be a skilled injector; you must possess a profound mastery of facial anatomy, flawless technique, and the ability to mentor other doctors.</p>
-            <p class="text-lg leading-relaxed text-muted-foreground"><strong>Being an Allergan Trainer is not simply an honorary title</strong>; it is a continuous responsibility requiring medical excellence.</p>
-            
-            <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
-              <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Continuous advanced training on safety protocols and new techniques.</span>
-              </li><li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Demonstrating consistently predictable and superior patient results.</span>
-              </li><li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Comprehensive and advanced facial assessment skills.</span>
-              </li><li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-                <span>Mastery over the latest technological trends in aesthetics.</span>
-              </li>
-            </ul>
-          </div>
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> Advanced Clinical Training in Safe Injection Techniques
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">What sets Dr. Rincón apart is not only his clinical skill but his unwavering commitment to safety and technical excellence. His continuous training and participation in international workshops have allowed him to master the most advanced injection techniques with hybrid biostimulators like HArmonyCa.</p>
+    
+    <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+      <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+        <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+          <img src="/images/Bioestimuladores_Uso_General_3.jpg" alt="Advanced Clinical Training" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+        </div>
+      </div>
+      <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+        Advanced clinical training in safe injection techniques.
+      </figcaption>
+    </figure>
 
-          <div class="max-w-3xl mx-auto space-y-8 mt-20">
-            <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
-              The Value of a Highly Trained Professional
-            </h2>
-            <p class="text-lg leading-relaxed text-muted-foreground">Choosing a doctor vetted and trained by the brand guarantees that your face is handled with state-of-the-art technical knowledge. I don't just inject; I deeply understand the cellular interaction between hyaluronic acid and calcium hydroxylapatite.</p>
-            <div class="grid md:grid-cols-2 gap-6 mt-8">
-              <div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Determining the exact anatomical injection depth for each facial quadrant.</p>
-              </div><div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Calculating the perfect vector of traction for a natural lifting effect.</p>
-              </div><div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Customizing precise dosages according to individual patient anatomy.</p>
-              </div><div class="p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 hover:border-primary/30 transition-colors">
-                <p class="text-base text-slate-600 dark:text-slate-400">Utilizing advanced micro-cannula techniques to minimize bruising and downtime.</p>
-              </div>
-            </div>
-          </div>
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Deep Facial Anatomy:</strong> Thorough knowledge of facial planes, blood vessels, and nerves to avoid complications.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Retrograde Injection Technique:</strong> Mastery of linear retrograde injection for uniform product distribution.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Blunt-Tip Cannula Use:</strong> Minimizing the risk of bruising and tissue trauma.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Personalized Assessment:</strong> Detailed analysis of each face to design a unique treatment plan.</span>
+      </li>
+    </ul>
+  </div>
 
-          <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-20 group">
-            <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-              <div class="aspect-[4/3] md:aspect-[16/6] w-full relative overflow-hidden">
-                <img src="/images/harmonyca-info.png" alt="Facial Assessment" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent mix-blend-overlay"></div>
-              </div>
-            </div>
-            <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
-              Natural, immediate results that improve progressively over time.
-            </figcaption>
-          </figure>
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      Why Do Other Doctors Learn from Dr. Rincón?
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Dr. Rincón not only performs treatments impeccably; he also shares his knowledge with the medical community. His pedagogical approach and practical experience have made him a sought-after trainer at aesthetic medicine workshops and conferences.</p>
+    
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Predictable Results:</strong> Consistency in results builds trust among patients and colleagues.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Safety First:</strong> Strict protocols that minimize risks and maximize patient satisfaction.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Natural Approach:</strong> Prioritizing facial harmony and results that enhance beauty without altering identity.</span>
+      </li>
+    </ul>
+  </div>
 
-          <div class="max-w-3xl mx-auto space-y-12">
-            <div class="space-y-6">
-              <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
-                <span class="w-12 h-px bg-primary hidden md:block"></span>
-                Safety and Authenticity Above All
-              </h2>
-              <p class="text-lg leading-relaxed text-muted-foreground">Transparency is vital before any procedure. HArmonyCa is an Allergan Aesthetics product, and its authenticity is your first line of safety.</p>
-            </div>
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca.jpg" alt="HArmonyCa Results" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
+      </div>
+    </div>
+  </figure>
 
-            <div class="relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30">
-              <div class="absolute top-0 right-0 p-8 opacity-10">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
-              </div>
-              <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">Red Flags You Shouldn't Ignore</h3>
-              <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">Be wary of suspiciously low prices, uncertified clinics, or practitioners who rush through your initial clinical assessment.</p>
-            </div>
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> Natural and Immediate Results That Progressively Improve Over Time
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">One of the most outstanding advantages of HArmonyCa is its ability to offer results that go beyond the immediate effect. Thanks to the combination of hyaluronic acid and calcium hydroxylapatite, the treatment not only provides instant volume but also stimulates the production of natural collagen.</p>
+    
+    <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Immediate Effect:</strong> Hyaluronic acid provides volume and hydration from the first moment.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Progressive Improvement:</strong> Calcium hydroxylapatite stimulates neocollagenesis, improving skin firmness and quality month by month.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Long-Lasting Results:</strong> Effects can last between 12 and 24 months, depending on lifestyle and skincare.</span>
+      </li>
+      <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
+        <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
+        <span><strong>Natural Appearance:</strong> The final result is a rejuvenated face that maintains its natural expressions.</span>
+      </li>
+    </ul>
+  </div>
 
-            <div class="space-y-6">
-              <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
-                Safety Protocols in My Practice
-              </h2>
-              <p class="text-lg leading-relaxed text-muted-foreground">As a clinical opinion leader committed to medical ethics, my practice operates under strict procedural rigor. A personalized assessment is the most crucial first step, followed by an impeccable aseptic technique using blunt-tip cannulas to minimize soft tissue trauma.</p>
-            </div>
+  <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
+    <div class="absolute top-0 right-0 p-8 opacity-10">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+    </div>
+    <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">Commitment to Excellence</h3>
+    <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">Dr. Rincón stays updated with the latest trends and technologies in aesthetic medicine, attending international conferences and participating in clinical research. His dedication to continuous training ensures that his patients always receive the most advanced and safe treatments.</p>
+  </div>
 
-            <div class="pt-8 border-t border-slate-200 dark:border-slate-800">
-              <h2 class="text-2xl font-medium text-foreground mb-4">Your Safe Transformation</h2>
-              <p class="text-lg leading-relaxed text-muted-foreground">Don't leave your face in just anyone's hands. The difference between a standardized treatment and an exceptional one lies in the training, experience, and commitment of your doctor. I am here to guide you toward a rejuvenated appearance with a sublime, risk-free experience.</p>
-            </div>
-          </div>
-        </article>
-  `
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      Choose Excellence for Your Treatment
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">When you choose Dr. Jonathan Rincón, you not only choose a professional with years of experience but also a doctor committed to training and continuous improvement. His reputation as a trainer for other doctors is testament to his expertise and dedication to the field of aesthetic medicine.</p>
+    
+    <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
+      <p>"True excellence in aesthetic medicine is not only measured by the results you achieve, but by the difference you make in your patients' lives and in the training of your colleagues."</p>
+    </blockquote>
+
+    <h4 class="text-xl font-medium text-foreground mt-8 mb-4">Ready to experience the Dr. Rincón difference?</h4>
+    <p class="text-lg leading-relaxed text-muted-foreground">Schedule your assessment consultation today and discover why so many healthcare professionals trust Dr. Jonathan Rincón's experience for their training and treatments.</p>
+  </div>
+</article>
+`
     }
   }
 };

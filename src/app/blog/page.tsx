@@ -57,9 +57,9 @@ export default function BlogPage() {
     };
   }).sort((a, b) => b.parsedDate - a.parsedDate);
 
-  const featuredPostData = POSTS['harmonyca-experto-y-seguridad'][lang];
+  const featuredPostData = POSTS['harmonyca-dr-rincon-profesional'][lang];
   const featuredPost = {
-    slug: '/blog/harmonyca-experto-y-seguridad',
+    slug: '/blog/harmonyca-dr-rincon-profesional',
     image: featuredPostData.image,
     title: featuredPostData.title,
     description: featuredPostData.description || featuredPostData.content.match(/<p class="lead">(.*?)<\/p>/)?.[1] || '',
@@ -67,7 +67,7 @@ export default function BlogPage() {
     readTime: featuredPostData.readTime,
   };
   
-  const regularPosts = allPosts.filter(p => p.originalSlug !== 'harmonyca-experto-y-seguridad');
+  const regularPosts = allPosts.filter(p => p.originalSlug !== 'harmonyca-dr-rincon-profesional');
 
 
   const content = {

@@ -16,7 +16,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'hilos-cta', src: '/images/Hilos Tensores.png', hint: 'doctor patient consultation' },
   
   // Hilos Tensores - Thread Types
-  { id: 'hilos-lisos', src: '/images/quitar_puas.png', hint: 'smooth threads illustration' },
+  { id: 'hilos-lisos', src: '/images/Hilo_Mono.png', hint: 'smooth threads illustration' },
   { id: 'hilos-cog', src: '/images/Hilo Espiculado.png', hint: 'cog threads illustration' },
 
   // Hilos Tensores - Advanced Applications & Benefits
@@ -112,7 +112,8 @@ export const IMAGES: SiteImage[] = [
   { id: 'blog-bioestimuladores-uso-1', src: '/images/Bioestimuladores_Uso_General_1.jpg', hint: 'Bioestimuladores Uso 1' },
   { id: 'blog-bioestimuladores-uso-2', src: '/images/Bioestimuladores_Uso_General_2.jpg', hint: 'Bioestimuladores Uso 2' },
   { id: 'blog-bioestimuladores-uso-3', src: '/images/Bioestimuladores_Uso_General_3.jpg', hint: 'Bioestimuladores Uso 3' },
-
+  { id: 'blog-harmonyca-dr-rincon', src: '/images/grok-image-156de948-9dcc-4db6-a574-e7b11ce87847.jpg', hint: 'Dr. Jonathan Rincón' },
+  { id: 'blog-harmonyca-resultados', src: '/images/harmonyca.jpg', hint: 'HArmonyCa Resultados' },
 
   // Home Page
   { id: 'home-testimonial-1', src: '/images/Modelo 6.jpg', hint: 'facial procedure' },
