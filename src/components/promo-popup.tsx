@@ -10,17 +10,17 @@ import { useLanguage } from '@/context/language-context';
 export function PromoPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showSoonBanner, setShowSoonBanner] = useState(false);
   const { lang } = useLanguage();
 
   useEffect(() => {
     const hasSeenPopup = sessionStorage.getItem('hasSeenPromoPopup');
     if (!hasSeenPopup) {
-      // Pequeño delay para que no interrumpa la carga inicial
       const timer = setTimeout(() => {
         setIsOpen(true);
         setIsAnimating(true);
         document.body.style.overflow = 'hidden';
-      }, 800);
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -31,6 +31,9 @@ export function PromoPopup() {
       setIsOpen(false);
       document.body.style.overflow = '';
       sessionStorage.setItem('hasSeenPromoPopup', 'true');
+      
+      // Mostrar el banner de "Próximamente" después de cerrar el popup
+      setShowSoonBanner(true);
     }, 400);
   };
 
@@ -44,6 +47,8 @@ export function PromoPopup() {
       secondary: 'de descuento',
       label: 'Cupos Limitados',
       cta: 'Agendar Ahora',
+      soonTitle: 'Próximamente...',
+      soonSubtitle: 'Nuevos Tratamientos Corporales',
     },
     en: {
       tag: 'Exclusive Promotion',
@@ -54,6 +59,8 @@ export function PromoPopup() {
       secondary: 'discount',
       label: 'Limited Spots',
       cta: 'Book Now',
+      soonTitle: 'Coming Soon...',
+      soonSubtitle: 'New Corporal Treatments',
     }
   };
 
@@ -65,10 +72,8 @@ export function PromoPopup() {
       {(isOpen || isAnimating) && (
         <div
           className={cn(
-            // Fondo: en móvil alinea al fondo (bottom sheet), en desktop centra
             "fixed inset-0 z-[2000] flex items-end md:items-center justify-center",
-            "bg-black/70 backdrop-blur-sm transition-all duration-400",
-            // Sin padding lateral en móvil para que ocupe todo el ancho
+            "bg-black/75 backdrop-blur-md transition-all duration-500",
             "p-0 md:p-6",
             isAnimating ? "opacity-100 visible" : "opacity-0 invisible"
           )}
@@ -77,123 +82,173 @@ export function PromoPopup() {
           <div
             className={cn(
               "promo-glass w-full md:max-w-5xl",
-              // En móvil: esquinas arriba redondeadas (bottom sheet)
-              "rounded-t-[1.5rem] md:rounded-[2rem]",
-              "overflow-hidden shadow-2xl transform transition-all duration-500",
-              // Animación: sube desde abajo en móvil, escala en desktop
+              "rounded-t-[2rem] md:rounded-[2.5rem]",
+              "overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] transform transition-all duration-700",
               isAnimating
                 ? "translate-y-0 opacity-100 md:scale-100"
-                : "translate-y-full opacity-0 md:translate-y-0 md:scale-110"
+                : "translate-y-[100%] opacity-0 md:translate-y-0 md:scale-105"
             )}
           >
-            {/* ── Drag Handle (solo móvil) ── */}
-            <div className="flex justify-center pt-3 pb-1 md:hidden">
-              <div className="w-10 h-1 rounded-full bg-slate-300/60" />
+            {/* Handle móvil */}
+            <div className="flex justify-center pt-4 pb-2 md:hidden">
+              <div className="w-12 h-1.5 rounded-full bg-slate-300/40" />
             </div>
 
-            <div className="relative flex flex-col md:flex-row max-h-[88vh] md:max-h-[88vh] overflow-y-auto md:overflow-visible">
-
-              {/* ── Botón cerrar ── */}
+            <div className="relative flex flex-col md:flex-row max-h-[92vh] md:max-h-none overflow-y-auto md:overflow-visible bg-white dark:bg-slate-950">
+              
+              {/* Cerrar */}
               <button
                 onClick={closePromo}
-                className="absolute top-3 right-3 md:top-5 md:right-5 z-30 p-2 md:p-3 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md transition-all hover:rotate-90"
-                aria-label="Cerrar"
+                className="absolute top-4 right-4 md:top-6 md:right-6 z-40 p-2.5 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-xl transition-all hover:rotate-90"
               >
-                <X className="w-4 h-4 md:w-5 md:h-5" />
+                <X className="w-5 h-5" />
               </button>
 
-              {/* ── Imagen ─────────────────────────────────────────── */}
-              {/* Móvil: landscape 16:9 | Desktop: columna fija 450px */}
-              <div className="w-full md:w-[450px] shrink-0 relative overflow-hidden bg-slate-100 group">
-                {/* Wrapper de aspecto: 16/9 en móvil, cuadrado-alto en desktop */}
-                <div className="relative aspect-[16/9] md:aspect-auto md:h-full min-h-0 md:min-h-[420px]">
+              {/* ── Columna Imágenes (Izq) ────────────────────────── */}
+              <div className="w-full md:w-[480px] shrink-0 flex flex-col overflow-hidden bg-slate-100 dark:bg-slate-900 border-r border-slate-200/20">
+                
+                {/* Imagen 1: Principal */}
+                <div className="relative aspect-[4/3] w-full overflow-hidden group">
                   <Image
                     src="/images/harmonyca.jpg"
-                    alt="HArmonyCa - Promoción 30% Descuento"
+                    alt="HArmonyCa Principal"
                     fill
-                    className="object-cover transition-transform duration-[15s] group-hover:scale-105"
+                    className="object-cover transition-all duration-[10s] group-hover:scale-110"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-
-                  {/* Badge flotante sobre la imagen */}
-                  <div className="absolute bottom-3 left-3 flex items-center gap-1.5">
-                    <span className="bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full shadow-lg">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  
+                  {/* Badge sobre imagen 1 */}
+                  <div className="absolute bottom-4 left-4">
+                    <span className="bg-primary/95 text-white text-[10px] font-bold uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full shadow-2xl backdrop-blur-md">
                       {t.label}
                     </span>
                   </div>
+                </div>
+
+                {/* Imagen 2: Secundaria */}
+                <div className="relative aspect-[4/2] w-full overflow-hidden group border-t border-white/10">
+                  <Image
+                    src="/images/harmonyca-ovalo.png"
+                    alt="Redefinición Facial"
+                    fill
+                    className="object-cover transition-all duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent opacity-50" />
                 </div>
               </div>
 
-              {/* ── Contenido ──────────────────────────────────────── */}
-              <div className="flex-grow p-5 md:p-10 flex flex-col justify-center gap-3 md:gap-5 bg-white/5">
-
-                {/* Tag */}
-                <div className="flex items-center gap-2">
-                  <div className="h-px w-5 bg-primary" />
-                  <span className="text-primary text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
-                    {t.tag}
-                  </span>
-                </div>
-
-                {/* Título */}
-                <h3 className="text-2xl md:text-5xl font-medium text-slate-900 dark:text-white leading-[1.1] tracking-tight">
-                  {t.title}{' '}
-                  <span className="italic text-primary font-light">{t.subtitle}</span>
-                </h3>
-
-                {/* Descripción — oculta en móvil para no saturar */}
-                <p className="hidden md:block text-base md:text-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed max-w-md">
-                  {t.description}
-                </p>
-
-                {/* Descuento */}
-                <div className="flex items-center gap-3">
-                  <span className="text-4xl md:text-5xl font-bold text-primary leading-none">
-                    {t.highlight}
-                  </span>
-                  <div>
-                    <span className="block text-xs uppercase tracking-widest text-slate-500 font-light">
-                      {t.secondary}
-                    </span>
-                    <span className="block text-[10px] uppercase tracking-widest text-primary font-bold">
-                      {t.label}
+              {/* ── Columna Contenido (Der) ────────────────────────── */}
+              <div className="flex-grow p-6 md:p-12 flex flex-col justify-center gap-4 md:gap-7 relative overflow-hidden">
+                {/* Decoración fondo */}
+                <div className="absolute -top-12 -right-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+                
+                <div className="relative z-10 space-y-4 md:space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="h-[2px] w-8 bg-primary/60" />
+                    <span className="text-primary text-[11px] md:text-sm font-bold tracking-[0.25em] uppercase">
+                      {t.tag}
                     </span>
                   </div>
+
+                  <div className="space-y-1">
+                    <h3 className="text-3xl md:text-6xl font-headline font-bold text-slate-900 dark:text-white leading-[1.05] tracking-tight">
+                      {t.title}
+                    </h3>
+                    <p className="text-xl md:text-2xl italic text-primary/80 font-light font-headline">
+                      {t.subtitle}
+                    </p>
+                  </div>
+
+                  <p className="text-slate-600 dark:text-slate-300 font-light leading-relaxed max-w-lg text-base md:text-lg">
+                    {t.description}
+                  </p>
+
+                  <div className="flex items-center gap-5 pt-2">
+                    <div className="flex flex-col items-center justify-center p-4 bg-primary text-white rounded-2xl shadow-xl min-w-[100px]">
+                      <span className="text-4xl md:text-5xl font-bold font-headline">{t.highlight}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest opacity-80 mt-[-4px]">OFF</span>
+                    </div>
+                    <div>
+                      <span className="block text-sm md:text-base text-slate-500 font-medium uppercase tracking-[0.1em]">
+                        {t.secondary}
+                      </span>
+                      <span className="block text-xs text-primary font-bold uppercase tracking-widest mt-1">
+                        Válido esta semana
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 flex flex-col space-y-4">
+                    <a
+                      href="https://wa.me/573122784757"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative overflow-hidden bg-primary text-white text-center py-4 md:py-5 rounded-2xl text-sm md:text-base font-bold uppercase tracking-[0.2em] transition-all duration-500 shadow-[0_12px_32px_-8px_rgba(13,44,72,0.4)] hover:shadow-[0_20px_48px_-12px_rgba(13,44,72,0.5)] hover:-translate-y-1"
+                    >
+                      <span className="relative z-10 flex items-center justify-center gap-3">
+                        <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
+                        {t.cta}
+                      </span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-[1200ms] cubic-bezier(0.4, 0, 0.2, 1)" />
+                    </a>
+                    
+                    <button
+                      onClick={closePromo}
+                      className="text-[10px] md:text-xs text-slate-400 hover:text-primary transition-colors uppercase tracking-widest font-semibold text-center"
+                    >
+                      Quizás en otro momento
+                    </button>
+                  </div>
                 </div>
-
-                {/* Descripción móvil (versión compacta) */}
-                <p className="md:hidden text-sm text-slate-600 dark:text-slate-300 font-light leading-relaxed">
-                  Bioestimulación avanzada. Resultados naturales e inmediatos.
-                </p>
-
-                {/* CTA */}
-                <a
-                  href="https://wa.me/573122784757"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative overflow-hidden bg-primary text-white text-center py-3.5 md:py-4 rounded-xl text-sm font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] transition-all duration-500 shadow-lg hover:bg-primary/90 hover:-translate-y-0.5 mt-1"
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    <MessageCircle className="w-4 h-4" />
-                    {t.cta}
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                </a>
-
-                {/* Skip link */}
-                <button
-                  onClick={closePromo}
-                  className="text-xs text-slate-400 hover:text-slate-600 transition-colors text-center mt-1"
-                >
-                  No, gracias
-                </button>
               </div>
             </div>
           </div>
         </div>
       )}
 
+      {/* ─── Banner "Próximamente" ───────────────────────────────── */}
+      {showSoonBanner && (
+        <div className="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[2000] w-full max-w-[320px] px-4 md:px-0">
+          <div className="animate-slide-up bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden shadow-primary/20">
+            <div className="flex items-center gap-4 p-4">
+              <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden border border-white/10">
+                <Image
+                  src="/images/Experto_Hilos_tensores.png"
+                  alt="Dr. Jonathan Rincón"
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="flex-grow">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] text-primary font-bold uppercase tracking-widest bg-primary/10 px-2 py-0.5 rounded-md">
+                    NEW EXPERTISE
+                  </span>
+                  <button 
+                    onClick={() => setShowSoonBanner(false)}
+                    className="text-white/40 hover:text-white transition-colors"
+                  >
+                    <X className="w-3 h-3" />
+                  </button>
+                </div>
+                <h4 className="text-white font-headline font-bold text-sm mt-1">
+                  {t.soonTitle}
+                </h4>
+                <p className="text-white/60 text-[11px] leading-tight mt-0.5">
+                  {t.soonSubtitle}
+                </p>
+              </div>
+            </div>
+            
+            {/* Barra de progreso decorativa */}
+            <div className="h-1 w-full bg-white/5">
+              <div className="h-full w-2/3 bg-primary animate-pulse" />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

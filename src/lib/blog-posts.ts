@@ -21,8 +21,8 @@ export const POSTS: { [key: string]: any } = {
 
   <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
     <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-        <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+      <div class="w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
       </div>
     </div>
@@ -84,8 +84,8 @@ export const POSTS: { [key: string]: any } = {
 
   <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
     <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-        <img src="/images/harmonyca-arquitectura-2.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+      <div class="w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-2.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
       </div>
     </div>
@@ -134,8 +134,8 @@ export const POSTS: { [key: string]: any } = {
 
   <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
     <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-        <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+      <div class="w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
       </div>
     </div>
@@ -197,8 +197,8 @@ export const POSTS: { [key: string]: any } = {
 
   <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
     <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-      <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-        <img src="/images/harmonyca-arquitectura-2.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+      <div class="w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/harmonyca-arquitectura-2.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
       </div>
     </div>
@@ -249,8 +249,8 @@ export const POSTS: { [key: string]: any } = {
 
       <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
         <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-          <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-            <img src="/images/harmonyca-principal.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="w-full relative overflow-hidden flex items-center justify-center">
+            <img src="/images/harmonyca-principal.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
           </div>
         </div>
@@ -402,8 +402,8 @@ export const POSTS: { [key: string]: any } = {
 
       <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
         <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
-          <div class="aspect-[16/9] md:aspect-[21/9] w-full relative overflow-hidden flex items-center justify-center">
-            <img src="/images/harmonyca-principal.png" alt="Blog Image" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+          <div class="w-full relative overflow-hidden flex items-center justify-center">
+            <img src="/images/harmonyca-principal.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
           </div>
         </div>

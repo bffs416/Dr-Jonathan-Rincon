@@ -58,17 +58,15 @@ export default function BlogPostContent({ postData }: { postData: any }) {
 
   return (
     <div>
-      <section className="relative h-[40vh] md:h-[50vh] w-full bg-slate-900">
+      <section className="relative w-full bg-slate-900 overflow-hidden">
         {post.image && (
-          <Image
-            src={post.image.src}
-            alt={post.title}
-            fill
-            className="object-cover animate-none transition-none shadow-2xl"
-            data-ai-hint={post.image.hint}
-            priority
-            loading="eager"
-          />
+          <div className="relative w-full">
+            <img
+              src={post.image.src}
+              alt={post.title}
+              className="w-full h-auto block"
+            />
+          </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0">

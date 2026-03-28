@@ -14,7 +14,7 @@ export default function Footer() {
 
   const content = {
     es: {
-      tagline: 'Especialista #1 en hilos tensores faciales y corporales en Medellín.',
+      tagline: 'Especialista #1 en hilos tensores faciales, corporales y HArmonyCa en Medellín.',
       description: 'Tratamientos estéticos avanzados con tecnología de vanguardia y resultados garantizados.',
       navigation: 'Navegación',
       home: 'Inicio',
@@ -33,7 +33,7 @@ Sáb: 8:00 AM - 2:00 PM`,
       copyright: `© ${new Date().getFullYear()} Dr. Jonathan Rincón. Todos los derechos reservados. Diseñado por`,
     },
     en: {
-      tagline: '#1 Specialist in facial and body thread lifts in Medellín.',
+      tagline: '#1 Specialist in facial, body thread lifts and HArmonyCa in Medellín.',
       description: 'Advanced aesthetic treatments with cutting-edge technology and guaranteed results.',
       navigation: 'Navigation',
       home: 'Home',

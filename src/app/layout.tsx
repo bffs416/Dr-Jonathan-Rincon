@@ -79,7 +79,7 @@ export default function RootLayout({
               "name": "Dr. Jonathan Rincón",
               "url": "https://www.drjonathanrincon.com",
               "image": "https://www.drjonathanrincon.com/images/Experto-hilos-tensores-faciales.png",
-              "description": "Médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores faciales en Medellín y Bogotá, con más de 8 años de experiencia y más de 1000 pacientes satisfechos.",
+              "description": "Médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores faciales, corporales y HArmonyCa en Medellín y Bogotá, con más de 8 años de experiencia y más de 1000 pacientes satisfechos.",
               "medicalSpecialty": "Aesthetic Medicine",
               "telephone": "+573122784757",
               "address": {
