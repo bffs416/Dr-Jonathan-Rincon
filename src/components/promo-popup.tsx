@@ -48,7 +48,7 @@ export function PromoPopup() {
       label: 'Cupos Limitados',
       cta: 'Agendar Ahora',
       soonTitle: 'Próximamente...',
-      soonSubtitle: 'Nuevos Tratamientos Corporales',
+      soonSubtitle: 'Nuevo Producto',
     },
     en: {
       tag: 'Exclusive Promotion',
@@ -60,7 +60,7 @@ export function PromoPopup() {
       label: 'Limited Spots',
       cta: 'Book Now',
       soonTitle: 'Coming Soon...',
-      soonSubtitle: 'New Corporal Treatments',
+      soonSubtitle: 'New Product',
     }
   };
 
