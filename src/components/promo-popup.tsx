@@ -10,7 +10,6 @@ import { useLanguage } from '@/context/language-context';
 export function PromoPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [showSoon, setShowSoon] = useState(false);
   const { lang } = useLanguage();
 
   useEffect(() => {
@@ -32,7 +31,6 @@ export function PromoPopup() {
       setIsOpen(false);
       document.body.style.overflow = '';
       sessionStorage.setItem('hasSeenPromoPopup', 'true');
-      setShowSoon(true);
     }, 400);
   };
 
@@ -46,9 +44,6 @@ export function PromoPopup() {
       secondary: 'de descuento',
       label: 'Cupos Limitados',
       cta: 'Agendar Ahora',
-      soonTag: 'Próximamente',
-      soonTitle: 'Nuevo Tratamiento',
-      soonSubtitle: 'Innovación en Medicina Estética',
     },
     en: {
       tag: 'Exclusive Promotion',
@@ -59,9 +54,6 @@ export function PromoPopup() {
       secondary: 'discount',
       label: 'Limited Spots',
       cta: 'Book Now',
-      soonTag: 'Coming Soon',
-      soonTitle: 'New Treatment',
-      soonSubtitle: 'Aesthetic Medicine Innovation',
     }
   };
 
@@ -202,44 +194,6 @@ export function PromoPopup() {
         </div>
       )}
 
-      {/* ─── Banner Secundario "Próximamente" ────────────────────── */}
-      {showSoon && (
-        <div className="fixed bottom-0 left-0 right-0 z-[1999] p-3 md:p-5 flex justify-center animate-slide-up">
-          <div className="relative w-full max-w-xl aspect-[21/9] md:aspect-[21/7] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
-            <Image
-              src="/images/Sin título.jpg"
-              alt="Próximamente - Nuevo Tratamiento"
-              fill
-              className="object-cover transition-transform duration-[15s] group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-            {/* Botón cerrar en el banner */}
-            <button
-              onClick={() => setShowSoon(false)}
-              className="absolute top-2 right-2 z-10 p-1.5 rounded-full bg-black/40 text-white hover:bg-black/60 transition-all"
-              aria-label="Cerrar banner"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center px-4">
-                <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-2">
-                  {t.soonTag}
-                </span>
-                <h3 className="text-lg md:text-3xl font-medium text-white leading-tight tracking-tight">
-                  {t.soonTitle}
-                  <br />
-                  <span className="italic font-light opacity-90 text-base md:text-2xl">
-                    {t.soonSubtitle}
-                  </span>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }
