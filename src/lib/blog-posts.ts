@@ -23,7 +23,6 @@ export const POSTS: { [key: string]: any } = {
     <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
       <div class="w-full relative overflow-hidden flex items-center justify-center">
         <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
       </div>
     </div>
     <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
@@ -136,7 +135,6 @@ export const POSTS: { [key: string]: any } = {
     <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
       <div class="w-full relative overflow-hidden flex items-center justify-center">
         <img src="/images/harmonyca-arquitectura-1.png" alt="Blog Image" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
       </div>
     </div>
     <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">

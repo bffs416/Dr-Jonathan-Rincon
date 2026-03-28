@@ -147,17 +147,16 @@ export default function BlogPage() {
 
       <div className="mt-16">
         <Card className="overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] lg:aspect-auto">
-            {featuredPost.image && (
-              <Image
-                src={featuredPost.image.src}
-                alt={featuredPost.title}
-                fill
-                className="object-cover animate-fade-in duration-500"
-                data-ai-hint={featuredPost.image.hint}
-              />
-            )}
-          </div>
+            <div className="relative bg-muted/10 flex items-center justify-center">
+              {featuredPost.image && (
+                <img
+                  src={featuredPost.image.src}
+                  alt={featuredPost.title}
+                  className="w-full h-auto block animate-fade-in duration-500"
+                  data-ai-hint={featuredPost.image.hint}
+                />
+              )}
+            </div>
           <div className="p-8 md:p-12 flex flex-col">
             <div>
               <Badge variant="default">{currentContent.featuredBadge}</Badge>
@@ -196,13 +195,12 @@ export default function BlogPage() {
             className="flex flex-col overflow-hidden shadow-lg transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
           >
             <CardHeader className="p-0 relative">
-              <Link href={post.slug} className="block aspect-[3/2] relative">
+              <Link href={post.slug} className="block relative bg-muted/10">
                 {post.image && (
-                  <Image
+                  <img
                     src={post.image.src}
                     alt={post.title}
-                    fill
-                    className="object-cover animate-fade-in duration-500"
+                    className="w-full h-auto block animate-fade-in duration-500 rounded-t-xl"
                     data-ai-hint={post.image.hint}
                   />
                 )}
