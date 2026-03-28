@@ -68,7 +68,8 @@ export default function BlogPostContent({ postData }: { postData: any }) {
             />
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+        {/* Subtle overlay only if needed, but removed for direct visibility */}
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0">
           <div className="container mx-auto px-4 py-8 md:py-12 text-white">
             <Badge variant="secondary">{post.category}</Badge>
