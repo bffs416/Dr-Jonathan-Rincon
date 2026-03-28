@@ -210,9 +210,18 @@ export function PromoPopup() {
 
       {/* ─── Banner "Próximamente" ───────────────────────────────── */}
       {showSoonBanner && (
-        <div className="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[2000] w-full max-w-[320px] px-4 md:px-0">
-          <div className="animate-slide-up bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden shadow-primary/20">
-            <div className="flex items-center gap-4 p-4">
+        <div className="fixed bottom-24 right-6 md:bottom-8 md:right-8 z-[2000] w-[calc(100%-3rem)] max-w-[320px] md:px-0">
+          <div className="animate-slide-up bg-slate-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden shadow-primary/20 relative">
+            {/* Botón cerrar – zona táctil amplia para móvil */}
+            <button 
+              onClick={(e) => { e.stopPropagation(); setShowSoonBanner(false); }}
+              className="absolute top-2 right-2 z-10 flex items-center justify-center w-8 h-8 min-w-[44px] min-h-[44px] rounded-full bg-white/10 hover:bg-white/25 active:bg-white/30 text-white/60 hover:text-white transition-all duration-200"
+              aria-label="Cerrar banner"
+            >
+              <X className="w-4 h-4" />
+            </button>
+
+            <div className="flex items-center gap-4 p-4 pr-14">
               <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden border border-white/10">
                 <Image
                   src="/images/Experto_Hilos_tensores.png"
@@ -222,17 +231,9 @@ export function PromoPopup() {
                 />
               </div>
               <div className="flex-grow">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] text-primary font-bold uppercase tracking-widest bg-primary/10 px-2 py-0.5 rounded-md">
-                    NEW EXPERTISE
-                  </span>
-                  <button 
-                    onClick={() => setShowSoonBanner(false)}
-                    className="text-white/40 hover:text-white transition-colors"
-                  >
-                    <X className="w-3 h-3" />
-                  </button>
-                </div>
+                <span className="text-[10px] text-primary font-bold uppercase tracking-widest bg-primary/10 px-2 py-0.5 rounded-md inline-block">
+                  NEW EXPERTISE
+                </span>
                 <h4 className="text-white font-headline font-bold text-sm mt-1">
                   {t.soonTitle}
                 </h4>
