@@ -62,12 +62,13 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        <title>Dr. Jonathan Rincón | Medicina Estética en Medellín - Hilos Tensores, Botox y Más</title>
+        <title>Dr. Jonathan Rincón | Medicina Estética en Medellín - Hilos Tensores y HArmonyCa</title>
         <meta
           name="description"
-          content="Dr. Jonathan Rincón, médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores, bioestimuladores de colágeno, botox y contorno corporal. +1000 pacientes satisfechos. Agenda tu cita."
+          content="Dr. Jonathan Rincón, médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores, lifting con HArmonyCa, botox y contorno corporal. +1000 pacientes satisfechos."
         />
         <meta name="google-site-verification" content="googledd9a1b76f2d2f3f3" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         
         {/* Schema.org JSON-LD Structured Data for Google AI */}
         <script

@@ -10,6 +10,9 @@ export type SiteImage = {
 };
 
 export const IMAGES: SiteImage[] = [
+  // HArmonyCa Page
+  { id: 'harmonyca-hero', src: '/images/harmonyca.jpg', hint: 'HArmonyCa treatment' },
+
   // Hilos Tensores Page
   { id: 'hilos-hero', src: '/images/Dr_Jhonathan_Rincon.jpg', hint: 'aesthetic clinic' },
   { id: 'hilos-what-are', src: '/images/mujer_rubia_primer_plano_mano_mejilla.png', hint: 'facial treatment' },

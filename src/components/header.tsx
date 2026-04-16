@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Facebook, Instagram, Menu, X, Award, Search, Moon, MessageCircle } from 'lucide-react';
+import { Facebook, Instagram, Menu, X, Search, Moon, MessageCircle } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -44,13 +44,13 @@ export default function Header() {
     es: {
       navLinks: [
         { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
+        { name: 'HArmonyCa', href: '/harmonyca', highlight: true },
         {
           name: 'Tratamientos',
           dropdown: [
             { name: 'Bioestimuladores', href: '/bioestimuladores' },
             { name: 'Botox', href: '/botox' },
             { name: 'Contorno Corporal', href: '/contorno-corporal' },
-            { name: 'HArmonyCa', href: '/medicina-estetica-avanzada' },
             { name: 'Medicina Estética Avanzada', href: '/medicina-estetica-avanzada' },
           ],
         },
@@ -66,13 +66,13 @@ export default function Header() {
     en: {
       navLinks: [
         { name: 'Thread Lifts', href: '/hilos-tensores', highlight: true },
+        { name: 'HArmonyCa', href: '/harmonyca', highlight: true },
         {
           name: 'Treatments',
           dropdown: [
             { name: 'Biostimulators', href: '/bioestimuladores' },
             { name: 'Botox', href: '/botox' },
             { name: 'Body Contouring', href: '/contorno-corporal' },
-            { name: 'HArmonyCa', href: '/medicina-estetica-avanzada' },
             { name: 'Advanced Aesthetic Medicine', href: '/medicina-estetica-avanzada' },
           ],
         },
@@ -92,8 +92,14 @@ export default function Header() {
   const NavLink = ({ href, children, highlight = false }: { href: string; children: React.ReactNode; highlight?: boolean }) => {
     const isActive = pathname === href;
     return (
-      <Link href={href} className={cn("text-sm font-medium transition-colors hover:text-primary/80 flex items-center gap-1", isActive ? "text-primary font-semibold" : "text-foreground", highlight && "font-bold text-primary/80")}>
-        {highlight && <Award className="h-4 w-4" />}
+      <Link 
+        href={href} 
+        className={cn(
+          "text-sm transition-all flex items-center whitespace-nowrap rounded-full",
+          highlight ? "px-4 py-1.5 border border-primary/40 text-primary font-semibold hover:bg-primary/5 hover:border-primary/60 shadow-sm" : "font-medium text-foreground hover:text-primary/80",
+          isActive && !highlight && "text-primary font-semibold"
+        )}
+      >
         {children}
       </Link>
     );
@@ -138,7 +144,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-4">
             {currentContent.navLinks.map((link, index) => (
               <React.Fragment key={link.name}>
-                {index > 0 && <div className="h-4 w-px bg-border" />}
+                {index > 0 && !link.highlight && <div className="h-4 w-px bg-border mx-2" />}
                 {link.dropdown 
                     ? <NavDropdown name={link.name} items={link.dropdown} />
                     : <NavLink href={(link as any).href || '#'} highlight={!!(link as any).highlight}>{link.name}</NavLink>
@@ -197,8 +203,16 @@ export default function Header() {
                         </ul>
                        </div>
                     ) : (
-                      <Link href={(link as any).href || '#'} className={cn("text-lg hover:text-primary/80 transition-colors block", (link as any).highlight && "font-bold text-primary/80 flex items-center")}>
-                         {(link as any).highlight && <Award className="mr-2 h-4 w-4" />}
+                      <Link 
+                        href={(link as any).href || '#'} 
+                        className={cn(
+                          "text-lg transition-all block rounded-xl py-2 px-3 border border-transparent text-center md:text-left",
+                          (link as any).highlight 
+                            ? "font-semibold text-primary border-primary/30 mx-2 hover:bg-primary/5" 
+                            : "hover:text-primary/80 text-foreground"
+                        )}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
                         {link.name}
                       </Link>
                     )}

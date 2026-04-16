@@ -40,6 +40,7 @@ import { findImage, GALLERY_IMAGES_DATA } from '@/lib/images';
 import { useLanguage } from '@/context/language-context';
 import { useEffect, useState } from 'react';
 import { VideoFacade } from '@/components/video-facade';
+import { HarmonycaBanner } from '@/components/harmonyca-banner';
 
 
 const treatments: { icon: string; title: string; title_en: string; href: string; size?: number }[] = [
@@ -285,6 +286,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* HarmonyCa Special Section */}
+        <HarmonycaBanner />
+
         {/* Video Testimonials Section */}
         <section id="videos-home" className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto px-4 text-center">
@@ -297,7 +301,7 @@ export default function Home() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <VideoFacade 
-                  videoUrl="https://www.youtube.com/embed/nHXoOj7LJgw" 
+                  videoUrl="https://www.youtube.com/embed/VNMP-RtT8qI" 
                   title="Testimonio 1"
                 />
               </div>

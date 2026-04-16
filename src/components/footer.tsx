@@ -92,6 +92,7 @@ Sat: 8:00 AM - 2:00 PM`,
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/" className="text-muted-foreground hover:text-primary/80">{currentContent.home}</Link></li>
               <li><Link href="/hilos-tensores" className="text-muted-foreground hover:text-primary/80">{currentContent.threadLifts}</Link></li>
+              <li><Link href="/harmonyca" className="text-muted-foreground hover:text-primary/80">HArmonyCa</Link></li>
               <li><Link href="/blog" className="text-muted-foreground hover:text-primary/80">{currentContent.blog}</Link></li>
               <li><Link href="/#sobre-el-doctor" className="text-muted-foreground hover:text-primary/80">{currentContent.aboutMe}</Link></li>
               <li><Link href="/contacto" className="text-muted-foreground hover:text-primary/80">{currentContent.contact}</Link></li>
