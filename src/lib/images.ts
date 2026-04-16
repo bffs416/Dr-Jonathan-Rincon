@@ -12,6 +12,8 @@ export type SiteImage = {
 export const IMAGES: SiteImage[] = [
   // HArmonyCa Page
   { id: 'harmonyca-hero', src: '/images/harmonyca.jpg', hint: 'HArmonyCa treatment' },
+  { id: 'harmonyca-3d', src: '/images/Harmonica 3d.png', hint: 'HArmonyCa 3D visualization' },
+  { id: 'harmonyca-ovalo-new', src: '/images/harmonyca-ovalo.png', hint: 'facial oval definition' },
 
   // Hilos Tensores Page
   { id: 'hilos-hero', src: '/images/Dr_Jhonathan_Rincon.jpg', hint: 'aesthetic clinic' },
