@@ -313,7 +313,7 @@ export default function Home() {
               </div>
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
                 <VideoFacade 
-                  videoUrl="https://www.youtube.com/embed/_jQTyBUkhwY" 
+                  videoUrl="https://www.youtube.com/embed/OQud4EKVaPw?si=T9sRzGGmgfjxWo02" 
                   title="Testimonio 3"
                 />
               </div>
