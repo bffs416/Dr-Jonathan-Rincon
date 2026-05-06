@@ -513,7 +513,7 @@ export default function EssencePage() {
               { 
                 step: '01', 
                 title: lang === 'es' ? 'Prepara' : 'Prepare', 
-                desc: lang === 'es' ? 'Disuelve un scoop (incluido) en 200-250ml de agua fría, leche vegetal o tu batido matutino.' : 'Dissolve one scoop (included) in 200-250ml of cold water, vegetable milk, or your morning smoothie.',
+                desc: lang === 'es' ? 'Disuelve un scoop en 200-250ml de agua fría, leche vegetal o tu batido matutino.' : 'Dissolve one scoop in 200-250ml of cold water, vegetable milk, or your morning smoothie.',
                 img: '/images/essence/ritual_prep.png'
               },
               { 
