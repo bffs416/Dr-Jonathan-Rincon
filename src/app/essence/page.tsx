@@ -18,7 +18,8 @@ import {
   Sun,
   Layers,
   Truck,
-  CheckCircle2
+  CheckCircle2,
+  X
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
