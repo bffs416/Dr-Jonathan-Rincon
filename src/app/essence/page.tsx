@@ -652,12 +652,6 @@ export default function EssencePage() {
         </div>
       </section>
 
-      {/* Mobile Floating CTA */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 md:hidden w-[90%]">
-        <Button className="w-full h-16 bg-primary text-white rounded-full shadow-2xl font-bold uppercase tracking-widest text-lg">
-          {lang === 'es' ? 'Explorar Essence Ahora' : 'Explore Essence Now'}
-        </Button>
-      </div>
 
       {/* Science & Credentials Section */}
       <section className="py-20 bg-[#FFF5F8] border-t border-primary/10">
