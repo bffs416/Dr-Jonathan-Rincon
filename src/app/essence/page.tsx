@@ -18,11 +18,7 @@ import {
   Sun,
   Layers,
   Truck,
-  Lock,
-  Shield,
-  Layout,
-  CheckCircle2,
-  X
+  CheckCircle2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/language-context';
@@ -153,22 +149,6 @@ const ingredients = [
 export default function EssencePage() {
   const { lang } = useLanguage();
   const containerRef = useRef(null);
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const hasSeenPopup = sessionStorage.getItem('essence-popup-seen');
-      if (!hasSeenPopup) {
-        setShowPopup(true);
-      }
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const closePopup = () => {
-    setShowPopup(false);
-    sessionStorage.setItem('essence-popup-seen', 'true');
-  };
   
   // Hero Parallax
   const mouseX = useMotionValue(0);
@@ -332,7 +312,7 @@ export default function EssencePage() {
             className="flex flex-nowrap gap-32 px-[10vw] items-center w-max"
           >
             <div className="min-w-[50vw] flex flex-col justify-center">
-               <h2 className="text-7xl md:text-9xl font-headline font-bold mb-8 leading-tight text-[#E91E63]">
+               <h2 className="text-5xl md:text-9xl font-headline font-bold mb-8 leading-tight text-[#E91E63] whitespace-pre-line">
                 {lang === 'es' ? 'Fórmula\nMaestra' : 'Master\nFormula'}
               </h2>
               <p className="text-xl text-[#555] max-w-md leading-relaxed">
@@ -751,91 +731,6 @@ export default function EssencePage() {
           </Button>
         </div>
       </section>
-
-      {/* Entry Popup */}
-      <AnimatePresence>
-        {showPopup && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={closePopup}
-              className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-            />
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="relative w-full max-w-lg bg-white rounded-[3rem] overflow-hidden shadow-2xl border border-primary/10"
-            >
-              <button 
-                onClick={closePopup}
-                className="absolute top-6 right-6 z-10 w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 hover:bg-primary hover:text-white transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="relative h-64 bg-gradient-to-br from-primary/10 to-transparent flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-30">
-                  <div className="absolute top-0 left-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -ml-16 -mt-16"></div>
-                  <div className="absolute bottom-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -mr-16 -mb-16"></div>
-                </div>
-                <motion.div
-                  initial={{ y: 40, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                  className="relative w-48 h-48"
-                >
-                  <Image
-                    src="/images/essence/bottle_pink.png"
-                    alt="Essence"
-                    fill
-                    className="object-contain drop-shadow-2xl"
-                  />
-                </motion.div>
-              </div>
-
-              <div className="p-10 text-center space-y-6">
-                <div>
-                  <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-primary mb-2 block">Lanzamiento Exclusivo</span>
-                  <h3 className="text-3xl font-headline font-bold text-slate-900 leading-tight">
-                    {lang === 'es' ? 'Tu piel merece el estándar médico' : 'Your skin deserves the medical standard'}
-                  </h3>
-                  <p className="mt-4 text-slate-600 leading-relaxed">
-                    {lang === 'es' 
-                      ? 'Descubre Essence: El secreto de la regeneración celular diseñado por el Dr. Jonathan Rincón.' 
-                      : 'Discover Essence: The secret of cellular regeneration designed by Dr. Jonathan Rincón.'}
-                  </p>
-                </div>
-
-                <div className="pt-4 flex flex-col gap-3">
-                  <Button 
-                    asChild
-                    size="lg" 
-                    className="w-full bg-primary text-white hover:bg-primary/90 rounded-full h-14 text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/20 cursor-pointer"
-                  >
-                    <a 
-                      href="https://wa.me/573122784757?text=Hola%20Dr.%20Jonathan,%20estoy%20interesado/a%20en%20el%20nuevo%20producto%20Essence." 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      onClick={closePopup}
-                    >
-                      {lang === 'es' ? 'Descubrir Essence Ahora' : 'Discover Essence Now'}
-                    </a>
-                  </Button>
-                  <button 
-                    onClick={closePopup}
-                    className="text-xs text-slate-400 hover:text-primary transition-colors font-medium underline underline-offset-4"
-                  >
-                    {lang === 'es' ? 'Quizás más tarde' : 'Maybe later'}
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
 
       <style jsx global>{`
         :root {

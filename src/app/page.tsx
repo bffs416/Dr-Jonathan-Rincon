@@ -23,6 +23,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 import {
   Carousel,
@@ -108,6 +109,22 @@ const TreatmentCard = ({
 
 export default function Home() {
   const { lang } = useLanguage();
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const hasSeenPopup = sessionStorage.getItem('essence-popup-seen');
+      if (!hasSeenPopup) {
+        setShowPopup(true);
+      }
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const closePopup = () => {
+    setShowPopup(false);
+    sessionStorage.setItem('essence-popup-seen', 'true');
+  };
   
   const content = {
     es: {
@@ -525,6 +542,86 @@ export default function Home() {
         </section>
 
       </main>
+
+      {/* Essence Launch Popup */}
+      <AnimatePresence>
+        {showPopup && (
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closePopup}
+              className="absolute inset-0 bg-black/60 backdrop-blur-md"
+            />
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 20 }}
+              className="relative w-full max-w-xl bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border border-primary/10"
+            >
+              <button 
+                onClick={closePopup}
+                className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-all duration-300 group"
+              >
+                <X className="w-5 h-5 group-hover:scale-110" />
+              </button>
+
+              <div className="relative h-72 w-full overflow-hidden">
+                <Image
+                  src="/images/essence/blog_hero.png"
+                  alt="Essence Experience"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-[10px] font-bold tracking-[0.2em] uppercase text-primary mb-3">
+                    {lang === 'es' ? 'Lanzamiento Exclusivo' : 'Exclusive Launch'}
+                  </span>
+                  <h3 className="text-4xl font-headline font-bold text-white drop-shadow-lg leading-tight">
+                    ESSENCE
+                  </h3>
+                </div>
+              </div>
+
+              <div className="p-10 pt-6 space-y-6">
+                <div>
+                  <h4 className="text-2xl font-headline font-bold text-slate-900 leading-tight">
+                    {lang === 'es' ? 'Tu piel merece el estándar médico' : 'Your skin deserves the medical standard'}
+                  </h4>
+                  <p className="mt-4 text-slate-600 leading-relaxed text-sm">
+                    {lang === 'es' 
+                      ? 'Descubre el secreto de la regeneración celular diseñado por el Dr. Jonathan Rincón. Una fórmula maestra para transformar tu salud desde el núcleo.' 
+                      : 'Discover the secret of cellular regeneration designed by Dr. Jonathan Rincón. A master formula to transform your health from the core.'}
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <Button 
+                    asChild
+                    size="lg" 
+                    className="w-full bg-primary text-white hover:bg-primary/90 rounded-full h-14 text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/20 cursor-pointer"
+                  >
+                    <Link 
+                      href="/essence"
+                      onClick={closePopup}
+                    >
+                      {lang === 'es' ? 'Conocer Essence' : 'Meet Essence'}
+                    </Link>
+                  </Button>
+                  <button 
+                    onClick={closePopup}
+                    className="text-xs text-slate-400 hover:text-primary transition-colors font-medium underline underline-offset-4"
+                  >
+                    {lang === 'es' ? 'Quizás más tarde' : 'Maybe later'}
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
     </div>
   );
