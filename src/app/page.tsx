@@ -113,17 +113,17 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const hasSeenPopup = sessionStorage.getItem('essence-popup-v2-seen');
+      const hasSeenPopup = sessionStorage.getItem('essence-popup-v3-seen');
       if (!hasSeenPopup) {
         setShowPopup(true);
       }
-    }, 2000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
   const closePopup = () => {
     setShowPopup(false);
-    sessionStorage.setItem('essence-popup-v2-seen', 'true');
+    sessionStorage.setItem('essence-popup-v3-seen', 'true');
   };
   
   const content = {
