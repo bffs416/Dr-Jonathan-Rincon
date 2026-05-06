@@ -113,7 +113,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const hasSeenPopup = sessionStorage.getItem('essence-popup-v1-seen');
+      const hasSeenPopup = sessionStorage.getItem('essence-popup-v2-seen');
       if (!hasSeenPopup) {
         setShowPopup(true);
       }
@@ -123,7 +123,7 @@ export default function Home() {
 
   const closePopup = () => {
     setShowPopup(false);
-    sessionStorage.setItem('essence-popup-v1-seen', 'true');
+    sessionStorage.setItem('essence-popup-v2-seen', 'true');
   };
   
   const content = {
@@ -546,7 +546,7 @@ export default function Home() {
       {/* Essence Launch Popup */}
       <AnimatePresence>
         {showPopup && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

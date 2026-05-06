@@ -444,39 +444,46 @@ export default function EssencePage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl border border-primary/5">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-              <div className="hidden md:block"></div>
-              <div className="text-center pb-8 border-b-2 border-primary/20">
-                <span className="text-primary font-bold uppercase tracking-widest text-sm">ESSENCE</span>
-              </div>
-              <div className="text-center pb-8 border-b border-gray-100">
-                <span className="text-gray-400 font-bold uppercase tracking-widest text-sm">
-                  {lang === 'es' ? 'Genéricos' : 'Generics'}
-                </span>
-              </div>
+          <div className="bg-white rounded-[3rem] p-6 md:p-16 shadow-2xl border border-primary/5 overflow-hidden">
+            <div className="overflow-x-auto pb-4 scrollbar-hide">
+              <div className="grid grid-cols-[1.5fr_1fr_1fr] min-w-[600px] gap-x-8 gap-y-12">
+                <div className="flex items-center text-xs font-bold uppercase tracking-widest text-slate-400">
+                  {lang === 'es' ? 'Atributo' : 'Attribute'}
+                </div>
+                <div className="text-center pb-6 border-b-2 border-primary/20">
+                  <span className="text-primary font-bold uppercase tracking-widest text-xs md:text-sm">ESSENCE</span>
+                </div>
+                <div className="text-center pb-6 border-b border-slate-100">
+                  <span className="text-slate-300 font-bold uppercase tracking-widest text-xs md:text-sm">
+                    {lang === 'es' ? 'Genéricos' : 'Generics'}
+                  </span>
+                </div>
 
-              {[
-                { label: lang === 'es' ? 'Pureza Médica' : 'Medical Purity', essence: true, others: false },
-                { label: lang === 'es' ? 'Sabor Vainilla' : 'Vanilla Flavor', essence: true, others: false },
-                { label: lang === 'es' ? 'Pureza Médica' : 'Medical Purity', essence: true, others: false },
-                { label: lang === 'es' ? 'Sabor Vainilla' : 'Vanilla Flavor', essence: true, others: false },
-                { label: lang === 'es' ? 'Bio-absorción' : 'Bio-absorption', essence: '98%', others: '45%' },
-                { label: lang === 'es' ? 'Sin Azúcar' : 'Sugar Free', essence: true, others: 'Variado' },
-                { label: lang === 'es' ? 'Resultados' : 'Results', essence: lang === 'es' ? 'Tiempo Récord' : 'Record Time', others: lang === 'es' ? 'Lento' : 'Slow' }
-              ].map((row, i) => (
-                <Fragment key={i}>
-                  <div className="flex items-center text-sm font-bold uppercase tracking-wider text-[#777]">
-                    {row.label}
-                  </div>
-                  <div className="flex items-center justify-center p-4 bg-primary/5 rounded-2xl text-primary font-bold">
-                    {typeof row.essence === 'boolean' ? <ShieldCheck className="w-5 h-5" /> : row.essence}
-                  </div>
-                  <div className="flex items-center justify-center p-4 text-gray-300">
-                    {typeof row.others === 'boolean' ? row.others && <ShieldCheck className="w-5 h-5" /> : row.others}
-                  </div>
-                </Fragment>
-              ))}
+                {[
+                  { label: lang === 'es' ? 'Pureza Médica' : 'Medical Purity', essence: true, others: false },
+                  { label: lang === 'es' ? 'Bio-absorción' : 'Bio-absorption', essence: '98%', others: '45%' },
+                  { label: lang === 'es' ? 'Vitamina C + E' : 'Vitamin C + E', essence: true, others: false },
+                  { label: lang === 'es' ? 'Resveratrol' : 'Resveratrol', essence: true, others: false },
+                  { label: lang === 'es' ? 'Sin Azúcar' : 'Sugar Free', essence: true, others: 'Variado' },
+                  { label: lang === 'es' ? 'Resultados' : 'Results', essence: lang === 'es' ? 'Óptimos' : 'Optimal', others: lang === 'es' ? 'Lentos' : 'Slow' }
+                ].map((row, i) => (
+                  <Fragment key={i}>
+                    <div className="flex items-center text-sm font-bold uppercase tracking-wider text-slate-500">
+                      {row.label}
+                    </div>
+                    <div className="flex items-center justify-center p-4 bg-primary/5 rounded-2xl text-primary font-bold">
+                      {typeof row.essence === 'boolean' ? (
+                        row.essence ? <ShieldCheck className="w-5 h-5" /> : <X className="w-5 h-5 opacity-20" />
+                      ) : row.essence}
+                    </div>
+                    <div className="flex items-center justify-center p-4 text-slate-300">
+                      {typeof row.others === 'boolean' ? (
+                        row.others ? <ShieldCheck className="w-5 h-5 text-primary" /> : <X className="w-5 h-5 opacity-40" />
+                      ) : row.others}
+                    </div>
+                  </Fragment>
+                ))}
+              </div>
             </div>
           </div>
         </div>
