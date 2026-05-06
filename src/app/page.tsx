@@ -113,7 +113,7 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const hasSeenPopup = sessionStorage.getItem('essence-popup-seen');
+      const hasSeenPopup = sessionStorage.getItem('essence-popup-v1-seen');
       if (!hasSeenPopup) {
         setShowPopup(true);
       }
@@ -123,7 +123,7 @@ export default function Home() {
 
   const closePopup = () => {
     setShowPopup(false);
-    sessionStorage.setItem('essence-popup-seen', 'true');
+    sessionStorage.setItem('essence-popup-v1-seen', 'true');
   };
   
   const content = {
