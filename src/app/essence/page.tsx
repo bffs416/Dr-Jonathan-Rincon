@@ -150,6 +150,16 @@ const ingredients = [
 export default function EssencePage() {
   const { lang } = useLanguage();
   const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   // Hero Parallax
   const mouseX = useMotionValue(0);
@@ -295,25 +305,30 @@ export default function EssencePage() {
       </section>
 
       {/* Horizontal Scroll Experience - Master Formula */}
-      <section ref={horizontalRef} className="relative h-[800vh] bg-white z-[20]">
-        <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden bg-white">
+      <section ref={horizontalRef} className={cn("relative bg-white z-[20]", !isMobile ? "h-[800vh]" : "h-auto")}>
+        <div className={cn("bg-white", !isMobile ? "sticky top-0 h-screen flex flex-col justify-center overflow-hidden" : "relative h-auto py-20 overflow-visible")}>
           {/* Progress Indicator */}
-          <div className="absolute bottom-12 left-[10vw] right-[10vw] h-px bg-primary/10 z-50">
-             <motion.div 
-                style={{ scaleX: progressBarWidth }}
-                className="absolute inset-0 bg-primary origin-left h-[2px]"
-             />
-             <div className="absolute -top-6 left-0 text-[10px] font-bold tracking-widest text-primary/40 uppercase">
-                {lang === 'es' ? 'Descubre la esencia' : 'Discover the essence'}
-             </div>
-          </div>
+          {!isMobile && (
+            <div className="absolute bottom-12 left-[10vw] right-[10vw] h-px bg-primary/10 z-50">
+               <motion.div 
+                  style={{ scaleX: progressBarWidth }}
+                  className="absolute inset-0 bg-primary origin-left h-[2px]"
+               />
+               <div className="absolute -top-6 left-0 text-[10px] font-bold tracking-widest text-primary/40 uppercase">
+                  {lang === 'es' ? 'Descubre la esencia' : 'Discover the essence'}
+               </div>
+            </div>
+          )}
 
           <motion.div 
-            style={{ x: xTranslate }}
-            className="flex flex-nowrap gap-32 px-[10vw] items-center w-max"
+            style={!isMobile ? { x: xTranslate } : {}}
+            className={cn(
+              "flex items-center",
+              !isMobile ? "flex-nowrap gap-32 px-[10vw] w-max" : "flex-col gap-12 px-6 w-full"
+            )}
           >
-            <div className="min-w-[85vw] md:min-w-[50vw] flex flex-col justify-center pr-8">
-               <h2 className="text-5xl md:text-9xl font-headline font-bold mb-8 leading-tight text-[#E91E63] whitespace-pre-line">
+            <div className={cn("flex flex-col justify-center", !isMobile ? "min-w-[85vw] md:min-w-[50vw] pr-8" : "w-full mb-8")}>
+               <h2 className={cn("font-headline font-bold mb-8 leading-tight text-[#E91E63] whitespace-pre-line", !isMobile ? "text-5xl md:text-9xl" : "text-4xl")}>
                 {lang === 'es' ? 'Fórmula\nMaestra' : 'Master\nFormula'}
               </h2>
               <p className="text-base md:text-xl text-[#555] max-w-sm md:max-w-md leading-relaxed">
@@ -324,7 +339,10 @@ export default function EssencePage() {
             </div>
 
             {ingredients.map((ing, i) => (
-              <div key={i} className="min-w-[80vw] md:min-w-[40vw] h-[70vh] relative group rounded-[4rem] overflow-hidden border border-primary/5 bg-[#FFF5F8] shadow-2xl shadow-primary/5 transition-transform duration-700 hover:scale-[1.02]">
+              <div key={i} className={cn(
+                "relative group rounded-[4rem] overflow-hidden border border-primary/5 bg-[#FFF5F8] shadow-2xl shadow-primary/5 transition-transform duration-700 hover:scale-[1.02]",
+                !isMobile ? "min-w-[80vw] md:min-w-[40vw] h-[70vh]" : "w-full min-h-[400px] py-12 px-8"
+              )}>
                 <Image
                   src={ing.image}
                   alt={ing.name}
@@ -332,27 +350,29 @@ export default function EssencePage() {
                   className="object-cover opacity-10 group-hover:opacity-40 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
-                <div className="absolute bottom-16 left-16 right-16">
+                <div className={cn("relative z-10", !isMobile ? "absolute bottom-16 left-16 right-16" : "flex flex-col h-full justify-end")}>
                    <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-lg border border-primary/10">
                       <ing.icon className="w-8 h-8 text-primary" />
                    </div>
-                   <h3 className="text-5xl font-headline font-bold mb-6 text-[#333]">{lang === 'es' ? ing.name : ing.name_en}</h3>
-                   <p className="text-[#555] text-xl leading-relaxed">{lang === 'es' ? ing.description : ing.description_en}</p>
+                   <h3 className={cn("font-headline font-bold mb-6 text-[#333]", !isMobile ? "text-5xl" : "text-3xl")}>{lang === 'es' ? ing.name : ing.name_en}</h3>
+                   <p className={cn("text-[#555] leading-relaxed", !isMobile ? "text-xl" : "text-lg")}>{lang === 'es' ? ing.description : ing.description_en}</p>
                 </div>
               </div>
             ))}
 
-            <div className="min-w-[40vw] flex items-center justify-center">
-               <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="rounded-full border-2 border-primary/20 p-12 text-center"
-               >
-                  <span className="text-primary font-bold uppercase tracking-widest block mb-4">
-                    {lang === 'es' ? 'Siguiente Nivel' : 'Next Level'}
-                  </span>
-                  <ChevronDown className="w-10 h-10 text-primary mx-auto animate-bounce" />
-               </motion.div>
-            </div>
+            {!isMobile && (
+              <div className="min-w-[40vw] flex items-center justify-center">
+                 <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="rounded-full border-2 border-primary/20 p-12 text-center"
+                 >
+                    <span className="text-primary font-bold uppercase tracking-widest block mb-4">
+                      {lang === 'es' ? 'Siguiente Nivel' : 'Next Level'}
+                    </span>
+                    <ChevronDown className="w-10 h-10 text-primary mx-auto animate-bounce" />
+                 </motion.div>
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
