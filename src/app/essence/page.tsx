@@ -315,7 +315,7 @@ export default function EssencePage() {
                <h2 className="text-5xl md:text-9xl font-headline font-bold mb-8 leading-tight text-[#E91E63] whitespace-pre-line">
                 {lang === 'es' ? 'Fórmula\nMaestra' : 'Master\nFormula'}
               </h2>
-              <p className="text-xl text-[#555] max-w-md leading-relaxed">
+              <p className="text-lg md:text-xl text-[#555] max-w-md leading-relaxed px-1">
                 {lang === 'es' 
                   ? 'Ingredientes seleccionados con precisión médica para una regeneración profunda y bienestar total.' 
                   : 'Medical-precision selected ingredients for deep regeneration and total wellness.'}
