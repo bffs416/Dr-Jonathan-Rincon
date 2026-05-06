@@ -311,11 +311,11 @@ export default function EssencePage() {
             style={{ x: xTranslate }}
             className="flex flex-nowrap gap-32 px-[10vw] items-center w-max"
           >
-            <div className="min-w-[50vw] flex flex-col justify-center">
+            <div className="min-w-[85vw] md:min-w-[50vw] flex flex-col justify-center pr-8">
                <h2 className="text-5xl md:text-9xl font-headline font-bold mb-8 leading-tight text-[#E91E63] whitespace-pre-line">
                 {lang === 'es' ? 'Fórmula\nMaestra' : 'Master\nFormula'}
               </h2>
-              <p className="text-lg md:text-xl text-[#555] max-w-md leading-relaxed px-1">
+              <p className="text-base md:text-xl text-[#555] max-w-sm md:max-w-md leading-relaxed">
                 {lang === 'es' 
                   ? 'Ingredientes seleccionados con precisión médica para una regeneración profunda y bienestar total.' 
                   : 'Medical-precision selected ingredients for deep regeneration and total wellness.'}
