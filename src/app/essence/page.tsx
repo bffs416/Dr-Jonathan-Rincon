@@ -466,19 +466,11 @@ export default function EssencePage() {
           </div>
 
           <div className="bg-white rounded-[3rem] p-6 md:p-16 shadow-2xl border border-primary/5 overflow-hidden">
-            <div className="overflow-x-auto pb-4 scrollbar-hide">
-              <div className="grid grid-cols-[1.5fr_1fr_1fr] min-w-[600px] gap-x-8 gap-y-12">
-                <div className="flex items-center text-xs font-bold uppercase tracking-widest text-slate-400">
-                  {lang === 'es' ? 'Atributo' : 'Attribute'}
-                </div>
-                <div className="text-center pb-6 border-b-2 border-primary/20">
-                  <span className="text-primary font-bold uppercase tracking-widest text-xs md:text-sm">ESSENCE</span>
-                </div>
-                <div className="text-center pb-6 border-b border-slate-100">
-                  <span className="text-slate-300 font-bold uppercase tracking-widest text-xs md:text-sm">
-                    {lang === 'es' ? 'Genéricos' : 'Generics'}
-                  </span>
-                </div>
+            <div className="max-w-4xl mx-auto">
+               <div className="grid grid-cols-3 gap-x-4 md:gap-x-8 gap-y-8 md:gap-y-12">
+                <div className="text-primary/40 font-bold uppercase tracking-widest text-[10px] md:text-xs">Atributo</div>
+                <div className="text-primary font-bold uppercase tracking-widest text-[10px] md:text-xs text-center">Essence</div>
+                <div className="text-[#888] font-bold uppercase tracking-widest text-[10px] md:text-xs text-center">Otros</div>
 
                 {[
                   { label: lang === 'es' ? 'Pureza Médica' : 'Medical Purity', essence: true, others: false },
@@ -489,15 +481,15 @@ export default function EssencePage() {
                   { label: lang === 'es' ? 'Resultados' : 'Results', essence: lang === 'es' ? 'Óptimos' : 'Optimal', others: lang === 'es' ? 'Lentos' : 'Slow' }
                 ].map((row, i) => (
                   <Fragment key={i}>
-                    <div className="flex items-center text-sm font-bold uppercase tracking-wider text-slate-500">
+                    <div className="flex items-center text-xs md:text-sm font-bold uppercase tracking-wider text-slate-500">
                       {row.label}
                     </div>
-                    <div className="flex items-center justify-center p-4 bg-primary/5 rounded-2xl text-primary font-bold">
+                    <div className="flex items-center justify-center text-primary font-bold">
                       {typeof row.essence === 'boolean' ? (
                         row.essence ? <ShieldCheck className="w-5 h-5" /> : <X className="w-5 h-5 opacity-20" />
                       ) : row.essence}
                     </div>
-                    <div className="flex items-center justify-center p-4 text-slate-300">
+                    <div className="flex items-center justify-center text-slate-300">
                       {typeof row.others === 'boolean' ? (
                         row.others ? <ShieldCheck className="w-5 h-5 text-primary" /> : <X className="w-5 h-5 opacity-40" />
                       ) : row.others}
@@ -739,14 +731,14 @@ export default function EssencePage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-7xl md:text-[12vw] font-headline font-bold text-primary mb-16 tracking-tighter"
+            className="text-5xl md:text-[12rem] font-headline font-bold text-primary mb-12 tracking-tighter"
           >
             VIVE ESSENCE
           </motion.h2>
           <Button 
             asChild
             size="lg" 
-            className="bg-primary text-white hover:bg-primary/90 rounded-full px-20 h-24 text-2xl font-bold uppercase tracking-widest shadow-2xl shadow-primary/30 cursor-pointer"
+            className="bg-primary text-white hover:bg-primary/90 rounded-full px-10 md:px-20 h-16 md:h-24 text-lg md:text-2xl font-bold uppercase tracking-widest shadow-2xl shadow-primary/30 cursor-pointer w-full md:w-auto"
           >
             <a 
               href="https://wa.me/573122784757?text=Hola%20Dr.%20Jonathan,%20estoy%20interesado/a%20en%20el%20nuevo%20producto%20Essence." 
@@ -754,7 +746,7 @@ export default function EssencePage() {
               rel="noopener noreferrer"
             >
               {lang === 'es' ? 'Explorar Essence Ahora' : 'Explore Essence Now'}
-              <ArrowRight className="ml-4 w-8 h-8" />
+              <ArrowRight className="ml-4 w-6 h-6 md:w-8 md:h-8" />
             </a>
           </Button>
         </div>
