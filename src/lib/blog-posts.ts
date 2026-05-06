@@ -2260,5 +2260,275 @@ export const POSTS: { [key: string]: any } = {
 </article>
 `
     }
+  },
+  'essence-el-secreto-del-colageno-hidrolizado': {
+    es: {
+      title: 'Essence: El Secreto Médico detrás del Colágeno Hidrolizado y el Resveratrol',
+      category: 'Suplementos Premium',
+      date: '06 de Mayo de 2026',
+      readTime: '7 min',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('essence-hero'),
+      description: 'Entiende por qué no todos los colágenos son iguales. Descubre la ciencia de Essence y cómo su fórmula médica transforma tu piel y vitalidad desde adentro.',
+      content: `
+<article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
+  <div class="max-w-3xl mx-auto space-y-8">
+    <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
+      En mi práctica clínica diaria en Medellín, una de las preguntas más recurrentes es: <em>"Dr. Rincón, ¿realmente sirve de algo tomar colágeno?"</em>. La respuesta corta es sí, pero con una advertencia vital: <strong>no todos los colágenos son iguales</strong>. Por eso decidí crear <strong>Essence</strong>, no solo como un suplemento, sino como un pilar terapéutico para mis pacientes.
+    </p>
+  </div>
+
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/essence/blog_science.png" alt="Essence Science" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      Essence combina pureza médica con una absorción optimizada para resultados reales.
+    </figcaption>
+  </figure>
+
+  <div class="max-w-4xl mx-auto py-16 px-8 md:px-16 rounded-[3rem] bg-white border border-primary/10 shadow-2xl overflow-hidden relative">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+    <h3 class="text-2xl font-headline font-bold mb-8 text-primary">Indicaciones Médicas</h3>
+    <ul class="space-y-4 text-slate-700">
+      <li class="flex gap-4 items-start"><span class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span><span>Pacientes en post-operatorio que buscan acelerar la cicatrización.</span></li>
+      <li class="flex gap-4 items-start"><span class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span><span>Prevención de envejecimiento cutáneo (Flacidez y líneas de expresión).</span></li>
+      <li class="flex gap-4 items-start"><span class="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></span><span>Deportistas de alto rendimiento para protección articular.</span></li>
+    </ul>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      1. La Verdad sobre el Colágeno Hidrolizado y el Peso Molecular
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">El colágeno es la proteína más abundante de nuestro cuerpo, la "malla" que sostiene nuestra piel, articulaciones y órganos. Sin embargo, el colágeno convencional tiene un peso molecular muy alto, lo que dificulta su absorción. Para que un suplemento funcione, debe ser <strong>hidrolizado</strong>.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+      <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100">
+        <h4 class="font-bold text-primary mb-2">Colágeno Común</h4>
+        <p class="text-sm">Peso molecular &gt; 5000 Da. Difícil de digerir, absorción limitada al 40-50%.</p>
+      </div>
+      <div class="p-8 rounded-3xl bg-primary/5 border border-primary/10">
+        <h4 class="font-bold text-primary mb-2">Colágeno Essence</h4>
+        <p class="text-sm">Peso molecular &lt; 2000 Da. Hidrólisis enzimática de precisión para una absorción del 98%.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto py-16 px-8 md:px-16 rounded-[3rem] bg-white border border-primary/10 shadow-2xl overflow-hidden relative">
+    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+    <h3 class="text-2xl font-headline font-bold mb-10 border-b border-primary/10 pb-4 text-primary">Composición Técnica (Por Porción 20g)</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+      <div class="flex justify-between border-b border-slate-100 py-3"><span class="text-slate-600">Colágeno Hidrolizado</span><span class="text-primary font-bold">10,000 mg</span></div>
+      <div class="flex justify-between border-b border-slate-100 py-3"><span class="text-slate-600">Resveratrol (Uva)</span><span class="text-primary font-bold">500 mg</span></div>
+      <div class="flex justify-between border-b border-slate-100 py-3"><span class="text-slate-600">Biotina</span><span class="text-primary font-bold">5000 mcg</span></div>
+      <div class="flex justify-between border-b border-slate-100 py-3"><span class="text-slate-600">Vitamina C</span><span class="text-primary font-bold">200 mg</span></div>
+      <div class="flex justify-between border-b border-slate-100 py-3"><span class="text-slate-600">Inulina (Prebiótico)</span><span class="text-primary font-bold">2000 mg</span></div>
+      <div class="flex justify-between border-b border-slate-100 py-3"><span class="text-slate-600">Zinc</span><span class="text-primary font-bold">15 mg</span></div>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto py-20">
+    <h3 class="text-3xl font-headline font-bold mb-16 text-center text-primary">Tu Ritual Essence</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="space-y-6 text-center group">
+        <div class="aspect-square relative rounded-[2rem] overflow-hidden border border-primary/10 shadow-lg">
+          <img src="/images/essence/ritual_prep.png" alt="Prepare" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur-md rounded-xl flex items-center justify-center font-bold text-primary shadow-sm">01</div>
+        </div>
+        <h4 class="text-xl font-bold uppercase tracking-tighter">Prepara</h4>
+        <p class="text-sm text-muted-foreground px-4">Disuelve un scoop en 200-250ml de tu bebida favorita.</p>
+      </div>
+      <div class="space-y-6 text-center group">
+        <div class="aspect-square relative rounded-[2rem] overflow-hidden border border-primary/10 shadow-lg">
+          <img src="/images/essence/ritual_mix.png" alt="Merge" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur-md rounded-xl flex items-center justify-center font-bold text-primary shadow-sm">02</div>
+        </div>
+        <h4 class="text-xl font-bold uppercase tracking-tighter">Fusiona</h4>
+        <p class="text-sm text-muted-foreground px-4">Mezcla hasta que el polvo se integre totalmente.</p>
+      </div>
+      <div class="space-y-6 text-center group">
+        <div class="aspect-square relative rounded-[2rem] overflow-hidden border border-primary/10 shadow-lg">
+          <img src="/images/essence/ritual_drink.png" alt="Power Up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur-md rounded-xl flex items-center justify-center font-bold text-primary shadow-sm">03</div>
+        </div>
+        <h4 class="text-xl font-bold uppercase tracking-tighter">Potencia</h4>
+        <p class="text-sm text-muted-foreground px-4">Tómalo en ayunas o antes de dormir para regenerar.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      2. El Cronograma de Resultados
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">La regeneración celular es un proceso biológico que no ocurre de la noche a la mañana. Según mis observaciones clínicas, este es el viaje de Essence en tu cuerpo:</p>
+    <div class="space-y-8 my-12">
+      <div class="flex gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white font-bold shrink-0">07</div>
+        <div>
+          <h4 class="font-bold text-xl mb-1">Día 7: Fase de Hidratación</h4>
+          <p class="text-muted-foreground italic">Mejora en la luminosidad y retención de humedad en la piel.</p>
+        </div>
+      </div>
+      <div class="flex gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white font-bold shrink-0">15</div>
+        <div>
+          <h4 class="font-bold text-xl mb-1">Día 15: Fase de Fortalecimiento</h4>
+          <p class="text-muted-foreground italic">Reducción en la fragilidad capilar y mayor resistencia en las uñas.</p>
+        </div>
+      </div>
+      <div class="flex gap-6 items-start">
+        <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center text-white font-bold shrink-0">30</div>
+        <div>
+          <h4 class="font-bold text-xl mb-1">Día 30+: Fase de Regeneración</h4>
+          <p class="text-muted-foreground italic">Aumento visible en la densidad dérmica y soporte articular.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto p-10 rounded-[2.5rem] bg-gradient-to-br from-primary/10 to-transparent border border-primary/20">
+    <h3 class="text-2xl font-headline font-bold mb-4 text-primary">El Secreto del Resveratrol</h3>
+    <p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+      A diferencia de otros suplementos, Essence incluye una dosis terapéutica de <strong>Resveratrol</strong>. Este antioxidante activa las sirtuinas, conocidas como las "enzimas de la longevidad", que protegen el ADN de tus células contra el daño oxidativo. Es, literalmente, medicina antienvejecimiento en cada toma.
+    </p>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      3. ¿Quiénes deben consumir Essence?
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">He diseñado esta fórmula pensando en tres perfiles específicos de pacientes:</p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+      <li class="p-6 rounded-2xl border border-slate-100 bg-white shadow-sm">
+        <h5 class="font-bold mb-2">Pacientes Quirúrgicos</h5>
+        <p class="text-sm">Ideal para potenciar la cicatrización después de una cirugía plástica.</p>
+      </li>
+      <li class="p-6 rounded-2xl border border-slate-100 bg-white shadow-sm">
+        <h5 class="font-bold mb-2">Cuidado Anti-Aging</h5>
+        <p class="text-sm">Mujeres y hombres de 25+ años que desean prevenir la flacidez.</p>
+      </li>
+      <li class="p-6 rounded-2xl border border-slate-100 bg-white shadow-sm">
+        <h5 class="font-bold mb-2">Salud de Articulaciones</h5>
+        <p class="text-sm">Deportistas o personas con desgaste articular crónico.</p>
+      </li>
+      <li class="p-6 rounded-2xl border border-slate-100 bg-white shadow-sm">
+        <h5 class="font-bold mb-2">Bioestimulación</h5>
+        <p class="text-sm">Potencia los resultados de Hilos Tensores y Bioestimuladores.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="max-w-4xl mx-auto py-16 px-8 md:px-16 rounded-[4rem] text-white shadow-2xl relative overflow-hidden text-center my-20" style="background-color: #E91E63;">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="w-full h-full"><path d="M0 100 C 20 0 50 0 100 100 Z" fill="white"/></svg>
+    </div>
+    <div class="relative z-10 space-y-8">
+      <h2 class="text-3xl md:text-5xl font-headline font-bold mb-4" style="color: white;">Conclusión Médica</h2>
+      <p class="text-xl md:text-2xl font-light opacity-90 max-w-2xl mx-auto italic" style="color: white;">
+        "Con Essence, tienes el respaldo de mi experiencia clínica y una fórmula diseñada para ser absorbida, no solo ingerida. Es el paso final para un bienestar que se nota en el espejo."
+      </p>
+      <div class="pt-8">
+        <p class="text-2xl md:text-3xl font-headline font-bold mb-10 tracking-tight" style="color: white;">
+          ¿Lista para transformar tu salud celular?
+        </p>
+        <a href="https://wa.me/573122784757?text=Hola%20Dr.%20Jonathan,%20estoy%20interesado/a%20en%20el%20nuevo%20producto%20Essence." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-12 py-5 bg-white text-[#E91E63] rounded-full font-bold uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-transform duration-300 group">
+          Explorar Essence Ahora
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-3 group-hover:translate-x-2 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</article>
+`
+    },
+    en: {
+      title: 'Essence: The Medical Secret behind Hydrolyzed Collagen and Resveratrol',
+      category: 'Premium Supplements',
+      date: 'May 06, 2026',
+      readTime: '7 min read',
+      author: 'Dr. Jonathan Rincón',
+      image: findImage('essence-hero'),
+      description: 'Understand why not all collagens are created equal. Discover the science of Essence and how its medical formula transforms your skin and vitality from within.',
+      content: `
+<article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
+  <div class="max-w-3xl mx-auto space-y-8">
+    <p class="text-xl md:text-2xl font-light leading-relaxed tracking-wide text-primary/90">
+      In my daily clinical practice in Medellín, one of the most recurring questions is: <em>"Dr. Rincón, does taking collagen really do anything?"</em>. The short answer is yes, but with a vital warning: <strong>not all collagens are equal</strong>. That's why I decided to create <strong>Essence</strong>, not just as a supplement, but as a therapeutic pillar for my patients.
+    </p>
+  </div>
+
+  <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
+    <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
+      <div class="w-full relative overflow-hidden flex items-center justify-center">
+        <img src="/images/essence/lifestyle.png" alt="Essence Ritual" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
+      </div>
+    </div>
+    <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
+      Essence combines medical purity with optimized absorption for real results.
+    </figcaption>
+  </figure>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      The Truth about Hydrolyzed Collagen
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Collagen is the most abundant protein in our body, the "mesh" that supports our skin, joints, and organs. Starting at age 25, our natural production drops by 1.5% annually. For a supplement to work, it must be <strong>hydrolyzed</strong> (fragmented into tiny molecules) so your gut can absorb it and take it to the dermis.</p>
+    <p class="text-lg leading-relaxed text-muted-foreground">In Essence, we use a high-precision enzymatic hydrolysis process that guarantees a bioavailability of over 90%. This means the product actually gets to where it's needed.</p>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 flex items-center gap-4">
+      <span class="w-12 h-px bg-primary hidden md:block"></span> The Golden Triangle: Resveratrol, Biotin, and Inulin
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">What makes Essence "Top Tier" isn't just the collagen, but its synergy with three other critical components:</p>
+    <ul class="space-y-6 my-8">
+      <li class="flex items-start gap-4 text-lg">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">1</span>
+        <div>
+          <strong class="text-foreground">Resveratrol:</strong> The most powerful antioxidant known to science. It not only fights free radicals but activates sirtuins, the so-called "longevity proteins," protecting your cells from premature aging.
+        </div>
+      </li>
+      <li class="flex items-start gap-4 text-lg">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">2</span>
+        <div>
+          <strong class="text-foreground">Biotin (Vitamin B8):</strong> Essential for keratin synthesis. It is the fuel your hair and nails need to grow strong and with natural shine.
+        </div>
+      </li>
+      <li class="flex items-start gap-4 text-lg">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">3</span>
+        <div>
+          <strong class="text-foreground">Inulin:</strong> A natural prebiotic that optimizes your intestinal microbiota. If your digestive system is healthy, nutrient absorption is at its maximum.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="max-w-3xl mx-auto p-10 rounded-[2.5rem] bg-gradient-to-br from-primary/10 to-transparent border border-primary/20">
+    <h3 class="text-2xl font-headline font-bold mb-4 text-primary">Why do I recommend it in my practice?</h3>
+    <p class="text-lg italic text-slate-700 dark:text-slate-300">
+      "My patients who combine injectable treatments (such as Thread Lifts or Harmonyca) with Essence see faster and longer-lasting results. We are giving the body the 'raw material' necessary for biostimulation to be a total success."
+    </p>
+  </div>
+
+  <div class="max-w-3xl mx-auto space-y-8">
+    <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
+      How to integrate Essence into your life
+    </h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">Consistency is key. One daily scoop dissolved in 200ml of water or your favorite smoothie is enough. As a medical-grade product, you will notice the difference not only in the mirror but in your daily energy.</p>
+    
+    <div class="mt-16 flex flex-col items-center gap-8 py-12 border-t border-primary/10 text-center">
+      <h4 class="text-3xl font-headline font-bold">Ready to try the Essence difference?</h4>
+      <a href="/essence" class="inline-flex h-14 px-10 items-center justify-center rounded-full bg-primary text-white font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+        Explore Essence Now
+      </a>
+    </div>
+  </div>
+</article>
+`
+    }
   }
 };
+

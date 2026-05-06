@@ -45,6 +45,7 @@ export default function Header() {
       navLinks: [
         { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
         { name: 'HArmonyCa', href: '/harmonyca', highlight: true },
+        { name: 'Essence', href: '/essence', highlight: true },
         {
           name: 'Tratamientos',
           dropdown: [
@@ -67,6 +68,7 @@ export default function Header() {
       navLinks: [
         { name: 'Thread Lifts', href: '/hilos-tensores', highlight: true },
         { name: 'HArmonyCa', href: '/harmonyca', highlight: true },
+        { name: 'Essence', href: '/essence', highlight: true },
         {
           name: 'Treatments',
           dropdown: [

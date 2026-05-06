@@ -56,8 +56,10 @@ export default function BlogPostContent({ postData }: { postData: any }) {
     };
   }, [postData, lang]);
 
+  const isPremiumSuplement = post.category === 'Suplementos Premium' || post.category === 'Premium Supplements';
+
   return (
-    <div>
+    <div className={isPremiumSuplement ? "bg-[#FFF5F8]" : ""}>
       <section className="relative w-full bg-slate-900 overflow-hidden">
         {post.image && (
           <div className="relative w-full">
@@ -72,7 +74,7 @@ export default function BlogPostContent({ postData }: { postData: any }) {
         <div className="absolute inset-0 bg-black/30 pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0">
           <div className="container mx-auto px-4 py-8 md:py-12 text-white">
-            <Badge variant="secondary">{post.category}</Badge>
+            <Badge variant="secondary" className={isPremiumSuplement ? "bg-primary text-white border-none" : ""}>{post.category}</Badge>
             <h1 className="mt-4 font-headline text-3xl md:text-5xl font-bold !leading-tight tracking-tight drop-shadow-lg">
               {post.title}
             </h1>
@@ -97,7 +99,7 @@ export default function BlogPostContent({ postData }: { postData: any }) {
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="max-w-4xl mx-auto">
           <article
-            className="prose prose-lg lg:prose-xl dark:prose-invert prose-headings:font-headline prose-headings:text-primary prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-foreground prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-img:rounded-xl prose-img:shadow-lg prose-table:border prose-th:bg-muted prose-th:p-2 prose-td:p-2"
+            className={`prose prose-lg lg:prose-xl dark:prose-invert prose-headings:font-headline prose-headings:text-primary prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:text-foreground prose-blockquote:border-primary prose-blockquote:text-muted-foreground prose-img:rounded-xl prose-img:shadow-lg prose-table:border prose-th:bg-muted prose-th:p-2 prose-td:p-2 ${isPremiumSuplement ? "text-slate-800" : ""}`}
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>

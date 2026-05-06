@@ -128,7 +128,15 @@ export const IMAGES: SiteImage[] = [
   { id: 'home-before-after-3', src: '/images/Modelo 1.jpg', hint: 'foxy eyes before after' },
 
   // TikTok Placeholder
-  { id: 'tiktok-placeholder', src: '/images/tiktok-placeholder.png', hint: 'tiktok video' }
+  { id: 'tiktok-placeholder', src: '/images/tiktok-placeholder.png', hint: 'tiktok video' },
+
+  // Essence Product
+  { id: 'essence-hero', src: '/images/essence/blog_hero.png', hint: 'essence luxury supplement blog cover' },
+  { id: 'essence-science', src: '/images/essence/blog_science.png', hint: 'essence scientific composition' },
+  { id: 'essence-bottle', src: '/images/essence/bottle_pink.png', hint: 'essence product bottle' },
+  { id: 'essence-lifestyle', src: '/images/essence/lifestyle.png', hint: 'essence lifestyle usage' },
+  { id: 'essence-label', src: '/images/essence/label.png', hint: 'essence nutritional label' },
+  { id: 'essence-macro', src: '/images/essence/macro.png', hint: 'essence ingredient close-up' }
 ];
 
 export const GALLERY_IMAGES_DATA: SiteImage[] = [
