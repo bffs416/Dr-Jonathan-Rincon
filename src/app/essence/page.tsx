@@ -268,7 +268,7 @@ export default function EssencePage() {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  {lang === 'es' ? 'Explorar Essence Ahora' : 'Explore Essence Now'}
+                  {lang === 'es' ? 'Pide el tuyo' : 'Order yours'}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
@@ -739,7 +739,7 @@ export default function EssencePage() {
               target="_blank" 
               rel="noopener noreferrer"
             >
-              {lang === 'es' ? 'Explorar Essence Ahora' : 'Explore Essence Now'}
+              {lang === 'es' ? 'Pide el tuyo' : 'Order yours'}
               <ArrowRight className="ml-4 w-6 h-6 md:w-8 md:h-8" />
             </a>
           </Button>

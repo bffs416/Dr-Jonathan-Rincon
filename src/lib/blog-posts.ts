@@ -2435,7 +2435,7 @@ export const POSTS: { [key: string]: any } = {
           ¿Lista para transformar tu salud celular?
         </p>
         <a href="https://wa.me/573122784757?text=Hola%20Dr.%20Jonathan,%20estoy%20interesado/a%20en%20el%20nuevo%20producto%20Essence." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-12 py-5 bg-white text-[#E91E63] rounded-full font-bold uppercase tracking-widest text-lg shadow-xl hover:scale-105 transition-transform duration-300 group">
-          Explorar Essence Ahora
+          Pide el tuyo
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-3 group-hover:translate-x-2 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
       </div>

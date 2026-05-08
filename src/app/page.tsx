@@ -607,7 +607,7 @@ export default function Home() {
                       href="/essence"
                       onClick={closePopup}
                     >
-                      {lang === 'es' ? 'Conocer Essence' : 'Meet Essence'}
+                      {lang === 'es' ? 'Pide el tuyo' : 'Order yours'}
                     </Link>
                   </Button>
                   <button 
