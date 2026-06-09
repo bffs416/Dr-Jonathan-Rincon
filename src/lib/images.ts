@@ -131,7 +131,7 @@ export const IMAGES: SiteImage[] = [
   { id: 'tiktok-placeholder', src: '/images/tiktok-placeholder.png', hint: 'tiktok video' },
 
   // Essence Product
-  { id: 'essence-hero', src: '/images/essence/blog_hero.png', hint: 'essence luxury supplement blog cover' },
+  { id: 'essence-hero', src: '/images/essence/blog_hero.jpeg', hint: 'essence luxury supplement blog cover' },
   { id: 'essence-science', src: '/images/essence/blog_science.png', hint: 'essence scientific composition' },
   { id: 'essence-bottle', src: '/images/essence/bottle_pink.png', hint: 'essence product bottle' },
   { id: 'essence-lifestyle', src: '/images/essence/lifestyle.png', hint: 'essence lifestyle usage' },
