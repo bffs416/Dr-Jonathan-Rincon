@@ -58,7 +58,7 @@ export function PromoPopup() {
             <div className="flex items-center gap-4 p-4 pr-14">
               <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden border border-white/10">
                 <Image
-                  src="/images/Experto_Hilos_tensores.png"
+                  src="/images/whatsapp_popup.jpeg"
                   alt="Dr. Jonathan Rincón"
                   fill
                   className="object-cover object-top"
