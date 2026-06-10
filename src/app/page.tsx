@@ -125,7 +125,7 @@ export default function Home() {
     setShowPopup(false);
     sessionStorage.setItem('essence-popup-v3-seen', 'true');
   };
-  
+
   const content = {
     es: {
       heroTitle: 'Resultados y Confianza',
@@ -188,10 +188,10 @@ export default function Home() {
   };
 
   const currentContent = content[lang];
-  
+
   const testimonialImage1 = { src: '/images/Modelo 6.jpg', hint: 'facial procedure' };
   const testimonialImage2 = { src: '/images/Modelo 9.jpg', hint: 'facial injection' };
-  
+
   const galleryImages = GALLERY_IMAGES_DATA.map(img => ({
     ...img,
     title: lang === 'es' ? img.title_es : img.title_en,
@@ -241,7 +241,7 @@ export default function Home() {
       window.gtag_report_conversion(url);
     } else {
       // Fallback if gtag is not available
-      if (typeof(url) != 'undefined') {
+      if (typeof (url) != 'undefined') {
         window.location.href = url;
       }
     }
@@ -253,53 +253,53 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative py-16 md:py-24 text-center overflow-hidden">
           <div className="absolute inset-0 w-full h-full [mask-image:linear-gradient(to_right,transparent,white_5%,white_95%,transparent)]">
-              <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="absolute z-0 w-full h-full object-cover"
-              >
-                  <source src="/Dr_Jonathan.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-              </video>
-              <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="absolute z-0 w-full h-full object-cover"
+            >
+              <source src="/Dr_Jonathan.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
           </div>
 
           <div className="relative z-10 text-white container mx-auto px-4">
-              <h2 className="font-headline text-4xl md:text-5xl font-bold">{currentContent.heroTitle}</h2>
-              <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">{currentContent.heroSubtitle}</p>
+            <h2 className="font-headline text-4xl md:text-5xl font-bold">{currentContent.heroTitle}</h2>
+            <p className="mt-4 text-lg text-slate-200 mx-auto max-w-2xl">{currentContent.heroSubtitle}</p>
 
-              <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
-                  {stats.map((stat) => (
-                    <div key={stat.label} className="flex flex-col items-center gap-2">
-                      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white">
-                         <stat.icon className="w-8 h-8" />
-                      </div>
-                      <div>
-                          <p className="text-3xl font-bold text-white">
-                              {lang === 'es' ? (
-                                <>
-                                  <AnimatedCounter targetValue={stat.value} />{stat.suffix === '%' || stat.suffix === '+' ? stat.suffix : ''}
-                                </>
-                              ) : (
-                                <>
-                                  <AnimatedCounter targetValue={stat.value} />{stat.suffix}
-                                </>
-                              )}
-                          </p>
-                        <p className="text-lg text-slate-200">
-                          {stat.label} {lang === 'es' && stat.suffix && stat.suffix !== '%' && stat.suffix !== '+' ? stat.suffix : ''}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-              </div>
-              <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-slate-200">
-                <Medal className="w-10 h-10 md:w-12 md:h-12 text-yellow-300" />
-                <p className="font-semibold text-lg md:text-xl text-center">{currentContent.recognition}</p>
-              </div>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col items-center gap-2">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white">
+                    <stat.icon className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <p className="text-3xl font-bold text-white">
+                      {lang === 'es' ? (
+                        <>
+                          <AnimatedCounter targetValue={stat.value} />{stat.suffix === '%' || stat.suffix === '+' ? stat.suffix : ''}
+                        </>
+                      ) : (
+                        <>
+                          <AnimatedCounter targetValue={stat.value} />{stat.suffix}
+                        </>
+                      )}
+                    </p>
+                    <p className="text-lg text-slate-200">
+                      {stat.label} {lang === 'es' && stat.suffix && stat.suffix !== '%' && stat.suffix !== '+' ? stat.suffix : ''}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-slate-200">
+              <Medal className="w-10 h-10 md:w-12 md:h-12 text-yellow-300" />
+              <p className="font-semibold text-lg md:text-xl text-center">{currentContent.recognition}</p>
+            </div>
           </div>
         </section>
 
@@ -317,47 +317,47 @@ export default function Home() {
             </p>
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-                <VideoFacade 
-                  videoUrl="https://www.youtube.com/embed/VNMP-RtT8qI" 
+                <VideoFacade
+                  videoUrl="https://www.youtube.com/embed/VNMP-RtT8qI"
                   title="Testimonio 1"
                 />
               </div>
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-                <VideoFacade 
-                  videoUrl="https://www.youtube.com/embed/Etd3la0v1pI" 
+                <VideoFacade
+                  videoUrl="https://www.youtube.com/embed/Etd3la0v1pI"
                   title="Testimonio 2"
                 />
               </div>
               <div className="w-full aspect-[9/16] rounded-lg shadow-lg overflow-hidden max-w-[325px] mx-auto">
-                <VideoFacade 
-                  videoUrl="https://www.youtube.com/embed/OQud4EKVaPw?si=T9sRzGGmgfjxWo02" 
+                <VideoFacade
+                  videoUrl="https://www.youtube.com/embed/OQud4EKVaPw?si=T9sRzGGmgfjxWo02"
                   title="Testimonio 3"
                 />
               </div>
             </div>
           </div>
         </section>
-        
+
         {/* Infinite Moving Cards Section */}
         <section className="py-2 sm:py-4 [transform:translateZ(0)]">
           <InfiniteMovingCards items={galleryImages} direction="right" speed="slow" />
         </section>
 
-         {/* Treatments Section */}
+        {/* Treatments Section */}
         <section id="tratamientos" className="py-16 sm:py-24 container mx-auto px-4 scroll-mt-20">
-             <div className="text-center max-w-2xl mx-auto">
-                <h2 className="font-headline text-4xl md:text-5xl font-bold">
-                    <span className="text-primary">{currentContent.treatmentsTitle}</span>
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    {currentContent.treatmentsSubtitle}
-                </p>
-            </div>
-            <div className="mt-12 grid grid-cols-2 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-8 w-full max-w-6xl mx-auto">
-                {treatments.map((treatment) => (
-                  <TreatmentCard key={treatment.title} {...treatment} title={lang === 'es' ? treatment.title : treatment.title_en} />
-                ))}
-            </div>
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold">
+              <span className="text-primary">{currentContent.treatmentsTitle}</span>
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {currentContent.treatmentsSubtitle}
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-2 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-8 w-full max-w-6xl mx-auto">
+            {treatments.map((treatment) => (
+              <TreatmentCard key={treatment.title} {...treatment} title={lang === 'es' ? treatment.title : treatment.title_en} />
+            ))}
+          </div>
         </section>
 
         {/* About Doctor Section */}
@@ -368,16 +368,16 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col items-center text-center md:order-2">
               <div className="relative w-full aspect-square max-w-[300px] md:max-w-[450px]">
-                  <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
-                    <Image
-                      src="/images/Experto-hilos-tensores-faciales.png"
-                      alt="Dr. Jonathan Rincón, experto en medicina estética"
-                      width={450}
-                      height={450}
-                      className="object-cover w-full h-full object-top"
-                      data-ai-hint="doctor portrait"
-                    />
-                  </div>
+                <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/Experto-hilos-tensores-faciales.png"
+                    alt="Dr. Jonathan Rincón, experto en medicina estética"
+                    width={450}
+                    height={450}
+                    className="object-cover w-full h-full object-top"
+                    data-ai-hint="doctor portrait"
+                  />
+                </div>
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 md:hidden">
                 <Button asChild size="lg" className="bg-green-500 hover:bg-green-600">
@@ -391,7 +391,7 @@ export default function Home() {
                   </a>
                 </Button>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                   <a
+                  <a
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -428,7 +428,7 @@ export default function Home() {
                   </a>
                 </Button>
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                   <a
+                  <a
                     href="https://wa.me/573122784757"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -489,8 +489,8 @@ export default function Home() {
                 <span className="text-primary">{lang === 'es' ? 'Preguntas Frecuentes' : 'Frequently Asked Questions'}</span>
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                {lang === 'es' 
-                  ? 'Resolvemos tus dudas sobre nuestros tratamientos de medicina estética.' 
+                {lang === 'es'
+                  ? 'Resolvemos tus dudas sobre nuestros tratamientos de medicina estética.'
                   : 'We answer your questions about our aesthetic medicine treatments.'}
               </p>
             </div>
@@ -498,7 +498,7 @@ export default function Home() {
               {[
                 {
                   q: lang === 'es' ? '¿Qué son los hilos tensores y cuánto duran?' : 'What are thread lifts and how long do they last?',
-                  a: lang === 'es' 
+                  a: lang === 'es'
                     ? 'Los hilos tensores son un procedimiento mínimamente invasivo que utiliza hilos de PDO (polidioxanona) para lograr un efecto de lifting facial sin cirugía. Los resultados duran entre 12 y 18 meses, durante los cuales los hilos también estimulan la producción natural de colágeno para un efecto de rejuvenecimiento progresivo.'
                     : 'Thread lifts are a minimally invasive procedure that uses PDO (polydioxanone) threads to achieve a facelift effect without surgery. Results last between 12 and 18 months, during which the threads also stimulate natural collagen production for a progressive rejuvenation effect.'
                 },
@@ -560,7 +560,7 @@ export default function Home() {
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
               className="relative w-full max-w-xl bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border border-primary/10"
             >
-              <button 
+              <button
                 onClick={closePopup}
                 className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-all duration-300 group"
               >
@@ -569,7 +569,7 @@ export default function Home() {
 
               <div className="relative h-72 w-full overflow-hidden">
                 <Image
-                  src="/images/essence/blog_hero.png"
+                  src="/images/essence/blog_hero.jpeg"
                   alt="Essence Experience"
                   fill
                   className="object-cover"
@@ -591,26 +591,26 @@ export default function Home() {
                     {lang === 'es' ? 'Tu piel merece el estándar médico' : 'Your skin deserves the medical standard'}
                   </h4>
                   <p className="mt-4 text-slate-600 leading-relaxed text-sm">
-                    {lang === 'es' 
-                      ? 'Descubre el secreto de la regeneración celular diseñado por el Dr. Jonathan Rincón. Una fórmula maestra para transformar tu salud desde el núcleo.' 
+                    {lang === 'es'
+                      ? 'Descubre el secreto de la regeneración celular diseñado por el Dr. Jonathan Rincón. Una fórmula maestra para transformar tu salud desde el núcleo.'
                       : 'Discover the secret of cellular regeneration designed by Dr. Jonathan Rincón. A master formula to transform your health from the core.'}
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <Button 
+                  <Button
                     asChild
-                    size="lg" 
+                    size="lg"
                     className="w-full bg-primary text-white hover:bg-primary/90 rounded-full h-14 text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/20 cursor-pointer"
                   >
-                    <Link 
+                    <Link
                       href="/essence"
                       onClick={closePopup}
                     >
                       {lang === 'es' ? 'Pide el tuyo' : 'Order yours'}
                     </Link>
                   </Button>
-                  <button 
+                  <button
                     onClick={closePopup}
                     className="text-xs text-slate-400 hover:text-primary transition-colors font-medium underline underline-offset-4"
                   >
