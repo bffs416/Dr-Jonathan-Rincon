@@ -133,15 +133,15 @@ export default function Home() {
       stat1: 'Pacientes Satisfechos',
       stat2: 'Satisfacción',
       stat3: 'de Experiencia',
-      recognition: 'Reconocido como el Especialista #1 en hilos tensores faciales, corporales y HArmonyCa en Medellín y Bogotá',
+      recognition: 'Médico Especialista en Medicina Estética en Medellín y Bogotá',
       videoTitle: 'Testimonios en Video',
       videoSubtitle: 'Pacientes reales comparten sus experiencias y resultados.',
       treatmentsTitle: 'Nuestros Tratamientos Principales',
       treatmentsSubtitle: 'Soluciones personalizadas para realzar tu belleza natural con las técnicas más avanzadas y seguras.',
       aboutTitle: 'Conoce al Dr. Jonathan Rincón',
-      aboutP1: 'Médico Cirujano especialista en Medicina Estética, con más de 8 años de experiencia. Reconocido como el',
-      aboutP1Strong: 'Especialista #1 en hilos tensores faciales, corporales y HArmonyCa en Medellín y Bogotá',
-      aboutP1Cont: ', combino mi práctica clínica con una profunda pasión por la anatomía y las técnicas avanzadas para ofrecer resultados seguros, naturales y armoniosos.',
+      aboutP1: 'Médico Cirujano (Universidad del Tolima) especialista en Medicina Estética, con más de 8 años de experiencia. Médico Especialista referente en hilos tensores faciales, corporales y HArmonyCa en Medellín y Bogotá (ReTHUS: 8127231).',
+      aboutP1Strong: '',
+      aboutP1Cont: ' Combino mi práctica clínica con una profunda pasión por la anatomía y las técnicas avanzadas para ofrecer resultados seguros, naturales y armoniosos.',
       aboutP2: 'Mi dedicación a la excelencia va más allá de la consulta. Como',
       aboutP2Strong1: 'trainer oficial para marcas líderes en la industria',
       aboutP2Cont: ', tengo la misión de elevar el estándar de la medicina estética. Ofrezco',
@@ -162,15 +162,15 @@ export default function Home() {
       stat1: 'Satisfied Patients',
       stat2: 'Satisfaction',
       stat3: 'of Experience',
-      recognition: 'Recognized as the #1 Specialist in facial, body thread lifts and HArmonyCa in Medellín and Bogotá',
+      recognition: 'Aesthetic Medicine Specialist in Medellín and Bogotá',
       videoTitle: 'Video Testimonials',
       videoSubtitle: 'Real patients share their experiences and results.',
       treatmentsTitle: 'Our Main Treatments',
       treatmentsSubtitle: 'Customized solutions to enhance your natural beauty with the most advanced and safe techniques.',
       aboutTitle: 'Meet Dr. Jonathan Rincón',
-      aboutP1: 'Aesthetic Medicine Specialist Surgeon, with over 8 years of experience. Recognized as the',
-      aboutP1Strong: '#1 Specialist in facial, body thread lifts and HArmonyCa in Medellín and Bogotá',
-      aboutP1Cont: ', I combine my clinical practice with a deep passion for anatomy and advanced techniques to offer safe, natural, and harmonious results.',
+      aboutP1: 'Aesthetic Medicine Specialist Surgeon (Universidad del Tolima), with over 8 years of experience. Benchmark Medical Specialist in facial, body thread lifts and HArmonyCa in Medellín and Bogotá (ReTHUS: 8127231).',
+      aboutP1Strong: '',
+      aboutP1Cont: ' I combine my clinical practice with a deep passion for anatomy and advanced techniques to offer safe, natural, and harmonious results.',
       aboutP2: 'My dedication to excellence goes beyond the consultation. As an',
       aboutP2Strong1: 'official trainer for leading industry brands',
       aboutP2Cont: ', my mission is to raise the standard of aesthetic medicine. I offer',
@@ -517,8 +517,8 @@ export default function Home() {
                 {
                   q: lang === 'es' ? '¿Los tratamientos de medicina estética son dolorosos?' : 'Are aesthetic medicine treatments painful?',
                   a: lang === 'es'
-                    ? 'La mayoría de los tratamientos de medicina estética son mínimamente invasivos y se realizan con anestesia local. Los pacientes pueden experimentar una molestia leve durante el procedimiento, pero en general son bien tolerados. El Dr. Rincón utiliza técnicas avanzadas para minimizar cualquier incomodidad.'
-                    : 'Most aesthetic medicine treatments are minimally invasive and performed with local anesthesia. Patients may experience mild discomfort during the procedure, but they are generally well tolerated. Dr. Rincón uses advanced techniques to minimize any discomfort.'
+                    ? 'La mayoría de los tratamientos de medicina estética son mínimamente invasivos y se realizan con anestesia local. Los pacientes pueden experimentar una molestia leve durante el procedimiento, pero en general son bien tolerados. El Dr. Rincón, especialista en medicina estética, utiliza técnicas avanzadas para minimizar cualquier incomodidad.'
+                    : 'Most aesthetic medicine treatments are minimally invasive and performed with local anesthesia. Patients may experience mild discomfort during the procedure, but they are generally well tolerated. Dr. Rincón, an aesthetic medicine specialist, uses advanced techniques to minimize any discomfort.'
                 },
                 {
                   q: lang === 'es' ? '¿Cómo agendar una cita con el Dr. Jonathan Rincón?' : 'How do I schedule an appointment with Dr. Jonathan Rincón?',
@@ -542,86 +542,6 @@ export default function Home() {
         </section>
 
       </main>
-
-      {/* Essence Launch Popup */}
-      <AnimatePresence>
-        {showPopup && (
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={closePopup}
-              className="absolute inset-0 bg-black/60 backdrop-blur-md"
-            />
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="relative w-full max-w-xl bg-white rounded-[2.5rem] overflow-hidden shadow-2xl border border-primary/10"
-            >
-              <button
-                onClick={closePopup}
-                className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-all duration-300 group"
-              >
-                <X className="w-5 h-5 group-hover:scale-110" />
-              </button>
-
-              <div className="relative h-72 w-full overflow-hidden">
-                <Image
-                  src="/images/essence/blog_hero.jpeg"
-                  alt="Essence Experience"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <span className="inline-block px-3 py-1 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-[10px] font-bold tracking-[0.2em] uppercase text-primary mb-3">
-                    {lang === 'es' ? 'Lanzamiento Exclusivo' : 'Exclusive Launch'}
-                  </span>
-                  <h3 className="text-4xl font-headline font-bold text-white drop-shadow-lg leading-tight">
-                    ESSENCE
-                  </h3>
-                </div>
-              </div>
-
-              <div className="p-10 pt-6 space-y-6">
-                <div>
-                  <h4 className="text-2xl font-headline font-bold text-slate-900 leading-tight">
-                    {lang === 'es' ? 'Tu piel merece el estándar médico' : 'Your skin deserves the medical standard'}
-                  </h4>
-                  <p className="mt-4 text-slate-600 leading-relaxed text-sm">
-                    {lang === 'es'
-                      ? 'Descubre el secreto de la regeneración celular diseñado por el Dr. Jonathan Rincón. Una fórmula maestra para transformar tu salud desde el núcleo.'
-                      : 'Discover the secret of cellular regeneration designed by Dr. Jonathan Rincón. A master formula to transform your health from the core.'}
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-3">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="w-full bg-primary text-white hover:bg-primary/90 rounded-full h-14 text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/20 cursor-pointer"
-                  >
-                    <Link
-                      href="/essence"
-                      onClick={closePopup}
-                    >
-                      {lang === 'es' ? 'Pide el tuyo' : 'Order yours'}
-                    </Link>
-                  </Button>
-                  <button
-                    onClick={closePopup}
-                    className="text-xs text-slate-400 hover:text-primary transition-colors font-medium underline underline-offset-4"
-                  >
-                    {lang === 'es' ? 'Quizás más tarde' : 'Maybe later'}
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
 
     </div>
   );

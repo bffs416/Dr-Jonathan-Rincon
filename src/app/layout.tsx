@@ -71,7 +71,7 @@ export default function RootLayout({
         <title>Dr. Jonathan Rincón | Medicina Estética en Medellín - Hilos Tensores y HArmonyCa</title>
         <meta
           name="description"
-          content="Dr. Jonathan Rincón, médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores, lifting con HArmonyCa, botox y contorno corporal. +1000 pacientes satisfechos."
+          content="Dr. Jonathan Rincón, médico cirujano especialista en medicina estética en Medellín. Médico especialista referente en hilos tensores, lifting con HArmonyCa, botox y contorno corporal. +1000 pacientes satisfechos."
         />
         <meta name="google-site-verification" content="googledd9a1b76f2d2f3f3" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -86,7 +86,7 @@ export default function RootLayout({
               "name": "Dr. Jonathan Rincón",
               "url": "https://www.drjonathanrincon.com",
               "image": "https://www.drjonathanrincon.com/images/Experto-hilos-tensores-faciales.png",
-              "description": "Médico cirujano especialista en medicina estética en Medellín. Experto #1 en hilos tensores faciales, corporales y HArmonyCa en Medellín y Bogotá, con más de 8 años de experiencia y más de 1000 pacientes satisfechos.",
+              "description": "Médico cirujano especialista en medicina estética en Medellín. Médico especialista referente en hilos tensores faciales, corporales y HArmonyCa en Medellín y Bogotá, con más de 8 años de experiencia y más de 1000 pacientes satisfechos.",
               "medicalSpecialty": "Aesthetic Medicine",
               "telephone": "+573122784757",
               "address": {
@@ -114,7 +114,7 @@ export default function RootLayout({
                 "Thread lifts",
                 "Collagen biostimulators"
               ],
-              "award": "Experto #1 en hilos tensores en Medellín y Bogotá",
+              "award": "Médico especialista referente en hilos tensores en Medellín y Bogotá",
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5",
@@ -218,7 +218,7 @@ export default function RootLayout({
                   "name": "¿Cuál es el mejor médico estético en Medellín?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "El Dr. Jonathan Rincón es reconocido como el experto #1 en hilos tensores en Medellín y Bogotá. Con más de 8 años de experiencia, más de 1000 pacientes satisfechos, y su rol como trainer oficial de marcas líderes de la industria, es uno de los referentes en medicina estética en Colombia."
+                    "text": "El Dr. Jonathan Rincón es un médico especialista referente en hilos tensores en Medellín y Bogotá. Con más de 8 años de experiencia, más de 1000 pacientes satisfechos, y su rol como trainer oficial de marcas líderes de la industria, es uno de los referentes en medicina estética en Colombia."
                   }
                 },
                 {
