@@ -18,6 +18,9 @@ export const POSTS: { [key: string]: any } = {
       Uno de los mayores retos estéticos tanto en hombres como en mujeres es la <strong>flacidez abdominal</strong>. Ya sea por pérdida rápida de peso, embarazos o simplemente el paso de los años, el abdomen suele perder su firmeza y tono. 
     </p>
     <p class="text-lg leading-relaxed text-muted-foreground">
+      El candidato ideal es aquel que tiene "exceso de piel" o flacidez alrededor del ombligo o en la parte inferior del abdomen, frecuentemente causado por un <strong>embarazo</strong>, procedimientos quirúrgicos como una <strong>liposucción previa (que muchas veces deja una molesta flacidez residual o fibrosis)</strong>, o pérdidas rápidas de peso. No están diseñados para reducir grasa (para eso utilizamos hidrolipoclasia), sino para <em>pegar</em> la piel al músculo y darle firmeza.
+    </p>
+    <p class="text-lg leading-relaxed text-muted-foreground">
       Aunque la abdominoplastia (cirugía) ha sido tradicionalmente la respuesta, hoy en día la medicina estética avanzada nos ofrece una alternativa increíblemente efectiva, verdaderamente <strong>mínimamente invasiva</strong>, sin bisturí y sin cicatrices: los <strong>hilos tensores corporales de polidioxanona (PDO)</strong>, con mención especial a la tecnología de hilos <strong>MINT™ (Minimally Invasive Nonsurgical Thread)</strong>, líderes a nivel mundial.
     </p>
   </div>
@@ -38,7 +41,7 @@ export const POSTS: { [key: string]: any } = {
       <span class="w-12 h-px bg-primary hidden md:block"></span> ¿Qué son exactamente los Hilos Tensores Corporales?
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      Los hilos PDO son filamentos extremadamente finos fabricados con polidioxanona, un material biocompatible y completamente reabsorbible que se utiliza desde hace décadas en suturas de cirugías cardíacas. En nuestra práctica en Medellín, destacamos el uso de los hilos <strong>MINT™</strong>, que cuentan con espículas moldeadas en 360 grados. Estas "anclas" microscópicas se adhieren al tejido subcutáneo de manera superior, permitiendo un efecto de tracción mucho más fuerte y duradero en áreas extensas como el abdomen.
+      Los hilos PDO son filamentos extremadamente finos fabricados con polidioxanona, un material biocompatible y completamente reabsorbible que se utiliza desde hace décadas en suturas de cirugías cardíacas. En nuestra práctica en Medellín (aplicando las técnicas más avanzadas recién traídas directamente desde <strong>Corea del Sur</strong>, cuna mundial de esta innovación), destacamos el uso de los hilos <strong>MINT™ de Hansbiomed</strong>, que cuentan con espículas moldeadas en 360 grados. Estas "anclas" microscópicas se adhieren al tejido subcutáneo de manera superior, permitiendo un efecto de tracción mucho más fuerte y duradero en áreas extensas como el abdomen.
     </p>
 
     <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
@@ -157,7 +160,7 @@ export const POSTS: { [key: string]: any } = {
       <span class="w-12 h-px bg-primary hidden md:block"></span> What exactly are Body Thread Lifts?
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      PDO threads are extremely fine filaments made of polydioxanone, a biocompatible and fully absorbable material used for decades in cardiac surgery sutures. In our practice in Medellin, we highlight the use of <strong>MINT™</strong> threads, which feature 360-degree molded barbs. These microscopic "anchors" adhere to the subcutaneous tissue in a superior way, allowing for a much stronger and longer-lasting traction effect in large areas like the abdomen.
+      PDO threads are extremely fine filaments made of polydioxanone, a biocompatible and fully absorbable material used for decades in cardiac surgery sutures. In our practice in Medellin (applying the most advanced techniques recently brought directly from <strong>South Korea</strong>, the global birthplace of this innovation), we highlight the use of <strong>MINT™ threads by Hansbiomed</strong>, which feature 360-degree molded barbs. These microscopic "anchors" adhere to the subcutaneous tissue in a superior way, allowing for a much stronger and longer-lasting traction effect in large areas like the abdomen.
     </p>
 
     <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
