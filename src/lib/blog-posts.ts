@@ -18,7 +18,7 @@ export const POSTS: { [key: string]: any } = {
       Uno de los mayores retos estéticos tanto en hombres como en mujeres es la <strong>flacidez abdominal</strong>. Ya sea por pérdida rápida de peso, embarazos o simplemente el paso de los años, el abdomen suele perder su firmeza y tono. 
     </p>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      Aunque la abdominoplastia (cirugía) ha sido tradicionalmente la respuesta, hoy en día la medicina estética avanzada nos ofrece una alternativa increíblemente efectiva, sin bisturí y sin cicatrices: los <strong>hilos tensores corporales de polidioxanona (PDO)</strong>.
+      Aunque la abdominoplastia (cirugía) ha sido tradicionalmente la respuesta, hoy en día la medicina estética avanzada nos ofrece una alternativa increíblemente efectiva, verdaderamente <strong>mínimamente invasiva</strong>, sin bisturí y sin cicatrices: los <strong>hilos tensores corporales de polidioxanona (PDO)</strong>, con mención especial a la tecnología de hilos <strong>MINT™ (Minimally Invasive Nonsurgical Thread)</strong>, líderes a nivel mundial.
     </p>
   </div>
 
@@ -38,17 +38,16 @@ export const POSTS: { [key: string]: any } = {
       <span class="w-12 h-px bg-primary hidden md:block"></span> ¿Qué son exactamente los Hilos Tensores Corporales?
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      Los hilos PDO son filamentos extremadamente finos fabricados con polidioxanona, un material biocompatible y completamente reabsorbible que se utiliza desde hace décadas en suturas de cirugías cardíacas. En medicina estética, los introducimos en el tejido subcutáneo (la grasa y la dermis profunda) del abdomen mediante agujas muy delgadas o cánulas, creando una auténtica <strong>malla de soporte estructural</strong> bajo la piel.
+      Los hilos PDO son filamentos extremadamente finos fabricados con polidioxanona, un material biocompatible y completamente reabsorbible que se utiliza desde hace décadas en suturas de cirugías cardíacas. En nuestra práctica en Medellín, destacamos el uso de los hilos <strong>MINT™</strong>, que cuentan con espículas moldeadas en 360 grados. Estas "anclas" microscópicas se adhieren al tejido subcutáneo de manera superior, permitiendo un efecto de tracción mucho más fuerte y duradero en áreas extensas como el abdomen.
     </p>
 
     <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
       <div class="absolute top-0 right-0 p-8 opacity-10">
         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
       </div>
-      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">El Efecto Doble de la Polidioxanona (PDO)</h3>
+      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">El Procedimiento: Paso a Paso</h3>
       <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">
-        1. <strong>Tensión Mecánica Inmediata:</strong> Los hilos espiculados "anclan" y traccionan los tejidos caídos, generando un efecto lifting visible al instante.<br/><br/>
-        2. <strong>Bioestimulación de Colágeno (Neocolagénesis):</strong> A medida que el hilo se va reabsorbiendo (durante 6 a 8 meses), estimula masivamente a los fibroblastos para producir colágeno tipo I y III, redensificando la piel y haciendo que el resultado dure mucho más allá de la vida del hilo (hasta 18 meses).
+        El procedimiento es estrictamente ambulatorio. Primero, realizamos un diseño vectorial sobre el abdomen (marcando exactamente dónde necesitamos tracción). Luego, aplicamos <strong>anestesia local</strong> en los puntos de entrada. A través de unas cánulas especiales muy finas (sin punta cortante, lo que evita moretones), introducimos los hilos creando una auténtica <strong>malla de soporte estructural</strong> bajo la piel. Todo el proceso dura aproximadamente 45 a 60 minutos.
       </p>
     </div>
 
@@ -56,45 +55,59 @@ export const POSTS: { [key: string]: any } = {
       Ventajas frente a la Cirugía Tradicional
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      Como médico especialista, muchos pacientes me preguntan en mi consultorio en Medellín si deben operarse o probar hilos. Si tu caso es de flacidez leve a moderada, los hilos ofrecen ventajas insuperables:
+      Como médico especialista, muchos pacientes me preguntan en mi consultorio si deben operarse o probar hilos. Si tu caso es de flacidez leve a moderada, los hilos ofrecen ventajas insuperables al ser <strong>100% mínimamente invasivos</strong>:
     </p>
     <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
       <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Sin cicatrices:</strong> Al no haber cortes ni incisiones grandes, no te quedará esa enorme cicatriz horizontal típica de la abdominoplastia.</span>
+        <span><strong>Sin cicatrices:</strong> Al no haber cortes quirúrgicos, no te quedará esa enorme cicatriz horizontal típica de la abdominoplastia.</span>
       </li>
       <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Sin anestesia general:</strong> El procedimiento se realiza en el consultorio, usando anestesia local en los puntos de entrada.</span>
+        <span><strong>Sin anestesia general:</strong> Todo el proceso se realiza de manera segura con anestesia local.</span>
       </li>
       <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Recuperación Inmediata (Zero Downtime):</strong> Puedes volver a tus actividades diarias el mismo día o al día siguiente, solo evitando ejercicio intenso por unas semanas.</span>
+        <span><strong>Sin Quirófano:</strong> Menos riesgo de complicaciones asociadas a procedimientos quirúrgicos mayores.</span>
       </li>
     </ul>
 
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
-      ¿Para quién están indicados?
+      Cuidados Post-Tratamiento (¿Incapacita?)
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      El candidato ideal es aquel que tiene "exceso de piel" o flacidez alrededor del ombligo o en la parte inferior del abdomen, frecuentemente causado por un <strong>embarazo</strong>, procedimientos estéticos como una <strong>liposucción previa</strong>, o pérdidas rápidas de peso. No están diseñados para reducir grasa (para eso utilizamos hidrolipoclasia), sino para <em>pegar</em> la piel al músculo y darle firmeza.
+      Una de las mayores inquietudes es si el procedimiento requiere incapacidad. La respuesta es <strong>no genera incapacidad médica estricta</strong>. Al ser un procedimiento de recuperación inmediata (Zero Downtime), puedes volver a tus actividades de oficina el mismo día o al día siguiente. 
     </p>
-
-    <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
-      <p>"La aplicación de hilos en el abdomen es un procedimiento artesanal que requiere un conocimiento anatómico preciso. En Medellín, mi objetivo es diseñar mallas vectoriales que respondan a la necesidad exacta de cada paciente, logrando que el abdomen vuelva a lucir firme y atlético."</p>
-    </blockquote>
+    <p class="text-lg leading-relaxed text-muted-foreground mt-4">
+      Sin embargo, para garantizar el éxito del lifting sin cirugía, debes seguir estos cuidados durante las primeras 2 a 3 semanas:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-lg text-muted-foreground mt-4 mb-8">
+      <li>Usar una <strong>faja de compresión suave</strong> para ayudar a que la piel se adhiera al nuevo contorno y evitar que los hilos se desplacen.</li>
+      <li>Evitar el <strong>ejercicio físico intenso</strong> (especialmente rutinas abdominales y levantamiento de pesas) por 15 a 21 días.</li>
+      <li>No realizar masajes fuertes, drenajes linfáticos bruscos o usar aparatología de calor profundo (como radiofrecuencia) en la zona abdominal.</li>
+      <li>Dormir preferiblemente boca arriba los primeros días.</li>
+    </ul>
 
     <div class="pt-8 border-t border-slate-200 dark:border-slate-800 my-10">
       <h2 class="text-2xl font-medium text-foreground mb-6">Preguntas Frecuentes</h2>
+      
       <div class="mb-6">
         <h4 class="font-bold text-lg mb-2 text-primary/80">¿Es un procedimiento doloroso?</h4>
-        <p class="text-lg leading-relaxed text-muted-foreground">No. Utilizamos anestesia local en los puntos de inserción. Puedes sentir una leve molestia o tirantez los días siguientes, pero es completamente manejable con analgésicos comunes.</p>
+        <p class="text-lg leading-relaxed text-muted-foreground">No. Durante el procedimiento aplicamos anestesia local en los puntos de entrada, por lo que no sentirás dolor, solo una leve presión al pasar la cánula. En los días posteriores (especialmente los primeros 3 a 5 días) es normal sentir tirantez, pequeños "pinchazos" al hacer ciertos movimientos o una leve inflamación. Todo esto es completamente manejable con los analgésicos convencionales que te recetaremos.</p>
       </div>
+
       <div class="mb-6">
-        <h4 class="font-bold text-lg mb-2 text-primary/80">¿Cuándo se notan los resultados?</h4>
-        <p class="text-lg leading-relaxed text-muted-foreground">Notarás un efecto tensor mecánico el mismo día, pero el verdadero "milagro" ocurre a partir de la tercera semana y tiene su pico a los 3 meses, cuando tu cuerpo ha formado colágeno nuevo alrededor de la malla de hilos.</p>
+        <h4 class="font-bold text-lg mb-2 text-primary/80">¿Cuándo se notan los resultados y cuánto duran?</h4>
+        <p class="text-lg leading-relaxed text-muted-foreground">
+          Notarás un <strong>efecto tensor mecánico el mismo día</strong> (la piel se ve inmediatamente más lisa y pegada). Pero el verdadero milagro biológico (la <strong>Neocolagénesis</strong> o producción masiva de colágeno nuevo) comienza a partir de la tercera semana, alcanzando su pico máximo a los 3 o 4 meses. <br/><br/>
+          Aunque los hilos PDO se reabsorben por completo en unos 6 a 8 meses, la densa red de colágeno que dejaron en tu abdomen mantiene el efecto de firmeza por <strong>12 a 18 meses</strong>.
+        </p>
       </div>
     </div>
+
+    <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
+      <p>"La aplicación de hilos en el abdomen requiere un conocimiento anatómico preciso. En Medellín, mi objetivo es diseñar mallas vectoriales que respondan a la necesidad exacta de cada paciente, logrando un abdomen firme sin pisar un quirófano."</p>
+    </blockquote>
 
     <h4 class="text-xl font-medium text-foreground mt-8 mb-4">¿Te gustaría evaluar tu caso?</h4>
     <p class="text-lg leading-relaxed text-muted-foreground">
@@ -119,7 +132,7 @@ export const POSTS: { [key: string]: any } = {
       One of the greatest aesthetic challenges for both men and women is <strong>abdominal skin laxity</strong> (sagging skin). Whether due to rapid weight loss, pregnancy, or simply aging, the abdomen often loses its firmness and tone. 
     </p>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      Although a tummy tuck (abdominoplasty) has traditionally been the answer, today's advanced medical aesthetics offers an incredibly effective alternative with no scalpels and no scars: <strong>PDO (Polydioxanone) body thread lifts</strong>.
+      Although a tummy tuck (abdominoplasty) has traditionally been the answer, today's advanced medical aesthetics offers an incredibly effective, truly <strong>minimally invasive</strong> alternative with no scalpels and no scars: <strong>PDO (Polydioxanone) body thread lifts</strong>, with a special mention to <strong>MINT™ (Minimally Invasive Nonsurgical Thread)</strong> technology, global leaders in thread lifts.
     </p>
   </div>
 
@@ -139,17 +152,16 @@ export const POSTS: { [key: string]: any } = {
       <span class="w-12 h-px bg-primary hidden md:block"></span> What exactly are Body Thread Lifts?
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      PDO threads are extremely fine filaments made of polydioxanone, a biocompatible and fully absorbable material used for decades in cardiac surgery sutures. In aesthetic medicine, we introduce them into the subcutaneous tissue (the fat and deep dermis) of the abdomen using very thin needles or cannulas, creating a genuine <strong>structural support mesh</strong> under the skin.
+      PDO threads are extremely fine filaments made of polydioxanone, a biocompatible and fully absorbable material used for decades in cardiac surgery sutures. In our practice in Medellin, we highlight the use of <strong>MINT™</strong> threads, which feature 360-degree molded barbs. These microscopic "anchors" adhere to the subcutaneous tissue in a superior way, allowing for a much stronger and longer-lasting traction effect in large areas like the abdomen.
     </p>
 
     <div class="max-w-3xl mx-auto relative overflow-hidden p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/10 border border-amber-200/50 dark:border-amber-900/30 my-10">
       <div class="absolute top-0 right-0 p-8 opacity-10">
         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
       </div>
-      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">The Dual Effect of Polydioxanone (PDO)</h3>
+      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">The Procedure: Step by Step</h3>
       <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">
-        1. <strong>Immediate Mechanical Tension:</strong> Barbed threads "anchor" and pull up sagging tissues, generating a lifting effect visible instantly.<br/><br/>
-        2. <strong>Collagen Biostimulation (Neocollagenesis):</strong> As the thread absorbs (over 6 to 8 months), it massively stimulates fibroblasts to produce type I and III collagen, redensifying the skin and making the result last far beyond the life of the thread (up to 18 months).
+        The procedure is strictly outpatient. First, we create a vector design on the abdomen (marking exactly where we need traction). Then, we apply <strong>local anesthesia</strong> at the entry points. Using very thin, special cannulas (with a blunt tip to prevent bruising), we introduce the threads to create a genuine <strong>structural support mesh</strong> under the skin. The whole process takes about 45 to 60 minutes.
       </p>
     </div>
 
@@ -157,45 +169,59 @@ export const POSTS: { [key: string]: any } = {
       Advantages Over Traditional Surgery
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      As a medical specialist, many patients ask me in my clinic in Medellin whether they should get surgery or try threads. If your case involves mild to moderate sagging, threads offer unbeatable advantages:
+      As a medical specialist, many patients ask me in my clinic if they should get surgery or try threads. If your case involves mild to moderate sagging, threads offer unbeatable advantages by being <strong>100% minimally invasive</strong>:
     </p>
     <ul class="space-y-4 my-8 p-8 rounded-3xl bg-primary/5 border border-primary/10 shadow-inner">
       <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>No scars:</strong> Since there are no cuts or large incisions, you won't get that huge horizontal scar typical of an abdominoplasty.</span>
+        <span><strong>No scars:</strong> Since there are no surgical cuts, you won't get that huge horizontal scar typical of an abdominoplasty.</span>
       </li>
       <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>No general anesthesia:</strong> The procedure is done in the clinic using local anesthesia at the entry points.</span>
+        <span><strong>No general anesthesia:</strong> The entire process is safely performed with local anesthesia.</span>
       </li>
       <li class="flex items-start gap-4 text-lg text-slate-700 dark:text-slate-300">
         <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary text-sm mt-1">✓</span>
-        <span><strong>Immediate Recovery (Zero Downtime):</strong> You can return to your daily activities the same or the next day, only avoiding intense exercise for a few weeks.</span>
+        <span><strong>No Operating Room:</strong> Less risk of complications associated with major surgical procedures.</span>
       </li>
     </ul>
 
     <h2 class="text-2xl md:text-3xl font-light text-foreground mb-6 border-l-4 border-primary pl-6">
-      Who is the ideal candidate?
+      Post-Treatment Care & Downtime
     </h2>
     <p class="text-lg leading-relaxed text-muted-foreground">
-      The ideal candidate is someone who has "excess skin" or looseness around the belly button or lower abdomen, often caused by <strong>pregnancy</strong>, aesthetic procedures like a <strong>previous liposuction</strong>, or rapid weight loss. Threads are not designed to reduce fat (we use hydrolipoclasy for that), but rather to <em>tighten</em> the skin to the muscle and give it firmness.
+      One of the main concerns is whether the procedure requires medical leave (downtime). The answer is <strong>it does not require strict medical incapacitation</strong>. Since it is a Zero Downtime procedure, you can return to your office activities the same day or the day after. 
     </p>
-
-    <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
-      <p>"Applying threads to the abdomen is an artisanal procedure requiring precise anatomical knowledge. In Medellin, my goal is to design vectorial meshes that respond exactly to each patient's needs, helping the abdomen look firm and athletic again."</p>
-    </blockquote>
+    <p class="text-lg leading-relaxed text-muted-foreground mt-4">
+      However, to ensure the success of this non-surgical lift, you must follow these care instructions during the first 2 to 3 weeks:
+    </p>
+    <ul class="list-disc pl-6 space-y-2 text-lg text-muted-foreground mt-4 mb-8">
+      <li>Wear a <strong>soft compression garment</strong> to help the skin adhere to the new contour and prevent the threads from shifting.</li>
+      <li>Avoid <strong>intense physical exercise</strong> (especially abdominal workouts and weightlifting) for 15 to 21 days.</li>
+      <li>Do not undergo strong massages, aggressive lymphatic drainage, or use deep heat devices (like radiofrequency) on the abdominal area.</li>
+      <li>Sleep preferably on your back for the first few days.</li>
+    </ul>
 
     <div class="pt-8 border-t border-slate-200 dark:border-slate-800 my-10">
       <h2 class="text-2xl font-medium text-foreground mb-6">Frequently Asked Questions</h2>
+      
       <div class="mb-6">
         <h4 class="font-bold text-lg mb-2 text-primary/80">Is it a painful procedure?</h4>
-        <p class="text-lg leading-relaxed text-muted-foreground">No. We use local anesthesia at the insertion points. You may feel a slight discomfort or tightness in the following days, but it is completely manageable with common painkillers.</p>
+        <p class="text-lg leading-relaxed text-muted-foreground">No. We apply local anesthesia at the insertion points during the procedure, so you won't feel pain, just a slight pressure when the cannula passes. In the following days (especially the first 3 to 5 days), it is normal to feel some tightness, small "pricks" when making certain movements, or mild swelling. All of this is completely manageable with the conventional painkillers we will prescribe.</p>
       </div>
+
       <div class="mb-6">
-        <h4 class="font-bold text-lg mb-2 text-primary/80">When will I see the results?</h4>
-        <p class="text-lg leading-relaxed text-muted-foreground">You will notice a mechanical tightening effect the same day, but the real "miracle" happens starting at week three, peaking at 3 months when your body has formed new collagen around the thread mesh.</p>
+        <h4 class="font-bold text-lg mb-2 text-primary/80">When will I see results and how long do they last?</h4>
+        <p class="text-lg leading-relaxed text-muted-foreground">
+          You will notice a <strong>mechanical tightening effect the same day</strong> (the skin looks immediately smoother and tighter). But the real biological miracle (<strong>Neocollagenesis</strong>, or massive new collagen production) begins around the third week, peaking at 3 or 4 months. <br/><br/>
+          Although PDO threads are completely absorbed in about 6 to 8 months, the dense collagen network they leave behind in your abdomen maintains the firmness effect for <strong>12 to 18 months</strong>.
+        </p>
       </div>
     </div>
+
+    <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
+      <p>"Applying threads to the abdomen requires precise anatomical knowledge. In Medellin, my goal is to design vectorial meshes that respond exactly to each patient's needs, achieving a firm abdomen without stepping into an operating room."</p>
+    </blockquote>
 
     <h4 class="text-xl font-medium text-foreground mt-8 mb-4">Would you like to evaluate your case?</h4>
     <p class="text-lg leading-relaxed text-muted-foreground">
