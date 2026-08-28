@@ -48,9 +48,9 @@ export const POSTS: { [key: string]: any } = {
       <div class="absolute top-0 right-0 p-8 opacity-10">
         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
       </div>
-      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">El Procedimiento: Paso a Paso</h3>
+      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">El Procedimiento: Paso a Paso con Nuevas Técnicas</h3>
       <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">
-        El procedimiento es estrictamente ambulatorio. Primero, realizamos un diseño vectorial sobre el abdomen (marcando exactamente dónde necesitamos tracción). Luego, aplicamos <strong>anestesia local</strong> en los puntos de entrada. A través de unas cánulas especiales muy finas (sin punta cortante, lo que evita moretones), introducimos los hilos creando una auténtica <strong>malla de soporte estructural</strong> bajo la piel. Todo el proceso dura aproximadamente 45 a 60 minutos.
+        El procedimiento es estrictamente ambulatorio. Primero, utilizando las <strong>nuevas técnicas de vectores dinámicos</strong> recién perfeccionadas, realizamos un diseño anatómico sobre el abdomen (marcando exactamente los puntos de anclaje de máxima tracción). Luego, aplicamos <strong>anestesia local</strong> en los puntos de entrada. A través de unas cánulas especiales muy finas (sin punta cortante, lo que evita moretones), introducimos los hilos creando una auténtica <strong>malla de soporte estructural</strong> bajo la piel. Todo el proceso dura aproximadamente 45 a 60 minutos.
       </p>
     </div>
 
@@ -167,9 +167,9 @@ export const POSTS: { [key: string]: any } = {
       <div class="absolute top-0 right-0 p-8 opacity-10">
         <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor" class="text-amber-600"><path d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
       </div>
-      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">The Procedure: Step by Step</h3>
+      <h3 class="text-xl font-semibold text-amber-800 dark:text-amber-500 mb-3 relative z-10">The Procedure: Step by Step with New Techniques</h3>
       <p class="text-amber-900/80 dark:text-amber-200/70 text-lg relative z-10">
-        The procedure is strictly outpatient. First, we create a vector design on the abdomen (marking exactly where we need traction). Then, we apply <strong>local anesthesia</strong> at the entry points. Using very thin, special cannulas (with a blunt tip to prevent bruising), we introduce the threads to create a genuine <strong>structural support mesh</strong> under the skin. The whole process takes about 45 to 60 minutes.
+        The procedure is strictly outpatient. First, using the <strong>new dynamic vector techniques</strong> recently perfected, we create an anatomical design on the abdomen (marking exactly the maximum traction anchor points). Then, we apply <strong>local anesthesia</strong> at the entry points. Using very thin, special cannulas (with a blunt tip to prevent bruising), we introduce the threads to create a genuine <strong>structural support mesh</strong> under the skin. The whole process takes about 45 to 60 minutes.
       </p>
     </div>
 
