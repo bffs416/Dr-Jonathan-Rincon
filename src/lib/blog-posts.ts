@@ -131,7 +131,7 @@ export const POSTS: { [key: string]: any } = {
       Como médico especialista referente en contorno corporal sin cirugía, te invito a una valoración en mi clínica en Medellín. Juntos determinaremos si los hilos tensores en abdomen son la solución ideal para devolverle a tu cuerpo la firmeza que buscas.
     </p>
     <div class="mt-8">
-      <a href="https://wa.me/573104499645?text=Hola%20Dr.%20Jonathan%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20para%20hilos%20tensores%20en%20abdomen" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary rounded-full shadow-lg hover:bg-primary/90 hover:-translate-y-1 transition-all duration-300">
+      <a href="https://wa.me/573104499645?text=Hola%20Dr.%20Jonathan%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20para%20hilos%20tensores%20en%20abdomen" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300">
         Agendar Valoración por WhatsApp
       </a>
     </div>
