@@ -27,7 +27,7 @@ export const IMAGES: SiteImage[] = [
   // Hilos Tensores - Advanced Applications & Benefits
   { id: 'rhino-shaping', src: '/images/Rinomodelacion.png', hint: 'nose shaping' },
   { id: 'fox-eyes', src: '/images/Hilos_Foxy_eyes.png', hint: 'eyebrow lift' },
-  { id: 'abs-definition', src: '/images/Hilos_Tensores_Abdomen_1.jpg', hint: 'abdominal definition' },
+  { id: 'abdomen-photo', src: '/images/imagen-abdome.jpeg', hint: 'Imagen del abdomen del doctor' },,
   { id: 'arm-lift', src: '/images/diptico_marcas_preoperatorias.png', hint: 'arm lift' },
   { id: 'butt-lift', src: '/images/Hilos_Tensores _Levantamiento de gluteos _1.png', hint: 'butt lift' },
   { id: 'scar-treatment', src: '/images/Tratamiento de Cicatrices Atróficas.jpg', hint: 'scar treatment' },

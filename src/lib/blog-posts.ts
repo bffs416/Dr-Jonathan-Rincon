@@ -9,7 +9,7 @@ export const POSTS: { [key: string]: any } = {
       date: '28 de Agosto de 2026',
       readTime: '7 min',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('abs-definition'),
+      image: findImage('abdomen-photo'),
       description: 'Descubre cómo los hilos tensores PDO ofrecen un lifting abdominal sin cirugía. Tratamiento ideal para la flacidez post-parto y estimulación de colágeno en Medellín.',
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
@@ -28,7 +28,7 @@ export const POSTS: { [key: string]: any } = {
   <figure class="w-full md:w-[110%] md:-ml-[5%] relative my-16 group">
     <div class="overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800/50 shadow-xl shadow-primary/5 transition-all duration-700 hover:shadow-2xl">
       <div class="w-full relative overflow-hidden flex items-center justify-center">
-        <img src="/images/Hilos_Tensores_Abdomen_1.jpg" alt="Hilos Tensores en Abdomen" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
+        <img src="/images/imagen-abdome.jpeg" alt="Imagen del abdomen del doctor" class="w-full h-auto block transition-transform duration-1000 group-hover:scale-105" />
       </div>
     </div>
     <figcaption class="mt-4 text-center text-xs tracking-[0.2em] uppercase text-muted-foreground font-medium">
