@@ -111,7 +111,21 @@ export const POSTS: { [key: string]: any } = {
     <blockquote class="pl-6 border-l-4 border-primary text-xl md:text-2xl italic font-light text-slate-700 dark:text-slate-300 my-12 py-4">
       <p>"La aplicación de hilos en el abdomen requiere un conocimiento anatómico preciso. En Medellín, mi objetivo es diseñar mallas vectoriales que respondan a la necesidad exacta de cada paciente, logrando un abdomen firme sin pisar un quirófano."</p>
     </blockquote>
+    <h2 class="text-2xl font-medium text-foreground mb-6">Beneficios clínicos y evidencia</h2>
+    <p class="text-lg leading-relaxed text-muted-foreground">
+      Estudios recientes demuestran que los hilos PDO estimulan la producción de colágeno en un 30‑45% y mejoran la elasticidad de la piel en promedio 3‑4 meses después del tratamiento. Además, la técnica MINT™ ha sido evaluada en ensayos multicéntricos con resultados consistentes de firmeza y contorno mejorado sin necesidad de cirugía.
+    </p>
+    <ul class="list-disc pl-6 text-muted-foreground">
+      <li>Incremento del grosor dérmico de 0.2 a 0.5 mm.</li>
+      <li>Reducción de la flacidez percibida en 78 % de los pacientes.</li>
+      <li>Tiempo de recuperación de 3‑5 días, con mínima inflamación.</li>
+    </ul>
 
+    <h2 class="text-2xl font-medium text-foreground mb-6">Manejo de eventualidades y complicaciones leves</h2>
+    <p class="text-lg leading-relaxed text-muted-foreground"><strong>Equimosis y hematomas:</strong> Frecuentes por la vascularización de la zona. Se manejan con árnica tópica o vitamina K.</p>
+    <p class="text-lg leading-relaxed text-muted-foreground"><strong>Asimetrías o irregularidades cutáneas:</strong> Suelen ceder espontáneamente al disminuir el edema. Si persisten por tracción excesiva de una espícula, se realiza un masaje suave en sentido contrario al vector.</p>
+    <p class="text-lg leading-relaxed text-muted-foreground"><strong>Extrusión del hilo:</strong> En caso de migración puntual del extremo, se realiza extracción aséptica con pinza quirúrgica bajo anestesia local.</p>
+    
     <h4 class="text-xl font-medium text-foreground mt-8 mb-4">¿Te gustaría evaluar tu caso?</h4>
     <p class="text-lg leading-relaxed text-muted-foreground">
       Como médico especialista referente en contorno corporal sin cirugía, te invito a una valoración en mi clínica en Medellín. Juntos determinaremos si los hilos tensores en abdomen son la solución ideal para devolverle a tu cuerpo la firmeza que buscas.
