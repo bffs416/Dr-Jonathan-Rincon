@@ -131,7 +131,7 @@ export const POSTS: { [key: string]: any } = {
       date: 'August 28, 2026',
       readTime: '7 min read',
       author: 'Dr. Jonathan Rincón',
-      image: findImage('abs-definition'),
+      image: findImage('abdomen-photo'),
       description: 'Discover how PDO thread lifts offer a non-surgical abdominal lift. The ideal treatment for post-pregnancy sagging and collagen biostimulation in Medellin.',
       content: `
 <article class="font-body text-slate-800 dark:text-slate-200 mt-8 mb-20 space-y-16">
