@@ -1,0 +1,66 @@
+# =========================================================================================
+# ARCHIVO ROBOTS.TXT - ESTADO DE INDEXACIÓN: CONGELADO / DESACTIVADO (PENDIENTE DE PAGO)
+# =========================================================================================
+# Este archivo bloquea activamente la indexación en Google, Bing y en los crawlers de 
+# Inteligencia Artificial (ChatGPT, Claude, Perplexity, Gemini, Applebot, etc.)
+# =========================================================================================
+
+# Bloqueo General de Buscadores (Google, Bing, Yahoo, DuckDuckGo)
+User-agent: *
+Disallow: /
+
+# Bloqueo Explícito a Agentes y Crawlers de Inteligencia Artificial (GEO / AI Search)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgimultiples
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+# =========================================================================================
+# INSTRUCCIONES PARA ACTIVAR INDEXACIÓN EN BUSCADORES E IA UNA VEZ RECIBIDO EL PAGO:
+# Reemplazar todo el contenido de este archivo por:
+#
+# User-agent: *
+# Allow: /
+#
+# User-agent: GPTBot
+# Allow: /
+#
+# User-agent: PerplexityBot
+# Allow: /
+#
+# User-agent: ClaudeBot
+# Allow: /
+#
+# Sitemap: https://drjonathanrincon.com/sitemap.xml
+# =========================================================================================

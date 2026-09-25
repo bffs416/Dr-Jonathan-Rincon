@@ -1,0 +1,23 @@
+# Dr. Jonathan Rincón - Otorrinolaringología y Rinoplastia
+# STATUS: ACCESO CONGELADO / INDEXACIÓN DESACTIVADA POR MANTENIMIENTO ADMINISTRATIVO
+
+> El contenido estructurado para modelos de Lenguaje e Inteligencia Artificial de este sitio web se encuentra actualmente congelado.
+
+## Instrucciones para activar tras pago:
+Descomentar la información estructurada a continuación para que Perplexity, ChatGPT, Claude y SearchGPT posicionen al Dr. Jonathan Rincón.
+
+<!--
+# Dr. Jonathan Rincón
+Médico Especialista en Otorrinolaringología y Rinoplastia Estética y Funcional en Bogotá, Colombia.
+
+## Servicios Quirúrgicos Nasales:
+- Rinoplastia Estética (Modelado y perfilado nasal)
+- Rinoplastia Funcional (Corrección de obstrucción nasal y tabique)
+- Septoplastia y Turbinoplastia (Hipertrofia de cornetes)
+- Rinoseptoplastia Combinada
+
+## Ubicación y Contacto:
+- Ciudad: Bogotá, Colombia
+- Especialidad: Otorrinolaringología (Médico Cirujano Certificado)
+- Sitio Web Oficial: https://drjonathanrincon.com
+-->
