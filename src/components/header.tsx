@@ -1,0 +1,242 @@
+
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Facebook, Instagram, Menu, X, Search, Moon, MessageCircle } from 'lucide-react';
+
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { Logo } from './logo';
+import { WhatsAppIcon } from './icons/whatsapp-icon';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { ChevronDown } from 'lucide-react';
+import React from 'react';
+import { useLanguage } from '@/context/language-context';
+
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const { lang, setLang } = useLanguage();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Set initial state
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  const content = {
+    es: {
+      navLinks: [
+        { name: 'Hilos Tensores', href: '/hilos-tensores', highlight: true },
+        { name: 'HArmonyCa', href: '/harmonyca', highlight: true },
+        { name: 'Essence', href: '/essence', highlight: true },
+        {
+          name: 'Tratamientos',
+          dropdown: [
+            { name: 'Bioestimuladores', href: '/bioestimuladores' },
+            { name: 'Botox', href: '/botox' },
+            { name: 'Contorno Corporal', href: '/contorno-corporal' },
+            { name: 'Medicina Estética Avanzada', href: '/medicina-estetica-avanzada' },
+          ],
+        },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Sobre Mi', href: '/#sobre-el-doctor' },
+        { name: 'Contacto', href: '/contacto' },
+      ],
+      ctaButton: 'Agendar Cita',
+      mobileMenuTitle: 'Navegación Principal',
+      mobileMenuClose: 'Cerrar menú',
+      openMenu: 'Abrir menú',
+    },
+    en: {
+      navLinks: [
+        { name: 'Thread Lifts', href: '/hilos-tensores', highlight: true },
+        { name: 'HArmonyCa', href: '/harmonyca', highlight: true },
+        { name: 'Essence', href: '/essence', highlight: true },
+        {
+          name: 'Treatments',
+          dropdown: [
+            { name: 'Biostimulators', href: '/bioestimuladores' },
+            { name: 'Botox', href: '/botox' },
+            { name: 'Body Contouring', href: '/contorno-corporal' },
+            { name: 'Advanced Aesthetic Medicine', href: '/medicina-estetica-avanzada' },
+          ],
+        },
+        { name: 'Blog', href: '/blog' },
+        { name: 'About Me', href: '/#sobre-el-doctor' },
+        { name: 'Contact', href: '/contacto' },
+      ],
+      ctaButton: 'Schedule Appointment',
+      mobileMenuTitle: 'Main Navigation',
+      mobileMenuClose: 'Close menu',
+      openMenu: 'Open menu',
+    },
+  };
+
+  const currentContent = content[lang];
+  
+  const NavLink = ({ href, children, highlight = false }: { href: string; children: React.ReactNode; highlight?: boolean }) => {
+    const isActive = pathname === href;
+    return (
+      <Link 
+        href={href} 
+        className={cn(
+          "text-sm transition-all flex items-center whitespace-nowrap rounded-full",
+          highlight ? "px-4 py-1.5 border border-primary/40 text-primary font-semibold hover:bg-primary/5 hover:border-primary/60 shadow-sm" : "font-medium text-foreground hover:text-primary/80",
+          isActive && !highlight && "text-primary font-semibold"
+        )}
+      >
+        {children}
+      </Link>
+    );
+  };
+  
+  const NavDropdown = ({ name, items }: { name: string; items: { name: string; href: string, highlight?: boolean }[] }) => {
+     const isActive = items.some(item => pathname.startsWith(item.href));
+    return (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" className={cn("text-sm font-medium hover:text-primary/80 px-3 data-[state=open]:text-primary/80", isActive ? "text-primary font-semibold" : "text-foreground")}>
+            {name} <ChevronDown className="ml-1 h-4 w-4" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="start">
+          {items.map(item => (
+            <DropdownMenuItem key={item.href} asChild>
+              <Link href={item.href} className={cn(item.highlight && "font-bold text-primary/80")}>
+                {item.highlight && <Award className="mr-2 h-4 w-4" />}
+                {item.name}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    );
+  };
+
+
+  return (
+    <header
+      className={cn(
+        'sticky top-0 z-50 w-full transition-all duration-300 border-b',
+        isScrolled
+          ? 'bg-header-background/90 backdrop-blur-lg border-border'
+          : 'bg-header-background border-transparent'
+      )}
+    >
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <Logo />
+
+        <nav className="hidden lg:flex items-center gap-4">
+            {currentContent.navLinks.map((link, index) => (
+              <React.Fragment key={link.name}>
+                {index > 0 && !link.highlight && <div className="h-4 w-px bg-border mx-2" />}
+                {link.dropdown 
+                    ? <NavDropdown name={link.name} items={link.dropdown} />
+                    : <NavLink href={(link as any).href || '#'} highlight={!!(link as any).highlight}>{link.name}</NavLink>
+                }
+              </React.Fragment>
+            ))}
+        </nav>
+
+        <div className="hidden lg:flex items-center space-x-2">
+          <div className="flex items-center border rounded-full p-1">
+            <Button variant={lang === 'es' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs" onClick={() => setLang('es')}>ES</Button>
+            <Button variant={lang === 'en' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs" onClick={() => setLang('en')}>EN</Button>
+          </div>
+          <Button asChild className="uppercase tracking-widest bg-green-500 hover:bg-green-600">
+             <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
+                {currentContent.ctaButton} <MessageCircle />
+             </a>
+          </Button>
+        </div>
+
+        <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+          <SheetTrigger asChild className="lg:hidden">
+            <Button variant="ghost" size="icon" className={cn("hover:text-primary/80", 'text-foreground')}>
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">{currentContent.openMenu}</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="w-full max-w-sm bg-background p-0 flex flex-col">
+              <SheetHeader className="sr-only">
+                <SheetTitle>{currentContent.mobileMenuTitle}</SheetTitle>
+              </SheetHeader>
+              <div className="flex justify-between items-center p-4 border-b">
+                 <Logo />
+                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
+                    <X className="h-6 w-6" />
+                    <span className="sr-only">{currentContent.mobileMenuClose}</span>
+                 </Button>
+              </div>
+
+            <nav className="flex-1 p-6">
+              <ul className="space-y-4">
+                {currentContent.navLinks.map(link => (
+                  <li key={link.name}>
+                    {link.dropdown ? (
+                       <div>
+                        <h3 className="text-muted-foreground font-semibold mb-2">{link.name}</h3>
+                        <ul className="pl-4 space-y-3 border-l">
+                          {link.dropdown.map(item => (
+                            <li key={item.href}>
+                              <Link href={item.href} className={cn("hover:text-primary/80 transition-colors block", (item as any).highlight && "font-bold text-primary/80 flex items-center")}>
+                                {(item as any).highlight && <Award className="mr-2 h-4 w-4" />}
+                                {item.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                       </div>
+                    ) : (
+                      <Link 
+                        href={(link as any).href || '#'} 
+                        className={cn(
+                          "text-lg transition-all block rounded-xl py-2 px-3 border border-transparent text-center md:text-left",
+                          (link as any).highlight 
+                            ? "font-semibold text-primary border-primary/30 mx-2 hover:bg-primary/5" 
+                            : "hover:text-primary/80 text-foreground"
+                        )}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+              <div className="p-6 border-t mt-auto">
+                 <Button asChild size="lg" className="w-full bg-green-500 hover:bg-green-600">
+                    <a href="https://wa.me/573122784757" target="_blank" rel="noopener noreferrer">
+                        {currentContent.ctaButton} <MessageCircle />
+                    </a>
+                </Button>
+                <div className="flex items-center justify-center border rounded-full p-1 mt-4">
+                  <Button variant={lang === 'es' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs w-full" onClick={() => setLang('es')}>Español</Button>
+                  <Button variant={lang === 'en' ? 'secondary' : 'ghost'} size="sm" className="rounded-full text-xs w-full" onClick={() => setLang('en')}>English</Button>
+                </div>
+              </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
+  );
+}
