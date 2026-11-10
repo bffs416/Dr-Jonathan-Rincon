@@ -13,6 +13,7 @@ import { LoadingScreen } from '@/components/loading-screen';
 import Script from 'next/script';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
 import { LanguageProvider } from '@/context/language-context';
+import { MaintenanceScreen } from '@/components/maintenance-screen';
 import { Analytics } from '@vercel/analytics/react';
 
 const outfit = Outfit({
@@ -266,6 +267,7 @@ export default function RootLayout({
         )}
       >
         <LanguageProvider>
+          <MaintenanceScreen endTime="2026-11-10T10:00:00-05:00" forceActive={false} />
           {loading ? (
             <LoadingScreen />
           ) : (
