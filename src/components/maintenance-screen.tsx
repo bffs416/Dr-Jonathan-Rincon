@@ -7,16 +7,22 @@ import { Clock, Phone, MapPin, Sparkles, ShieldCheck } from 'lucide-react';
 
 interface MaintenanceScreenProps {
   /**
-   * Target ISO date string when maintenance is expected to end.
-   * Default: 2026-11-10T10:00:00-05:00 (Tomorrow at 10:00 AM Colombia time)
+   * Internal time when the screen automatically disappears and restores the site.
+   * Default: Tomorrow at 10:00 AM Colombia time (2026-11-10T10:00:00-05:00)
    */
-  endTime?: string;
-  forceActive?: boolean;
+  autoUnlockTime?: string;
+  /**
+   * Visual target time shown to the public for the countdown.
+   * Default: Tomorrow 12:00 AM (midnight next day)
+   */
+  displayEndTime?: string;
+  displayText?: string;
 }
 
 export function MaintenanceScreen({
-  endTime = '2026-11-10T10:00:00-05:00',
-  forceActive = true,
+  autoUnlockTime = '2026-11-10T10:00:00-05:00',
+  displayEndTime = '2026-11-11T00:00:00-05:00',
+  displayText = 'Mañana a las 12:00 AM',
 }: MaintenanceScreenProps) {
   const [isActive, setIsActive] = useState<boolean>(true);
   const [timeLeft, setTimeLeft] = useState<{ hours: number; minutes: number; seconds: number }>({
@@ -26,24 +32,26 @@ export function MaintenanceScreen({
   });
 
   useEffect(() => {
-    const target = new Date(endTime).getTime();
+    const unlockTarget = new Date(autoUnlockTime).getTime();
+    const visualTarget = new Date(displayEndTime).getTime();
 
     const checkStatus = () => {
       const now = new Date().getTime();
-      const difference = target - now;
 
-      if (!forceActive && difference <= 0) {
+      // Internal automation: unlocks website at 10:00 AM sharp
+      if (now >= unlockTarget) {
         setIsActive(false);
         return;
       }
 
-      if (difference > 0) {
-        const hours = Math.floor(difference / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      // Visual countdown towards the public end time (12 AM next day)
+      const visualDiff = visualTarget - now;
+      if (visualDiff > 0) {
+        const hours = Math.floor(visualDiff / (1000 * 60 * 60));
+        const minutes = Math.floor((visualDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((visualDiff % (1000 * 60)) / 1000);
         setTimeLeft({ hours, minutes, seconds });
       } else {
-        // Passed deadline
         setIsActive(false);
       }
     };
@@ -52,7 +60,7 @@ export function MaintenanceScreen({
     const interval = setInterval(checkStatus, 1000);
 
     return () => clearInterval(interval);
-  }, [endTime, forceActive]);
+  }, [autoUnlockTime, displayEndTime]);
 
   if (!isActive) {
     return null;
@@ -125,8 +133,8 @@ export function MaintenanceScreen({
         <div className="w-full bg-white/[0.04] border border-white/10 rounded-2xl p-6 backdrop-blur-xl mb-8 shadow-2xl">
           <div className="flex items-center justify-center gap-2 text-slate-200 text-sm font-medium mb-3">
             <Clock className="w-4 h-4 text-emerald-400" />
-            <span>Retorno programado:</span>
-            <strong className="text-white font-semibold">Mañana a las 10:00 AM</strong>
+            <span>Retorno estimado:</span>
+            <strong className="text-white font-semibold">{displayText}</strong>
           </div>
 
           <div className="grid grid-cols-3 gap-3 max-w-xs mx-auto">

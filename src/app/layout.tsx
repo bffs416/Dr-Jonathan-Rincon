@@ -267,7 +267,7 @@ export default function RootLayout({
         )}
       >
         <LanguageProvider>
-          <MaintenanceScreen endTime="2026-11-10T10:00:00-05:00" forceActive={false} />
+          <MaintenanceScreen />
           {loading ? (
             <LoadingScreen />
           ) : (
