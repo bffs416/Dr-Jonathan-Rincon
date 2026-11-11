@@ -92,14 +92,15 @@ export default function RootLayout({
               "telephone": "+573122784757",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Torre Médica COMEDAL, Calle 20 #43F-113, Consultorio 1404, Ciudad del Río",
                 "addressLocality": "Medellín",
                 "addressRegion": "Antioquia",
                 "addressCountry": "CO"
               },
               "geo": {
                 "@type": "GeoCoordinates",
-                "latitude": 6.2442,
-                "longitude": -75.5812
+                "latitude": 6.2255,
+                "longitude": -75.5745
               },
               "sameAs": [
                 "https://www.instagram.com/drjonathanrincon",
@@ -139,6 +140,7 @@ export default function RootLayout({
               "priceRange": "$$",
               "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Torre Médica COMEDAL, Calle 20 #43F-113, Consultorio 1404, Ciudad del Río",
                 "addressLocality": "Medellín",
                 "addressRegion": "Antioquia",
                 "addressCountry": "CO"

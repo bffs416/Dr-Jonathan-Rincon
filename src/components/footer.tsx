@@ -25,8 +25,8 @@ export default function Footer() {
       legal: 'Legal',
       terms: 'Términos y Condiciones',
       privacy: 'Política de Privacidad',
-      address: `Edificio Azor, Cra. 84 #37b - 195
-Primer piso, La América
+      address: `Torre Médica COMEDAL, Consultorio 1404
+Calle 20 #43F-113, Ciudad del Río
 Medellín, Antioquia`,
       schedule: `Lun - Vie: 8:00 AM - 6:00 PM
 Sáb: 8:00 AM - 2:00 PM`,
@@ -44,8 +44,8 @@ Sáb: 8:00 AM - 2:00 PM`,
       legal: 'Legal',
       terms: 'Terms & Conditions',
       privacy: 'Privacy Policy',
-      address: `Azor Building, Cra. 84 #37b - 195
-First floor, La América
+      address: `Torre Médica COMEDAL, Suite 1404
+Calle 20 #43F-113, Ciudad del Río
 Medellín, Antioquia`,
       schedule: `Mon - Fri: 8:00 AM - 6:00 PM
 Sat: 8:00 AM - 2:00 PM`,

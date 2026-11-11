@@ -224,7 +224,7 @@ function BioestimuladoresContent() {
       name: 'Dr. Jonathan Rincón - Medicina Estética',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Edificio Azor, Cra. 84 #37b - 195, Primer piso, La América',
+        streetAddress: 'Torre Médica COMEDAL, Calle 20 #43F-113, Consultorio 1404, Ciudad del Río',
         addressLocality: 'Medellín',
         addressRegion: 'Antioquia',
         addressCountry: 'CO'

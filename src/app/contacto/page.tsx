@@ -76,8 +76,8 @@ export default function ContactoPage() {
       infoTitle: 'Información de Contacto',
       infoSubtitle: 'Utiliza los siguientes canales para comunicarte conmigo.',
       infoAddressTitle: 'Dirección',
-      infoAddress: `Edificio Azor, Cra. 84 #37b - 195
-Primer piso, La América
+      infoAddress: `Torre Médica COMEDAL, Consultorio 1404
+Calle 20 #43F-113, Ciudad del Río
 Medellín, Antioquia`,
       infoWhatsappTitle: 'WhatsApp',
       infoEmailTitle: 'Email',
@@ -103,8 +103,8 @@ Sáb: 8:00 AM - 2:00 PM`,
       infoTitle: 'Contact Information',
       infoSubtitle: 'Use the following channels to get in touch with me.',
       infoAddressTitle: 'Address',
-      infoAddress: `Azor Building, Cra. 84 #37b - 195
-First floor, La América
+      infoAddress: `Torre Médica COMEDAL, Suite 1404
+Calle 20 #43F-113, Ciudad del Río
 Medellín, Antioquia`,
       infoWhatsappTitle: 'WhatsApp',
       infoEmailTitle: 'Email',
@@ -264,7 +264,7 @@ Sat: 8:00 AM - 2:00 PM`,
             </Card>
             <div className="aspect-video w-full rounded-lg overflow-hidden shadow-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.116753170425!2d-75.6099539!3d6.2487441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44299719eb7b37%3A0x6c63fdf538466b04!2sEdificio%20Azor!5e0!3m2!1ses-419!2sco!4v1719424754859!5m2!1ses-419!2sco"
+                src="https://maps.google.com/maps?q=Torre+M%C3%A9dica+COMEDAL%2C+Calle+20+%2343F-113%2C+Medell%C3%ADn&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
