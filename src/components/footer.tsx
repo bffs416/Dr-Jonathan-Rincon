@@ -28,6 +28,7 @@ export default function Footer() {
       address: `Torre Médica COMEDAL, Consultorio 1404
 Calle 20 #43F-113, Ciudad del Río
 Medellín, Antioquia`,
+      cities: 'Sedes: Medellín • Bogotá • Cali',
       schedule: `Lun - Vie: 8:00 AM - 6:00 PM
 Sáb: 8:00 AM - 2:00 PM`,
       copyright: `© ${new Date().getFullYear()} Dr. Jonathan Rincón. Todos los derechos reservados. Diseñado por`,
@@ -47,6 +48,7 @@ Sáb: 8:00 AM - 2:00 PM`,
       address: `Torre Médica COMEDAL, Suite 1404
 Calle 20 #43F-113, Ciudad del Río
 Medellín, Antioquia`,
+      cities: 'Locations: Medellín • Bogotá • Cali',
       schedule: `Mon - Fri: 8:00 AM - 6:00 PM
 Sat: 8:00 AM - 2:00 PM`,
       copyright: `© ${new Date().getFullYear()} Dr. Jonathan Rincón. All rights reserved. Designed by`,
@@ -110,9 +112,14 @@ Sat: 8:00 AM - 2:00 PM`,
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-1 shrink-0 text-muted-foreground" />
-                <a href="https://maps.app.goo.gl/Um7JKhc2Nhewzhm67" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary/80 whitespace-pre-line">
-                  {currentContent.address}
-                </a>
+                <div>
+                  <a href="https://maps.google.com/?q=Torre+M%C3%A9dica+COMEDAL%2C+Calle+20+%2343F-113%2C+Medell%C3%ADn" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary/80 whitespace-pre-line block">
+                    {currentContent.address}
+                  </a>
+                  <p className="text-xs text-primary font-medium mt-1">
+                    {currentContent.cities}
+                  </p>
+                </div>
               </li>
               <li className="flex items-start">
                 <WhatsAppIcon className="w-4 h-4 mr-2 mt-1 shrink-0 text-muted-foreground" />

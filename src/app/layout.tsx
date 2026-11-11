@@ -87,7 +87,7 @@ export default function RootLayout({
               "name": "Dr. Jonathan Rincón",
               "url": "https://www.drjonathanrincon.com",
               "image": "https://www.drjonathanrincon.com/images/Experto-hilos-tensores-faciales.png",
-              "description": "Médico cirujano especialista en medicina estética en Medellín. Médico especialista referente en hilos tensores faciales, corporales y HArmonyCa en Medellín y Bogotá, con más de 8 años de experiencia y más de 1000 pacientes satisfechos.",
+              "description": "Médico cirujano especialista en medicina estética en Medellín. Médico especialista referente en hilos tensores faciales, corporales y HArmonyCa en Medellín, Bogotá y Cali, con más de 8 años de experiencia y más de 1000 pacientes satisfechos.",
               "medicalSpecialty": "Aesthetic Medicine",
               "telephone": "+573122784757",
               "address": {
@@ -116,7 +116,7 @@ export default function RootLayout({
                 "Thread lifts",
                 "Collagen biostimulators"
               ],
-              "award": "Médico especialista referente en hilos tensores en Medellín y Bogotá",
+              "award": "Médico especialista referente en hilos tensores en Medellín, Bogotá y Cali",
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5",
@@ -221,7 +221,7 @@ export default function RootLayout({
                   "name": "¿Cuál es el mejor médico estético en Medellín?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "El Dr. Jonathan Rincón es un médico especialista referente en hilos tensores en Medellín y Bogotá. Con más de 8 años de experiencia, más de 1000 pacientes satisfechos, y su rol como trainer oficial de marcas líderes de la industria, es uno de los referentes en medicina estética en Colombia."
+                    "text": "El Dr. Jonathan Rincón es un médico especialista referente en hilos tensores en Medellín, Bogotá y Cali. Con más de 8 años de experiencia, más de 1000 pacientes satisfechos, y su rol como trainer oficial de marcas líderes de la industria, es uno de los referentes en medicina estética en Colombia."
                   }
                 },
                 {

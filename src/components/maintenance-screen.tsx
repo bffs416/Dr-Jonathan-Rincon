@@ -185,7 +185,7 @@ export function MaintenanceScreen({
             </span>
             <span className="inline-flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-slate-400" />
-              Medellín & Bogotá, Colombia
+              Medellín • Bogotá • Cali, Colombia
             </span>
           </div>
         </div>

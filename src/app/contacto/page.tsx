@@ -78,7 +78,9 @@ export default function ContactoPage() {
       infoAddressTitle: 'Dirección',
       infoAddress: `Torre Médica COMEDAL, Consultorio 1404
 Calle 20 #43F-113, Ciudad del Río
-Medellín, Antioquia`,
+Medellín, Antioquia
+
+Atención también en: Bogotá y Cali`,
       infoWhatsappTitle: 'WhatsApp',
       infoEmailTitle: 'Email',
       infoHoursTitle: 'Horario de Atención',
@@ -105,7 +107,9 @@ Sáb: 8:00 AM - 2:00 PM`,
       infoAddressTitle: 'Address',
       infoAddress: `Torre Médica COMEDAL, Suite 1404
 Calle 20 #43F-113, Ciudad del Río
-Medellín, Antioquia`,
+Medellín, Antioquia
+
+Also serving: Bogotá & Cali`,
       infoWhatsappTitle: 'WhatsApp',
       infoEmailTitle: 'Email',
       infoHoursTitle: 'Opening Hours',
